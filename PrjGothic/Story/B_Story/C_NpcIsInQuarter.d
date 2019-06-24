@@ -1,0 +1,118 @@
+
+func int c_getdisttocenter(var C_NPC slf,var int quarter)
+{
+	var int dist;
+	if(quarter == Q_KASERNE)
+	{
+		if(Npc_GetDistToWP(slf,"NW_CITY_HABOUR_KASERN_CENTRE_03") < Npc_GetDistToWP(slf,"NW_CITY_KASERN_ARMORY_SHARP"))
+		{
+			dist = Npc_GetDistToWP(slf,"NW_CITY_HABOUR_KASERN_CENTRE_03");
+		}
+		else
+		{
+			dist = Npc_GetDistToWP(slf,"NW_CITY_KASERN_ARMORY_SHARP");
+		};
+	}
+	else if(quarter == Q_GALGEN)
+	{
+		dist = Npc_GetDistToWP(slf,"NW_CITY_MERCHANT_PATH_33_B");
+		if(dist > 1900)
+		{
+			dist = 100000;
+		};
+	}
+	else if(quarter == Q_MARKT)
+	{
+		dist = Npc_GetDistToWP(slf,"NW_CITY_MERCHANT_PATH_36");
+		if(dist > 2300)
+		{
+			dist = 100000;
+		};
+	}
+	else if(quarter == Q_TEMPEL)
+	{
+		dist = Npc_GetDistToWP(slf,"NW_CITY_MERCHANT_TEMPLE_FRONT");
+	}
+	else if(quarter == Q_UNTERSTADT)
+	{
+		dist = Npc_GetDistToWP(slf,"NW_CITY_MAINSTREET_05");
+	}
+	else if(quarter == Q_HAFEN)
+	{
+		if(Npc_GetDistToWP(slf,"NW_CITY_HABOUR_POOR_AREA_PATH_07") < Npc_GetDistToWP(slf,"NW_CITY_HABOUR_SMALLTALK_02"))
+		{
+			dist = Npc_GetDistToWP(slf,"NW_CITY_HABOUR_POOR_AREA_PATH_07");
+		}
+		else
+		{
+			dist = Npc_GetDistToWP(slf,"NW_CITY_HABOUR_SMALLTALK_02");
+		};
+	}
+	else if(quarter == Q_OBERSTADT)
+	{
+		if((Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_04") < Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_16")) && (Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_04") < Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_18")))
+		{
+			dist = Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_04");
+		};
+		if((Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_16") < Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_04")) && (Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_16") < Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_18")))
+		{
+			dist = Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_16");
+		};
+		if((Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_18") < Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_04")) && (Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_18") < Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_16")))
+		{
+			dist = Npc_GetDistToWP(slf,"NW_CITY_UPTOWN_PATH_18");
+		};
+	}
+	else
+	{
+		printplus("WRONG Q-PARAMETER!");
+	};
+	return dist;
+};
+
+func int c_isquarternearest(var C_NPC slf,var int quart)
+{
+	var int quartdist;
+	quartdist = c_getdisttocenter(slf,quart);
+	if((quartdist <= c_getdisttocenter(slf,Q_KASERNE)) && (quartdist <= c_getdisttocenter(slf,Q_GALGEN)) && (quartdist <= c_getdisttocenter(slf,Q_MARKT)) && (quartdist <= c_getdisttocenter(slf,Q_TEMPEL)) && (quartdist <= c_getdisttocenter(slf,Q_UNTERSTADT)) && (quartdist <= c_getdisttocenter(slf,Q_HAFEN)) && (quartdist <= c_getdisttocenter(slf,Q_OBERSTADT)))
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	};
+};
+
+func int c_npcisinquarter(var C_NPC slf)
+{
+	if(c_isquarternearest(slf,Q_KASERNE))
+	{
+		return Q_KASERNE;
+	};
+	if(c_isquarternearest(slf,Q_GALGEN))
+	{
+		return Q_GALGEN;
+	};
+	if(c_isquarternearest(slf,Q_MARKT))
+	{
+		return Q_MARKT;
+	};
+	if(c_isquarternearest(slf,Q_TEMPEL))
+	{
+		return Q_TEMPEL;
+	};
+	if(c_isquarternearest(slf,Q_UNTERSTADT))
+	{
+		return Q_UNTERSTADT;
+	};
+	if(c_isquarternearest(slf,Q_HAFEN))
+	{
+		return Q_HAFEN;
+	};
+	if(c_isquarternearest(slf,Q_OBERSTADT))
+	{
+		return Q_OBERSTADT;
+	};
+};
+
