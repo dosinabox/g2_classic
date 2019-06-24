@@ -289,6 +289,8 @@ Story\Dialog_Mobsis\Bookstand.d
 Story\Dialog_Mobsis\BookstandAlchemy.d
 Story\Dialog_Mobsis\BookstandAnimals.d
 Story\Dialog_Mobsis\BookstandDementor.d
+Story\Dialog_Mobsis\B_PlayerMap.d
+Story\Dialog_Mobsis\B_OnHotkey.d
 Story\Dialog_Mobsis\BookstandHistory.d
 Story\Dialog_Mobsis\BookstandKloster.d
 Story\Dialog_Mobsis\Bookstand_OldCamp.d

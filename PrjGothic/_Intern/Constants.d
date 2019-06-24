@@ -181,8 +181,8 @@ const int GIL_BDT = 9;
 const int GIL_STRF = 10;
 const int GIL_DMT = 11;
 const int GIL_OUT = 12;
-const int GIL_EMPTY_B = 13;
-const int GIL_EMPTY_C = 14;
+const int GIL_PIR = 13;
+const int GIL_KDW = 14;
 const int GIL_EMPTY_D = 15;
 const int GIL_PUBLIC = 15;
 const int GIL_SEPERATOR_HUM = 16;
@@ -192,7 +192,7 @@ const int GIL_GOBBO = 19;
 const int GIL_GOBBO_SKELETON = 20;
 const int GIL_SUMMONED_GOBBO_SKELETON = 21;
 const int GIL_SCAVENGER = 22;
-const int GIL_GIANT_RAT = 23;
+const int GIL_Giant_Rat = 23;
 const int GIL_GIANT_BUG = 24;
 const int GIL_BLOODFLY = 25;
 const int GIL_WARAN = 26;
@@ -218,20 +218,20 @@ const int GIL_TROLL = 45;
 const int GIL_SWAMPSHARK = 46;
 const int GIL_DRAGON = 47;
 const int GIL_MOLERAT = 48;
-const int GIL_EMPTY_M = 49;
-const int GIL_EMPTY_N = 50;
-const int GIL_EMPTY_O = 51;
-const int GIL_EMPTY_P = 52;
-const int GIL_EMPTY_Q = 53;
-const int GIL_SEPERATOR_ORC = 54;
-const int GIL_ORC = 55;
-const int GIL_FRIENDLY_ORC = 56;
-const int GIL_UNDEADORC = 57;
-const int GIL_DRACONIAN = 58;
-const int GIL_EMPTY_X = 59;
-const int GIL_EMPTY_Y = 60;
-const int GIL_EMPTY_Z = 61;
-const int GIL_MAX = 62;
+const int GIL_Alligator = 49;
+const int GIL_SWAMPGOLEM = 50;
+const int GIL_Stoneguardian = 51;
+const int GIL_Gargoyle = 52;
+const int GIL_WISP = 53;
+const int GIL_SummonedGuardian = 54;
+const int GIL_SummonedZombie = 55;
+const int GIL_EMPTY_B = 56;
+const int GIL_EMPTY_C = 57;
+const int GIL_SEPERATOR_ORC = 58;
+const int GIL_ORC = 59;
+const int GIL_FRIENDLY_ORC = 60;
+const int GIL_UNDEADORC = 61;
+const int GIL_DRACONIAN = 62;
 const int GIL_EMPTY_X = 63;
 const int GIL_EMPTY_Y = 64;
 const int GIL_EMPTY_Z = 65;
@@ -360,7 +360,6 @@ const int SPL_FIRESTORM = 38;
 const int SPL_ICEWAVE = 39;
 const int SPL_SUMMONDEMON = 40;
 const int SPL_FULLHEAL = 41;
-const int SPL_MASTEROFDISASTER = 60;
 const int SPL_FIRERAIN = 42;
 const int SPL_BREATHOFDEATH = 43;
 const int SPL_MASSDEATH = 44;
@@ -379,7 +378,7 @@ const int SPL_TRFLURKER = 56;
 const int SPL_TRFSHADOWBEAST = 57;
 const int SPL_TRFDRAGONSNAPPER = 58;
 const int SPL_CHARM = 59;
-const int SPL_MasterOfDisaster = 60;
+const int SPL_MASTEROFDISASTER = 60;
 const int SPL_DEATHBOLT = 61;
 const int SPL_DEATHBALL = 62;
 const int SPL_CONCUSSIONBOLT = 63;
@@ -422,7 +421,7 @@ const int SPL_RESERVED_99 = 99;
 const int MAX_SPELL = 100;
 
 
-const string SPELLFXINSTANCENAMES[68] =
+const string SPELLFXINSTANCENAMES[100] =
 {
 	"PalLight",
 	"PalHeal",
@@ -526,7 +525,7 @@ const string SPELLFXINSTANCENAMES[68] =
 	"Light"
 };
 
-const string SPELLFXANILETTERS[68] =
+const string SPELLFXANILETTERS[100] =
 {
 	"SLE",
 	"HEA",
@@ -728,7 +727,6 @@ const int TROPHY_DRGSNAPPERHORN = 10;
 const int TROPHY_DRAGONSCALE = 11;
 const int TROPHY_DRAGONBLOOD = 12;
 const int MAX_TROPHIES = 13;
-const int MAX_TROPHIES = 14;
 
 var int player_talent_takeanimaltrophy[MAX_TROPHIES];
 

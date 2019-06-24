@@ -12,7 +12,7 @@ instance PAL_251_ORIC(NPC_DEFAULT)
 	EquipItem(self,itmw_2h_pal_sword);
 	EquipItem(self,itrw_mil_crossbow);
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_Fighter",FACE_N_TOUGH_LEE_ÂHNLICH,BODYTEX_N,itar_pal_h);
+	b_setnpcvisual(self,MALE,"Hum_Head_Fighter",FACE_N_TOUGH_LEE,BODYTEX_N,itar_pal_h);
 	Mdl_SetModelFatness(self,1);
 	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
 	b_givenpctalents(self);
