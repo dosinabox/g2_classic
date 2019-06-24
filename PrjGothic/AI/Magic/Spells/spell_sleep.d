@@ -15,7 +15,7 @@ func int spell_logic_sleep(var int manainvested)
 	if(self.attribute[ATR_MANA] >= SPL_COST_SLEEP)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_COST_SLEEP;
-		if(!c_bodystatecontains(other,BS_SWIM) && !c_bodystatecontains(other,BS_DIVE) && !c_npcisdown(other) && (other.guild < GIL_SEPERATOR_HUM) && ((other.level - self.level) <= 3) && (other.flags != NPC_FLAG_IMMORTAL) && (Npc_GetDistToNpc(self,other) <= 1000) && (c_npcisgateguard(self) == FALSE) && (other.guild != GIL_KDF) && (other.guild != GIL_DMT) && (other.guild != GIL_PAL))
+		if(!c_bodystatecontains(other,BS_SWIM) && !c_bodystatecontains(other,BS_DIVE) && !c_npcisdown(other) && (other.guild < GIL_SEPERATOR_HUM) && (other.flags != NPC_FLAG_IMMORTAL) && (Npc_GetDistToNpc(self,other) <= 1000) && !c_npcisgateguard(self) && (other.guild != GIL_KDF) && (other.guild != GIL_DMT) && (other.guild != GIL_PAL))
 		{
 			Npc_ClearAIQueue(other);
 			b_clearperceptions(other);

@@ -43,7 +43,7 @@ func int zs_magicfreeze_loop()
 	if(Npc_GetStateTime(self) != self.aivar[AIV_FREEZESTATETIME])
 	{
 		self.aivar[AIV_FREEZESTATETIME] = Npc_GetStateTime(self);
-		if(self.attribute[ATR_HITPOINTS] > (self.attribute[ATR_HITPOINTS] - SPL_FREEZE_DAMAGE))
+		if((self.attribute[ATR_HITPOINTS] - (SPL_FREEZE_DAMAGE * 2)) > 0)
 		{
 			if((self.guild == GIL_FIREGOLEM) || (self.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN) || (self.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE))
 			{

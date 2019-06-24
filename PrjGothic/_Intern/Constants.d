@@ -4,6 +4,7 @@ const string FONT_SCREENSMALL = "FONT_OLD_10_WHITE.TGA";
 const string FONT_BOOK = "FONT_10_BOOK.TGA";
 const string FONT_BOOKHEADLINE = "FONT_20_BOOK.TGA";
 
+const int SPL_COST_SCROLL = 5;
 const int ATR_HITPOINTS = 0;
 const int ATR_HITPOINTS_MAX = 1;
 const int ATR_MANA = 2;
@@ -15,6 +16,7 @@ const int ATR_REGENERATEMANA = 7;
 const int ATR_INDEX_MAX = 8;
 const int NPC_FLAG_FRIEND = 1;
 const int NPC_FLAG_IMMORTAL = 2;
+const int NPC_FLAG_GHOST = 4;
 const int FMODE_NONE = 0;
 const int FMODE_FIST = 1;
 const int FMODE_MELEE = 2;
@@ -28,6 +30,7 @@ const int NPC_WALK_WEAPON = 129;
 const int NPC_SNEAK_WEAPON = 130;
 const int WEAR_TORSO = 1;
 const int WEAR_HEAD = 2;
+const int WEAR_EFFECT = 16;
 const int INV_WEAPON = 1;
 const int INV_ARMOR = 2;
 const int INV_RUNE = 3;
@@ -229,40 +232,44 @@ const int GIL_EMPTY_X = 59;
 const int GIL_EMPTY_Y = 60;
 const int GIL_EMPTY_Z = 61;
 const int GIL_MAX = 62;
+const int GIL_EMPTY_X = 63;
+const int GIL_EMPTY_Y = 64;
+const int GIL_EMPTY_Z = 65;
+const int GIL_MAX = 66;
 
 class C_GILVALUES
 {
-	var int water_depth_knee[62];
-	var int water_depth_chest[62];
-	var int jumpup_height[62];
-	var int swim_time[62];
-	var int dive_time[62];
-	var int step_height[62];
-	var int jumplow_height[62];
-	var int jumpmid_height[62];
-	var int slide_angle[62];
-	var int slide_angle2[62];
-	var int disable_autoroll[62];
-	var int surface_align[62];
-	var int climb_heading_angle[62];
-	var int climb_horiz_angle[62];
-	var int climb_ground_angle[62];
-	var int fight_range_base[62];
-	var int fight_range_fist[62];
-	var int fight_range_g[62];
-	var int fight_range_1hs[62];
-	var int fight_range_1ha[62];
-	var int fight_range_2hs[62];
-	var int fight_range_2ha[62];
-	var int falldown_height[62];
-	var int falldown_damage[62];
-	var int blood_disabled[62];
-	var int blood_max_distance[62];
-	var int blood_amount[62];
-	var int blood_flow[62];
-	var string blood_emitter[62];
-	var string blood_texture[62];
-	var int turn_speed[62];
+	var int water_depth_knee[GIL_MAX];
+	var int water_depth_chest[GIL_MAX];
+	var int jumpup_height[GIL_MAX];
+	var int swim_time[GIL_MAX];
+	var int dive_time[GIL_MAX];
+	var int step_height[GIL_MAX];
+	var int jumplow_height[GIL_MAX];
+	var int jumpmid_height[GIL_MAX];
+	var int slide_angle[GIL_MAX];
+	var int slide_angle2[GIL_MAX];
+	var int disable_autoroll[GIL_MAX];
+	var int surface_align[GIL_MAX];
+	var int climb_heading_angle[GIL_MAX];
+	var int climb_horiz_angle[GIL_MAX];
+	var int climb_ground_angle[GIL_MAX];
+	var int fight_range_base[GIL_MAX];
+	var int fight_range_fist[GIL_MAX];
+	var int fight_range_g[GIL_MAX];
+	var int fight_range_1hs[GIL_MAX];
+	var int fight_range_1ha[GIL_MAX];
+	var int fight_range_2hs[GIL_MAX];
+	var int fight_range_2ha[GIL_MAX];
+	var int falldown_height[GIL_MAX];
+	var int falldown_damage[GIL_MAX];
+	var int blood_disabled[GIL_MAX];
+	var int blood_max_distance[GIL_MAX];
+	var int blood_amount[GIL_MAX];
+	var int blood_flow[GIL_MAX];
+	var string blood_emitter[GIL_MAX];
+	var string blood_texture[GIL_MAX];
+	var int turn_speed[GIL_MAX];
 };
 
 const int NPC_SOUND_DROPTAKE = 1;
@@ -295,6 +302,7 @@ const int SPL_RECEIVEINVEST = 1;
 const int SPL_SENDCAST = 2;
 const int SPL_SENDSTOP = 3;
 const int SPL_NEXTLEVEL = 4;
+const int SPL_STATUS_CANINVEST_NO_MANADEC = 8;
 const int SPL_FORCEINVEST = 1 << 16;
 const int TARGET_COLLECT_NONE = 0;
 const int TARGET_COLLECT_CASTER = 1;
@@ -330,11 +338,11 @@ const int SPL_TELEPORTTAVERNE = 16;
 const int SPL_TELEPORT_3 = 17;
 const int SPL_LIGHT = 18;
 const int SPL_FIREBOLT = 19;
-const int SPL_ZAP = 24;
+const int SPL_Icebolt = 20;
 const int SPL_LIGHTHEAL = 21;
 const int SPL_SUMMONGOBLINSKELETON = 22;
 const int SPL_INSTANTFIREBALL = 23;
-const int SPL_ICEBOLT = 20;
+const int SPL_Zap = 24;
 const int SPL_SUMMONWOLF = 25;
 const int SPL_WINDFIST = 26;
 const int SPL_SLEEP = 27;
@@ -371,14 +379,47 @@ const int SPL_TRFLURKER = 56;
 const int SPL_TRFSHADOWBEAST = 57;
 const int SPL_TRFDRAGONSNAPPER = 58;
 const int SPL_CHARM = 59;
+const int SPL_MasterOfDisaster = 60;
 const int SPL_DEATHBOLT = 61;
 const int SPL_DEATHBALL = 62;
 const int SPL_CONCUSSIONBOLT = 63;
-const int SPL_E = 64;
-const int SPL_F = 65;
-const int SPL_G = 66;
-const int SPL_H = 67;
-const int MAX_SPELL = 68;
+const int SPL_RESERVED_64 = 64;
+const int SPL_RESERVED_65 = 65;
+const int SPL_RESERVED_66 = 66;
+const int SPL_RESERVED_67 = 67;
+const int SPL_RESERVED_68 = 68;
+const int SPL_RESERVED_69 = 69;
+const int SPL_THUNDERSTORM = 70;
+const int SPL_WHIRLWIND = 71;
+const int SPL_WATERFIST = 72;
+const int SPL_ICELANCE = 73;
+const int SPL_INFLATE = 74;
+const int SPL_GEYSER = 75;
+const int SPL_WATERWALL = 76;
+const int SPL_RESERVED_77 = 77;
+const int SPL_RESERVED_78 = 78;
+const int SPL_RESERVED_79 = 79;
+const int SPL_PLAGUE = 80;
+const int SPL_SWARM = 81;
+const int SPL_GREENTENTACLE = 82;
+const int SPL_EARTHQUAKE = 83;
+const int SPL_SUMMONGUARDIAN = 84;
+const int SPL_ENERGYBALL = 85;
+const int SPL_SUCKENERGY = 86;
+const int SPL_SKULL = 87;
+const int SPL_SUMMONZOMBIE = 88;
+const int SPL_SUMMONMUD = 89;
+const int SPL_RESERVED_90 = 90;
+const int SPL_RESERVED_91 = 91;
+const int SPL_RESERVED_92 = 92;
+const int SPL_RESERVED_93 = 93;
+const int SPL_RESERVED_94 = 94;
+const int SPL_RESERVED_95 = 95;
+const int SPL_RESERVED_96 = 96;
+const int SPL_RESERVED_97 = 97;
+const int SPL_RESERVED_98 = 98;
+const int SPL_RESERVED_99 = 99;
+const int MAX_SPELL = 100;
 
 
 const string SPELLFXINSTANCENAMES[68] =
@@ -447,6 +488,38 @@ const string SPELLFXINSTANCENAMES[68] =
 	"Deathbolt",
 	"Deathball",
 	"Concussionbolt",
+	"Light",
+	"Light",
+	"Light",
+	"Light",
+	"Light",
+	"Light",
+	"Thunderstorm",
+	"Whirlwind",
+	"Waterfist",
+	"IceLance",
+	"Sleep",
+	"Geyser",
+	"Firerain",
+	"Light",
+	"Light",
+	"Light",
+	"Fear",
+	"Swarm",
+	"Greententacle",
+	"Firerain",
+	"SummonGuardian",
+	"Energyball",
+	"SuckEnergy",
+	"Skull",
+	"SummonZombie",
+	"SummonMud",
+	"Light",
+	"Light",
+	"Light",
+	"Light",
+	"Light",
+	"Light",
 	"Light",
 	"Light",
 	"Light",
@@ -522,6 +595,38 @@ const string SPELLFXANILETTERS[68] =
 	"FBT",
 	"FBT",
 	"XXX",
+	"XXX",
+	"XXX",
+	"XXX",
+	"STM",
+	"WHI",
+	"WND",
+	"FBT",
+	"SLE",
+	"WND",
+	"FEA",
+	"XXX",
+	"XXX",
+	"XXX",
+	"FBT",
+	"FBT",
+	"FRZ",
+	"FEA",
+	"SUM",
+	"WND",
+	"WND",
+	"WND",
+	"SUM",
+	"SUM",
+	"XXX",
+	"XXX",
+	"XXX",
+	"XXX",
+	"XXX",
+	"XXX",
+	"XXX",
+	"XXX",
+	"XXX",
 	"XXX"
 };
 
@@ -548,7 +653,33 @@ const int NPC_TALENT_D = 20;
 const int NPC_TALENT_E = 21;
 const int NPC_TALENT_MAX = 22;
 
-var int player_talent_runes[68];
+var int player_talent_runes[MAX_SPELL];
+const int LANGUAGE_1 = 0;
+const int LANGUAGE_2 = 1;
+const int LANGUAGE_3 = 2;
+const int MAX_LANGUAGE = 3;
+
+var int player_talent_foreignlanguage[MAX_LANGUAGE];
+const int WISPSKILL_NF = 0;
+const int WISPSKILL_FF = 1;
+const int WISPSKILL_NONE = 2;
+const int WISPSKILL_RUNE = 3;
+const int WISPSKILL_MAGIC = 4;
+const int WISPSKILL_FOOD = 5;
+const int WISPSKILL_POTIONS = 6;
+const int MAX_WISPSKILL = 7;
+
+var int player_talent_wispdetector[MAX_WISPSKILL];
+var int wispsearching;
+const int WISPSEARCH_FOLLOW = 1;
+const int WISPSEARCH_ALL = 2;
+const int WISPSEARCH_POTIONS = 3;
+const int WISPSEARCH_MAGIC = 4;
+const int WISPSEARCH_FOOD = 5;
+const int WISPSEARCH_NF = 6;
+const int WISPSEARCH_FF = 7;
+const int WISPSEARCH_NONE = 8;
+const int WISPSEARCH_RUNE = 9;
 const int POTION_HEALTH_01 = 0;
 const int POTION_HEALTH_02 = 1;
 const int POTION_HEALTH_03 = 2;
@@ -562,9 +693,11 @@ const int POTION_PERM_MANA = 9;
 const int POTION_PERM_HEALTH = 10;
 const int POTION_MEGADRINK = 11;
 const int CHARGE_INNOSEYE = 12;
-const int MAX_POTION = 13;
+const int POTION_MANA_04 = 13;
+const int POTION_HEALTH_04 = 14;
+const int MAX_POTION = 15;
 
-var int player_talent_alchemy[13];
+var int player_talent_alchemy[MAX_POTION];
 const int WEAPON_COMMON = 0;
 const int WEAPON_1H_SPECIAL_01 = 1;
 const int WEAPON_2H_SPECIAL_01 = 2;
@@ -574,9 +707,13 @@ const int WEAPON_1H_SPECIAL_03 = 5;
 const int WEAPON_2H_SPECIAL_03 = 6;
 const int WEAPON_1H_SPECIAL_04 = 7;
 const int WEAPON_2H_SPECIAL_04 = 8;
-const int MAX_WEAPONS = 9;
+const int WEAPON_1H_HARAD_01 = 9;
+const int WEAPON_1H_HARAD_02 = 10;
+const int WEAPON_1H_HARAD_03 = 11;
+const int WEAPON_1H_HARAD_04 = 12;
+const int MAX_WEAPONS = 13;
 
-var int player_talent_smith[9];
+var int player_talent_smith[MAX_WEAPONS];
 const int TROPHY_TEETH = 0;
 const int TROPHY_CLAWS = 1;
 const int TROPHY_FUR = 2;
@@ -591,8 +728,9 @@ const int TROPHY_DRGSNAPPERHORN = 10;
 const int TROPHY_DRAGONSCALE = 11;
 const int TROPHY_DRAGONBLOOD = 12;
 const int MAX_TROPHIES = 13;
+const int MAX_TROPHIES = 14;
 
-var int player_talent_takeanimaltrophy[13];
+var int player_talent_takeanimaltrophy[MAX_TROPHIES];
 
 const string TEXT_FONT_20 = "Font_old_20_white.tga";
 const string TEXT_FONT_10 = "Font_old_10_white.tga";
@@ -604,9 +742,13 @@ const float VIEW_TIME_PER_CHAR = 550;
 const int NEWWORLD_ZEN = 1;
 const int OLDWORLD_ZEN = 2;
 const int DRAGONISLAND_ZEN = 3;
+const int ADDONWORLD_ZEN = 4;
 const int INVCAM_ENTF_RING_STANDARD = 400;
 const int INVCAM_ENTF_AMULETTE_STANDARD = 150;
 const int INVCAM_ENTF_MISC_STANDARD = 200;
 const int INVCAM_ENTF_MISC2_STANDARD = 250;
+const int INVCAM_ENTF_MISC3_STANDARD = 500;
+const int INVCAM_ENTF_MISC4_STANDARD = 650;
+const int INVCAM_ENTF_MISC5_STANDARD = 850;
 const int INVCAM_X_RING_STANDARD = 25;
 const int INVCAM_Z_RING_STANDARD = 45;

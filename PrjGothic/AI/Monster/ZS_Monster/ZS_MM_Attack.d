@@ -65,7 +65,7 @@ func int zs_mm_attack_loop()
 		};
 		if(Npc_GetStateTime(self) > self.aivar[AIV_STATETIME])
 		{
-			if((Npc_GetDistToNpc(self,other) < self.aivar[AIV_DIST]) || (!c_bodystatecontains(other,BS_RUN) && !c_bodystatecontains(other,BS_JUMP)))
+			if((Npc_GetDistToNpc(self,other) < self.aivar[AIV_Dist]) || !(C_BodyStateContains(other,BS_RUN) && !C_BodyStateContains(other,BS_JUMP)))
 			{
 				self.aivar[AIV_PURSUITEND] = FALSE;
 				Npc_SetStateTime(self,0);

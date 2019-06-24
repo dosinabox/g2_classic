@@ -225,7 +225,7 @@ func void dia_neoras_teach_info()
 	}
 	else if(hero.guild == GIL_NOV)
 	{
-		AI_Output(self,other,"DIA_Neoras_TEACH_01_02");	//Я не обучаю новичков. Если, однажды, ты будешь принят в Круг Огня, 
+		AI_Output(self,other,"DIA_Neoras_TEACH_01_02");	//Я не обучаю новичков. Если, однажды, ты будешь принят в Круг Огня,
 		AI_Output(self,other,"DIA_Neoras_TEACH_01_03");	//тогда я покажу тебе, как создавать сильные зелья.
 	}
 	else

@@ -40,6 +40,12 @@ func int b_assessenemy()
 	};
 	if(Wld_GetGuildAttitude(self.guild,other.guild) != ATT_HOSTILE)
 	{
+		if((self.aivar[AIV_LastPlayerAR] == AR_GuildEnemy) || (self.aivar[AIV_LastPlayerAR] == AR_MonsterVsHuman) || (self.aivar[AIV_LastPlayerAR] == AR_MonsterMurderedHuman) || (self.aivar[AIV_LastPlayerAR] == AR_MonsterCloseToGate) || (self.aivar[AIV_LastPlayerAR] == AR_GuardCalledToKill))
+		{
+			B_SetAttitude(self,Wld_GetGuildAttitude(self.guild,other.guild));
+			self.aivar[AIV_LastPlayerAR] = AR_NONE;
+			return FALSE;
+		};
 		if((Npc_GetAttitude(self,other) == ATT_HOSTILE) && ((Npc_GetStateTime(self) > 2) || Npc_IsInState(self,zs_observeplayer)) && (Npc_GetDistToNpc(self,other) <= PERC_DIST_INTERMEDIAT))
 		{
 			b_attack(self,other,self.aivar[AIV_LASTPLAYERAR],0);

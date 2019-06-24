@@ -52,7 +52,7 @@ func void dia_dar_hallo_info()
 func void dia_dar_hallo_ja()
 {
 	AI_Output(other,self,"DIA_Dar_Hallo_Ja_15_00");	//Конечно.
-	CreateInvItem(other,itmi_joint);
+	B_GiveInvItems(self,other,ItMi_Joint,1);
 	b_useitem(other,itmi_joint);
 	AI_Output(self,other,"DIA_Dar_Hallo_Ja_03_01");	//Неплохо, да?
 	AI_Output(other,self,"DIA_Dar_Hallo_Ja_15_02");	//Где ты взял эту траву?
@@ -78,7 +78,7 @@ instance DIA_DAR_PERM(C_INFO)
 	condition = dia_dar_perm_condition;
 	information = dia_dar_perm_info;
 	permanent = TRUE;
-	description = "Ты чувствуешь что-нибудь кроме дыма?";
+	description = "Ты что-нибудь делаешь еще, кроме как куришь?";
 };
 
 
@@ -92,7 +92,7 @@ func int dia_dar_perm_condition()
 
 func void dia_dar_perm_info()
 {
-	AI_Output(other,self,"DIA_Dar_PERM_15_00");	//Ты чувствуешь что-нибудь кроме дыма?
+	AI_Output(other,self,"DIA_Dar_PERM_15_00");	//Ты что-нибудь делаешь еще, кроме как куришь?
 	if((DAR_LOSTAGAINSTCIPHER == TRUE) && (DAR_EINMAL == FALSE))
 	{
 		AI_Output(self,other,"DIA_Dar_PERM_03_01");	//(саркастически) Иногда я позволяю всяким мстительным болотным наркоманам задать мне взбучку...
@@ -100,7 +100,7 @@ func void dia_dar_perm_info()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Dar_PERM_03_02");	//Но не сейчас.
+		AI_Output(self,other,"DIA_Dar_PERM_03_02");	//Сейчас нет.
 	};
 };
 
@@ -270,7 +270,7 @@ instance DIA_DAR_PILZTABAK(C_INFO)
 
 func int dia_dar_pilztabak_condition()
 {
-	if(Npc_HasItems(other,itmi_pilztabak) > 0)
+	if(Npc_HasItems(other,ItMi_PilzTabak) && Npc_KnowsInfo(other,DIA_Dar_Hallo))
 	{
 		return TRUE;
 	};
@@ -281,6 +281,7 @@ func void dia_dar_pilztabak_info()
 	AI_Output(other,self,"DIA_Dar_Pilztabak_15_00");	//Ты когда-нибудь пробовал грибной табак?
 	AI_Output(self,other,"DIA_Dar_Pilztabak_03_01");	//Звучит интересно. Дай его сюда.
 	b_giveinvitems(other,self,itmi_pilztabak,1);
+	Npc_RemoveInvItem(self,ItMi_PilzTabak);
 	AI_Output(self,other,"DIA_Dar_Pilztabak_03_02");	//Так, попробуем...
 	CreateInvItem(self,itmi_joint);
 	b_useitem(self,itmi_joint);
@@ -435,7 +436,7 @@ func void dia_dar_orcring_wie()
 	AI_Output(other,self,"DIA_Dar_ORCRING_wie_15_00");	//Как это должно выглядеть?
 	AI_Output(self,other,"DIA_Dar_ORCRING_wie_03_01");	//Я не знаю точно. Какой-нибудь трофей орков вполне подошел бы.
 	AI_Output(self,other,"DIA_Dar_ORCRING_wie_03_02");	//Что-нибудь вроде эмблемы лидера орков, ну или что-то вроде. Знамя, нарукавная нашивка или кольцо, ну, ты понял.
-	AI_Output(self,other,"DIA_Dar_ORCRING_wie_03_03");	//Я не смогу произвести впечатление без этого. Это очевидно.
+	AI_Output(self,other,"DIA_Dar_ORCRING_wie_03_03");	//Я не могу произвести впечатление без этого. Это очевидно.
 	Log_CreateTopic(TOPIC_DAR_BRINGORCELITERING,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_DAR_BRINGORCELITERING,LOG_RUNNING);
 	b_logentry(TOPIC_DAR_BRINGORCELITERING,"Дар хочет стать важной шишкой в рядах наемников. Он хочет заполучить трофей орков. Знамя, нарукавную нашивку, кольцо, или еще что-нибудь.");
@@ -446,7 +447,7 @@ func void dia_dar_orcring_wie()
 func void dia_dar_orcring_no()
 {
 	AI_Output(other,self,"DIA_Dar_ORCRING_no_15_00");	//Меня это не интересует.
-	AI_Output(self,other,"DIA_Dar_ORCRING_no_03_01");	//(злобно) Конечно нет. Я бы очень удивился, если бы это было не так.
+	AI_Output(self,other,"DIA_Dar_ORCRING_no_03_01");	//(злобно) Конечно, нет. Я бы очень удивился, если бы это было не так.
 	Info_ClearChoices(dia_dar_orcring);
 };
 
@@ -526,14 +527,14 @@ func void dia_dar_bringorcelitering_geld()
 	};
 	Info_ClearChoices(dia_dar_bringorcelitering);
 	Info_AddChoice(dia_dar_bringorcelitering,"Этого недостаточно.",dia_dar_bringorcelitering_geld_no);
-	Info_AddChoice(dia_dar_bringorcelitering,"Договорились.",dia_dar_bringorcelitering_geld_ok);
+	Info_AddChoice(DIA_Dar_BRINGORCELITERING,"Договорились. Держи кольцо.",DIA_Dar_BRINGORCELITERING_geld_ok);
 };
 
 func void dia_dar_bringorcelitering_geld_ok()
 {
 	AI_Output(other,self,"DIA_Dar_BRINGORCELITERING_geld_ok_15_00");	//Договорились. Держи кольцо.
 	b_giveinvitems(other,self,itri_orcelitering,1);
-	AI_Output(self,other,"DIA_Dar_BRINGORCELITERING_geld_ok_03_01");	//Спасибо. Не терпится услышать, что другие скажут об этом.
+	AI_Output(self,other,"DIA_Dar_BRINGORCELITERING_geld_ok_03_01");	//Спасибо. Не терпится услышать, что скажут другие об этом.
 	CreateInvItems(self,itmi_gold,1200);
 	b_giveinvitems(self,other,itmi_gold,1200);
 	b_giveplayerxp(XP_DAR_BRINGORCELITERING);
@@ -550,7 +551,7 @@ func void dia_dar_bringorcelitering_geld_no()
 func void dia_dar_bringorcelitering_was()
 {
 	AI_Output(other,self,"DIA_Dar_BRINGORCELITERING_was_15_00");	//Что ты можешь предложить мне?
-	AI_Output(self,other,"DIA_Dar_BRINGORCELITERING_was_03_01");	//Либо забирай деньги, либо этот амулет, который я... ну, скажем, приобрел недавно.
+	AI_Output(self,other,"DIA_Dar_BRINGORCELITERING_was_03_01");	//Ладно, забирай деньги, либо этот амулет, который я... ну, скажем, приобрел недавно.
 	AI_Output(self,other,"DIA_Dar_BRINGORCELITERING_was_03_02");	//Он повысит твою ловкость. Я сам испытывал его.
 	Info_ClearChoices(dia_dar_bringorcelitering);
 	Info_AddChoice(dia_dar_bringorcelitering,"Заплати мне золотом.",dia_dar_bringorcelitering_geld);

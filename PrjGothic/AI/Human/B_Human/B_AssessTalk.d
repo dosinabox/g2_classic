@@ -112,6 +112,10 @@ func void b_assesstalk()
 		}
 		else
 		{
+			if(Npc_IsInState(self,ZS_ObservePlayer))
+			{
+				AI_Standup(self);
+			};
 			AI_StartState(self,zs_talk,1,"");
 		};
 		return;

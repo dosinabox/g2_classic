@@ -8,6 +8,7 @@ class C_NPC
 	var int id;
 	var string name[5];
 	var string slot;
+	var string effect;
 	var int npctype;
 	var int flags;
 	var int attribute[ATR_INDEX_MAX];
@@ -29,7 +30,7 @@ class C_NPC
 	var int spawndelay;
 	var int senses;
 	var int senses_range;
-	var int aivar[70];
+	var int aivar[100];
 	var string wp;
 	var int exp;
 	var int exp_next;
@@ -85,6 +86,7 @@ class C_ITEM
 	var int disguiseguild;
 	var string visual;
 	var string visual_change;
+	var string effect;
 	var int visual_skin;
 	var string scemename;
 	var int material;

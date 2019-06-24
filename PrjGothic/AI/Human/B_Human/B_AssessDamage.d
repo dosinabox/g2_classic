@@ -1,6 +1,10 @@
 
 func void b_assessdamage()
 {
+	if(Npc_IsPlayer(self))
+	{
+		return;
+	};
 	if(self.aivar[AIV_ARENAFIGHT] == AF_AFTER)
 	{
 		self.aivar[AIV_ARENAFIGHT] = AF_AFTER_PLUS_DAMAGE;

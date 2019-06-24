@@ -151,7 +151,7 @@ instance CH_VLIPPER(C_INFO)
 
 func int ch_vlipper_condition()
 {
-	if(!(hero.level > 0))
+	if(hero.level == 0)
 	{
 		return TRUE;
 	};

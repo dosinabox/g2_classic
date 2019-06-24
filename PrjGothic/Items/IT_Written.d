@@ -95,6 +95,10 @@ instance ITWR_MAP_NEWWORLD(C_ITEM)
 func void use_map_newworld()
 {
 	var int document;
+	if(Npc_IsPlayer(self))
+	{
+		b_setplayermap(ItWr_Map_NewWorld);
+	};
 	document = Doc_CreateMap();
 	Doc_SetPages(document,1);
 	Doc_SetPage(document,0,"Map_NewWorld.tga",TRUE);
@@ -125,6 +129,10 @@ instance ITWR_MAP_NEWWORLD_CITY(C_ITEM)
 func void use_map_newworld_city()
 {
 	var int document;
+	if(Npc_IsPlayer(self))
+	{
+		b_setplayermap(ItWr_Map_NewWorld_City);
+	};
 	document = Doc_CreateMap();
 	Doc_SetPages(document,1);
 	Doc_SetPage(document,0,"Map_NewWorld_City.tga",TRUE);
@@ -155,6 +163,10 @@ instance ITWR_MAP_OLDWORLD(C_ITEM)
 func void use_map_oldworld()
 {
 	var int document;
+	if(Npc_IsPlayer(self))
+	{
+		b_setplayermap(ItWr_Map_OldWorld);
+	};
 	document = Doc_CreateMap();
 	Doc_SetPages(document,1);
 	Doc_SetPage(document,0,"Map_OldWorld.tga",TRUE);

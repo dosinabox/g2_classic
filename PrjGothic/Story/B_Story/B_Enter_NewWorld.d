@@ -281,6 +281,10 @@ func void b_enter_newworld_kapitel_4()
 		};
 		b_startotherroutine(jorgen,"Kloster");
 		b_killnpc(bdt_1050_landstreicher);
+		if(!Npc_IsDead(Sekob))
+		{
+			Sekob.flags = 0;
+		};
 		Wld_InsertItem(itat_dragonegg_mis,"FP_ITEM_XARDAS_01");
 		Wld_InsertNpc(draconian,"FP_ROAM_XARDASCAVE_DJG_01");
 		Wld_InsertNpc(draconian,"FP_ROAM_XARDASCAVE_DJG_02");

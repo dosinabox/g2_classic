@@ -151,7 +151,7 @@ func void dia_bullco_dailycheck_info()
 	{
 		AI_Output(self,other,"DIA_Bullco_DailyCheck_06_03");	//Глазам своим не верю! Этот урод все еще здесь!
 	};
-	BULLCO_HITCOUNTER = BULLCO_HITCOUNTER + 1;
+	Bullco_HitCounter += 1;
 	BULLCO_LEAVE_DAY = b_getdayplus();
 	AI_StopProcessInfos(self);
 	b_attack(self,other,AR_NONE,1);

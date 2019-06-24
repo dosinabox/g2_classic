@@ -39,7 +39,10 @@ func void b_givetradeinv_gorax(var C_NPC slf)
 		CreateInvItems(slf,itsc_sumwolf,5);
 		CreateInvItems(slf,itsc_windfist,4);
 		CreateInvItems(slf,itsc_sleep,2);
-		CreateInvItems(slf,itmi_runeblank,2);
+		if((hero.guild != GIL_NONE) && (hero.guild != GIL_NOV))
+		{
+			CreateInvItems(slf,ItMi_RuneBlank,2);
+		};
 		if((hero.guild == GIL_PAL) || (hero.guild == GIL_MIL))
 		{
 			CreateInvItems(slf,itwr_map_shrine_mis,1);
@@ -64,7 +67,10 @@ func void b_givetradeinv_gorax(var C_NPC slf)
 		CreateInvItems(slf,itsc_sumskel,3);
 		CreateInvItems(slf,itsc_fear,2);
 		CreateInvItems(slf,itsc_icecube,3);
-		CreateInvItems(slf,itmi_runeblank,1);
+		if((hero.guild != GIL_NONE) && (hero.guild != GIL_NOV))
+		{
+			CreateInvItems(slf,ItMi_RuneBlank,1);
+		};
 		CreateInvItems(slf,itsc_trfgiantbug,1);
 		CreateInvItems(slf,itsc_trfwolf,1);
 		CreateInvItems(slf,itsc_trfsheep,1);
