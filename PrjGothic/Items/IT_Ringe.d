@@ -571,7 +571,7 @@ instance ITRI_STR_01(C_ITEM)
 	material = MAT_METAL;
 	on_equip = equip_itri_str_01;
 	on_unequip = unequip_itri_str_01;
-	description = "Кольцо  силы";
+	description = "Кольцо могущества";
 	text[2] = NAME_BONUS_STR;
 	count[2] = RI_STRG;
 	text[5] = NAME_VALUE;

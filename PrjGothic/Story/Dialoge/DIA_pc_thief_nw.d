@@ -548,7 +548,6 @@ func void dia_diegonw_knowwhereenemy_yes()
 	DIEGO_ISONBOARD = LOG_SUCCESS;
 	CREWMEMBER_COUNT = CREWMEMBER_COUNT + 1;
 	b_giveplayerxp(XP_CREWMEMBER_SUCCESS);
-	Crewmember_Count += 1;
 	if(Hlp_StrCmp(Npc_GetNearestWP(self),"NW_CITY_UPTOWN_PATH_23") && !Hlp_IsItem(DiegoArmor,ITAR_Diego))
 	{
 		AI_Output(self,other,"DIA_DiegoNW_KnowWhereEnemy_Yes_11_02");	//ѕодожди, € буду готов через минуту.
@@ -659,7 +658,7 @@ func void dia_diegonw_stillneedyou_info()
 	AI_Output(self,other,"DIA_DiegoNW_StillNeedYou_11_01");	// уда подевалась тво€ решительность, друг?  онечно, € присоединюсь к тебе - ты только определись с тем, что тебе нужно.
 	self.flags = NPC_FLAG_IMMORTAL;
 	DIEGO_ISONBOARD = LOG_SUCCESS;
-	Crewmember_Count += 1;
+	CREWMEMBER_COUNT = CREWMEMBER_COUNT + 1;
 	if(Hlp_StrCmp(Npc_GetNearestWP(self),"NW_CITY_UPTOWN_PATH_23") && !Hlp_IsItem(DiegoArmor,ITAR_Diego))
 	{
 		AI_Output(self,other,"DIA_DiegoNW_StillNeedYou_11_02");	//ѕодожди, € буду готов через минуту.

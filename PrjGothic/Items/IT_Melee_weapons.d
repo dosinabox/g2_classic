@@ -195,7 +195,7 @@ instance ITMW_SHORTSWORD1(C_ITEM)
 	range = RANGE_SHORTSWORD1;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = CONDITION_SHORTSWORD1;
-	visual = "ItMw_010_1h_Sword_short_01.3DS";
+	visual = "ItMw_012_1h_Sword_short_02.3DS";
 	description = name;
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;
@@ -264,7 +264,7 @@ instance ITMW_SHORTSWORD2(C_ITEM)
 	range = RANGE_SHORTSWORD2;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = CONDITION_SHORTSWORD2;
-	visual = "ItMw_012_1h_Sword_short_02.3DS";
+	visual = "ItMw_010_1h_Sword_short_01.3DS";
 	description = name;
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;
@@ -954,7 +954,7 @@ instance ITMW_NAGELKEULE2(C_ITEM)
 	range = RANGE_NAGELKEULE2;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = CONDITION_NAGELKEULE2;
-	visual = "ItMw_018_1h_Mace_01.3DS";
+	visual = "ItMw_028_1h_Mace_02.3DS";
 	description = name;
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;

@@ -410,7 +410,7 @@ instance ITSC_CHARM(C_ITEM)
 	mainflag = ITEM_KAT_RUNE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = VALUE_SC_CHARM;
-	visual = "ItSc_Sleep.3DS";
+	visual = "ItSc_Charm.3DS";
 	material = MAT_LEATHER;
 	spell = SPL_CHARM;
 	cond_atr[2] = ATR_MANA_MAX;

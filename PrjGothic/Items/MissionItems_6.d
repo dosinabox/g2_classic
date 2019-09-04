@@ -332,7 +332,7 @@ instance ITMI_POWEREYE(C_ITEM)
 	name = "Глаз Силы";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
-	visual = "ItMi_DarkPearl.3ds";
+	visual = "ItMi_StoneOfKnowlegde_MIS.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[5] = NAME_VALUE;

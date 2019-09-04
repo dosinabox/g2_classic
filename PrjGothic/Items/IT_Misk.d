@@ -313,14 +313,14 @@ instance ITMI_JOINT(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_JOINT;
-	visual = "ItMi_Joint_US.3ds";
+	visual = "ItMi_Joint.3ds";
 	material = MAT_LEATHER;
 	scemename = "JOINT";
 	on_state[0] = use_joint;
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
-	inv_zbias = INVCAM_ENTF_RING_STANDARD;
+	inv_zbias = 200;
 };
 
 
@@ -356,8 +356,8 @@ func void usepacket()
 instance ITMI_POCKET(C_ITEM)
 {
 	name = "Кожаный кошелек";
-	mainflag = ITEM_KAT_NONE | ITEM_MULTI;
-	flags = 0;
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
 	value = 10;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
@@ -445,7 +445,6 @@ instance ITMI_GOLDNECKLACE(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
-	inv_zbias = INVCAM_ENTF_RING_STANDARD;
 };
 
 instance ITMI_SILVERRING(C_ITEM)

@@ -132,7 +132,7 @@ instance ITAT_CLAW(C_ITEM)
 
 instance ITAT_LURKERCLAW(C_ITEM)
 {
-	name = "Челюсть луркера";
+	name = "Когти луркера";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_LURKERCLAW;
@@ -502,7 +502,7 @@ instance ITAT_FIREGOLEMHEART(C_ITEM)
 
 instance ITAT_ICEGOLEMHEART(C_ITEM)
 {
-	name = "Сердце Ледяного голема";
+	name = "Сердце ледяного голема";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = VALUE_ICEGOLEMHEART;

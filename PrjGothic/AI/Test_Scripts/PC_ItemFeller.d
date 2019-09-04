@@ -542,7 +542,7 @@ instance PC_ITEMFELLER(NPC_DEFAULT)
 	CreateInvItems(self,itmi_coragonssilber,1);
 	CreateInvItems(self,itmi_theklaspaket,1);
 	CreateInvItems(self,itmi_mariasgoldplate,1);
-	CreateInvItems(self,itri_valentinosring,1);
+	CreateInvItems(self,itri_prot_edge_01_valentino,1);
 	CreateInvItems(self,itke_dexter,1);
 	CreateInvItems(self,itwr_kraeuterliste,1);
 	CreateInvItems(self,itwr_manarezept,1);

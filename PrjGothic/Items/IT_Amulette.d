@@ -428,3 +428,17 @@ func void unequip_itam_hp_mana_01()
 	};
 };
 
+instance TESTAMULET(C_ITEM)
+{
+	name = NAME_AMULETT;
+	mainflag = ITEM_KAT_MAGIC;
+	flags = ITEM_AMULET | ITEM_MISSION;
+	value = 0;
+	visual = "ItMi_SilverNecklace.3ds";
+	visual_skin = 0;
+	material = MAT_METAL;
+	description = "Амулет тестировщика";
+	text[1] = "Скомпилировано 4 сентября 2019г.";
+	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
+};
+

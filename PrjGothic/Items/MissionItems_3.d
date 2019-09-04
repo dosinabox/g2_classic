@@ -47,7 +47,7 @@ instance ITMI_INNOSEYE_DISCHARGED_MIS(C_ITEM)
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET | ITEM_MISSION;
 	value = 0;
-	visual = "ItMi_InnosEye_MIS.3DS";
+	visual = "ItMi_InnosEye_Discharged_MIS.3DS";
 	material = MAT_STONE;
 	description = name;
 	on_equip = equip_itmi_innoseye_discharged_mis;
@@ -69,7 +69,7 @@ instance ITMI_INNOSEYE_BROKEN_MIS(C_ITEM)
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET | ITEM_MISSION;
 	value = 0;
-	visual = "ItMi_InnosEye_MIS.3DS";
+	visual = "ItMi_InnosEye_Broken_MIS.3DS";
 	material = MAT_STONE;
 	description = name;
 	on_equip = equip_itmi_innoseye_broken_mis;
@@ -795,7 +795,7 @@ instance ITAM_PROT_BLACKEYE_MIS(C_ITEM)
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET | ITEM_MISSION;
 	value = VALUE_AM_HPMANA;
-	visual = "ItAm_Hp_Mana_01.3ds";
+	visual = "ItMi_GoldNecklace.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
 	description = name;

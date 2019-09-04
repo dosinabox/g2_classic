@@ -447,7 +447,7 @@ instance ITAM_AMULETTOFDEATH_MIS(C_ITEM)
 	material = MAT_METAL;
 	on_equip = equip_itam_amulettofdeath_mis;
 	on_unequip = unequip_itam_amulettofdeath_mis;
-	description = "Божественная аура Инноса.";
+	description = "Божественная аура Инноса";
 	text[2] = "Этот амулет защищает владельца";
 	text[3] = "от всех форм урона.";
 	text[5] = NAME_VALUE;

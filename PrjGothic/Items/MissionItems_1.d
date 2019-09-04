@@ -126,7 +126,7 @@ instance ITMI_MARIASGOLDPLATE(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_GOLDPLATE;
-	visual = "ItMi_GoldPlate.3DS";
+	visual = "ItMi_MariasGoldPlate.3DS";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "На этом блюде выгравированы";
@@ -135,7 +135,7 @@ instance ITMI_MARIASGOLDPLATE(C_ITEM)
 	count[5] = value;
 };
 
-instance ITRI_VALENTINOSRING(C_ITEM)
+instance ITRI_PROT_EDGE_01_VALENTINO(C_ITEM)
 {
 	name = NAME_RING;
 	mainflag = ITEM_KAT_MAGIC;
@@ -146,7 +146,8 @@ instance ITRI_VALENTINOSRING(C_ITEM)
 	material = MAT_METAL;
 	on_equip = equip_valentinosring;
 	on_unequip = unequip_valentinosring;
-	description = "Кольцо Валентино";
+	description = "Кольцо железной кожи";
+	text[0] = "Это кольцо принадлежит Валентино.";
 	text[2] = NAME_PROT_EDGE;
 	count[2] = RI_PROTEDGE;
 	text[5] = NAME_VALUE;
@@ -894,7 +895,7 @@ instance ITRW_BOW_L_03_MIS(C_ITEM)
 
 instance ITRI_PROT_POINT_01_MIS(C_ITEM)
 {
-	name = "Кольцо Константино";
+	name = NAME_RING;
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_RING | ITEM_MISSION;
 	value = VALUE_RI_PROTPOINT;
@@ -903,7 +904,8 @@ instance ITRI_PROT_POINT_01_MIS(C_ITEM)
 	material = MAT_METAL;
 	on_equip = equip_itri_prot_point_01_mis;
 	on_unequip = unequip_itri_prot_point_01_mis;
-	description = "Деревянная защита";
+	description = "Кольцо деревянной кожи";
+	text[0] = "Это кольцо принадлежит Константино.";
 	text[2] = NAME_PROT_POINT;
 	count[2] = RI_PROTPOINT;
 	text[5] = NAME_VALUE;
@@ -1156,8 +1158,8 @@ instance ITPL_SAGITTA_HERB_MIS(C_ITEM)
 	mainflag = ITEM_KAT_FOOD;
 	flags = ITEM_MULTI;
 	value = VALUE_STRENGTH_HERB_01;
-	visual = "ItPl_Strength_Herb_01.3DS";
-	material = MAT_WOOD;
+	visual = "ItPl_Strength_Herb_02.3DS";
+	material = MAT_LEATHER;
 	scemename = "FOOD";
 	description = name;
 	text[5] = NAME_VALUE;
