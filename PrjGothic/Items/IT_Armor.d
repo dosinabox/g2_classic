@@ -825,7 +825,7 @@ instance ITAR_NOV_L(C_ITEM)
 
 instance ITAR_KDF_L(C_ITEM)
 {
-	name = "Мантия мага огня";
+	name = "Легкая мантия мага Огня";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 40;
@@ -854,7 +854,7 @@ instance ITAR_KDF_L(C_ITEM)
 
 instance ITAR_KDF_H(C_ITEM)
 {
-	name = "Тяжелая огненная мантия";
+	name = "Тяжелая мантия мага Огня";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 80;
@@ -1115,7 +1115,7 @@ instance ITAR_DEMENTOR(C_ITEM)
 
 instance ITAR_KDW_H(C_ITEM)
 {
-	name = "Мантия мага воды";
+	name = "Тяжелая мантия мага Воды";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 80;

@@ -7,7 +7,7 @@ instance ITSE_XARDASNOTFALLBEUTEL_MIS(C_ITEM)
 	value = 0;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = use_xardasnotfallbeutel;
 	description = name;
 	text[0] = "";

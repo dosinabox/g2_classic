@@ -73,7 +73,7 @@ instance ITMI_KEROLOTHSGELDBEUTEL_MIS(C_ITEM)
 	value = 0;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = usekerolothsgeldbeutel;
 	description = name;
 	text[5] = NAME_VALUE;
@@ -97,7 +97,7 @@ instance ITMI_KEROLOTHSGELDBEUTELLEER_MIS(C_ITEM)
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItMi_Pocket.3ds";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;

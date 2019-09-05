@@ -405,7 +405,7 @@ instance ITMI_MALETHSBANDITGOLD(C_ITEM)
 	value = 0;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = use_malethsbanditgold;
 	description = name;
 	text[5] = NAME_VALUE;
@@ -611,7 +611,7 @@ instance ITSE_GOLEMCHEST_MIS(C_ITEM)
 	value = 0;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = use_golemchest;
 	description = "Кожаный мешочек.";
 	text[0] = "";
@@ -706,7 +706,7 @@ instance ITSE_DIEGOSTREASURE_MIS(C_ITEM)
 	value = 0;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = use_diegostreasure;
 	description = "Старый кожаный кошелек Диего.";
 	text[5] = NAME_VALUE;
@@ -729,7 +729,7 @@ instance ITMI_ULTHARSHOLYWATER_MIS(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = VALUE_HOLYWATER;
-	visual = "ItMi_HolyWater.3ds";
+	visual = "ItMi_UltharsHolyWater.3ds";
 	material = MAT_WOOD;
 	description = name;
 	text[5] = NAME_VALUE;

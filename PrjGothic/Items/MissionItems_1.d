@@ -650,7 +650,7 @@ instance ITFO_SCHAFSWURST(C_ITEM)
 	mainflag = ITEM_KAT_FOOD;
 	flags = ITEM_MULTI;
 	value = VALUE_SAUSAGE;
-	visual = "ItFo_Sausage.3DS";
+	visual = "ItFo_Schafswurst.3DS";
 	material = MAT_LEATHER;
 	scemename = "FOOD";
 	on_state[0] = use_schafswurst;
@@ -674,7 +674,7 @@ instance ITPO_PERM_LITTLEMANA(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI;
 	value = 150;
-	visual = "ItPo_Perm_Mana.3ds";
+	visual = "ItMi_UltharsHolyWater.3ds";
 	material = MAT_GLAS;
 	on_state[0] = useitpo_littlemana;
 	scemename = "POTIONFAST";

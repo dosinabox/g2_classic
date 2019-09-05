@@ -252,7 +252,7 @@ instance GOLD(C_ITEM)
 	value = 0;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = usegold;
 	description = name;
 	text[5] = NAME_VALUE;

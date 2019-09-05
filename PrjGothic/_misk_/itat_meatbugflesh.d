@@ -269,7 +269,7 @@ instance ITAT_LURKERSKIN(C_ITEM)
 	value = VALUE_LURKERSKIN;
 	visual = "ItAt_LurkerSkin.3DS";
 	material = MAT_LEATHER;
-	description = "Ўкура луркера.";
+	description = "Ўкура луркера";
 	text[0] = "";
 	text[1] = "";
 	text[2] = "";

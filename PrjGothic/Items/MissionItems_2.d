@@ -150,7 +150,7 @@ instance ITMI_GORNSTREASURE_MIS(C_ITEM)
 	value = 250;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = usegornstreasure;
 	description = "Кожаный кошелек Горна.";
 	text[5] = NAME_VALUE;
@@ -228,7 +228,7 @@ instance ITSE_OLAV(C_ITEM)
 	value = 25;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
-	material = MAT_METAL;
+	material = MAT_LEATHER;
 	on_state[0] = useolav;
 	description = "Кошелек Олава";
 	text[0] = "";
