@@ -336,7 +336,7 @@ func int dia_lothar_woarbeit_condition()
 func void dia_lothar_woarbeit_info()
 {
 	AI_Output(other,self,"DIA_Lothar_Add_15_14");	//Где я могу найти работу?
-	AI_Output(self,other,"DIA_Lothar_Add_01_15");	//Тебе придется стать учеником одного из мастеров  в нижней части города.
+	AI_Output(self,other,"DIA_Lothar_Add_01_15");	//Тебе придется стать учеником одного из мастеров в нижней части города.
 	AI_Output(self,other,"DIA_Lothar_Add_01_16");	//Как только мастер примет тебя на работу, ты станешь гражданином этого города.
 	AI_Output(self,other,"DIA_Lothar_Add_01_17");	//Однако другие мастера должны согласиться с этим, таковы обычаи Хориниса.
 	AI_Output(self,other,"DIA_Lothar_Add_01_18");	//Если ты думал найти работу в портовом квартале, забудь об этом!

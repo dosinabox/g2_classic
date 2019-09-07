@@ -565,7 +565,7 @@ func void dia_torlof_sekobsuccess_info()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Torlof_SekobSuccess_01_04");	//И? Ты что, промотал все деньги?  Ты должен принести их мне! И побыстрее!
+		AI_Output(self,other,"DIA_Torlof_SekobSuccess_01_04");	//И? Ты что, промотал все деньги? Ты должен принести их мне! И побыстрее!
 	};
 };
 

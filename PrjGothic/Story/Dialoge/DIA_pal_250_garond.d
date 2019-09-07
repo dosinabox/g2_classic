@@ -56,7 +56,7 @@ func void dia_garond_pmschulden_info()
 		AI_Output(self,other,"DIA_Garond_PMSchulden_10_02");	//Проблем у тебя, похоже, только прибавилось.
 		if(GAROND_SCHULDEN < 1000)
 		{
-			AI_Output(self,other,"DIA_Garond_PMSchulden_10_03");	//Но я надеюсь, что  ты способен заплатить сразу за все! Учитывая все твои прегрешения, это будет...
+			AI_Output(self,other,"DIA_Garond_PMSchulden_10_03");	//Но я надеюсь, что ты способен заплатить сразу за все! Учитывая все твои прегрешения, это будет...
 		}
 		else
 		{
@@ -173,7 +173,7 @@ func void dia_garond_petzmaster_info()
 		{
 			AI_Output(self,other,"DIA_Garond_PETZMASTER_10_04");	//Не говоря уже обо всем остальном, в чем тебя обвиняют.
 		};
-		AI_Output(self,other,"DIA_Garond_PETZMASTER_10_05");	//Позволь мне объяснить тебе  кое-что. Мы здесь все в одной ловушке.
+		AI_Output(self,other,"DIA_Garond_PETZMASTER_10_05");	//Позволь мне объяснить тебе кое-что. Мы здесь все в одной ловушке.
 		AI_Output(self,other,"DIA_Garond_PETZMASTER_10_06");	//И у меня на счету каждый человек. Включая тебя.
 		AI_Output(self,other,"DIA_Garond_PETZMASTER_10_07");	//Если тебе хочется убить кого-нибудь, просто выйди за ворота замка. И убивай там орков себе на здоровье.
 		AI_Output(self,other,"DIA_Garond_PETZMASTER_10_08");	//Я вынужден наложить на тебя штраф - и мне крайне неприятно применять такие меры.

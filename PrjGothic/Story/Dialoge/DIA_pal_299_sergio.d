@@ -146,7 +146,7 @@ func int dia_sergio_what_condition()
 func void dia_sergio_what_info()
 {
 	AI_Output(other,self,"DIA_Sergio_WHAT_15_00");	//Что ты делаешь здесь?
-	AI_Output(self,other,"DIA_Sergio_WHAT_04_01");	//Я молюсь Инносу, чтобы  он укрепил мою руку и мою волю.
+	AI_Output(self,other,"DIA_Sergio_WHAT_04_01");	//Я молюсь Инносу, чтобы он укрепил мою руку и мою волю.
 	AI_Output(self,other,"DIA_Sergio_WHAT_04_02");	//Тогда я буду готов к любым опасностям и уничтожу всех его врагов с его именем на устах.
 	AI_Output(other,self,"DIA_Sergio_WHAT_15_03");	//Каких врагов?
 	AI_Output(self,other,"DIA_Sergio_WHAT_04_04");	//Всех тех, кто противится воле Инноса. Не важно, человек это или вызванное существо.

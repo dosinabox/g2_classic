@@ -541,7 +541,7 @@ func void dia_lee_joinnow_info()
 		if(ONAR_APPROVED == FALSE)
 		{
 			AI_Output(self,other,"DIA_Lee_JoinNOW_04_09");	//Хорошо, тогда иди прямо к Онару. Я уже переговорил с ним.
-			AI_Output(self,other,"DIA_Lee_JoinNOW_04_10");	//Но ты должен договориться  о своем жаловании сам.
+			AI_Output(self,other,"DIA_Lee_JoinNOW_04_10");	//Но ты должен договориться о своем жаловании сам.
 			LEE_SENDTOONAR = TRUE;
 			b_logentry(TOPIC_BECOMESLD,"Все, что мне нужно теперь - это одобрение Онара.");
 		}
@@ -701,7 +701,7 @@ func void dia_lee_background_info()
 	AI_Output(self,other,"DIA_Lee_Add_04_14");	//У меня было много свободного времени, чтобы все обдумать.
 	AI_Output(self,other,"DIA_Lee_Add_04_15");	//Я должен отомстить.
 	AI_Output(other,self,"DIA_Lee_Add_15_16");	//(изумленно) Королю?
-	AI_Output(self,other,"DIA_Lee_Add_04_17");	//(решительно) Королю! И его прихвостням. Они все горько пожалеют  о том, что сделали со мной...
+	AI_Output(self,other,"DIA_Lee_Add_04_17");	//(решительно) Королю! И его прихвостням. Они все горько пожалеют о том, что сделали со мной...
 };
 
 
@@ -1091,7 +1091,7 @@ func void dia_lee_richter_info()
 	AI_Output(self,other,"DIA_Lee_Richter_04_01");	//Тебе все мало, да? По-моему, у тебя и без того проблем хватает. Чего же еще тебе нужно?
 	AI_Output(other,self,"DIA_Lee_Richter_15_02");	//Еще задание. Я же наемник, помнишь?
 	AI_Output(self,other,"DIA_Lee_Richter_04_03");	//Хорошо. У меня есть кое-что. Как раз для тебя.
-	AI_Output(self,other,"DIA_Lee_Richter_04_04");	//Я должен поквитаться с судьей в городе.  Я бы, конечно, предпочел сделать это сам.
+	AI_Output(self,other,"DIA_Lee_Richter_04_04");	//Я должен поквитаться с судьей в городе. Я бы, конечно, предпочел сделать это сам.
 	AI_Output(self,other,"DIA_Lee_Richter_04_05");	//Но паладины и на пушечный выстрел не подпустят меня к его дому.
 	AI_Output(self,other,"DIA_Lee_Richter_04_06");	//Это дело очень деликатное. Так что слушай внимательно. Ты пойдешь к судье и предложишь ему свои услуги.
 	AI_Output(self,other,"DIA_Lee_Richter_04_07");	//Ты должен попытаться завоевать его доверие и выполнять всякую грязную работу, пока не найдешь что-нибудь, дискредитирующее его.

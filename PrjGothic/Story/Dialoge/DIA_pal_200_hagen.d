@@ -647,7 +647,7 @@ func void dia_lord_hagen_knight_info()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Lord_Hagen_Knight_04_04");	//Стать воином Инноса означает  полностью посвятить себя служению Инносу.
+		AI_Output(self,other,"DIA_Lord_Hagen_Knight_04_04");	//Стать воином Инноса означает полностью посвятить себя служению Инносу.
 		AI_Output(self,other,"DIA_Lord_Hagen_Knight_04_05");	//Только самые благородные и мужественные воины могут быть приняты в орден.
 		AI_Output(self,other,"DIA_Lord_Hagen_Knight_04_06");	//Если ты твердо решил стать паладином, ты должен доказать, что достоин этого.
 	};
@@ -819,7 +819,7 @@ func void dia_lord_hagen_eyebroken_info()
 {
 	AI_Output(other,self,"DIA_Lord_Hagen_Add_15_07");	//Глаз у меня, но он поврежден.
 	AI_Output(self,other,"DIA_Lord_Hagen_Add_04_08");	//ЧТО? О, Иннос! Что ты наделал? Нам нужен этот Глаз!
-	AI_Output(self,other,"DIA_Lord_Hagen_Add_04_09");	//Поговори с  Пирокаром! Должен быть способ восстановить его.
+	AI_Output(self,other,"DIA_Lord_Hagen_Add_04_09");	//Поговори с Пирокаром! Должен быть способ восстановить его.
 	HAGEN_KNOWSEYEKAPUTT = TRUE;
 };
 

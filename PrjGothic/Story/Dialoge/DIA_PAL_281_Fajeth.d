@@ -104,7 +104,7 @@ func void dia_fajeth_hallo_info()
 		AI_Output(self,other,"DIA_Fajeth_Hallo_12_10");	//Послушай - я не знаю, зачем Гаронд прислал мне наемника - но, должно быть, у него были на то причины.
 		AI_Output(self,other,"DIA_Fajeth_Hallo_12_11");	//Но прежде чем я отправлю тебя назад, ты должен выполнить одно задание для меня.
 		Info_AddChoice(dia_fajeth_hallo,"У всего есть своя цена.",dia_fajeth_hallo_sldja);
-		Info_AddChoice(dia_fajeth_hallo,"Нет,  меня нет времени ...",dia_fajeth_hallo_sldnein);
+		Info_AddChoice(dia_fajeth_hallo,"Нет, у меня нет времени ...",dia_fajeth_hallo_sldnein);
 	};
 };
 
@@ -161,12 +161,12 @@ func void dia_fajeth_hallo_sldja()
 	FAJETH_PAY = TRUE;
 	Info_ClearChoices(dia_fajeth_hallo);
 	Info_AddChoice(dia_fajeth_hallo,"Что я могу сделать для тебя?",dia_fajeth_hallo_tun);
-	Info_AddChoice(dia_fajeth_hallo,"Нет,  меня нет времени ...",dia_fajeth_hallo_sldnein);
+	Info_AddChoice(dia_fajeth_hallo,"Нет, у меня нет времени ...",dia_fajeth_hallo_sldnein);
 };
 
 func void dia_fajeth_hallo_sldnein()
 {
-	AI_Output(other,self,"DIA_Fajeth_Hallo_SLDNein_15_00");	//Нет,  меня нет времени на то, чтобы решать твои проблемы.
+	AI_Output(other,self,"DIA_Fajeth_Hallo_SLDNein_15_00");	//Нет, у меня нет времени на то, чтобы решать твои проблемы.
 	AI_Output(self,other,"DIA_Fajeth_Hallo_SLDNein_12_01");	//Ты готов так легко отказаться от легких денег? Не ожидал такого от наемника.
 	AI_Output(self,other,"DIA_Fajeth_Hallo_SLDNein_12_02");	//Так как ты не хочешь помочь нам, задавай свои вопросы и проваливай.
 	MIS_FAJETH_KILL_SNAPPER = LOG_OBSOLETE;

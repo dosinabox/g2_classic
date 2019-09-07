@@ -137,7 +137,7 @@ instance DIA_FESTER_TOGETHER(C_INFO)
 	condition = dia_fester_together_condition;
 	information = dia_fester_together_info;
 	permanent = FALSE;
-	description = "Мы могли бы  атаковать это гнездо вместе...";
+	description = "Мы могли бы атаковать это гнездо вместе...";
 };
 
 
@@ -151,7 +151,7 @@ func int dia_fester_together_condition()
 
 func void dia_fester_together_info()
 {
-	AI_Output(other,self,"DIA_Fester_Together_15_00");	//Мы могли бы  атаковать это гнездо вместе...
+	AI_Output(other,self,"DIA_Fester_Together_15_00");	//Мы могли бы атаковать это гнездо вместе...
 	AI_Output(self,other,"DIA_Fester_Together_08_01");	//Ты хочешь помочь мне? Почему?
 	Info_ClearChoices(dia_fester_together);
 	Info_AddChoice(dia_fester_together,"Я хочу получить за это золото!",dia_fester_together_gold);

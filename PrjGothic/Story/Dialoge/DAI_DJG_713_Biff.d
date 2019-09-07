@@ -165,12 +165,12 @@ func void dia_biff_washierimtal_info()
 	AI_Output(self,other,"DIA_Biff_WASHIERIMTAL_07_01");	//«олото и славу. „то же еще?  огда € покончу с драконами, € буду купатьс€ в золоте.
 	AI_Output(self,other,"DIA_Biff_WASHIERIMTAL_07_02");	//” мен€ будет достаточно, чтобы провести остаток своей жизни, пыта€сь посетить все таверны и бордели в стране.
 	Info_AddChoice(dia_biff_washierimtal,"„то ж, тогда € желаю тебе удачи.",dia_biff_washierimtal_vielglueck);
-	Info_AddChoice(dia_biff_washierimtal,"Ќу да,  либо это, либо ты станешь трупом!",dia_biff_washierimtal_ihrtot);
+	Info_AddChoice(dia_biff_washierimtal,"Ќу да, либо это, либо ты станешь трупом!",dia_biff_washierimtal_ihrtot);
 };
 
 func void dia_biff_washierimtal_ihrtot()
 {
-	AI_Output(other,self,"DIA_Biff_WASHIERIMTAL_ihrtot_15_00");	//Ќу да,  либо это, либо ты станешь трупом!
+	AI_Output(other,self,"DIA_Biff_WASHIERIMTAL_ihrtot_15_00");	//Ќу да, либо это, либо ты станешь трупом!
 	AI_Output(self,other,"DIA_Biff_WASHIERIMTAL_ihrtot_07_01");	//» что? Ёто часть игры. ≈сли ты хочешь стать богатым, ты должен рисковать.
 	Info_ClearChoices(dia_biff_washierimtal);
 };

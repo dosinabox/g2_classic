@@ -545,7 +545,7 @@ func void dia_xardas_dmtsindda_dmt()
 	{
 		Log_CreateTopic(TOPIC_DEMENTOREN,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_DEMENTOREN,LOG_RUNNING);
-		b_logentry(TOPIC_DEMENTOREN," сардас знает кто такие эти люди в черных р€сах. ѕохоже именно »щущие  заправл€ют всем в о вражеских р€дах, и они очень опасны.");
+		b_logentry(TOPIC_DEMENTOREN," сардас знает кто такие эти люди в черных р€сах. ѕохоже именно »щущие заправл€ют всем в о вражеских р€дах, и они очень опасны.");
 	};
 };
 

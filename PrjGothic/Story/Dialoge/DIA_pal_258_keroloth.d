@@ -431,7 +431,7 @@ func void dia_keroloth_kap4_geldgefunden_keineahnung()
 func void dia_keroloth_kap4_geldgefunden_keineahnung_kannstmich()
 {
 	AI_Output(other,self,"DIA_Keroloth_KAP4_kannstmich_15_00");	//Поцелуй мою задницу.
-	AI_Output(self,other,"DIA_Keroloth_KAP4_kannstmich_07_01");	//Я покажу тебе, как воровать  честных людей!
+	AI_Output(self,other,"DIA_Keroloth_KAP4_kannstmich_07_01");	//Я покажу тебе, как воровать честных людей!
 	AI_StopProcessInfos(self);
 	b_attack(self,other,AR_NONE,1);
 };

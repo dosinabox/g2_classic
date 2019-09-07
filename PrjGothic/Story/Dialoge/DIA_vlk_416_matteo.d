@@ -586,7 +586,7 @@ func void dia_matteo_woalslehrling_info()
 {
 	AI_Output(other,self,"DIA_Matteo_WoAlsLehrling_15_00");	//А к кому я могу поступить в ученики?
 	AI_Output(self,other,"DIA_Matteo_WoAlsLehrling_09_01");	//К любому мастеру на этой улице.
-	AI_Output(self,other,"DIA_Matteo_WoAlsLehrling_09_02");	//Это может быть кузнец Гарад, мастер-лучник Боспер, плотник Торбен или алхимик  Константино.
+	AI_Output(self,other,"DIA_Matteo_WoAlsLehrling_09_02");	//Это может быть кузнец Гарад, мастер-лучник Боспер, плотник Торбен или алхимик Константино.
 	AI_Output(self,other,"DIA_Matteo_WoAlsLehrling_09_03");	//Один из них обязательно возьмет тебя.
 	AI_Output(self,other,"DIA_Matteo_WoAlsLehrling_09_04");	//Но важно, чтобы с этим были согласны другие мастера. Таков обычай Хориниса.
 	Log_CreateTopic(TOPIC_LEHRLING,LOG_MISSION);

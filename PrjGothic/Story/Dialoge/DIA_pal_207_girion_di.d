@@ -272,7 +272,7 @@ var int dia_girion_di_undeaddragondead_onetime;
 func void dia_girion_di_undeaddragondead_info()
 {
 	AI_Output(other,self,"DIA_Girion_DI_UndeadDragonDead_15_00");	//Мы готовы к отплытию.
-	AI_Output(self,other,"DIA_Girion_DI_UndeadDragonDead_08_01");	//Это хорошо. А то я  уже начал думать, что сгнием здесь на этом утесе.
+	AI_Output(self,other,"DIA_Girion_DI_UndeadDragonDead_08_01");	//Это хорошо. А то я уже начал думать, что сгнием здесь на этом утесе.
 	if(DIA_GIRION_DI_UNDEADDRAGONDEAD_ONETIME == FALSE)
 	{
 		AI_Output(self,other,"DIA_Girion_DI_UndeadDragonDead_08_02");	//Теперь немедленно верни корабль мне.

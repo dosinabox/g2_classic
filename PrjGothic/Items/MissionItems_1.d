@@ -294,7 +294,7 @@ func void usepassierschein()
 	Doc_SetMargins(ndocid,-1,50,50,50,50,1);
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"     Пропуск");
-	Doc_PrintLine(ndocid,0,"            Хоринис    ");
+	Doc_PrintLine(ndocid,0,"            Хоринис");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_SetFont(ndocid,0,FONT_BOOK);
@@ -422,7 +422,7 @@ func void usehalvormessage()
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"");
-	Doc_PrintLine(ndocid,0,"    Не высовывайтесь, парни! ");
+	Doc_PrintLine(ndocid,0,"    Не высовывайтесь, парни!");
 	Doc_PrintLine(ndocid,0,"    Ополчения становится подозрительным.");
 	Doc_PrintLine(ndocid,0,"    Не предпринимайте ничего,");
 	Doc_PrintLine(ndocid,0,"пока я не дам знать о себе!");
@@ -708,10 +708,10 @@ instance HOLY_HAMMER_MIS(C_ITEM)
 	cond_value[2] = CONDITION_HOLYHAMMER;
 	visual = "ItMw_030_2h_kdf_hammer_01.3DS";
 	description = name;
-	text[2] = "Урон:                   ??";
-	text[3] = "Необходима сила:          ??";
-	text[4] = "Двуручное оружие";
-	text[5] = "Цена:  невозможно определить";
+	text[2] = "Урон неизвестен";
+	text[3] = "Требование к силе неизвестно";
+	text[4] = NAME_TWOHANDED;
+	text[5] = "Цена неизвестна";
 };
 
 instance ITKE_MAGICCHEST(C_ITEM)

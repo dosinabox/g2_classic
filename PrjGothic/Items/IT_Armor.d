@@ -448,7 +448,7 @@ instance ITAR_PAL_H(C_ITEM)
 
 instance ITAR_BAU_L(C_ITEM)
 {
-	name = "Одежда фермера 1";
+	name = "Рабочая одежда";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 15;
@@ -477,7 +477,7 @@ instance ITAR_BAU_L(C_ITEM)
 
 instance ITAR_BAU_M(C_ITEM)
 {
-	name = "Одежда фермера 2";
+	name = "Крестьянский костюм";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 15;

@@ -27,7 +27,7 @@ instance ITRW_BOLT(C_ITEM)
 
 instance ITRW_MIL_CROSSBOW(C_ITEM)
 {
-	name = "Арбалет";
+	name = "Арбалет ополчения";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_CROSSBOW;
 	material = MAT_WOOD;
@@ -49,7 +49,7 @@ instance ITRW_MIL_CROSSBOW(C_ITEM)
 
 instance ITRW_SLD_BOW(C_ITEM)
 {
-	name = "Лук";
+	name = "Лук наемника";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -379,7 +379,7 @@ instance ITRW_CROSSBOW_L_02(C_ITEM)
 
 instance ITRW_CROSSBOW_M_01(C_ITEM)
 {
-	name = "Арбалет";
+	name = "Штурмовой арбалет";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_CROSSBOW;
 	material = MAT_WOOD;

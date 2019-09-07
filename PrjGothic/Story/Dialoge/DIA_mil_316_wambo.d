@@ -183,7 +183,7 @@ func void dia_wambo_deal_info()
 	}
 	else
 	{
-		AI_Output(other,self,"DIA_Wambo_Deal_15_03");	//...но с собой  их не захватил.
+		AI_Output(other,self,"DIA_Wambo_Deal_15_03");	//...но с собой их не захватил.
 		AI_Output(self,other,"DIA_Wambo_Deal_03_04");	//Я не выношу, когда кто-нибудь пытается одурачить меня. Так что давай сюда золото.
 		AI_StopProcessInfos(self);
 	};

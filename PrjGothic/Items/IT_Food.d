@@ -417,7 +417,7 @@ instance ITFO_BEER(C_ITEM)
 	count[1] = HP_BEER;
 	text[2] = NAME_BONUS_MANA;
 	count[2] = MANA_BEER;
-	text[4] = "Черное паладинское";
+	text[4] = "Темное паладинское";
 	text[5] = NAME_VALUE;
 	count[5] = VALUE_BEER;
 };

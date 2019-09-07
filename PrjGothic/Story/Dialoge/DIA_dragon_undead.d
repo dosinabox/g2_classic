@@ -61,7 +61,7 @@ func void dia_dragon_undead_hello_info()
 	};
 	if(hero.guild == GIL_KDF)
 	{
-		AI_Output(self,other,"DIA_Dragon_Undead_Hello_20_07");	//–азве одержимые из  твоего племени были недостаточной причиной дл€ теб€, чтобы искать силу, управл€ющую ими?
+		AI_Output(self,other,"DIA_Dragon_Undead_Hello_20_07");	//–азве одержимые из твоего племени были недостаточной причиной дл€ теб€, чтобы искать силу, управл€ющую ими?
 	};
 	AI_Output(self,other,"DIA_Dragon_Undead_Hello_20_08");	// ак бы ты не изворачивалс€, ты не можешь поспорить со всем этим.
 	Info_AddChoice(dia_dragon_undead_hello,"’ватит болтать.",dia_dragon_undead_hello_attack);

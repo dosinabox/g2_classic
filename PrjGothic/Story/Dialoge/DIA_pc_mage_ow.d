@@ -562,7 +562,7 @@ func void dia_miltenow_perm_info()
 {
 	AI_Output(other,self,"DIA_MiltenOW_Perm_15_00");	//А какие у тебя здесь обязанности?
 	AI_Output(self,other,"DIA_MiltenOW_Perm_03_01");	//Изначально, я должен был проверять магическую руду. Но она здесь редко попадала мне в руки.
-	AI_Output(self,other,"DIA_MiltenOW_Perm_03_02");	//И теперь я сосредоточился  на изучении алхимии.
+	AI_Output(self,other,"DIA_MiltenOW_Perm_03_02");	//И теперь я сосредоточился на изучении алхимии.
 };
 
 

@@ -583,7 +583,7 @@ func void dia_bennet_whyprison_info()
 	AI_Output(self,other,"DIA_Bennet_WhyPrison_06_02");	//Но я не делал этого, они хотят оклеветать меня.
 	AI_Output(other,self,"DIA_Bennet_WhyPrison_15_03");	//Зачем бы им это?
 	AI_Output(self,other,"DIA_Bennet_WhyPrison_06_04");	//Откуда мне знать? Ты должен вытащить меня отсюда.
-	AI_Output(self,other,"DIA_Bennet_WhyPrison_06_05");	//Поговори с лордом Хагеном, проломи стену...  ну, я не знаю... сделай же что-нибудь!
+	AI_Output(self,other,"DIA_Bennet_WhyPrison_06_05");	//Поговори с лордом Хагеном, проломи стену... ну, я не знаю... сделай же что-нибудь!
 	MIS_RESCUEBENNET = LOG_RUNNING;
 	Log_CreateTopic(TOPIC_RESCUEBENNET,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_RESCUEBENNET,LOG_RUNNING);

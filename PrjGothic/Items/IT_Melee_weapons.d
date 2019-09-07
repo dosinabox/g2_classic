@@ -300,7 +300,7 @@ instance ITMW_SENSE(C_ITEM)
 
 instance ITMW_1H_VLK_SWORD(C_ITEM)
 {
-	name = "Меч";
+	name = "Шпага";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1703,7 +1703,7 @@ instance ITMW_KRIEGSHAMMER2(C_ITEM)
 
 instance ITMW_MEISTERDEGEN(C_ITEM)
 {
-	name = "Мастер-меч";
+	name = "Шпага мастера";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;

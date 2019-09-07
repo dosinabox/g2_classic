@@ -159,7 +159,7 @@ func void dia_sld_6_standard_info()
 		}
 		else
 		{
-			AI_Output(self,other,"DIA_SLD_6_STANDARD_06_08");	//Если Беннета не выпустят из тюрьмы,  мы сами пойдем туда и освободим его.
+			AI_Output(self,other,"DIA_SLD_6_STANDARD_06_08");	//Если Беннета не выпустят из тюрьмы, мы сами пойдем туда и освободим его.
 		};
 	};
 	if(KAPITEL == 4)

@@ -207,7 +207,7 @@ func void dia_parcival_brave_info()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Parcival_BRAVE_13_03");	//Эй! Тебе что,  нечего больше делать, как болтать со мной? Проваливай!
+		AI_Output(self,other,"DIA_Parcival_BRAVE_13_03");	//Эй! Тебе что, нечего больше делать, как болтать со мной? Проваливай!
 		b_giveplayerxp(XP_AMBIENT);
 	};
 	PARCIVAL_BRAVE_LABERCOUNT = PARCIVAL_BRAVE_LABERCOUNT + 1;

@@ -27,7 +27,7 @@ const string TOPIC_SEKOBDMT = "Изгнанный Фермер";
 var int topic_end_sekobdmt;
 
 const string TOPIC_AKILSCHAFDIEBE = "Овцекрады";
-const string TOPIC_HEALHILDA = "Лекарство для  Хильды";
+const string TOPIC_HEALHILDA = "Лекарство для Хильды";
 const string TOPIC_MALETHSGEHSTOCK = "Посох Малета";
 
 var int topic_end_malethsgehstock;

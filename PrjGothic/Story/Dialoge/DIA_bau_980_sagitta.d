@@ -523,7 +523,7 @@ func void dia_sagitta_healrandolph_info()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Sagitta_HEALRANDOLPH_17_03");	//Я дам тебе лекарство для него. Оно поставит его на  ноги за пару дней.
+		AI_Output(self,other,"DIA_Sagitta_HEALRANDOLPH_17_03");	//Я дам тебе лекарство для него. Оно поставит его на ноги за пару дней.
 	};
 	AI_Output(self,other,"DIA_Sagitta_HEALRANDOLPH_17_04");	//Но это обойдется тебе в 300 золотых.
 	if(DIA_SAGITTA_HEALRANDOLPH_KNOWSPRICE == FALSE)

@@ -250,7 +250,7 @@ func void dia_ehnim_moleratfett_info()
 	AI_Output(other,self,"DIA_Ehnim_MoleRatFett_15_01");	//Ну да. Все еще ссоритесь?
 	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_12_02");	//Не твое дело. Забудь об этом. Скажи, ты не был недавно на ферме Лобарта?
 	AI_Output(other,self,"DIA_Ehnim_MoleRatFett_15_03");	//Может быть. А что?
-	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_12_04");	//Ох, ничего такого. Я просто хотел поговорить с Вино о  его винокурне.
+	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_12_04");	//Ох, ничего такого. Я просто хотел поговорить с Вино о его винокурне.
 	Info_ClearChoices(dia_ehnim_moleratfett);
 	Info_AddChoice(dia_ehnim_moleratfett,"У меня сейчас нет времени на это.",dia_ehnim_moleratfett_nein);
 	Info_AddChoice(dia_ehnim_moleratfett,"Винокурня? Какая винокурня?",dia_ehnim_moleratfett_was);

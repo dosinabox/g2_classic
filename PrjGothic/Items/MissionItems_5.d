@@ -384,8 +384,7 @@ instance ITPO_POTIONOFDEATH_01_MIS(C_ITEM)
 	on_state[0] = useitpo_potionofdeath;
 	scemename = "POTIONFAST";
 	description = "—лезы »нноса";
-	text[1] = "???";
-	count[1] = MANA_ESSENZ;
+	text[3] = "Ёффект неизвестен.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };

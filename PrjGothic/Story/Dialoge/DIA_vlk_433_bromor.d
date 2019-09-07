@@ -42,7 +42,7 @@ func int dia_bromor_girls_condition()
 
 func void dia_bromor_girls_info()
 {
-	AI_Output(other,self,"DIA_Bromor_GIRLS_15_00");	//Я хочу развлечься.
+	AI_Output(other,self,"DIA_Bromor_Pay_15_00");	//Я хочу развлечься.
 	AI_Output(self,other,"DIA_Bromor_GIRLS_07_01");	//Ну да, все сюда за этим приходят.
 	AI_Output(self,other,"DIA_Bromor_GIRLS_07_02");	//Я Бромор. Это мой дом, а это мои девочки. Я люблю моих девочек.
 	AI_Output(self,other,"DIA_Bromor_GIRLS_07_03");	//А если ты любишь моих девочек тоже, ты должен заплатить за это 50 золотых монет.

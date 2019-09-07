@@ -113,7 +113,7 @@ func void dia_ramirez_hallo_info()
 	if(JOIN_THIEFS == TRUE)
 	{
 		AI_Output(self,other,"DIA_Ramirez_Hallo_14_02");	//Итак, ты с нами. Что ж, тогда я желаю тебе успеха - но будь осторожен.
-		AI_Output(self,other,"DIA_Ramirez_Hallo_14_03");	//Ох, и еще одно - меня не интересует кто ты там наверху, и  кем ты работаешь.
+		AI_Output(self,other,"DIA_Ramirez_Hallo_14_03");	//Ох, и еще одно - меня не интересует кто ты там наверху, и кем ты работаешь.
 		AI_Output(self,other,"DIA_Ramirez_Hallo_14_04");	//Но здесь, внизу, ты один из нас. Вор. Не больше и не меньше.
 		DIA_RAMIREZ_HALLO_PERMANENT = TRUE;
 	};

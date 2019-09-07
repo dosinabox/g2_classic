@@ -380,7 +380,7 @@ func void usepfandbrief()
 	Doc_PrintLines(ndocid,0,"из коллекции кровавых кубков");
 	Doc_PrintLine(ndocid,0," ");
 	Doc_PrintLine(ndocid,0,"подпись");
-	Doc_PrintLine(ndocid,0,"Лютеро, торговец  ");
+	Doc_PrintLine(ndocid,0,"Лютеро, торговец");
 	Doc_PrintLine(ndocid,0," ");
 	Doc_PrintLine(ndocid,0,"Лемар, ростовщик");
 	Doc_Show(ndocid);

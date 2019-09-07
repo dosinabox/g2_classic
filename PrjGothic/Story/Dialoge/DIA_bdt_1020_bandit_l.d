@@ -69,7 +69,7 @@ func void dia_bdt_1020_wegelagerer_agon()
 	{
 		Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Хорошо, вот деньги.",dia_bdt_1020_wegelagerer_firstwarn_givemoney);
 	};
-	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Извини, у меня  нет денег.",dia_bdt_1020_wegelagerer_firstwarn_nomoney);
+	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Извини, у меня нет денег.",dia_bdt_1020_wegelagerer_firstwarn_nomoney);
 	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Прочь с моей дороги!",dia_bdt_1020_wegelagerer_firstwarn_never);
 };
 
@@ -82,7 +82,7 @@ func void dia_bdt_1020_wegelagerer_firstwarn_howmuch()
 	{
 		Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Хорошо, вот деньги.",dia_bdt_1020_wegelagerer_firstwarn_givemoney);
 	};
-	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Извини, у меня  нет денег.",dia_bdt_1020_wegelagerer_firstwarn_nomoney);
+	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Извини, у меня нет денег.",dia_bdt_1020_wegelagerer_firstwarn_nomoney);
 	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Прочь с моей дороги!",dia_bdt_1020_wegelagerer_firstwarn_never);
 };
 
@@ -98,7 +98,7 @@ func void dia_bdt_1020_wegelagerer_firstwarn_joke()
 	{
 		Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Хорошо, вот деньги.",dia_bdt_1020_wegelagerer_firstwarn_givemoney);
 	};
-	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Извини, у меня  нет денег.",dia_bdt_1020_wegelagerer_firstwarn_nomoney);
+	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Извини, у меня нет денег.",dia_bdt_1020_wegelagerer_firstwarn_nomoney);
 	Info_AddChoice(dia_bdt_1020_wegelagerer_firstwarn,"Прочь с моей дороги!",dia_bdt_1020_wegelagerer_firstwarn_never);
 };
 
@@ -130,7 +130,7 @@ func void dia_bdt_1020_wegelagerer_firstwarn_givemoney()
 
 func void dia_bdt_1020_wegelagerer_firstwarn_nomoney()
 {
-	AI_Output(other,self,"DIA_BDT_1020_Wegelagerer_FirstWarn_NoMoney_15_00");	//Извини, у меня  нет денег.
+	AI_Output(other,self,"DIA_BDT_1020_Wegelagerer_FirstWarn_NoMoney_15_00");	//Извини, у меня нет денег.
 	AI_Output(self,other,"DIA_BDT_1020_Wegelagerer_FirstWarn_NoMoney_06_01");	//Да уж, воистину тяжелые времена настали.
 	if(Npc_HasEquippedMeleeWeapon(other))
 	{

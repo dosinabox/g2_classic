@@ -75,7 +75,7 @@ func void dia_lehmar_geldleihen_info()
 	Info_AddChoice(dia_lehmar_geldleihen,"Я подумаю над этим.",dia_lehmar_geldleihen_back);
 	Info_AddChoice(dia_lehmar_geldleihen,"1000 золотых.",dia_lehmar_geldleihen_1000);
 	Info_AddChoice(dia_lehmar_geldleihen," 200 золотых.",dia_lehmar_geldleihen_200);
-	Info_AddChoice(dia_lehmar_geldleihen,"   50 золотых.",dia_lehmar_geldleihen_50);
+	Info_AddChoice(dia_lehmar_geldleihen,"  50 золотых.",dia_lehmar_geldleihen_50);
 };
 
 func void dia_lehmar_geldleihen_back()
@@ -374,7 +374,7 @@ func void dia_lehmar_buchweg_info()
 {
 	AI_Output(self,other,"DIA_Lehmar_Add_09_00");	//(с сожалением) Какой-то гнусный вор украл мой гроссбух...
 	AI_Output(self,other,"DIA_Lehmar_Add_09_01");	//Ты случайно не имеешь к этому отношения, нет?
-	AI_Output(self,other,"DIA_Lehmar_Add_15_02");	//(ухмыляется) Я? Нет.
+	AI_Output(self,other,"DIA_Addon_Lehmar_Add_15_02");	//(ухмыляется) Я? Нет.
 	AI_Output(self,other,"DIA_Lehmar_Add_09_03");	//Да-да, хорошо. Уходи отсюда...
 	AI_StopProcessInfos(self);
 };

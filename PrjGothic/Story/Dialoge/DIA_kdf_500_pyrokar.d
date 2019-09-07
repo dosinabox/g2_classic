@@ -250,7 +250,8 @@ instance DIA_PYROKAR_RUNNING(C_INFO)
 
 func int dia_pyrokar_running_condition()
 {
-	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && Npc_IsInState(self,zs_talk) && (other.guild == GIL_NOV) && Mob_HasItems("MAGICCHEST",itmi_runeblank))
+//	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && Npc_IsInState(self,zs_talk) && (other.guild == GIL_NOV) && Mob_HasItems("MAGICCHEST",itmi_runeblank))
+	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && Npc_IsInState(self,zs_talk) && (other.guild == GIL_NOV))
 	{
 		return TRUE;
 	};
@@ -289,7 +290,8 @@ instance DIA_PYROKAR_SUCCESS(C_INFO)
 
 func int dia_pyrokar_success_condition()
 {
-	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (hero.guild == GIL_NOV) && !Mob_HasItems("MAGICCHEST",itmi_runeblank) && ((Npc_HasItems(other,itmi_runeblank) >= 1) || (Npc_HasItems(other,itru_firebolt) >= 1)))
+//	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (hero.guild == GIL_NOV) && !Mob_HasItems("MAGICCHEST",itmi_runeblank) && ((Npc_HasItems(other,itmi_runeblank) >= 1) || (Npc_HasItems(other,itru_firebolt) >= 1)))
+	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (hero.guild == GIL_NOV) && ((Npc_HasItems(other,itmi_runeblank) >= 1) || (Npc_HasItems(other,itru_firebolt) >= 1)))
 	{
 		return TRUE;
 	};
@@ -1068,7 +1070,7 @@ func void dia_pyrokar_foundinnoseye_was()
 		Info_AddChoice(dia_pyrokar_foundinnoseye,"Почему Ватрас?",dia_pyrokar_foundinnoseye_was_vatras);
 	};
 	Info_AddChoice(dia_pyrokar_foundinnoseye,"Что такое Круг Солнца?",dia_pyrokar_foundinnoseye_sonnenkreis);
-	b_logentry(TOPIC_INNOSEYE,"Пирокар хочет, чтобы я спросил у мага воды Ватраса, находящегося в городе,  совета о том, что можно сделать с поврежденным Глазом.");
+	b_logentry(TOPIC_INNOSEYE,"Пирокар хочет, чтобы я спросил у мага воды Ватраса, находящегося в городе, совета о том, что можно сделать с поврежденным Глазом.");
 	MIS_PYROKAR_GOTOVATRASINNOSEYE = LOG_RUNNING;
 };
 
@@ -1153,7 +1155,7 @@ func void dia_pyrokar_xardasvertrauen_info()
 	AI_Output(other,self,"DIA_Pyrokar_XARDASVERTRAUEN_15_01");	//Ты должен довериться Ксардасу.
 	AI_Output(self,other,"DIA_Pyrokar_XARDASVERTRAUEN_11_02");	//Я ничего не могу поделать, ты слышишь? У меня нет ни малейшего доказательства, что Ксардас не работает против нас. Я не могу сделать это.
 	AI_Output(other,self,"DIA_Pyrokar_XARDASVERTRAUEN_15_03");	//А что если я принесу тебе доказательство?
-	AI_Output(self,other,"DIA_Pyrokar_XARDASVERTRAUEN_11_04");	//Боюсь, это невозможно. Это должно быть  что-то, что действительно потрясет меня.
+	AI_Output(self,other,"DIA_Pyrokar_XARDASVERTRAUEN_11_04");	//Боюсь, это невозможно. Это должно быть что-то, что действительно потрясет меня.
 	AI_Output(self,other,"DIA_Pyrokar_XARDASVERTRAUEN_11_05");	//Что касается Ксардаса, то у меня большие сомнения насчет того, что он вообще может произвести на меня впечатление.
 	b_logentry(TOPIC_INNOSEYE,"Пирокара прямо в дрожь бросает, когда он слышит о Ксардасе. Я должен обсудить с Ксардасом, как заставить Пирокара принять участие в ритуале в Круге Солнца.");
 	PYROKAR_DENIESINNOSEYERITUAL = TRUE;

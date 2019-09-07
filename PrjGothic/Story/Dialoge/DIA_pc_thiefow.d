@@ -217,7 +217,7 @@ instance DIA_DIEGOOW_GORN(C_INFO)
 	condition = dia_diegoow_gorn_condition;
 	information = dia_diegoow_gorn_info;
 	permanent = FALSE;
-	description = "Я хочу купить свободу  Горну ...";
+	description = "Я хочу купить свободу Горну ...";
 };
 
 
@@ -231,7 +231,7 @@ func int dia_diegoow_gorn_condition()
 
 func void dia_diegoow_gorn_info()
 {
-	AI_Output(other,self,"DIA_DiegoOw_Gorn_15_00");	//Я хочу купить свободу  Горну, но Гаронд просит за это 1000 золотых.
+	AI_Output(other,self,"DIA_DiegoOw_Gorn_15_00");	//Я хочу купить свободу Горну, но Гаронд просит за это 1000 золотых.
 	AI_Output(self,other,"DIA_DiegoOw_Gorn_11_01");	//Не маленькая сумма. У меня есть 300 монет, ты можешь взять их. Остальное найди сам.
 	b_giveinvitems(self,other,itmi_gold,300);
 	b_logentry(TOPIC_RESCUEGORN,"Диего заплатил 300 золота за освобождение Горна.");

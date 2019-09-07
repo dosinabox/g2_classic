@@ -77,7 +77,7 @@ func void dia_harad_arbeit_info()
 	};
 	Log_CreateTopic(TOPIC_LEHRLING,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_LEHRLING,LOG_RUNNING);
-	b_logentry(TOPIC_LEHRLING,"≈сли € смогу убедить √арада, что € хоть на что-нибудь гожусь,  он примет мен€ в ученики.");
+	b_logentry(TOPIC_LEHRLING,"≈сли € смогу убедить √арада, что € хоть на что-нибудь гожусь, он примет мен€ в ученики.");
 };
 
 
@@ -379,7 +379,7 @@ func void dia_harad_lehrling_info()
 		}
 		else
 		{
-			AI_Output(self,other,"DIA_Harad_LEHRLING_12_26");	//“ебе нужно получить одобрение, по крайней мере, четырех  мастеров. »наче ты не сможешь стать учеником в нижней части города.
+			AI_Output(self,other,"DIA_Harad_LEHRLING_12_26");	//“ебе нужно получить одобрение, по крайней мере, четырех мастеров. »наче ты не сможешь стать учеником в нижней части города.
 			AI_Output(self,other,"DIA_Harad_LEHRLING_12_27");	//ѕоэтому ты должен поговорить со всеми мастерами, которые еще не уверены в тебе.
 		};
 	}

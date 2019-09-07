@@ -64,7 +64,7 @@ func int dia_rukhar_wasmachstdu_condition()
 func void dia_rukhar_wasmachstdu_info()
 {
 	AI_Output(other,self,"DIA_Rukhar_WASMACHSTDU_15_00");	//Что ты делаешь здесь?
-	AI_Output(self,other,"DIA_Rukhar_WASMACHSTDU_12_01");	//Еще несколько недель назад  вкалывал как раб на ферме Онара.
+	AI_Output(self,other,"DIA_Rukhar_WASMACHSTDU_12_01");	//Еще несколько недель назад вкалывал как раб на ферме Онара.
 	AI_Output(self,other,"DIA_Rukhar_WASMACHSTDU_12_02");	//Но однажды я понял, что больше так не выдержу и сбежал оттуда.
 	AI_Output(self,other,"DIA_Rukhar_WASMACHSTDU_12_03");	//Теперь я сам себе хозяин. Все, что принадлежит мне, находится в этом сундуке. И больше мне ничего не нужно.
 	AI_Output(self,other,"DIA_Rukhar_WASMACHSTDU_12_04");	//Не хочешь посостязаться со мной?

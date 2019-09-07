@@ -92,7 +92,7 @@ func int dia_till_feldarbeiter_condition()
 func void dia_till_feldarbeiter_info()
 {
 	AI_Output(other,self,"DIA_Till_FELDARBEITER_15_00");	//Вы так всегда обращаетесь со своими работниками?
-	AI_Output(self,other,"DIA_Till_FELDARBEITER_03_01");	//Конечно  - иначе нельзя. Если не поддерживать дисциплину, никто не будет - это известное правило.
+	AI_Output(self,other,"DIA_Till_FELDARBEITER_03_01");	//Конечно - иначе нельзя. Если не поддерживать дисциплину, никто не будет - это известное правило.
 };
 
 
