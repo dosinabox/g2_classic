@@ -61,7 +61,7 @@ func void use_finaldragonequipment_s1()
 		{
 			PLAYERGETSAMULETTOFDEATH = TRUE;
 			PLAYER_TALENT_RUNES[SPL_MASTEROFDISASTER] = TRUE;
-			b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Святая стрела': 1 святая вода, свиток не нужен");
+			b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Святой удар': 1 святая вода, свиток не нужен");
 			Doc_SetMargins(ndocid,-1,30,20,275,20,1);
 			Doc_PrintLine(ndocid,1,"");
 			Doc_PrintLines(ndocid,1,"... Я следовал инструкциям и просто окропил святой водой Инноса чистый рунный камень, лежащий на рунном столе. Рунный камень был уничтожен. Я подозреваю, что это заклинание подвластно только Избранному.");

@@ -8,11 +8,12 @@ instance FAKESCROLL(C_ITEM)
 	hp_max = 5;
 	weight = 1;
 	value = 0;
-	visual = "Fakescroll.3ds";
+	visual = "ItWr_Scroll_01.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 

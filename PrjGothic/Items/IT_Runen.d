@@ -334,7 +334,7 @@ instance ITRU_TELEPORTTAVERNE(C_ITEM)
 	mainflag = ITEM_KAT_RUNE;
 	flags = 0;
 	value = VALUE_RU_TELEPORTTAVERNE;
-	visual = "ItRu_Teleport_2.3ds";
+	visual = "ItRu_Teleport_3.3ds";
 	material = MAT_STONE;
 	spell = SPL_TELEPORTTAVERNE;
 	description = NAME_SPL_TELEPORTTAVERNE;

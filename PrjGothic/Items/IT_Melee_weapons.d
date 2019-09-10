@@ -70,7 +70,7 @@ instance ITMW_1H_BAU_AXE(C_ITEM)
 
 instance ITMW_1H_VLK_MACE(C_ITEM)
 {
-	name = "Посох";
+	name = "Трость";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -116,7 +116,7 @@ instance ITMW_1H_MACE_L_03(C_ITEM)
 
 instance ITMW_1H_BAU_MACE(C_ITEM)
 {
-	name = "Тяжелая ветка";
+	name = "Тяжелый сук";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -139,7 +139,7 @@ instance ITMW_1H_BAU_MACE(C_ITEM)
 
 instance ITMW_1H_VLK_AXE(C_ITEM)
 {
-	name = "Топор";
+	name = "Легкий топор";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_METAL;
@@ -208,7 +208,7 @@ instance ITMW_SHORTSWORD1(C_ITEM)
 
 instance ITMW_NAGELKNUEPPEL(C_ITEM)
 {
-	name = "Палица с шипами";
+	name = "Палка с гвоздями";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -369,7 +369,7 @@ instance ITMW_2H_BAU_AXE(C_ITEM)
 
 instance ITMW_2H_AXE_L_01(C_ITEM)
 {
-	name = "Киркомотыга";
+	name = "Кирка";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_METAL;
@@ -461,7 +461,7 @@ instance ITMW_2H_SWORD_M_01(C_ITEM)
 
 instance ITMW_1H_MIL_SWORD(C_ITEM)
 {
-	name = "Грубый палаш";
+	name = "Широкий меч";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -509,7 +509,7 @@ instance ITMW_1H_SLD_SWORD(C_ITEM)
 {
 	name = "Грубый меч";
 	mainflag = ITEM_KAT_NF;
-	flags = ITEM_AXE;
+	flags = ITEM_SWD;
 	material = MAT_METAL;
 	value = VALUE_SLD1HSCHWERT;
 	damagetotal = DAMAGE_SLD1HSCHWERT;
@@ -990,7 +990,7 @@ instance ITMW_SCHIFFSAXT(C_ITEM)
 
 instance ITMW_PIRATENSAEBEL(C_ITEM)
 {
-	name = "Пиратская абордажная сабля";
+	name = "Пиратская сабля";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1450,7 +1450,7 @@ instance ITMW_STREITKOLBEN(C_ITEM)
 
 instance ITMW_ZWEIHAENDER2(C_ITEM)
 {
-	name = "Двуручный меч";
+	name = "Усиленный двуручный меч";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
@@ -1548,7 +1548,7 @@ instance ITMW_INQUISITOR(C_ITEM)
 	material = MAT_METAL;
 	value = VALUE_INQUISITOR;
 	damagetotal = DAMAGE_INQUISITOR;
-	damagetype = DAM_EDGE;
+	damagetype = DAM_BLUNT;
 	range = RANGE_INQUISITOR;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = CONDITION_INQUISITOR;
@@ -1818,7 +1818,7 @@ instance ITMW_SCHLACHTAXT(C_ITEM)
 
 instance ITMW_KRUMMSCHWERT(C_ITEM)
 {
-	name = "Абордажная сабля";
+	name = "Тяжелый ятаган";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;

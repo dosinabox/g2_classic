@@ -23,6 +23,7 @@ instance ITRW_BOLT(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITRW_MIL_CROSSBOW(C_ITEM)

@@ -10,6 +10,9 @@ instance STANDARDBRIEF(C_ITEM)
 	on_state[0] = usestandardbrief;
 	scemename = "MAP";
 	description = "StandardLetter";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

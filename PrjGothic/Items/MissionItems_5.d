@@ -10,6 +10,9 @@ instance ITWR_XARDASLETTERTOOPENBOOK_MIS(C_ITEM)
 	on_state[0] = use_xardaslettertoopenbook;
 	scemename = "MAP";
 	description = name;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -71,8 +74,6 @@ instance ITWR_HALLSOFIRDORATH_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	on_state[0] = use_hallsofirdorath;
 };
 
@@ -112,8 +113,6 @@ instance ITWR_HALLSOFIRDORATH_OPEN_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	on_state[0] = use_hallsofirdorath_open;
 };
 
@@ -162,8 +161,6 @@ instance ITWR_XARDASSEAMAPBOOK_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	on_state[0] = use_xardasseamapbook_mis;
 };
 
@@ -226,6 +223,9 @@ instance ITWR_USELAMPIDIOT_MIS(C_ITEM)
 	scemename = "MAP";
 	description = name;
 	text[0] = "из книги 'Чертоги Ирдората'";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -379,7 +379,7 @@ instance ITPO_POTIONOFDEATH_01_MIS(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI;
 	value = 10;
-	visual = "ItMi_Flask.3ds";
+	visual = "ItPo_PotionOfDeath.3ds";
 	material = MAT_GLAS;
 	on_state[0] = useitpo_potionofdeath;
 	scemename = "POTIONFAST";
@@ -424,7 +424,7 @@ instance ITPO_POTIONOFDEATH_02_MIS(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI;
 	value = 10;
-	visual = "ItMi_Flask.3ds";
+	visual = "ItPo_PotionOfDeath.3ds";
 	material = MAT_GLAS;
 	on_state[0] = useitpo_potionofdeath;
 	scemename = "POTIONFAST";
@@ -486,7 +486,7 @@ instance ITPO_HEALRANDOLPH_MIS(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = VALUE_HPESSENZ;
-	visual = "ItMi_Flask.3ds";
+	visual = "ItPo_HealRandolph.3ds";
 	material = MAT_GLAS;
 	on_state[0] = use_healrandolph;
 	scemename = "POTIONFAST";

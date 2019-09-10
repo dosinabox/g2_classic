@@ -15,8 +15,6 @@ instance ITSE_XARDASNOTFALLBEUTEL_MIS(C_ITEM)
 	text[2] = "содержится твердый объект";
 	text[3] = "и документ.";
 	text[4] = "";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 
@@ -222,6 +220,9 @@ instance ITWR_REZEPT_MEGADRINK_MIS(C_ITEM)
 	on_state[0] = use_rezeptfuermegatrank;
 	scemename = "MAP";
 	description = name;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -300,6 +301,9 @@ instance ITWR_ZUGBRUECKE_MIS(C_ITEM)
 	on_state[0] = use_zugbruecke;
 	scemename = "MAP";
 	description = name;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -335,8 +339,6 @@ instance ITMI_POWEREYE(C_ITEM)
 	visual = "ItMi_StoneOfKnowlegde_MIS.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	inv_zbias = INVCAM_ENTF_MISC_STANDARD;
 };
 

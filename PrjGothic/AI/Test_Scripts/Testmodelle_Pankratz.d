@@ -10,6 +10,9 @@ instance J1(C_ITEM)
 	on_state[0] = usejoly_storyhelpletter;
 	scemename = "MAP";
 	description = "JOLY_Storyhelpletter";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -31,6 +34,9 @@ instance J3(C_ITEM)
 	on_state[0] = usej3;
 	scemename = "MAP";
 	description = "chapter2";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -52,6 +58,9 @@ instance DJG_INSERTEN(C_ITEM)
 	on_state[0] = usedjg_inserten;
 	scemename = "MAP";
 	description = "JOLY_Storyhelpletter";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -80,6 +89,9 @@ instance J2(C_ITEM)
 	on_state[0] = usej2oly_storyhelpletter;
 	scemename = "MAP";
 	description = "J2OLY_Storyhelpletter";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -100,6 +112,9 @@ instance J4(C_ITEM)
 	on_state[0] = usej4oly_storyhelpletter;
 	scemename = "MAP";
 	description = name;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

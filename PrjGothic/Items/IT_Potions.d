@@ -297,7 +297,7 @@ instance ITPO_MEGADRINK(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI;
 	value = VALUE_MEGADRINK;
-	visual = "ItPo_Perm_Mana.3ds";
+	visual = "ItPo_MegaDrink.3ds";
 	material = MAT_GLAS;
 	on_state[0] = useitpo_megadrink;
 	scemename = "POTIONFAST";

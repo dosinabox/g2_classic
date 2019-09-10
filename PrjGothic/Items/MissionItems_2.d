@@ -56,6 +56,9 @@ instance ITWR_LETTERFORGORN_MIS(C_ITEM)
 	on_state[0] = useletterforgorn;
 	scemename = "MAP";
 	description = "Сообщение Милтена Горну";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -93,8 +96,6 @@ instance ITKE_PRISONKEY_MIS(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от темницы";
 	text[3] = "в замке.";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 instance ITKE_OC_STORE(C_ITEM)
@@ -108,8 +109,6 @@ instance ITKE_OC_STORE(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от кладовой";
 	text[3] = "в замке.";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 instance ITKE_ERZBARONFLUR(C_ITEM)
@@ -120,11 +119,9 @@ instance ITKE_ERZBARONFLUR(C_ITEM)
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
 	material = MAT_METAL;
-	description = "От первой двери.";
-	text[2] = "На нем выгравировано имя.";
-	text[3] = "Гомеш";
-	text[5] = NAME_VALUE;
-	count[5] = value;
+	description = name;
+	text[2] = "От первой двери.";
+	text[3] = "На нем выгравировано имя Гомез";
 };
 
 instance ITKE_ERZBARONRAUM(C_ITEM)
@@ -135,11 +132,9 @@ instance ITKE_ERZBARONRAUM(C_ITEM)
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
 	material = MAT_METAL;
-	description = "От второй двери.";
-	text[2] = "На нем выгравировано имя.";
-	text[3] = "Гомеш";
-	text[5] = NAME_VALUE;
-	count[5] = value;
+	description = name;
+	text[2] = "От второй двери.";
+	text[3] = "На нем выгравировано имя Гомез";
 };
 
 instance ITMI_GORNSTREASURE_MIS(C_ITEM)
@@ -178,6 +173,9 @@ instance ITWR_SILVESTRO_MIS(C_ITEM)
 	on_state[0] = useitwr_silvestro;
 	scemename = "MAP";
 	description = "Записка Сильвестро";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -272,8 +270,6 @@ instance ITKE_PASS_MIS(C_ITEM)
 	material = MAT_METAL;
 	description = "Маленький ключик";
 	text[1] = "Открывает ворота Прохода.";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 instance ITKE_BROMOR(C_ITEM)
@@ -284,10 +280,9 @@ instance ITKE_BROMOR(C_ITEM)
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
 	material = MAT_METAL;
-	description = "Ключ от комнаты";
-	text[1] = "владельца борделя.";
-	text[5] = NAME_VALUE;
-	count[5] = value;
+	description = name;
+	text[1] = "Ключ от комнаты";
+	text[2] = "владельца борделя.";
 };
 
 instance ITKE_RUNE_MIS(C_ITEM)
@@ -298,12 +293,10 @@ instance ITKE_RUNE_MIS(C_ITEM)
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
 	material = MAT_METAL;
-	description = "Маленький ключик от сундука.";
+	description = name;
 	text[1] = "Сундук, к которому подходит";
 	text[2] = "этот ключ, находится под мостом.";
 	text[3] = "В нем лежит рунный камень.";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 instance ITWR_BLOODY_MIS(C_ITEM)

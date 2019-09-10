@@ -1,7 +1,7 @@
 
 prototype MST_DEFAULT_SKELETON(C_NPC)
 {
-	name[0] = "Скелет";
+	name[0] = "Скелет-воин";
 	guild = GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID] = ID_SKELETON;
 	level = 22;
@@ -85,7 +85,7 @@ instance SUMMONED_SKELETON(MST_DEFAULT_SKELETON)
 
 instance LESSER_SKELETON(MST_DEFAULT_SKELETON)
 {
-	name[0] = "Малый скелет";
+	name[0] = "Скелет";
 	level = 12;
 	attribute[ATR_STRENGTH] = 60;
 	attribute[ATR_DEXTERITY] = 60;

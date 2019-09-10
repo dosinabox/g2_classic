@@ -64,7 +64,7 @@ instance ITMI_STOMPER(C_ITEM)
 
 instance ITMI_RUNEBLANK(C_ITEM)
 {
-	name = "Руна";
+	name = "Рунный камень";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_RUNEBLANK;
@@ -103,7 +103,7 @@ instance ITMI_FLASK(C_ITEM)
 
 instance ITMI_HAMMER(C_ITEM)
 {
-	name = "Молот";
+	name = "Молоток";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_HAMMER;
@@ -337,14 +337,12 @@ instance ITMI_PACKET(C_ITEM)
 {
 	name = "Пакет";
 	mainflag = ITEM_KAT_NONE;
-	flags = 0;
+	flags = ITEM_MULTI;
 	value = 0;
 	visual = "ItMi_Packet.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 
@@ -416,8 +414,6 @@ instance ITMI_OLDCOIN(C_ITEM)
 	visual = "ItMi_OldCoin.3DS";
 	material = MAT_METAL;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	inv_zbias = INVCAM_ENTF_MISC2_STANDARD;
 };
 
@@ -440,11 +436,12 @@ instance ITMI_GOLDNECKLACE(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_AMULET;
 	value = VALUE_GOLDNECKLACE;
-	visual = "ItMi_GoldNecklace.3DS";
+	visual = "ItMi_GoldNecklace_Chain.3DS";
 	material = MAT_METAL;
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITMI_SILVERRING(C_ITEM)
@@ -521,9 +518,9 @@ instance ITMI_BLOODCUP_MIS(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = VALUE_BLOODCUP;
-	visual = "ItMi_GoldCup.3DS";
+	visual = "ItMi_BloodCup.3DS";
 	material = MAT_METAL;
-	description = "Кровавый кубок";
+	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };
@@ -641,11 +638,12 @@ instance ITMI_SILVERNECKLACE(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_AMULET;
 	value = VALUE_SILVERNECKLACE;
-	visual = "ItMi_SilverNecklace.3DS";
+	visual = "ItMi_SilverNecklace_Chain.3DS";
 	material = MAT_METAL;
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITMI_SULFUR(C_ITEM)
@@ -673,7 +671,7 @@ instance ITMI_QUARTZ(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
-	inv_zbias = INVCAM_ENTF_RING_STANDARD;
+	inv_zbias = 300;
 };
 
 instance ITMI_PITCH(C_ITEM)
@@ -763,12 +761,13 @@ instance ITMI_APFELTABAK(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = value_itmi_apfeltabak;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_FoodPocket.3ds";
 	material = MAT_LEATHER;
 	description = name;
 	text[2] = "Кисет с яблочным табаком.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITMI_PILZTABAK(C_ITEM)
@@ -777,12 +776,13 @@ instance ITMI_PILZTABAK(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = value_itmi_pilztabak;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_FoodPocket.3ds";
 	material = MAT_LEATHER;
 	description = name;
 	text[2] = "Темный яблочно-грибной табак";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITMI_DOPPELTABAK(C_ITEM)
@@ -791,12 +791,13 @@ instance ITMI_DOPPELTABAK(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = value_itmi_doppeltabak;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_FoodPocket.3ds";
 	material = MAT_LEATHER;
 	description = name;
 	text[2] = "На вкус похоже на яблоко...";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITMI_HONIGTABAK(C_ITEM)
@@ -805,12 +806,13 @@ instance ITMI_HONIGTABAK(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = value_itmi_honigtabak;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_FoodPocket.3ds";
 	material = MAT_LEATHER;
 	description = name;
 	text[2] = "Сладкий яблочный табак";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITMI_SUMPFTABAK(C_ITEM)
@@ -819,11 +821,12 @@ instance ITMI_SUMPFTABAK(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = value_itmi_sumpftabak;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_FoodPocket.3ds";
 	material = MAT_LEATHER;
 	description = name;
 	text[2] = "Смесь из болотной травы";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 

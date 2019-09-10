@@ -76,8 +76,6 @@ instance ITMI_KEROLOTHSGELDBEUTEL_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = usekerolothsgeldbeutel;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 
@@ -99,8 +97,6 @@ instance ITMI_KEROLOTHSGELDBEUTELLEER_MIS(C_ITEM)
 	visual = "ItMi_Pocket.3ds";
 	material = MAT_LEATHER;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 instance ITRW_SENGRATHSARMBRUST_MIS(C_ITEM)
@@ -203,7 +199,7 @@ instance ITPO_DRAGONEGGDRINKNEORAS_MIS(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI;
 	value = VALUE_HPELIXIER;
-	visual = "ItPo_Perm_STR.3ds";
+	visual = "ItPo_MegaDrink.3ds";
 	material = MAT_GLAS;
 	on_state[0] = use_dragoneggdrinkneoras;
 	scemename = "POTIONFAST";

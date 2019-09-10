@@ -288,6 +288,9 @@ instance HOSH1(C_ITEM)
 	on_state[0] = usehosh1;
 	scemename = "MAP";
 	description = "Setzt das Immortal Flag";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -308,6 +311,9 @@ instance HOSH2(C_ITEM)
 	on_state[0] = usehosh2;
 	scemename = "MAP";
 	description = "Klaut das Immortal flag";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -328,6 +334,9 @@ instance HOSH3(C_ITEM)
 	on_state[0] = usehosh3;
 	scemename = "MAP";
 	description = "Novizenchade SUCCESS";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

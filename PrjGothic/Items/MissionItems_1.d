@@ -22,7 +22,10 @@ instance ITWR_CANTHARS_KOMPROBRIEF_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_canthars_komprobrief;
 	scemename = "MAP";
-	description = "Письмо Кантара торговке Саре.";
+	description = "Письмо Кантара торговке Саре";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -85,7 +88,7 @@ instance ITMI_CORAGONSSILBER(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_SILVERCUP;
-	visual = "ItMi_SilverCup.3DS";
+	visual = "ItMi_CoragonsSilber.3DS";
 	material = MAT_METAL;
 	description = name;
 	text[3] = "";
@@ -105,8 +108,6 @@ instance ITMI_THEKLASPAKET(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_theklaspacket;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 
@@ -194,7 +195,10 @@ instance ITWR_KRAEUTERLISTE(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_kraeuterliste;
 	scemename = "MAP";
-	description = "Список трав Константино.";
+	description = "Список трав Константино";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -239,7 +243,10 @@ instance ITWR_MANAREZEPT(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_manarezept;
 	scemename = "MAP";
-	description = "Рецепт магической эссенции.";
+	description = "Рецепт магической эссенции";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -281,6 +288,9 @@ instance ITWR_PASSIERSCHEIN(C_ITEM)
 	description = name;
 	text[3] = "Эти бумаги позволят мне";
 	text[4] = "пройти мимо стражников у ворот.";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -320,14 +330,14 @@ instance ITMI_HERBPAKET(C_ITEM)
 	name = "Тюк травы";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
-	value = 0;
-	visual = "ItMi_Packet.3ds";
+	value = 200;
+	visual = "ItMi_HerbPaket.3ds";
 	material = MAT_LEATHER;
 	description = name;
 	text[2] = "Тяжелый, липкий тюк,";
 	text[3] = "пахнущий болотной травой.";
 	text[5] = NAME_VALUE;
-	count[5] = 200;
+	count[5] = value;
 };
 
 instance ITKE_STORAGE(C_ITEM)
@@ -351,16 +361,16 @@ instance ITFO_SMELLYFISH(C_ITEM)
 	name = "Селедка";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
-	value = 0;
+	value = VALUE_FISH;
 	visual = "ItFo_Fish.3DS";
 	material = MAT_LEATHER;
 	scemename = "FOOD";
 	on_state[0] = use_smellyfish;
-	description = "Селедка.";
+	description = name;
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_HERING;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_FISH;
+	count[5] = value;
 };
 
 
@@ -405,6 +415,9 @@ instance ITWR_HALVORMESSAGE(C_ITEM)
 	scemename = "MAP";
 	description = name;
 	text[2] = "Эта записка была спрятана в рыбе.";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -519,6 +532,9 @@ instance ITWR_VATRASMESSAGE_OPEN(C_ITEM)
 	text[2] = "Послание Ватраса";
 	text[3] = "магам огня";
 	text[4] = "Печать сломана.";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -741,6 +757,9 @@ instance ITWR_PASSAGE_MIS(C_ITEM)
 	description = name;
 	text[3] = "Эта записка должна помочь мне";
 	text[4] = "встретиться с лордом Хагеном.";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -781,6 +800,9 @@ instance ITWR_BANDITLETTER_MIS(C_ITEM)
 	description = name;
 	text[3] = "";
 	text[4] = "";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -831,6 +853,9 @@ instance ITWR_POSTER_MIS(C_ITEM)
 	description = name;
 	text[3] = "Мое изображение!";
 	text[4] = "";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -1158,7 +1183,7 @@ instance ITPL_SAGITTA_HERB_MIS(C_ITEM)
 	mainflag = ITEM_KAT_FOOD;
 	flags = ITEM_MULTI;
 	value = VALUE_STRENGTH_HERB_01;
-	visual = "ItPl_Strength_Herb_02.3DS";
+	visual = "ItPl_Sagitta_Herb.3DS";
 	material = MAT_LEATHER;
 	scemename = "FOOD";
 	description = name;

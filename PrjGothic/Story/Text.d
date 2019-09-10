@@ -13,7 +13,7 @@ const string MOBNAME_ANVIL = "Наковальня";
 const string MOBNAME_BUCKET = "Ведро для воды";
 const string MOBNAME_FORGE = "Кузнечный горн";
 const string MOBNAME_GRINDSTONE = "Точильный камень";
-const string MOBNAME_WHEEL = "Ворот";
+const string MOBNAME_WHEEL = "Лебедка";
 const string MOBNAME_LAB = "Стол алхимика";
 const string MOBNAME_BOOKSTAND = "Книжный стенд";
 const string MOBNAME_BOOKSBOARD = "Книжный стенд";
@@ -113,88 +113,92 @@ const string MOBNAME_GRAVE_31 = "Мечник Асуб Укара 145 - 212";
 const string MOBNAME_GRAVE_32 = "Мечник Дьетмар Укара 112 - 212";
 const string MOBNAME_GRAVE_33 = "Почетный страж Утар Серанис 178 - 212";
 
-const string TXT_GUILDS[62] =
+const string TXT_GUILDS[66] =
 {
 	"Нет гильдии",
 	"Паладин",
-	"Ополчение",
-	"Гражданин",
-	"Маг",
+	"Ополченец",
+	"Горожанин",
+	"Маг Огня",
 	"Послушник",
 	"Охотник на драконов",
 	"Наемник",
-	"Фермер",
+	"Крестьянин",
 	"Бандит",
 	"Каторжник",
 	"Ищущий",
-	"Land Dweller",
-	"B",
-	"C",
-	"D",
-	"",
+	"Бродяга",
+	"Пират",
+	"Маг Воды",
+	"GIL_PUBLIC",
+	"GIL_SEPERATOR_HUM",
 	"Мясной жук",
 	"Овца",
 	"Гоблин",
 	"Скелет гоблина",
-	"М. скелет гоблина",
+	"Вызванный скелет гоблина",
 	"Падальщик",
 	"Гигантская крыса",
 	"Полевой хищник",
 	"Кровавая муха",
 	"Ящер",
 	"Волк",
-	"М. волк",
+	"Вызванный волк",
 	"Краулер",
 	"Луркер",
 	"Скелет",
-	"М. скелет",
+	"Вызванный скелет",
 	"Скелет-маг",
 	"Зомби",
 	"Снеппер",
 	"Мракорис",
-	"Скелет-монстр",
+	"Скелет мракориса",
 	"Гарпия",
 	"Каменный голем",
 	"Огненный голем",
 	"Ледяной голем",
-	"М. голем",
+	"Вызванный голем",
 	"Демон",
-	"М. демон",
+	"Вызванный демон",
 	"Тролль",
 	"Болотная акула",
 	"Дракон",
-	"Дракон",
-	"M",
-	"N",
-	"O",
-	"P",
-	"Q",
-	"",
+	"Крысокрот",
+	"Аллигатор",
+	"Болотный голем",
+	"Каменный страж",
+	"Пантера",
+	"Блуждающий огонек",
+	"Вызванный страж",
+	"Вызванный зомби",
+	"GIL_EMPTY_B",
+	"GIL_EMPTY_C",
+	"GIL_SEPERATOR_ORC",
 	"Орк",
-	"Орк",
+	"Дружественный орк",
 	"Орк-нежить",
-	"Дракониан",
-	"X",
-	"Y",
-	"Z"
+	"Человек-ящер",
+	"GIL_EMPTY_X",
+	"GIL_EMPTY_Y",
+	"GIL_EMPTY_Z"
 };
 
-const string TXT_SPELLS[68] =
+const string TXT_SPELLS[100] =
 {
 	"Святой свет",
 	"Малое исцеление",
 	"Святая стрела",
 	"Среднее исцеление",
-	"Изгнание зла",
+	"Изгнание Зла",
 	"Большое исцеление",
-	"Уничтожение зла",
-	"Телепорт",
+	"Уничтожение Зла",
+	"Секретный телепорт",
 	"В порт",
 	"В монастырь",
 	"К лендлорду",
 	"К Ксардасу",
 	"К проходу Хориниса",
-	"К проходу долины рудников",
+	"К проходу Долины Рудников",
 	"В замок",
 	"К старой демонической башне",
 	"К таверне",
@@ -203,7 +207,7 @@ const string TXT_SPELLS[68] =
 	"Огненная стрела",
 	"Ледяная стрела",
 	"Лечение легких ранений",
-	"Скелет гоблина",
+	"Вызов скелета гоблина",
 	"Огненный шар",
 	"Малая молния",
 	"Вызов волка",
@@ -212,44 +216,77 @@ const string TXT_SPELLS[68] =
 	"Лечение средних ранений",
 	"Молния",
 	"Большой огненный шар",
-	"Скелет",
+	"Вызов скелета",
 	"Страх",
 	"Ледяной блок",
 	"Шаровая молния",
-	"Создание голема",
+	"Вызов голема",
 	"Уничтожение нежити",
 	"Большая огненная буря",
 	"Малая огненная буря",
 	"Ледяная волна",
-	"Демон",
-	"Полное исцеление",
+	"Вызов демона",
+	"Лечение тяжелых ранений",
 	"Огненный дождь",
 	"Дыхание смерти",
-	"Масс-уничтожение",
-	"Армия тьмы",
-	"Сморщивание",
-	"Овца",
-	"Падальщик",
-	"Гигантская крыса",
-	"Полевой хищник",
-	"Волк",
-	"Ящер",
-	"Снеппер",
-	"Варг",
-	"Огненный ящер",
-	"Луркер",
-	"Мракорис",
-	"Драконий снеппер",
+	"Волна смерти",
+	"Армия Тьмы",
+	"Уменьшение монстра",
+	"Превращение в овцу",
+	"Превращение в падальщика",
+	"Превращение в гигантскую крысу",
+	"Превращение в полевого хищника",
+	"Превращение в волка",
+	"Превращение в ящера",
+	"Превращение в снеппера",
+	"Превращение в варга",
+	"Превращение в огненного ящера",
+	"Превращение в луркера",
+	"Превращение в мракориса",
+	"Превращение в драконьего снеппера",
 	"Забвение",
-	"Святая стрела",
-	"B",
-	"C",
-	"D",
-	"E",
-	"F",
-	"G",
-	"H"
+	"Святой удар",
+	"Стрела смерти",
+	"Шар смерти",
+	"Стрела сотрясения",
+	"Телепорт зодчих",
+	"TXT_SPL_RESERVED_65",
+	"TXT_SPL_RESERVED_66",
+	"TXT_SPL_RESERVED_67",
+	"TXT_SPL_RESERVED_68",
+	"TXT_SPL_RESERVED_69",
+	"Буря",
+	"Смерч",
+	"Кулак воды",
+	"Ледяное копье",
+	"Надувание людей",
+	"Гейзер",
+	"Водопад",
+	"TXT_SPL_RESERVED_77",
+	"TXT_SPL_RESERVED_78",
+	"TXT_SPL_RESERVED_79",
+	"Нашествие насекомых",
+	"Рой насекомых",
+	"Корень-ловушка",
+	"Землетрясение",
+	"Вызов стража",
+	"Гнев Белиара",
+	"Кража энергии",
+	"Крик смерти",
+	"Вызов зомби",
+	"Вызов Мада",
+	"TXT_SPL_RESERVED_90",
+	"TXT_SPL_RESERVED_91",
+	"TXT_SPL_RESERVED_92",
+	"TXT_SPL_RESERVED_93",
+	"TXT_SPL_RESERVED_94",
+	"TXT_SPL_RESERVED_95",
+	"TXT_SPL_RESERVED_96",
+	"TXT_SPL_RESERVED_97",
+	"TXT_SPL_RESERVED_98",
+	"TXT_SPL_RESERVED_99"
 };
+
 const string NAME_SPL_PALLIGHT = "Святой свет";
 const string NAME_SPL_PALLIGHTHEAL = "Малое исцеление";
 const string NAME_SPL_PALHOLYBOLT = "Святая стрела";
@@ -257,7 +294,7 @@ const string NAME_SPL_PALMEDIUMHEAL = "Среднее исцеление";
 const string NAME_SPL_PALREPELEVIL = "Изгнание зла";
 const string NAME_SPL_PALFULLHEAL = "Большое исцеление";
 const string NAME_SPL_PALDESTROYEVIL = "Уничтожение зла";
-const string NAME_SPL_PALTELEPORTSECRET = "Телепорт";
+const string NAME_SPL_PALTELEPORTSECRET = "Секретный телепорт";
 const string NAME_SPL_TELEPORTSEAPORT = "Телепорт в порт";
 const string NAME_SPL_TELEPORTMONASTERY = "Телепорт в монастырь";
 const string NAME_SPL_TELEPORTFARM = "Телепорт к лендлорду";
@@ -270,35 +307,33 @@ const string NAME_SPL_TELEPORTTAVERNE = "Телепорт к таверне";
 const string NAME_SPL_TELEPORT_3 = "T3";
 const string NAME_SPL_LIGHT = "Свет";
 const string NAME_SPL_FIREBOLT = "Огненная стрела";
-const string NAME_SPL_ZAP = "Малая молния";
-const string NAME_SPL_LIGHTHEAL = "Лечение легких ранений";
-const string NAME_SPL_SUMMONGOBLINSKELETON = "Создание скелета гоблина";
 const string NAME_SPL_ICEBOLT = "Ледяная стрела";
+const string NAME_SPL_LIGHTHEAL = "Лечение легких ранений";
+const string NAME_SPL_SUMMONGOBLINSKELETON = "Вызов скелета гоблина";
 const string NAME_SPL_INSTANTFIREBALL = "Огненный шар";
+const string NAME_SPL_ZAP = "Малая молния";
 const string NAME_SPL_SUMMONWOLF = "Вызов волка";
 const string NAME_SPL_WINDFIST = "Кулак ветра";
 const string NAME_SPL_SLEEP = "Сон";
 const string NAME_SPL_MEDIUMHEAL = "Лечение средних ранений";
 const string NAME_SPL_FIRESTORM = "Малая огненная буря";
-const string NAME_SPL_SUMMONSKELETON = "Создание скелета";
+const string NAME_SPL_SUMMONSKELETON = "Вызов скелета";
 const string NAME_SPL_FEAR = "Страх";
 const string NAME_SPL_ICECUBE = "Ледяной блок";
 const string NAME_SPL_CHARGEZAP = "Шаровая молния";
 const string NAME_SPL_LIGHTNINGFLASH = "Молния";
-const string NAME_SPL_SUMMONGOLEM = "Пробуждение голема";
+const string NAME_SPL_SUMMONGOLEM = "Вызов голема";
 const string NAME_SPL_DESTROYUNDEAD = "Уничтожение нежити";
 const string NAME_SPL_CHARGEFIREBALL = "Большой огненный шар";
 const string NAME_SPL_PYROKINESIS = "Большая огненная буря";
 const string NAME_SPL_ICEWAVE = "Ледяная волна";
 const string NAME_SPL_SUMMONDEMON = "Вызов демона";
 const string NAME_SPL_FULLHEAL = "Лечение тяжелых ранений";
-const string NAME_SPL_MASTEROFDISASTER = "Святая стрела";
 const string NAME_SPL_FIRERAIN = "Огненный дождь";
 const string NAME_SPL_BREATHOFDEATH = "Дыхание смерти";
 const string NAME_SPL_MASSDEATH = "Волна смерти";
 const string NAME_SPL_ARMYOFDARKNESS = "Армия тьмы";
-const string NAME_SPL_SHRINK = "Сморщивание монстра";
-const string NAME_SPL_CHARM = "Забвение";
+const string NAME_SPL_SHRINK = "Уменьшение монстра";
 const string NAME_SPL_TRFSHEEP = "Превращение в овцу";
 const string NAME_SPL_TRFSCAVENGER = "Превращение в падальщика";
 const string NAME_SPL_TRFGIANTRAT = "Превращение в гигантскую крысу";
@@ -311,6 +346,8 @@ const string NAME_SPL_TRFFIREWARAN = "Превращение в огненного ящера";
 const string NAME_SPL_TRFLURKER = "Превращение в луркера";
 const string NAME_SPL_TRFSHADOWBEAST = "Превращение в мракориса";
 const string NAME_SPL_TRFDRAGONSNAPPER = "Превращение в драконьего снеппера";
+const string NAME_SPL_CHARM = "Забвение";
+const string NAME_SPL_MASTEROFDISASTER = "Святой удар";
 
 const string TXT_TALENTS[22] =
 {
@@ -376,6 +413,7 @@ const string TXT_INV_CAT[9] =
 	"Документы",
 	"Разное"
 };
+
 const string NAME_PALADIN = "Паладин";
 const string NAME_MILIZ = "Городской стражник";
 const string NAME_TORWACHE = "Стражник у ворот";
@@ -446,13 +484,13 @@ const string NAME_ONEHANDED = "Одноручное оружие";
 const string NAME_TWOHANDED = "Двуручное оружие";
 const string NAME_HEALINGPERMANA = "Лечение на ед. маны";
 const string NAME_HEALINGPERCAST = "Лечение:";
-const string NAME_ITMW_1H_COMMON_01 = "Кустарный меч";
+const string NAME_ITMW_1H_COMMON_01 = "Простой кованый меч";
 const string NAME_ITMW_1H_SPECIAL_01 = "Длинный рудный меч";
 const string NAME_ITMW_2H_SPECIAL_01 = "Двуручный рудный меч";
 const string NAME_ITMW_1H_SPECIAL_02 = "Полуторный рудный меч";
 const string NAME_ITMW_2H_SPECIAL_02 = "Тяжелый двуручный рудный меч";
-const string NAME_ITMW_1H_SPECIAL_03 = "Боевой клинок орков";
-const string NAME_ITMW_2H_SPECIAL_03 = "Тяжелый рудный боевой клинок орков";
+const string NAME_ITMW_1H_SPECIAL_03 = "Рудный боевой клинок";
+const string NAME_ITMW_2H_SPECIAL_03 = "Тяжелый рудный боевой клинок";
 const string NAME_ITMW_1H_SPECIAL_04 = "Рудный клинок 'Убийца драконов'";
 const string NAME_ITMW_2H_SPECIAL_04 = "Большой рудный клинок 'Убийца драконов'";
 const string PRINT_GOLDGEGEBEN = " золота отдано";
@@ -461,7 +499,7 @@ const string PRINT_ITEMSGEGEBEN = " предметов отдано";
 const string PRINT_GOLDERHALTEN = " золота получено";
 const string PRINT_ITEMERHALTEN = " получено";
 const string PRINT_ITEMSERHALTEN = " предметов получено";
-const string PRINT_KOSTEN = ". Цена:";
+const string PRINT_KOSTEN = ". Цена: ";
 const string PRINT_LP = " LP";
 const string PRINT_NOTENOUGHLP = "Недостаточно единиц опыта!";
 const string PRINT_NOLEARNOVERPERSONALMAX = "Максимум этого учителя - ";

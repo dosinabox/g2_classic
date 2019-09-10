@@ -88,7 +88,7 @@ func void equip_itmi_innoseye_broken_mis()
 
 instance ITWR_PERMISSIONTOWEARINNOSEYE_MIS(C_ITEM)
 {
-	name = "Письмо о подтверждение полномочий";
+	name = "Письмо о подтверждении полномочий";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
@@ -96,7 +96,10 @@ instance ITWR_PERMISSIONTOWEARINNOSEYE_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_permissiontowearinnoseye;
 	scemename = "MAP";
-	description = "Письмо о подтверждение полномочий для Пирокара.";
+	description = "Письмо о подтверждении полномочий для Пирокара";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -133,8 +136,6 @@ instance ITWR_XARDASBOOKFORPYROKAR_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	on_state[0] = use_xardasbookforpyrokar;
 };
 
@@ -172,8 +173,6 @@ instance ITWR_CORNELIUSTAGEBUCH_MIS(C_ITEM)
 	scemename = "MAP";
 	description = "Дневник";
 	text[0] = "Дневник Корнелиуса.";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	on_state[0] = usecorneliustagebuch;
 };
 
@@ -214,8 +213,6 @@ instance ITWR_DEMENTOROBSESSIONBOOK_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	on_state[0] = use_dementorobsessionbook;
 };
 
@@ -354,7 +351,7 @@ instance ITPO_HEALHILDA_MIS(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = VALUE_HPESSENZ;
-	visual = "ItMi_Flask.3ds";
+	visual = "ItPo_HealHilda.3ds";
 	material = MAT_GLAS;
 	on_state[0] = use_healhilda;
 	scemename = "POTIONFAST";
@@ -408,8 +405,6 @@ instance ITMI_MALETHSBANDITGOLD(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_malethsbanditgold;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 
@@ -430,8 +425,8 @@ instance ITMI_MOLERATLUBRIC_MIS(C_ITEM)
 	visual = "ItMi_Moleratlubric.3ds";
 	material = MAT_WOOD;
 	description = name;
-	text[4] = NAME_VALUE;
-	count[4] = value;
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
 instance ITWR_BABOSLETTER_MIS(C_ITEM)
@@ -444,7 +439,10 @@ instance ITWR_BABOSLETTER_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_babosletter;
 	scemename = "MAP";
-	description = "Письмо Бабо.";
+	description = "Письмо Бабо";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -476,7 +474,10 @@ instance ITWR_BABOSPINUP_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_babospinup;
 	scemename = "MAP";
-	description = "Изображение нагой женщины.";
+	description = "Изображение нагой женщины";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -581,7 +582,7 @@ instance ITPO_HEALOBSESSION_MIS(C_ITEM)
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = VALUE_HPESSENZ;
-	visual = "ItMi_Flask.3ds";
+	visual = "ItPo_HealObsession.3ds";
 	material = MAT_GLAS;
 	on_state[0] = use_healobsession;
 	scemename = "POTIONFAST";
@@ -619,8 +620,6 @@ instance ITSE_GOLEMCHEST_MIS(C_ITEM)
 	text[2] = "Этот кошелек полон монет.";
 	text[3] = "";
 	text[4] = "";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 
@@ -674,7 +673,10 @@ instance ITWR_DIEGOSLETTER_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_diegosletter_mis;
 	scemename = "MAP";
-	description = "Письмо Диего Гербрандту.";
+	description = "Письмо Диего Гербрандту";
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -709,8 +711,6 @@ instance ITSE_DIEGOSTREASURE_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_diegostreasure;
 	description = "Старый кожаный кошелек Диего.";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 
@@ -752,6 +752,9 @@ instance ITWR_MINENANTEIL_MIS(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -812,7 +815,7 @@ instance ITMI_KARRASBLESSEDSTONE_MIS(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 0;
-	visual = "ItMi_Rockcrystal.3ds";
+	visual = "ItMi_KarrasBlessedStone.3ds";
 	visual_skin = 0;
 	material = MAT_STONE;
 	description = name;
@@ -820,6 +823,7 @@ instance ITMI_KARRASBLESSEDSTONE_MIS(C_ITEM)
 	text[3] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 190;
 };
 
 instance ITWR_RICHTERKOMPROBRIEF_MIS(C_ITEM)
@@ -870,6 +874,9 @@ instance ITWR_MORGAHARDTIP(C_ITEM)
 	on_state[0] = use_morgahardtip;
 	scemename = "MAP";
 	description = name;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
