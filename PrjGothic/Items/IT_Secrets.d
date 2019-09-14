@@ -98,7 +98,7 @@ instance ITSE_GOLDPOCKET25(C_ITEM)
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = goldpocket25;
-	description = "Кожаный мешочек.";
+	description = name;
 	text[0] = "";
 	text[1] = "";
 	text[2] = "Внутри позванивает несколько монет.";
@@ -127,7 +127,7 @@ instance ITSE_GOLDPOCKET50(C_ITEM)
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = goldpocket50;
-	description = "Кожаный мешочек.";
+	description = name;
 	text[0] = "";
 	text[1] = "";
 	text[2] = "Этот кошелек полон монет.";
@@ -156,7 +156,7 @@ instance ITSE_GOLDPOCKET100(C_ITEM)
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = goldpocket100;
-	description = "Кожаный мешочек.";
+	description = name;
 	text[0] = "";
 	text[1] = "";
 	text[2] = "Тяжелый мешочек,";
@@ -185,7 +185,7 @@ instance ITSE_HANNASBEUTEL(C_ITEM)
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = hannasbeutel;
-	description = "Кожаный мешочек.";
+	description = name;
 	text[0] = "";
 	text[1] = "";
 	text[2] = "Его дала мне Ханна.";

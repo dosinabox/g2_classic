@@ -54,7 +54,7 @@ instance ITMW_1H_FERROSSWORD_MIS(C_ITEM)
 	range = RANGE_SPECIAL_1H_2;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = CONDITION_SPECIAL_1H_2;
-	visual = "ItMw_060_1h_Sword_smith_03.3DS";
+	visual = "ItMw_060_1h_Sword_smith_04.3DS";
 	description = name;
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;
@@ -161,7 +161,7 @@ instance ITRI_ORCELITERING(C_ITEM)
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_MISSION | ITEM_RING | ITEM_MULTI;
 	value = VALUE_ORCELITERING;
-	visual = "ItRi_Str_02.3ds";
+	visual = "ItRi_OrcEliteRing.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
 	on_equip = equip_orcelitering;
@@ -225,7 +225,7 @@ instance ITWR_MAP_ORCELITE_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 350;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_NW_01.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_map_newworld_orcelite_mis;
@@ -234,6 +234,9 @@ instance ITWR_MAP_ORCELITE_MIS(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -262,7 +265,7 @@ instance ITWR_MAP_CAVES_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 200;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_NW_01.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_map_newworld_caves_mis;
@@ -271,6 +274,9 @@ instance ITWR_MAP_CAVES_MIS(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

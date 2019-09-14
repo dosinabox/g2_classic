@@ -78,7 +78,7 @@ func void dia_bdt_1013_bandit_where_mountain()
 {
 	AI_Output(other,self,"DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_15_00");	//Я спустился с гор.
 	AI_Output(self,other,"DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_01");	//Точно. Ты спустился с гор. И это плохо для тебя.
-	b_usefakescroll();
+	B_UseFakeHeroFace();
 	AI_Output(self,other,"DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_02");	//Очень плохо.
 	AI_Output(self,other,"DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_03");	//Тебя ищут - целая куча плохих парней.
 	AI_Output(self,other,"DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_04");	//Есть человек, с которым тебе просто необходимо переговорить. Иди за мной!

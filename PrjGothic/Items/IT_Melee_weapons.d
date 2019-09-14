@@ -362,7 +362,7 @@ instance ITMW_2H_BAU_AXE(C_ITEM)
 	count[2] = damagetotal;
 	text[3] = NAME_STR_NEEDED;
 	count[3] = cond_value[2];
-	text[4] = NAME_ONEHANDED;
+	text[4] = NAME_TWOHANDED;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };
@@ -1659,7 +1659,7 @@ instance ITMW_ELBASTARDO(C_ITEM)
 {
 	name = "Ёль-бастардо";
 	mainflag = ITEM_KAT_NF;
-	flags = ITEM_AXE;
+	flags = ITEM_SWD;
 	material = MAT_METAL;
 	value = VALUE_ELBASTARDO;
 	damagetotal = DAMAGE_ELBASTARDO;

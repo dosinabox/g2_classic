@@ -83,7 +83,7 @@ instance ITWR_MAP_NEWWORLD(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 250;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_NW_01.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_map_newworld;
@@ -92,6 +92,9 @@ instance ITWR_MAP_NEWWORLD(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -117,7 +120,7 @@ instance ITWR_MAP_NEWWORLD_CITY(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 50;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_City.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_map_newworld_city;
@@ -126,6 +129,9 @@ instance ITWR_MAP_NEWWORLD_CITY(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -151,7 +157,7 @@ instance ITWR_MAP_OLDWORLD(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 350;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_OW.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_map_oldworld;
@@ -160,6 +166,9 @@ instance ITWR_MAP_OLDWORLD(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

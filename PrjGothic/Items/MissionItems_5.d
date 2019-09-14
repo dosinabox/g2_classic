@@ -266,7 +266,7 @@ instance ITWR_SEAMAP_IRDORATH(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_DI.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_seamap_irdorath;
@@ -275,6 +275,9 @@ instance ITWR_SEAMAP_IRDORATH(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

@@ -207,7 +207,7 @@ instance ITAT_CLAWLEADER(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = 100;
-	visual = "ItAt_Claw.3DS";
+	visual = "ItAt_ClawLeader.3DS";
 	material = MAT_LEATHER;
 	description = "Когти вожака стаи";
 	text[0] = "";
@@ -386,7 +386,7 @@ instance ITWR_MAP_OLDWORLD_OREMINES_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 50;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_OW.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_map_oldworld_oremines;
@@ -395,6 +395,9 @@ instance ITWR_MAP_OLDWORLD_OREMINES_MIS(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -412,7 +415,7 @@ func void use_map_oldworld_oremines()
 
 instance ITWR_MANOWAR(C_ITEM)
 {
-	name = "Текст";
+	name = "Текст песни";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
@@ -420,7 +423,7 @@ instance ITWR_MANOWAR(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = usemanowar;
 	scemename = "MAP";
-	description = "Текст песни.";
+	description = name;
 };
 
 

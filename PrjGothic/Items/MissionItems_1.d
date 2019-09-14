@@ -71,7 +71,7 @@ instance ITMW_2H_ROD(C_ITEM)
 	range = RANGE_SLD2HSCHWERT;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 30;
-	visual = "ItMw_035_2h_sld_sword_01.3DS";
+	visual = "ItMw_035_2h_sld_sword_02.3DS";
 	description = name;
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;
@@ -456,7 +456,7 @@ instance ITMW_ALRIKSSWORD_MIS(C_ITEM)
 	range = 70;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 20;
-	visual = "ItMw_025_1h_Sld_Sword_01.3DS";
+	visual = "ItMw_025_1h_Sld_Sword_02.3DS";
 	on_equip = equip_alrikssword;
 	on_unequip = unequip_alrikssword;
 	description = name;
@@ -846,7 +846,7 @@ instance ITWR_POSTER_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Scroll_01.3DS";
+	visual = "ItWr_Poster_MIS.3DS";
 	material = MAT_LEATHER;
 	on_state[0] = useposter;
 	scemename = "MAP";
@@ -1058,7 +1058,7 @@ instance ITKE_BUERGER(C_ITEM)
 	visual = "ItKe_Key_01.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[2] = "Он лежал на подоконнике.";
+	text[2] = "Он лежал на камине.";
 	text[3] = "";
 };
 
@@ -1077,15 +1077,15 @@ instance ITKE_RICHTER(C_ITEM)
 
 instance ITKE_SALANDRIL(C_ITEM)
 {
-	name = "Ключ от сундука, принадлежащего";
+	name = "Ключ от сундука";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[2] = "Саландрилу алхимику.";
-	text[3] = "";
+	text[2] = "Это ключ от сундука,";
+	text[3] = "принадлежащего алхимику Саландрилу.";
 };
 
 instance ITKE_PALADINTRUHE(C_ITEM)

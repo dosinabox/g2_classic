@@ -94,7 +94,7 @@ func void dia_pablo_wanted_info()
 	AI_Output(self,other,"DIA_Pablo_WANTED_12_00");	//Эй, ты, подожди - мне кажется, я тебя знаю.
 	AI_Output(other,self,"DIA_Pablo_WANTED_15_01");	//Что тебе нужно?
 	AI_Output(self,other,"DIA_Pablo_WANTED_12_02");	//Я где-то уже видел твое лицо ... ах - точно!
-	b_usefakescroll();
+	B_UseFakeHeroFace();
 	AI_Output(self,other,"DIA_Pablo_WANTED_12_03");	//Вот - мы нашли этот листок у одного из бандитов, на которых наткнулись несколько дней назад - рисунок очень похож на тебя.
 	b_giveinvitems(self,other,itwr_poster_mis,1);
 	AI_Output(self,other,"DIA_Pablo_WANTED_12_04");	//По-видимому, эти парни искали тебя.

@@ -371,20 +371,19 @@ func void use_healhilda()
 
 instance ITMW_MALETHSGEHSTOCK_MIS(C_ITEM)
 {
-	name = "Посох";
+	name = "Походный посох";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
-	value = VALUE_VLKMACE;
-	damagetotal = DAMAGE_VLKMACE;
+	value = 15;
+	damagetotal = 10;
 	damagetype = DAM_BLUNT;
 	range = RANGE_VLKMACE;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = CONDITION_VLKMACE;
-	visual = "Itmw_008_1h_pole_01.3ds";
+	visual = "Itmw_008_1h_pole_02.3ds";
 	description = name;
-	text[0] = "На ручке выгравирована";
-	text[1] = "буква 'М'.";
+	text[0] = "На древке вырезана буква 'М.'";
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;
 	text[3] = NAME_STR_NEEDED;
@@ -470,7 +469,7 @@ instance ITWR_BABOSPINUP_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Scroll_01.3DS";
+	visual = "ItWr_BabosPinUp_MIS.3DS";
 	material = MAT_LEATHER;
 	on_state[0] = use_babospinup;
 	scemename = "MAP";
@@ -614,7 +613,7 @@ instance ITSE_GOLEMCHEST_MIS(C_ITEM)
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_golemchest;
-	description = "Кожаный мешочек.";
+	description = name;
 	text[0] = "";
 	text[1] = "";
 	text[2] = "Этот кошелек полон монет.";
@@ -635,11 +634,11 @@ func void use_golemchest()
 
 instance ITWR_SHATTEREDGOLEM_MIS(C_ITEM)
 {
-	name = "Очень старая карта.";
+	name = "Очень старая карта";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 150;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_NW_02.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_shatteredgolem_mis;
@@ -648,6 +647,9 @@ instance ITWR_SHATTEREDGOLEM_MIS(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -710,7 +712,8 @@ instance ITSE_DIEGOSTREASURE_MIS(C_ITEM)
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_diegostreasure;
-	description = "Старый кожаный кошелек Диего.";
+	description = name;
+	text[2] = "Старый кожаный кошелек Диего.";
 };
 
 
@@ -908,7 +911,7 @@ instance ITWR_MAP_SHRINE_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 200;
-	visual = "ItWr_Map_01.3DS";
+	visual = "ItWr_Map_NW_01.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	on_state[0] = use_map_newworld_shrine_mis;
@@ -917,6 +920,9 @@ instance ITWR_MAP_SHRINE_MIS(C_ITEM)
 	text[1] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

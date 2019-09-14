@@ -438,7 +438,7 @@ instance TESTAMULET(C_ITEM)
 	visual_skin = 0;
 	material = MAT_METAL;
 	description = "Амулет тестировщика";
-	text[1] = "Скомпилировано 10 сентября 2019г.";
+	text[1] = "Скомпилировано 15 сентября 2019г.";
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
 };
 
