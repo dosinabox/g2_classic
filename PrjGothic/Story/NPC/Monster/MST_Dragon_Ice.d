@@ -6,7 +6,8 @@ prototype MST_DEFAULT_DRAGON_ICE(C_NPC)
 	aivar[AIV_MM_REAL_ID] = ID_DRAGON_ICE;
 	level = 500;
 	bodystateinterruptableoverride = TRUE;
-	attribute[ATR_STRENGTH] = 150;
+//	attribute[ATR_STRENGTH] = 150;
+	attribute[ATR_STRENGTH] = 14;
 	attribute[ATR_DEXTERITY] = 100;
 	attribute[ATR_HITPOINTS_MAX] = 800;
 	attribute[ATR_HITPOINTS] = 800;

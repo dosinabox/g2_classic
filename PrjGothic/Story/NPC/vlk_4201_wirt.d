@@ -1,7 +1,7 @@
 
 instance VLK_4201_WIRT(NPC_DEFAULT)
 {
-	name[0] = "Лендлорд";
+	name[0] = "Трактирщик";
 	guild = GIL_VLK;
 	id = 4201;
 	voice = 14;

@@ -22,11 +22,11 @@ func void b_say_guildgreetings(var C_NPC slf,var C_NPC oth)
 		b_bartok_shitanorc();
 		return;
 	};
-	if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(koch))
+/*	if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(koch))
 	{
 		b_koch_hackebeil();
 		return;
-	};
+	};*/
 	zufall = Hlp_Random(100);
 	if((zufall <= 10) && Wld_IsRaining())
 	{

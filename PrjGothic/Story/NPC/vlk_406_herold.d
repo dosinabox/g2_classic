@@ -1,7 +1,7 @@
 
 instance VLK_406_HEROLD(NPC_DEFAULT)
 {
-	name[0] = "Герольд";
+	name[0] = "Глашатай";
 	guild = GIL_VLK;
 	id = 406;
 	voice = 4;

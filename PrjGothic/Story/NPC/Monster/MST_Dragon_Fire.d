@@ -6,7 +6,8 @@ prototype MST_DEFAULT_DRAGON_FIRE(C_NPC)
 	aivar[AIV_MM_REAL_ID] = ID_DRAGON_FIRE;
 	level = 450;
 	bodystateinterruptableoverride = TRUE;
-	attribute[ATR_STRENGTH] = 140;
+//	attribute[ATR_STRENGTH] = 140;
+	attribute[ATR_STRENGTH] = 13;
 	attribute[ATR_DEXTERITY] = 100;
 	attribute[ATR_HITPOINTS_MAX] = 700;
 	attribute[ATR_HITPOINTS] = 700;

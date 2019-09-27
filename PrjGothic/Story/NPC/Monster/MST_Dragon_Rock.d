@@ -6,7 +6,8 @@ prototype MST_DEFAULT_DRAGON_ROCK(C_NPC)
 	aivar[AIV_MM_REAL_ID] = ID_DRAGON_ROCK;
 	level = 400;
 	bodystateinterruptableoverride = TRUE;
-	attribute[ATR_STRENGTH] = 130;
+//	attribute[ATR_STRENGTH] = 130;
+	attribute[ATR_STRENGTH] = 12;
 	attribute[ATR_DEXTERITY] = 100;
 	attribute[ATR_HITPOINTS_MAX] = 600;
 	attribute[ATR_HITPOINTS] = 600;

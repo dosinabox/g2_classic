@@ -6,7 +6,8 @@ prototype MST_DEFAULT_DRAGON_UNDEAD(C_NPC)
 	aivar[AIV_MM_REAL_ID] = ID_DRAGON_UNDEAD;
 	level = 1000;
 	bodystateinterruptableoverride = TRUE;
-	attribute[ATR_STRENGTH] = 170;
+//	attribute[ATR_STRENGTH] = 170;
+	attribute[ATR_STRENGTH] = 16;
 	attribute[ATR_DEXTERITY] = 170;
 	attribute[ATR_HITPOINTS_MAX] = 1000;
 	attribute[ATR_HITPOINTS] = 1000;

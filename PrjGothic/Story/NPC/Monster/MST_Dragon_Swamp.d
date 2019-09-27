@@ -6,7 +6,8 @@ prototype MST_DEFAULT_DRAGON_SWAMP(C_NPC)
 	aivar[AIV_MM_REAL_ID] = ID_DRAGON_SWAMP;
 	level = 350;
 	bodystateinterruptableoverride = TRUE;
-	attribute[ATR_STRENGTH] = 120;
+//	attribute[ATR_STRENGTH] = 120;
+	attribute[ATR_STRENGTH] = 11;
 	attribute[ATR_DEXTERITY] = 100;
 	attribute[ATR_HITPOINTS_MAX] = 500;
 	attribute[ATR_HITPOINTS] = 500;
