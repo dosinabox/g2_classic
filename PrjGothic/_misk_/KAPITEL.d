@@ -626,7 +626,9 @@ var int goblinblack_randomizer;
 var int orc_randomizer;
 var int currentlevel;
 
-
+var int NOVArmor_Equipped;
+var int MILArmor_Equipped;
+var int Addon_zuerst;
 var int playermapinstance;
 
 func int b_getplayermap()

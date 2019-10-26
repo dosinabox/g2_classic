@@ -41,7 +41,7 @@ const int VALUE_ITAR_PRISONER = 10;
 
 instance ITAR_GOVERNOR(C_ITEM)
 {
-	name = "Дублет губернатора";
+	name = "Изысканный дублет";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 40;
@@ -128,7 +128,7 @@ instance ITAR_SMITH(C_ITEM)
 
 instance ITAR_BARKEEPER(C_ITEM)
 {
-	name = "Одежда горожанина";
+	name = "Одежда трактирщика";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -157,7 +157,7 @@ instance ITAR_BARKEEPER(C_ITEM)
 
 instance ITAR_VLK_L(C_ITEM)
 {
-	name = "Одежда горожанина";
+	name = "Простой городской костюм";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -186,7 +186,7 @@ instance ITAR_VLK_L(C_ITEM)
 
 instance ITAR_VLK_M(C_ITEM)
 {
-	name = "Одежда горожанина";
+	name = "Хороший городской костюм";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -215,7 +215,7 @@ instance ITAR_VLK_M(C_ITEM)
 
 instance ITAR_VLK_H(C_ITEM)
 {
-	name = "Одежда горожанина";
+	name = "Добротный городской костюм";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -244,7 +244,7 @@ instance ITAR_VLK_H(C_ITEM)
 
 instance ITAR_VLKBABE_L(C_ITEM)
 {
-	name = "Одежда горожанина 1";
+	name = "Простое городское платье";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -274,7 +274,7 @@ instance ITAR_VLKBABE_L(C_ITEM)
 
 instance ITAR_VLKBABE_M(C_ITEM)
 {
-	name = "Одежда горожанина 2";
+	name = "Хорошее городское платье";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -303,7 +303,7 @@ instance ITAR_VLKBABE_M(C_ITEM)
 
 instance ITAR_VLKBABE_H(C_ITEM)
 {
-	name = "Одежда горожанина 3";
+	name = "Добротное городское платье";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -346,6 +346,8 @@ instance ITAR_MIL_L(C_ITEM)
 	visual_change = "Armor_Mil_L.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_MIL_L;
+	on_unequip = UnEquip_ITAR_MIL_L;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -357,6 +359,24 @@ instance ITAR_MIL_L(C_ITEM)
 	count[4] = protection[PROT_MAGIC];
 	text[5] = NAME_VALUE;
 	count[5] = value;
+};
+
+func void Equip_ITAR_MIL_L()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",1,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		MILArmor_Equipped = TRUE;
+	};
+};
+
+func void UnEquip_ITAR_MIL_L()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",9,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		MILArmor_Equipped = FALSE;
+	};
 };
 
 instance ITAR_MIL_M(C_ITEM)
@@ -506,7 +526,7 @@ instance ITAR_BAU_M(C_ITEM)
 
 instance ITAR_BAUBABE_L(C_ITEM)
 {
-	name = "Женская фермерская одежда 1";
+	name = "Простое крестьянское платье";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -535,7 +555,7 @@ instance ITAR_BAUBABE_L(C_ITEM)
 
 instance ITAR_BAUBABE_M(C_ITEM)
 {
-	name = "Женская фермерская одежда 2";
+	name = "Хорошее крестьянское платье";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 10;
@@ -810,6 +830,8 @@ instance ITAR_NOV_L(C_ITEM)
 	visual_change = "Armor_Nov_L.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_NOV_L;
+	on_unequip = UnEquip_ITAR_NOV_L;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -821,6 +843,24 @@ instance ITAR_NOV_L(C_ITEM)
 	count[4] = protection[PROT_MAGIC];
 	text[5] = NAME_VALUE;
 	count[5] = value;
+};
+
+func void Equip_ITAR_NOV_L()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",1,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		NOVArmor_Equipped = TRUE;
+	};
+};
+
+func void UnEquip_ITAR_NOV_L()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",9,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		NOVArmor_Equipped = FALSE;
+	};
 };
 
 instance ITAR_KDF_L(C_ITEM)

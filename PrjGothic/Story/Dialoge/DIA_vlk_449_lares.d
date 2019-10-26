@@ -884,7 +884,7 @@ func void dia_lares_knowwhereenemy_info()
 	else
 	{
 		Info_ClearChoices(dia_lares_knowwhereenemy);
-		Info_AddChoice(dia_lares_knowwhereenemy,"Ты не нужен мне.",dia_lares_knowwhereenemy_no);
+		Info_AddChoice(dia_lares_knowwhereenemy,"Я ценю твое предложение, но вынужден отказать тебе.",dia_lares_knowwhereenemy_no);
 		Info_AddChoice(dia_lares_knowwhereenemy,"Я знал, что могу положиться на тебя.",dia_lares_knowwhereenemy_yes);
 	};
 };
@@ -894,6 +894,7 @@ func void dia_lares_knowwhereenemy_yes()
 	AI_Output(other,self,"DIA_Lares_KnowWhereEnemy_Yes_15_00");	//Я знал, что могу положиться на тебя.
 	AI_Output(other,self,"DIA_Lares_KnowWhereEnemy_Yes_15_01");	//Встретимся у корабля.
 	AI_Output(self,other,"DIA_Lares_KnowWhereEnemy_Yes_09_02");	//Ты человек действия - это мне нравится. Увидимся позже.
+	b_giveplayerxp(XP_CREWMEMBER_SUCCESS);
 	LARES_ISONBOARD = LOG_SUCCESS;
 	CREWMEMBER_COUNT = CREWMEMBER_COUNT + 1;
 	if(MIS_READYFORCHAPTER6 == TRUE)

@@ -1,4 +1,6 @@
 
+const int G2_CLASSIC_MOD_VERSION_START = 8;
+
 func void startup_global()
 {
 	Game_InitEngintl();
@@ -810,6 +812,8 @@ func void init_surface()
 
 func void init_oldworld()
 {
+	b_check_version();
+	b_check_armor();
 	init_sub_oldcamp();
 	init_sub_demontower();
 	init_sub_surface();
@@ -2186,6 +2190,8 @@ func void startup_newworld()
 
 func void init_newworld()
 {
+	b_check_version();
+	b_check_armor();
 	b_initmonsterattitudes();
 	b_initguildattitudes();
 	b_initnpcglobals();

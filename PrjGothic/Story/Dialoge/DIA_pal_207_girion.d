@@ -273,6 +273,7 @@ func void dia_girion_catchplayerstolenship_ship()
 	AI_Output(other,self,"DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_15_07");	//Правильно.
 	AI_Output(self,other,"DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_08_08");	//Ладно, хорошо. Я присоединюсь к тебе, но при одном условии.
 	b_girionstayonship();
+	b_giveplayerxp(XP_CREWMEMBER_SUCCESS);
 	AI_Output(other,self,"DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_15_10");	//Я переживу это.
 	AI_Output(self,other,"DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_08_11");	//Тогда делай то, что должен. А я подожду тебя здесь.
 	AI_StopProcessInfos(self);

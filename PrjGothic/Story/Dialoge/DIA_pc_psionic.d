@@ -499,6 +499,7 @@ func void dia_lester_knowwhereenemy_yes()
 	AI_Output(other,self,"DIA_Lester_KnowWhereEnemy_Yes_15_00");	//Тогда пойдем со мной, и получишь ответы на свои вопросы!
 	AI_Output(other,self,"DIA_Lester_KnowWhereEnemy_Yes_15_01");	//Встретимся в гавани. Я приду туда, когда буду готов.
 	AI_Output(self,other,"DIA_Lester_KnowWhereEnemy_Yes_13_02");	//Поторопись. Времени у нас мало.
+	b_giveplayerxp(XP_CREWMEMBER_SUCCESS);
 	self.flags = NPC_FLAG_IMMORTAL;
 	LESTER_ISONBOARD = LOG_SUCCESS;
 	CREWMEMBER_COUNT = CREWMEMBER_COUNT + 1;

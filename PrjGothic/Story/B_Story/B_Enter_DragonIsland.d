@@ -243,6 +243,8 @@ func void startup_dragonisland()
 
 func void init_dragonisland()
 {
+	b_check_version();
+	b_check_armor();
 	b_initmonsterattitudes();
 	b_initguildattitudes();
 	b_initnpcglobals();
