@@ -5,12 +5,12 @@ func int b_teachmagiccircle(var C_NPC slf,var C_NPC oth,var int circle)
 	kosten = b_getlearncosttalent(oth,NPC_TALENT_MAGE);
 	if((circle < 1) || (circle > 6))
 	{
-		Print("*** ERROR: Wrong Parameter ***");
+		Print("*** ОШИБКА: неправильный параметр ***");
 		return FALSE;
 	};
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREEN,2);
+		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREEN,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

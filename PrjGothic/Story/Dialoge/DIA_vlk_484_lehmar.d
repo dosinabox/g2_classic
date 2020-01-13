@@ -310,7 +310,7 @@ instance DIA_LEHMAR_PICKPOCKET(C_INFO)
 	condition = dia_lehmar_pickpocket_condition;
 	information = dia_lehmar_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть ее книгу будет легче легкого)";
+	description = "(”красть его книгу будет легче легкого)";
 };
 
 

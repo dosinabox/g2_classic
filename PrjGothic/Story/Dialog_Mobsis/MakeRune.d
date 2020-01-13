@@ -703,6 +703,7 @@ func void pc_itru_icecube_info()
 	else
 	{
 		Print(PRINT_PRODITEMSMISSING);
+		CreateInvItems(self,itmi_runeblank,1);
 	};
 	b_endproductiondialog();
 };
@@ -754,6 +755,7 @@ func void pc_itru_harmundead_info()
 	else
 	{
 		Print(PRINT_PRODITEMSMISSING);
+		CreateInvItems(self,itmi_runeblank,1);
 	};
 	b_endproductiondialog();
 };

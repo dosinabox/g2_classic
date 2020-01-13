@@ -7,7 +7,7 @@ func int b_teachattributepoints(var C_NPC slf,var C_NPC oth,var int attrib,var i
 	kosten = b_getlearncostattribute(oth,attrib) * points;
 	if((attrib != ATR_STRENGTH) && (attrib != ATR_DEXTERITY) && (attrib != ATR_MANA_MAX))
 	{
-		Print("*** ERROR: Wrong Parameter ***");
+		Print("*** ОШИБКА: неправильный параметр ***");
 		return FALSE;
 	};
 	if(attrib == ATR_STRENGTH)
@@ -38,7 +38,7 @@ func int b_teachattributepoints(var C_NPC slf,var C_NPC oth,var int attrib,var i
 	};
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREEN,2);
+		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREEN,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

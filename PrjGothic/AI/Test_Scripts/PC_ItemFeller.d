@@ -1,7 +1,7 @@
 
 instance PC_ITEMFELLER(NPC_DEFAULT)
 {
-	name[0] = "Mr. Item";
+	name[0] = "Мистер Вещь";
 	npctype = NPCTYPE_MAIN;
 	guild = GIL_NONE;
 	level = 30;

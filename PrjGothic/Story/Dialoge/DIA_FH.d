@@ -17,13 +17,13 @@ func void change_fh_visual()
 	if(FH_SKINTEXTURE < 0)
 	{
 		FH_SKINTEXTURE = 0;
-		PrintScreen("MINUS-Gesichter gibtґs nicht!!!!!!!!!!!",-1,-1,"FONT_OLD_10_WHITE.TGA",4);
+		PrintScreen("Нет лиц с отрицательным номером!",-1,-1,"FONT_OLD_10_WHITE.TGA",4);
 	};
 	b_setnpcvisual(self,SEX,FH_HEADMESH,FH_SKINTEXTURE,BODYTEX_N,NO_ARMOR);
-	PrintScreen("Skin texture:",-1,10,"FONT_OLD_10_WHITE.TGA",4);
+	PrintScreen("Текстура кожи:",-1,10,"FONT_OLD_10_WHITE.TGA",4);
 	printtext = IntToString(FH_SKINTEXTURE);
 	PrintScreen(printtext,-1,12,"FONT_OLD_10_WHITE.TGA",4);
-	PrintScreen("Head mesh:",-1,20,"FONT_OLD_10_WHITE.TGA",4);
+	PrintScreen("Меш головы:",-1,20,"FONT_OLD_10_WHITE.TGA",4);
 	PrintScreen(FH_HEADMESH,-1,22,"FONT_OLD_10_WHITE.TGA",4);
 };
 
@@ -41,7 +41,7 @@ instance DIA_FH_EXIT(C_INFO)
 
 func int dia_fh_exit_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_exit_info()
@@ -63,7 +63,7 @@ instance DIA_FH_NEXTFACE(C_INFO)
 
 func int dia_fh_nextface_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_nextface_info()
@@ -86,7 +86,7 @@ instance DIA_FH_NEXTFACE10(C_INFO)
 
 func int dia_fh_nextface10_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_nextface10_info()
@@ -109,7 +109,7 @@ instance DIA_FH_PREVIOUSFACE(C_INFO)
 
 func int dia_fh_previousface_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_previousface_info()
@@ -132,7 +132,7 @@ instance DIA_FH_PREVIOUSFACE10(C_INFO)
 
 func int dia_fh_previousface10_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_previousface10_info()
@@ -155,7 +155,7 @@ instance DIA_FH_RESETFACE(C_INFO)
 
 func int dia_fh_resetface_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_resetface_info()
@@ -178,7 +178,7 @@ instance DIA_FH_WOMANFACE(C_INFO)
 
 func int dia_fh_womanface_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_womanface_info()
@@ -201,7 +201,7 @@ instance DIA_FH_REPEAT(C_INFO)
 
 func int dia_fh_repeat_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_repeat_info()
@@ -223,7 +223,7 @@ instance DIA_FH_SEX(C_INFO)
 
 func int dia_fh_sex_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_sex_info()
@@ -253,13 +253,13 @@ instance DIA_FH_CHOOSE_HEADMESH(C_INFO)
 
 func int dia_fh_choose_headmesh_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_fh_choose_headmesh_info()
 {
 	Info_ClearChoices(dia_fh_choose_headmesh);
-	Info_AddChoice(dia_fh_choose_headmesh,"Назад",dia_fh_choose_headmesh_7);
+	Info_AddChoice(dia_fh_choose_headmesh,DIALOG_BACK,dia_fh_choose_headmesh_7);
 	Info_AddChoice(dia_fh_choose_headmesh,"Hum_Head_Psionic",dia_fh_choose_headmesh_6);
 	Info_AddChoice(dia_fh_choose_headmesh,"Hum_Head_Thief",dia_fh_choose_headmesh_5);
 	Info_AddChoice(dia_fh_choose_headmesh,"Hum_Head_Bald",dia_fh_choose_headmesh_4);

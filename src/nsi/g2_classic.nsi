@@ -10,9 +10,10 @@
 ###################################
 
 !define MOD_VERSION "0.8"
+!define MOD_DATE "10.26"
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика II - Классическая"
-!define MOD_DETAILED_VERSION "${MOD_VERSION}.10.26"
+!define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"
 !define MOD_AUTHOR "D36, Kor Angar"
 !define INSTALLER_NAME "${MOD_NAME_SYS}_v${MOD_VERSION}_install"
 !define UNINSTALLER_NAME "${MOD_NAME_SYS}_uninstall"
@@ -81,7 +82,7 @@ BrandingText " "
 ##    Страницы  деинсталлятора   ##
 ###################################
 
-!define MUI_COMPONENTSPAGE_TEXT_TOP "Выберите компоненты модификации, которые вы хотите удалить.$\nНажмите кнопку 'Удалить' для продолжения."
+!define MUI_COMPONENTSPAGE_TEXT_TOP "Выберите компоненты модификации, которые вы хотите удалить. Нажмите кнопку 'Удалить' для продолжения."
 !define MUI_COMPONENTSPAGE_TEXT_COMPLIST "Компоненты для удаления:"
 !insertmacro MUI_UNPAGE_COMPONENTS
 !insertmacro MUI_UNPAGE_INSTFILES
@@ -131,9 +132,10 @@ Section "Основные файлы" SecMain
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayVersion" "${MOD_DETAILED_VERSION}" 
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "InstallLocation" "$INSTDIR"
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "UninstallString" "$INSTDIR\${UNINSTALLER_NAME}.exe"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "HelpLink" "http://github.com/dosinabox/g2_classic"
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "Publisher" "${MOD_AUTHOR}"
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayIcon" "$INSTDIR\system\g2_classic.ico"
-	WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "EstimatedSize" "148000"
+	WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "EstimatedSize" "149000"
 SectionEnd
 
 

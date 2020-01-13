@@ -1,5 +1,5 @@
 
-const int G2_CLASSIC_MOD_VERSION_START = 8;
+const int G2_CLASSIC_MOD_VERSION_START = 9;
 
 func void startup_global()
 {

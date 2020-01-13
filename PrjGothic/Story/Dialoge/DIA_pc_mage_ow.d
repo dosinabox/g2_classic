@@ -603,7 +603,7 @@ instance DIA_MILTENOW_PICKPOCKET(C_INFO)
 	condition = dia_miltenow_pickpocket_condition;
 	information = dia_miltenow_pickpocket_info;
 	permanent = TRUE;
-	description = "(Это зелье украсть будет сложно)";
+	description = "(Украсть его зелье будет сложно)";
 };
 
 

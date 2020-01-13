@@ -222,6 +222,11 @@ func void dia_harad_orcsuccess_info()
 	{
 		b_giveinvitems(other,self,itmw_2h_orcsword_01,1);
 	};
+	AI_UnequipWeapons(self);
+	AI_EquipBestMeleeWeapon(self);
+	AI_ReadyMeleeWeapon(self);
+	AI_PlayAni(self,"T_1HSINSPECT");
+	AI_RemoveWeapon(self);
 	if(HARAD_HAKONMISSION == TRUE)
 	{
 		AI_Output(self,other,"DIA_Harad_OrcSuccess_12_02");	//Ты ВСЕ ЖЕ сделал это?! Ты настоящий мужчина!

@@ -1,7 +1,7 @@
 
 instance SH(NPC_DEFAULT)
 {
-	name[0] = "Storyhelper";
+	name[0] = "Помощник по сюжету";
 	guild = GIL_NONE;
 	id = 9999;
 	voice = 15;
@@ -55,7 +55,7 @@ instance STORYHELPER_INFO1(C_INFO)
 	information = storyhelper_info1_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 1";
+	description = KAPWECHSEL_1;
 };
 
 
@@ -68,7 +68,7 @@ func void storyhelper_info1_info()
 {
 	Info_ClearChoices(storyhelper_info1);
 	Info_AddChoice(storyhelper_info1,DIALOG_BACK,storyhelper_back1);
-	Info_AddChoice(storyhelper_info1,"KAPITELANFANG",storyhelper_kapitel1anfang);
+	Info_AddChoice(storyhelper_info1,KAPITELANFANG,storyhelper_kapitel1anfang);
 };
 
 func void storyhelper_back1()
@@ -90,7 +90,7 @@ instance STORYHELPER_INFO2(C_INFO)
 	information = storyhelper_info2_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 2";
+	description = KAPWECHSEL_2;
 };
 
 
@@ -103,7 +103,7 @@ func void storyhelper_info2_info()
 {
 	Info_ClearChoices(storyhelper_info2);
 	Info_AddChoice(storyhelper_info2,DIALOG_BACK,storyhelper_back2);
-	Info_AddChoice(storyhelper_info2,"KAPITELANFANG",storyhelper_kapitel2anfang);
+	Info_AddChoice(storyhelper_info2,KAPITELANFANG,storyhelper_kapitel2anfang);
 };
 
 func void storyhelper_back2()
@@ -126,7 +126,7 @@ instance STORYHELPER_INFO3(C_INFO)
 	information = storyhelper_info3_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 3";
+	description = KAPWECHSEL_3;
 };
 
 
@@ -139,7 +139,7 @@ func void storyhelper_info3_info()
 {
 	Info_ClearChoices(storyhelper_info3);
 	Info_AddChoice(storyhelper_info3,DIALOG_BACK,storyhelper_back3);
-	Info_AddChoice(storyhelper_info3,"KAPITELANFANG",storyhelper_kapitel3anfang);
+	Info_AddChoice(storyhelper_info3,KAPITELANFANG,storyhelper_kapitel3anfang);
 };
 
 func void storyhelper_back3()
@@ -168,7 +168,7 @@ instance STORYHELPER_INFO4(C_INFO)
 	information = storyhelper_info4_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 4";
+	description = KAPWECHSEL_4;
 };
 
 
@@ -181,7 +181,7 @@ func void storyhelper_info4_info()
 {
 	Info_ClearChoices(storyhelper_info4);
 	Info_AddChoice(storyhelper_info4,DIALOG_BACK,storyhelper_back4);
-	Info_AddChoice(storyhelper_info4,"KAPITELANFANG",storyhelper_kapitel4anfang);
+	Info_AddChoice(storyhelper_info4,KAPITELANFANG,storyhelper_kapitel4anfang);
 };
 
 func void storyhelper_back4()
@@ -216,7 +216,7 @@ instance STORYHELPER_INFO5(C_INFO)
 	information = storyhelper_info5_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 5";
+	description = KAPWECHSEL_5;
 };
 
 
@@ -229,7 +229,7 @@ func void storyhelper_info5_info()
 {
 	Info_ClearChoices(storyhelper_info5);
 	Info_AddChoice(storyhelper_info5,DIALOG_BACK,storyhelper_back5);
-	Info_AddChoice(storyhelper_info5,"KAPITELANFANG",storyhelper_kapitel5anfang);
+	Info_AddChoice(storyhelper_info5,KAPITELANFANG,storyhelper_kapitel5anfang);
 };
 
 func void storyhelper_back5()
@@ -267,7 +267,7 @@ instance STORYHELPER_INFO6(C_INFO)
 	information = storyhelper_info6_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 6";
+	description = KAPWECHSEL_6;
 };
 
 
@@ -280,7 +280,7 @@ func void storyhelper_info6_info()
 {
 	Info_ClearChoices(storyhelper_info6);
 	Info_AddChoice(storyhelper_info6,DIALOG_BACK,storyhelper_back6);
-	Info_AddChoice(storyhelper_info6,"KAPITELANFANG",storyhelper_kapitel6anfang);
+	Info_AddChoice(storyhelper_info6,KAPITELANFANG,storyhelper_kapitel6anfang);
 };
 
 func void storyhelper_back6()

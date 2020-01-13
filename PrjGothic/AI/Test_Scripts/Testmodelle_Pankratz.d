@@ -131,7 +131,7 @@ func void usej4oly_storyhelpletter()
 
 instance SH_OLDWORLD(NPC_DEFAULT)
 {
-	name[0] = "Storyhelper Oldworld";
+	name[0] = "Помощник по сюжету в Долине Рудников";
 	guild = GIL_NONE;
 	id = 9998;
 	voice = 15;
@@ -185,7 +185,7 @@ instance SH_OLDWORLD_INFO1(C_INFO)
 	information = sh_oldworld_info1_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 1";
+	description = KAPWECHSEL_1;
 };
 
 
@@ -198,7 +198,7 @@ func void sh_oldworld_info1_info()
 {
 	Info_ClearChoices(sh_oldworld_info1);
 	Info_AddChoice(sh_oldworld_info1,DIALOG_BACK,sh_oldworld_back1);
-	Info_AddChoice(sh_oldworld_info1,"KAPITELANFANG",sh_oldworld_kapitel1anfang);
+	Info_AddChoice(sh_oldworld_info1,KAPITELANFANG,sh_oldworld_kapitel1anfang);
 };
 
 func void sh_oldworld_back1()
@@ -220,7 +220,7 @@ instance SH_OLDWORLD_INFO2(C_INFO)
 	information = sh_oldworld_info2_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 2";
+	description = KAPWECHSEL_2;
 };
 
 
@@ -233,7 +233,7 @@ func void sh_oldworld_info2_info()
 {
 	Info_ClearChoices(sh_oldworld_info2);
 	Info_AddChoice(sh_oldworld_info2,DIALOG_BACK,sh_oldworld_back2);
-	Info_AddChoice(sh_oldworld_info2,"KAPITELANFANG",sh_oldworld_kapitel2anfang);
+	Info_AddChoice(sh_oldworld_info2,KAPITELANFANG,sh_oldworld_kapitel2anfang);
 };
 
 func void sh_oldworld_back2()
@@ -256,7 +256,7 @@ instance SH_OLDWORLD_INFO3(C_INFO)
 	information = sh_oldworld_info3_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 3";
+	description = KAPWECHSEL_3;
 };
 
 
@@ -269,7 +269,7 @@ func void sh_oldworld_info3_info()
 {
 	Info_ClearChoices(sh_oldworld_info3);
 	Info_AddChoice(sh_oldworld_info3,DIALOG_BACK,sh_oldworld_back3);
-	Info_AddChoice(sh_oldworld_info3,"KAPITELANFANG",sh_oldworld_kapitel3anfang);
+	Info_AddChoice(sh_oldworld_info3,KAPITELANFANG,sh_oldworld_kapitel3anfang);
 };
 
 func void sh_oldworld_back3()
@@ -298,7 +298,7 @@ instance SH_OLDWORLD_INFO4(C_INFO)
 	information = sh_oldworld_info4_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 4";
+	description = KAPWECHSEL_4;
 };
 
 
@@ -311,7 +311,7 @@ func void sh_oldworld_info4_info()
 {
 	Info_ClearChoices(sh_oldworld_info4);
 	Info_AddChoice(sh_oldworld_info4,DIALOG_BACK,sh_oldworld_back4);
-	Info_AddChoice(sh_oldworld_info4,"KAPITELANFANG",sh_oldworld_kapitel4anfang);
+	Info_AddChoice(sh_oldworld_info4,KAPITELANFANG,sh_oldworld_kapitel4anfang);
 };
 
 func void sh_oldworld_back4()
@@ -346,7 +346,7 @@ instance SH_OLDWORLD_INFO5(C_INFO)
 	information = sh_oldworld_info5_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 5";
+	description = KAPWECHSEL_5;
 };
 
 
@@ -359,7 +359,7 @@ func void sh_oldworld_info5_info()
 {
 	Info_ClearChoices(sh_oldworld_info5);
 	Info_AddChoice(sh_oldworld_info5,DIALOG_BACK,sh_oldworld_back5);
-	Info_AddChoice(sh_oldworld_info5,"KAPITELANFANG",sh_oldworld_kapitel5anfang);
+	Info_AddChoice(sh_oldworld_info5,KAPITELANFANG,sh_oldworld_kapitel5anfang);
 };
 
 func void sh_oldworld_back5()
@@ -398,7 +398,7 @@ instance SH_OLDWORLD_INFO6(C_INFO)
 	information = sh_oldworld_info6_info;
 	important = 0;
 	permanent = 1;
-	description = "Kapitel 6";
+	description = KAPWECHSEL_6;
 };
 
 
@@ -411,7 +411,7 @@ func void sh_oldworld_info6_info()
 {
 	Info_ClearChoices(sh_oldworld_info6);
 	Info_AddChoice(sh_oldworld_info6,DIALOG_BACK,sh_oldworld_back6);
-	Info_AddChoice(sh_oldworld_info6,"KAPITELANFANG",sh_oldworld_kapitel6anfang);
+	Info_AddChoice(sh_oldworld_info6,KAPITELANFANG,sh_oldworld_kapitel6anfang);
 };
 
 func void sh_oldworld_back6()

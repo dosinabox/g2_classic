@@ -7,7 +7,7 @@ func int b_teachfighttalentpercent(var C_NPC slf,var C_NPC oth,var int talent,va
 	kosten = b_getlearncosttalent(oth,talent) * percent;
 	if((talent != NPC_TALENT_1H) && (talent != NPC_TALENT_2H) && (talent != NPC_TALENT_BOW) && (talent != NPC_TALENT_CROSSBOW))
 	{
-		Print("*** ERROR: Wrong Parameter ***");
+		Print("*** ОШИБКА: неправильный параметр ***");
 		return FALSE;
 	};
 	if(talent == NPC_TALENT_1H)
@@ -42,7 +42,7 @@ func int b_teachfighttalentpercent(var C_NPC slf,var C_NPC oth,var int talent,va
 	};
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREEN,2);
+		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREEN,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

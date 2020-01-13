@@ -1,1 +1,4 @@
-Чтобы открыть проект в Gothic Sourcer, папка с исходниками должна называться *SolGothic_2_Classic*.
+- Скачать архив с исходниками (Clone or Download - Download ZIP);
+- Распаковать архив в папку с проектами (*Gothic Sourcer\Gothic Projects*);
+- Переименовать папку проекта в **SolGothic_2_Classic**;
+- Запустить Gothic Sourcer и открыть решение *Gothic Projects\SolGothic_2_Classic\Gothic_2_Classic.gsc*.

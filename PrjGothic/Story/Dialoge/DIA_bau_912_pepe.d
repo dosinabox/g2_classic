@@ -341,7 +341,7 @@ func void dia_pepe_buyliesel_info()
 		if(PEPE_SCHAFGEKAUFT == 0)
 		{
 			AI_Output(self,other,"DIA_Pepe_BuyLiesel_03_01");	//Хорошо. Возьми Бетси - ты найдешь ее на пастбище.
-			AI_Output(self,other,"DIA_Pepe_BuyLiesel_03_02");	//Просто скажи ей, что она должна идти за тобой. Она очень умна для овцы. Не обижай ее!
+			AI_Output(self,other,"DIA_Pepe_BuyLiesel_03_02");	//Просто скажи ей, что она должна идти с тобой. Она очень умна для овцы. Не обижай ее!
 		}
 		else
 		{

@@ -28,7 +28,7 @@ instance DIA_ZURIS_PICKPOCKET(C_INFO)
 	condition = dia_zuris_pickpocket_condition;
 	information = dia_zuris_pickpocket_info;
 	permanent = TRUE;
-	description = "(≈го зелье будет украсть легко)";
+	description = "(”красть его зелье будет довольно просто)";
 };
 
 
@@ -129,7 +129,7 @@ var int zuris_einmal;
 instance DIA_ZURIS_WAREZ(C_INFO)
 {
 	npc = vlk_409_zuris;
-	nr = 2;
+	nr = 800;
 	condition = dia_zuris_warez_condition;
 	information = dia_zuris_warez_info;
 	permanent = TRUE;
@@ -290,9 +290,12 @@ instance DIA_ZURIS_KLOSTER(C_INFO)
 
 func int dia_zuris_kloster_condition()
 {
-	if(ZURIS_EINMAL == TRUE)
+	if((ZURIS_EINMAL == TRUE) || Npc_KnowsInfo(other,dia_zuris_potions))
 	{
-		return FALSE;
+		if(other.guild != GIL_KDF)
+		{
+			return TRUE;
+		};
 	};
 };
 
