@@ -176,6 +176,39 @@ func void dia_harad_orcrunning_done()
 };
 
 
+func int C_ScHasOrcWeapon()
+{
+	if(Npc_HasItems(hero,itmw_2h_orcmace_01))
+	{
+		return TRUE;
+	}
+	else if(Npc_HasItems(hero,itmw_2h_orcaxe_01))
+	{
+		return TRUE;
+	}
+	else if(Npc_HasItems(hero,itmw_2h_orcaxe_02))
+	{
+		return TRUE;
+	}
+	else if(Npc_HasItems(hero,itmw_2h_orcaxe_03))
+	{
+		return TRUE;
+	}
+	else if(Npc_HasItems(hero,itmw_2h_orcaxe_04))
+	{
+		return TRUE;
+	}
+	else if(Npc_HasItems(hero,itmw_2h_orcsword_01))
+	{
+		return TRUE;
+	}
+	else if(Npc_HasItems(hero,itmw_2h_orcsword_02))
+	{
+		return TRUE;
+	};
+	return FALSE;
+};
+
 instance DIA_HARAD_ORCSUCCESS(C_INFO)
 {
 	npc = vlk_412_harad;
@@ -189,12 +222,9 @@ instance DIA_HARAD_ORCSUCCESS(C_INFO)
 
 func int dia_harad_orcsuccess_condition()
 {
-	if(MIS_HARAD_ORC == LOG_RUNNING)
+	if((MIS_HARAD_ORC == LOG_RUNNING) && C_ScHasOrcWeapon())
 	{
-		if((Npc_HasItems(other,itmw_2h_orcaxe_01) > 0) || (Npc_HasItems(other,itmw_2h_orcaxe_02) > 0) || (Npc_HasItems(other,itmw_2h_orcaxe_03) > 0) || (Npc_HasItems(other,itmw_2h_orcaxe_04) > 0) || (Npc_HasItems(other,itmw_2h_orcsword_01) > 0))
-		{
-			return TRUE;
-		};
+		return TRUE;
 	};
 };
 
@@ -202,25 +232,33 @@ func void dia_harad_orcsuccess_info()
 {
 	AI_Output(other,self,"DIA_Harad_OrcSuccess_15_00");	//я принес тебе оружие орков, как ты хотел.
 	AI_Output(self,other,"DIA_Harad_OrcSuccess_12_01");	//ѕокажи ...
-	if(Npc_HasItems(other,itmw_2h_orcaxe_01) > 0)
+	if(Npc_HasItems(other,itmw_2h_orcaxe_04))
 	{
-		b_giveinvitems(other,self,itmw_2h_orcaxe_01,1);
+		B_GiveInvItems(other,self,itmw_2h_orcaxe_04,1);
 	}
-	else if(Npc_HasItems(other,itmw_2h_orcaxe_02) > 0)
+	else if(Npc_HasItems(other,itmw_2h_orcsword_02))
 	{
-		b_giveinvitems(other,self,itmw_2h_orcaxe_02,1);
+		B_GiveInvItems(other,self,itmw_2h_orcsword_02,1);
 	}
-	else if(Npc_HasItems(other,itmw_2h_orcaxe_03) > 0)
+	else if(Npc_HasItems(other,itmw_2h_orcsword_01))
 	{
-		b_giveinvitems(other,self,itmw_2h_orcaxe_03,1);
+		B_GiveInvItems(other,self,itmw_2h_orcsword_01,1);
 	}
-	else if(Npc_HasItems(other,itmw_2h_orcaxe_04) > 0)
+	else if(Npc_HasItems(other,itmw_2h_orcaxe_03))
 	{
-		b_giveinvitems(other,self,itmw_2h_orcaxe_04,1);
+		B_GiveInvItems(other,self,itmw_2h_orcaxe_03,1);
 	}
-	else
+	else if(Npc_HasItems(other,itmw_2h_orcaxe_02))
 	{
-		b_giveinvitems(other,self,itmw_2h_orcsword_01,1);
+		B_GiveInvItems(other,self,itmw_2h_orcaxe_02,1);
+	}
+	else if(Npc_HasItems(other,itmw_2h_orcaxe_01))
+	{
+		B_GiveInvItems(other,self,itmw_2h_orcaxe_01,1);
+	}
+	else if(Npc_HasItems(other,itmw_2h_orcmace_01))
+	{
+		B_GiveInvItems(other,self,itmw_2h_orcmace_01,1);
 	};
 	AI_UnequipWeapons(self);
 	AI_EquipBestMeleeWeapon(self);

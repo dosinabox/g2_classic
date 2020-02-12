@@ -121,7 +121,9 @@ instance PC_ROCKEFELLER(NPC_DEFAULT)
 	CreateInvItems(self,itmw_2h_orcaxe_02,1);
 	CreateInvItems(self,itmw_2h_orcaxe_03,1);
 	CreateInvItems(self,itmw_2h_orcaxe_04,1);
+	CreateInvItems(self,itmw_2h_orcmace_01,1);
 	CreateInvItems(self,itmw_2h_orcsword_01,1);
+	CreateInvItems(self,itmw_2h_orcsword_02,1);
 	CreateInvItems(self,itmw_shortsword3,1);
 	CreateInvItems(self,itmw_nagelkeule,1);
 	CreateInvItems(self,itmw_shortsword4,1);

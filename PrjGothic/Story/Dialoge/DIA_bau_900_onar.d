@@ -428,7 +428,7 @@ func void dia_onar_collectgold_info()
 		if(other.exp > (ONAR_SOLD_XP + 200))
 		{
 			AI_Output(self,other,"DIA_Onar_CollectGold_14_13");	//(сокрушенно) Ох, ладно. Вот твое жалование.
-			b_giveinvitems(other,self,itmi_gold,SOLD);
+			b_giveinvitems(self,other,itmi_gold,SOLD);
 			b_say_gold(self,other,SOLD);
 		}
 		else

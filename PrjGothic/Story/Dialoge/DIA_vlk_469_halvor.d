@@ -143,7 +143,7 @@ instance DIA_HALVOR_MESSAGE(C_INFO)
 	information = dia_halvor_message_info;
 	permanent = FALSE;
 	description = "Я думаю, этот клочок бумаги имеет отношение к тебе...";
-	trade = FALSE;
+//	trade = FALSE;
 };
 
 
@@ -181,7 +181,7 @@ func void dia_halvor_message_offer()
 func void dia_halvor_message_prison()
 {
 	AI_Output(other,self,"DIA_Halvor_MESSAGE_PRISON_15_00");	//Похоже, тебе светит тюрьма.
-	AI_Output(self,other,"DIA_Halvor_MESSAGE_PRISON_06_01");	//Нет, подожди, ты е можешь поступить так! Ведь я... я... ты же понимаешь... я мелкая рыбешка.
+	AI_Output(self,other,"DIA_Halvor_MESSAGE_PRISON_06_01");	//Нет, подожди, ты не можешь поступить так! Ведь я... я... ты же понимаешь... я мелкая рыбешка.
 	AI_Output(other,self,"DIA_Halvor_MESSAGE_PRISON_15_02");	//Тебе стоило подумать об этом раньше. А теперь я собираюсь сообщить о тебе лорду Андрэ.
 	AI_Output(self,other,"DIA_Halvor_MESSAGE_PRISON_06_03");	//Ты пожалеешь об этом.
 	BETRAYAL_HALVOR = TRUE;

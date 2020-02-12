@@ -24,6 +24,16 @@ func void zs_dead()
 	b_deletepetzcrime(self);
 	self.aivar[AIV_NPCSAWPLAYERCOMMIT] = CRIME_NONE;
 	AI_UnequipWeapons(self);
-	b_dragonkillcounter(self);
+	self.aivar[AIV_TAPOSITION] = ISINPOS;
+};
+
+func int ZS_Dead_Loop()
+{
+	if(self.aivar[AIV_TAPOSITION] == ISINPOS)
+	{
+		b_dragonkillcounter(self);
+		self.aivar[AIV_TAPOSITION] = NOTINPOS;
+	};
+	return LOOP_CONTINUE;
 };
 

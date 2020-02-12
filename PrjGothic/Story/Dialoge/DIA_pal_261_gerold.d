@@ -156,7 +156,7 @@ func int dia_gerold_deal_condition()
 func void dia_gerold_deal_info()
 {
 	AI_Output(other,self,"DIA_Gerold_Deal_15_00");	//У меня есть записка для одного из заключенных. Ты можешь передать ее?
-	AI_Output(self,other,"DIA_Gerold_Deal_12_01");	//Хм ... в принципе, я не вижу препятствий дл этого. Для кого эта записка?
+	AI_Output(self,other,"DIA_Gerold_Deal_12_01");	//Хм ... в принципе, я не вижу препятствий для этого. Для кого эта записка?
 	AI_Output(other,self,"DIA_Gerold_Deal_15_02");	//Для Горна.
 	AI_Output(self,other,"DIA_Gerold_Deal_12_03");	//Это очень важный заключенный. Я не думаю, что Гаронд согласится. Но если это для тебя так важно, мы всегда можем договориться.
 	AI_Output(other,self,"DIA_Gerold_Deal_15_04");	//Что ты хочешь за это?

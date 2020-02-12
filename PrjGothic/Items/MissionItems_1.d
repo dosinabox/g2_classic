@@ -225,7 +225,7 @@ func void use_kraeuterliste()
 	Doc_PrintLine(ndocid,0,"Луговой горец");
 	Doc_PrintLine(ndocid,0,"Царский щавель");
 	Doc_PrintLine(ndocid,0,"");
-	Doc_PrintLines(ndocid,0,"Примечание: Пусть кандидат в ученики соберет эти травы дл тебя. Это позволит проверить его способности. ");
+	Doc_PrintLines(ndocid,0,"Примечание: Пусть кандидат в ученики соберет эти травы для тебя. Это позволит проверить его способности. ");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"С уважением, Зурис.");
 	Doc_SetMargins(ndocid,-1,200,50,50,50,1);

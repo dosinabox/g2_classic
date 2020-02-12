@@ -9,8 +9,8 @@
 ##            Основное           ##
 ###################################
 
-!define MOD_VERSION "0.8"
-!define MOD_DATE "10.26"
+!define MOD_VERSION "0.9"
+!define MOD_DATE "1.13"
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика II - Классическая"
 !define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"

@@ -252,11 +252,11 @@ func void dia_lobart_buyclothes_info()
 	if(WERT_LOBARTSRUESTUNG == 30)
 	{
 		AI_Output(self,other,"DIA_Lobart_GOLD_05_06");	//» дешевле € ее не отдам.
-		b_logentry(TOPIC_KLEIDUNG,"Ќо он не продаст е мне меньше, чем за 30 золотых монет.");
+		b_logentry(TOPIC_KLEIDUNG,"Ќо он не продаст ее мне меньше, чем за 30 золотых монет.");
 	};
 	Info_ClearChoices(dia_lobart_buyclothes);
 	Info_AddChoice(dia_lobart_buyclothes,"Ёто все еще слишком дорого дл€ мен€.",dia_lobart_buyclothes_notyet);
-	Info_AddChoice(dia_lobart_buyclothes,"ƒавай тогда сюда эту рабочую одежду («ащита: оружие - 10, стрелы - 10)",dia_lobart_buyclothes_buy);
+	Info_AddChoice(dia_lobart_buyclothes,"ƒавай тогда сюда эту рабочую одежду («ащита: оружие - 15, стрелы - 15)",dia_lobart_buyclothes_buy);
 };
 
 func void dia_lobart_buyclothes_buy()
@@ -543,7 +543,7 @@ func void dia_lobart_ruebenrunning_info()
 		MIS_LOBART_RUEBEN = LOG_SUCCESS;
 		b_giveplayerxp(XP_LOBARTHOLRUEBEN);
 		AI_Output(other,self,"DIA_Lobart_RuebenRunning_15_03");	//„то насчет моей платы?
-		AI_Output(self,other,"DIA_Lobart_RuebenRunning_05_04");	//я могу дат тебе 5 золотых монет.
+		AI_Output(self,other,"DIA_Lobart_RuebenRunning_05_04");	//я могу дать тебе 5 золотых монет.
 		if(hero.guild == GIL_NONE)
 		{
 			AI_Output(self,other,"DIA_Lobart_RuebenRunning_05_05");	//...или продать тебе одежду дешевле. „то ты выбираешь?
@@ -761,7 +761,7 @@ func void dia_lobart_dmt_info()
 	{
 		Info_AddChoice(dia_lobart_dmt,"ѕочему ты не отведешь жену к лекарю?",dia_lobart_dmt_frauheilen);
 	};
-	Info_AddChoice(dia_lobart_dmt,"ѕочему ты ничего е сделаешь с этими людьми в черном?",dia_lobart_dmt_hof);
+	Info_AddChoice(dia_lobart_dmt,"ѕочему ты ничего не сделаешь с этими людьми в черном?",dia_lobart_dmt_hof);
 	Info_AddChoice(dia_lobart_dmt,"“ы говорил с людьми в черном?",dia_lobart_dmt_spoketothem);
 };
 
@@ -790,7 +790,7 @@ func void dia_lobart_dmt_spoketothem()
 
 func void dia_lobart_dmt_hof()
 {
-	AI_Output(other,self,"DIA_Lobart_DMT_hof_15_00");	//ѕочему ты ничего е сделаешь с этими людьми в черном?
+	AI_Output(other,self,"DIA_Lobart_DMT_hof_15_00");	//ѕочему ты ничего не сделаешь с этими людьми в черном?
 	AI_Output(self,other,"DIA_Lobart_DMT_hof_05_01");	//я бы очень хотел. Ќо € видел, как они заживо сожгли одного горожанина. Ќет уж, спасибо.
 	AI_Output(self,other,"DIA_Lobart_DMT_hof_05_02");	//Ќе хочетс€ что-то рисковать жизнью!
 };

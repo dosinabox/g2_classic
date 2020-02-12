@@ -561,7 +561,7 @@ instance DIA_HAGEN_TEACH(C_INFO)
 	condition = dia_hagen_teach_condition;
 	information = dia_hagen_teach_info;
 	permanent = TRUE;
-	description = "Ќачнем (изучить бой двуручным оружием).";
+	description = "ѕриступим к обучению! (изучить бой двуручным оружием)";
 };
 
 

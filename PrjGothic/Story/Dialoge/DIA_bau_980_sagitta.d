@@ -351,7 +351,7 @@ func void dia_sagitta_heal_info()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Sagitta_HEAL_17_02");	//¬ насто€щий момент тебе ненужно лечение.
+		AI_Output(self,other,"DIA_Sagitta_HEAL_17_02");	//¬ насто€щий момент тебе не нужно лечение.
 	};
 };
 

@@ -712,6 +712,29 @@ instance ITMW_2H_ORCAXE_04(C_ITEM)
 	count[5] = value;
 };
 
+instance ITMW_2H_ORCMACE_01(C_Item)
+{
+	name = "Молот орков";
+	mainflag = ITEM_KAT_NF;
+	flags = ITEM_2HD_AXE;
+	material = MAT_WOOD;
+	value = 40;
+	damageTotal = 60;
+	damagetype = DAM_BLUNT;
+	range = 100;
+	cond_atr[2] = ATR_STRENGTH;
+	cond_value[2] = 80;
+	visual = "ItMw_2H_OrcMace_01.3DS";
+	description = name;
+	text[2] = NAME_Damage;
+	count[2] = damageTotal;
+	text[3] = NAME_Str_needed;
+	count[3] = cond_value[2];
+	text[4] = NAME_TwoHanded;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+
 instance ITMW_2H_ORCSWORD_01(C_ITEM)
 {
 	name = "Меч ящера";

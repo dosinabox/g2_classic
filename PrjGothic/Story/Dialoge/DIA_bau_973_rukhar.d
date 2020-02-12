@@ -173,7 +173,7 @@ func void dia_rukhar_randolphwill_info()
 func void dia_rukhar_randolphwill_annehmen()
 {
 	Info_ClearChoices(dia_rukhar_randolphwill);
-	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_annehmen_12_00");	//Я возьму твою ставку и подержу е у себя, пока состязание не будет окончено, хорошо?
+	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_annehmen_12_00");	//Я возьму твою ставку и подержу ее у себя, пока состязание не будет окончено, хорошо?
 	DIA_RUKHAR_RANDOLPHWILL_NOPERM = TRUE;
 };
 
