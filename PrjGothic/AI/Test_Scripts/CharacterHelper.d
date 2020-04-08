@@ -26,7 +26,7 @@ func void usemobsibrief()
 	Doc_PrintLine(ndocid,0,"StandardBrief");
 	Doc_SetFont(ndocid,0,FONT_BOOK);
 	Doc_PrintLine(ndocid,0,"");
-	Doc_PrintLines(ndocid,0,"Jetzt wird alles wieder gut");
+	Doc_PrintLines(ndocid,0,"Теперь все будет хорошо");
 	Doc_PrintLines(ndocid,0,"PLAYER_MOBSI_PRODUCTION	=	MOBSI_NONE;");
 	Doc_PrintLines(ndocid,0,"self.aivar[AIV_INVINCIBLE]=FALSE;");
 	Doc_Show(ndocid);

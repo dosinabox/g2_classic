@@ -1135,7 +1135,7 @@ instance ITWR_SCHULDENBUCH(C_ITEM)
 	visual = "ItWr_Book_02_05.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
-	description = "Долговая книга Лемара.";
+	description = "Долговая книга Лемара";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	on_state[0] = useschuldbuch;

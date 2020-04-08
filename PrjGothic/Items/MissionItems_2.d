@@ -147,7 +147,7 @@ instance ITMI_GORNSTREASURE_MIS(C_ITEM)
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = usegornstreasure;
-	description = "Кожаный кошелек Горна.";
+	description = "Кожаный кошелек Горна";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };
@@ -461,7 +461,7 @@ instance ITWR_KDWLETTER(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = usekdwletter;
 	scemename = "MAP";
-	description = "Сообщение.";
+	description = name;
 };
 
 
@@ -497,7 +497,7 @@ instance ITWR_GILBERTLETTER(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = usegilbertletter;
 	scemename = "MAP";
-	description = "Сообщение.";
+	description = name;
 };
 
 

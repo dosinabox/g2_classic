@@ -46,7 +46,7 @@ func void dia_bosper_hallo_info()
 	AI_Output(self,other,"DIA_Bosper_HALLO_11_01");	//Я Боспер. Я делаю луки и торгую шкурами.
 	AI_Output(self,other,"DIA_Bosper_HALLO_11_02");	//Что привело тебя в Хоринис?
 	Log_CreateTopic(TOPIC_CITYTRADER,LOG_NOTE);
-	b_logentry(TOPIC_CITYTRADER,"Боспер делает луки и торгует шкурами. Его лавка находится у восточных ворот, в нижней части города.");
+	b_logentry(TOPIC_CITYTRADER,"Боспер делает луки и торгует шкурами. Его лавка находится у южных ворот, в нижней части города.");
 };
 
 

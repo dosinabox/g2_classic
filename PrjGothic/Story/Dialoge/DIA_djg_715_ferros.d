@@ -191,11 +191,11 @@ func void dia_djg_715_ferros_ferrosanysword_info()
 	Info_AddChoice(dia_djg_715_ferros_ferrosanysword,DIALOG_BACK,dia_djg_715_ferros_ferrosanysword_back);
 	if(Npc_HasItems(other,itmw_1h_special_01) >= 1)
 	{
-		Info_AddChoice(dia_djg_715_ferros_ferrosanysword,itmw_1h_special_01.name,dia_djg_715_ferros_ferrosanysword_silverblade);
+		Info_AddChoice(dia_djg_715_ferros_ferrosanysword,name_itmw_1h_special_01,dia_djg_715_ferros_ferrosanysword_silverblade);
 	};
 	if(Npc_HasItems(other,itmw_1h_special_02) >= 1)
 	{
-		Info_AddChoice(dia_djg_715_ferros_ferrosanysword,itmw_1h_special_02.name,dia_djg_715_ferros_ferrosanysword_oreblade);
+		Info_AddChoice(dia_djg_715_ferros_ferrosanysword,name_itmw_1h_special_02,dia_djg_715_ferros_ferrosanysword_oreblade);
 	};
 };
 

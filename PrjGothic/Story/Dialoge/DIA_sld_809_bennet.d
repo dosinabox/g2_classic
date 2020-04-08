@@ -1152,7 +1152,7 @@ func void dia_bennet_dracheneier_info()
 		AI_Output(self,other,"DIA_Bennet_DRACHENEIER_06_03");	//Давай посмотрим.
 	};
 	Npc_RemoveInvItems(other,itat_dragonegg_mis,1);
-	AI_PrintScreen(PRINT_ITEMGEGEBEN,-1,YPOS_ITEMGIVEN,FONT_SCREENSMALL,2);
+	AI_PrintScreen("Яйцо отдано",-1,YPOS_ITEMGIVEN,FONT_SCREENSMALL,2);
 	if(DRACHENEIER_ANGEBOTENXP_ONETIME == FALSE)
 	{
 		AI_Output(self,other,"DIA_Bennet_DRACHENEIER_06_04");	//Ммм. Очень твердый материал. Идеально подходит для доспехов. Если только удастся открыть их.
@@ -1192,14 +1192,20 @@ func void dia_bennet_dracheneier_ok()
 	AI_Output(self,other,"DIA_Bennet_DRACHENEIER_ok_06_05");	//Насколько я знаю, люди-ящеры обычно обитают в пещерах.
 	AI_Output(self,other,"DIA_Bennet_DRACHENEIER_ok_06_06");	//Я не удивлюсь, если тебе удастся найти еще яйца в пещерах неподалеку.
 	b_logentry(TOPIC_DRACHENEIER,"Беннет полагает, что мне стоит поискать яйца в пещерах Хориниса. Во многих из них, по слухам, видели человекоящеров.");
-	AI_Output(self,other,"DIA_Bennet_DRACHENEIER_ok_06_07");	//Вот. Возьми эту карту. Она поможет тебе найти пещеры.
-	CreateInvItems(self,itwr_map_caves_mis,1);
-	b_giveinvitems(self,other,itwr_map_caves_mis,1);
-	b_logentry(TOPIC_DRACHENEIER,"Он дал мне карту пещер, возможно, она поможет мне.");
-	if(1 == 2)
+	if(!Npc_HasItems(other,itwr_map_caves_mis))
 	{
-		AI_Output(self,other,"DIA_Bennet_DRACHENEIER_ok_06_08");	//Но сначала ты должен взять карту пещер у картографа в городе. Будет жаль, если ты найдешь не все яйца.
-		b_logentry(TOPIC_DRACHENEIER,"Я должен купить карту пещер у картографа в городе, чтобы быть уверенным, что я не пропущу часть яиц.");
+		if(!Npc_IsDead(Brahim))
+		{
+			AI_Output(self,other,"DIA_Bennet_DRACHENEIER_ok_06_08");	//Но сначала ты должен взять карту пещер у картографа в городе. Будет жаль, если ты найдешь не все яйца.
+			b_logentry(TOPIC_DRACHENEIER,"Я должен купить карту пещер у картографа в городе, чтобы быть уверенным, что я не пропущу часть яиц.");
+		}
+		else
+		{
+			AI_Output(self,other,"DIA_Bennet_DRACHENEIER_ok_06_07");	//Вот. Возьми эту карту. Она поможет тебе найти пещеры.
+			CreateInvItems(self,itwr_map_caves_mis,1);
+			b_giveinvitems(self,other,itwr_map_caves_mis,1);
+			b_logentry(TOPIC_DRACHENEIER,"Он дал мне карту пещер, возможно, она поможет мне.");
+		};
 	};
 	Info_ClearChoices(dia_bennet_dracheneier);
 };
@@ -1216,7 +1222,7 @@ func void dia_bennet_dracheneier_nein()
 	AI_Output(other,self,"DIA_Bennet_DRACHENEIER_nein_15_00");	//Тогда можешь оставить золото себе. Я пока попридержу эти яйца.
 	AI_Output(self,other,"DIA_Bennet_DRACHENEIER_nein_06_01");	//Дай мне знать, если передумаешь.
 	CreateInvItems(other,itat_dragonegg_mis,1);
-	AI_PrintScreen(PRINT_ITEMERHALTEN,-1,YPOS_ITEMTAKEN,FONT_SCREENSMALL,2);
+	AI_PrintScreen("Яйцо получено",-1,YPOS_ITEMTAKEN,FONT_SCREENSMALL,2);
 	BENNETSDRAGONEGGOFFER = 0;
 	Info_ClearChoices(dia_bennet_dracheneier);
 };
@@ -1258,7 +1264,7 @@ func void dia_bennet_eierbringen_info()
 		AI_Output(other,self,"DIA_Bennet_EierBringen_15_02");	//Вот. Я принес еще одно.
 		b_giveplayerxp(XP_DJG_BRINGDRAGONEGG);
 		Npc_RemoveInvItems(other,itat_dragonegg_mis,1);
-		AI_PrintScreen(PRINT_ITEMGEGEBEN,-1,YPOS_ITEMGIVEN,FONT_SCREENSMALL,2);
+		AI_PrintScreen("Яйцо отдано",-1,YPOS_ITEMGIVEN,FONT_SCREENSMALL,2);
 		DRAGONEGGCOUNTER = DRAGONEGGCOUNTER + 1;
 	}
 	else

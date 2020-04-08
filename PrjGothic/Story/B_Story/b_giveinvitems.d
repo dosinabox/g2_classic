@@ -16,7 +16,8 @@ func int b_giveinvitems(var C_NPC giver,var C_NPC taker,var int iteminstance,var
 	};
 	Npc_RemoveInvItems(giver,iteminstance,amount);
 	CreateInvItems(taker,iteminstance,amount);
-	itemname = item.name;
+//	itemname = item.name;
+	itemname = item.description;
 	if(Npc_IsPlayer(giver))
 	{
 		if(iteminstance == itmi_gold)

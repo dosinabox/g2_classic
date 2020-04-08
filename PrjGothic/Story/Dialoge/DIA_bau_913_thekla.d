@@ -368,7 +368,7 @@ func void dia_thekla_perm_info()
 		CreateInvItems(sagitta,itmi_theklaspaket,1);
 		Log_CreateTopic(TOPIC_THEKLAEINTOPF,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_THEKLAEINTOPF,LOG_RUNNING);
-		b_logentry(TOPIC_THEKLAEINTOPF,"Если я принесу Текле травы от знахарки Саггиты, она сварит еще одну похлебку для меня. Саггита живет за фермой Секоба.");
+		b_logentry(TOPIC_THEKLAEINTOPF,"Если я принесу Текле травы от знахарки Сагитты, она сварит еще одну похлебку для меня. Сагитта живет за фермой Секоба.");
 	}
 	else if(MIS_THEKLA_PAKET == LOG_SUCCESS)
 	{

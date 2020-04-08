@@ -223,19 +223,19 @@ func void dia_abuyin_mischung_info()
 	Info_AddChoice(dia_abuyin_mischung,DIALOG_BACK,dia_abuyin_mischung_back);
 	if(Npc_HasItems(other,itmi_sumpftabak) >= 1)
 	{
-		Info_AddChoice(dia_abuyin_mischung,itmi_sumpftabak.name,dia_abuyin_mischung_sumpf);
+		Info_AddChoice(dia_abuyin_mischung,"Травяной табак",dia_abuyin_mischung_sumpf);
 	};
 	if(Npc_HasItems(other,itmi_pilztabak) >= 1)
 	{
-		Info_AddChoice(dia_abuyin_mischung,itmi_pilztabak.name,dia_abuyin_mischung_pilz);
+		Info_AddChoice(dia_abuyin_mischung,"Грибной табак",dia_abuyin_mischung_pilz);
 	};
 	if(Npc_HasItems(other,itmi_doppeltabak) >= 1)
 	{
-		Info_AddChoice(dia_abuyin_mischung,itmi_doppeltabak.name,dia_abuyin_mischung_doppel);
+		Info_AddChoice(dia_abuyin_mischung,"Двойное яблоко",dia_abuyin_mischung_doppel);
 	};
 	if(Npc_HasItems(other,itmi_honigtabak) >= 1)
 	{
-		Info_AddChoice(dia_abuyin_mischung,itmi_honigtabak.name,dia_abuyin_mischung_super);
+		Info_AddChoice(dia_abuyin_mischung,"Медовый табак",dia_abuyin_mischung_super);
 	};
 };
 

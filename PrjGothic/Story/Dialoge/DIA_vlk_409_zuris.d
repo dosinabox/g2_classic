@@ -51,8 +51,8 @@ func void dia_zuris_pickpocket_doit()
 {
 	if(other.attribute[ATR_DEXTERITY] >= 40)
 	{
-		CreateInvItems(self,itpo_health_03,1);
-		b_giveinvitems(self,other,itpo_health_03,1);
+		CreateInvItems(other,itpo_health_03,1);
+		AI_PrintScreen("Лечебный эликсир получено",-1,YPOS_ItemTaken,FONT_ScreenSmall,2);
 		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
 		b_giveplayerxp(XP_AMBIENT);
 		Info_ClearChoices(dia_zuris_pickpocket);

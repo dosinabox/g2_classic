@@ -9,7 +9,7 @@ instance STANDARDBRIEF(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = usestandardbrief;
 	scemename = "MAP";
-	description = "StandardLetter";
+	description = name;
 	inv_rotz = 180;
 	inv_rotx = 90;
 	inv_roty = 180;
@@ -34,14 +34,14 @@ func void usestandardbrief()
 
 instance STANDARDBUCH(C_ITEM)
 {
-	name = "StandardBook";
+	name = "Книга";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 100;
 	visual = "ItWr_Book_02_05.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
-	description = "StandardBook";
+	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	on_state[0] = usestandardbuch;

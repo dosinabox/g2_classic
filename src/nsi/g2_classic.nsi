@@ -9,10 +9,10 @@
 ##            Основное           ##
 ###################################
 
-!define MOD_VERSION "0.9"
-!define MOD_DATE "1.13"
+!define MOD_VERSION "1.0"
+!define MOD_DATE "4.8"
 !define MOD_NAME_SYS "g2_classic"
-!define MOD_NAME_RU "Готика II - Классическая"
+!define MOD_NAME_RU "Готика 2: Классическая"
 !define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"
 !define MOD_AUTHOR "D36, Kor Angar"
 !define INSTALLER_NAME "${MOD_NAME_SYS}_v${MOD_VERSION}_install"
@@ -34,8 +34,8 @@ SetCompressor lzma
 ##      Настройки интерфейса     ##
 ###################################
 
-!define MUI_ICON "g2_classic.ico"
-!define MUI_UNICON "g2_classic.ico"
+!define MUI_ICON "${MOD_NAME_SYS}.ico"
+!define MUI_UNICON "${MOD_NAME_SYS}.ico"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_BITMAP "logo.bmp"
 !define MUI_HEADERIMAGE_UNBITMAP "logo.bmp"
@@ -109,21 +109,21 @@ BrandingText " "
 
 Section "Основные файлы" SecMain
 	SectionIn RO
-	CreateDirectory "$INSTDIR\saves_g2_classic\current"
+	CreateDirectory "$INSTDIR\saves_${MOD_NAME_SYS}\current"
 
 	SetOutPath "$INSTDIR\data\ModVDF"
-	File "g2_classic.mod"
+	File "${MOD_NAME_SYS}.mod"
 
 	SetOutPath "$INSTDIR\system"
-	File "g2_classic.ico"
-	File "g2_classic.ini"
-	File "g2_classic.rtf"
+	File "${MOD_NAME_SYS}.ico"
+	File "${MOD_NAME_SYS}.ini"
+	File "${MOD_NAME_SYS}.rtf"
 
 	SetOutPath "$INSTDIR\_work\Data\Video"
-	File "Credits_Classic.bik"
+	File "${MOD_NAME_SYS}_credits.bik"
 
 	SetOutPath "$INSTDIR"
-	File "g2_classic_readme.txt"
+	File "${MOD_NAME_SYS}_readme.txt"
 
 	WriteUninstaller "$INSTDIR\${UNINSTALLER_NAME}.exe"
 
@@ -132,10 +132,10 @@ Section "Основные файлы" SecMain
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayVersion" "${MOD_DETAILED_VERSION}" 
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "InstallLocation" "$INSTDIR"
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "UninstallString" "$INSTDIR\${UNINSTALLER_NAME}.exe"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "HelpLink" "http://github.com/dosinabox/g2_classic"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "HelpLink" "http://worldofplayers.ru/threads/41796"
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "Publisher" "${MOD_AUTHOR}"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayIcon" "$INSTDIR\system\g2_classic.ico"
-	WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "EstimatedSize" "149000"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayIcon" "$INSTDIR\system\${MOD_NAME_SYS}.ico"
+	WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "EstimatedSize" "135000"
 SectionEnd
 
 
@@ -151,7 +151,7 @@ Section "Un.Удалить модификацию" SecUninstall_Main
 SectionEnd
 
 Section /o "Un.Удалить сохранения" SecUninstall_Saves
-	RMDir /r "$INSTDIR\saves_g2_classic"
+	RMDir /r "$INSTDIR\saves_${MOD_NAME_SYS}"
 SectionEnd
 
 ###################################
@@ -174,11 +174,11 @@ Function .onVerifyInstDir
 FunctionEnd
 
 Function Un.GMF_Delete_Components
-	!insertmacro GMF_Delete "$INSTDIR\g2_classic_readme.txt"
-	!insertmacro GMF_Delete "$INSTDIR\system\g2_classic.ico"
-	!insertmacro GMF_Delete "$INSTDIR\system\g2_classic.ini"
-	!insertmacro GMF_Delete "$INSTDIR\system\g2_classic.rtf"
-	!insertmacro GMF_Delete "$INSTDIR\Data\ModVDF\g2_classic.mod"
-	!insertmacro GMF_Delete "$INSTDIR\Data\ModVDF\g2_classic_hotfix.mod"
-	!insertmacro GMF_Delete "$INSTDIR\_work\Data\Video\Credits_Classic.bik"
+	!insertmacro GMF_Delete "$INSTDIR\${MOD_NAME_SYS}_readme.txt"
+	!insertmacro GMF_Delete "$INSTDIR\system\${MOD_NAME_SYS}.ico"
+	!insertmacro GMF_Delete "$INSTDIR\system\${MOD_NAME_SYS}.ini"
+	!insertmacro GMF_Delete "$INSTDIR\system\${MOD_NAME_SYS}.rtf"
+	!insertmacro GMF_Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}.mod"
+	!insertmacro GMF_Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_hotfix.mod"
+	!insertmacro GMF_Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits.bik"
 FunctionEnd

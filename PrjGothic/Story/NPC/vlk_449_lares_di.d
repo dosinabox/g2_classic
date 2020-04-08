@@ -10,7 +10,7 @@ instance VLK_449_LARES_DI(NPC_DEFAULT)
 	aivar[AIV_PARTYMEMBER] = TRUE;
 	aivar[AIV_TOUGHGUY] = TRUE;
 	aivar[AIV_TOUGHGUYNEWSOVERRIDE] = TRUE;
-	b_setattributestochapter(self,3);
+	b_setattributestochapter(self,4);
 	fight_tactic = FAI_HUMAN_STRONG;
 	EquipItem(self,itmw_1h_sld_sword);
 	b_createambientinv(self);

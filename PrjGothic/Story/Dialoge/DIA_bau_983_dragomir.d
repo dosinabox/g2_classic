@@ -43,7 +43,7 @@ func int dia_dragomir_hello_condition()
 func void dia_dragomir_hello_info()
 {
 	AI_Output(self,other,"DIA_Dragomir_Hello_12_00");	//Путешествуешь так далеко от дома?
-	AI_Output(self,other,"DIA_Dragomir_Hello_12_01");	//Здесь тебе не помещает осторожность, особенно когда ты совсем один.
+	AI_Output(self,other,"DIA_Dragomir_Hello_12_01");	//Здесь тебе не помешает осторожность, особенно когда ты совсем один.
 };
 
 

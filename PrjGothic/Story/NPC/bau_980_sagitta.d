@@ -1,7 +1,7 @@
 
 instance BAU_980_SAGITTA(NPC_DEFAULT)
 {
-	name[0] = "Саггита";
+	name[0] = "Сагитта";
 	guild = GIL_NONE;
 	id = 980;
 	voice = 17;

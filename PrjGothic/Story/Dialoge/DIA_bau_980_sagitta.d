@@ -211,7 +211,7 @@ func void dia_sagitta_teach_info()
 	var int talente;
 	talente = 0;
 	AI_Output(other,self,"DIA_Sagitta_Teach_15_00");	//Какие зелья можешь ты научить меня варить?
-	if((PLAYER_TALENT_ALCHEMY[POTION_HEALTH_01] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_HEALTH_02] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_HEALTH_03] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_MANA_01] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_MANA_02] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_MANA_03] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_PERM_MANA] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_PERM_HEALTH] == FALSE))
+	if((PLAYER_TALENT_ALCHEMY[POTION_HEALTH_01] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_HEALTH_02] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_MANA_01] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_MANA_02] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_MANA_03] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_PERM_MANA] == FALSE) || (PLAYER_TALENT_ALCHEMY[POTION_PERM_DEX] == FALSE))
 	{
 		Info_ClearChoices(dia_sagitta_teach);
 		Info_AddChoice(dia_sagitta_teach,DIALOG_BACK,dia_sagitta_teach_back);
@@ -545,7 +545,7 @@ func void dia_sagitta_healrandolph_geld()
 		CreateInvItems(self,itpo_healrandolph_mis,1);
 		b_giveinvitems(self,other,itpo_healrandolph_mis,1);
 		DIA_SAGITTA_HEALRANDOLPH_GOTONE = TRUE;
-		b_logentry(TOPIC_HEALRANDOLPH,"Саггита дала мне лекарство для Рендольфа.");
+		b_logentry(TOPIC_HEALRANDOLPH,"Сагитта дала мне лекарство для Рендольфа.");
 	}
 	else
 	{

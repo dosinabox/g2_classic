@@ -150,7 +150,7 @@ func void dia_bennet_di_smith_info()
 
 func void dia_bennet_di_smith_back()
 {
-	Info_ClearChoices(dia_pc_thief_di_training_talente);
+	Info_ClearChoices(dia_bennet_di_smith);
 };
 
 func void dia_bennet_di_smith_common()

@@ -493,7 +493,7 @@ instance ITPO_HEALRANDOLPH_MIS(C_ITEM)
 	material = MAT_GLAS;
 	on_state[0] = use_healrandolph;
 	scemename = "POTIONFAST";
-	description = "Лекарство от привыкания";
+	description = "Лекарство от похмелья";
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_ESSENZ;
 	text[5] = NAME_VALUE;
