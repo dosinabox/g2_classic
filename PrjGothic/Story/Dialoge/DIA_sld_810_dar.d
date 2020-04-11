@@ -52,7 +52,7 @@ func void dia_dar_hallo_info()
 func void dia_dar_hallo_ja()
 {
 	AI_Output(other,self,"DIA_Dar_Hallo_Ja_15_00");	//Конечно.
-	B_GiveInvItems(self,other,ItMi_Joint,1);
+	b_giveinvitems(self,other,itmi_joint,1);
 	b_useitem(other,itmi_joint);
 	AI_Output(self,other,"DIA_Dar_Hallo_Ja_03_01");	//Неплохо, да?
 	AI_Output(other,self,"DIA_Dar_Hallo_Ja_15_02");	//Где ты взял эту траву?

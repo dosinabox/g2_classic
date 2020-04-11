@@ -234,31 +234,31 @@ func void dia_harad_orcsuccess_info()
 	AI_Output(self,other,"DIA_Harad_OrcSuccess_12_01");	//Покажи ...
 	if(Npc_HasItems(other,itmw_2h_orcaxe_04))
 	{
-		B_GiveInvItems(other,self,itmw_2h_orcaxe_04,1);
+		b_giveinvitems(other,self,itmw_2h_orcaxe_04,1);
 	}
 	else if(Npc_HasItems(other,itmw_2h_orcsword_02))
 	{
-		B_GiveInvItems(other,self,itmw_2h_orcsword_02,1);
+		b_giveinvitems(other,self,itmw_2h_orcsword_02,1);
 	}
 	else if(Npc_HasItems(other,itmw_2h_orcsword_01))
 	{
-		B_GiveInvItems(other,self,itmw_2h_orcsword_01,1);
+		b_giveinvitems(other,self,itmw_2h_orcsword_01,1);
 	}
 	else if(Npc_HasItems(other,itmw_2h_orcaxe_03))
 	{
-		B_GiveInvItems(other,self,itmw_2h_orcaxe_03,1);
+		b_giveinvitems(other,self,itmw_2h_orcaxe_03,1);
 	}
 	else if(Npc_HasItems(other,itmw_2h_orcaxe_02))
 	{
-		B_GiveInvItems(other,self,itmw_2h_orcaxe_02,1);
+		b_giveinvitems(other,self,itmw_2h_orcaxe_02,1);
 	}
 	else if(Npc_HasItems(other,itmw_2h_orcaxe_01))
 	{
-		B_GiveInvItems(other,self,itmw_2h_orcaxe_01,1);
+		b_giveinvitems(other,self,itmw_2h_orcaxe_01,1);
 	}
 	else if(Npc_HasItems(other,itmw_2h_orcmace_01))
 	{
-		B_GiveInvItems(other,self,itmw_2h_orcmace_01,1);
+		b_giveinvitems(other,self,itmw_2h_orcmace_01,1);
 	};
 	AI_UnequipWeapons(self);
 	AI_EquipBestMeleeWeapon(self);

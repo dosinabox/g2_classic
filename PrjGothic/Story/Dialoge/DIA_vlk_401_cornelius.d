@@ -303,7 +303,7 @@ instance DIA_CORNELIUS_PICKPOCKET(C_INFO)
 	condition = dia_cornelius_pickpocket_condition;
 	information = dia_cornelius_pickpocket_info;
 	permanent = TRUE;
-	description = "( расть эту книгу рискованно)";
+	description = "(ѕытатьс€ украсть его книгу довольно рискованно)";
 };
 
 

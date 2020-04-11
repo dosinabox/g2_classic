@@ -13,10 +13,16 @@
 !define MOD_DATE "4.8"
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
-!define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"
 !define MOD_AUTHOR "D36, Kor Angar"
+!define MOD_LINK "http://worldofplayers.ru/threads/41796"
+!define MOD_SIZE "134000"
+!define MOD_HEADER "logo.bmp"
+!define MOD_PIC "pic.bmp"
+
+!define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"
 !define INSTALLER_NAME "${MOD_NAME_SYS}_v${MOD_VERSION}_install"
 !define UNINSTALLER_NAME "${MOD_NAME_SYS}_uninstall"
+!define REGISTRY_PATH "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}"
 
 Name "${MOD_NAME_SYS}_v${MOD_VERSION}"
 OutFile "${INSTALLER_NAME}.exe"
@@ -37,10 +43,10 @@ SetCompressor lzma
 !define MUI_ICON "${MOD_NAME_SYS}.ico"
 !define MUI_UNICON "${MOD_NAME_SYS}.ico"
 !define MUI_HEADERIMAGE
-!define MUI_HEADERIMAGE_BITMAP "logo.bmp"
-!define MUI_HEADERIMAGE_UNBITMAP "logo.bmp"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "pic.bmp"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "pic.bmp"
+!define MUI_HEADERIMAGE_BITMAP "${MOD_HEADER}"
+!define MUI_HEADERIMAGE_UNBITMAP "${MOD_HEADER}"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "${MOD_PIC}"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "${MOD_PIC}"
 
 Caption "${MOD_NAME_RU} (v${MOD_VERSION}) - установка"
 !define MUI_TEXT_WELCOME_INFO_TITLE " "
@@ -122,22 +128,21 @@ Section "Основные файлы" SecMain
 	SetOutPath "$INSTDIR\_work\Data\Video"
 	File "${MOD_NAME_SYS}_credits.bik"
 
-	SetOutPath "$INSTDIR"
+	SetOutPath $INSTDIR
 	File "${MOD_NAME_SYS}_readme.txt"
 
 	WriteUninstaller "$INSTDIR\${UNINSTALLER_NAME}.exe"
 
 	WriteRegStr HKCU "Software\${MOD_NAME_SYS}" "InstallLocation" $INSTDIR
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayName" "${MOD_NAME_RU} (v${MOD_VERSION})" 
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayVersion" "${MOD_DETAILED_VERSION}" 
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "InstallLocation" "$INSTDIR"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "UninstallString" "$INSTDIR\${UNINSTALLER_NAME}.exe"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "HelpLink" "http://worldofplayers.ru/threads/41796"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "Publisher" "${MOD_AUTHOR}"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "DisplayIcon" "$INSTDIR\system\${MOD_NAME_SYS}.ico"
-	WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}" "EstimatedSize" "135000"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "DisplayName" "${MOD_NAME_RU} (v${MOD_VERSION})"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "DisplayVersion" "${MOD_DETAILED_VERSION}"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "InstallLocation" $INSTDIR
+	WriteRegStr HKLM "${REGISTRY_PATH}" "UninstallString" "$INSTDIR\${UNINSTALLER_NAME}.exe"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "HelpLink" "${MOD_LINK}"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "Publisher" "${MOD_AUTHOR}"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "DisplayIcon" "$INSTDIR\system\${MOD_NAME_SYS}.ico"
+	WriteRegDWORD HKLM "${REGISTRY_PATH}" "EstimatedSize" "${MOD_SIZE}"
 SectionEnd
-
 
 ###################################
 ##         Деинсталляция         ##
@@ -147,7 +152,7 @@ Section "Un.Удалить модификацию" SecUninstall_Main
 	SectionIn RO
 	Call Un.GMF_Delete_Components
 	Delete "$INSTDIR\${UNINSTALLER_NAME}.exe"
-	DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}"
+	DeleteRegKey HKLM "${REGISTRY_PATH}"
 SectionEnd
 
 Section /o "Un.Удалить сохранения" SecUninstall_Saves

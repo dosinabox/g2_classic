@@ -1,5 +1,5 @@
 
-const string G2_CLASSIC_MOD_VERSION_START = "1.0";
+const string G2_CLASSIC_MOD_VERSION_START = "1.1";
 
 func void startup_global()
 {

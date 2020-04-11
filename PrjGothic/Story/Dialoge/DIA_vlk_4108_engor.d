@@ -357,7 +357,7 @@ instance DIA_ENGOR_PICKPOCKET(C_INFO)
 	condition = dia_engor_pickpocket_condition;
 	information = dia_engor_pickpocket_info;
 	permanent = TRUE;
-	description = "( расть его карту рискованно)";
+	description = "(”красть его карту будет довольно просто)";
 };
 
 

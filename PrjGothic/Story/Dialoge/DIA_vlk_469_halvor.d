@@ -301,8 +301,11 @@ func void dia_halvor_hehlerei_info()
 
 func void dia_halvor_hehlerei_annehmen()
 {
-	CreateInvItems(other,itrw_arrow,Npc_HasItems(other,itmi_silverplate) + Npc_HasItems(other,itmi_silvercup));
-	b_giveinvitems(other,self,itrw_arrow,Npc_HasItems(other,itmi_silverplate) + Npc_HasItems(other,itmi_silvercup));
+	var int amount;
+	var string concattext;
+	amount = Npc_HasItems(other,itmi_silverplate) + Npc_HasItems(other,itmi_silvercup);
+	concattext = ConcatStrings(IntToString(amount),PRINT_ITEMSGEGEBEN);
+	AI_PrintScreen(concatText,-1,YPOS_ItemGiven,FONT_ScreenSmall,2);
 	Npc_RemoveInvItems(other,itmi_silvercup,Npc_HasItems(other,itmi_silvercup));
 	Npc_RemoveInvItems(other,itmi_silverplate,Npc_HasItems(other,itmi_silverplate));
 	b_giveinvitems(self,other,itmi_gold,HALVOR_SCORE);

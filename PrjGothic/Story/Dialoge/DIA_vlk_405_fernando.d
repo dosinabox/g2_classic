@@ -28,13 +28,13 @@ instance DIA_FERNANDO_PICKPOCKET(C_INFO)
 	condition = dia_fernando_pickpocket_condition;
 	information = dia_fernando_pickpocket_info;
 	permanent = TRUE;
-	description = "(Красть его кошелек рискованно)";
+	description = PICKPOCKET_60;
 };
 
 
 func int dia_fernando_pickpocket_condition()
 {
-	if((Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET) == 1) && (self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] == FALSE) && (Npc_HasItems(self,itse_goldpocket100) >= 1) && (other.attribute[ATR_DEXTERITY] >= (50 - THEFTDIFF)))
+	if((Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET) == 1) && (self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] == FALSE) && (Npc_HasItems(self,itse_goldpocket100) >= 1) && (other.attribute[ATR_DEXTERITY] >= (50 - THEFTDIFF)) && (NPCOBSESSEDBYDMT_FERNANDO == FALSE))
 	{
 		return TRUE;
 	};
@@ -157,14 +157,14 @@ func void dia_fernando_minental_info()
 	AI_Output(self,other,"DIA_Fernando_Minental_14_02");	//Я хочу предложить тебе сделку. Ты приносишь мне доклад о том, что там происходит с рудой, а за это я дам тебе...
 	if(other.guild == GIL_KDF)
 	{
-		AI_Output(self,other,"DIA_Fernando_Minental_14_03");	//...рунный камень.
+		AI_Output(self,other,"DIA_Fernando_Minental_14_03");	//... рунный камень.
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Fernando_Minental_14_04");	//...кольцо, которое повысит твои жизненные силы.
+		AI_Output(self,other,"DIA_Fernando_Minental_14_04");	//... кольцо, которое повысит твои жизненные силы.
 	};
 	AI_Output(other,self,"DIA_Fernando_Minental_15_05");	//Я посмотрю, что можно сделать.
-	AI_StopProcessInfos(self);
+	b_npcclearobsessionbydmt(self);
 	Npc_ExchangeRoutine(self,"START");
 	Log_CreateTopic(TOPIC_FERNANDO,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FERNANDO,LOG_RUNNING);
@@ -232,8 +232,6 @@ func int dia_fernando_obsession_condition()
 	};
 };
 
-
-var int dia_fernando_obsession_gotmoney;
 
 func void dia_fernando_obsession_info()
 {

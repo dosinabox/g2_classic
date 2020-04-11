@@ -26,7 +26,7 @@ func void dia_gerbrandt_exit_info()
 		{
 			b_startotherroutine(diegonw,"GERBRANDT");
 		};
-		b_startotherroutine(gerbrandt,"NEWLIFE");
+		Npc_ExchangeRoutine(self,"NEWLIFE");
 		b_startotherroutine(gerbrandtsfrau,"NEWLIFE");
 		DIEGO_COMING = 2;
 	};
@@ -215,7 +215,7 @@ func void dia_gerbrandt_perm_info()
 			}
 			else
 			{
-				AI_Output(self,other,"DIA_Gerbrandt_Perm_10_06");	//Это никого не касается кроме меня. Я занят!
+				AI_Output(self,other,"DIA_Gerbrandt_Perm_10_06");	//Это никого не касается, кроме меня. Я занят!
 			};
 		}
 		else
@@ -252,7 +252,7 @@ func void dia_gerbrandt_greetingsfromdiego_info()
 	AI_Output(other,self,"DIA_Gerbrandt_GreetingsFromDiego_15_02");	//Он попросил меня вручить тебе это письмо.
 	b_giveinvitems(other,self,itwr_diegosletter_mis,1);
 	b_usefakescroll();
-	AI_Output(self,other,"DIA_Gerbrandt_GreetingsFromDiego_10_03");	//(возбужденно) Этого не может быть. Нет. Мне конец!
+	AI_Output(self,other,"DIA_Gerbrandt_GreetingsFromDiego_10_03");	//(возбужденно) Этого не может быть. Мне конец!
 	AI_Output(self,other,"DIA_Gerbrandt_GreetingsFromDiego_10_04");	//(в страхе) Он что, уже в городе?
 	AI_Output(other,self,"DIA_Gerbrandt_GreetingsFromDiego_15_05");	//Кто?
 	AI_Output(self,other,"DIA_Gerbrandt_GreetingsFromDiego_10_06");	//Диего, конечно же!
