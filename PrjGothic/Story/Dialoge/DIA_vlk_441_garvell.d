@@ -28,7 +28,7 @@ instance DIA_GARVELL_PICKPOCKET(C_INFO)
 	condition = dia_garvell_pickpocket_condition;
 	information = dia_garvell_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть его кошелек легче легкого)";
+	description = PICKPOCKET_20;
 };
 
 

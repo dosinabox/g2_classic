@@ -139,15 +139,18 @@ instance ITKE_ERZBARONRAUM(C_ITEM)
 
 instance ITMI_GORNSTREASURE_MIS(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_BEUTEL;
 	mainflag = ITEM_KAT_NONE;
-	flags = 0;
+	flags = ITEM_MISSION;
 	value = 250;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_Pocket_Mis.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = usegornstreasure;
-	description = "Кожаный кошелек Горна";
+	description = name;
+	text[0] = PRINT_POCKET_MIS;
+	text[1] = "с именем 'Горн'.";
+	text[2] = PRINT_POCKET_300;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };
@@ -203,37 +206,32 @@ func void useitwr_silvestro()
 
 instance ITAT_CLAWLEADER(C_ITEM)
 {
-	name = "Когти снеппера";
+	name = "Когти";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = 100;
 	visual = "ItAt_ClawLeader.3DS";
 	material = MAT_LEATHER;
-	description = "Когти вожака стаи";
-	text[0] = "";
-	text[1] = "";
-	text[2] = "";
-	text[3] = "";
+	description = name;
+	text[0] = "Когти вожака стаи снепперов.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };
 
 instance ITSE_OLAV(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_BEUTEL;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 25;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_Pocket_Mis.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = useolav;
-	description = "Кошелек Олава";
-	text[0] = "";
-	text[1] = "";
-	text[2] = "Внутри позванивает несколько монет.";
-	text[3] = "";
-	text[4] = "";
+	description = name;
+	text[0] = PRINT_POCKET_MIS;
+	text[1] = "с именем 'Олав'.";
+	text[2] = PRINT_POCKET_25;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };

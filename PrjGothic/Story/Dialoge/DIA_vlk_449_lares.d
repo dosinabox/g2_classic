@@ -612,7 +612,7 @@ func int dia_lares_teach_condition()
 
 func void dia_lares_teach_info()
 {
-	AI_Output(other,self,"DIA_Cassia_TEACH_15_00");	//Я хочу стать более ловким!
+	AI_Output(other,self,"DIA_Lares_TEACH_15_00");	//Я хочу стать более ловким!
 	LARES_MERKEDEX = other.attribute[ATR_DEXTERITY];
 	Info_ClearChoices(dia_lares_teach);
 	Info_AddChoice(dia_lares_teach,DIALOG_BACK,dia_lares_teach_back);

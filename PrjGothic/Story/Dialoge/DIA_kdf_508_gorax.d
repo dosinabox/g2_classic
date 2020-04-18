@@ -344,7 +344,7 @@ instance DIA_GORAX_JOB(C_INFO)
 	condition = dia_gorax_job_condition;
 	information = dia_gorax_job_info;
 	permanent = FALSE;
-	description = "Чем ты занимаешься здесь?";
+	description = "А что входит в твои обязанности здесь?";
 };
 
 
@@ -355,7 +355,7 @@ func int dia_gorax_job_condition()
 
 func void dia_gorax_job_info()
 {
-	AI_Output(other,self,"DIA_Gorax_JOB_15_00");	//Что входит в твои обязанности здесь?
+	AI_Output(other,self,"DIA_Gorax_JOB_15_00");	//А что входит в твои обязанности здесь?
 	AI_Output(self,other,"DIA_Gorax_JOB_14_01");	//Мои обязанности многочисленны и разнообразны. Я не только управляющий, но также и казначей.
 	AI_Output(self,other,"DIA_Gorax_JOB_14_02");	//Кроме того, я заведую винным погребом, а также на моих плечах лежит обеспечение монастыря съестными припасами.
 	AI_Output(self,other,"DIA_Gorax_JOB_14_03");	//Поэтому, если тебе что-нибудь нужно, ты всегда можешь обратиться ко мне и получить все необходимое - за скромное пожертвование, конечно.

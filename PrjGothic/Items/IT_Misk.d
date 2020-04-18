@@ -353,7 +353,7 @@ func void usepacket()
 
 instance ITMI_POCKET(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_BEUTEL;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 10;

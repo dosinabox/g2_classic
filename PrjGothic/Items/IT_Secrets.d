@@ -90,7 +90,7 @@ func void use_lockpickfisch()
 
 instance ITSE_GOLDPOCKET25(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_BEUTEL;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 25;
@@ -101,7 +101,7 @@ instance ITSE_GOLDPOCKET25(C_ITEM)
 	description = name;
 	text[0] = "";
 	text[1] = "";
-	text[2] = "Внутри позванивает несколько монет.";
+	text[2] = PRINT_POCKET_25;
 	text[3] = "";
 	text[4] = "";
 	text[5] = NAME_VALUE;
@@ -119,7 +119,7 @@ func void goldpocket25()
 
 instance ITSE_GOLDPOCKET50(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_BEUTEL;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 50;
@@ -148,7 +148,7 @@ func void goldpocket50()
 
 instance ITSE_GOLDPOCKET100(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_BEUTEL;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 100;
@@ -177,7 +177,7 @@ func void goldpocket100()
 
 instance ITSE_HANNASBEUTEL(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_BEUTEL;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 100;

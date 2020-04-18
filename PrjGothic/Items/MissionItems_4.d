@@ -67,15 +67,20 @@ instance ITMW_1H_FERROSSWORD_MIS(C_ITEM)
 
 instance ITMI_KEROLOTHSGELDBEUTEL_MIS(C_ITEM)
 {
-	name = "Кожаный кошелек Керолота";
+	name = NAME_Beutel;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
-	value = 0;
-	visual = "ItMi_Pocket.3ds";
+	value = 300;
+	visual = "ItMi_Pocket_Mis.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = usekerolothsgeldbeutel;
 	description = name;
+	text[0] = PRINT_POCKET_MIS;
+	text[1] = "с именем 'Керолот'.";
+	text[2] = PRINT_POCKET_300;
+	text[5] = NAME_Value;
+	count[5] = value;
 };
 
 
@@ -90,13 +95,15 @@ func void usekerolothsgeldbeutel()
 
 instance ITMI_KEROLOTHSGELDBEUTELLEER_MIS(C_ITEM)
 {
-	name = "Кожаный кошелек Керолота";
+	name = "Кошелек Керолота";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_Pocket_Empty.3ds";
 	material = MAT_LEATHER;
 	description = name;
+	text[0] = "Этот кошелек пуст.";
+	inv_zbias = 190;
 };
 
 instance ITRW_SENGRATHSARMBRUST_MIS(C_ITEM)

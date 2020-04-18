@@ -1,20 +1,18 @@
 
 instance ITSE_XARDASNOTFALLBEUTEL_MIS(C_ITEM)
 {
-	name = "Очень странный кожаный кошелек";
+	name = NAME_BAG;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = 0;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_Bag.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_xardasnotfallbeutel;
 	description = name;
-	text[0] = "";
-	text[1] = "В этом мешочке, похоже,";
-	text[2] = "содержится твердый объект";
-	text[3] = "и документ.";
-	text[4] = "";
+	text[0] = "Очень странный мешок.";
+	text[1] = "Похоже, что в нем находятся";
+	text[2] = "твердый предмет и документ.";
 };
 
 
@@ -24,6 +22,7 @@ func void use_xardasnotfallbeutel()
 	CreateInvItems(hero,itwr_xardasermahnungfueridioten_mis,1);
 	CreateInvItems(hero,itmi_innoseye_discharged_mis,1);
 	concattext = ConcatStrings("2",PRINT_ITEMSERHALTEN);
+	concatText = ConcatStrings(concatText," (Письмо и Глаз Инноса)");
 	Print(concattext);
 };
 

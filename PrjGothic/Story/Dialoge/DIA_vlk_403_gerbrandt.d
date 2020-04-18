@@ -41,7 +41,7 @@ instance DIA_GERBRANDT_PICKPOCKET(C_INFO)
 	condition = dia_gerbrandt_pickpocket_condition;
 	information = dia_gerbrandt_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть его кошелек будет легко)";
+	description = PICKPOCKET_40;
 };
 
 

@@ -449,6 +449,8 @@ const string NAME_AMULETT = "Амулет";
 const string NAME_TRANK = "Зелье";
 const string NAME_RUNE = "Руна";
 const string NAME_SPRUCHROLLE = "Свиток";
+const string NAME_BEUTEL = "Кожаный кошелек";
+const string NAME_BAG = "Мешок";
 const string NAME_CURRENCY = "Золото: ";
 const string PRINT_TRADE_NOT_ENOUGH_GOLD = "У вас недостаточно золота для покупки этого предмета.";
 const string NAME_VALUE = "Цена:";
@@ -668,6 +670,10 @@ const string PICKPOCKET_60_FEMALE = "(Пытаться украсть ее кошелек довольно риско
 const string PICKPOCKET_80_FEMALE = "(Украсть ее кошелек будет довольно трудно)";
 const string PICKPOCKET_100_FEMALE = "(Украсть ее кошелек будет чертовски трудно)";
 const string PICKPOCKET_120_FEMALE = "(Украсть ее кошелек практически невозможно)";
+
+const string PRINT_POCKET_25 = "Внутри позванивает несколько монет.";
+const string PRINT_POCKET_300 = "Этот кошелек набит монетами.";
+const string PRINT_POCKET_MIS = "На мешочке прикреплен ярлык";
 
 const int YPOS_GOLDGIVEN = 34;
 const int YPOS_GOLDTAKEN = 34;

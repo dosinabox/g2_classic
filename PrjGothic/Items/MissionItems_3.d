@@ -395,15 +395,18 @@ instance ITMW_MALETHSGEHSTOCK_MIS(C_ITEM)
 
 instance ITMI_MALETHSBANDITGOLD(C_ITEM)
 {
-	name = "Кошелек полный золота!";
+	name = NAME_BAG;
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
-	value = 0;
-	visual = "ItMi_Pocket.3ds";
+	value = 300;
+	visual = "ItMi_Bag.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_malethsbanditgold;
 	description = name;
+	text[0] = "Этот мешок доверху набит монетами!";
+	text[5] = NAME_Value;
+	count[5] = value;
 };
 
 
@@ -535,11 +538,11 @@ instance ITWR_ASTRONOMY_MIS(C_ITEM)
 	value = 400;
 	visual = "ItWr_Book_02_02.3ds";
 	material = MAT_LEATHER;
+	on_state[0] = use_astronomy;
 	scemename = "MAP";
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
-	on_state[0] = use_astronomy;
 };
 
 
@@ -605,10 +608,10 @@ func void use_healobsession()
 
 instance ITSE_GOLEMCHEST_MIS(C_ITEM)
 {
-	name = "Кожаный кошелек";
+	name = NAME_Beutel;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
-	value = 0;
+	value = 50;
 	visual = "ItMi_Pocket.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
@@ -617,8 +620,10 @@ instance ITSE_GOLEMCHEST_MIS(C_ITEM)
 	text[0] = "";
 	text[1] = "";
 	text[2] = "Этот кошелек полон монет.";
-	text[3] = "";
+	text[3] = "Кажется, внутри позванивает что-то еще.";
 	text[4] = "";
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
 
@@ -704,16 +709,20 @@ func void use_diegosletter_mis()
 
 instance ITSE_DIEGOSTREASURE_MIS(C_ITEM)
 {
-	name = "Полный кожаный кошелек";
+	name = NAME_Beutel;
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
-	value = 0;
-	visual = "ItMi_Pocket.3ds";
+	value = DiegosTreasure;
+	visual = "ItMi_Pocket_Mis.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_diegostreasure;
 	description = name;
-	text[2] = "Старый кожаный кошелек Диего.";
+	text[0] = PRINT_POCKET_MIS;
+	text[1] = "с именем 'Диего'.";
+	text[2] = "Внутри целая куча золота!";
+	text[5] = NAME_Value;
+	count[5] = value;
 };
 
 
