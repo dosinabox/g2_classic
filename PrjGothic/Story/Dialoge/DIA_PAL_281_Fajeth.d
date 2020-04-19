@@ -5,6 +5,7 @@ func int c_snapperdeath()
 	{
 		return TRUE;
 	};
+	return FALSE;
 };
 
 

@@ -27,7 +27,7 @@ func int zs_runtowp_loop()
 	return LOOP_CONTINUE;
 };
 
-func int zs_runtowp_end()
+func void zs_runtowp_end()
 {
 };
 

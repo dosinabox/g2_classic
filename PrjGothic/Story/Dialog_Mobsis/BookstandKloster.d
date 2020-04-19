@@ -371,7 +371,7 @@ func void use_bookstand_kreise_06_s1()
 		Doc_SetMargins(ndocid,-1,30,20,275,20,1);
 		Doc_PrintLine(ndocid,1,"");
 		Doc_PrintLine(ndocid,1,"");
-		Doc_PrintLine(ndocid,1,"Сморщивание монстра");
+		Doc_PrintLine(ndocid,1,"Уменьшение монстра");
 		Doc_PrintLine(ndocid,1,"Кость гоблина");
 		Doc_PrintLine(ndocid,1,"Клык тролля");
 		Doc_PrintLine(ndocid,1,"");

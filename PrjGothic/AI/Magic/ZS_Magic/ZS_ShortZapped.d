@@ -16,7 +16,7 @@ func void b_stopshortzapped()
 	};
 };
 
-func int zs_shortzapped()
+func void zs_shortzapped()
 {
 	Npc_PercEnable(self,PERC_ASSESSSTOPMAGIC,b_stopshortzapped);
 	if(!Npc_HasBodyFlag(self,BS_FLAG_INTERRUPTABLE))
@@ -38,7 +38,9 @@ func int zs_shortzapped_loop()
 	if(Npc_GetStateTime(self) > SPL_TIME_SHORTZAPPED)
 	{
 		b_stopshortzapped();
+		return LOOP_END;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void zs_shortzapped_end()

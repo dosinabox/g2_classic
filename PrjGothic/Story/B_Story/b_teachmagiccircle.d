@@ -51,8 +51,9 @@ func int b_teachmagiccircle(var C_NPC slf,var C_NPC oth,var int circle)
 	if(circle == 6)
 	{
 		PrintScreen(PRINT_LEARNCIRCLE_6,-1,-1,FONT_SCREEN,2);
-		b_logentry(TOPIC_TALENTMAGICCIRCLE,"Заклинания 6-го круга: огненный дождь, дыхание смерти, волна смерти, армия тьмы и сморщивание монстра.");
+		b_logentry(TOPIC_TALENTMAGICCIRCLE,"Заклинания 6-го круга: огненный дождь, дыхание смерти, волна смерти, армия тьмы и уменьшение монстра.");
 		return TRUE;
 	};
+	return FALSE;
 };
 

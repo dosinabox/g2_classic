@@ -15,11 +15,8 @@ func int spell_logic_shrink(var int manainvested)
 	if(self.attribute[ATR_MANA] >= SPL_COST_SHRINK)
 	{
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_shrink()

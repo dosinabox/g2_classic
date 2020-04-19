@@ -25,12 +25,9 @@ func int zs_healself_loop()
 	{
 		AI_UseItem(self,itpo_health_01);
 		return LOOP_CONTINUE;
-	}
-	else
-	{
-		Npc_ClearAIQueue(self);
-		return LOOP_END;
 	};
+	Npc_ClearAIQueue(self);
+	return LOOP_END;
 };
 
 func void zs_healself_end()

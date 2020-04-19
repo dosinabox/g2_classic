@@ -328,14 +328,14 @@ instance ITRI_PROT_TOTAL_01(C_ITEM)
 	on_equip = equip_itri_prot_total_01;
 	on_unequip = unequip_itri_prot_total_01;
 	description = "Кольцо непобедимости";
-	text[1] = NAME_PROT_MAGIC;
-	count[1] = RI_TPROTMAGE;
-	text[2] = NAME_PROT_FIRE;
-	count[2] = RI_TPROTFIRE;
-	text[3] = NAME_PROT_POINT;
-	count[3] = RI_TPROTPOINT;
-	text[4] = NAME_PROT_EDGE;
-	count[4] = RI_TPROTEDGE;
+	text[1] = NAME_PROT_EDGE;
+	count[1] = RI_TPROTEDGE;
+	text[2] = NAME_PROT_POINT;
+	count[2] = RI_TPROTPOINT;
+	text[3] = NAME_PROT_FIRE;
+	count[3] = RI_TPROTFIRE;
+	text[4] = NAME_PROT_MAGIC;
+	count[4] = RI_TPROTMAGE;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_RING_STANDARD;
@@ -375,14 +375,14 @@ instance ITRI_PROT_TOTAL_02(C_ITEM)
 	on_equip = equip_itri_prot_total_02;
 	on_unequip = unequip_itri_prot_total_02;
 	description = "Кольцо неуязвимости";
-	text[1] = NAME_PROT_MAGIC;
-	count[1] = RI_TPROTMAGE02;
-	text[2] = NAME_PROT_FIRE;
-	count[2] = RI_TPROTFIRE02;
-	text[3] = NAME_PROT_POINT;
-	count[3] = RI_TPROTPOINT02;
-	text[4] = NAME_PROT_EDGE;
-	count[4] = RI_TPROTEDGE02;
+	text[1] = NAME_PROT_EDGE;
+	count[1] = RI_TPROTEDGE02;
+	text[2] = NAME_PROT_POINT;
+	count[2] = RI_TPROTPOINT02;
+	text[3] = NAME_PROT_FIRE;
+	count[3] = RI_TPROTFIRE02;
+	text[4] = NAME_PROT_MAGIC;
+	count[4] = RI_TPROTMAGE02;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_RING_STANDARD;
@@ -488,7 +488,7 @@ instance ITRI_HP_01(C_ITEM)
 	on_equip = equip_itri_hp_01;
 	on_unequip = unequip_itri_hp_01;
 	description = "Кольцо жизни";
-	text[2] = NAME_BONUS_HP;
+	text[2] = NAME_BONUS_HPMAX;
 	count[2] = RI_HP;
 	text[5] = NAME_VALUE;
 	count[5] = value;
@@ -530,7 +530,7 @@ instance ITRI_HP_02(C_ITEM)
 	on_equip = equip_itri_hp_02;
 	on_unequip = unequip_itri_hp_02;
 	description = "Кольцо живости";
-	text[2] = NAME_BONUS_HP;
+	text[2] = NAME_BONUS_HPMAX;
 	count[2] = RI_HP02;
 	text[5] = NAME_VALUE;
 	count[5] = value;
@@ -638,7 +638,7 @@ instance ITRI_MANA_01(C_ITEM)
 	on_equip = equip_itri_mana_01;
 	on_unequip = unequip_itri_mana_01;
 	description = "Кольцо магии";
-	text[2] = NAME_BONUS_MANA;
+	text[2] = NAME_BONUS_MANAMAX;
 	count[2] = RI_MANA;
 	text[5] = NAME_VALUE;
 	count[5] = value;
@@ -680,7 +680,7 @@ instance ITRI_MANA_02(C_ITEM)
 	on_equip = equip_itri_mana_02;
 	on_unequip = unequip_itri_mana_02;
 	description = "Кольцо астральной силы";
-	text[2] = NAME_BONUS_MANA;
+	text[2] = NAME_BONUS_MANAMAX;
 	count[2] = RI_MANA02;
 	text[5] = NAME_VALUE;
 	count[5] = value;
@@ -722,10 +722,10 @@ instance ITRI_HP_MANA_01(C_ITEM)
 	on_equip = equip_itri_hp_mana_01;
 	on_unequip = unequip_itri_hp_mana_01;
 	description = "Кольцо просвещения";
-	text[2] = NAME_BONUS_MANA;
-	count[2] = RI_HPMANA_HP;
-	text[3] = NAME_BONUS_HP;
-	count[3] = RI_HPMANA_MANA;
+	text[2] = NAME_BONUS_MANAMAX;
+	count[2] = RI_HPMANA_MANA;
+	text[3] = NAME_BONUS_HPMAX;
+	count[3] = RI_HPMANA_HP;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_RING_STANDARD;
@@ -754,9 +754,9 @@ func void unequip_itri_hp_mana_01()
 	{
 		self.attribute[ATR_HITPOINTS] = 2;
 	};
-	if(self.attribute[ATR_MANA] >= RI_HPMANA_HP)
+	if(self.attribute[ATR_MANA] >= RI_HPMANA_MANA)
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - RI_HPMANA_HP;
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - RI_HPMANA_MANA;
 	}
 	else
 	{

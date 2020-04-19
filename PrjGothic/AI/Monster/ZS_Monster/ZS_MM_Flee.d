@@ -21,12 +21,9 @@ func int zs_mm_flee_loop()
 		};
 		AI_Flee(self);
 		return LOOP_CONTINUE;
-	}
-	else
-	{
-		Npc_ClearAIQueue(self);
-		return LOOP_END;
 	};
+	Npc_ClearAIQueue(self);
+	return LOOP_END;
 };
 
 func void zs_mm_flee_end()

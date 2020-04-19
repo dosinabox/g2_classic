@@ -30,11 +30,8 @@ func int spell_logic_pallight(var int manainvested)
 	if(self.attribute[ATR_MANA] >= SPL_COST_PALLIGHT)
 	{
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_pallight()
@@ -47,11 +44,8 @@ func int spell_logic_light(var int manainvested)
 	if(self.attribute[ATR_MANA] >= SPL_COST_LIGHT)
 	{
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_light()

@@ -30,11 +30,8 @@ func int spell_logic_charm(var int manainvested)
 			};
 		};
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_charm()

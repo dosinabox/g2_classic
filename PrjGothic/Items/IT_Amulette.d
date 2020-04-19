@@ -165,14 +165,14 @@ instance ITAM_PROT_TOTAL_01(C_ITEM)
 	on_equip = equip_value_am_prottotal;
 	on_unequip = unequip_value_am_prottotal;
 	description = "Амулет металлической кожи";
-	text[1] = NAME_PROT_FIRE;
-	count[1] = AM_TPROTFIRE;
-	text[2] = NAME_PROT_MAGIC;
-	count[2] = AM_TPROTMAGE;
-	text[3] = NAME_PROT_POINT;
-	count[3] = AM_TPROTPOINT;
-	text[4] = NAME_PROT_EDGE;
-	count[4] = AM_TPROTEDGE;
+	text[1] = NAME_PROT_EDGE;
+	count[1] = AM_TPROTEDGE;
+	text[2] = NAME_PROT_POINT;
+	count[2] = AM_TPROTPOINT;
+	text[3] = NAME_PROT_FIRE;
+	count[3] = AM_TPROTFIRE;
+	text[4] = NAME_PROT_MAGIC;
+	count[4] = AM_TPROTMAGE;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
@@ -272,7 +272,7 @@ instance ITAM_HP_01(C_ITEM)
 	on_equip = equip_itam_hp_01;
 	on_unequip = unequip_itam_hp_01;
 	description = "Амулет жизни";
-	text[2] = NAME_BONUS_HP;
+	text[2] = NAME_BONUS_HPMAX;
 	count[2] = AM_HP;
 	text[5] = NAME_VALUE;
 	count[5] = value;
@@ -312,8 +312,8 @@ instance ITAM_MANA_01(C_ITEM)
 	on_equip = equip_itam_mana_01;
 	on_unequip = unequip_itam_mana_01;
 	description = "Амулет магии";
-	text[2] = NAME_BONUS_MANA;
-	count[2] = 10;
+	text[2] = NAME_BONUS_MANAMAX;
+	count[2] = AM_MANA;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
@@ -342,7 +342,7 @@ func void unequip_itam_mana_01()
 
 instance ITAM_DEX_STRG_01(C_ITEM)
 {
-	name = "Амулет мощи";
+	name = NAME_AMULETT;
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET;
 	value = VALUE_AM_DEXSTRG;
@@ -352,10 +352,10 @@ instance ITAM_DEX_STRG_01(C_ITEM)
 	on_equip = equip_itam_dex_strg_01;
 	on_unequip = unequip_itam_dex_strg_01;
 	description = "Амулет мощи";
-	text[2] = NAME_BONUS_DEX;
-	count[2] = AM_DEXSTRG_DEX;
-	text[3] = NAME_BONUS_STR;
-	count[3] = AM_DEXSTRG_STRG;
+	text[2] = NAME_BONUS_STR;
+	count[2] = AM_DEXSTRG_STRG;
+	text[3] = NAME_BONUS_DEX;
+	count[3] = AM_DEXSTRG_DEX;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
@@ -364,20 +364,20 @@ instance ITAM_DEX_STRG_01(C_ITEM)
 
 func void equip_itam_dex_strg_01()
 {
-	Npc_ChangeAttribute(self,ATR_DEXTERITY,AM_DEXSTRG_DEX);
 	Npc_ChangeAttribute(self,ATR_STRENGTH,AM_DEXSTRG_STRG);
+	Npc_ChangeAttribute(self,ATR_DEXTERITY,AM_DEXSTRG_DEX);
 };
 
 func void unequip_itam_dex_strg_01()
 {
-	Npc_ChangeAttribute(self,ATR_DEXTERITY,-AM_DEXSTRG_DEX);
 	Npc_ChangeAttribute(self,ATR_STRENGTH,-AM_DEXSTRG_STRG);
+	Npc_ChangeAttribute(self,ATR_DEXTERITY,-AM_DEXSTRG_DEX);
 };
 
 
 instance ITAM_HP_MANA_01(C_ITEM)
 {
-	name = "Амулет просвещения";
+	name = NAME_AMULETT;
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET;
 	value = VALUE_AM_HPMANA;
@@ -387,10 +387,10 @@ instance ITAM_HP_MANA_01(C_ITEM)
 	on_equip = equip_itam_hp_mana_01;
 	on_unequip = unequip_itam_hp_mana_01;
 	description = "Амулет просвещения";
-	text[2] = NAME_BONUS_HP;
-	count[2] = AM_HPMANA_HP;
-	text[3] = NAME_BONUS_MANA;
-	count[3] = AM_HPMANA_MANA;
+	text[2] = NAME_BONUS_MANAMAX;
+	count[2] = AM_HPMANA_MANA;
+	text[3] = NAME_BONUS_HPMAX;
+	count[3] = AM_HPMANA_HP;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
@@ -399,15 +399,14 @@ instance ITAM_HP_MANA_01(C_ITEM)
 
 func void equip_itam_hp_mana_01()
 {
-	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + AM_HPMANA_HP;
-	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + AM_HPMANA_HP;
 	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + AM_HPMANA_MANA;
 	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + AM_HPMANA_MANA;
+	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + AM_HPMANA_HP;
+	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + AM_HPMANA_HP;
 };
 
 func void unequip_itam_hp_mana_01()
 {
-	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - AM_HPMANA_MANA;
 	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - AM_HPMANA_MANA;
 	self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] - AM_HPMANA_HP;
 	if(self.attribute[ATR_HITPOINTS] > (AM_HPMANA_HP + 1))
@@ -418,13 +417,13 @@ func void unequip_itam_hp_mana_01()
 	{
 		self.attribute[ATR_HITPOINTS] = 2;
 	};
-	if(self.attribute[ATR_MANA] >= AM_HPMANA_HP)
+	if(self.attribute[ATR_MANA] >= AM_HPMANA_MANA)
 	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - AM_HPMANA_HP;
+		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - AM_HPMANA_MANA;
 	}
 	else
 	{
-		self.attribute[ATR_HITPOINTS] = 0;
+		self.attribute[ATR_MANA] = 0;
 	};
 };
 
@@ -438,8 +437,8 @@ instance TESTAMULET(C_ITEM)
 	visual_skin = 0;
 	material = MAT_METAL;
 	description = "Амулет тестировщика";
-	text[1] = ConcatStrings("Gothic 2 Classic v",G2_CLASSIC_MOD_VERSION_START);
-	text[2] = "Скомпилировано 18 апреля 2020г.";
+	text[1] = ConcatStrings("Готика 2: Классическая v",G2_CLASSIC_MOD_VERSION_START);
+	text[2] = "Скомпилировано 19 апреля 2020г.";
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
 };
 

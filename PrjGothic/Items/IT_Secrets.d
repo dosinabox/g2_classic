@@ -1,16 +1,18 @@
 
 instance ITSE_ERZFISCH(C_ITEM)
 {
-	name = "Рыба-шар";
+	name = "Круглая рыба";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_MISSION;
+	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 25;
-	visual = "ItFo_Fish.3DS";
+	visual = "ItSe_ErzFisch.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	on_state[0] = use_erzfisch;
 	description = name;
 	text[2] = "В этой рыбе что-то спрятано.";
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
 
@@ -25,14 +27,17 @@ instance ITSE_GOLDFISCH(C_ITEM)
 {
 	name = "Тяжелая рыба";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_MISSION;
+	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 25;
-	visual = "ItFo_Fish.3DS";
+	visual = "ItSe_GoldFisch.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	on_state[0] = use_goldfisch;
 	description = name;
 	text[2] = "В этой рыбе что-то спрятано.";
+	text[5] = NAME_VALUE;
+	count[5] = value;
+	inv_zbias = 100;
 };
 
 
@@ -48,14 +53,17 @@ instance ITSE_RINGFISCH(C_ITEM)
 {
 	name = "Маленькая рыбка";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_MISSION;
+	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 25;
-	visual = "ItFo_Fish.3DS";
+	visual = "ItSe_RingFisch.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	on_state[0] = use_ringfisch;
 	description = name;
 	text[2] = "В этой рыбе что-то спрятано.";
+	text[5] = NAME_VALUE;
+	count[5] = value;
+	inv_zbias = 190;
 };
 
 
@@ -72,12 +80,14 @@ instance ITSE_LOCKPICKFISCH(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
 	value = 25;
-	visual = "ItFo_Fish.3DS";
+	visual = "ItFo_SmellyFish.3DS";
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	on_state[0] = use_lockpickfisch;
 	description = name;
 	text[2] = "В этой рыбе что-то спрятано.";
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
 

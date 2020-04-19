@@ -1,5 +1,5 @@
 
-func int b_mm_desynchronize()
+func void b_mm_desynchronize()
 {
 	var int msec;
 	msec = Hlp_Random(1000);

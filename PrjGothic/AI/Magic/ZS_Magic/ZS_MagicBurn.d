@@ -33,7 +33,7 @@ func void b_restartburn()
 	};
 };
 
-func int zs_magicburn()
+func void zs_magicburn()
 {
 	Npc_PercEnable(self,PERC_ASSESSSTOPMAGIC,b_stopmagicburn);
 	if(!Npc_HasBodyFlag(self,BS_FLAG_INTERRUPTABLE))

@@ -13,9 +13,10 @@ instance ITAM_MANA_ANGAR_MIS(C_ITEM)
 	material = MAT_METAL;
 	on_equip = equip_itam_mana_angar;
 	on_unequip = unequip_itam_mana_angar;
-	description = "Магический амулет Ангара";
-	text[2] = NAME_BONUS_MANA;
-	count[2] = 10;
+	description = "Амулет магии";
+	text[0] = "Этот амулет принадлежит Ангару.";
+	text[2] = NAME_BONUS_MANAMAX;
+	count[2] = AM_MANA;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
@@ -164,7 +165,7 @@ instance ITAT_DRAGONEGG_MIS(C_ITEM)
 
 instance ITRI_ORCELITERING(C_ITEM)
 {
-	name = "Кольцо предводителей орков";
+	name = NAME_RING;
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_MISSION | ITEM_RING | ITEM_MULTI;
 	value = VALUE_ORCELITERING;
@@ -173,7 +174,7 @@ instance ITRI_ORCELITERING(C_ITEM)
 	material = MAT_METAL;
 	on_equip = equip_orcelitering;
 	on_unequip = unequip_orcelitering;
-	description = name;
+	description = "Кольцо предводителей орков";
 	text[0] = "Это грубое кольцо кажется";
 	text[1] = "странно холодным.";
 	text[2] = "";

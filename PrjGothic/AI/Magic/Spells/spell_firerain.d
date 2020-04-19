@@ -16,11 +16,8 @@ func int spell_logic_firerain(var int manainvested)
 	if(self.attribute[ATR_MANA] >= SPL_COST_FIRERAIN)
 	{
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_firerain()

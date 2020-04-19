@@ -806,16 +806,15 @@ func void use_minenanteil_mis()
 
 instance ITAM_PROT_BLACKEYE_MIS(C_ITEM)
 {
-	name = "Амулет вызова душ";
+	name = NAME_AMULETT;
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET | ITEM_MISSION;
 	value = VALUE_AM_HPMANA;
 	visual = "ItMi_GoldNecklace.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
-	description = name;
-	text[2] = "";
-	text[3] = "Защита от сглаза";
+	description = "Амулет вызова душ";
+	text[2] = "Защита от сглаза.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;

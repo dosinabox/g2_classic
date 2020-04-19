@@ -109,7 +109,7 @@ func int dia_andre_cantharfalle_condition()
 	};
 };
 
-func int dia_andre_cantharfalle_info()
+func void dia_andre_cantharfalle_info()
 {
 	if(ANDRE_STECKBRIEF == FALSE)
 	{

@@ -257,5 +257,6 @@ func int spell_processmana(var int manainvested)
 	{
 		return spell_logic_deathball(manainvested);
 	};
+	return FALSE;
 };
 

@@ -432,6 +432,7 @@ func int dia_biff_kohleweggeben_condition()
 {
 	if((DJG_BIFF_SCGOLD > Npc_HasItems(hero,itmi_gold)) && (DJG_BIFF_HALBEHALBE == TRUE) && (DJG_BIFFPARTY == TRUE) && (DJG_BIFF_STAY == FALSE))
 	{
+		return TRUE;
 	};
 };
 

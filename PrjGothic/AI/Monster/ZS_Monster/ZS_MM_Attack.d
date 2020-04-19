@@ -157,9 +157,9 @@ func int zs_mm_attack_loop()
 		{
 			Npc_ClearAIQueue(self);
 			AI_Standup(self);
-			return LOOP_END;
 		};
 	};
+	return LOOP_END;
 };
 
 func void zs_mm_attack_end()

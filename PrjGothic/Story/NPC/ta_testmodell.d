@@ -323,7 +323,7 @@ func void usehosh2()
 };
 
 
-instance HOSH3(C_ITEM)
+/*instance HOSH3(C_ITEM)
 {
 	name = "Sumpfdrache immortal klauen";
 	mainflag = ITEM_KAT_DOCS;
@@ -344,7 +344,7 @@ func void usehosh3()
 {
 	SWAMPDRAGON = Hlp_GetNpc(dragon_rock);
 	swampdragon.senses_range = dragon_rock;
-};
+};*/
 
 
 instance HOSH4(C_ITEM)

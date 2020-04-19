@@ -1,5 +1,5 @@
 
-func int zs_magicshrink()
+func void zs_magicshrink()
 {
 	if(!Npc_HasBodyFlag(self,BS_FLAG_INTERRUPTABLE))
 	{

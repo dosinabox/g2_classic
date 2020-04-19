@@ -1,5 +1,5 @@
 
-func int b_stopmagicsleep()
+func void b_stopmagicsleep()
 {
 	Npc_PercDisable(self,PERC_ASSESSDAMAGE);
 	b_say_overlay(self,other,"$WHATWASSTHAT");
@@ -41,13 +41,14 @@ func int zs_magicsleep_loop()
 		b_stopmagicsleep();
 		return LOOP_END;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void zs_magicsleep_end()
 {
 };
 
-func int b_stopmagicflee()
+func void b_stopmagicflee()
 {
 	Npc_PercDisable(self,PERC_ASSESSDAMAGE);
 	Npc_SetTarget(self,other);
@@ -96,7 +97,9 @@ func int zs_magicflee_loop()
 	{
 		Npc_ClearAIQueue(self);
 		b_stopmagicflee();
+		return LOOP_END;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void zs_magicflee_end()

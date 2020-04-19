@@ -16,7 +16,7 @@ func void b_stopzapped()
 	};
 };
 
-func int zs_zapped()
+func void zs_zapped()
 {
 	Npc_PercEnable(self,PERC_ASSESSSTOPMAGIC,b_stopzapped);
 	if(!Npc_HasBodyFlag(self,BS_FLAG_INTERRUPTABLE))
@@ -45,8 +45,8 @@ func int zs_zapped_loop()
 			AI_Standup(self);
 			return LOOP_END;
 		};
-		return LOOP_CONTINUE;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void zs_zapped_end()

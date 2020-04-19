@@ -17,11 +17,8 @@ func int spell_logic_lightningflash(var int manainvested)
 	if(self.attribute[ATR_MANA] >= SPL_COST_LIGHTNINGFLASH)
 	{
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_lightningflash()

@@ -32,7 +32,7 @@ func int zs_fleetowp_loop()
 	return LOOP_CONTINUE;
 };
 
-func int zs_fleetowp_end()
+func void zs_fleetowp_end()
 {
 };
 

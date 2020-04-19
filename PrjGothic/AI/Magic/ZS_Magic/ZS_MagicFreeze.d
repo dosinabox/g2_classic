@@ -22,7 +22,7 @@ func void b_stopmagicfreeze()
 	};
 };
 
-func int zs_magicfreeze()
+func void zs_magicfreeze()
 {
 	Npc_PercEnable(self,PERC_ASSESSMAGIC,b_restartfreeze);
 	Npc_StopAni(self,"S_FIRE_VICTIM");

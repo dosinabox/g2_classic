@@ -612,12 +612,9 @@ func int dia_serpentes_salandrilhere_condition()
 		else if(Npc_KnowsInfo(other,dia_serpentes_gotsalandril) && (hero.guild == GIL_KDF))
 		{
 			return TRUE;
-		}
-		else
-		{
-			return FALSE;
 		};
 	};
+	return FALSE;
 };
 
 func void dia_serpentes_salandrilhere_info()

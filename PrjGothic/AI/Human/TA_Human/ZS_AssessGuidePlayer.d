@@ -63,7 +63,7 @@ func int zs_guide_player_loop()
 	return LOOP_CONTINUE;
 };
 
-func int zs_guide_player_end()
+func void zs_guide_player_end()
 {
 };
 

@@ -15,11 +15,8 @@ func int spell_logic_firebolt(var int manainvested)
 	if(self.attribute[ATR_MANA] >= SPL_COST_FIREBOLT)
 	{
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_firebolt()

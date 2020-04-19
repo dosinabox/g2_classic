@@ -22,11 +22,8 @@ func int zs_reacttodamage_loop()
 	if(Npc_GetStateTime(self) > 10)
 	{
 		return LOOP_END;
-	}
-	else
-	{
-		return LOOP_CONTINUE;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void zs_reacttodamage_end()

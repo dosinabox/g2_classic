@@ -17,6 +17,7 @@ func int c_beklauen(var int theftdex,var int theftgold)
 		};
 		return TRUE;
 	};
+	return FALSE;
 };
 
 func void b_beklauen()

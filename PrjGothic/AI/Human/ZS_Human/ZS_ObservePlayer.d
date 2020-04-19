@@ -51,11 +51,8 @@ func int zs_observeplayer_loop()
 	{
 		Npc_ClearAIQueue(self);
 		return LOOP_END;
-	}
-	else
-	{
-		return LOOP_CONTINUE;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void zs_observeplayer_end()

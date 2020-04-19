@@ -269,7 +269,10 @@ func void dia_babo_wurst_info()
 	novizetext = ConcatStrings(novizeleft,PRINT_NOVIZENLEFT);
 	AI_PrintScreen(novizetext,-1,YPOS_GOLDGIVEN,FONT_SCREENSMALL,3);
 	Info_ClearChoices(dia_babo_wurst);
-	Info_AddChoice(dia_babo_wurst,"Хорошо, держи еще одну колбасу.",dia_babo_wurst_ja);
+	if(Npc_HasItems(other,itfo_schafswurst) >= 1)
+	{
+		Info_AddChoice(dia_babo_wurst,"Хорошо, держи еще одну колбасу.",dia_babo_wurst_ja);
+	};
 	Info_AddChoice(dia_babo_wurst,"Нет, я не сделаю этого.",dia_babo_wurst_nein);
 };
 

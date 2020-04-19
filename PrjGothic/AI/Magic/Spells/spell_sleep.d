@@ -22,11 +22,8 @@ func int spell_logic_sleep(var int manainvested)
 			AI_StartState(other,zs_magicsleep,0,"");
 		};
 		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
 	};
+	return SPL_SENDSTOP;
 };
 
 func void spell_cast_sleep()

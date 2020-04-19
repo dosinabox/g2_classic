@@ -179,9 +179,9 @@ func int zs_attack_loop()
 			{
 				self.aivar[AIV_LASTFIGHTCOMMENT] = TRUE;
 			};
-			return LOOP_END;
 		};
 	};
+	return LOOP_END;
 };
 
 func void zs_attack_end()

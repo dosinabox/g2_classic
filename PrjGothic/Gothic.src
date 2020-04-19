@@ -37,6 +37,7 @@ Story\Log_Entries\B_CloseTopics_Mattes.d
 Story\Log_Entries\B_CloseTopics_Yoly.d
 Story\Log_Entries\B_CheckLog.d
 Story\B_Story\b_giveplayerxp.d
+Story\Dialog_Mobsis\B_PlayerMap.d
 _misk_\DAMAGE_VLKDOLCH.d
 Items\Tuning_Ranged_Weapons.d
 Items\IT_Amulette.d
@@ -289,7 +290,6 @@ Story\Dialog_Mobsis\Bookstand.d
 Story\Dialog_Mobsis\BookstandAlchemy.d
 Story\Dialog_Mobsis\BookstandAnimals.d
 Story\Dialog_Mobsis\BookstandDementor.d
-Story\Dialog_Mobsis\B_PlayerMap.d
 Story\Dialog_Mobsis\B_OnHotkey.d
 Story\Dialog_Mobsis\BookstandHistory.d
 Story\Dialog_Mobsis\BookstandKloster.d

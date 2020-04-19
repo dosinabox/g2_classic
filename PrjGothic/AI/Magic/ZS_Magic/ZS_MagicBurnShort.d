@@ -33,7 +33,7 @@ func void b_restartburnshort()
 	};
 };
 
-func int zs_magicburnshort()
+func void zs_magicburnshort()
 {
 	Npc_PercEnable(self,PERC_ASSESSSTOPMAGIC,b_stopmagicburnshort);
 	if(!Npc_HasBodyFlag(self,BS_FLAG_INTERRUPTABLE))

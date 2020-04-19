@@ -333,9 +333,9 @@ func void b_enter_newworld_kapitel_4()
 			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_GOBBO_02");
 			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_GOBBO_03");
 			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_GOBBO_04");
-			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_Wolf_01");
-			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_Wolf_02");
-			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_Wolf_03");
+			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_WOLF_01");
+			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_WOLF_02");
+			Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_FARM1_WOLF_03");
 			Wld_InsertNpc(orcwarrior_roam,"FP_ROAM_CITY_TO_FOREST_39");
 			Wld_InsertNpc(orcwarrior_roam,"FP_ROAM_CITY_TO_FOREST_42");
 			Wld_InsertNpc(orcwarrior_roam,"FP_ROAM_CITY_TO_FOREST_41");
@@ -538,11 +538,11 @@ func void b_enter_newworld_kapitel_5()
 		};
 		if(GORNDJG_IS_ALIVE == TRUE)
 		{
-			Wld_InsertNpc(pc_fighter_nw_nach_djg,"Bigfarm");
+			Wld_InsertNpc(pc_fighter_nw_nach_djg,"BIGFARM");
 		};
 		if(DJG_ANGAR_IS_ALIVE == TRUE)
 		{
-			Wld_InsertNpc(djg_705_angar_nw,"Bigfarm");
+			Wld_InsertNpc(djg_705_angar_nw,"BIGFARM");
 		};
 		Wld_InsertNpc(xardas_dt_demon1,"FP_ROAM_NW_XARDASTOWER_DEMON_02");
 		Wld_InsertNpc(xardas_dt_demon2,"NW_XARDAS_TOWER_IN1_24");

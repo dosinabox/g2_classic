@@ -255,13 +255,13 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_ARMYOFDARKNESS] = TRUE;
 		CreateInvItems(scrolltrader,itsc_armyofdarkness,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Армия тьмы': 1 кость скелета, 1 черный жемчуг, 1 сердце каменного голема и 1 Сердце демона. ");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Армия тьмы': 1 кость скелета, 1 черный жемчуг, 1 сердце каменного голема и 1 сердце демона. ");
 	};
 	if(spell == SPL_SHRINK)
 	{
 		PLAYER_TALENT_RUNES[SPL_SHRINK] = TRUE;
 		CreateInvItems(scrolltrader,itsc_shrink,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Сморщивание монстра': 1 кость гоблина и 1 клык тролля");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Уменьшение монстра': 1 кость гоблина и 1 клык тролля");
 	};
 	PrintScreen(PRINT_LEARNRUNES,-1,-1,FONT_SCREEN,2);
 	Npc_SetTalentSkill(oth,NPC_TALENT_RUNES,1);

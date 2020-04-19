@@ -243,7 +243,7 @@ func int dia_dar_kameradenschwein_condition()
 	if(DAR_LOSTAGAINSTCIPHER == TRUE)
 	{
 		self.aivar[AIV_LASTFIGHTCOMMENT] = FALSE;
-		return true;
+		return TRUE;
 	};
 };
 

@@ -91,8 +91,8 @@ func int zs_talk_loop()
 	else
 	{
 		ZSTALKBUGFIX = TRUE;
-		return LOOP_CONTINUE;
 	};
+	return LOOP_CONTINUE;
 };
 
 func void zs_talk_end()

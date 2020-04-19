@@ -39,5 +39,6 @@ func int b_teachthieftalent(var C_NPC slf,var C_NPC oth,var int talent)
 		PrintScreen(PRINT_LEARNPICKPOCKET,-1,-1,FONT_SCREEN,2);
 		return TRUE;
 	};
+	return FALSE;
 };
 

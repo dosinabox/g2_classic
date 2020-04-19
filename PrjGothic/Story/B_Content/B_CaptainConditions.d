@@ -6,5 +6,6 @@ func int b_captainconditions(var C_NPC captain)
 		MIS_SHIPISFREE = TRUE;
 		return TRUE;
 	};
+	return FALSE;
 };
 

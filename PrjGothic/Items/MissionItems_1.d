@@ -359,12 +359,12 @@ const int HP_HERING = 20;
 instance ITFO_SMELLYFISH(C_ITEM)
 {
 	name = "Селедка";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_FOOD;
 	flags = ITEM_MISSION;
-	value = VALUE_FISH;
-	visual = "ItFo_Fish.3DS";
+	value = 20;
+	visual = "ItFo_SmellyFish.3DS";
 	material = MAT_LEATHER;
-	scemename = "FOOD";
+	scemename = "FOODHUGE";
 	on_state[0] = use_smellyfish;
 	description = name;
 	text[1] = NAME_BONUS_HP;
@@ -390,9 +390,9 @@ instance ITFO_HALVORFISH_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	on_state[0] = use_halvorfish;
-	description = "Странно выглядящая рыба.";
+	description = name;
 	text[2] = "Что-то с этой рыбой не так.";
-	text[3] = "Похоже, она была зашита ...";
+	text[3] = "Похоже, она была зашита...";
 };
 
 
@@ -435,10 +435,11 @@ func void usehalvormessage()
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"");
-	Doc_PrintLine(ndocid,0,"    Не высовывайтесь, парни!");
-	Doc_PrintLine(ndocid,0,"    Ополчения становится подозрительным.");
-	Doc_PrintLine(ndocid,0,"    Не предпринимайте ничего,");
-	Doc_PrintLine(ndocid,0,"пока я не дам знать о себе!");
+	Doc_PrintLines(ndocid,0,"    Не высовывайтесь, парни!");
+	Doc_PrintLines(ndocid,0,"    Ополчение становится подозрительным.");
+	Doc_PrintLines(ndocid,0,"    Не предпринимайте ничего,");
+	Doc_PrintLines(ndocid,0,"    пока я не дам знать о себе!");
+	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"    Халвор");
 	Doc_Show(ndocid);
 };
