@@ -29,66 +29,6 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		scrolltrader = Hlp_GetNpc(orlan);
 	};
-	if(spell == SPL_PALLIGHT)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALLIGHT] = TRUE;
-	};
-	if(spell == SPL_PALLIGHTHEAL)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALLIGHTHEAL] = TRUE;
-	};
-	if(spell == SPL_PALHOLYBOLT)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALHOLYBOLT] = TRUE;
-	};
-	if(spell == SPL_PALMEDIUMHEAL)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALMEDIUMHEAL] = TRUE;
-	};
-	if(spell == SPL_PALREPELEVIL)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALREPELEVIL] = TRUE;
-	};
-	if(spell == SPL_PALFULLHEAL)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALFULLHEAL] = TRUE;
-	};
-	if(spell == SPL_PALDESTROYEVIL)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALDESTROYEVIL] = TRUE;
-	};
-	if(spell == SPL_PALTELEPORTSECRET)
-	{
-		PLAYER_TALENT_RUNES[SPL_PALTELEPORTSECRET] = TRUE;
-	};
-	if(spell == SPL_TELEPORTSEAPORT)
-	{
-		PLAYER_TALENT_RUNES[SPL_TELEPORTSEAPORT] = TRUE;
-	};
-	if(spell == SPL_TELEPORTMONASTERY)
-	{
-		PLAYER_TALENT_RUNES[SPL_TELEPORTMONASTERY] = TRUE;
-	};
-	if(spell == SPL_TELEPORTFARM)
-	{
-		PLAYER_TALENT_RUNES[SPL_TELEPORTFARM] = TRUE;
-	};
-	if(spell == SPL_TELEPORTXARDAS)
-	{
-		PLAYER_TALENT_RUNES[SPL_TELEPORTXARDAS] = TRUE;
-	};
-	if(spell == SPL_TELEPORTPASSNW)
-	{
-		PLAYER_TALENT_RUNES[SPL_TELEPORTPASSNW] = TRUE;
-	};
-	if(spell == SPL_TELEPORTPASSOW)
-	{
-		PLAYER_TALENT_RUNES[SPL_TELEPORTPASSOW] = TRUE;
-	};
-	if(spell == SPL_TELEPORTOC)
-	{
-		PLAYER_TALENT_RUNES[SPL_TELEPORTOC] = TRUE;
-	};
 	if(spell == SPL_LIGHT)
 	{
 		PLAYER_TALENT_RUNES[SPL_LIGHT] = TRUE;
@@ -123,7 +63,7 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_INSTANTFIREBALL] = TRUE;
 		CreateInvItems(scrolltrader,itsc_instantfireball,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Огненный шар ': 1 смола");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Огненный шар': 1 смола");
 	};
 	if(spell == SPL_ZAP)
 	{
@@ -265,6 +205,60 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	};
 	PrintScreen(PRINT_LEARNRUNES,-1,-1,FONT_SCREEN,2);
 	Npc_SetTalentSkill(oth,NPC_TALENT_RUNES,1);
+	return TRUE;
+};
+
+func int b_teachplayerpalrunes(var C_NPC slf,var C_NPC oth,var int spell,var int kosten)
+{
+	if(oth.lp < kosten)
+	{
+		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
+		b_say(slf,oth,"$NOLEARNNOPOINTS");
+		return FALSE;
+	};
+	oth.lp = oth.lp - kosten;
+	if(spell == SPL_PALLIGHT)
+	{
+		PLAYER_TALENT_RUNES[SPL_PALLIGHT] = TRUE;
+		CreateInvItems(slf,itru_pallight,1);
+		b_giveinvitems(slf,oth,itru_pallight,1);
+	};
+	if(spell == SPL_PALLIGHTHEAL)
+	{
+		PLAYER_TALENT_RUNES[SPL_PALLIGHTHEAL] = TRUE;
+		CreateInvItems(slf,itru_pallightheal,1);
+		b_giveinvitems(slf,oth,itru_pallightheal,1);
+	};
+	if(spell == SPL_PALHOLYBOLT)
+	{
+		PLAYER_TALENT_RUNES[SPL_PALHOLYBOLT] = TRUE;
+		CreateInvItems(slf,itru_palholybolt,1);
+		b_giveinvitems(slf,oth,itru_palholybolt,1);
+	};
+	if(spell == SPL_PALMEDIUMHEAL)
+	{
+		PLAYER_TALENT_RUNES[SPL_PALMEDIUMHEAL] = TRUE;
+		CreateInvItems(slf,itru_palmediumheal,1);
+		b_giveinvitems(slf,oth,itru_palmediumheal,1);
+	};
+	if(spell == SPL_PALREPELEVIL)
+	{
+		PLAYER_TALENT_RUNES[SPL_PALREPELEVIL] = TRUE;
+		CreateInvItems(slf,itru_palrepelevil,1);
+		b_giveinvitems(slf,oth,itru_palrepelevil,1);
+	};
+	if(spell == SPL_PALFULLHEAL)
+	{
+		PLAYER_TALENT_RUNES[SPL_PALFULLHEAL] = TRUE;
+		CreateInvItems(slf,itru_palfullheal,1);
+		b_giveinvitems(slf,oth,itru_palfullheal,1);
+	};
+	if(spell == SPL_PALDESTROYEVIL)
+	{
+		PLAYER_TALENT_RUNES[SPL_PALDESTROYEVIL] = TRUE;
+		CreateInvItems(slf,itru_paldestroyevil,1);
+		b_giveinvitems(slf,oth,itru_paldestroyevil,1);
+	};
 	return TRUE;
 };
 

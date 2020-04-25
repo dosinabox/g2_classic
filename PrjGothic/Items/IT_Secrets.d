@@ -78,7 +78,7 @@ instance ITSE_LOCKPICKFISCH(C_ITEM)
 {
 	name = "Легкая рыба";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_MISSION;
+	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 25;
 	visual = "ItFo_SmellyFish.3DS";
 	material = MAT_LEATHER;

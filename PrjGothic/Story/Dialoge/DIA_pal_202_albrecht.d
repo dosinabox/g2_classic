@@ -167,13 +167,13 @@ func void dia_albrecht_teachpalrunes_heal()
 	{
 		Info_ClearChoices(dia_albrecht_teachpalrunes);
 		Info_AddChoice(dia_albrecht_teachpalrunes,DIALOG_BACK,dia_albrecht_teachpalrunes_back);
-		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring("Лечение легких ранений",COSTFORPALSPELLS),dia_albrecht_teachpalrunes_pallightheal);
+		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring(NAME_SPL_PALLIGHTHEAL,COSTFORPALSPELLS),dia_albrecht_teachpalrunes_pallightheal);
 	}
 	else if((PLAYER_TALENT_RUNES[SPL_PALMEDIUMHEAL] == FALSE) && (KAPITEL >= 5))
 	{
 		Info_ClearChoices(dia_albrecht_teachpalrunes);
 		Info_AddChoice(dia_albrecht_teachpalrunes,DIALOG_BACK,dia_albrecht_teachpalrunes_back);
-		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring("Лечение средних ранений",COSTFORPALSPELLS),dia_albrecht_teachpalrunes_palmediumheal);
+		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring(NAME_SPL_PALMEDIUMHEAL,COSTFORPALSPELLS),dia_albrecht_teachpalrunes_palmediumheal);
 	}
 	else
 	{
@@ -188,13 +188,13 @@ func void dia_albrecht_teachpalrunes_combat()
 	{
 		Info_ClearChoices(dia_albrecht_teachpalrunes);
 		Info_AddChoice(dia_albrecht_teachpalrunes,DIALOG_BACK,dia_albrecht_teachpalrunes_back);
-		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring("Святая стрела",COSTFORPALSPELLS),dia_albrecht_teachpalrunes_palholybolt);
+		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring(NAME_SPL_PALHOLYBOLT,COSTFORPALSPELLS),dia_albrecht_teachpalrunes_palholybolt);
 	}
 	else if((PLAYER_TALENT_RUNES[SPL_PALREPELEVIL] == FALSE) && (KAPITEL >= 5))
 	{
 		Info_ClearChoices(dia_albrecht_teachpalrunes);
 		Info_AddChoice(dia_albrecht_teachpalrunes,DIALOG_BACK,dia_albrecht_teachpalrunes_back);
-		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring("Изгнание зла",COSTFORPALSPELLS),dia_albrecht_teachpalrunes_palrepelevil);
+		Info_AddChoice(dia_albrecht_teachpalrunes,b_buildlearnstring(NAME_SPL_PALREPELEVIL,COSTFORPALSPELLS),dia_albrecht_teachpalrunes_palrepelevil);
 	}
 	else
 	{
@@ -202,65 +202,24 @@ func void dia_albrecht_teachpalrunes_combat()
 	};
 };
 
-func int dia_albrecht_teachpalrunes_pallightheal()
+func void dia_albrecht_teachpalrunes_pallightheal()
 {
-	if(other.lp < COSTFORPALSPELLS)
-	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
-		b_say(self,other,"$NOLEARNNOPOINTS");
-		return FALSE;
-	};
-	PLAYER_TALENT_RUNES[SPL_PALLIGHTHEAL] = TRUE;
-	CreateInvItems(self,itru_pallightheal,1);
-	b_giveinvitems(self,other,itru_pallightheal,1);
-	other.lp = other.lp - COSTFORPALSPELLS;
-	Info_ClearChoices(dia_albrecht_teachpalrunes);
-	return TRUE;
+	b_teachplayerpalrunes(self,other,SPL_PALLIGHTHEAL,COSTFORPALSPELLS);
 };
 
-func int dia_albrecht_teachpalrunes_palmediumheal()
+func void dia_albrecht_teachpalrunes_palmediumheal()
 {
-	if(other.lp < COSTFORPALSPELLS)
-	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
-		b_say(self,other,"$NOLEARNNOPOINTS");
-		return FALSE;
-	};
-	PLAYER_TALENT_RUNES[SPL_PALMEDIUMHEAL] = TRUE;
-	CreateInvItems(self,itru_palmediumheal,1);
-	b_giveinvitems(self,other,itru_palmediumheal,1);
-	other.lp = other.lp - COSTFORPALSPELLS;
-	return TRUE;
+	b_teachplayerpalrunes(self,other,SPL_PALMEDIUMHEAL,COSTFORPALSPELLS);
 };
 
-func int dia_albrecht_teachpalrunes_palholybolt()
+func void dia_albrecht_teachpalrunes_palholybolt()
 {
-	if(other.lp < COSTFORPALSPELLS)
-	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
-		b_say(self,other,"$NOLEARNNOPOINTS");
-		return FALSE;
-	};
-	PLAYER_TALENT_RUNES[SPL_PALHOLYBOLT] = TRUE;
-	CreateInvItems(self,itru_palholybolt,1);
-	b_giveinvitems(self,other,itru_palholybolt,1);
-	other.lp = other.lp - COSTFORPALSPELLS;
-	return TRUE;
+	b_teachplayerpalrunes(self,other,SPL_PALHOLYBOLT,COSTFORPALSPELLS);
 };
 
-func int dia_albrecht_teachpalrunes_palrepelevil()
+func void dia_albrecht_teachpalrunes_palrepelevil()
 {
-	if(other.lp < COSTFORPALSPELLS)
-	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
-		b_say(self,other,"$NOLEARNNOPOINTS");
-		return FALSE;
-	};
-	PLAYER_TALENT_RUNES[SPL_PALREPELEVIL] = TRUE;
-	CreateInvItems(self,itru_palrepelevil,1);
-	b_giveinvitems(self,other,itru_palrepelevil,1);
-	other.lp = other.lp - COSTFORPALSPELLS;
-	return TRUE;
+	b_teachplayerpalrunes(self,other,SPL_PALREPELEVIL,COSTFORPALSPELLS);
 };
 
 

@@ -438,7 +438,7 @@ instance TESTAMULET(C_ITEM)
 	material = MAT_METAL;
 	description = "Амулет тестировщика";
 	text[1] = ConcatStrings("Готика 2: Классическая v",G2_CLASSIC_MOD_VERSION_START);
-	text[2] = "Скомпилировано 19 апреля 2020г.";
+	text[2] = "Скомпилировано 23 апреля 2020г.";
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
 };
 

@@ -360,7 +360,7 @@ instance ITFO_SMELLYFISH(C_ITEM)
 {
 	name = "Селедка";
 	mainflag = ITEM_KAT_FOOD;
-	flags = ITEM_MISSION;
+	flags = ITEM_MULTI;
 	value = 20;
 	visual = "ItFo_SmellyFish.3DS";
 	material = MAT_LEATHER;

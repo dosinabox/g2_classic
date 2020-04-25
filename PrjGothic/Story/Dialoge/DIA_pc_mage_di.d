@@ -86,7 +86,7 @@ instance DIA_MILTEN_DI_RAT(C_INFO)
 	nr = 3;
 	condition = dia_milten_di_rat_condition;
 	information = dia_milten_di_rat_info;
-	description = "Какой совет ты можешь дать мне?";
+	description = "Можешь дать мне какой-нибудь совет?";
 };
 
 
@@ -210,7 +210,7 @@ func void dia_milten_di_teachmagic_info()
 	Info_AddChoice(dia_milten_di_teachmagic,DIALOG_BACK,dia_milten_di_teachmagic_back);
 	Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(PRINT_LEARNMANA1,b_getlearncostattribute(other,ATR_MANA_MAX)),dia_milten_di_teachmagic_mana_1);
 	Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(PRINT_LEARNMANA5,b_getlearncostattribute(other,ATR_MANA_MAX) * 5),dia_milten_di_teachmagic_mana_5);
-	if(hero.guild == GIL_KDF)
+	if((hero.guild == GIL_KDF) || (hero.guild == GIL_PAL))
 	{
 		Info_AddChoice(dia_milten_di_teachmagic,"Создание рун",dia_milten_di_teachmagic_runes);
 	};
@@ -226,7 +226,7 @@ func void dia_milten_di_teachmagic_mana_1()
 	Info_AddChoice(dia_milten_di_teachmagic,DIALOG_BACK,dia_milten_di_teachmagic_back);
 	Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(PRINT_LEARNMANA1,b_getlearncostattribute(other,ATR_MANA_MAX)),dia_milten_di_teachmagic_mana_1);
 	Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(PRINT_LEARNMANA5,b_getlearncostattribute(other,ATR_MANA_MAX) * 5),dia_milten_di_teachmagic_mana_5);
-	if(hero.guild == GIL_KDF)
+	if((hero.guild == GIL_KDF) || (hero.guild == GIL_PAL))
 	{
 		Info_AddChoice(dia_milten_di_teachmagic,"Создание рун",dia_milten_di_teachmagic_runes);
 	};
@@ -242,7 +242,7 @@ func void dia_milten_di_teachmagic_mana_5()
 	Info_AddChoice(dia_milten_di_teachmagic,DIALOG_BACK,dia_milten_di_teachmagic_back);
 	Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(PRINT_LEARNMANA1,b_getlearncostattribute(other,ATR_MANA_MAX)),dia_milten_di_teachmagic_mana_1);
 	Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(PRINT_LEARNMANA5,b_getlearncostattribute(other,ATR_MANA_MAX) * 5),dia_milten_di_teachmagic_mana_5);
-	if(hero.guild == GIL_KDF)
+	if((hero.guild == GIL_KDF) || (hero.guild == GIL_PAL))
 	{
 		Info_AddChoice(dia_milten_di_teachmagic,"Создание рун",dia_milten_di_teachmagic_runes);
 	};
@@ -281,67 +281,67 @@ func void dia_milten_di_teachmagic_runen_paladin()
 	Info_AddChoice(dia_milten_di_teachmagic,DIALOG_BACK,dia_milten_di_teachmagic_back);
 	if(PLAYER_TALENT_RUNES[SPL_PALLIGHT] == FALSE)
 	{
-		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring("Свет",b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_pallight);
+		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(NAME_SPL_PALLIGHT,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_pallight);
 	};
 	if(PLAYER_TALENT_RUNES[SPL_PALLIGHTHEAL] == FALSE)
 	{
-		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring("Малое исцеление",b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_pallightheal);
+		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(NAME_SPL_PALLIGHTHEAL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_pallightheal);
 	};
 	if(PLAYER_TALENT_RUNES[SPL_PALHOLYBOLT] == FALSE)
 	{
-		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring("Святая стрела",b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palholybolt);
+		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(NAME_SPL_PALHOLYBOLT,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palholybolt);
 	};
 	if(PLAYER_TALENT_RUNES[SPL_PALMEDIUMHEAL] == FALSE)
 	{
-		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring("Среднее исцеление",b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palmediumheal);
+		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(NAME_SPL_PALMEDIUMHEAL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palmediumheal);
 	};
 	if(PLAYER_TALENT_RUNES[SPL_PALREPELEVIL] == FALSE)
 	{
-		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring("Изгнание зла",b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palrepelevil);
+		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(NAME_SPL_PALREPELEVIL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palrepelevil);
 	};
 	if(PLAYER_TALENT_RUNES[SPL_PALFULLHEAL] == FALSE)
 	{
-		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring("Большое исцеление?",b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palfullheal);
+		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(NAME_SPL_PALFULLHEAL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_palfullheal);
 	};
 	if(PLAYER_TALENT_RUNES[SPL_PALDESTROYEVIL] == FALSE)
 	{
-		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring("Уничтожение зла",b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_paldestroyevil);
+		Info_AddChoice(dia_milten_di_teachmagic,b_buildlearnstring(NAME_SPL_PALDESTROYEVIL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_milten_di_teachmagic_runen_paladin_spl_paldestroyevil);
 	};
 };
 
 func void dia_milten_di_teachmagic_runen_paladin_spl_pallight()
 {
-	b_teachplayertalentrunes(self,other,SPL_PALLIGHT);
+	b_teachplayerpalrunes(self,other,SPL_PALLIGHT,b_getlearncosttalent(other,NPC_TALENT_RUNES));
 };
 
 func void dia_milten_di_teachmagic_runen_paladin_spl_pallightheal()
 {
-	b_teachplayertalentrunes(self,other,SPL_PALLIGHTHEAL);
+	b_teachplayerpalrunes(self,other,SPL_PALLIGHTHEAL,b_getlearncosttalent(other,NPC_TALENT_RUNES));
 };
 
 func void dia_milten_di_teachmagic_runen_paladin_spl_palholybolt()
 {
-	b_teachplayertalentrunes(self,other,SPL_PALHOLYBOLT);
+	b_teachplayerpalrunes(self,other,SPL_PALHOLYBOLT,b_getlearncosttalent(other,NPC_TALENT_RUNES));
 };
 
 func void dia_milten_di_teachmagic_runen_paladin_spl_palmediumheal()
 {
-	b_teachplayertalentrunes(self,other,SPL_PALMEDIUMHEAL);
+	b_teachplayerpalrunes(self,other,SPL_PALMEDIUMHEAL,b_getlearncosttalent(other,NPC_TALENT_RUNES));
 };
 
 func void dia_milten_di_teachmagic_runen_paladin_spl_palrepelevil()
 {
-	b_teachplayertalentrunes(self,other,SPL_PALREPELEVIL);
+	b_teachplayerpalrunes(self,other,SPL_PALREPELEVIL,b_getlearncosttalent(other,NPC_TALENT_RUNES));
 };
 
 func void dia_milten_di_teachmagic_runen_paladin_spl_palfullheal()
 {
-	b_teachplayertalentrunes(self,other,SPL_PALFULLHEAL);
+	b_teachplayerpalrunes(self,other,SPL_PALFULLHEAL,b_getlearncosttalent(other,NPC_TALENT_RUNES));
 };
 
 func void dia_milten_di_teachmagic_runen_paladin_spl_paldestroyevil()
 {
-	b_teachplayertalentrunes(self,other,SPL_PALDESTROYEVIL);
+	b_teachplayerpalrunes(self,other,SPL_PALDESTROYEVIL,b_getlearncosttalent(other,NPC_TALENT_RUNES));
 };
 
 func void dia_milten_di_teachmagic_runen_circle_4()
