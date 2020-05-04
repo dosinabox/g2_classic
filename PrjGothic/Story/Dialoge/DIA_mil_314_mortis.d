@@ -138,14 +138,17 @@ instance DIA_MORTIS_CANTEACH(C_INFO)
 	nr = 5;
 	condition = dia_mortis_canteach_condition;
 	information = dia_mortis_canteach_info;
-	permanent = FALSE;
+	permanent = TRUE;
 	description = "Я хочу стать сильнее.";
 };
 
 
 func int dia_mortis_canteach_condition()
 {
-	return TRUE;
+	if(MORTIS_TEACHSTR == FALSE)
+	{
+		return TRUE;
+	};
 };
 
 func void dia_mortis_canteach_info()
@@ -154,14 +157,14 @@ func void dia_mortis_canteach_info()
 	if((other.guild == GIL_MIL) || (other.guild == GIL_PAL))
 	{
 		AI_Output(self,other,"DIA_Mortis_CanTeach_13_01");	//Понятно. Если у тебя достаточно опыта, я могу потренировать тебя.
+		Log_CreateTopic(TOPIC_CITYTEACHER,LOG_NOTE);
+		b_logentry(TOPIC_CITYTEACHER,"Ополченец Мортис может помочь мне повысить мою силу.");
 		MORTIS_TEACHSTR = TRUE;
 	}
 	else
 	{
 		AI_Output(self,other,"DIA_Mortis_CanTeach_13_02");	//Конечно, хочешь. Но пока ты не станешь одним из нас или паладином, я не буду помогать тебе.
 	};
-	Log_CreateTopic(TOPIC_CITYTEACHER,LOG_NOTE);
-	b_logentry(TOPIC_CITYTEACHER,"Мортис, городской гвардеец, может помочь мне повысить мою силу.");
 };
 
 
