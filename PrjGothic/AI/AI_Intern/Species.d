@@ -242,7 +242,7 @@ instance GIL_VALUES(C_GILVALUES)
 	fight_range_fist[GIL_SUMMONED_WOLF] = fight_range_fist[GIL_WOLF];
 	fight_range_g[GIL_SUMMONED_WOLF] = fight_range_g[GIL_WOLF];
 	blood_emitter[GIL_SUMMONED_WOLF] = "BFX_Preset1";
-	blood_texture[GIL_SUMMONED_WOLF] = "BQM_Scaveng2.tga";
+	blood_texture[GIL_SUMMONED_WOLF] = "BQM_Scavenger2.tga";
 	blood_flow[GIL_SUMMONED_WOLF] = blood_flow[GIL_WOLF];
 	blood_amount[GIL_SUMMONED_WOLF] = blood_amount[GIL_WOLF];
 	blood_max_distance[GIL_SUMMONED_WOLF] = blood_max_distance[GIL_WOLF];
