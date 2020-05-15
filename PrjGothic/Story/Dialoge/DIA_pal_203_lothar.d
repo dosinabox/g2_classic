@@ -520,7 +520,7 @@ func void dia_lothar_permb4ov_info()
 
 func void b_lothar_blubb()
 {
-	AI_Output(other,self,"DIA_Lothar_Add_15_00");	//Но я ДОЛЖЕН увидеться с лордом Хагеном!
+	/*AI_Output(other,self,"DIA_Lothar_Add_15_00");	//Но я ДОЛЖЕН увидеться с лордом Хагеном!
 	AI_Output(self,other,"DIA_Lothar_Add_01_45");	//Как я понимаю, он принял тебя в ряды ополчения.
 	AI_Output(self,other,"DIA_Lothar_Add_01_46");	//Хмм... Надеюсь, он знает, что делает.
 	AI_Output(other,self,"DIA_Lothar_Add_15_20");	//Сколько мастеров работает в городе?
@@ -543,7 +543,7 @@ func void b_lothar_blubb()
 	AI_Output(self,other,"DIA_Lothar_Add_01_13");	//Похоже, ты полон решимости добиться своего, да?
 	AI_Output(self,other,"DIA_Lothar_Add_01_01");	//Ты должен повиноваться законам, как и все остальные!
 	AI_Output(self,other,"DIA_Lothar_Add_01_02");	//Лорд Хаген не принимает.
-	AI_Output(self,other,"DIA_Lothar_Add_01_03");	//Если у тебя действительно есть что-то ВАЖНОЕ, иди к лорду Андрэ. Он поможет тебе!
+	AI_Output(self,other,"DIA_Lothar_Add_01_03");	//Если у тебя действительно есть что-то ВАЖНОЕ, иди к лорду Андрэ. Он поможет тебе!*/
 };
 
 

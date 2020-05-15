@@ -1,7 +1,7 @@
 
 func void b_video()
 {
-	AI_Output(self,other,"INTRO_Xardas_Speech_14_00");	//Один заключенный изменил судьбу сотен.
+	/*AI_Output(self,other,"INTRO_Xardas_Speech_14_00");	//Один заключенный изменил судьбу сотен.
 	AI_Output(self,other,"INTRO_Xardas_Speech_14_01");	//Но он заплатил за это высокую цену...
 	AI_Output(self,other,"INTRO_Xardas_Speech_14_02");	//Он победил Спящего и уничтожил Барьер...
 	AI_Output(self,other,"INTRO_Xardas_Speech_14_03");	//...но, когда остальные заключенные вырвались на свободу, он остался лежать под грудой камней...
@@ -52,6 +52,6 @@ func void b_video()
 	AI_Output(self,other,"OUTRO_Schiff_12_08");	//Что толку от этого золота, если мы опрокинемся в самый легкий шторм?
 	AI_Output(other,self,"OUTRO_Schiff_15_09");	//Но я не вижу шторма...
 	AI_Output(self,other,"OUTRO_Schiff_12_10");	//ПОКА нет ...
-	AI_Output(other,self,"OUTRO_Schiff_15_11");	//Расслабься! Все будет в порядке!
+	AI_Output(other,self,"OUTRO_Schiff_15_11");	//Расслабься! Все будет в порядке!*/
 };
 

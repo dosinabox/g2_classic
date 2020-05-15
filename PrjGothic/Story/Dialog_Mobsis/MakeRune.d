@@ -854,6 +854,7 @@ func void pc_itru_firerain_info()
 	{
 		Npc_RemoveInvItems(hero,itsc_firerain,1);
 		Npc_RemoveInvItems(hero,itmi_pitch,1);
+		Npc_RemoveInvItems(hero,itmi_sulfur,1);
 		Npc_RemoveInvItems(hero,itat_waranfiretongue,1);
 		CreateInvItems(hero,itru_firerain,1);
 		Print(PRINT_RUNESUCCESS);
