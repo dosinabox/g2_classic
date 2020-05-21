@@ -714,3 +714,7 @@ const string KAPWECHSEL_5_TEXT = "Отплытие";
 const string KAPWECHSEL_6 = "Глава 6";
 const string KAPWECHSEL_6_TEXT = "Чертоги Ирдората";
 const string KAPITELANFANG = "НАЧАТЬ ГЛАВУ";
+
+const string PRINT_BOOKSTANDRUNES1 = "Чтобы создать руну, всегда необходим КАЖДЫЙ из вышеперечисленных ингредиентов.";
+const string PRINT_BOOKSTANDRUNES2 = "Маг должен знать формулу заклинания и должен иметь чистый рунный камень и свиток желаемого заклинания.";
+const string PRINT_BOOKSTANDRUNES3 = "Только при выполнении этих условий он может приступить к работе за рунным столом.";

@@ -117,7 +117,7 @@ Section "Основные файлы" SecMain
 	SectionIn RO
 	CreateDirectory "$INSTDIR\saves_${MOD_NAME_SYS}\current"
 
-	SetOutPath "$INSTDIR\data\ModVDF"
+	SetOutPath "$INSTDIR\Data\ModVDF"
 	File "${MOD_NAME_SYS}.mod"
 
 	SetOutPath "$INSTDIR\system"

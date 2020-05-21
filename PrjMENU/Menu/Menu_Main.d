@@ -4,17 +4,16 @@ instance MENU_MAIN(C_MENU_DEF)
 	backpic = MENU_BACK_PIC;
 	musictheme = "SYS_Menu";
 	items[0] = "MENUITEM_MAIN_HEADLINE";
-	items[1] = "MENUITEM_MAIN_HEADLINE2";
-	items[2] = "MENUITEM_MAIN_NEWGAME";
-	items[3] = "MENUITEM_MAIN_SAVEGAME_LOAD";
-	items[4] = "MENUITEM_MAIN_SAVEGAME_SAVE";
-	items[5] = "MENUITEM_MAIN_RESUME";
-	items[6] = "MENUITEM_MAIN_OPTIONS";
-	items[7] = "MENUITEM_MAIN_INTRO";
-	items[8] = "MENUITEM_MAIN_CREDITS";
-	items[9] = "MENUITEM_MAIN_EXIT";
-	defaultoutgame = 3;
-	defaultingame = 4;
+	items[1] = "MENUITEM_MAIN_NEWGAME";
+	items[2] = "MENUITEM_MAIN_SAVEGAME_LOAD";
+	items[3] = "MENUITEM_MAIN_SAVEGAME_SAVE";
+	items[4] = "MENUITEM_MAIN_RESUME";
+	items[5] = "MENUITEM_MAIN_OPTIONS";
+	items[6] = "MENUITEM_MAIN_INTRO";
+	items[7] = "MENUITEM_MAIN_CREDITS";
+	items[8] = "MENUITEM_MAIN_EXIT";
+	defaultoutgame = 2;
+	defaultingame = 3;
 	flags = flags | MENU_SHOW_INFO;
 };
 
@@ -133,7 +132,7 @@ instance MENUITEM_MAIN_EXIT(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
-instance MENUITEM_MAIN_HEADLINE2(C_MENU_ITEM_DEF)
+instance MENUITEM_MAIN_HEADLINE(C_MENU_ITEM_DEF)
 {
 	backpic = "menu_gothic.tga";
 	posx = 250;
@@ -145,20 +144,6 @@ instance MENUITEM_MAIN_HEADLINE2(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 	flags = flags & ~IT_SELECTABLE;
 };
-
-instance MENUITEM_MAIN_HEADLINE(C_MENU_ITEM_DEF)
-{
-	backpic = "menu_gothicshadow.tga";
-	posx = 250;
-	posy = 500;
-	dimx = 7900;
-	dimy = 2300;
-	alphamode = "BLEND";
-	alpha = 220;
-	flags = flags | IT_TXT_CENTER;
-	flags = flags & ~IT_SELECTABLE;
-};
-
 
 func int showintro()
 {

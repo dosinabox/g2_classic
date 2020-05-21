@@ -743,7 +743,7 @@ instance ITMI_COAL(C_ITEM)
 
 instance ITMI_DARKPEARL(C_ITEM)
 {
-	name = "Черный жемчуг";
+	name = "Черная жемчужина";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_DARKPEARL;

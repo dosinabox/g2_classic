@@ -45,31 +45,31 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_ICEBOLT] = TRUE;
 		CreateInvItems(scrolltrader,itsc_icebolt,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Ледяная стрела': 1 ледяной кварц");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Ледяная стрела': 1 ледяной кварц.");
 	};
 	if(spell == SPL_LIGHTHEAL)
 	{
 		PLAYER_TALENT_RUNES[SPL_LIGHTHEAL] = TRUE;
 		CreateInvItems(scrolltrader,itsc_lightheal,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Лечение легких ранений':1 лечебная трава.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Лечение легких ранений': 1 лечебная трава.");
 	};
 	if(spell == SPL_SUMMONGOBLINSKELETON)
 	{
 		PLAYER_TALENT_RUNES[SPL_SUMMONGOBLINSKELETON] = TRUE;
 		CreateInvItems(scrolltrader,itsc_sumgobskel,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Создание скелета гоблина':1 кость гоблина.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Вызов скелета гоблина': 1 кость гоблина.");
 	};
 	if(spell == SPL_INSTANTFIREBALL)
 	{
 		PLAYER_TALENT_RUNES[SPL_INSTANTFIREBALL] = TRUE;
 		CreateInvItems(scrolltrader,itsc_instantfireball,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Огненный шар': 1 смола");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Огненный шар': 1 смола.");
 	};
 	if(spell == SPL_ZAP)
 	{
 		PLAYER_TALENT_RUNES[SPL_ZAP] = TRUE;
 		CreateInvItems(scrolltrader,itsc_zap,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Малая молния':1 горный хрусталь.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Малая молния': 1 горный хрусталь.");
 	};
 	if(spell == SPL_SUMMONWOLF)
 	{
@@ -81,7 +81,7 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_WINDFIST] = TRUE;
 		CreateInvItems(scrolltrader,itsc_windfist,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Кулак ветра':1 уголь.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Кулак ветра': 1 уголь.");
 	};
 	if(spell == SPL_SLEEP)
 	{
@@ -117,7 +117,7 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_FEAR] = TRUE;
 		CreateInvItems(scrolltrader,itsc_fear,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Страх': 1 черный жемчуг.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Страх': 1 черная жемчужина.");
 	};
 	if(spell == SPL_ICECUBE)
 	{
@@ -135,7 +135,7 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_SUMMONGOLEM] = TRUE;
 		CreateInvItems(scrolltrader,itsc_sumgol,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны `Пробуждение голема`:1 сердце каменного голема.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Вызов голема': 1 сердце каменного голема.");
 	};
 	if(spell == SPL_DESTROYUNDEAD)
 	{
@@ -147,7 +147,7 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_PYROKINESIS] = TRUE;
 		CreateInvItems(scrolltrader,itsc_pyrokinesis,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны `Большая огненная буря': 1 сера и 1 язык огненного ящера.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Большая огненная буря': 1 сера и 1 язык огненного ящера.");
 	};
 	if(spell == SPL_FIRESTORM)
 	{
@@ -159,49 +159,49 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_ICEWAVE] = TRUE;
 		CreateInvItems(scrolltrader,itsc_icewave,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Ледяная волна': 1 ледяной кварц и 1 аквамарин");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Ледяная волна': 1 ледяной кварц и 1 аквамарин.");
 	};
 	if(spell == SPL_SUMMONDEMON)
 	{
 		PLAYER_TALENT_RUNES[SPL_SUMMONDEMON] = TRUE;
 		CreateInvItems(scrolltrader,itsc_sumdemon,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Вызов демона': 1 Сердце демона");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Вызов демона': 1 сердце демона.");
 	};
 	if(spell == SPL_FULLHEAL)
 	{
 		PLAYER_TALENT_RUNES[SPL_FULLHEAL] = TRUE;
 		CreateInvItems(scrolltrader,itsc_fullheal,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Лечение тяжелых ранений? 1 лечебный корень");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Лечение тяжелых ранений': 1 лечебный корень.");
 	};
 	if(spell == SPL_FIRERAIN)
 	{
 		PLAYER_TALENT_RUNES[SPL_FIRERAIN] = TRUE;
 		CreateInvItems(scrolltrader,itsc_firerain,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Огненный дождь': 1 смола и 1 язык огненного ящера.");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Огненный дождь': 1 смола, 1 сера и 1 язык огненного ящера.");
 	};
 	if(spell == SPL_BREATHOFDEATH)
 	{
 		PLAYER_TALENT_RUNES[SPL_BREATHOFDEATH] = TRUE;
 		CreateInvItems(scrolltrader,itsc_breathofdeath,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Дыхание смерти': 1 уголь и 1 черный жемчуг");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Дыхание смерти': 1 уголь и 1 черная жемчужина.");
 	};
 	if(spell == SPL_MASSDEATH)
 	{
 		PLAYER_TALENT_RUNES[SPL_MASSDEATH] = TRUE;
 		CreateInvItems(scrolltrader,itsc_massdeath,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Волна смерти': 1 кость скелета и 1 черный жемчуг");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Волна смерти': 1 кость скелета и 1 черная жемчужина.");
 	};
 	if(spell == SPL_ARMYOFDARKNESS)
 	{
 		PLAYER_TALENT_RUNES[SPL_ARMYOFDARKNESS] = TRUE;
 		CreateInvItems(scrolltrader,itsc_armyofdarkness,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Армия тьмы': 1 кость скелета, 1 черный жемчуг, 1 сердце каменного голема и 1 сердце демона. ");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Армия тьмы': 1 кость скелета, 1 черная жемчужина, 1 сердце каменного голема и 1 сердце демона.");
 	};
 	if(spell == SPL_SHRINK)
 	{
 		PLAYER_TALENT_RUNES[SPL_SHRINK] = TRUE;
 		CreateInvItems(scrolltrader,itsc_shrink,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Уменьшение монстра': 1 кость гоблина и 1 клык тролля");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Уменьшение монстра': 1 кость гоблина и 1 клык тролля.");
 	};
 	PrintScreen(PRINT_LEARNRUNES,-1,-1,FONT_SCREEN,2);
 	Npc_SetTalentSkill(oth,NPC_TALENT_RUNES,1);

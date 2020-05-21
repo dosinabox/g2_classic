@@ -597,7 +597,7 @@ instance PC_ITPO_MEGADRINK(C_INFO)
 	condition = pc_itpo_megadrink_condition;
 	information = pc_itpo_megadrink_info;
 	permanent = TRUE;
-	description = "«елье из драконьих €иц (10 драконьих €иц, 1 черный жемчуг, 1 сера)";
+	description = "«елье из драконьих €иц (10 драконьих €иц, 1 черна€ жемчужина, 1 сера)";
 };
 
 
