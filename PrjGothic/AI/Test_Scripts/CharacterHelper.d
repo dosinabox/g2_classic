@@ -1,15 +1,19 @@
 
 instance MOBSIBRIEF(C_ITEM)
 {
-	name = "MobsiBrief";
+	name = "Руна MobsiBrief";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Scroll_02.3DS";
-	material = MAT_LEATHER;
-	on_state[0] = usemobsibrief;
+	visual = "ItRu_TeleportOWDemonTower.3DS";
+	material = MAT_STONE;
 	scemename = "MAP";
 	description = name;
+	text[0] = "Исправить блокировку состояния.";
+	on_state[0] = usemobsibrief;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -18,18 +22,41 @@ func void usemobsibrief()
 	var int ndocid;
 	PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;
 	self.aivar[AIV_INVINCIBLE] = FALSE;
-	ndocid = Doc_Create();
-	Doc_SetPages(ndocid,1);
-	Doc_SetPage(ndocid,0,"letters.TGA",0);
-	Doc_SetFont(ndocid,0,FONT_BOOKHEADLINE);
-	Doc_SetMargins(ndocid,-1,50,50,50,50,1);
-	Doc_PrintLine(ndocid,0,"MobsiBrief");
-	Doc_SetFont(ndocid,0,FONT_BOOK);
-	Doc_PrintLine(ndocid,0,"");
-	Doc_PrintLines(ndocid,0,"Теперь все будет хорошо");
-	Doc_PrintLines(ndocid,0,"PLAYER_MOBSI_PRODUCTION = MOBSI_NONE;");
-	Doc_PrintLines(ndocid,0,"self.aivar[AIV_INVINCIBLE] = FALSE;");
-	Doc_Show(ndocid);
+	PrintScreen("PLAYER_MOBSI_PRODUCTION = MOBSI_NONE",-1,50,FONT_SCREEN,4);
+	PrintScreen("self.aivar[AIV_INVINCIBLE] = FALSE",-1,55,FONT_SCREEN,4);
+};
+
+
+instance FULLNPCREMOVER(C_ITEM)
+{
+	name = "Руна FullNPCRemover";
+	mainflag = ITEM_KAT_DOCS;
+	flags = ITEM_MISSION;
+	value = 0;
+	visual = "ItRu_TeleportOWDemonTower.3DS";
+	material = MAT_STONE;
+	scemename = "MAP";
+	description = name;
+	text[0] = "Исправить зависание при переходе.";
+	on_state[0] = usenpcremover;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
+};
+
+
+func void usenpcremover()
+{
+	if(FullNPCRemoval == FALSE)
+	{
+		FullNPCRemoval = TRUE;
+		PrintScreen("FullNPCRemoval = TRUE",-1,50,FONT_SCREEN,4);
+	}
+	else
+	{
+		FullNPCRemoval = FALSE;
+		PrintScreen("FullNPCRemoval = FALSE",-1,50,FONT_SCREEN,4);
+	};
 };
 
 

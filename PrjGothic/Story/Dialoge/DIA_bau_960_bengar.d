@@ -181,7 +181,10 @@ func void dia_bengar_pass_info()
 {
 	AI_Output(other,self,"DIA_Bengar_PASS_15_00");	//У Прохода?
 	AI_Output(self,other,"DIA_Bengar_PASS_10_01");	//Да. Проход в старую Долину Рудников находится у водопада в другом конце этого плоскогорья.
-	AI_Output(self,other,"DIA_Bengar_PASS_10_02");	//Спроси Малака о нем. Он там бывает пару раз в неделю.
+	if(!Npc_IsDead(malak) && (KAPITEL < 3))
+	{
+		AI_Output(self,other,"DIA_Bengar_PASS_10_02");	//Спроси Малака о нем. Он там бывает пару раз в неделю.
+	};
 };
 
 

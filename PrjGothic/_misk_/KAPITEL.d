@@ -629,3 +629,4 @@ var int currentlevel;
 var int NOVArmor_Equipped;
 var int MILArmor_Equipped;
 var int Addon_zuerst;
+var int FullNPCRemoval;

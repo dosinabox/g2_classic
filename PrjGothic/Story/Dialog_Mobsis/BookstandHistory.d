@@ -107,10 +107,10 @@ func void use_bookstandhistory3_s1()
 		Doc_PrintLine(ndocid,1,"");
 		Doc_PrintLines(ndocid,1,"");
 		Doc_Show(ndocid);
-		if(HISTORY_2_PERMANENT == FALSE)
+		if(HISTORY_3_PERMANENT == FALSE)
 		{
 			b_giveplayerxp(XP_AMBIENT);
-			HISTORY_2_PERMANENT = TRUE;
+			HISTORY_3_PERMANENT = TRUE;
 		};
 	};
 };

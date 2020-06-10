@@ -43,9 +43,7 @@ func void g_cannotuse(var int bisplayer,var int nattribute,var int nvalue)
 	};
 	ndifference = nvalue - nattributevalue;
 	strdifference = IntToString(ndifference);
-	strmessage = strdifference;
-	strmessage = ConcatStrings(strmessage," ");
-	strmessage = ConcatStrings(strmessage,strattributemissing);
+	strmessage = ConcatStrings(strattributemissing,strdifference);
 	if(bisplayer)
 	{
 		Print(strmessage);

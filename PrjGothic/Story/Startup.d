@@ -1,6 +1,4 @@
 
-const string G2_CLASSIC_MOD_VERSION_START = "1.1";
-
 func void startup_global()
 {
 	Game_InitEngintl();
@@ -164,6 +162,33 @@ func void startup_oldcamp()
 
 func void init_sub_oldcamp()
 {
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_01",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_01",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_01",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_02",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_02",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_02",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_03",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_03",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_03",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_04",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_04",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_04",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_05",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_05",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_05",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_06",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_06",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_06",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_07",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_07",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_07",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_08",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_08",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_08",0);
+	Wld_SetObjectRoutine(0,0,"FIREPLACE_HIGH_09",1);
+	Wld_SetObjectRoutine(20,0,"FIREPLACE_HIGH_09",1);
+	Wld_SetObjectRoutine(5,0,"FIREPLACE_HIGH_09",0);
 	Wld_AssignRoomToGuild("ki1",GIL_NONE);
 	Wld_AssignRoomToGuild("ki2",GIL_NONE);
 	Wld_AssignRoomToGuild("ki3",GIL_NONE);

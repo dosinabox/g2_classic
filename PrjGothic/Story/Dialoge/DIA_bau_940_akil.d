@@ -159,7 +159,10 @@ func void dia_akil_nachkampf_gold()
 {
 	AI_Output(other,self,"DIA_Akil_NachKampf_Gold_15_00");	//Как насчет нескольких золотых?
 	AI_Output(self,other,"DIA_Akil_NachKampf_Gold_13_01");	//Боюсь, мне придется разочаровать тебя - мы бедные фермеры. Нам еле на жизнь хватает.
-	AI_Output(self,other,"DIA_Akil_NachKampf_Gold_13_02");	//Все, что я могу предложить тебе - это еду. Иди к Кати, пусть она накормит тебя.
+	if(!Npc_IsDead(kati))
+	{
+		AI_Output(self,other,"DIA_Akil_NachKampf_Gold_13_02");	//Все, что я могу предложить тебе - это еду. Иди к Кати, пусть она накормит тебя.
+	};
 	b_giveplayerxp(XP_AKIL_SLDWEGVOMHOF);
 	Info_ClearChoices(dia_akil_nachkampf);
 	KATI_MAHLZEIT = TRUE;

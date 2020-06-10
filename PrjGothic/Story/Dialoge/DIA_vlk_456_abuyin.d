@@ -184,7 +184,7 @@ func void dia_abuyin_woher_info()
 {
 	AI_Output(other,self,"DIA_Abuyin_Woher_15_00");	//Где мне взять яблочный табак?
 	AI_Output(self,other,"DIA_Abuyin_Woher_13_01");	//Я дам тебе две порции. А там делай с ними, что тебе захочется.
-	AI_Output(self,other,"DIA_Abuyin_Woher_13_02");	//Если тебе понадобится еще табак, то направь свои стопы к Зурису, Мастеру Зелий. Он производит это табак и продает его.
+	AI_Output(self,other,"DIA_Abuyin_Woher_13_02");	//Если тебе понадобится еще табак, то направь свои стопы к Зурису, Мастеру Зелий. Он производит этот табак и продает его.
 	b_giveinvitems(self,other,itmi_apfeltabak,2);
 };
 
@@ -338,7 +338,7 @@ func void dia_abuyin_herb_info()
 	AI_Output(self,other,"DIA_Abuyin_Herb_13_01");	//Тюк трав - это не болотная трава, нет? Ох, убери ее, о, Сын Недальновидности.
 	AI_Output(self,other,"DIA_Abuyin_Herb_13_02");	//Если городская стража увидит ее у меня, они бросят меня в тюрьму - а тебя будет ждать не лучшая судьба!
 	AI_Output(self,other,"DIA_Abuyin_Herb_13_03");	//Если тебе так хочется продать эту траву, послушай моего совета - покинь этот город.
-	AI_Output(self,other,"DIA_Abuyin_Herb_13_04");	//Попробуй избавиться от нее где-нибудь за пределами городских стен. А здесь тебя ждет с ней одна головная боль.
+	AI_Output(self,other,"DIA_Abuyin_Herb_13_04");	//Попробуй избавиться от нее где-нибудь за пределами городских стен. А здесь... тебя здесь ждет с ней одна головная боль.
 };
 
 
@@ -366,7 +366,7 @@ func void dia_abuyin_weissagung_info()
 	AI_Output(other,self,"DIA_Abuyin_Weissagung_15_00");	//Ты можешь сделать пророчество?
 	AI_Output(self,other,"DIA_Abuyin_Weissagung_13_01");	//Я к твоим услугам за скромное вознаграждение, о, Отец Щедрости.
 	AI_Output(other,self,"DIA_Abuyin_Weissagung_15_02");	//Сколько ты хочешь?
-	AI_Output(self,other,"DIA_Abuyin_Weissagung_13_03");	//За какие-то 25 монет, я рискну заглянуть для тебя в будущее.
+	AI_Output(self,other,"DIA_Abuyin_Weissagung_13_03");	//За какие-то 25 монет я рискну заглянуть для тебя в будущее.
 	AI_Output(self,other,"DIA_Abuyin_Weissagung_13_04");	//Но помни - будущее всегда неопределенно. Все, что в моих силах - это уловить лишь крошечные фрагменты времени.
 };
 
@@ -485,7 +485,7 @@ func int dia_abuyin_weissagung2_condition()
 func void dia_abuyin_weissagung2_info()
 {
 	b_abuyin_weissagung();
-	AI_Output(self,other,"DIA_Abuyin_Weissagung2_13_00");	//За какие-то 100 монет, я рискну заглянуть для тебя в будущее.
+	AI_Output(self,other,"DIA_Abuyin_Weissagung2_13_00");	//За какие-то 100 монет я рискну заглянуть для тебя в будущее.
 };
 
 
@@ -563,7 +563,7 @@ func int dia_abuyin_weissagung3_condition()
 func void dia_abuyin_weissagung3_info()
 {
 	b_abuyin_weissagung();
-	AI_Output(self,other,"DIA_Abuyin_Weissagung3_13_00");	//За какие-то 250 монет, я рискну заглянуть для тебя в будущее.
+	AI_Output(self,other,"DIA_Abuyin_Weissagung3_13_00");	//За какие-то 250 монет я рискну заглянуть для тебя в будущее.
 };
 
 
@@ -641,7 +641,7 @@ func int dia_abuyin_weissagung4_condition()
 func void dia_abuyin_weissagung4_info()
 {
 	b_abuyin_weissagung();
-	AI_Output(self,other,"DIA_Abuyin_Weissagung4_13_00");	//За какие-то 500 монет, я рискну заглянуть для тебя в будущее.
+	AI_Output(self,other,"DIA_Abuyin_Weissagung4_13_00");	//За какие-то 500 монет я рискну заглянуть для тебя в будущее.
 };
 
 
@@ -719,7 +719,7 @@ func int dia_abuyin_weissagung5_condition()
 func void dia_abuyin_weissagung5_info()
 {
 	b_abuyin_weissagung();
-	AI_Output(self,other,"DIA_Abuyin_Weissagung5_13_00");	//За какую-то 1000 монет, я рискну заглянуть для тебя в будущее.
+	AI_Output(self,other,"DIA_Abuyin_Weissagung5_13_00");	//За какие-то 1000 монет я рискну заглянуть для тебя в будущее.
 };
 
 
@@ -763,7 +763,7 @@ func void dia_abuyin_zukunft5_trance()
 {
 	AI_PlayAni(self,"T_MAGRUN_2_HEASHOOT");
 	Wld_PlayEffect("SPELLFX_TELEPORT",self,self,0,0,0,FALSE);
-	AI_Output(self,other,"DIA_Abuyin_Zukunft5_Trance_13_00");	//(в трансе) Тьма опустилась на землю... зло торжествует...
+	AI_Output(self,other,"DIA_Abuyin_Zukunft5_Trance_13_00");	//(в трансе) Тьма опустилась на землю... Зло торжествует...
 	AI_Output(self,other,"DIA_Abuyin_Zukunft5_Trance_13_01");	//(в трансе) Король проиграет войну против орков...
 	AI_Output(self,other,"DIA_Abuyin_Zukunft5_Trance_13_02");	//(в трансе) Ты вернешься, но не найдешь покоя...
 	AI_PlayAni(self,"T_HEASHOOT_2_STAND");
