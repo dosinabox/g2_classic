@@ -248,7 +248,7 @@ func void dia_vatras_influence_repeat()
 		AI_Output(self,other,"DIA_Vatras_INFLUENCE_REPEAT_05_09");	//Это все звучит довольно фантастически, но я не думаю, что ты солгал мне.
 		AI_Output(self,other,"DIA_Vatras_INFLUENCE_REPEAT_05_10");	//Поэтому я вынужден предположить, что твои мотивы благородны.
 		AI_Output(self,other,"DIA_Vatras_INFLUENCE_REPEAT_05_11");	//Ступай с благословением Аданоса, сын мой!
-		Snd_Play("LevelUp");
+		Snd_Play("LEVELUP");
 		b_giveplayerxp(XP_VATRASTRUTH);
 		VATRAS_SEGEN = TRUE;
 		b_logentry(TOPIC_THORBEN,"Маг воды Ватрас благословил меня.");
@@ -354,7 +354,7 @@ func void dia_vatras_spende_100()
 {
 	AI_Output(other,self,"DIA_Vatras_Spende_100_15_00");	//У меня есть 100 золотых монет...
 	AI_Output(self,other,"DIA_Vatras_Spende_100_05_01");	//Я благословляю тебя от имени Аданоса за этот великодушный дар!
-	Snd_Play("LevelUp");
+	Snd_Play("LEVELUP");
 	AI_Output(self,other,"DIA_Vatras_Spende_100_05_02");	//Да будет путь, по которому ты идешь, благословлен Аданосом!
 	b_giveinvitems(other,self,itmi_gold,100);
 	VATRAS_SEGEN = TRUE;

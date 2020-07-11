@@ -575,7 +575,7 @@ instance DIA_CASSIA_PICKPOCKET(C_INFO)
 	condition = dia_cassia_pickpocket_condition;
 	information = dia_cassia_pickpocket_info;
 	permanent = TRUE;
-	description = "Ќаучи мен€ карманному воровству (5 LP)";
+	description = "Ќаучи мен€ карманному воровству (5 очков обучени€)";
 };
 
 

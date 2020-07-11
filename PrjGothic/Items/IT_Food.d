@@ -15,6 +15,7 @@ const int VALUE_MEAT = 6;
 const int HP_MEAT = 12;
 const int VALUE_STEW = 8;
 const int HP_STEW = 20;
+const int STR_STEW = 1;
 const int VALUE_FISHSOUP = 20;
 const int HP_FISHSOUP = 10;
 const int VALUE_SAUSAGE = 30;
@@ -52,7 +53,7 @@ instance ITFO_APPLE(C_ITEM)
 	text[3] = "Свежее яблоко,";
 	text[4] = "твердое и сочное.";
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_APPLE;
+	count[5] = value;
 };
 
 
@@ -73,9 +74,8 @@ func void use_apple()
 		if(APPLE_BONUS == 25)
 		{
 			Print(PRINT_EAT3);
-			Npc_ChangeAttribute(self,ATR_STRENGTH,1);
-			Print(PRINT_STR1);
-			Snd_Play("LevelUp");
+			b_raiseattribute(self,ATR_STRENGTH,1);
+			Snd_Play("LEVELUP");
 		};
 	};
 };
@@ -95,7 +95,7 @@ instance ITFO_CHEESE(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_CHEESE;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_CHEESE;
+	count[5] = value;
 };
 
 
@@ -119,7 +119,7 @@ instance ITFO_BACON(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_BACON;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_BACON;
+	count[5] = value;
 };
 
 
@@ -143,7 +143,7 @@ instance ITFO_BREAD(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_BREAD;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_BREAD;
+	count[5] = value;
 };
 
 
@@ -167,7 +167,7 @@ instance ITFO_FISH(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_FISH;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_FISH;
+	count[5] = value;
 };
 
 
@@ -191,7 +191,7 @@ instance ITFOMUTTONRAW(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_RAWMEAT;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_RAWMEAT;
+	count[5] = value;
 };
 
 
@@ -215,7 +215,7 @@ instance ITFOMUTTON(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_MEAT;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MEAT;
+	count[5] = value;
 };
 
 
@@ -239,7 +239,7 @@ instance ITFO_STEW(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_STEW;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_STEW;
+	count[5] = value;
 };
 
 
@@ -262,17 +262,17 @@ instance ITFO_XPSTEW(C_ITEM)
 	description = name;
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_STEW;
+	text[2] = NAME_BONUS_STR;
+	count[2] = STR_STEW;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_STEW;
+	count[5] = value;
 };
 
 
 func void use_xpstew()
 {
+	b_raiseattribute(self,ATR_STRENGTH,STR_STEW);
 	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_STEW);
-	Print(PRINT_STR1);
-	Snd_Play("LevelUp");
-	Npc_ChangeAttribute(self,ATR_STRENGTH,1);
 };
 
 
@@ -283,26 +283,28 @@ instance ITFO_CORAGONSBEER(C_ITEM)
 	flags = ITEM_MULTI;
 	value = VALUE_BEER;
 	visual = "ItFo_CoragonsBeer.3DS";
-	material = MAT_GLAS;
+	material = MAT_WOOD;
 	scemename = "POTION";
-	on_state[0] = use_coragonsbeerbeer;
+	on_state[0] = use_coragonsbeer;
 	description = name;
-	text[1] = NAME_BONUS_HP;
+	text[1] = NAME_BONUS_HPMAX;
 	count[1] = HP_BEER;
-	text[2] = NAME_BONUS_MANA;
+	text[2] = NAME_BONUS_MANAMAX;
 	count[2] = MANA_BEER;
 	text[4] = "Особое пиво Корагона";
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_BEER;
+	count[5] = value;
 };
 
 
-func void use_coragonsbeerbeer()
+func void use_coragonsbeer()
 {
-	Npc_ChangeAttribute(self,ATR_HITPOINTS_MAX,HP_BEER);
-	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_BEER);
+	var string concatText;
+	b_raiseattribute(self,ATR_HITPOINTS_MAX,HP_BEER);
 	Npc_ChangeAttribute(self,ATR_MANA_MAX,MANA_BEER);
 	Npc_ChangeAttribute(self,ATR_MANA,MANA_BEER);
+	concatText = ConcatStrings(PRINT_LearnMANA_MAX,IntToString(MANA_BEER));
+	PrintScreen(concatText,-1,53,FONT_Screen,2);
 };
 
 
@@ -320,7 +322,7 @@ instance ITFO_FISHSOUP(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_FISHSOUP;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_FISHSOUP;
+	count[5] = value;
 };
 
 
@@ -344,7 +346,7 @@ instance ITFO_SAUSAGE(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_SAUSAGE;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_SAUSAGE;
+	count[5] = value;
 };
 
 
@@ -368,7 +370,7 @@ instance ITFO_HONEY(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_HONEY;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HONEY;
+	count[5] = value;
 };
 
 
@@ -392,7 +394,7 @@ instance ITFO_WATER(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_WATER;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_WATER;
+	count[5] = value;
 };
 
 
@@ -409,7 +411,7 @@ instance ITFO_BEER(C_ITEM)
 	flags = ITEM_MULTI;
 	value = VALUE_BEER;
 	visual = "ItFo_Beer.3DS";
-	material = MAT_GLAS;
+	material = MAT_WOOD;
 	scemename = "POTION";
 	on_state[0] = use_beer;
 	description = name;
@@ -419,7 +421,7 @@ instance ITFO_BEER(C_ITEM)
 	count[2] = MANA_BEER;
 	text[4] = "Темное паладинское";
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_BEER;
+	count[5] = value;
 };
 
 
@@ -446,7 +448,7 @@ instance ITFO_BOOZE(C_ITEM)
 	text[2] = NAME_BONUS_MANA;
 	count[2] = MANA_BOOZE;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_BOOZE;
+	count[5] = value;
 };
 
 
@@ -473,7 +475,7 @@ instance ITFO_WINE(C_ITEM)
 	text[2] = NAME_BONUS_MANA;
 	count[2] = MANA_WINE;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_WINE;
+	count[5] = value;
 };
 
 
@@ -500,7 +502,7 @@ instance ITFO_MILK(C_ITEM)
 	text[2] = NAME_BONUS_MANA;
 	count[2] = MANA_MILK;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MILK;
+	count[5] = value;
 };
 
 

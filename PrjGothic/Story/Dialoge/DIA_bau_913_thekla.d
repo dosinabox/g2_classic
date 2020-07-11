@@ -365,7 +365,6 @@ func void dia_thekla_perm_info()
 		AI_Output(self,other,"DIA_Thekla_PERM_17_08");	//Сходи к Сагитте, знахарке, что живет за фермой Секоба, и принеси мне от нее пакет с травой.
 		AI_Output(self,other,"DIA_Thekla_PERM_17_09");	//Если ты принесешь мне эти травы, я сварю похлебку для тебя.
 		MIS_THEKLA_PAKET = LOG_RUNNING;
-		CreateInvItems(sagitta,itmi_theklaspaket,1);
 		Log_CreateTopic(TOPIC_THEKLAEINTOPF,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_THEKLAEINTOPF,LOG_RUNNING);
 		b_logentry(TOPIC_THEKLAEINTOPF,"Если я принесу Текле травы от знахарки Сагитты, она сварит еще одну похлебку для меня. Сагитта живет за фермой Секоба.");

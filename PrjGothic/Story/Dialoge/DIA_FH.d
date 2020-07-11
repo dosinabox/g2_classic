@@ -34,7 +34,7 @@ instance DIA_FH_EXIT(C_INFO)
 	nr = 999;
 	condition = dia_fh_exit_condition;
 	information = dia_fh_exit_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = DIALOG_ENDE;
 };
 
@@ -56,7 +56,7 @@ instance DIA_FH_NEXTFACE(C_INFO)
 	nr = 3;
 	condition = dia_fh_nextface_condition;
 	information = dia_fh_nextface_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Следующее лицо";
 };
 
@@ -79,7 +79,7 @@ instance DIA_FH_NEXTFACE10(C_INFO)
 	nr = 5;
 	condition = dia_fh_nextface10_condition;
 	information = dia_fh_nextface10_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "10 лиц вперед";
 };
 
@@ -102,7 +102,7 @@ instance DIA_FH_PREVIOUSFACE(C_INFO)
 	nr = 4;
 	condition = dia_fh_previousface_condition;
 	information = dia_fh_previousface_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Предыдущее лицо";
 };
 
@@ -125,7 +125,7 @@ instance DIA_FH_PREVIOUSFACE10(C_INFO)
 	nr = 6;
 	condition = dia_fh_previousface10_condition;
 	information = dia_fh_previousface10_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "10 лиц назад ";
 };
 
@@ -148,7 +148,7 @@ instance DIA_FH_RESETFACE(C_INFO)
 	nr = 7;
 	condition = dia_fh_resetface_condition;
 	information = dia_fh_resetface_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Сброс";
 };
 
@@ -171,7 +171,7 @@ instance DIA_FH_WOMANFACE(C_INFO)
 	nr = 8;
 	condition = dia_fh_womanface_condition;
 	information = dia_fh_womanface_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Перейти к женским лицам";
 };
 
@@ -194,7 +194,7 @@ instance DIA_FH_REPEAT(C_INFO)
 	nr = 1;
 	condition = dia_fh_repeat_condition;
 	information = dia_fh_repeat_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Повторить";
 };
 
@@ -216,7 +216,7 @@ instance DIA_FH_SEX(C_INFO)
 	nr = 9;
 	condition = dia_fh_sex_condition;
 	information = dia_fh_sex_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Пол";
 };
 
@@ -246,7 +246,7 @@ instance DIA_FH_CHOOSE_HEADMESH(C_INFO)
 	nr = 2;
 	condition = dia_fh_choose_headmesh_condition;
 	information = dia_fh_choose_headmesh_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Выбор формы головы";
 };
 

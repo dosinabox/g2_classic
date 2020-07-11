@@ -28,7 +28,7 @@ func void enter_oldworld_firsttime_trigger()
 	};
 	if(TSCHUESSBILGOT == TRUE)
 	{
-		b_removenpc(bilgot);
+		b_removenpc(vlk_4120_bilgot);
 	};
 };
 

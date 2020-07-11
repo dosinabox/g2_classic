@@ -611,7 +611,7 @@ func int dia_miltenow_pickpocket_condition()
 {
 	if((self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] == FALSE) && (Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET) == TRUE) && (other.attribute[ATR_DEXTERITY] >= (80 - THEFTDIFF)))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 

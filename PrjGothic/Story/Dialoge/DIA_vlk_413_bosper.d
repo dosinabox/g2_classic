@@ -495,7 +495,7 @@ instance DIA_BOSPER_TEACHFUR(C_INFO)
 	condition = dia_bosper_teachfur_condition;
 	information = dia_bosper_teachfur_info;
 	permanent = TRUE;
-	description = "Ќаучи мен€ снимать шкуры с животных! (5 LP)";
+	description = "Ќаучи мен€ снимать шкуры с животных! (5 очков обучени€)";
 };
 
 

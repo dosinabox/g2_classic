@@ -5,15 +5,15 @@ instance DIA_SYLVIODJG_EXIT(C_INFO)
 	nr = 999;
 	condition = dia_sylviodjg_exit_condition;
 	information = dia_sylviodjg_exit_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = DIALOG_ENDE;
 };
 
 
 func int dia_sylviodjg_exit_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_sylviodjg_exit_info()

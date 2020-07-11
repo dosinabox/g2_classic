@@ -16,7 +16,7 @@ instance SLD_800_LEE(NPC_DEFAULT)
 	fight_tactic = FAI_HUMAN_MASTER;
 	EquipItem(self,itmw_2h_sld_sword);
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_Pony",FACE_N_LEE,BODYTEX_N,itar_sld_h);
+	b_setnpcvisual(self,MALE,"Hum_Head_Pony",FACE_N_LEE,BODYTEX_TATTOO_N,itar_sld_h);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
 	b_givenpctalents(self);

@@ -195,8 +195,8 @@ instance DIA_CIPHERDJG_GOFORSWAMPDRAGON(C_INFO)
 	npc = djg_703_cipher;
 	condition = dia_cipherdjg_goforswampdragon_condition;
 	information = dia_cipherdjg_goforswampdragon_info;
-	important = 1;
-	permanent = 0;
+	important = TRUE;
+	permanent = FALSE;
 };
 
 

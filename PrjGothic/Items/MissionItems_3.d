@@ -194,7 +194,7 @@ func void usecorneliustagebuch()
 	Doc_PrintLines(ndocid,0,"„то-то странно произошло со мной прошлой ночью. ћне нанес визит один из этих парней в черных капюшонах, о которых ходит столько слухов последнее врем€. я не очень-то испугалс€, даже несмотр€ на то, что, как говор€т, они - само зло. Ёти люди пр€мо-таки источают силу. Ќо голос был спокойным и располагающим к себе.");
 	Doc_SetMargins(ndocid,-1,30,20,275,20,1);
 	Doc_PrintLine(ndocid,1,"");
-	Doc_PrintLines(ndocid,1,"ќн предложил мне 20,000 золота за то, чтобы один из наемников был осужден. ќн сказал, что € пойму, что он имел в виду, когда это произойдет.");
+	Doc_PrintLines(ndocid,1,"ќн предложил мне 20000 золотых за то, чтобы один из наемников был осужден. ќн сказал, что € пойму, что он имел в виду, когда это произойдет.");
 	Doc_PrintLines(ndocid,1," онечно же, € согласилс€. Ёти наемники все равно не заслуживают лучшей участи. ≈сли бы не они, у мен€ все было бы хорошо. » это золото позволит мне спокойно встретить старость.");
 	Doc_PrintLine(ndocid,1,"");
 	Doc_PrintLines(ndocid,1,"Ёто произошло -- один из наемников был арестован. —держать мое слово будет просто.");
@@ -359,7 +359,7 @@ instance ITPO_HEALHILDA_MIS(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_ESSENZ;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HPESSENZ;
+	count[5] = value;
 };
 
 
@@ -592,7 +592,7 @@ instance ITPO_HEALOBSESSION_MIS(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_ESSENZ;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HPESSENZ;
+	count[5] = value;
 };
 
 
@@ -728,10 +728,10 @@ instance ITSE_DIEGOSTREASURE_MIS(C_ITEM)
 
 func void use_diegostreasure()
 {
-	OPENEDDIEGOSBAG = TRUE;
 	CreateInvItems(self,itmi_gold,DIEGOSTREASURE);
 	Print(PRINT_DIEGOSTREASURE);
 	Snd_Play("Geldbeutel");
+	OPENEDDIEGOSBAG = TRUE;
 };
 
 
@@ -810,7 +810,7 @@ instance ITAM_PROT_BLACKEYE_MIS(C_ITEM)
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET | ITEM_MISSION;
 	value = VALUE_AM_HPMANA;
-	visual = "ItMi_GoldNecklace.3ds";
+	visual = "ItAm_Prot_BlackEye_Mis.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
 	description = "јмулет вызова душ";

@@ -208,8 +208,8 @@ instance CH_GUILD(C_INFO)
 	npc = ch;
 	condition = ch_guild_condition;
 	information = ch_guild_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = "Изменить гильдию";
 };
 
@@ -1034,8 +1034,8 @@ instance CH_TRAINING_TALENTE(C_INFO)
 	npc = ch;
 	condition = ch_training_talente_condition;
 	information = ch_training_talente_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = "Изучить навыки";
 };
 
@@ -1309,7 +1309,7 @@ func void ch_training_talente_trophy()
 
 func void ch_training_combat_1h_1()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,1,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,1,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN1H1,b_getlearncosttalent(other,NPC_TALENT_1H)),ch_training_combat_1h_1);
@@ -1320,7 +1320,7 @@ func void ch_training_combat_1h_1()
 
 func void ch_training_combat_1h_5()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,5,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,5,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN1H1,b_getlearncosttalent(other,NPC_TALENT_1H)),ch_training_combat_1h_1);
@@ -1331,7 +1331,7 @@ func void ch_training_combat_1h_5()
 
 func void ch_training_combat_1h_10()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,10,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,10,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN1H1,b_getlearncosttalent(other,NPC_TALENT_1H)),ch_training_combat_1h_1);
@@ -1342,7 +1342,7 @@ func void ch_training_combat_1h_10()
 
 func void ch_training_combat_1h_20()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,20,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_1H,20,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN1H1,b_getlearncosttalent(other,NPC_TALENT_1H)),ch_training_combat_1h_1);
@@ -1353,7 +1353,7 @@ func void ch_training_combat_1h_20()
 
 func void ch_training_combat_2h_1()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,1,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,1,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN2H1,b_getlearncosttalent(other,NPC_TALENT_2H)),ch_training_combat_2h_1);
@@ -1364,7 +1364,7 @@ func void ch_training_combat_2h_1()
 
 func void ch_training_combat_2h_5()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,5,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,5,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN2H1,b_getlearncosttalent(other,NPC_TALENT_2H)),ch_training_combat_2h_1);
@@ -1375,7 +1375,7 @@ func void ch_training_combat_2h_5()
 
 func void ch_training_combat_2h_10()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,10,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,10,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN2H1,b_getlearncosttalent(other,NPC_TALENT_2H)),ch_training_combat_2h_1);
@@ -1386,7 +1386,7 @@ func void ch_training_combat_2h_10()
 
 func void ch_training_combat_2h_20()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,20,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,20,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARN2H1,b_getlearncosttalent(other,NPC_TALENT_2H)),ch_training_combat_2h_1);
@@ -1397,7 +1397,7 @@ func void ch_training_combat_2h_20()
 
 func void ch_training_combat_bow_1()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,1,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,1,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNBOW1,b_getlearncosttalent(other,NPC_TALENT_BOW)),ch_training_combat_bow_1);
@@ -1408,7 +1408,7 @@ func void ch_training_combat_bow_1()
 
 func void ch_training_combat_bow_5()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,5,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,5,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNBOW1,b_getlearncosttalent(other,NPC_TALENT_BOW)),ch_training_combat_bow_1);
@@ -1419,7 +1419,7 @@ func void ch_training_combat_bow_5()
 
 func void ch_training_combat_bow_10()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,10,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,10,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNBOW1,b_getlearncosttalent(other,NPC_TALENT_BOW)),ch_training_combat_bow_1);
@@ -1430,7 +1430,7 @@ func void ch_training_combat_bow_10()
 
 func void ch_training_combat_bow_20()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,20,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_BOW,20,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNBOW1,b_getlearncosttalent(other,NPC_TALENT_BOW)),ch_training_combat_bow_1);
@@ -1441,7 +1441,7 @@ func void ch_training_combat_bow_20()
 
 func void ch_training_combat_crossbow_1()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,1,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,1,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNCROSSBOW1,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW)),ch_training_combat_crossbow_1);
@@ -1452,7 +1452,7 @@ func void ch_training_combat_crossbow_1()
 
 func void ch_training_combat_crossbow_5()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,5,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,5,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNCROSSBOW1,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW)),ch_training_combat_crossbow_1);
@@ -1463,7 +1463,7 @@ func void ch_training_combat_crossbow_5()
 
 func void ch_training_combat_crossbow_10()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,10,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,10,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNCROSSBOW1,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW)),ch_training_combat_crossbow_1);
@@ -1474,7 +1474,7 @@ func void ch_training_combat_crossbow_10()
 
 func void ch_training_combat_crossbow_20()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,20,99);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_CROSSBOW,20,100);
 	Info_ClearChoices(ch_training_talente);
 	Info_AddChoice(ch_training_talente,DIALOG_BACK,ch_training_talente_back);
 	Info_AddChoice(ch_training_talente,b_buildlearnstring(PRINT_LEARNCROSSBOW1,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW)),ch_training_combat_crossbow_1);

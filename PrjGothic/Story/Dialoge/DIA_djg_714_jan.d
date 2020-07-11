@@ -36,7 +36,7 @@ func int dia_jan_hello_condition()
 {
 	if((KAPITEL >= 4) && Npc_IsInState(self,zs_talk) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -62,7 +62,7 @@ func int dia_jan_dragons_condition()
 {
 	if(Npc_KnowsInfo(other,dia_jan_hello) && (MIS_JANBECOMESSMITH == FALSE) && (KAPITEL == 4) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -131,7 +131,7 @@ func int dia_jan_home_condition()
 {
 	if(Npc_KnowsInfo(other,dia_jan_hello) && (KAPITEL >= 4) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -158,7 +158,7 @@ func int dia_jan_oldcamp_condition()
 {
 	if(Npc_KnowsInfo(other,dia_jan_hello) && (KAPITEL == 4) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -184,7 +184,7 @@ func int dia_jan_parcival_condition()
 {
 	if((MIS_JANBECOMESSMITH != LOG_SUCCESS) && Npc_KnowsInfo(other,dia_parcival_jan) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -220,7 +220,7 @@ func int dia_jan_janissmith_condition()
 {
 	if((MIS_JANBECOMESSMITH == LOG_SUCCESS) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -250,7 +250,7 @@ func int dia_jan_sellweapons_condition()
 {
 	if((MIS_JANBECOMESSMITH == LOG_SUCCESS) && Npc_KnowsInfo(other,dia_jan_janissmith) && (JAN_TEACHPLAYER == FALSE) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -285,7 +285,7 @@ func int jan_training_talente_condition()
 {
 	if((JAN_TEACHPLAYER == TRUE) && Npc_KnowsInfo(other,dia_jan_janissmith) && (MIS_OCGATEOPEN == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -368,7 +368,7 @@ func int dia_jan_sellarmor_condition()
 {
 	if((MIS_JANBECOMESSMITH == LOG_SUCCESS) && Npc_KnowsInfo(other,dia_jan_janissmith) && (MIS_OCGATEOPEN == FALSE) && (DIA_JAN_SELLARMOR_PERMANENT == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -428,7 +428,7 @@ func int dia_jan_dragonscales_condition()
 {
 	if((MIS_JANBECOMESSMITH == LOG_SUCCESS) && Npc_KnowsInfo(other,dia_jan_janissmith) && (MIS_OCGATEOPEN == FALSE) && (DIA_JAN_SELLARMOR_PERMANENT == TRUE) && (JAN_SELLS_ARMOR == FALSE) && (Npc_HasItems(other,itat_dragonscale) >= 1))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -467,7 +467,7 @@ func int dia_jan_armorready_condition()
 {
 	if((MIS_OCGATEOPEN == FALSE) && (JAN_SELLS_ARMOR != FALSE) && (DIA_JAN_ARMORREADY_NOPERM == FALSE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 

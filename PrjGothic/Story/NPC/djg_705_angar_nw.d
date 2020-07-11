@@ -11,7 +11,7 @@ instance DJG_705_ANGAR_NW(NPC_DEFAULT)
 	fight_tactic = FAI_HUMAN_MASTER;
 	EquipItem(self,itmw_2h_sld_sword);
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_B_CORANGAR,BODYTEX_B,itar_corangar);
+	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_B_CORANGAR,BODYTEX_TATTOO_B,itar_corangar);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
 	b_givenpctalents(self);

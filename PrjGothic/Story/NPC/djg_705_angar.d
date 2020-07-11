@@ -13,7 +13,7 @@ instance DJG_705_ANGAR(NPC_DEFAULT)
 	CreateInvItems(self,itpo_health_03,6);
 	CreateInvItems(self,itmi_oldcoin,1);
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_B_CORANGAR,BODYTEX_B,itar_corangar);
+	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_B_CORANGAR,BODYTEX_TATTOO_B,itar_corangar);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
 	b_givenpctalents(self);

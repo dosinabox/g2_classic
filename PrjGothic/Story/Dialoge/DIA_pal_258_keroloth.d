@@ -83,6 +83,9 @@ func void dia_keroloth_wantteach_info()
 };
 
 
+var int dia_keroloth_teach_permanent_1h;
+var int dia_keroloth_teach_permanent;
+
 instance DIA_KEROLOTH_TEACHER(C_INFO)
 {
 	npc = pal_258_keroloth;
@@ -96,7 +99,7 @@ instance DIA_KEROLOTH_TEACHER(C_INFO)
 
 func int dia_keroloth_teacher_condition()
 {
-	if((KEROLOTH_TEACHPLAYER == TRUE) && (KEROLOTHS_BEUTELLEER == FALSE))
+	if((KEROLOTH_TEACHPLAYER == TRUE) && (KEROLOTHS_BEUTELLEER == FALSE) && (DIA_KEROLOTH_TEACH_PERMANENT_1H == FALSE))
 	{
 		return TRUE;
 	};
@@ -136,6 +139,7 @@ func void dia_keroloth_teacher_1h_1()
 		{
 			b_keroloth_teachnomore2();
 		};
+		DIA_KEROLOTH_TEACH_PERMANENT = TRUE;
 	};
 	Info_AddChoice(dia_keroloth_teacher,b_buildlearnstring(PRINT_LEARN1H1,b_getlearncosttalent(other,NPC_TALENT_1H)),dia_keroloth_teacher_1h_1);
 };
@@ -150,6 +154,7 @@ func void dia_keroloth_teacher_1h_5()
 		{
 			b_keroloth_teachnomore2();
 		};
+		DIA_KEROLOTH_TEACH_PERMANENT_1H = TRUE;
 	};
 	Info_AddChoice(dia_keroloth_teacher,b_buildlearnstring(PRINT_LEARN1H5,b_getlearncosttalent(other,NPC_TALENT_1H) * 5),dia_keroloth_teacher_1h_5);
 };
@@ -166,11 +171,9 @@ instance DIA_KEROLOTH_TEACH(C_INFO)
 };
 
 
-var int dia_keroloth_teach_permanent;
-
 func int dia_keroloth_teach_condition()
 {
-	if((KEROLOTH_TEACHPLAYER == TRUE) && (KEROLOTHS_BEUTELLEER == FALSE) && (DIA_KEROLOTH_TEACH_PERMANENT == FALSE) && (other.hitchance[NPC_TALENT_2H] < 60))
+	if((KEROLOTH_TEACHPLAYER == TRUE) && (KEROLOTHS_BEUTELLEER == FALSE) && (DIA_KEROLOTH_TEACH_PERMANENT == FALSE))
 	{
 		return TRUE;
 	};
@@ -187,17 +190,17 @@ func void dia_keroloth_teach_info()
 
 func void dia_keroloth_teach_back()
 {
-	if(other.hitchance[NPC_TALENT_2H] >= 60)
-	{
-		b_keroloth_teachnomore1();
-		DIA_KEROLOTH_TEACH_PERMANENT = TRUE;
-	};
 	Info_ClearChoices(dia_keroloth_teach);
 };
 
 func void dia_keroloth_teach_2h_1()
 {
 	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,1,60);
+	if(other.hitchance[NPC_TALENT_2H] >= 60)
+	{
+		b_keroloth_teachnomore1();
+		DIA_KEROLOTH_TEACH_PERMANENT = TRUE;
+	};
 	Info_ClearChoices(dia_keroloth_teach);
 	Info_AddChoice(dia_keroloth_teach,DIALOG_BACK,dia_keroloth_teach_back);
 	Info_AddChoice(dia_keroloth_teach,b_buildlearnstring(PRINT_LEARN2H1,b_getlearncosttalent(other,NPC_TALENT_2H)),dia_keroloth_teach_2h_1);
@@ -207,6 +210,11 @@ func void dia_keroloth_teach_2h_1()
 func void dia_keroloth_teach_2h_5()
 {
 	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,5,60);
+	if(other.hitchance[NPC_TALENT_2H] >= 60)
+	{
+		b_keroloth_teachnomore1();
+		DIA_KEROLOTH_TEACH_PERMANENT = TRUE;
+	};
 	Info_ClearChoices(dia_keroloth_teach);
 	Info_AddChoice(dia_keroloth_teach,DIALOG_BACK,dia_keroloth_teach_back);
 	Info_AddChoice(dia_keroloth_teach,b_buildlearnstring(PRINT_LEARN2H1,b_getlearncosttalent(other,NPC_TALENT_2H)),dia_keroloth_teach_2h_1);

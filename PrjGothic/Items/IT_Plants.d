@@ -46,7 +46,7 @@ instance ITPL_WEED(C_ITEM)
 	scemename = "FOOD";
 	description = name;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_WEED;
+	count[5] = value;
 };
 
 instance ITPL_BEET(C_ITEM)
@@ -61,7 +61,7 @@ instance ITPL_BEET(C_ITEM)
 	scemename = "FOOD";
 	description = name;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_BEET;
+	count[5] = value;
 };
 
 
@@ -83,7 +83,7 @@ instance ITPL_SWAMPHERB(C_ITEM)
 	scemename = "FOOD";
 	description = name;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_SWAMPHERB;
+	count[5] = value;
 };
 
 
@@ -110,7 +110,7 @@ instance ITPL_MANA_HERB_01(C_ITEM)
 	text[1] = NAME_BONUS_MANA;
 	count[1] = MANA_MANA_HERB_01;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MANA_HERB_01;
+	count[5] = value;
 };
 
 
@@ -134,7 +134,7 @@ instance ITPL_MANA_HERB_02(C_ITEM)
 	text[1] = NAME_BONUS_MANA;
 	count[1] = MANA_MANA_HERB_02;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MANA_HERB_02;
+	count[5] = value;
 };
 
 
@@ -158,7 +158,7 @@ instance ITPL_MANA_HERB_03(C_ITEM)
 	text[1] = NAME_BONUS_MANA;
 	count[1] = MANA_MANA_HERB_03;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MANA_HERB_03;
+	count[5] = value;
 };
 
 
@@ -182,7 +182,7 @@ instance ITPL_HEALTH_HERB_01(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_HEALTH_HERB_01;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HEALTH_HERB_01;
+	count[5] = value;
 };
 
 
@@ -206,7 +206,7 @@ instance ITPL_HEALTH_HERB_02(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_HEALTH_HERB_02;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HEALTH_HERB_02;
+	count[5] = value;
 };
 
 
@@ -230,7 +230,7 @@ instance ITPL_HEALTH_HERB_03(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_HEALTH_HERB_03;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HEALTH_HERB_03;
+	count[5] = value;
 };
 
 
@@ -254,7 +254,7 @@ instance ITPL_DEX_HERB_01(C_ITEM)
 	text[1] = NAME_BONUS_DEX;
 	count[1] = 1;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_DEX_HERB_01;
+	count[5] = value;
 };
 
 
@@ -278,7 +278,7 @@ instance ITPL_STRENGTH_HERB_01(C_ITEM)
 	text[1] = NAME_BONUS_STR;
 	count[1] = 1;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_STRENGTH_HERB_01;
+	count[5] = value;
 };
 
 
@@ -302,7 +302,7 @@ instance ITPL_SPEED_HERB_01(C_ITEM)
 	count[3] = SPEED_BOOST / 1000;
 	description = name;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_SPEED_HERB_01;
+	count[5] = value;
 };
 
 
@@ -326,7 +326,7 @@ instance ITPL_MUSHROOM_01(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_MUSHROOM_01;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MUSHROOM_01;
+	count[5] = value;
 };
 
 
@@ -338,10 +338,8 @@ func void use_mushroom_01()
 		DUNKELPILZ_BONUS = DUNKELPILZ_BONUS + 1;
 		if(DUNKELPILZ_BONUS == 50)
 		{
-			Npc_ChangeAttribute(self,ATR_MANA_MAX,10);
-			Npc_ChangeAttribute(self,ATR_MANA,10);
-			Print(PRINT_MANA10);
-			Snd_Play("LevelUp");
+			b_raiseattribute(self,ATR_MANA_MAX,10);
+			Snd_Play("LEVELUP");
 		};
 	};
 };
@@ -361,7 +359,7 @@ instance ITPL_MUSHROOM_02(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_MUSHROOM_02;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MUSHROOM_02;
+	count[5] = value;
 };
 
 
@@ -387,7 +385,7 @@ instance ITPL_BLUEPLANT(C_ITEM)
 	text[2] = NAME_BONUS_MANA;
 	count[2] = MANA_BLUEPLANT;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_BLUEPLANT;
+	count[5] = value;
 };
 
 
@@ -412,7 +410,7 @@ instance ITPL_FORESTBERRY(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_FORESTBERRY;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_FORESTBERRY;
+	count[5] = value;
 };
 
 
@@ -436,7 +434,7 @@ instance ITPL_PLANEBERRY(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_PLANEBERRY;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_PLANEBERRY;
+	count[5] = value;
 };
 
 
@@ -460,7 +458,7 @@ instance ITPL_TEMP_HERB(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_TEMP_HERB;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_TEMP_HERB;
+	count[5] = value;
 };
 
 
@@ -484,7 +482,7 @@ instance ITPL_PERM_HERB(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_PERM_HERB;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_PERM_HERB;
+	count[5] = value;
 };
 
 

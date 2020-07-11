@@ -38,7 +38,7 @@ instance ITPO_MANA_01(C_ITEM)
 	text[1] = NAME_BONUS_MANA;
 	count[1] = MANA_ESSENZ;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MANAESSENZ;
+	count[5] = value;
 };
 
 
@@ -62,7 +62,7 @@ instance ITPO_MANA_02(C_ITEM)
 	text[1] = NAME_BONUS_MANA;
 	count[1] = MANA_EXTRAKT;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MANAEXTRAKT;
+	count[5] = value;
 };
 
 
@@ -86,7 +86,7 @@ instance ITPO_MANA_03(C_ITEM)
 	text[1] = NAME_BONUS_MANA;
 	count[1] = MANA_ELIXIER;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MANAELIXIER;
+	count[5] = value;
 };
 
 
@@ -110,7 +110,7 @@ instance ITPO_HEALTH_01(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_ESSENZ;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HPESSENZ;
+	count[5] = value;
 };
 
 
@@ -134,7 +134,7 @@ instance ITPO_HEALTH_02(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_EXTRAKT;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HPEXTRAKT;
+	count[5] = value;
 };
 
 
@@ -158,7 +158,7 @@ instance ITPO_HEALTH_03(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_ELIXIER;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HPELIXIER;
+	count[5] = value;
 };
 
 
@@ -182,7 +182,7 @@ instance ITPO_PERM_STR(C_ITEM)
 	text[1] = NAME_BONUS_STR;
 	count[1] = STR_ELIXIER;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_STRELIXIER;
+	count[5] = value;
 };
 
 
@@ -206,7 +206,7 @@ instance ITPO_PERM_DEX(C_ITEM)
 	text[1] = NAME_BONUS_DEX;
 	count[1] = DEX_ELIXIER;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_DEXELIXIER;
+	count[5] = value;
 };
 
 
@@ -230,14 +230,13 @@ instance ITPO_PERM_HEALTH(C_ITEM)
 	text[1] = NAME_BONUS_HPMAX;
 	count[1] = HPMAX_ELIXIER;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HPMAXELIXIER;
+	count[5] = value;
 };
 
 
 func void useitpo_perm_health()
 {
 	b_raiseattribute(self,ATR_HITPOINTS_MAX,HPMAX_ELIXIER);
-	Npc_ChangeAttribute(self,ATR_HITPOINTS,HPMAX_ELIXIER);
 };
 
 
@@ -255,14 +254,13 @@ instance ITPO_PERM_MANA(C_ITEM)
 	text[1] = NAME_BONUS_MANAMAX;
 	count[1] = MANAMAX_ELIXIER;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_MANAMAXELIXIER;
+	count[5] = value;
 };
 
 
 func void useitpo_perm_mana()
 {
 	b_raiseattribute(self,ATR_MANA_MAX,MANAMAX_ELIXIER);
-	Npc_ChangeAttribute(self,ATR_MANA,MANAMAX_ELIXIER);
 };
 
 
@@ -318,7 +316,8 @@ func void useitpo_megadrink()
 	{
 		b_raiseattribute(self,ATR_STRENGTH,STRORDEX_MEGADRINK);
 	};
-	Npc_ChangeAttribute(self,ATR_MANA,-ATR_MANA);
+//	Npc_ChangeAttribute(self,ATR_MANA,-ATR_MANA);
+	self.attribute[ATR_MANA] = 0;
 	Snd_Play("DEM_Warn");
 };
 

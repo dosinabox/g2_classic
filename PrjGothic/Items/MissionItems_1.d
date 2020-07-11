@@ -675,7 +675,7 @@ instance ITFO_SCHAFSWURST(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_SAUSAGE;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_SAUSAGE;
+	count[5] = value;
 };
 
 
@@ -706,7 +706,6 @@ instance ITPO_PERM_LITTLEMANA(C_ITEM)
 func void useitpo_littlemana()
 {
 	b_raiseattribute(self,ATR_MANA_MAX,3);
-	Npc_ChangeAttribute(self,ATR_MANA,3);
 };
 
 
@@ -1189,7 +1188,7 @@ instance ITPL_SAGITTA_HERB_MIS(C_ITEM)
 	scemename = "FOOD";
 	description = name;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_STRENGTH_HERB_01;
+	count[5] = value;
 };
 
 instance ITKE_ORLAN_HOTELZIMMER(C_ITEM)

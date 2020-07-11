@@ -42,7 +42,7 @@ func int dia_dragon_rock_hello_condition()
 {
 	if(Npc_HasItems(other,itmi_innoseye_mis) >= 1)
 	{
-		return 1;
+		return TRUE;
 	};
 };
 

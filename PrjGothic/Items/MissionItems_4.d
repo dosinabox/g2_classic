@@ -11,8 +11,8 @@ instance ITAM_MANA_ANGAR_MIS(C_ITEM)
 	visual = "ItAm_Mana_01.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
-	on_equip = equip_itam_mana_angar;
-	on_unequip = unequip_itam_mana_angar;
+	on_equip = equip_itam_mana_01;
+	on_unequip = unequip_itam_mana_01;
 	description = "Амулет магии";
 	text[0] = "Этот амулет принадлежит Ангару.";
 	text[2] = NAME_BONUS_MANAMAX;
@@ -21,27 +21,6 @@ instance ITAM_MANA_ANGAR_MIS(C_ITEM)
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
 };
-
-
-func void equip_itam_mana_angar()
-{
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + AM_MANA;
-	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + AM_MANA;
-};
-
-func void unequip_itam_mana_angar()
-{
-	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - AM_MANA;
-	if(self.attribute[ATR_MANA] > AM_MANA)
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - AM_MANA;
-	}
-	else
-	{
-		self.attribute[ATR_MANA] = 0;
-	};
-};
-
 
 instance ITMW_1H_FERROSSWORD_MIS(C_ITEM)
 {

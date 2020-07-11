@@ -53,8 +53,8 @@ instance PC_NOSLEEP(C_INFO)
 	nr = 999;
 	condition = pc_nosleep_condition;
 	information = pc_nosleep_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = DIALOG_ENDE;
 };
 
@@ -63,7 +63,7 @@ func int pc_nosleep_condition()
 {
 	if(PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT)
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -81,8 +81,8 @@ instance PC_SLEEPTIME_MORNING(C_INFO)
 	npc = pc_hero;
 	condition = pc_sleeptime_morning_condition;
 	information = pc_sleeptime_morning_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = "Спать до следующего утра";
 };
 
@@ -91,7 +91,7 @@ func int pc_sleeptime_morning_condition()
 {
 	if(PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT)
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -106,8 +106,8 @@ instance PC_SLEEPTIME_NOON(C_INFO)
 	npc = pc_hero;
 	condition = pc_sleeptime_noon_condition;
 	information = pc_sleeptime_noon_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = "Спать до полудня";
 };
 
@@ -116,7 +116,7 @@ func int pc_sleeptime_noon_condition()
 {
 	if(PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT)
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -131,8 +131,8 @@ instance PC_SLEEPTIME_EVENING(C_INFO)
 	npc = pc_hero;
 	condition = pc_sleeptime_evening_condition;
 	information = pc_sleeptime_evening_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = "Спать до следующего вечера";
 };
 
@@ -141,7 +141,7 @@ func int pc_sleeptime_evening_condition()
 {
 	if(PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT)
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -156,8 +156,8 @@ instance PC_SLEEPTIME_MIDNIGHT(C_INFO)
 	npc = pc_hero;
 	condition = pc_sleeptime_midnight_condition;
 	information = pc_sleeptime_midnight_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = "Спать до полуночи";
 };
 
@@ -166,7 +166,7 @@ func int pc_sleeptime_midnight_condition()
 {
 	if(PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT)
 	{
-		return 1;
+		return TRUE;
 	};
 };
 

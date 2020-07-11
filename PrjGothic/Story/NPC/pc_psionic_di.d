@@ -14,7 +14,7 @@ instance PC_PSIONIC_DI(NPC_DEFAULT)
 	fight_tactic = FAI_HUMAN_MASTER;
 	b_createambientinv(self);
 	EquipItem(self,itmw_kriegshammer2);
-	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_P_LESTER,BODYTEX_P,itar_lester);
+	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_P_LESTER,BODYTEX_TATTOO_P,itar_lester);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
 	b_givenpctalents(self);

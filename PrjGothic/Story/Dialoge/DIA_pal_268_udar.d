@@ -66,7 +66,7 @@ func int dia_udar_youarebest_condition()
 {
 	if(Npc_KnowsInfo(other,dia_keroloth_udar))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -92,7 +92,7 @@ func int dia_udar_teachme_condition()
 {
 	if(Npc_KnowsInfo(other,dia_udar_youarebest) && (UDAR_TEACHPLAYER != TRUE))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -118,7 +118,7 @@ func int dia_udar_imgood_condition()
 {
 	if(Npc_KnowsInfo(other,dia_udar_youarebest))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -147,7 +147,7 @@ func int dia_udar_teach_condition()
 {
 	if(UDAR_TEACHPLAYER == TRUE)
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -187,7 +187,10 @@ func void dia_udar_teach_crossbow_1()
 			b_udar_teachnomore2();
 		};
 	};
+	Info_ClearChoices(dia_udar_teach);
+	Info_AddChoice(dia_udar_teach,DIALOG_BACK,dia_udar_teach_back);
 	Info_AddChoice(dia_udar_teach,b_buildlearnstring(PRINT_LEARNCROSSBOW1,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW)),dia_udar_teach_crossbow_1);
+	Info_AddChoice(dia_udar_teach,b_buildlearnstring(PRINT_LEARNCROSSBOW5,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW) * 5),dia_udar_teach_crossbow_5);
 };
 
 func void dia_udar_teach_crossbow_5()
@@ -201,7 +204,10 @@ func void dia_udar_teach_crossbow_5()
 			b_udar_teachnomore2();
 		};
 	};
-	Info_AddChoice(dia_udar_teach,b_buildlearnstring(PRINT_LEARNCROSSBOW5,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW)),dia_udar_teach_crossbow_5);
+	Info_ClearChoices(dia_udar_teach);
+	Info_AddChoice(dia_udar_teach,DIALOG_BACK,dia_udar_teach_back);
+	Info_AddChoice(dia_udar_teach,b_buildlearnstring(PRINT_LEARNCROSSBOW1,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW)),dia_udar_teach_crossbow_1);
+	Info_AddChoice(dia_udar_teach,b_buildlearnstring(PRINT_LEARNCROSSBOW5,b_getlearncosttalent(other,NPC_TALENT_CROSSBOW) * 5),dia_udar_teach_crossbow_5);
 };
 
 

@@ -161,15 +161,15 @@ instance SH_OLDWORLD_EXIT(C_INFO)
 	nr = 999;
 	condition = sh_oldworld_exit_condition;
 	information = sh_oldworld_exit_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = DIALOG_ENDE;
 };
 
 
 func int sh_oldworld_exit_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void sh_oldworld_exit_info()
@@ -183,8 +183,8 @@ instance SH_OLDWORLD_INFO1(C_INFO)
 	npc = sh_oldworld;
 	condition = sh_oldworld_info1_condition;
 	information = sh_oldworld_info1_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = KAPWECHSEL_1;
 };
 
@@ -218,8 +218,8 @@ instance SH_OLDWORLD_INFO2(C_INFO)
 	npc = sh_oldworld;
 	condition = sh_oldworld_info2_condition;
 	information = sh_oldworld_info2_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = KAPWECHSEL_2;
 };
 
@@ -254,8 +254,8 @@ instance SH_OLDWORLD_INFO3(C_INFO)
 	npc = sh_oldworld;
 	condition = sh_oldworld_info3_condition;
 	information = sh_oldworld_info3_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = KAPWECHSEL_3;
 };
 
@@ -296,8 +296,8 @@ instance SH_OLDWORLD_INFO4(C_INFO)
 	npc = sh_oldworld;
 	condition = sh_oldworld_info4_condition;
 	information = sh_oldworld_info4_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = KAPWECHSEL_4;
 };
 
@@ -344,8 +344,8 @@ instance SH_OLDWORLD_INFO5(C_INFO)
 	npc = sh_oldworld;
 	condition = sh_oldworld_info5_condition;
 	information = sh_oldworld_info5_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = KAPWECHSEL_5;
 };
 
@@ -396,8 +396,8 @@ instance SH_OLDWORLD_INFO6(C_INFO)
 	npc = sh_oldworld;
 	condition = sh_oldworld_info6_condition;
 	information = sh_oldworld_info6_info;
-	important = 0;
-	permanent = 1;
+	important = FALSE;
+	permanent = TRUE;
 	description = KAPWECHSEL_6;
 };
 
@@ -427,7 +427,7 @@ func void sh_oldworld_kapitel6anfang()
 };
 
 
-instance DRAGON_TESTMODELL(MST_DEFAULT_DRAGON_FIRE)
+/*instance DRAGON_TESTMODELL(MST_DEFAULT_DRAGON_FIRE)
 {
 	b_setvisuals_dragon_fire();
 	Npc_SetToFistMode(self);
@@ -473,7 +473,7 @@ instance DIA_DRAGON_TESTMODELL_HELLO(C_INFO)
 
 func int dia_dragon_testmodell_hello_condition()
 {
-	return 1;
+	return TRUE;
 };
 
 func void dia_dragon_testmodell_hello_info()
@@ -493,5 +493,5 @@ func void dia_dragon_testmodell_hello_info()
 	AI_StopProcessInfos(self);
 	DRAGONTALK_EXIT_FREE = FALSE;
 	self.flags = 0;
-};
+};*/
 

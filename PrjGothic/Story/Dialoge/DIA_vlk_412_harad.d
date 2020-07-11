@@ -724,7 +724,7 @@ instance DIA_HARAD_TEACHSTR(C_INFO)
 	nr = 100;
 	condition = dia_harad_teachstr_condition;
 	information = dia_harad_teachstr_info;
-	permanent = 1;
+	permanent = TRUE;
 	description = "Я хочу стать сильнее!";
 };
 

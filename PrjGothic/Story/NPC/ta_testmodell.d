@@ -1,5 +1,5 @@
 
-instance TA_TESTMODELL(NPC_DEFAULT)
+/*instance TA_TESTMODELL(NPC_DEFAULT)
 {
 	name[0] = "TA_Testmodell";
 	guild = GIL_NONE;
@@ -115,7 +115,7 @@ func int dia_ta_testmodell_guidestart_condition()
 	testmodell = Hlp_GetNpc(ta_testmodell);
 	if(!Npc_IsInRoutine(self,zs_guide_player))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -143,7 +143,7 @@ func int dia_ta_testmodell_guideend_condition()
 	testmodell = Hlp_GetNpc(ta_testmodell);
 	if(Npc_IsInRoutine(self,zs_guide_player))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -171,7 +171,7 @@ func int dia_ta_testmodell_followstart_condition()
 	testmodell = Hlp_GetNpc(ta_testmodell);
 	if(!Npc_IsInRoutine(self,zs_follow_player))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -199,7 +199,7 @@ func int dia_ta_testmodell_followend_condition()
 	testmodell = Hlp_GetNpc(ta_testmodell);
 	if(Npc_IsInRoutine(self,zs_follow_player))
 	{
-		return 1;
+		return TRUE;
 	};
 };
 
@@ -241,43 +241,33 @@ func void startup_ta_testlevel()
 {
 	Wld_InsertNpc(ta_testmodell,"WP_SMALLTALK");
 	Wld_InsertNpc(ta_smalltalkpartner,"WP_SMALLTALK");
-};
+};*/
 
 
 instance GOLD(C_ITEM)
 {
-	name = "Ein Beutel voll Gold!";
+	name = NAME_BAG;
 	mainflag = ITEM_KAT_NONE;
-	flags = 0;
+	flags = ITEM_MULTI;
 	value = 0;
-	visual = "ItMi_Pocket.3ds";
+	visual = "ItMi_Bag.3ds";
 	scemename = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = usegold;
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
+	text[0] = "Целый мешок золота!";
 };
 
 
 func void usegold()
 {
-	CreateInvItems(self,itmi_gold,1000);
-	PrintScreen("1000 Gold erhalten.",-1,45,FONT_SCREEN,3);
+	CreateInvItems(hero,itmi_gold,1000);
+	Print(PRINT_FOUNDGOLD1000);
 	Snd_Play("Geldbeutel");
-	PrintScreen("Cheater Malus: -100 EXP",-1,55,FONT_SCREEN,3);
-	if(hero.exp >= 100)
-	{
-		hero.exp = hero.exp - 100;
-	}
-	else
-	{
-		hero.exp = 0;
-	};
 };
 
 
-instance HOSH1(C_ITEM)
+/*instance HOSH1(C_ITEM)
 {
 	name = "Unsterblich";
 	mainflag = ITEM_KAT_DOCS;
@@ -323,7 +313,7 @@ func void usehosh2()
 };
 
 
-/*instance HOSH3(C_ITEM)
+instance HOSH3(C_ITEM)
 {
 	name = "Sumpfdrache immortal klauen";
 	mainflag = ITEM_KAT_DOCS;
@@ -344,7 +334,7 @@ func void usehosh3()
 {
 	SWAMPDRAGON = Hlp_GetNpc(dragon_rock);
 	swampdragon.senses_range = dragon_rock;
-};*/
+};
 
 
 instance HOSH4(C_ITEM)
@@ -368,5 +358,5 @@ func void usehoshitagebuch()
 {
 	SWAMPDRAGON = Hlp_GetNpc(dragon_swamp);
 	swampdragon.flags = NPC_FLAG_IMMORTAL;
-};
+};*/
 

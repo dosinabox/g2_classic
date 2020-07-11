@@ -73,7 +73,7 @@ func void b_andre_cantharfalle()
 {
 	AI_Output(self,other,"B_Andre_CantharFalle_08_00");	//Ко мне приходил торговец Кантар. Он сказал, что ты беглый каторжник из колонии.
 	AI_Output(self,other,"B_Andre_CantharFalle_08_01");	//Я не знаю, правда ли это, и предпочитаю не спрашивать тебя об этом, но ты должен уладить этот вопрос.
-	b_removenpc(sarah);
+	b_removenpc(vlk_470_sarah);
 	b_startotherroutine(canthar,"MARKTSTAND");
 	AI_Teleport(canthar,"NW_CITY_SARAH");
 	if((CANTHAR_SPERRE == FALSE) && (CANTHAR_PAY == FALSE))
@@ -220,7 +220,7 @@ func void dia_andre_pmschulden_info()
 		Info_ClearChoices(dia_andre_pmschulden);
 		Info_ClearChoices(dia_andre_petzmaster);
 		Info_AddChoice(dia_andre_pmschulden,"У меня недостаточно золота.",dia_andre_petzmaster_paylater);
-		Info_AddChoice(dia_andre_pmschulden,"Сколько там нужно?",dia_andre_pmschulden_howmuchagain);
+		Info_AddChoice(dia_andre_pmschulden,"Сколько там еще?",dia_andre_pmschulden_howmuchagain);
 		if(Npc_HasItems(other,itmi_gold) >= ANDRE_SCHULDEN)
 		{
 			Info_AddChoice(dia_andre_pmschulden,"Я хочу заплатить штраф!",dia_andre_petzmaster_paynow);
@@ -235,7 +235,7 @@ func void dia_andre_pmschulden_howmuchagain()
 	Info_ClearChoices(dia_andre_pmschulden);
 	Info_ClearChoices(dia_andre_petzmaster);
 	Info_AddChoice(dia_andre_pmschulden,"У меня недостаточно золота.",dia_andre_petzmaster_paylater);
-	Info_AddChoice(dia_andre_pmschulden,"Сколько там нужно?",dia_andre_pmschulden_howmuchagain);
+	Info_AddChoice(dia_andre_pmschulden,"Сколько там еще?",dia_andre_pmschulden_howmuchagain);
 	if(Npc_HasItems(other,itmi_gold) >= ANDRE_SCHULDEN)
 	{
 		Info_AddChoice(dia_andre_pmschulden,"Я хочу заплатить штраф!",dia_andre_petzmaster_paynow);
@@ -1313,7 +1313,7 @@ func void dia_andre_redlight_success_info()
 		if(NADJA_VICTIM == TRUE)
 		{
 			AI_Output(self,other,"DIA_Andre_REDLIGHT_SUCCESS_08_03");	//Эта девочка из Красного Фонаря, Надя, мертва. Возможно, это просто случайное совпадение.
-			b_removenpc(nadja);
+			b_removenpc(vlk_435_nadja);
 		};
 		if(UNDERCOVER_FAILED == TRUE)
 		{

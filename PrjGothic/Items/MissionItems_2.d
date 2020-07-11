@@ -160,8 +160,8 @@ func void usegornstreasure()
 {
 	CreateInvItems(self,itmi_gold,250);
 	Print(PRINT_GOLDERHALTEN);
-	GORNS_BEUTEL = TRUE;
 	Snd_Play("Geldbeutel");
+	GORNS_BEUTEL = TRUE;
 };
 
 

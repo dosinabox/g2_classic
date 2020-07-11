@@ -237,7 +237,7 @@ func void b_enter_newworld_kapitel_3()
 		};
 		if((MIS_CANTHARS_KOMPROBRIEF != LOG_SUCCESS) && (MIS_CANTHARS_KOMPROBRIEF != FALSE) && (CANTHAR_PAY == FALSE) && (Npc_IsDead(canthar) == FALSE))
 		{
-			b_removenpc(sarah);
+			b_removenpc(vlk_470_sarah);
 			b_startotherroutine(canthar,"MARKTSTAND");
 			AI_Teleport(canthar,"NW_CITY_SARAH");
 			CANTHAR_SPERRE = TRUE;
@@ -524,7 +524,7 @@ func void b_enter_newworld_kapitel_5()
 {
 	if(ENTERNW_KAPITEL5 == FALSE)
 	{
-		b_removenpc(xardas);
+		b_removenpc(none_100_xardas);
 		b_startotherroutine(lester,"XardasWeg");
 		if(Npc_GetDistToWP(salandril,"ALTAR") < 10000)
 		{

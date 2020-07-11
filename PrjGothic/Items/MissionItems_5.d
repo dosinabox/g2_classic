@@ -440,18 +440,25 @@ instance ITPO_POTIONOFDEATH_02_MIS(C_ITEM)
 
 instance ITAM_AMULETTOFDEATH_MIS(C_ITEM)
 {
-	name = "Божественная аура Инноса";
+	name = NAME_AMULETT;
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET;
 	value = 1000;
-	visual = "ItAm_Prot_Fire_01.3ds";
+	visual = "ItAm_AmulettOfDeath_Mis.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
 	on_equip = equip_itam_amulettofdeath_mis;
 	on_unequip = unequip_itam_amulettofdeath_mis;
 	description = "Божественная аура Инноса";
-	text[2] = "Этот амулет защищает владельца";
-	text[3] = "от всех форм урона.";
+	text[0] = "Этот амулет защищает владельца от всех форм урона.";
+	text[1] = NAME_PROT_EDGE;
+	count[1] = 20;
+	text[2] = NAME_PROT_POINT;
+	count[2] = 20;
+	text[3] = NAME_PROT_FIRE;
+	count[3] = 20;
+	text[4] = NAME_PROT_MAGIC;
+	count[4] = 20;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
@@ -497,7 +504,7 @@ instance ITPO_HEALRANDOLPH_MIS(C_ITEM)
 	text[1] = NAME_BONUS_HP;
 	count[1] = HP_ESSENZ;
 	text[5] = NAME_VALUE;
-	count[5] = VALUE_HPESSENZ;
+	count[5] = value;
 };
 
 
