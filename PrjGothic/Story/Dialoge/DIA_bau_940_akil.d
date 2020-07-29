@@ -210,7 +210,7 @@ instance DIA_AKIL_LIEFERUNG(C_INFO)
 	condition = dia_akil_lieferung_condition;
 	information = dia_akil_lieferung_info;
 	permanent = FALSE;
-	description = "Меня прислал Бальтрам ...";
+	description = "Меня прислал Бальтрам. Я должен забрать посылку для него.";
 };
 
 

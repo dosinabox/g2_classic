@@ -109,7 +109,7 @@ instance DIA_DARON_PALADINE(C_INFO)
 	condition = dia_daron_paladine_condition;
 	information = dia_daron_paladine_info;
 	permanent = FALSE;
-	description = "Мне нужно поговорить с паладинами ...";
+	description = "Мне нужно поговорить с паладинами. Ты можешь помочь мне в этом?";
 };
 
 
@@ -398,7 +398,7 @@ func void dia_daron_spende_info()
 	Info_ClearChoices(dia_daron_spende);
 	if(DARON_SPENDE < 1000)
 	{
-		Info_AddChoice(dia_daron_spende,"Но у меня недостаточно золота ... (НАЗАД)",dia_daron_spende_back);
+		Info_AddChoice(dia_daron_spende,"Но у меня недостаточно золота... (НАЗАД)",dia_daron_spende_back);
 		Info_AddChoice(dia_daron_spende,"(50  золота)",dia_daron_spende_50);
 		Info_AddChoice(dia_daron_spende,"(100 золота)",dia_daron_spende_100);
 		Info_AddChoice(dia_daron_spende,"(200 золота)",dia_daron_spende_200);

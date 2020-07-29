@@ -466,7 +466,7 @@ func void dia_cassia_bevorlernen_info()
 	{
 		AI_Output(self,other,"DIA_Cassia_BevorLernen_16_02");	//Конечно. Карманное воровство и ловкость обойдутся тебе по 100 золотых монет.
 		Info_ClearChoices(dia_cassia_bevorlernen);
-		Info_AddChoice(dia_cassia_bevorlernen,"Может быть, позже ...(НАЗАД)",dia_cassia_bevorlernen_spaeter);
+		Info_AddChoice(dia_cassia_bevorlernen,"Может быть, позже... (НАЗАД)",dia_cassia_bevorlernen_spaeter);
 		if(CASSIA_TEACHPICKPOCKET == FALSE)
 		{
 			Info_AddChoice(dia_cassia_bevorlernen,"Я хочу научиться карманному воровству (заплатить 100 золотых).",dia_cassia_bevorlernen_pickpocket);

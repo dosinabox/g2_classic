@@ -376,7 +376,7 @@ instance DIA_NEORAS_BREWFORME(C_INFO)
 	condition = dia_neoras_brewforme_condition;
 	information = dia_neoras_brewforme_info;
 	permanent = TRUE;
-	description = "Свари мне ...";
+	description = "Свари мне...";
 };
 
 

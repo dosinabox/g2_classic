@@ -438,7 +438,7 @@ instance TESTAMULET(C_ITEM)
 	material = MAT_METAL;
 	description = "Амулет тестировщика";
 	text[1] = "Готика 2: Классическая";
-	text[2] = "Версия 1.1 от 12/07/2020";
+	text[2] = "Версия 1.1 от 29/07/2020";
 	inv_zbias = INVCAM_ENTF_AMULETTE_STANDARD;
 };
 

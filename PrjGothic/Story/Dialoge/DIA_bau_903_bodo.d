@@ -116,7 +116,7 @@ instance DIA_BODO_CIPHER(C_INFO)
 	condition = dia_bodo_cipher_condition;
 	information = dia_bodo_cipher_info;
 	permanent = FALSE;
-	description = "Сифер сказал мне, что кто-то украл у него тюк болотной травы ...";
+	description = "Сифер сказал мне, что кто-то украл у него тюк болотной травы...";
 };
 
 
@@ -130,7 +130,7 @@ func int dia_bodo_cipher_condition()
 
 func void dia_bodo_cipher_info()
 {
-	AI_Output(other,self,"DIA_Bodo_Cipher_15_00");	//Сифер сказал мне, что кто-то украл у него тюк болотной травы ...
+	AI_Output(other,self,"DIA_Bodo_Cipher_15_00");	//Сифер сказал мне, что кто-то украл у него тюк болотной травы...
 	AI_Output(self,other,"DIA_Bodo_Cipher_12_01");	//И?
 	AI_Output(other,self,"DIA_Bodo_Cipher_15_02");	//Он думает, что это сделал ты.
 	AI_Output(self,other,"DIA_Bodo_Cipher_12_03");	//Ох, ВОТ почему этот парень все время так пялится на меня.
@@ -146,7 +146,7 @@ instance DIA_BODO_WEEDORELSE(C_INFO)
 	condition = dia_bodo_weedorelse_condition;
 	information = dia_bodo_weedorelse_info;
 	permanent = FALSE;
-	description = "Отдай мне эту траву или ...";
+	description = "Отдай мне эту траву или...";
 };
 
 
@@ -160,7 +160,7 @@ func int dia_bodo_weedorelse_condition()
 
 func void dia_bodo_weedorelse_info()
 {
-	AI_Output(other,self,"DIA_Bodo_WeedOrElse_15_00");	//Отдай мне эту траву или ...
+	AI_Output(other,self,"DIA_Bodo_WeedOrElse_15_00");	//Отдай мне эту траву или...
 	AI_Output(self,other,"DIA_Bodo_WeedOrElse_12_01");	//Послушай, все, что у меня есть - это один косяк из болотной травы. Возьми его и оставь меня в покое.
 	b_giveinvitems(self,other,itmi_joint,1);
 	if(other.guild == GIL_NONE)

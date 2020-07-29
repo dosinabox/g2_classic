@@ -226,7 +226,7 @@ instance DIA_IGARAZ_METOO(C_INFO)
 	condition = dia_igaraz_metoo_condition;
 	information = dia_igaraz_metoo_info;
 	permanent = FALSE;
-	description = "Я тоже ...";
+	description = "Я тоже - я потребовал прохождения Испытания Огнем.";
 };
 
 

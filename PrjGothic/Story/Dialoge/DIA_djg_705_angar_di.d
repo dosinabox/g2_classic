@@ -80,7 +80,7 @@ func void dia_angar_di_orks_info()
 	AI_Output(self,other,"DIA_Angar_DI_ORKS_04_02");	//Этого недостаточно.
 	Info_ClearChoices(dia_angar_di_orks);
 	Info_AddChoice(dia_angar_di_orks,"Расслабься.",dia_angar_di_orks_no);
-	Info_AddChoice(dia_angar_di_orks,"Так помоги мне ...",dia_angar_di_orks_follow);
+	Info_AddChoice(dia_angar_di_orks,"Так помоги мне и прекрати скулить.",dia_angar_di_orks_follow);
 };
 
 func void dia_angar_di_orks_follow()

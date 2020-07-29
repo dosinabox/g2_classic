@@ -57,7 +57,7 @@ instance DIA_OPOLOS_WURST(C_INFO)
 	condition = dia_opolos_wurst_condition;
 	information = dia_opolos_wurst_info;
 	permanent = FALSE;
-	description = "Я принес баранью колбасу ...";
+	description = "Я принес баранью колбасу...";
 };
 
 
@@ -73,7 +73,7 @@ func void dia_opolos_wurst_info()
 {
 	var string novizetext;
 	var string novizeleft;
-	AI_Output(other,self,"DIA_Opolos_Wurst_15_00");	//Я принес баранью колбасу ...
+	AI_Output(other,self,"DIA_Opolos_Wurst_15_00");	//Я принес баранью колбасу...
 	AI_Output(self,other,"DIA_Opolos_Wurst_12_01");	//Ох, фантастика! Наконец-то! Вкуснейшая баранья колбаса!
 	b_giveinvitems(other,self,itfo_schafswurst,1);
 	WURST_GEGEBEN = WURST_GEGEBEN + 1;
@@ -186,7 +186,7 @@ instance DIA_OPOLOS_REZEPT(C_INFO)
 	condition = dia_opolos_rezept_condition;
 	information = dia_opolos_rezept_info;
 	permanent = TRUE;
-	description = "Насчет рецепта ...";
+	description = "Насчет рецепта...";
 };
 
 

@@ -78,7 +78,7 @@ instance DIA_ISGAROTH_WOLF(C_INFO)
 	condition = dia_isgaroth_wolf_condition;
 	information = dia_isgaroth_wolf_info;
 	permanent = FALSE;
-	description = "Меня послал Сержио ...";
+	description = "Меня послал Сержио.";
 };
 
 

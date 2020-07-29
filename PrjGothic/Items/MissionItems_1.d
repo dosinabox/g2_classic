@@ -145,8 +145,8 @@ instance ITRI_PROT_EDGE_01_VALENTINO(C_ITEM)
 	visual = "ItRi_Prot_Edge_01.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
-	on_equip = equip_valentinosring;
-	on_unequip = unequip_valentinosring;
+	on_equip = equip_itri_prot_edge_01;
+	on_unequip = unequip_itri_prot_edge_01;
 	description = "Кольцо железной кожи";
 	text[0] = "Это кольцо принадлежит Валентино.";
 	text[2] = NAME_PROT_EDGE;
@@ -157,20 +157,6 @@ instance ITRI_PROT_EDGE_01_VALENTINO(C_ITEM)
 	inv_rotz = INVCAM_Z_RING_STANDARD;
 	inv_rotx = INVCAM_X_RING_STANDARD;
 };
-
-
-func void equip_valentinosring()
-{
-	self.protection[PROT_EDGE] += RI_PROTEDGE;
-	self.protection[PROT_BLUNT] += RI_PROTEDGE;
-};
-
-func void unequip_valentinosring()
-{
-	self.protection[PROT_EDGE] -= RI_PROTEDGE;
-	self.protection[PROT_BLUNT] -= RI_PROTEDGE;
-};
-
 
 instance ITKE_DEXTER(C_ITEM)
 {
@@ -927,8 +913,8 @@ instance ITRI_PROT_POINT_01_MIS(C_ITEM)
 	visual = "ItRi_Prot_Point_01.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
-	on_equip = equip_itri_prot_point_01_mis;
-	on_unequip = unequip_itri_prot_point_01_mis;
+	on_equip = equip_itri_prot_point_01;
+	on_unequip = unequip_itri_prot_point_01;
 	description = "Кольцо деревянной кожи";
 	text[0] = "Это кольцо принадлежит Константино.";
 	text[2] = NAME_PROT_POINT;
@@ -939,18 +925,6 @@ instance ITRI_PROT_POINT_01_MIS(C_ITEM)
 	inv_rotz = INVCAM_Z_RING_STANDARD;
 	inv_rotx = INVCAM_X_RING_STANDARD;
 };
-
-
-func void equip_itri_prot_point_01_mis()
-{
-	self.protection[PROT_POINT] += RI_PROTPOINT;
-};
-
-func void unequip_itri_prot_point_01_mis()
-{
-	self.protection[PROT_POINT] -= RI_PROTPOINT;
-};
-
 
 instance ITMI_EDDASSTATUE(C_ITEM)
 {

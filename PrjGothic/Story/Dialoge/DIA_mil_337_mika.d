@@ -238,7 +238,7 @@ func int dia_mika_hilfe_condition()
 func void dia_mika_hilfe_info()
 {
 	AI_Output(other,self,"DIA_Mika_HILFE_15_00");	//Мне нужна твоя помощь.
-	AI_Output(self,other,"DIA_Mika_HILFE_12_01");	//Если это так необходимо ... Что случилось?
+	AI_Output(self,other,"DIA_Mika_HILFE_12_01");	//Если это так необходимо... Что случилось?
 	Info_ClearChoices(dia_mika_hilfe);
 	Info_AddChoice(dia_mika_hilfe,"Меня преследуют бандиты.",dia_mika_hilfe_schongut);
 	Info_AddChoice(dia_mika_hilfe,"На меня напали монстры.",dia_mika_hilfe_monster);

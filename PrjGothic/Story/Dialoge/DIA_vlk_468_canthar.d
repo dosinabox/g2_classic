@@ -402,7 +402,7 @@ instance DIA_CANTHAR_SARAHERLEDIGT(C_INFO)
 	condition = dia_canthar_saraherledigt_condition;
 	information = dia_canthar_saraherledigt_info;
 	permanent = TRUE;
-	description = "Насчет Сары ...";
+	description = "Насчет Сары...";
 };
 
 
@@ -448,7 +448,7 @@ instance DIA_CANTHAR_SUCCESS(C_INFO)
 	condition = dia_canthar_success_condition;
 	information = dia_canthar_success_info;
 	permanent = FALSE;
-	description = "Насчет Сары ...";
+	description = "Насчет Сары...";
 };
 
 
@@ -558,7 +558,7 @@ func void dia_canthar_pay_info()
 	Info_ClearChoices(dia_canthar_pay);
 	if(Npc_HasItems(other,itmi_gold) >= CANTHAR_GOLD)
 	{
-		Info_AddChoice(dia_canthar_pay,"Хорошо, я заплачу ...",dia_canthar_pay_ja);
+		Info_AddChoice(dia_canthar_pay,"Хорошо, я заплачу, ты не оставляешь мне выбора.",dia_canthar_pay_ja);
 	};
 	Info_AddChoice(dia_canthar_pay,"У меня нет с собой столько денег...",dia_canthar_pay_nein);
 	Info_AddChoice(dia_canthar_pay,"Сколько там нужно?",dia_canthar_pay_wieviel);

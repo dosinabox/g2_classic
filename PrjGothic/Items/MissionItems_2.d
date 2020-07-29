@@ -521,3 +521,25 @@ func void usegilbertletter()
 	Doc_Show(ndocid);
 };
 
+instance ITRI_HP_01_TENGRON(C_Item)
+{
+	name = NAME_RING;
+	mainflag = ITEM_KAT_MAGIC;
+	flags = ITEM_RING;
+	value = VALUE_RI_HP;
+	visual = "ItRi_Hp_01.3ds";
+	visual_skin = 0;
+	material = MAT_METAL;
+	on_equip = equip_itri_hp_01;
+	on_unequip = unequip_itri_hp_01;
+	description = "Кольцо жизни";
+	text[0] = "Это кольцо принадлежит Тенгрону.";
+	text[2] = NAME_BONUS_HPMAX;
+	count[2] = RI_HP;
+	text[5] = NAME_VALUE;
+	count[5] = value;
+	inv_zbias = INVCAM_ENTF_RING_STANDARD;
+	inv_rotz = INVCAM_Z_RING_STANDARD;
+	inv_rotx = INVCAM_X_RING_STANDARD;
+};
+

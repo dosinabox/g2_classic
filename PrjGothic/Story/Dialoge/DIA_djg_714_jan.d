@@ -535,7 +535,7 @@ instance DIA_JAN_DRAGONPLETTBERICHT(C_INFO)
 	nr = 3;
 	condition = dia_jan_dragonplettbericht_condition;
 	information = dia_jan_dragonplettbericht_info;
-	description = "Насчет драконов ...";
+	description = "Насчет драконов...";
 };
 
 

@@ -53,7 +53,7 @@ func int dia_fajeth_first_condition()
 func void dia_fajeth_first_info()
 {
 	AI_Output(self,other,"DIA_Fajeth_First_12_00");	//Кто ты такой и что ты делаешь здесь?
-	AI_Output(other,self,"DIA_Fajeth_First_15_01");	//Я пришел по приказу лорда Хагена ...
+	AI_Output(other,self,"DIA_Fajeth_First_15_01");	//Я пришел по приказу лорда Хагена...
 	AI_Output(self,other,"DIA_Fajeth_First_12_02");	//Тогда тебе нужно попытаться добраться до замка. Командующий Гаронд там. Он главнокомандующий этой экспедицией.
 	AI_StopProcessInfos(self);
 };
@@ -81,7 +81,7 @@ func int dia_fajeth_hallo_condition()
 func void dia_fajeth_hallo_info()
 {
 	AI_Output(self,other,"DIA_Fajeth_Hallo_12_00");	//Откуда ты пришел?
-	AI_Output(other,self,"DIA_Fajeth_Hallo_15_01");	//Я пришел по приказу Гаронда ...
+	AI_Output(other,self,"DIA_Fajeth_Hallo_15_01");	//Я пришел по приказу Гаронда...
 	AI_Output(self,other,"DIA_Fajeth_Hallo_12_02");	//Очень хорошо. Мне очень нужны новые люди.
 	AI_Output(other,self,"DIA_Fajeth_Hallo_15_03");	//Я здесь не для того, чтобы помогать тебе.
 	AI_Output(self,other,"DIA_Fajeth_Hallo_12_04");	//Нет? Тогда зачем ты пришел?
@@ -105,7 +105,7 @@ func void dia_fajeth_hallo_info()
 		AI_Output(self,other,"DIA_Fajeth_Hallo_12_10");	//Послушай - я не знаю, зачем Гаронд прислал мне наемника - но, должно быть, у него были на то причины.
 		AI_Output(self,other,"DIA_Fajeth_Hallo_12_11");	//Но прежде чем я отправлю тебя назад, ты должен выполнить одно задание для меня.
 		Info_AddChoice(dia_fajeth_hallo,"У всего есть своя цена.",dia_fajeth_hallo_sldja);
-		Info_AddChoice(dia_fajeth_hallo,"Нет, у меня нет времени ...",dia_fajeth_hallo_sldnein);
+		Info_AddChoice(dia_fajeth_hallo,"Нет, у меня нет времени на то, чтобы решать твои проблемы.",dia_fajeth_hallo_sldnein);
 	};
 };
 

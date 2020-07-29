@@ -86,7 +86,7 @@ func void dia_lares_hallo_info()
 	};
 	Info_ClearChoices(dia_lares_hallo);
 	Info_AddChoice(dia_lares_hallo,"Мы уже встречались раньше?",dia_lares_hallo_no);
-	Info_AddChoice(dia_lares_hallo,"Эй, Ларес, старый пройдоха ...",dia_lares_hallo_yes);
+	Info_AddChoice(dia_lares_hallo,"Эй, Ларес, старый пройдоха! А как ты попал сюда?",dia_lares_hallo_yes);
 };
 
 func void dia_lares_hallo_no()

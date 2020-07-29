@@ -1116,7 +1116,7 @@ func void dia_andre_found_peck_info()
 	AI_Output(other,self,"DIA_Andre_FOUND_PECK_15_00");	//Мне удалось найти Пека.
 	AI_Output(self,other,"DIA_Andre_FOUND_PECK_08_01");	//Да, он уже вернулся на свой пост и приступил к выполнению своих обязанностей. Где ты нашел его?
 	Info_ClearChoices(dia_andre_found_peck);
-	Info_AddChoice(dia_andre_found_peck,"Я случайно наткнулся на него ...",dia_andre_found_peck_somewhere);
+	Info_AddChoice(dia_andre_found_peck,"Я случайно наткнулся на него в городе.",dia_andre_found_peck_somewhere);
 	Info_AddChoice(dia_andre_found_peck,"В 'Красном Фонаре'...",dia_andre_found_peck_redlight);
 };
 

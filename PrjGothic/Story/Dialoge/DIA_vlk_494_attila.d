@@ -158,7 +158,7 @@ func void dia_attila_hallo_warum()
 	};
 	AI_Output(self,other,"DIA_Attila_Hallo_Warum_09_04");	//ћои хоз€ева недовольны этим. „тобы не дать тебе совершить еще одну ошибку, они послали мен€.
 	Info_ClearChoices(dia_attila_hallo);
-	Info_AddChoice(dia_attila_hallo,"я могу дать тебе золото ...",dia_attila_hallo_gold);
+	Info_AddChoice(dia_attila_hallo,"я могу дать тебе золото - много золота.",dia_attila_hallo_gold);
 	Info_AddChoice(dia_attila_hallo,"ƒай мне хот€ бы вынуть свое оружие.",dia_attila_hallo_attacke);
 };
 

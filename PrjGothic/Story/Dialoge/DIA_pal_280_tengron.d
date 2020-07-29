@@ -107,7 +107,7 @@ func void dia_tengron_news_info()
 	AI_Output(self,other,"DIA_Tengron_News_07_05");	//Я хочу, чтобы ты передал ему это кольцо. Пусть он сохранит его ради меня. Скажи ему, я заберу кольцо, когда вернусь.
 	Info_ClearChoices(dia_tengron_news);
 	Info_AddChoice(dia_tengron_news,"У меня нет времени на это.",dia_tengron_news_no);
-	Info_AddChoice(dia_tengron_news,"Нет проблем ...",dia_tengron_news_yes);
+	Info_AddChoice(dia_tengron_news,"Нет проблем.",dia_tengron_news_yes);
 };
 
 func void dia_tengron_news_no()
@@ -121,7 +121,7 @@ func void dia_tengron_news_yes()
 {
 	AI_Output(other,self,"DIA_Tengron_News_Yes_15_00");	//Нет проблем. Когда я буду в замке, я передам это кольцо Удару.
 	AI_Output(self,other,"DIA_Tengron_News_Yes_07_01");	//Хорошо. Магия этого кольца придаст Удару силу. И не забудь сказать ему, что я потом заберу его.
-	b_giveinvitems(self,other,itri_hp_01,1);
+	b_giveinvitems(self,other,itri_hp_01_tengron,1);
 	Info_ClearChoices(dia_tengron_news);
 	Log_CreateTopic(TOPIC_TENGRONRING,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_TENGRONRING,LOG_RUNNING);
@@ -163,7 +163,7 @@ instance DIA_TENGRON_HELP(C_INFO)
 	condition = dia_tengron_help_condition;
 	information = dia_tengron_help_info;
 	permanent = FALSE;
-	description = "Мне нужна твоя помощь ...";
+	description = "Мне нужна твоя помощь.";
 };
 
 

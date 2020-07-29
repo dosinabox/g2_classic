@@ -498,7 +498,7 @@ instance DIA_SERPENTES_MINENANTEILEBRINGEN(C_INFO)
 	condition = dia_serpentes_minenanteilebringen_condition;
 	information = dia_serpentes_minenanteilebringen_info;
 	permanent = TRUE;
-	description = "Насчет поддельных акций ...";
+	description = "Насчет поддельных акций...";
 };
 
 

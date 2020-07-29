@@ -591,7 +591,7 @@ instance DIA_PYROKAR_NACHRICHT(C_INFO)
 	condition = dia_pyrokar_nachricht_condition;
 	information = dia_pyrokar_nachricht_info;
 	permanent = FALSE;
-	description = "Я принес новости от лорда Хагена ...";
+	description = "Я принес новости от лорда Хагена.";
 };
 
 
@@ -756,7 +756,7 @@ instance DIA_PYROKAR_PARLAN(C_INFO)
 	condition = dia_pyrokar_parlan_condition;
 	information = dia_pyrokar_parlan_info;
 	permanent = FALSE;
-	description = "Меня прислал Парлан ...";
+	description = "Меня прислал Парлан.";
 };
 
 
@@ -1143,7 +1143,7 @@ instance DIA_PYROKAR_XARDASVERTRAUEN(C_INFO)
 	nr = 30;
 	condition = dia_pyrokar_xardasvertrauen_condition;
 	information = dia_pyrokar_xardasvertrauen_info;
-	description = "Без тебя ничего не получится ...";
+	description = "Без тебя ничего не получится. Ватрас не сможет провести этот ритуал.";
 };
 
 

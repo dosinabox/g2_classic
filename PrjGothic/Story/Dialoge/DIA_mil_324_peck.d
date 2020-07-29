@@ -122,7 +122,7 @@ func void dia_peck_found_peck_info()
 	AI_Output(other,self,"DIA_Peck_FOUND_PECK_15_02");	//Мне нужно оружие, так что возвращайся в казармы.
 	AI_Output(self,other,"DIA_Peck_FOUND_PECK_12_03");	//Черт, твое оружие может подождать.
 	AI_Output(other,self,"DIA_Peck_FOUND_PECK_15_04");	//Пошли, Андрэ уже тоже ищет тебя.
-	AI_Output(self,other,"DIA_Peck_FOUND_PECK_12_05");	//Хммм ... черт. Ладно, я уже иду - но когда будешь докладывать Андрэ, не говори ему, что я был здесь.
+	AI_Output(self,other,"DIA_Peck_FOUND_PECK_12_05");	//Хммм... черт. Ладно, я уже иду - но когда будешь докладывать Андрэ, не говори ему, что я был здесь.
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"STORAGE");
 	Npc_ExchangeRoutine(vanja,"ALONE");
@@ -169,7 +169,7 @@ func void dia_peck_weapon_info()
 		else if(MIS_ANDRE_PECK == LOG_SUCCESS)
 		{
 			AI_Output(self,other,"DIA_Peck_WEAPON_12_04");	//Я не забуду тебе этого. Кто сказал Андрэ, что я был в Красном Фонаре, а?
-			AI_Output(self,other,"DIA_Peck_WEAPON_12_05");	//И теперь ты хочешь получить от меня меч ... хорошо, ты получишь меч. Вот. А теперь пошел к черту!
+			AI_Output(self,other,"DIA_Peck_WEAPON_12_05");	//И теперь ты хочешь получить от меня меч... хорошо, ты получишь меч. Вот. А теперь пошел к черту!
 			b_giveinvitems(self,hero,itmw_1h_misc_sword,1);
 		};
 		DIA_PECK_WEAPON_PERM = TRUE;
@@ -215,7 +215,7 @@ func void dia_peck_weapon2_info()
 	}
 	else if(KAPITEL < 3)
 	{
-		AI_Output(self,other,"DIA_Peck_Add_12_02");	//Пока нет ...
+		AI_Output(self,other,"DIA_Peck_Add_12_02");	//Пока нет...
 	}
 	else
 	{

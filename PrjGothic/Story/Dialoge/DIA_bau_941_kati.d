@@ -133,7 +133,7 @@ instance DIA_KATI_BALTRAM(C_INFO)
 	condition = dia_kati_baltram_condition;
 	information = dia_kati_baltram_info;
 	permanent = FALSE;
-	description = "Меня прислал Бальтрам ...";
+	description = "Меня прислал Бальтрам. Я должен забрать посылку для него.";
 };
 
 

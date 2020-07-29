@@ -58,7 +58,7 @@ instance DIA_UDAR_YOUAREBEST(C_INFO)
 	condition = dia_udar_youarebest_condition;
 	information = dia_udar_youarebest_info;
 	permanent = FALSE;
-	description = "Я слышал, что ты ЛУЧШИЙ арбалетчик ...";
+	description = "Я слышал, что ты ЛУЧШИЙ арбалетчик во всей округе.";
 };
 
 
@@ -245,13 +245,13 @@ instance DIA_UDAR_RING(C_INFO)
 	condition = dia_udar_ring_condition;
 	information = dia_udar_ring_info;
 	permanent = FALSE;
-	description = "Вот, я принес тебе кольцо Тенгрона ...";
+	description = "Вот, я принес тебе кольцо Тенгрона.";
 };
 
 
 func int dia_udar_ring_condition()
 {
-	if(Npc_HasItems(other,itri_hp_01) >= 1)
+	if(Npc_HasItems(other,itri_hp_01_tengron))
 	{
 		return TRUE;
 	};
@@ -262,7 +262,7 @@ func void dia_udar_ring_info()
 	AI_Output(other,self,"DIA_Udar_Ring_15_00");	//Вот, я принес тебе кольцо Тенгрона. Оно будет защищать тебя. Тенгрон говорит, что он когда-нибудь вернется и заберет это кольцо назад.
 	AI_Output(self,other,"DIA_Udar_Ring_09_01");	//Что? Да ты знаешь, что это за кольцо? Он получил эту награду за мужество, проявленное в бою.
 	AI_Output(self,other,"DIA_Udar_Ring_09_02");	//Говоришь, что он хочет забрать его назад? Если такова воля Инноса, так и будет. Если такова воля Инноса...
-	b_giveinvitems(other,self,itri_hp_01,1);
+	b_giveinvitems(other,self,itri_hp_01_tengron,1);
 	TENGRONRING = TRUE;
 	b_giveplayerxp(XP_TENGRONRING);
 };

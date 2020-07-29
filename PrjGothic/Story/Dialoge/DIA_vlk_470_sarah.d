@@ -229,7 +229,7 @@ instance DIA_SARAH_SUCCESS(C_INFO)
 	condition = dia_sarah_success_condition;
 	information = dia_sarah_success_info;
 	permanent = FALSE;
-	description = " антар пыталс€ подставить теб€ ...";
+	description = " антар пыталс€ подставить теб€ и заполучить твой прилавок.";
 };
 
 

@@ -134,7 +134,7 @@ func void dia_bdt_1013_bandit_where_notrap()
 	AI_Output(self,other,"DIA_BDT_1013_BANDIT_WHERE_NOTRAP_01_02");	//Либо ты сейчас идешь со мной, либо забудь о том, что я тебе говорил!
 	Info_ClearChoices(dia_bdt_1013_bandit_where);
 	Info_AddChoice(dia_bdt_1013_bandit_where,"Может быть, позже...",dia_bdt_1013_bandit_where_later);
-	Info_AddChoice(dia_bdt_1013_bandit_where,"Кое-кто уже пытался провести меня ...",dia_bdt_1013_bandit_where_damals);
+	Info_AddChoice(dia_bdt_1013_bandit_where,"Полегче, приятель! Кое-кто уже пытался провести меня...",dia_bdt_1013_bandit_where_damals);
 	Info_AddChoice(dia_bdt_1013_bandit_where,"Хорошо! Ты идешь первым!",dia_bdt_1013_bandit_where_yes);
 };
 

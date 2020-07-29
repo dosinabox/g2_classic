@@ -97,7 +97,7 @@ instance DIA_RANDOLPH_BALTRAM(C_INFO)
 	condition = dia_randolph_baltram_condition;
 	information = dia_randolph_baltram_info;
 	permanent = FALSE;
-	description = "Меня прислал Бальтрам ...";
+	description = "Меня прислал Бальтрам. Я должен забрать пакет для него.";
 };
 
 
