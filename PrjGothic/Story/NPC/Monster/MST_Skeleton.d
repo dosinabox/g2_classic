@@ -59,8 +59,8 @@ instance SKELETON(MST_DEFAULT_SKELETON)
 instance SUMMONED_SKELETON(MST_DEFAULT_SKELETON)
 {
 	name[0] = "Вызванный скелет";
-	guild = gil_summoned_skeleton;
-	aivar[AIV_MM_REAL_ID] = id_summoned_skeleton;
+	guild = GIL_SUMMONED_SKELETON;
+	aivar[AIV_MM_REAL_ID] = ID_SUMMONED_SKELETON;
 	level = 0;
 	attribute[ATR_STRENGTH] = 60;
 	attribute[ATR_DEXTERITY] = 60;

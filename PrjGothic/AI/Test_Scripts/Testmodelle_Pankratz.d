@@ -330,7 +330,7 @@ func void sh_oldworld_kapitel4anfang()
 	b_kapitelwechsel(3,OLDWORLD_ZEN);
 	PLAYER_TALENT_ALCHEMY[CHARGE_INNOSEYE] = TRUE;
 	PrintScreen(PRINT_LEARNALCHEMYINNOSEYE,-1,-1,FONT_SCREEN,2);
-	CreateInvItems(self,itmi_innoseye_mis,1);
+	CreateInvItems(hero,itmi_innoseye_mis,1);
 	MIS_READYFORCHAPTER4 = TRUE;
 	b_npc_isalivecheck(OLDWORLD_ZEN);
 	b_kapitelwechsel(4,OLDWORLD_ZEN);

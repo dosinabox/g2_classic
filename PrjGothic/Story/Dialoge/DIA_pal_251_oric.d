@@ -316,10 +316,10 @@ func void dia_oric_needstuff_info()
 	AI_Output(self,other,"DIA_Oric_NeedStuff_11_01");	//У нас мало что осталось, чем мы могли бы поделиться с тобой.
 	AI_Output(self,other,"DIA_Oric_NeedStuff_11_02");	//Ну, я могу предложить тебе вот это.
 	Info_ClearChoices(dia_oric_needstuff);
-	Info_AddChoice(dia_oric_needstuff,"или 1 эликсира ловкости",dia_oric_needstuff_dexterity);
-	Info_AddChoice(dia_oric_needstuff,"или 1 эликсира силы",dia_oric_needstuff_strength);
-	Info_AddChoice(dia_oric_needstuff,"или 3 эликсира маны",dia_oric_needstuff_mana);
-	Info_AddChoice(dia_oric_needstuff,"3 лечебных эликсира",dia_oric_needstuff_health);
+	Info_AddChoice(dia_oric_needstuff,"(выбрать эликсир ловкости)",dia_oric_needstuff_dexterity);
+	Info_AddChoice(dia_oric_needstuff,"(выбрать эликсир силы)",dia_oric_needstuff_strength);
+	Info_AddChoice(dia_oric_needstuff,"(выбрать 3 эликсира маны)",dia_oric_needstuff_mana);
+	Info_AddChoice(dia_oric_needstuff,"(выбрать 3 лечебных эликсира)",dia_oric_needstuff_health);
 };
 
 func void dia_oric_needstuff_health()
@@ -336,7 +336,7 @@ func void dia_oric_needstuff_mana()
 	AI_Output(other,self,"DIA_Oric_NeedStuff_Mana_15_00");	//Я возьму эти зелья маны.
 	AI_Output(self,other,"DIA_Oric_NeedStuff_Mana_11_01");	//Надеюсь, они помогут тебе. Да хранит тебя Иннос.
 	CreateInvItems(self,itpo_mana_03,3);
-	b_giveinvitems(self,other,itpo_health_03,3);
+	b_giveinvitems(self,other,itpo_mana_03,3);
 	Info_ClearChoices(dia_oric_needstuff);
 };
 

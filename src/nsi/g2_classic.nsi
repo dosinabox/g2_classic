@@ -9,8 +9,8 @@
 ##            Основное           ##
 ###################################
 
-!define MOD_VERSION "1.0"
-!define MOD_DATE "4.8"
+!define MOD_VERSION "1.1"
+!define MOD_DATE "9.3"
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
 !define MOD_AUTHOR "D36, Kor Angar"
@@ -54,7 +54,7 @@ Caption "${MOD_NAME_RU} (v${MOD_VERSION}) - установка"
 
 !define MUI_TEXT_DIRECTORY_SUBTITLE " "
 DirText "Программа установит модификацию в указанную папку. \
-$\n$\nЧтобы установить модификацию в другую папку, нажмите кнопку 'Обзор ...' и укажите ее."
+$\n$\nЧтобы установить модификацию в другую папку, нажмите кнопку 'Обзор ...' и укажите ее. Если кнопка 'Далее' остается неактивной, то сначала установите Player Kit - официальный набор для запуска модов."
 
 !define MUI_COMPONENTSPAGE_NODESC
 SpaceTexts none
@@ -101,15 +101,6 @@ BrandingText " "
 !insertmacro MUI_LANGUAGE "Russian"
 
 ###################################
-##            Макросы            ##
-###################################
-
-!macro GMF_Delete FILENAME
-	IfFileExists "${FILENAME}" "" +2
-	Delete "${FILENAME}"
-!macroend
-
-###################################
 ##          Инсталляция          ##
 ###################################
 
@@ -150,7 +141,13 @@ SectionEnd
 
 Section "Un.Удалить модификацию" SecUninstall_Main
 	SectionIn RO
-	Call Un.GMF_Delete_Components
+	Delete "$INSTDIR\${MOD_NAME_SYS}_readme.txt"
+	Delete "$INSTDIR\system\${MOD_NAME_SYS}.ico"
+	Delete "$INSTDIR\system\${MOD_NAME_SYS}.ini"
+	Delete "$INSTDIR\system\${MOD_NAME_SYS}.rtf"
+	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}.mod"
+	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_hotfix.mod"
+	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits.bik"
 	Delete "$INSTDIR\${UNINSTALLER_NAME}.exe"
 	DeleteRegKey HKLM "${REGISTRY_PATH}"
 SectionEnd
@@ -176,14 +173,4 @@ Function .onVerifyInstDir
 	IfFileExists "$INSTDIR\system\GothicStarter.exe" CheckIsSuccessful
 	Abort
 	CheckIsSuccessful:
-FunctionEnd
-
-Function Un.GMF_Delete_Components
-	!insertmacro GMF_Delete "$INSTDIR\${MOD_NAME_SYS}_readme.txt"
-	!insertmacro GMF_Delete "$INSTDIR\system\${MOD_NAME_SYS}.ico"
-	!insertmacro GMF_Delete "$INSTDIR\system\${MOD_NAME_SYS}.ini"
-	!insertmacro GMF_Delete "$INSTDIR\system\${MOD_NAME_SYS}.rtf"
-	!insertmacro GMF_Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}.mod"
-	!insertmacro GMF_Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_hotfix.mod"
-	!insertmacro GMF_Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits.bik"
 FunctionEnd

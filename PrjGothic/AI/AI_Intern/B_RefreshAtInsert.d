@@ -15,20 +15,20 @@ func void b_refreshatinsert()
 			if(self.guild == GIL_MIL)
 			{
 				CreateInvItems(self,itmw_1h_bau_mace,1);
-			};
-			if(self.guild == GIL_PAL)
+			}
+			else if(self.guild == GIL_PAL)
 			{
 				CreateInvItems(self,itmw_1h_bau_mace,1);
-			};
-			if(self.guild == GIL_SLD)
+			}
+			else if(self.guild == GIL_SLD)
 			{
 				CreateInvItems(self,itmw_1h_bau_mace,1);
-			};
-			if(self.guild == GIL_BAU)
+			}
+			else if(self.guild == GIL_BAU)
 			{
 				CreateInvItems(self,itmw_1h_bau_mace,1);
-			};
-			if(self.guild == GIL_NOV)
+			}
+			else if(self.guild == GIL_NOV)
 			{
 				CreateInvItems(self,itmw_1h_bau_mace,1);
 			};

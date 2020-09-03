@@ -43,8 +43,8 @@ instance GOBBO_SKELETON(MST_DEFAULT_GOBBO_SKELETON)
 instance SUMMONED_GOBBO_SKELETON(MST_DEFAULT_GOBBO_SKELETON)
 {
 	name[0] = "Вызванный скелет";
-	guild = gil_summoned_gobbo_skeleton;
-	aivar[AIV_MM_REAL_ID] = id_summoned_gobbo_skeleton;
+	guild = GIL_SUMMONED_GOBBO_SKELETON;
+	aivar[AIV_MM_REAL_ID] = ID_SUMMONED_GOBBO_SKELETON;
 	level = 0;
 	aivar[AIV_PARTYMEMBER] = TRUE;
 	b_setattitude(self,ATT_FRIENDLY);

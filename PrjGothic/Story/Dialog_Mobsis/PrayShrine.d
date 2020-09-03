@@ -97,7 +97,7 @@ instance PC_PRAYSHRINE_HEALSHRINE(C_INFO)
 
 func int pc_prayshrine_healshrine_condition()
 {
-	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && Npc_HasItems(hero,itmi_ultharsholywater_mis) && (SHRINEISOBSESSED == TRUE))
+	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && Npc_HasItems(hero,itmi_ultharsholywater_mis) && (SHRINEISOBSESSED == TRUE) && (CURRENTLEVEL != DRAGONISLAND_ZEN))
 	{
 		return TRUE;
 	};
@@ -142,10 +142,22 @@ func void prayshrine_s1()
 		};
 		self.aivar[AIV_INVINCIBLE] = TRUE;
 		PLAYER_MOBSI_PRODUCTION = MOBSI_PRAYSHRINE;
-		AI_ProcessInfos(her);
+		AI_ProcessInfos(self);
 	};
 };
 
+func void prayidol_s1()
+{
+	var C_NPC her;
+	her = Hlp_GetNpc(pc_hero);
+	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{
+		Wld_PlayEffect("DEMENTOR_FX",hero,hero,0,0,0,FALSE);
+		self.aivar[AIV_INVINCIBLE] = TRUE;
+		PLAYER_MOBSI_PRODUCTION = MOBSI_PRAYSHRINE;
+		AI_ProcessInfos(self);
+	};
+};
 
 instance PC_PRAYSHRINE_END(C_INFO)
 {
@@ -185,7 +197,7 @@ instance PC_PRAYSHRINE_PALADINE(C_INFO)
 
 func int pc_prayshrine_paladine_condition()
 {
-	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && (MIS_MARDUKBETEN == LOG_RUNNING) && (KAPITEL == 1))
+	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && (MIS_MARDUKBETEN == LOG_RUNNING) && (KAPITEL == 1) && (CURRENTLEVEL != DRAGONISLAND_ZEN))
 	{
 		return TRUE;
 	};
@@ -213,7 +225,7 @@ instance PC_PRAYSHRINE_PRAY(C_INFO)
 
 func int pc_prayshrine_pray_condition()
 {
-	if(PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE)
+	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && (CURRENTLEVEL != DRAGONISLAND_ZEN))
 	{
 		return TRUE;
 	};
@@ -427,7 +439,7 @@ instance PC_PRAYSHRINE_BLESSSWORD(C_INFO)
 
 func int pc_prayshrine_blesssword_condition()
 {
-	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && (hero.guild == GIL_PAL) && (Npc_GetDistToWP(hero,"NW_MONASTERY_CHAPELL_02") <= 500) && ((Npc_HasItems(hero,itmw_1h_blessed_01) >= 1) || (Npc_HasItems(hero,itmw_2h_blessed_01) >= 1)))
+	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && (hero.guild == GIL_PAL) && (Npc_GetDistToWP(hero,"NW_MONASTERY_CHAPELL_02") <= 500) && ((Npc_HasItems(hero,itmw_1h_blessed_01) >= 1) || (Npc_HasItems(hero,itmw_2h_blessed_01) >= 1)) && (CURRENTLEVEL != DRAGONISLAND_ZEN))
 	{
 		return TRUE;
 	};
@@ -483,7 +495,7 @@ instance PC_PRAYSHRINE_BLESSSWORD_FINAL(C_INFO)
 
 func int pc_prayshrine_blesssword_final_condition()
 {
-	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && (hero.guild == GIL_PAL) && (Npc_GetDistToWP(hero,"NW_MONASTERY_CHAPELL_02") <= 500) && (PAL_KNOWSABOUT_FINAL_BLESSING == TRUE) && ((Npc_HasItems(hero,itmw_1h_blessed_02) >= 1) || (Npc_HasItems(hero,itmw_2h_blessed_02) >= 1)))
+	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PRAYSHRINE) && (hero.guild == GIL_PAL) && (Npc_GetDistToWP(hero,"NW_MONASTERY_CHAPELL_02") <= 500) && (PAL_KNOWSABOUT_FINAL_BLESSING == TRUE) && ((Npc_HasItems(hero,itmw_1h_blessed_02) >= 1) || (Npc_HasItems(hero,itmw_2h_blessed_02) >= 1)) && (CURRENTLEVEL != DRAGONISLAND_ZEN))
 	{
 		return TRUE;
 	};

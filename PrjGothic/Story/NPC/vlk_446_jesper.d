@@ -2,7 +2,7 @@
 instance VLK_446_JESPER(NPC_DEFAULT)
 {
 	name[0] = "Джеспер";
-	guild = GIL_BDT;
+	guild = GIL_OUT;
 	id = 446;
 	voice = 9;
 	flags = 0;

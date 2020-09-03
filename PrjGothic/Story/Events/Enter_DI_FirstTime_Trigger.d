@@ -27,7 +27,7 @@ func void enter_di_firsttime_trigger()
 				b_logentry(TOPIC_HALLENVONIRDORATH,"ѕрошлой ночью мне приснилс€ сон. —о мной говорил  сардас, он попросил мен€ подойти к алхимическому столу на корабле, чтобы забрать кое-что с него. Ёто очень странно, но € ничего не пил вчера вечером.");
 			};
 			Wld_InsertItem(itmi_flask,"FP_ITEM_SHIP_06");
-			if(((Npc_HasItems(hero,itat_icedragonheart) >= 1) || (Npc_HasItems(hero,itat_rockdragonheart) >= 1) || (Npc_HasItems(hero,itat_firedragonheart) >= 1) || (Npc_HasItems(hero,itat_swampdragonheart) >= 1)) == FALSE)
+			if(!Npc_HasItems(hero,itat_icedragonheart) && !Npc_HasItems(hero,itat_rockdragonheart) && !Npc_HasItems(hero,itat_firedragonheart) && !Npc_HasItems(hero,itat_swampdragonheart))
 			{
 				CreateInvItems(orkelite_antipaladinorkoberst_di,itat_rockdragonheart,1);
 			};
@@ -88,8 +88,7 @@ func void enter_di_firsttime_trigger()
 		};
 		if(GORN_ISONBOARD == LOG_SUCCESS)
 		{
-			Log_AddEntry(TOPIC_MYCREW,"√орн ни разу не прилег за врем€ нашего путешестви€. ќн будет присматривать за кораблем. я думаю, корабль будет в надежных руках.");
-			Log_AddEntry(TOPIC_MYCREW,"√орн может помочь мне научитьс€ лучше владеть двуручным оружием.");
+			Log_AddEntry(TOPIC_MYCREW,"√орн ни разу не прилег за врем€ нашего путешестви€. ќн будет присматривать за кораблем. я думаю, корабль будет в надежных руках. “акже √орн может помочь мне научитьс€ лучше владеть двуручным оружием.");
 		};
 		if(LARES_ISONBOARD == LOG_SUCCESS)
 		{

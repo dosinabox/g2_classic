@@ -30,7 +30,7 @@ instance DIA_GUNNAR_HALLO(C_INFO)
 	condition = dia_gunnar_hallo_condition;
 	information = dia_gunnar_hallo_info;
 	permanent = TRUE;
-	description = "Что новенького?";
+	description = "Как дела?";
 };
 
 
@@ -70,7 +70,7 @@ instance DIA_GUNNAR_EVERYWHERE(C_INFO)
 	nr = 2;
 	condition = dia_gunnar_everywhere_condition;
 	information = dia_gunnar_everywhere_info;
-	permanent = TRUE;
+	permanent = FALSE;
 	description = "Наемники приходят отовсюду?";
 };
 
@@ -181,7 +181,7 @@ instance DIA_GUNNAR_PICKPOCKET(C_INFO)
 	condition = dia_gunnar_pickpocket_condition;
 	information = dia_gunnar_pickpocket_info;
 	permanent = TRUE;
-	description = PICKPOCKET_40;
+	description = PICKPOCKET_60;
 };
 
 

@@ -84,188 +84,188 @@ func void b_givetradeinv(var C_NPC slf)
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_engor(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_matteo))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_matteo))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_matteo(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_halvor))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_halvor))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_halvor(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bosper))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bosper))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_bosper(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_harad))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_harad))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_harad(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brian))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brian))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_brian(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brahim))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brahim))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_brahim(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_constantino))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_constantino))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_constantino(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kardif))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kardif))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_kardif(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_zuris))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_zuris))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_zuris(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_baltram))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_baltram))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_baltram(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_canthar))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_canthar))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_canthar(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sarah))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sarah))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_sarah(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_jora))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_jora))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_jora(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_hakon))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_hakon))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_hakon(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_coragon))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_coragon))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_coragon(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gorax))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gorax))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_gorax(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_orlan))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_orlan))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_orlan(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_bennet(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet_di))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_bennet_di(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_elena))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_elena))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_elena(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sagitta))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sagitta))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_sagitta(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kjorn))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kjorn))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_kjorn(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rethon))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rethon))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_rethon(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rosi))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rosi))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_rosi(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_ignaz))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_ignaz))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_ignaz(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_milten_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_milten_di))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_milten_di(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_vatras_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_vatras_di))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_vatras_di(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_diego_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_diego_di))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_diego_di(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_tandor))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_tandor))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_tandor(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sengrath))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sengrath))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_sengrath(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_isgaroth))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_isgaroth))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_isgaroth(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_fenia))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_fenia))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_fenia(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_khaled))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_khaled))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_khaled(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_karras))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_karras))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_karras(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_salandril))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_salandril))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_salandril(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gaertner))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gaertner))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_gaertner(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_lutero))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_lutero))
 		{
 			b_clearjunktradeinv(slf);
 			b_givetradeinv_lutero(slf);
@@ -277,148 +277,148 @@ func void b_givetradeinv(var C_NPC slf)
 		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_engor))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_matteo))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_matteo))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_halvor))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_halvor))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bosper))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bosper))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_harad))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_harad))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brian))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brian))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brahim))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_brahim))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_constantino))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_constantino))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kardif))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kardif))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_zuris))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_zuris))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_baltram))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_baltram))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_canthar))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_canthar))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sarah))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sarah))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_jora))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_jora))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_hakon))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_hakon))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_coragon))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_coragon))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gorax))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gorax))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_orlan))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_orlan))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_bennet_di))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_elena))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_elena))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sagitta))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sagitta))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kjorn))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_kjorn))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rethon))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rethon))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rosi))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_rosi))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_ignaz))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_ignaz))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_milten_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_milten_di))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_vatras_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_vatras_di))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_diego_di))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_diego_di))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_tandor))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_tandor))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sengrath))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_sengrath))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_isgaroth))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_isgaroth))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_fenia))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_fenia))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_khaled))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_khaled))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_karras))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_karras))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_salandril))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_salandril))
 		{
 			b_cleardeadtrader(slf);
-		};
-		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gaertner))
+		}
+		else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_gaertner))
 		{
 			b_cleardeadtrader(slf);
 		};

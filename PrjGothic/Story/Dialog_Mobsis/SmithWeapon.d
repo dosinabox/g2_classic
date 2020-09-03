@@ -331,7 +331,7 @@ func void smithweapon_s1()
 	{
 		self.aivar[AIV_INVINCIBLE] = TRUE;
 		PLAYER_MOBSI_PRODUCTION = MOBSI_SMITHWEAPON;
-		AI_ProcessInfos(her);
+		AI_ProcessInfos(self);
 	};
 	pc_itmw_1h_common.description = NAME_ITMW_1H_COMMON_01;
 	pc_itmw_1h_special_01.description = ConcatStrings(NAME_ITMW_1H_SPECIAL_01,PRINT_SMITH_1H_SPECIAL_01);

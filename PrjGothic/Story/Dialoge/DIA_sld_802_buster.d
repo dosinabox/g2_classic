@@ -325,17 +325,20 @@ func void dia_buster_othersld_info()
 {
 	AI_Output(other,self,"DIA_Buster_OtherSld_15_00");	//Я хочу узнать больше о наемниках и этой местности.
 	AI_Output(self,other,"DIA_Buster_OtherSld_13_01");	//О местности я мало что могу сказать. Тебе лучше поспрашивать фермеров.
-	AI_Output(self,other,"DIA_Buster_OtherSld_13_02");	//А что касается наемников - то правила у нас просты: если можешь постоять за себя - добро пожаловать к нам.
+	if(hero.guild == GIL_NONE)
+	{
+		AI_Output(self,other,"DIA_Buster_OtherSld_13_02");	//А что касается наемников - то правила у нас просты: если можешь постоять за себя - добро пожаловать к нам.
+	};
 	if(self.aivar[AIV_LASTFIGHTAGAINSTPLAYER] == FIGHT_LOST)
 	{
-		AI_Output(self,other,"DIA_Buster_OtherSld_13_03");	//Я думаю, ты достоин стать одним из нас.
-		AI_Output(self,other,"DIA_Buster_OtherSld_13_04");	//Но не стоит обольщаться. Тебе просто повезло во время нашего последнего боя.
+		if(hero.guild == GIL_NONE)
+		{
+			AI_Output(self,other,"DIA_Buster_OtherSld_13_03");	//Я думаю, ты достоин стать одним из нас.
+			AI_Output(self,other,"DIA_Buster_OtherSld_13_04");	//Но не стоит обольщаться. Тебе просто повезло во время нашего последнего боя.
+		};
 		AI_Output(self,other,"DIA_Buster_OtherSld_13_05");	//На этой ферме полно парней, которые будут получше меня...
 		AI_Output(self,other,"DIA_Buster_OtherSld_13_06");	//Сентенза, например. Он охраняет вход на ферму. Тебе лучше не связываться с ним.
 		BUSTER_SENTENZATIP = TRUE;
-	}
-	else if(self.aivar[AIV_LASTFIGHTAGAINSTPLAYER] == FIGHT_WON)
-	{
 	}
 	else
 	{
@@ -378,12 +381,16 @@ func void dia_buster_aboutsentenza_info()
 	AI_Output(self,other,"DIA_Buster_AboutSentenza_13_06");	//Пожалуйста. Он много для тебя значит?
 	Info_ClearChoices(dia_buster_aboutsentenza);
 	Info_AddChoice(dia_buster_aboutsentenza,"Нет.",dia_buster_aboutsentenza_no);
-	Info_AddChoice(dia_buster_aboutsentenza,"Да, вот держи - 5 золотых монет.",dia_buster_aboutsentenza_give);
+	if(Npc_HasItems(other,itmi_gold) >= 5)
+	{
+		Info_AddChoice(dia_buster_aboutsentenza,"Да, вот держи - 5 золотых монет.",dia_buster_aboutsentenza_give);
+	};
 };
 
 func void dia_buster_aboutsentenza_give()
 {
 	AI_Output(other,self,"DIA_Buster_AboutSentenza_Give_15_00");	//Да, вот держи - 5 золотых монет.
+	b_giveinvitems(other,self,itmi_gold,5);
 	AI_Output(self,other,"DIA_Buster_AboutSentenza_Give_13_01");	//Спасибо. Похоже, все не так уж плохо. Я не забуду твоей доброты.
 	BUSTER_GOLDZUMBRENNEN = TRUE;
 	BUSTER_BONUS = 50;

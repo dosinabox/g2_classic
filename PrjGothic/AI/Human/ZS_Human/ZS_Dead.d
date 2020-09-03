@@ -10,6 +10,14 @@ func void zs_dead()
 		b_giveplayerxp(self.level * XP_PER_VICTORY);
 		self.aivar[AIV_VICTORYXPGIVEN] = TRUE;
 	};
+	if((self.guild == GIL_GOBBO) || (self.guild == GIL_GOBBO_SKELETON) || (self.guild == GIL_SUMMONED_GOBBO_SKELETON))
+	{
+		Npc_RemoveInvItems(self,itmw_1h_bau_mace,Npc_HasItems(self,itmw_1h_bau_mace));
+	}
+	else if(self.guild == GIL_SUMMONED_SKELETON)
+	{
+		Npc_RemoveInvItems(self,itmw_2h_sword_m_01,Npc_HasItems(self,itmw_2h_sword_m_01));
+	};
 	if(Npc_IsPlayer(other))
 	{
 		self.aivar[AIV_KILLEDBYPLAYER] = TRUE;

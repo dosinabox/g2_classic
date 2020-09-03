@@ -42,7 +42,7 @@ func int dia_hanna_hello_condition()
 
 func void dia_hanna_hello_info()
 {
-	AI_Output(self,other,"DIA_Hanna_Hello_17_00");	//Ах, клиент - что я могу сделать для тебя?
+	AI_Output(self,other,"DIA_Hanna_Hello_17_00");	//Ага, клиент - что я могу сделать для тебя?
 };
 
 
@@ -106,11 +106,11 @@ func void dia_hanna_whypay_info()
 {
 	AI_Output(other,self,"DIA_Hanna_Add_15_12");	//А почему паладины платят за все?
 	AI_Output(self,other,"DIA_Hanna_Add_17_13");	//Я не знаю точно, с чем это связано.
-	AI_Output(self,other,"DIA_Hanna_Add_17_14");	//С одной стороны я думаю, они хотят, чтобы нищие не ошивались ночью на улицах. Так безопаснее для всех.
-	AI_Output(self,other,"DIA_Hanna_Add_17_15");	//Ну а с другой - они хотят завоевать расположение странствующих торговцев.
+	AI_Output(self,other,"DIA_Hanna_Add_17_14");	//С одной стороны, я думаю, они хотят, чтобы нищие не ошивались ночью на улицах. Так безопаснее для всех.
+	AI_Output(self,other,"DIA_Hanna_Add_17_15");	//Ну, а с другой стороны, они хотят завоевать расположение странствующих торговцев.
 	AI_Output(self,other,"DIA_Hanna_Add_17_16");	//Сейчас, когда фермеры подняли восстание, нам остается полагаться только на торговцев в вопросах обеспечения города продовольствием.
 	AI_Output(self,other,"DIA_Hanna_Add_17_17");	//Кроме того, я думаю, они хотят поднять немного моральный дух в городе.
-	AI_Output(self,other,"DIA_Hanna_Add_17_18");	//Лорд Андрэ даже приказал раздавать бесплатное пиво на Площади Правосудия.
+	AI_Output(self,other,"DIA_Hanna_Add_17_18");	//Лорд Андрэ даже приказал раздавать бесплатное пиво на площади Правосудия.
 };
 
 
@@ -176,7 +176,7 @@ func void dia_hanna_city_buy()
 {
 	AI_Output(other,self,"DIA_Hanna_City_Buy_15_00");	//Где я могу купить что-нибудь здесь?
 	AI_Output(self,other,"DIA_Hanna_City_Buy_17_01");	//Рынок находится прямо перед парадным входом в отель. Я думаю, ты найдешь там все, что тебе нужно.
-	AI_Output(self,other,"DIA_Hanna_City_Buy_17_02");	//Также есть несколько лавок ремесленников в другой части города. Большинство из них находятся недалеко от городских ворот.
+	AI_Output(self,other,"DIA_Hanna_City_Buy_17_02");	//Также есть несколько лавок ремесленников в другой части города. Большинство из них находятся неподалеку от городских ворот.
 	AI_Output(self,other,"DIA_Hanna_City_Buy_17_03");	//Также в порту ты найдешь торговца рыбой. Его лавка смотрит прямо на гавань.
 };
 
@@ -184,8 +184,8 @@ func void dia_hanna_city_city()
 {
 	AI_Output(other,self,"DIA_Hanna_City_City_15_00");	//Расскажи мне о городе.
 	AI_Output(self,other,"DIA_Hanna_City_City_17_01");	//Хоринис - один из самых богатых городов королевства, даже несмотря на то, что сейчас он совсем не кажется таким.
-	AI_Output(self,other,"DIA_Hanna_City_City_17_02");	//Но с тех пор, как началась война с орками, всяческая торговля практически умерла. Король реквизировал весь торговый флот для нужд армии,
-	AI_Output(self,other,"DIA_Hanna_City_City_17_03");	//и теперь в наш порт корабли практически не заходят. Поэтому поставки товаров очень ограничены, и многие горожане очень обеспокоены этим.
+	AI_Output(self,other,"DIA_Hanna_City_City_17_02");	//Но с тех пор, как началась война с орками, всяческая торговля практически умерла. Король реквизировал весь торговый флот для нужд армии.
+	AI_Output(self,other,"DIA_Hanna_City_City_17_03");	//И теперь в наш порт корабли практически не заходят. Поэтому поставки товаров очень ограничены, и многие горожане очень обеспокоены этим.
 	AI_Output(self,other,"DIA_Hanna_City_City_17_04");	//Никто не знает, что принесет нам будущее. Нам ничего не остается, кроме как ждать и надеяться на лучшее. Вряд ли в наших силах хоть что-то изменить.
 };
 
@@ -243,12 +243,12 @@ func void dia_hanna_anynews_info()
 	Info_ClearChoices(dia_hanna_anynews);
 	Info_AddChoice(dia_hanna_anynews,"Ты ошибаешься.",dia_hanna_anynews_yes);
 	Info_AddChoice(dia_hanna_anynews,"Ну, как сказать...",dia_hanna_anynews_depends);
-	Info_AddChoice(dia_hanna_anynews,"В общем-то, нет.",dia_hanna_anynews_no);
+	Info_AddChoice(dia_hanna_anynews,"Ну, в общем, да.",dia_hanna_anynews_no);
 };
 
 func void dia_hanna_anynews_no()
 {
-	AI_Output(other,self,"DIA_Hanna_AnyNews_No_15_00");	//В общем, да.
+	AI_Output(other,self,"DIA_Hanna_AnyNews_No_15_00");	//Ну, в общем, да.
 	AI_Output(self,other,"DIA_Hanna_AnyNews_No_17_01");	//Ну, значит я права. Сейчас все думают только о себе. Так что тебе нужно?
 	MIS_HANNARETRIEVELETTER = LOG_FAILED;
 	Info_ClearChoices(dia_hanna_anynews);
@@ -256,7 +256,7 @@ func void dia_hanna_anynews_no()
 
 func void dia_hanna_anynews_depends()
 {
-	AI_Output(other,self,"DIA_Hanna_AnyNews_Depends_15_00");	//Ну, как сказать...
+	AI_Output(other,self,"DIA_Hanna_AnyNews_Depends_15_00");	//Ну, как сказать, э...
 	AI_Output(self,other,"DIA_Hanna_AnyNews_Depends_17_01");	//Это зависит от того, сколько на этом можно заработать, ты хочешь сказать?
 	AI_Output(self,other,"DIA_Hanna_AnyNews_Depends_17_02");	//Я не люблю таких, как ты.
 	MIS_HANNARETRIEVELETTER = LOG_FAILED;
@@ -283,7 +283,7 @@ func void dia_hanna_anynews_yes()
 func void dia_hanna_anynews_yes_footboy()
 {
 	AI_Output(other,self,"DIA_Hanna_AnyNews_Yes_Footboy_15_00");	//Я тебе не мальчик на побегушках.
-	AI_Output(self,other,"DIA_Hanna_AnyNews_Yes_Footboy_17_01");	//Понимаю - проблемы простой женщины слишком ничтожны для тебя. Значит, тебе придется заняться этим самой.
+	AI_Output(self,other,"DIA_Hanna_AnyNews_Yes_Footboy_17_01");	//Понимаю - проблемы простой женщины слишком ничтожны для тебя. Значит, мне придется заняться этим самой.
 	Info_ClearChoices(dia_hanna_anynews);
 };
 
@@ -291,7 +291,7 @@ func void dia_hanna_anynews_yes_reward()
 {
 	AI_Output(other,self,"DIA_Hanna_AnyNews_Yes_Reward_15_00");	//Что я за это получу?
 	AI_Output(self,other,"DIA_Hanna_AnyNews_Yes_Reward_17_01");	//Ага, я знала - ты не лучше, чем весь этот остальной портовый сброд.
-	AI_Output(self,other,"DIA_Hanna_AnyNews_Yes_Reward_17_02");	//Так что ты хочешь получить с бедной женщины?
+	AI_Output(self,other,"DIA_Hanna_AnyNews_Yes_Reward_17_02");	//Так что ты хочешь получить от бедной женщины?
 	Info_ClearChoices(dia_hanna_anynews);
 	Info_AddChoice(dia_hanna_anynews,"Ладно, забудь.",dia_hanna_anynews_yes_reward_ok);
 	Info_AddChoice(dia_hanna_anynews,"Ну, ты могла бы быть немного поласковее со мной... Как женщина...",dia_hanna_anynews_yes_reward_benice);
@@ -356,6 +356,7 @@ func void dia_hanna_thisletter_info()
 {
 	AI_Output(other,self,"DIA_Hanna_ThisLetter_15_00");	//Ты этот документ имела в виду?
 	AI_Output(self,other,"DIA_Hanna_ThisLetter_17_01");	//Да, именно его. Спасибо.
+	b_giveinvitems(other,self,itwr_shatteredgolem_mis,1);
 	AI_Output(other,self,"DIA_Hanna_ThisLetter_15_02");	//Как насчет моей награды?
 	AI_Output(self,other,"DIA_Hanna_ThisLetter_17_03");	//Не так быстро. Вот твои деньги.
 	CreateInvItems(self,itmi_gold,HANNA_PRICEFORLETTER);
@@ -435,7 +436,7 @@ func void dia_hanna_auskeller_info()
 		AI_Output(other,self,"DIA_Hanna_Add_15_20");	//(смущенно) Я...
 		AI_Output(self,other,"DIA_Hanna_Add_17_21");	//(смеется) Я знаю!
 		AI_Output(self,other,"DIA_Hanna_Add_17_22");	//(заговорщицки) Не говори мне. Я все знаю.
-		AI_Output(self,other,"DIA_Hanna_Add_17_23");	//Даже и не думай, чтобы украсть что-нибудь здесь, понял?
+		AI_Output(self,other,"DIA_Hanna_Add_17_23");	//Даже и не думай украсть что-нибудь здесь, понял?
 		AI_Output(self,other,"DIA_Hanna_Add_17_24");	//Мы не можем себе позволить привлекать внимание к отелю.
 	};
 	AI_StopProcessInfos(self);

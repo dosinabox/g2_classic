@@ -140,7 +140,7 @@ func void dia_dexter_vor_info()
 {
 	AI_Output(other,self,"DIA_Dexter_Vor_15_00");	//И что ты собираешься делать сейчас? Убить меня?
 	AI_Output(self,other,"DIA_Dexter_Vor_09_01");	//Да. Но ты освободил нас всех. Вот почему я даю тебе еще один шанс. Сваливай - исчезни, сделайся невидимым. Уходи и больше не попадайся мне на пути.
-	AI_Output(self,other,"DIA_Dexter_Vor_09_02");	//Если я увижу тебя еще раз, то без колебаний убью!
+	AI_Output(self,other,"DIA_Dexter_Vor_09_02");	//Если я увижу тебя еще раз, то без колебаний убью! Я предупредил тебя.
 	AI_StopProcessInfos(self);
 };
 

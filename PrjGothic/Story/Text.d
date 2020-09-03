@@ -112,6 +112,7 @@ const string MOBNAME_GRAVE_30 = "Граф Лазарь фон Зигбург 156-212";
 const string MOBNAME_GRAVE_31 = "Мечник Асуб Укара 145-212";
 const string MOBNAME_GRAVE_32 = "Мечник Дитмар Укара 112-212";
 const string MOBNAME_GRAVE_33 = "Почетный страж Утар Серанис 178-212";
+const string MOBNAME_ADDON_IDOL = "Алтарь Белиара";
 
 const string TXT_GUILDS[66] =
 {

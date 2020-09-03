@@ -38,7 +38,7 @@ func void sleepabit_s1()
 	{
 		self.aivar[AIV_INVINCIBLE] = TRUE;
 		PLAYER_MOBSI_PRODUCTION = MOBSI_SLEEPABIT;
-		AI_ProcessInfos(her);
+		AI_ProcessInfos(self);
 		if(SC_ISOBSESSED == TRUE)
 		{
 			Wld_PlayEffect("DEMENTOR_FX",hero,hero,0,0,0,FALSE);

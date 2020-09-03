@@ -627,7 +627,8 @@ func void dia_cassia_aufnahme_info()
 	AI_Output(self,other,"DIA_Cassia_Aufnahme_16_02");	//Возьми этот ключ. Он открывает дверь в отель. (улыбается) Теперь тебе не придется каждый раз плыть сюда.
 	b_giveinvitems(self,other,itke_thiefguildkey_hotel_mis,1);
 	AI_Output(self,other,"DIA_Cassia_Aufnahme_16_03");	//Кроме того, ты должен знать, что у нас есть секретный знак. Особый кивок.
-	AI_PlayAni(other,"T_YES");
+	b_stoplookat(self);
+	AI_PlayAni(self,"T_YES");
 	AI_Output(self,other,"DIA_Cassia_Aufnahme_16_04");	//Вот такой. Когда ты говоришь с правильными людьми и делаешь этот знак, они поймут, что ты один из нас.
 	MIS_CASSIARING = LOG_SUCCESS;
 	b_giveplayerxp(XP_CASSIARING);
