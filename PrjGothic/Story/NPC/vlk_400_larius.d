@@ -10,7 +10,7 @@ instance VLK_400_LARIUS(NPC_DEFAULT)
 	b_setattributestochapter(self,1);
 	fight_tactic = FAI_HUMAN_COWARD;
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_FatBald",FACE_N_WEAK_CIPHER_ALT,BODYTEX_N,itar_governor);
+	b_setnpcvisual(self,MALE,"Hum_Head_FatBald",FACE_N_WEAK_CIPHER_ALT,BODYTEX_N,itar_larius);
 	Mdl_SetModelFatness(self,2);
 	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
 	b_givenpctalents(self);

@@ -68,6 +68,35 @@ instance ITAR_GOVERNOR(C_ITEM)
 	count[5] = value;
 };
 
+instance ITAR_LARIUS(C_ITEM)
+{
+	name = "Одежда губернатора";
+	mainflag = ITEM_KAT_ARMOR;
+	flags = 0;
+	protection[PROT_EDGE] = 40;
+	protection[PROT_BLUNT] = 40;
+	protection[PROT_POINT] = 40;
+	protection[PROT_FIRE] = 0;
+	protection[PROT_MAGIC] = 0;
+	value = value_itar_governor;
+	wear = WEAR_TORSO;
+	visual = "ItAr_Governor.3ds";
+	visual_change = "Armor_Larius.asc";
+	visual_skin = 0;
+	material = MAT_LEATHER;
+	description = name;
+	text[1] = NAME_PROT_EDGE;
+	count[1] = protection[PROT_EDGE];
+	text[2] = NAME_PROT_POINT;
+	count[2] = protection[PROT_POINT];
+	text[3] = NAME_PROT_FIRE;
+	count[3] = protection[PROT_FIRE];
+	text[4] = NAME_PROT_MAGIC;
+	count[4] = protection[PROT_MAGIC];
+	text[5] = NAME_VALUE;
+	count[5] = value;
+};
+
 instance ITAR_JUDGE(C_ITEM)
 {
 	name = "Мантия судьи";
@@ -582,6 +611,35 @@ instance ITAR_BAUBABE_M(C_ITEM)
 	count[5] = value;
 };
 
+instance ITAR_ONAR(C_ITEM)
+{
+	name = "Одежда лендлорда";
+	mainflag = ITEM_KAT_ARMOR;
+	flags = 0;
+	protection[PROT_EDGE] = 15;
+	protection[PROT_BLUNT] = 15;
+	protection[PROT_POINT] = 15;
+	protection[PROT_FIRE] = 0;
+	protection[PROT_MAGIC] = 0;
+	value = value_itar_bau_m;
+	wear = WEAR_TORSO;
+	visual = "ItAr_Bau_M.3ds";
+	visual_change = "Armor_Onar.asc";
+	visual_skin = 0;
+	material = MAT_LEATHER;
+	description = name;
+	text[1] = NAME_PROT_EDGE;
+	count[1] = protection[PROT_EDGE];
+	text[2] = NAME_PROT_POINT;
+	count[2] = protection[PROT_POINT];
+	text[3] = NAME_PROT_FIRE;
+	count[3] = protection[PROT_FIRE];
+	text[4] = NAME_PROT_MAGIC;
+	count[4] = protection[PROT_MAGIC];
+	text[5] = NAME_VALUE;
+	count[5] = value;
+};
+
 instance ITAR_SLD_L(C_ITEM)
 {
 	name = "Легкие доспехи наемника";
@@ -1010,7 +1068,7 @@ instance ITAR_BDT_H(C_ITEM)
 
 instance ITAR_XARDAS(C_ITEM)
 {
-	name = "Мантия черной магии";
+	name = "Мантия некроманта";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 100;
@@ -1039,7 +1097,7 @@ instance ITAR_XARDAS(C_ITEM)
 
 instance ITAR_LESTER(C_ITEM)
 {
-	name = "Роба Лестера";
+	name = "Тяжелая роба сектанта";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 25;
@@ -1068,7 +1126,7 @@ instance ITAR_LESTER(C_ITEM)
 
 instance ITAR_DIEGO(C_ITEM)
 {
-	name = "Доспехи Диего";
+	name = "Тяжелые доспехи призрака";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 30;
@@ -1097,7 +1155,7 @@ instance ITAR_DIEGO(C_ITEM)
 
 instance ITAR_CORANGAR(C_ITEM)
 {
-	name = "Доспехи Ангара";
+	name = "Тяжелые доспехи храмовника";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 70;
@@ -1126,7 +1184,7 @@ instance ITAR_CORANGAR(C_ITEM)
 
 instance ITAR_DEMENTOR(C_ITEM)
 {
-	name = "Мантия тьмы";
+	name = "Мантия ищущих";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	protection[PROT_EDGE] = 15;
@@ -1138,6 +1196,35 @@ instance ITAR_DEMENTOR(C_ITEM)
 	wear = WEAR_TORSO;
 	visual = "ItAr_Xardas.3ds";
 	visual_change = "Armor_Dementor.asc";
+	visual_skin = 0;
+	material = MAT_LEATHER;
+	description = name;
+	text[1] = NAME_PROT_EDGE;
+	count[1] = protection[PROT_EDGE];
+	text[2] = NAME_PROT_POINT;
+	count[2] = protection[PROT_POINT];
+	text[3] = NAME_PROT_FIRE;
+	count[3] = protection[PROT_FIRE];
+	text[4] = NAME_PROT_MAGIC;
+	count[4] = protection[PROT_MAGIC];
+	text[5] = NAME_VALUE;
+	count[5] = value;
+};
+
+instance ITAR_BLACKMAGE(C_ITEM)
+{
+	name = "Мантия черного мага";
+	mainflag = ITEM_KAT_ARMOR;
+	flags = 0;
+	protection[PROT_EDGE] = 100;
+	protection[PROT_BLUNT] = 100;
+	protection[PROT_POINT] = 100;
+	protection[PROT_FIRE] = 50;
+	protection[PROT_MAGIC] = 50;
+	value = value_itar_xardas;
+	wear = WEAR_TORSO;
+	visual = "ItAr_Xardas.3ds";
+	visual_change = "Armor_BlackMage.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
 	description = name;

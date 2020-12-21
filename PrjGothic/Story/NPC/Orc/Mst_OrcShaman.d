@@ -36,6 +36,11 @@ func void b_setvisuals_orcshaman()
 	Mdl_SetVisualBody(self,"Orc_BodyShaman",DEFAULT,DEFAULT,"Orc_HeadShaman",DEFAULT,DEFAULT,-1);
 };
 
+func void b_setvisuals_hosh_pak()
+{
+	Mdl_SetVisual(self,"Orc.mds");
+	Mdl_SetVisualBody(self,"Hosh_Body",DEFAULT,DEFAULT,"",DEFAULT,DEFAULT,-1);
+};
 
 instance ORCSHAMAN_SIT(MST_DEFAULT_ORCSHAMAN)
 {
@@ -48,7 +53,7 @@ instance ORCSHAMAN_SIT(MST_DEFAULT_ORCSHAMAN)
 instance ORCSHAMAN_HOSH_PAK(MST_DEFAULT_ORCSHAMAN)
 {
 	name[0] = "Хош-Пак";
-	b_setvisuals_orcshaman();
+	b_setvisuals_hosh_pak();
 	EquipItem(self,itmw_2h_orcaxe_01);
 	start_aistate = zs_mm_allscheduler;
 	aivar[AIV_MM_ORCSITSTART] = ONLYROUTINE;

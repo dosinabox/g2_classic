@@ -292,9 +292,9 @@ func int dia_gorax_orlan_condition()
 
 func void dia_gorax_orlan_info()
 {
+	AI_Output(other,self,"DIA_Gorax_Orlan_15_00");	//Я отнес вино Орлану.
 	if(Npc_HasItems(other,itmi_gold) >= 100)
 	{
-		AI_Output(other,self,"DIA_Gorax_Orlan_15_00");	//Я отнес вино Орлану.
 		AI_Output(self,other,"DIA_Gorax_Orlan_14_01");	//И? Ты получил 240 золотых монет?
 		DIA_GORAX_ORLAN_PERMANENT = TRUE;
 		Info_ClearChoices(dia_gorax_orlan);

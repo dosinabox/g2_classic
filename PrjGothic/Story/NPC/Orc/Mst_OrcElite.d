@@ -36,6 +36,11 @@ func void b_setvisuals_orcelite()
 	Mdl_SetVisualBody(self,"Orc_BodyElite",DEFAULT,DEFAULT,"Orc_HeadWarrior",DEFAULT,DEFAULT,-1);
 };
 
+func void b_setvisuals_orccommander()
+{
+	Mdl_SetVisual(self,"Orc.mds");
+	Mdl_SetVisualBody(self,"Orc_BodyCommander",DEFAULT,DEFAULT,"Orc_HeadShaman",DEFAULT,DEFAULT,-1);
+};
 
 instance ORCELITE_ROAM(MST_DEFAULT_ORCELITE)
 {
@@ -60,7 +65,7 @@ instance ORKELITE_ANTIPALADINORKOBERST(MST_DEFAULT_ORCELITE)
 	attribute[ATR_DEXTERITY] = 120;
 	attribute[ATR_HITPOINTS_MAX] = 400;
 	attribute[ATR_HITPOINTS] = 400;
-	b_setvisuals_orcelite();
+	b_setvisuals_orccommander();
 	EquipItem(self,itmw_schlachtaxt);
 	CreateInvItems(self,itri_orcelitering,1);
 	CreateInvItems(self,itwr_map_orcelite_mis,1);
@@ -72,7 +77,7 @@ instance ORKELITE_ANTIPALADINORKOBERST(MST_DEFAULT_ORCELITE)
 instance ORCELITE_ANTIPALADIN(MST_DEFAULT_ORCELITE)
 {
 	name[0] = NAME_ANTIPALDIN;
-	b_setvisuals_orcelite();
+	b_setvisuals_orccommander();
 	EquipItem(self,itmw_2h_orcaxe_04);
 	CreateInvItems(self,itri_orcelitering,1);
 	start_aistate = zs_mm_allscheduler;
@@ -88,7 +93,7 @@ instance ORCELITE_ANTIPALADIN1(MST_DEFAULT_ORCELITE)
 	flags = 0;
 	npctype = NPCTYPE_MAIN;
 	aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	b_setvisuals_orcelite();
+	b_setvisuals_orccommander();
 	EquipItem(self,itmw_2h_orcaxe_04);
 	CreateInvItems(self,itri_orcelitering,1);
 	start_aistate = zs_mm_rtn_dragonrest;
@@ -101,7 +106,7 @@ instance ORCELITE_ANTIPALADIN2(MST_DEFAULT_ORCELITE)
 	id = 112;
 	guild = GIL_ORC;
 	aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	b_setvisuals_orcelite();
+	b_setvisuals_orccommander();
 	EquipItem(self,itmw_2h_orcaxe_04);
 	CreateInvItems(self,itri_orcelitering,1);
 	start_aistate = zs_mm_rtn_dragonrest;
@@ -114,7 +119,7 @@ instance ORCELITE_ANTIPALADIN3(MST_DEFAULT_ORCELITE)
 	id = 113;
 	guild = GIL_ORC;
 	aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	b_setvisuals_orcelite();
+	b_setvisuals_orccommander();
 	EquipItem(self,itmw_2h_orcaxe_04);
 	CreateInvItems(self,itri_orcelitering,1);
 	start_aistate = zs_mm_rtn_dragonrest;
@@ -128,7 +133,7 @@ instance ORKELITE_ANTIPALADINORKOBERST_DI(MST_DEFAULT_ORCELITE)
 	attribute[ATR_DEXTERITY] = 150;
 	attribute[ATR_HITPOINTS_MAX] = 450;
 	attribute[ATR_HITPOINTS] = 450;
-	b_setvisuals_orcelite();
+	b_setvisuals_orccommander();
 	aivar[AIV_ENEMYOVERRIDE] = TRUE;
 	EquipItem(self,itmw_2h_orcaxe_04);
 	CreateInvItems(self,itke_orkknastdi_mis,1);

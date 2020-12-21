@@ -3,10 +3,10 @@ var int enterdi_kapitel6;
 
 func void enter_di_firsttime_trigger()
 {
-	if(Npc_HasItems(hero,itke_ship_levelchange_mis))
+/*	if(Npc_HasItems(hero,itke_ship_levelchange_mis))
 	{
 		Npc_RemoveInvItems(hero,itke_ship_levelchange_mis,1);
-	};
+	};*/
 	if(hero.attribute[ATR_DEXTERITY] < 15)
 	{
 		Wld_InsertItem(itpo_perm_dex,"FP_ITEM_DI_ENTER_05");

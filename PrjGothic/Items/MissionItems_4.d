@@ -98,7 +98,7 @@ instance ITRW_SENGRATHSARMBRUST_MIS(C_ITEM)
 	munition = itrw_bolt;
 	cond_atr[2] = ATR_DEXTERITY;
 	cond_value[2] = CONDITION_MILARMBRUST;
-	visual = "ItRw_Mil_Crossbow.mms";
+	visual = "ItRw_Crossbow_Mission_02.mms";
 	description = name;
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;
@@ -110,7 +110,7 @@ instance ITRW_SENGRATHSARMBRUST_MIS(C_ITEM)
 
 instance ITAT_TALBINSLURKERSKIN(C_ITEM)
 {
-	name = "Шкура луркера";
+	name = "Кожа луркера";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = VALUE_LURKERSKIN;

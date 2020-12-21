@@ -185,6 +185,7 @@ instance PC_ROCKEFELLER(NPC_DEFAULT)
 	CreateInvItems(self,itmw_2h_blessed_02,1);
 	CreateInvItems(self,itmw_2h_blessed_03,1);
 	CreateInvItem(self,itar_governor);
+	CreateInvItem(self,itar_larius);
 	CreateInvItem(self,itar_smith);
 	CreateInvItem(self,itar_barkeeper);
 	CreateInvItem(self,itar_judge);
@@ -202,6 +203,7 @@ instance PC_ROCKEFELLER(NPC_DEFAULT)
 	CreateInvItem(self,itar_bau_m);
 	CreateInvItem(self,itar_baubabe_l);
 	CreateInvItem(self,itar_baubabe_m);
+	CreateInvItem(self,itar_onar);
 	CreateInvItem(self,itar_sld_l);
 	CreateInvItem(self,itar_sld_m);
 	CreateInvItem(self,itar_sld_h);
@@ -222,6 +224,7 @@ instance PC_ROCKEFELLER(NPC_DEFAULT)
 	CreateInvItem(self,itar_corangar);
 	CreateInvItem(self,itar_kdw_h);
 	CreateInvItem(self,itar_dementor);
+	CreateInvItem(self,itar_blackmage);
 	CreateInvItem(self,itar_prisoner);
 	CreateInvItem(self,itru_pallight);
 	CreateInvItem(self,itru_pallightheal);

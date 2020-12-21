@@ -202,6 +202,10 @@ func int dia_buster_fightnone_condition()
 {
 	if(Npc_KnowsInfo(other,dia_buster_hello) && (self.aivar[AIV_LASTFIGHTAGAINSTPLAYER] == FIGHT_NONE) && Npc_IsInState(self,zs_talk))
 	{
+		if((KAPITEL >= 3) && ((other.guild == GIL_SLD) || (other.guild == GIL_DJG)))
+		{
+			return FALSE;
+		};
 		return TRUE;
 	};
 };
@@ -681,7 +685,7 @@ func void dia_buster_bringtrophyshadowbeast_info()
 	else
 	{
 		bustertrophyshadowbeastcount = Npc_HasItems(other,itat_shadowhorn);
-		xp_bringbustertrophyshadowbeast = shadowbeast.level * XP_PER_VICTORY;
+		xp_bringbustertrophyshadowbeast = 20 * XP_PER_VICTORY;
 		bustersbustertrophyshadowbeastoffer = VALUE_SHADOWHORN + BUSTER_BONUS;
 		if(bustertrophyshadowbeastcount == 1)
 		{
@@ -714,7 +718,10 @@ func void dia_buster_bringtrophyshadowbeast_teach()
 		AI_Output(self,other,"DIA_Buster_BringTrophyShadowbeast_teach_13_01");	//Ладно, слушай. Убиваешь мракориса, и как можно крепче берешь его рог правой рукой.
 		AI_Output(self,other,"DIA_Buster_BringTrophyShadowbeast_teach_13_02");	//Затем приставляешь нож к его лбу и делаешь глубокий разрез вокруг рога.
 		AI_Output(self,other,"DIA_Buster_BringTrophyShadowbeast_teach_13_03");	//Ну, а потом просто поддеваешь рог ножом, используя его как рычаг, и кладешь рог себе в карман.
-		AI_Output(self,other,"DIA_Buster_BringTrophyShadowbeast_teach_13_04");	//И приносишь его мне. Я думаю, у тебя получится.
+		if(MIS_BUSTER_KILLSHADOWBEASTS_DJG == LOG_RUNNING)
+		{
+			AI_Output(self,other,"DIA_Buster_BringTrophyShadowbeast_teach_13_04");	//И приносишь его мне. Я думаю, у тебя получится.
+		};
 	};
 	Info_ClearChoices(dia_buster_bringtrophyshadowbeast);
 };

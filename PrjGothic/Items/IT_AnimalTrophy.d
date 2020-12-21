@@ -263,7 +263,7 @@ func void use_sting()
 
 instance ITAT_LURKERSKIN(C_ITEM)
 {
-	name = "Шкура луркера";
+	name = "Кожа луркера";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_LURKERSKIN;
@@ -348,7 +348,7 @@ instance ITAT_SHADOWFUR(C_ITEM)
 
 instance ITAT_SHARKSKIN(C_ITEM)
 {
-	name = "Шкура болотной акулы";
+	name = "Кожа болотной акулы";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_SHARKSKIN;
@@ -386,7 +386,7 @@ instance ITAT_TROLLBLACKFUR(C_ITEM)
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_TROLLBLACKFUR;
-	visual = "ItAt_TrollFur.3DS";
+	visual = "ItAt_TrollBlackFur.3DS";
 	material = MAT_LEATHER;
 	description = name;
 	text[0] = "";

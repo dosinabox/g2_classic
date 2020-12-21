@@ -82,7 +82,14 @@ func void dia_grimbald_hallo_was_neinnein()
 func void dia_grimbald_hallo_was_ja()
 {
 	AI_Output(other,self,"DIA_Grimbald_HALLO_Was_ja_15_00");	//Хорошо, я помогу тебе. Но ты пойдешь впереди.
-	AI_Output(self,other,"DIA_Grimbald_HALLO_Was_ja_07_01");	//Конечно. Только не приближайся слишком близко к черному троллю. Он разорвет тебя на куски, понял?
+	if(!Npc_IsDead(Troll_Black))
+	{
+		AI_Output(self,other,"DIA_Grimbald_HALLO_Was_ja_07_01");	//Конечно. Только не приближайся слишком близко к черному троллю. Он разорвет тебя на куски, понял?
+	}
+	else
+	{
+		B_Say(self,other,"$ABS_GOOD");
+	};
 	AI_Output(self,other,"DIA_Grimbald_HALLO_Was_ja_07_02");	//И я не прощу тебе, если ты решишь выйти из игры.
 	b_startotherroutine(self,"Jagd");
 	AI_StopProcessInfos(self);

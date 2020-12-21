@@ -1190,7 +1190,7 @@ instance ITRW_DRAGOMIRSARMBRUST_MIS(C_ITEM)
 	munition = itrw_bolt;
 	cond_atr[2] = ATR_DEXTERITY;
 	cond_value[2] = CONDITION_LEICHTEARMBRUST;
-	visual = "ItRw_Crossbow_L_02.mms";
+	visual = "ItRw_Crossbow_Mission_01.mms";
 	description = name;
 	text[2] = NAME_DAMAGE;
 	count[2] = damagetotal;

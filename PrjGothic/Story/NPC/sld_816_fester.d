@@ -40,7 +40,7 @@ func void rtn_start_816()
 	ta_practice_sword(17,0,18,0,"NW_BIGFARM_ALLEE_04");
 	ta_practice_sword(18,0,19,0,"NW_BIGFARM_ALLEE_02");
 	ta_practice_sword(19,0,20,0,"NW_BIGFARM_ALLEE_04");
-	ta_sit_campfire(20,0,6,0,"NW_BIGFARM_VORPOSTEN1_01");
+	ta_sit_campfire(20,0,5,0,"NW_BIGFARM_VORPOSTEN1_01");
 };
 
 func void rtn_guide_816()
