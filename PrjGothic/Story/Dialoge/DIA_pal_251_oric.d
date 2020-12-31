@@ -621,7 +621,7 @@ instance DIA_ORIC_PICKPOCKET(C_INFO)
 	condition = dia_oric_pickpocket_condition;
 	information = dia_oric_pickpocket_info;
 	permanent = TRUE;
-	description = "(Украсть этот свиток будет чертовски сложно)";
+	description = "(украсть этот свиток будет чертовски сложно)";
 };
 
 
@@ -645,8 +645,7 @@ func void dia_oric_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 85)
 	{
 		b_giveinvitems(self,other,itsc_palrepelevil,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_oric_pickpocket);
 	}
 	else

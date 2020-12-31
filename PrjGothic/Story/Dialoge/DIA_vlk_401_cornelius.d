@@ -303,7 +303,7 @@ instance DIA_CORNELIUS_PICKPOCKET(C_INFO)
 	condition = dia_cornelius_pickpocket_condition;
 	information = dia_cornelius_pickpocket_info;
 	permanent = TRUE;
-	description = "(Пытаться украсть его книгу довольно рискованно)";
+	description = "(пытаться украсть его книгу довольно рискованно)";
 };
 
 
@@ -327,8 +327,7 @@ func void dia_cornelius_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 60)
 	{
 		b_giveinvitems(self,other,itwr_corneliustagebuch_mis,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_cornelius_pickpocket);
 	}
 	else

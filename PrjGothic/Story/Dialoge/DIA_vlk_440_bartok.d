@@ -28,7 +28,7 @@ instance DIA_BARTOK_PICKPOCKET(C_INFO)
 	condition = dia_bartok_pickpocket_condition;
 	information = dia_bartok_pickpocket_info;
 	permanent = TRUE;
-	description = "(Украсть его колчан со стрелами будет просто)";
+	description = "(украсть его колчан со стрелами будет просто)";
 };
 
 
@@ -52,8 +52,7 @@ func void dia_bartok_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 30)
 	{
 		b_giveinvitems(self,other,itrw_arrow,40);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_bartok_pickpocket);
 	}
 	else

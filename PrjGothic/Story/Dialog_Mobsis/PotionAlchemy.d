@@ -335,6 +335,7 @@ func void pc_itpo_perm_health_info()
 {
 	if((Npc_HasItems(hero,itpl_health_herb_03) >= 1) && (Npc_HasItems(hero,itpl_perm_herb) >= 1))
 	{
+		TotalPermEaten += 1;
 		Npc_RemoveInvItems(hero,itpl_health_herb_03,1);
 		Npc_RemoveInvItems(hero,itpl_perm_herb,1);
 		CreateInvItems(hero,itpo_perm_health,1);
@@ -372,6 +373,7 @@ func void pc_itpo_perm_mana_info()
 {
 	if((Npc_HasItems(hero,itpl_mana_herb_03) >= 1) && (Npc_HasItems(hero,itpl_perm_herb) >= 1))
 	{
+		TotalPermEaten += 1;
 		Npc_RemoveInvItems(hero,itpl_mana_herb_03,1);
 		Npc_RemoveInvItems(hero,itpl_perm_herb,1);
 		CreateInvItems(hero,itpo_perm_mana,1);
@@ -393,7 +395,7 @@ instance PC_ITPO_DEX(C_INFO)
 	condition = pc_itpo_dex_condition;
 	information = pc_itpo_dex_info;
 	permanent = TRUE;
-	description = "Ёликсир ловкости (1 гоблинские €годы и 1 царский щавель.)";
+	description = "Ёликсир ловкости (1 гоблинска€ €года и 1 царский щавель.)";
 };
 
 
@@ -409,6 +411,8 @@ func void pc_itpo_dex_info()
 {
 	if((Npc_HasItems(hero,itpl_dex_herb_01) >= 1) && (Npc_HasItems(hero,itpl_perm_herb) >= 1))
 	{
+		TotalDexEaten += 1;
+		TotalPermEaten += 1;
 		Npc_RemoveInvItems(hero,itpl_dex_herb_01,1);
 		Npc_RemoveInvItems(hero,itpl_perm_herb,1);
 		CreateInvItems(hero,itpo_perm_dex,1);
@@ -446,6 +450,8 @@ func void pc_itpo_strg_info()
 {
 	if((Npc_HasItems(hero,itpl_strength_herb_01) >= 1) && (Npc_HasItems(hero,itpl_perm_herb) >= 1))
 	{
+		TotalStrEaten += 1;
+		TotalPermEaten += 1;
 		Npc_RemoveInvItems(hero,itpl_strength_herb_01,1);
 		Npc_RemoveInvItems(hero,itpl_perm_herb,1);
 		CreateInvItems(hero,itpo_perm_str,1);

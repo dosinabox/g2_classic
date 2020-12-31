@@ -477,6 +477,8 @@ func void dia_bosper_bringfur_info()
 		AI_Output(self,other,"DIA_Bosper_BringFur_11_03");	//Отлично! Я знал, что ты подходишь для этой работы.
 		AI_Output(self,other,"DIA_Bosper_BringFur_11_04");	//Вот деньги, как я и обещал тебе.
 		b_giveinvitems(self,other,itmi_gold,VALUE_WOLFFUR * 6);
+		BosperFurCounter += 6;
+		ApprenticeGoldCounter += VALUE_WOLFFUR * 6;
 		AI_Output(self,other,"DIA_Bosper_BringFur_11_05");	//И? Что скажешь? Разве это не лучше, чем корпеть над мечами день напролет или наполнять бутылочки в пыльной каморке?
 		MIS_BOSPER_WOLFFURS = LOG_SUCCESS;
 		b_logentry(TOPIC_LEHRLING,"Боспер примет меня в ученики, если другие мастера не будут против.");
@@ -789,9 +791,13 @@ func int dia_bosper_sellfur_condition()
 
 func void dia_bosper_sellfur_info()
 {
+	var int furs;
 	AI_Output(other,self,"DIA_Bosper_SellFur_15_00");	//Я принес несколько шкур для тебя...
-	if((Npc_HasItems(other,itat_sheepfur) > 0) || (Npc_HasItems(other,itat_wolffur) > 0) || (Npc_HasItems(other,itat_wargfur) > 0) || (Npc_HasItems(other,itat_shadowfur) > 0) || (Npc_HasItems(other,itat_trollfur) > 0) || (Npc_HasItems(other,itat_trollblackfur) > 0))
+	furs = Npc_HasItems(other,itat_sheepfur) + Npc_HasItems(other,itat_wolffur) + Npc_HasItems(other,itat_wargfur) + Npc_HasItems(other,itat_shadowfur) + Npc_HasItems(other,itat_trollfur) + Npc_HasItems(other,itat_trollblackfur);
+	if(furs > 0)
 	{
+		BosperFurCounter += furs;
+		ApprenticeGoldCounter += (Npc_HasItems(other,itat_sheepfur) * VALUE_SHEEPFUR) + (Npc_HasItems(other,itat_wolffur) * VALUE_WOLFFUR) + (Npc_HasItems(other,itat_wargfur) * VALUE_WARGFUR) + (Npc_HasItems(other,itat_shadowfur) * VALUE_SHADOWFUR) + (Npc_HasItems(other,itat_trollfur) * VALUE_TROLLFUR) + (Npc_HasItems(other,itat_trollblackfur) * VALUE_TROLLBLACKFUR);
 		if(Npc_HasItems(other,itat_sheepfur) > 0)
 		{
 			AI_Output(self,other,"DIA_Bosper_SellFur_11_01");	//Овечьи шкуры? Ты ведь не убивал овец фермеров на пастбищах, нет?

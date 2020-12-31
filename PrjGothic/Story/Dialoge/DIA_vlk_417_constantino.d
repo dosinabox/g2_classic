@@ -487,6 +487,7 @@ func void dia_constantino_lehrling_yes()
 	AI_Output(self,other,"DIA_Constantino_LEHRLING_Yes_10_01");	//(вздыхает) Хорошо! Надеюсь, я не пожалею об этом решении.
 	AI_Output(self,other,"DIA_Constantino_LEHRLING_Yes_10_02");	//С этого момента, ты можешь считать себя моим учеником.
 	PLAYER_ISAPPRENTICE = APP_CONSTANTINO;
+	ApprenticeGoldCounter = 0;
 	CONSTANTINO_STARTGUILD = other.guild;
 	CONSTANTINO_LEHRLING_DAY = Wld_GetDay();
 	Wld_AssignRoomToGuild("alchemist",GIL_NONE);
@@ -661,19 +662,24 @@ func void dia_constantino_mushroomsrunning_info()
 
 func void dia_constantino_mushroomsrunning_sell()
 {
+	var int Mushroom1_Count;
+	var int Mushroom2_Count;
 	var int dunkelpilz_dabei;
 	dunkelpilz_dabei = FALSE;
-	if(Npc_HasItems(other,itpl_mushroom_01) > 0)
+	if(Npc_HasItems(other,itpl_mushroom_01))
 	{
+		Mushroom1_Count = Npc_HasItems(other,itpl_mushroom_01);
 		AI_Output(other,self,"DIA_Constantino_MushroomsRunning_Sell_15_00");	//Я принес несколько черных грибов...
 		AI_Output(self,other,"DIA_Constantino_MushroomsRunning_Sell_10_01");	//Ах! Это лучшие грибы! Отлично! Вот твое золото!
 		dunkelpilz_dabei = TRUE;
-		CONSTANTINO_DUNKELPILZCOUNTER = CONSTANTINO_DUNKELPILZCOUNTER + Npc_HasItems(other,itpl_mushroom_01);
-		b_giveinvitems(self,other,itmi_gold,Npc_HasItems(other,itpl_mushroom_01) * itpl_mushroom_01.value);
-		b_giveinvitems(other,self,itpl_mushroom_01,Npc_HasItems(other,itpl_mushroom_01));
+		CONSTANTINO_DUNKELPILZCOUNTER += Mushroom1_Count;
+		ApprenticeGoldCounter += Mushroom1_Count * VALUE_MUSHROOM_01;
+		b_giveinvitems(self,other,itmi_gold,Mushroom1_Count * VALUE_MUSHROOM_01);
+		b_giveinvitems(other,self,itpl_mushroom_01,Mushroom1_Count);
 	};
 	if(Npc_HasItems(other,itpl_mushroom_02) > 0)
 	{
+		Mushroom2_Count = Npc_HasItems(other,itpl_mushroom_02);
 		if(dunkelpilz_dabei == TRUE)
 		{
 			AI_Output(other,self,"DIA_Constantino_MushroomsRunning_Sell_15_02");	//А вот еще другие...
@@ -683,8 +689,10 @@ func void dia_constantino_mushroomsrunning_sell()
 			AI_Output(other,self,"DIA_Constantino_MushroomsRunning_Sell_15_03");	//У меня здесь несколько грибов!
 		};
 		AI_Output(self,other,"DIA_Constantino_MushroomsRunning_Sell_10_04");	//Эти не так хороши, как черные грибы, но я все равно возьму их.
-		b_giveinvitems(self,other,itmi_gold,Npc_HasItems(other,itpl_mushroom_02) * itpl_mushroom_02.value);
-		b_giveinvitems(other,self,itpl_mushroom_02,Npc_HasItems(other,itpl_mushroom_02));
+		Constantino_BigMushroomsCounter += Mushroom2_Count;
+		ApprenticeGoldCounter += Mushroom2_Count * VALUE_MUSHROOM_02;
+		b_giveinvitems(self,other,itmi_gold,Mushroom2_Count * VALUE_MUSHROOM_02);
+		b_giveinvitems(other,self,itpl_mushroom_02,Mushroom2_Count);
 	};
 	Info_ClearChoices(dia_constantino_mushroomsrunning);
 };

@@ -31,15 +31,13 @@ instance DIA_SALANDRIL_PICKPOCKET(C_INFO)
 	condition = dia_salandril_pickpocket_condition;
 	information = dia_salandril_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть этот ключ будет легко)";
+	description = "(украсть этот ключ будет легко)";
 };
 
 
-var int dia_salandril_pickpocket_perm;
-
 func int dia_salandril_pickpocket_condition()
 {
-	if((Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET) == 1) && (self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] == FALSE) && (DIA_SALANDRIL_PICKPOCKET_PERM == FALSE) && (other.attribute[ATR_DEXTERITY] >= (30 - THEFTDIFF)))
+	if((Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET) == 1) && (self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] == FALSE) && (other.attribute[ATR_DEXTERITY] >= (30 - THEFTDIFF)))
 	{
 		return TRUE;
 	};
@@ -58,9 +56,7 @@ func void dia_salandril_pickpocket_doit()
 	{
 		CreateInvItems(self,itke_salandril,1);
 		b_giveinvitems(self,other,itke_salandril,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		DIA_SALANDRIL_PICKPOCKET_PERM = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_salandril_pickpocket);
 	}
 	else

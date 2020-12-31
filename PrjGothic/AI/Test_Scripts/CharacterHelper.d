@@ -1,4 +1,106 @@
 
+instance StatsBook(C_Item)
+{
+	name = "Книга статистики";
+	mainflag = ITEM_KAT_DOCS;
+	flags = ITEM_MISSION;
+	value = 0;
+	visual = "ItWr_Book_Stats.3ds";
+	material = MAT_LEATHER;
+	scemeName = "MAP";
+	description = name;
+	on_state[0] = Use_StatsBook;
+};
+
+
+func void Use_StatsBook()
+{
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID,2);
+	Doc_SetPage(nDocID,0,"Book_Wood_L.tga",0);
+	Doc_SetPage(nDocID,1,"Book_Wood_R.tga",0);
+	Doc_SetFont(nDocID,-1,FONT_Book);
+	Doc_SetMargins(nDocID,0,270,20,30,20,1);
+	Doc_PrintLine(nDocID,0,"Убито:");
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(Stats_Killed_Draconian)," людей-ящеров"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(Stats_Killed_Dementor)," ищущих"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(Stats_Killed_OrcElite)," элитных орков"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(Stats_Killed_OrcCommander)," предводителей орков"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(MadKillerCount)," невинных людей"));
+	Doc_PrintLine(nDocID,0,"");
+	Doc_PrintLine(nDocID,0,"Использовано:");
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(APPLE_BONUS)," яблок"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(DUNKELPILZ_BONUS)," черных грибов"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(TotalDexEaten)," гоблинских ягод"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(TotalStrEaten)," драконьих корней"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(TotalPermEaten)," царских щавелей"));
+	Doc_PrintLine(nDocID,0,"");
+	Doc_PrintLine(nDocID,0,"Отдано:");
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(OLDCOINCOUNTER)," монет Василию"));
+	if((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
+	{
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(BUSTERTROPHYSHADOWBEASTCOUNTER)," рогов Бастеру"));
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(DragonEggCounter)," яиц Беннету"));
+	}
+	else if(hero.guild == GIL_KDF)
+	{
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(AlmanachCounter)," альманахов Пирокару"));
+	}
+	else if(hero.guild == GIL_PAL)
+	{
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(OrkRingCounter)," колец Хагену"));
+	};
+	Doc_PrintLine(nDocID,0,"");
+	Doc_PrintLine(nDocID,0,ConcatStrings("Кражи (",ConcatStrings(IntToString(TotalThefts),"):")));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(TotalTheftXP)," опыта получено"));
+	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(TotalTheftGold)," золотых украдено"));
+	Doc_PrintLine(nDocID,0,"");
+	if(Player_IsApprentice == APP_Constantino)
+	{
+		Doc_PrintLine(nDocID,0,"Ремесло (Константино):");
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(CONSTANTINO_DUNKELPILZCOUNTER)," черных грибов продано"));
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(Constantino_BigMushroomsCounter)," пищи рудокопа продано"));
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(ApprenticeGoldCounter),PRINT_GOLDERHALTEN));
+	}
+	else if(Player_IsApprentice == APP_Bosper)
+	{
+		Doc_PrintLine(nDocID,0,"Ремесло (Боспер):");
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(BosperFurCounter)," шкур продано"));
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(ApprenticeGoldCounter),PRINT_GOLDERHALTEN));
+	}
+	else if(Player_IsApprentice == APP_Harad)
+	{
+		Doc_PrintLine(nDocID,0,"Ремесло (Гарад):");
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(HaradSwordsCounter)," мечей продано"));
+		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(ApprenticeGoldCounter),PRINT_GOLDERHALTEN));
+	};
+	Doc_SetMargins(nDocID,-1,15,20,275,20,1);
+	Doc_PrintLine(nDocID,1,"Молитвы:");
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_GoldGiven),PRINT_GOLDGEGEBEN));
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_Str)," силы получено"));
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_Dex)," ловкости получено"));
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_MaxHp)," макс. здоровья получено"));
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_MaxMana)," макс. маны получено"));
+	if(UnionActivated == TRUE)
+	{
+		Doc_PrintLine(nDocID,1,"");
+		Doc_PrintLine(nDocID,1,"Union активирован");
+	};
+	Doc_PrintLine(nDocID,1,"");
+	Doc_PrintLine(nDocID,1,"Информация о сборке:");
+	Doc_PrintLine(nDocID,1,ConcatStrings("Версия ",ConcatStrings(FIX_VERSION_START,ConcatStrings(" от ",FIX_VERSION_DATE))));
+	if(Addon_zuerst == TRUE)
+	{
+		Doc_PrintLine(nDocID,1,"Игра начата с аддоном");
+	}
+	else
+	{
+		Doc_PrintLine(nDocID,1,ConcatStrings("Версия в сохранении: ",FIX_VERSION_SAVE));
+	};
+	Doc_Show(nDocID);
+};
+
 instance MOBSIBRIEF(C_ITEM)
 {
 	name = "Руна MobsiBrief";
@@ -72,7 +174,7 @@ instance CH(NPC_DEFAULT)
 	b_givenpctalents(self);
 	fight_tactic = FAI_HUMAN_MASTER;
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_Pony",FACE_N_PLAYER,BODYTEX_PLAYER,-1);
+	b_setnpcvisual(self,MALE,"Hum_Head_Pony",FACE_N_PLAYER,BODYTEX_PLAYER_G1,-1);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
 	daily_routine = rtn_start_0;

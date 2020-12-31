@@ -595,7 +595,7 @@ instance ITMI_GOLDCHEST(C_ITEM)
 
 instance ITMI_INNOSSTATUE(C_ITEM)
 {
-	name = "Статуя Инноса";
+	name = "Статуэтка Инноса";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_INNOSSTATUE;

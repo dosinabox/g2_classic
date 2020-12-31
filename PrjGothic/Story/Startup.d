@@ -2,6 +2,7 @@
 func void startup_global()
 {
 	Game_InitEngintl();
+	FIX_VERSION_SAVE = FIX_VERSION_START;
 };
 
 func void init_global()

@@ -181,7 +181,7 @@ instance DIA_BROMOR_PICKPOCKET(C_INFO)
 	condition = dia_bromor_pickpocket_condition;
 	information = dia_bromor_pickpocket_info;
 	permanent = TRUE;
-	description = "(Воровать этот ключ рискованно)";
+	description = "(воровать этот ключ рискованно)";
 };
 
 
@@ -205,8 +205,7 @@ func void dia_bromor_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 50)
 	{
 		b_giveinvitems(self,other,itke_bromor,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_bromor_pickpocket);
 	}
 	else

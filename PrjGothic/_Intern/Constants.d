@@ -750,3 +750,9 @@ const int INVCAM_ENTF_MISC4_STANDARD = 650;
 const int INVCAM_ENTF_MISC5_STANDARD = 850;
 const int INVCAM_X_RING_STANDARD = 25;
 const int INVCAM_Z_RING_STANDARD = 45;
+
+const int UnionActivated = 0;
+
+const string FIX_VERSION_DATE = "30/12/2020";
+const string FIX_VERSION_START = "1.2";
+var string FIX_VERSION_SAVE;

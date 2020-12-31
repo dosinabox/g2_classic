@@ -20,13 +20,30 @@ func int c_beklauen(var int theftdex,var int theftgold)
 	return FALSE;
 };
 
+func void b_givethiefxp()
+{
+	var int xp;
+	if(Hlp_GetInstanceID(self) != Hlp_GetInstanceID(ingmar))
+	{
+		xp = XP_AMBIENT;
+	}
+	else
+	{
+		xp = XP_AMBIENT * 2;
+	};
+	b_giveplayerxp(xp);
+	TotalTheftXP += xp;
+	TotalThefts += 1;
+	self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
+};
+
 func void b_beklauen()
 {
 	if(other.attribute[ATR_DEXTERITY] >= THEFTDEXGLOB)
 	{
 		b_giveinvitems(self,other,itmi_gold,THEFTGOLDGLOB);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		TotalTheftGold += THEFTGOLDGLOB;
+		b_givethiefxp();
 		Snd_Play("Geldbeutel");
 	}
 	else

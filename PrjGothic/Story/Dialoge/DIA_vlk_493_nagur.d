@@ -404,7 +404,7 @@ instance DIA_NAGUR_SIGN(C_INFO)
 	condition = dia_nagur_sign_condition;
 	information = dia_nagur_sign_info;
 	permanent = FALSE;
-	description = "(ѕоказать сигнал воров)";
+	description = "(показать сигнал воров)";
 };
 
 

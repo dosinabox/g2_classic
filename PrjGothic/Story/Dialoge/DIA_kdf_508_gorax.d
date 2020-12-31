@@ -31,7 +31,7 @@ instance DIA_GORAX_PICKPOCKET(C_INFO)
 	condition = dia_gorax_pickpocket_condition;
 	information = dia_gorax_pickpocket_info;
 	permanent = TRUE;
-	description = "(Этот ключ будет украсть очень сложно)";
+	description = "(украсть этот ключ будет очень сложно)";
 };
 
 
@@ -56,8 +56,7 @@ func void dia_gorax_pickpocket_doit()
 	{
 		CreateInvItems(self,itke_klosterschatz,1);
 		b_giveinvitems(self,other,itke_klosterschatz,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_gorax_pickpocket);
 	}
 	else

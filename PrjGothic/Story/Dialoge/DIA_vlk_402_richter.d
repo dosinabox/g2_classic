@@ -322,7 +322,7 @@ instance DIA_RICHTER_PICKPOCKET(C_INFO)
 	condition = dia_richter_pickpocket_condition;
 	information = dia_richter_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть этот ключ будет легко)";
+	description = "(украсть этот ключ будет легко)";
 };
 
 
@@ -346,8 +346,7 @@ func void dia_richter_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 30)
 	{
 		b_giveinvitems(self,other,itke_richter,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_richter_pickpocket);
 	}
 	else

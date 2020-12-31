@@ -123,7 +123,7 @@ instance DIA_JOE_SIGN(C_INFO)
 	condition = dia_joe_sign_condition;
 	information = dia_joe_sign_info;
 	permanent = FALSE;
-	description = "(ѕоказать сигнал воров)";
+	description = "(показать сигнал воров)";
 };
 
 

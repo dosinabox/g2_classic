@@ -182,7 +182,7 @@ instance DIA_GAERTNER_SIGN(C_INFO)
 	condition = dia_gaertner_sign_condition;
 	information = dia_gaertner_sign_info;
 	permanent = FALSE;
-	description = "(ѕоказать сигнал воров)";
+	description = "(показать сигнал воров)";
 };
 
 

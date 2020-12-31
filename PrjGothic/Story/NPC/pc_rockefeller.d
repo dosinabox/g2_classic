@@ -16,7 +16,7 @@ instance PC_ROCKEFELLER(NPC_DEFAULT)
 	exp = 500 * ((level + 1) / 2) * (level + 1);
 	exp_next = 500 * ((level + 2) / 2) * (level + 1);
 	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_PLAYER,0,"Hum_Head_Pony",FACE_N_PLAYER,0,itar_pal_h);
+	Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_PLAYER_G1,0,"Hum_Head_Pony",FACE_N_PLAYER,0,itar_pal_h);
 	Npc_SetTalentSkill(self,NPC_TALENT_MAGE,6);
 	Npc_SetTalentSkill(self,NPC_TALENT_PICKLOCK,1);
 	Npc_SetTalentSkill(self,NPC_TALENT_SNEAK,1);

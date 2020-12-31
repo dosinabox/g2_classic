@@ -305,6 +305,7 @@ func void pc_prayshrine_pray_nopay()
 func void pc_prayshrine_pray_smallpay()
 {
 	Npc_RemoveInvItems(hero,itmi_gold,10);
+	Stats_Blessings_GoldGiven += 10;
 	if(PRAYDAY == Wld_GetDay())
 	{
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
@@ -332,6 +333,7 @@ func void pc_prayshrine_pray_mediumpay()
 	var int zufall;
 	zufall = Hlp_Random(4);
 	Npc_RemoveInvItems(hero,itmi_gold,50);
+	Stats_Blessings_GoldGiven += 50;
 	if(PRAYDAY == Wld_GetDay())
 	{
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
@@ -372,6 +374,7 @@ func void pc_prayshrine_pray_bigpay()
 	var int zufall;
 	zufall = Hlp_Random(4);
 	Npc_RemoveInvItems(hero,itmi_gold,100);
+	Stats_Blessings_GoldGiven += 100;
 	if(PRAYDAY == Wld_GetDay())
 	{
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);

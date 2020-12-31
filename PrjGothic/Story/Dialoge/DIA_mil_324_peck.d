@@ -28,7 +28,7 @@ instance DIA_PECK_PICKPOCKET(C_INFO)
 	condition = dia_peck_pickpocket_condition;
 	information = dia_peck_pickpocket_info;
 	permanent = TRUE;
-	description = "(Воровать этот ключ рискованно)";
+	description = "(воровать этот ключ рискованно)";
 };
 
 
@@ -52,8 +52,7 @@ func void dia_peck_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 60)
 	{
 		b_giveinvitems(self,other,itke_city_tower_05,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_peck_pickpocket);
 	}
 	else

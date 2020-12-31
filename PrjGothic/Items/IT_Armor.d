@@ -375,8 +375,8 @@ instance ITAR_MIL_L(C_ITEM)
 	visual_change = "Armor_Mil_L.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
-	on_equip = Equip_ITAR_MIL_L;
-	on_unequip = UnEquip_ITAR_MIL_L;
+	on_equip = Equip_ITAR_MIL;
+	on_unequip = UnEquip_ITAR_MIL;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -388,24 +388,6 @@ instance ITAR_MIL_L(C_ITEM)
 	count[4] = protection[PROT_MAGIC];
 	text[5] = NAME_VALUE;
 	count[5] = value;
-};
-
-func void Equip_ITAR_MIL_L()
-{
-	if(Npc_IsPlayer(self))
-	{
-		Mdl_SetVisualBody(self,"hum_body_Naked0",1,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
-		MILArmor_Equipped = TRUE;
-	};
-};
-
-func void UnEquip_ITAR_MIL_L()
-{
-	if(Npc_IsPlayer(self))
-	{
-		Mdl_SetVisualBody(self,"hum_body_Naked0",9,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
-		MILArmor_Equipped = FALSE;
-	};
 };
 
 instance ITAR_MIL_M(C_ITEM)
@@ -424,6 +406,8 @@ instance ITAR_MIL_M(C_ITEM)
 	visual_change = "Armor_MIL_M.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_MIL;
+	on_unequip = UnEquip_ITAR_MIL;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -435,6 +419,24 @@ instance ITAR_MIL_M(C_ITEM)
 	count[4] = protection[PROT_MAGIC];
 	text[5] = NAME_VALUE;
 	count[5] = value;
+};
+
+func void Equip_ITAR_MIL()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_N,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		MILArmor_Equipped = TRUE;
+	};
+};
+
+func void UnEquip_ITAR_MIL()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_PLAYER_G2,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		MILArmor_Equipped = FALSE;
+	};
 };
 
 instance ITAR_PAL_M(C_ITEM)
@@ -656,6 +658,8 @@ instance ITAR_SLD_L(C_ITEM)
 	visual_change = "Armor_Sld_L.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_SLD;
+	on_unequip = UnEquip_ITAR_SLD;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -685,6 +689,8 @@ instance ITAR_SLD_M(C_ITEM)
 	visual_change = "Armor_Sld_M.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_SLD;
+	on_unequip = UnEquip_ITAR_SLD;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -714,6 +720,8 @@ instance ITAR_SLD_H(C_ITEM)
 	visual_change = "Armor_Sld_H.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_SLD;
+	on_unequip = UnEquip_ITAR_SLD;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -725,6 +733,24 @@ instance ITAR_SLD_H(C_ITEM)
 	count[4] = protection[PROT_MAGIC];
 	text[5] = NAME_VALUE;
 	count[5] = value;
+};
+
+func void Equip_ITAR_SLD()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_N,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		SLDArmor_Equipped = TRUE;
+	};
+};
+
+func void UnEquip_ITAR_SLD()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_PLAYER_G2,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		SLDArmor_Equipped = FALSE;
+	};
 };
 
 instance ITAR_DJG_CRAWLER(C_ITEM)
@@ -888,8 +914,8 @@ instance ITAR_NOV_L(C_ITEM)
 	visual_change = "Armor_Nov_L.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
-	on_equip = Equip_ITAR_NOV_L;
-	on_unequip = UnEquip_ITAR_NOV_L;
+	on_equip = Equip_ITAR_NOV;
+	on_unequip = UnEquip_ITAR_NOV;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -903,20 +929,20 @@ instance ITAR_NOV_L(C_ITEM)
 	count[5] = value;
 };
 
-func void Equip_ITAR_NOV_L()
+func void Equip_ITAR_NOV()
 {
 	if(Npc_IsPlayer(self))
 	{
-		Mdl_SetVisualBody(self,"hum_body_Naked0",1,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_N,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
 		NOVArmor_Equipped = TRUE;
 	};
 };
 
-func void UnEquip_ITAR_NOV_L()
+func void UnEquip_ITAR_NOV()
 {
 	if(Npc_IsPlayer(self))
 	{
-		Mdl_SetVisualBody(self,"hum_body_Naked0",9,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_PLAYER_G2,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
 		NOVArmor_Equipped = FALSE;
 	};
 };

@@ -446,6 +446,7 @@ func void dia_harad_lehrling_ok()
 		AI_Output(self,other,"DIA_Harad_LEHRLING_OK_12_04");	//Кроме того, пришло время стать немного сильнее. Ты чахнешь прямо у меня на глазах!
 	};
 	PLAYER_ISAPPRENTICE = APP_HARAD;
+	ApprenticeGoldCounter = 0;
 	HARAD_STARTGUILD = other.guild;
 	HARAD_LEHRLING_DAY = Wld_GetDay();
 	Wld_AssignRoomToGuild("schmied",GIL_NONE);
@@ -677,6 +678,8 @@ func void dia_harad_sellblades_info()
 		b_giveinvitems(other,self,itmw_1h_common_01,anzahl);
 		AI_Output(self,other,"DIA_Harad_SellBlades_12_03");	//Отлично. Держи, что заработал.
 		b_giveinvitems(self,other,itmi_gold,VALUE_COMMON1 * anzahl);
+		HaradSwordsCounter += anzahl;
+		ApprenticeGoldCounter += VALUE_COMMON1 * anzahl;
 	}
 	else
 	{

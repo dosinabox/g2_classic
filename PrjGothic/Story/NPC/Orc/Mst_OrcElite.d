@@ -61,6 +61,7 @@ instance ORCELITE_REST(MST_DEFAULT_ORCELITE)
 instance ORKELITE_ANTIPALADINORKOBERST(MST_DEFAULT_ORCELITE)
 {
 	name[0] = "Полковник орков";
+	aivar[AIV_MM_REAL_ID] = ID_ORCCOMMANDER;
 	attribute[ATR_STRENGTH] = 120;
 	attribute[ATR_DEXTERITY] = 120;
 	attribute[ATR_HITPOINTS_MAX] = 400;
@@ -77,6 +78,7 @@ instance ORKELITE_ANTIPALADINORKOBERST(MST_DEFAULT_ORCELITE)
 instance ORCELITE_ANTIPALADIN(MST_DEFAULT_ORCELITE)
 {
 	name[0] = NAME_ANTIPALDIN;
+	aivar[AIV_MM_REAL_ID] = ID_ORCCOMMANDER;
 	b_setvisuals_orccommander();
 	EquipItem(self,itmw_2h_orcaxe_04);
 	CreateInvItems(self,itri_orcelitering,1);
@@ -87,10 +89,8 @@ instance ORCELITE_ANTIPALADIN(MST_DEFAULT_ORCELITE)
 instance ORCELITE_ANTIPALADIN1(MST_DEFAULT_ORCELITE)
 {
 	name[0] = NAME_ANTIPALDIN;
-	guild = GIL_ORC;
+	aivar[AIV_MM_REAL_ID] = ID_ORCCOMMANDER;
 	id = 111;
-	voice = 18;
-	flags = 0;
 	npctype = NPCTYPE_MAIN;
 	aivar[AIV_ENEMYOVERRIDE] = TRUE;
 	b_setvisuals_orccommander();
@@ -103,8 +103,8 @@ instance ORCELITE_ANTIPALADIN1(MST_DEFAULT_ORCELITE)
 instance ORCELITE_ANTIPALADIN2(MST_DEFAULT_ORCELITE)
 {
 	name[0] = NAME_ANTIPALDIN;
+	aivar[AIV_MM_REAL_ID] = ID_ORCCOMMANDER;
 	id = 112;
-	guild = GIL_ORC;
 	aivar[AIV_ENEMYOVERRIDE] = TRUE;
 	b_setvisuals_orccommander();
 	EquipItem(self,itmw_2h_orcaxe_04);
@@ -116,6 +116,7 @@ instance ORCELITE_ANTIPALADIN2(MST_DEFAULT_ORCELITE)
 instance ORCELITE_ANTIPALADIN3(MST_DEFAULT_ORCELITE)
 {
 	name[0] = NAME_ANTIPALDIN;
+	aivar[AIV_MM_REAL_ID] = ID_ORCCOMMANDER;
 	id = 113;
 	guild = GIL_ORC;
 	aivar[AIV_ENEMYOVERRIDE] = TRUE;
@@ -129,6 +130,7 @@ instance ORCELITE_ANTIPALADIN3(MST_DEFAULT_ORCELITE)
 instance ORKELITE_ANTIPALADINORKOBERST_DI(MST_DEFAULT_ORCELITE)
 {
 	name[0] = "Полковник орков";
+	aivar[AIV_MM_REAL_ID] = ID_ORCCOMMANDER;
 	attribute[ATR_STRENGTH] = 150;
 	attribute[ATR_DEXTERITY] = 150;
 	attribute[ATR_HITPOINTS_MAX] = 450;

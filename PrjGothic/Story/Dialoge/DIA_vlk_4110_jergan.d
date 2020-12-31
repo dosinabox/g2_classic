@@ -225,7 +225,7 @@ instance DIA_JERGAN_TEACH(C_INFO)
 	condition = dia_jergan_teach_condition;
 	information = dia_jergan_teach_info;
 	permanent = TRUE;
-	description = "(Изучить удаление когтей)";
+	description = "(изучить удаление когтей)";
 };
 
 

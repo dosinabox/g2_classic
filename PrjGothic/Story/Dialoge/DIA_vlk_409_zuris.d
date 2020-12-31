@@ -28,7 +28,7 @@ instance DIA_ZURIS_PICKPOCKET(C_INFO)
 	condition = dia_zuris_pickpocket_condition;
 	information = dia_zuris_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть его зелье будет довольно просто)";
+	description = "(украсть его зелье будет довольно просто)";
 };
 
 
@@ -53,8 +53,7 @@ func void dia_zuris_pickpocket_doit()
 	{
 		CreateInvItems(other,itpo_health_03,1);
 		AI_PrintScreen("Ћечебный эликсир получено",-1,YPOS_ItemTaken,FONT_ScreenSmall,2);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_zuris_pickpocket);
 	}
 	else

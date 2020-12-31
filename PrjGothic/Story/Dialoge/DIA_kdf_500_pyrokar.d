@@ -1380,7 +1380,7 @@ instance DIA_PYROKAR_SCOBSESSED(C_INFO)
 	condition = dia_pyrokar_scobsessed_condition;
 	information = dia_pyrokar_scobsessed_info;
 	permanent = TRUE;
-	description = "(¬ылечить одержимость)";
+	description = "(вылечить одержимость)";
 };
 
 

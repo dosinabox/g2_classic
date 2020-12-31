@@ -63,7 +63,7 @@ instance DIA_RAMIREZ_ZEICHEN(C_INFO)
 	condition = dia_ramirez_zeichen_condition;
 	information = dia_ramirez_zeichen_info;
 	permanent = FALSE;
-	description = "(ѕоказать сигнал воров)";
+	description = "(показать сигнал воров)";
 };
 
 

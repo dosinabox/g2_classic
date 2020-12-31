@@ -219,7 +219,7 @@ instance DIA_HALVOR_ZEICHEN(C_INFO)
 	condition = dia_halvor_zeichen_condition;
 	information = dia_halvor_zeichen_info;
 	permanent = FALSE;
-	description = "(Показать сигнал воров)";
+	description = "(показать сигнал воров)";
 };
 
 
@@ -249,7 +249,7 @@ instance DIA_HALVOR_HEHLEREI(C_INFO)
 	condition = dia_halvor_hehlerei_condition;
 	information = dia_halvor_hehlerei_info;
 	permanent = TRUE;
-	description = "(Продать все тарелки и кубки)";
+	description = "(продать все тарелки и кубки)";
 };
 
 

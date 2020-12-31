@@ -52,8 +52,8 @@ func void dia_fernando_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 50)
 	{
 		b_giveinvitems(self,other,itse_goldpocket100,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		TotalTheftGold += 100;
+		b_givethiefxp();
 		Info_ClearChoices(dia_fernando_pickpocket);
 	}
 	else

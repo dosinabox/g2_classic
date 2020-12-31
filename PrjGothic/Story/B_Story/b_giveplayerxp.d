@@ -23,3 +23,28 @@ func void b_giveplayerxp(var int add_xp)
 	b_checklog();
 };
 
+func void b_givedeathxp(var C_Npc killer,var C_Npc target)
+{
+	if((Npc_IsPlayer(killer) || ((killer.aivar[AIV_PARTYMEMBER] == TRUE) && !Npc_IsPlayer(target))) && (target.aivar[AIV_VictoryXPGiven] == FALSE) && (target.level != 0))
+	{
+		b_giveplayerxp(target.level * XP_PER_VICTORY);
+		target.aivar[AIV_VICTORYXPGIVEN] = TRUE;
+		if(target.guild == GIL_DRACONIAN)
+		{
+			Stats_Killed_Draconian += 1;
+		}
+		else if(target.guild == GIL_DMT)
+		{
+			Stats_Killed_Dementor += 1;
+		}
+		else if(target.aivar[AIV_MM_REAL_ID] == ID_ORCELITE)
+		{
+			Stats_Killed_OrcElite += 1;
+		}
+		else if(target.aivar[AIV_MM_REAL_ID] == ID_ORCCOMMANDER)
+		{
+			Stats_Killed_OrcCommander += 1;
+		};
+	};
+};
+

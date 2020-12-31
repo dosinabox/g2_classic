@@ -5,11 +5,7 @@ func void zs_dead()
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	b_stoplookat(self);
 	AI_StopPointAt(self);
-	if((Npc_IsPlayer(other) || (other.aivar[AIV_PARTYMEMBER] == TRUE)) && (self.aivar[AIV_VICTORYXPGIVEN] == FALSE))
-	{
-		b_giveplayerxp(self.level * XP_PER_VICTORY);
-		self.aivar[AIV_VICTORYXPGIVEN] = TRUE;
-	};
+	b_givedeathxp(other,self);
 	if((self.guild == GIL_GOBBO) || (self.guild == GIL_GOBBO_SKELETON) || (self.guild == GIL_SUMMONED_GOBBO_SKELETON))
 	{
 		Npc_RemoveInvItems(self,itmw_1h_bau_mace,Npc_HasItems(self,itmw_1h_bau_mace));
@@ -21,6 +17,10 @@ func void zs_dead()
 	if(Npc_IsPlayer(other))
 	{
 		self.aivar[AIV_KILLEDBYPLAYER] = TRUE;
+		if(c_dropunconscious())
+		{
+			MadKillerCount += 1;
+		};
 		if((self.guild == GIL_GIANT_BUG) && (MIS_FESTER_KILLBUGS == LOG_RUNNING))
 		{
 			FESTERS_GIANT_BUG_KILLED = FESTERS_GIANT_BUG_KILLED + 1;

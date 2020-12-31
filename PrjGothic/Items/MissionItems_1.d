@@ -205,13 +205,13 @@ func void use_kraeuterliste()
 	Doc_PrintLine(ndocid,0,"Огненная крапива");
 	Doc_PrintLine(ndocid,0,"Огненная трава");
 	Doc_PrintLine(ndocid,0,"Огненный корень");
-	Doc_PrintLine(ndocid,0,"Гоблинские ягоды");
+	Doc_PrintLine(ndocid,0,"Гоблинская ягода");
 	Doc_PrintLine(ndocid,0,"Драконий корень");
 	Doc_PrintLine(ndocid,0,"Снеппер-трава");
 	Doc_PrintLine(ndocid,0,"Луговой горец");
 	Doc_PrintLine(ndocid,0,"Царский щавель");
 	Doc_PrintLine(ndocid,0,"");
-	Doc_PrintLines(ndocid,0,"Примечание: Пусть кандидат в ученики соберет эти травы для тебя. Это позволит проверить его способности. ");
+	Doc_PrintLines(ndocid,0,"Примечание: Пусть кандидат в ученики соберет эти травы для тебя. Это позволит проверить его способности.");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"С уважением, Зурис.");
 	Doc_SetMargins(ndocid,-1,200,50,50,50,1);
@@ -928,10 +928,10 @@ instance ITRI_PROT_POINT_01_MIS(C_ITEM)
 
 instance ITMI_EDDASSTATUE(C_ITEM)
 {
-	name = "Статуя Инноса";
+	name = "Статуэтка Инноса";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
-	value = 50;
+	value = VALUE_INNOSSTATUE;
 	visual = "ItMi_InnosStatue.3DS";
 	material = MAT_METAL;
 	description = name;

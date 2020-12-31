@@ -310,7 +310,7 @@ instance DIA_LEHMAR_PICKPOCKET(C_INFO)
 	condition = dia_lehmar_pickpocket_condition;
 	information = dia_lehmar_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть его книгу будет легче легкого)";
+	description = "(украсть его книгу будет легче легкого)";
 };
 
 
@@ -334,8 +334,7 @@ func void dia_lehmar_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 20)
 	{
 		b_giveinvitems(self,other,itwr_schuldenbuch,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_lehmar_pickpocket);
 	}
 	else

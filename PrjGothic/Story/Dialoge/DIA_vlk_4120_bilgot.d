@@ -173,7 +173,7 @@ instance DIA_BILGOT_TAKEYOUWITHME(C_INFO)
 	condition = dia_bilgot_takeyouwithme_condition;
 	information = dia_bilgot_takeyouwithme_info;
 	permanent = FALSE;
-	description = "(Сдержать обещание)";
+	description = "Время пришло, Билгот! Пакуй свои вещи, мы отправляемся в путь.";
 };
 
 

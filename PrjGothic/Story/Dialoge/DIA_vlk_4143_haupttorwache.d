@@ -100,7 +100,7 @@ instance DIA_HAUPTTORWACHE_PICKPOCKET(C_INFO)
 	condition = dia_haupttorwache_pickpocket_condition;
 	information = dia_haupttorwache_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть этот ключ легче легкого)";
+	description = "(украсть этот ключ легче легкого)";
 };
 
 
@@ -124,8 +124,7 @@ func void dia_haupttorwache_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 20)
 	{
 		b_giveinvitems(self,other,itke_oc_maingate_mis,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_haupttorwache_pickpocket);
 	}
 	else

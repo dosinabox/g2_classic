@@ -242,7 +242,7 @@ func void use_health_herb_03()
 
 instance ITPL_DEX_HERB_01(C_ITEM)
 {
-	name = "Гоблинские ягоды";
+	name = "Гоблинская ягода";
 	mainflag = ITEM_KAT_FOOD;
 	flags = ITEM_MULTI;
 	value = VALUE_DEX_HERB_01;
@@ -260,6 +260,7 @@ instance ITPL_DEX_HERB_01(C_ITEM)
 
 func void use_dex_herb_01()
 {
+	TotalDexEaten += 1;
 	b_raiseattribute(self,ATR_DEXTERITY,1);
 };
 
@@ -284,6 +285,7 @@ instance ITPL_STRENGTH_HERB_01(C_ITEM)
 
 func void use_strength_herb_01()
 {
+	TotalStrEaten += 1;
 	b_raiseattribute(self,ATR_STRENGTH,1);
 };
 
@@ -488,6 +490,7 @@ instance ITPL_PERM_HERB(C_ITEM)
 
 func void use_perm_herb()
 {
+	TotalPermEaten += 1;
 	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_PERM_HERB);
 };
 

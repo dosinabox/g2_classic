@@ -18,7 +18,7 @@ instance PC_HERO(NPC_DEFAULT)
 	attribute[ATR_HITPOINTS_MAX] = 40;
 	attribute[ATR_HITPOINTS] = 40;
 	Mdl_SetVisual(self,"HUMANS.MDS");
-	Mdl_SetVisualBody(self,"hum_body_Naked0",9,0,"Hum_Head_Pony",FACE_N_PLAYER,0,NO_ARMOR);
+	Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_PLAYER_G2,0,"Hum_Head_Pony",FACE_N_PLAYER,0,NO_ARMOR);
 	b_setfightskills(self,10);
 };
 

@@ -357,7 +357,7 @@ instance DIA_ENGOR_PICKPOCKET(C_INFO)
 	condition = dia_engor_pickpocket_condition;
 	information = dia_engor_pickpocket_info;
 	permanent = TRUE;
-	description = "(Украсть его карту будет довольно просто)";
+	description = "(украсть его карту будет довольно просто)";
 };
 
 
@@ -381,8 +381,7 @@ func void dia_engor_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 40)
 	{
 		b_giveinvitems(self,other,itwr_map_oldworld,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_engor_pickpocket);
 	}
 	else

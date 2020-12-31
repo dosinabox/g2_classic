@@ -390,7 +390,7 @@ instance DIA_INGMAR_PICKPOCKET(C_INFO)
 	condition = dia_ingmar_pickpocket_condition;
 	information = dia_ingmar_pickpocket_info;
 	permanent = TRUE;
-	description = "(Украсть этот свиток практически невозможно)";
+	description = "(украсть этот свиток практически невозможно)";
 };
 
 
@@ -414,8 +414,7 @@ func void dia_ingmar_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 105)
 	{
 		b_giveinvitems(self,other,itwr_manowar,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT * 2);
+		b_givethiefxp();
 		Info_ClearChoices(dia_ingmar_pickpocket);
 	}
 	else

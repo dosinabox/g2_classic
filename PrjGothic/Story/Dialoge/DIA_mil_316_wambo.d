@@ -28,7 +28,7 @@ instance DIA_WAMBO_PICKPOCKET(C_INFO)
 	condition = dia_wambo_pickpocket_condition;
 	information = dia_wambo_pickpocket_info;
 	permanent = TRUE;
-	description = "(Воровать этот ключ рискованно)";
+	description = "(воровать этот ключ рискованно)";
 };
 
 
@@ -52,8 +52,7 @@ func void dia_wambo_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 50)
 	{
 		b_giveinvitems(self,other,itke_city_tower_04,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_wambo_pickpocket);
 	}
 	else
@@ -156,7 +155,7 @@ instance DIA_WAMBO_DEAL(C_INFO)
 	condition = dia_wambo_deal_condition;
 	information = dia_wambo_deal_info;
 	permanent = TRUE;
-	description = "(Заплатить 250 золота)";
+	description = "(заплатить 250 золота)";
 };
 
 

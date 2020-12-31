@@ -335,9 +335,9 @@ instance ITMI_POWEREYE(C_ITEM)
 	name = "Глаз Силы";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
+	value = 0;
 	visual = "ItMi_StoneOfKnowlegde_MIS.3ds";
 	material = MAT_METAL;
 	description = name;
-	inv_zbias = INVCAM_ENTF_MISC_STANDARD;
 };
 

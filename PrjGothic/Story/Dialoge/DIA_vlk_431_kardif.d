@@ -699,7 +699,7 @@ instance DIA_KARDIF_ZEICHEN(C_INFO)
 	condition = dia_kardif_zeichen_condition;
 	information = dia_kardif_zeichen_info;
 	permanent = FALSE;
-	description = "(ѕоказать сигнал воров)";
+	description = "(показать сигнал воров)";
 };
 
 

@@ -32,9 +32,9 @@ func void b_check_version()
 
 func void b_check_armor()
 {
-	if((MILArmor_Equipped == TRUE) || (NOVArmor_Equipped == TRUE))
+	if((MILArmor_Equipped == TRUE) || (NOVArmor_Equipped == TRUE) || (SLDArmor_Equipped == TRUE))
 	{
-		Mdl_SetVisualBody(hero,"hum_body_Naked0",1,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		Mdl_SetVisualBody(hero,"hum_body_Naked0",BODYTEX_N,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
 	};
 };
 

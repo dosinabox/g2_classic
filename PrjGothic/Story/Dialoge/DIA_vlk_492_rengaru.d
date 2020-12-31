@@ -313,7 +313,7 @@ instance DIA_RENGARU_ZEICHEN(C_INFO)
 	condition = dia_rengaru_zeichen_condition;
 	information = dia_rengaru_zeichen_info;
 	permanent = FALSE;
-	description = "(ѕоказать сигнал воров)";
+	description = "(показать сигнал воров)";
 };
 
 

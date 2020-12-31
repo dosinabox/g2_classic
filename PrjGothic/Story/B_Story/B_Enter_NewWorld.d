@@ -96,7 +96,7 @@ func void b_enter_newworld_kapitel_3()
 			Wld_InsertNpc(pc_fighter_nw_vor_djg,"BIGFARM");
 			b_startotherroutine(gornnw_vor_djg,"START");
 		};
-		if(Npc_IsDead(lares) == FALSE)
+		if(!Npc_IsDead(lares))
 		{
 			b_startotherroutine(lares,"START");
 		};

@@ -182,7 +182,7 @@ instance DIA_EDDA_PICKPOCKET(C_INFO)
 	condition = dia_edda_pickpocket_condition;
 	information = dia_edda_pickpocket_info;
 	permanent = TRUE;
-	description = "(”красть ее статую будет легче легкого)";
+	description = "(украсть ее статую будет легче легкого)";
 };
 
 
@@ -206,8 +206,7 @@ func void dia_edda_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 20)
 	{
 		b_giveinvitems(self,other,itmi_eddasstatue,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_edda_pickpocket);
 	}
 	else

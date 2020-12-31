@@ -603,7 +603,7 @@ instance DIA_MILTENOW_PICKPOCKET(C_INFO)
 	condition = dia_miltenow_pickpocket_condition;
 	information = dia_miltenow_pickpocket_info;
 	permanent = TRUE;
-	description = "(Украсть его зелье будет сложно)";
+	description = "(украсть его зелье будет сложно)";
 };
 
 
@@ -628,8 +628,7 @@ func void dia_miltenow_pickpocket_doit()
 	{
 		CreateInvItems(self,itpo_perm_mana,1);
 		b_giveinvitems(self,other,itpo_perm_mana,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		b_givethiefxp();
 		Info_ClearChoices(dia_miltenow_pickpocket);
 	}
 	else

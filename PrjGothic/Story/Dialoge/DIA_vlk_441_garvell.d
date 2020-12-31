@@ -52,8 +52,8 @@ func void dia_garvell_pickpocket_doit()
 	if(other.attribute[ATR_DEXTERITY] >= 10)
 	{
 		b_giveinvitems(self,other,itse_goldpocket25,1);
-		self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] = TRUE;
-		b_giveplayerxp(XP_AMBIENT);
+		TotalTheftGold += 25;
+		b_givethiefxp();
 		Info_ClearChoices(dia_garvell_pickpocket);
 	}
 	else

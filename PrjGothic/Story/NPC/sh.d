@@ -11,7 +11,7 @@ instance SH(NPC_DEFAULT)
 	b_givenpctalents(self);
 	fight_tactic = FAI_HUMAN_MASTER;
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_Pony",FACE_N_PLAYER,BODYTEX_PLAYER,-1);
+	b_setnpcvisual(self,MALE,"Hum_Head_Pony",FACE_N_PLAYER,BODYTEX_PLAYER_G1,-1);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
 	daily_routine = rtn_start_9999;
