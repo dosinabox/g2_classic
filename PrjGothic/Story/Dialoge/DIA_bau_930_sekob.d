@@ -378,7 +378,7 @@ instance DIA_SEKOB_DMTWEG(C_INFO)
 	nr = 31;
 	condition = dia_sekob_dmtweg_condition;
 	information = dia_sekob_dmtweg_info;
-	description = "Твой дом пуст.";
+	description = "Твой дом пуст. Людей в черных рясах больше нет.";
 };
 
 
@@ -420,7 +420,10 @@ func void dia_sekob_dmtweg_info()
 		b_startotherroutine(rosi,"Start");
 		b_startotherroutine(till,"Start");
 	};
-	b_startotherroutine(balthasar,"Start");
+	if(BalthasarMovedToBengar == FALSE)
+	{
+		b_startotherroutine(balthasar,"Start");
+	};
 	b_startotherroutine(bau_933_rega,"Start");
 	b_startotherroutine(bau_934_babera,"Start");
 	b_startotherroutine(bau_937_bauer,"Start");

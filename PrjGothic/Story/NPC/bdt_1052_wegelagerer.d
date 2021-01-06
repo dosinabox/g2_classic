@@ -3,7 +3,7 @@ instance BDT_1052_WEGELAGERER(NPC_DEFAULT)
 {
 	name[0] = "Ѕрод€га";
 	guild = GIL_BDT;
-	id = 1051;
+	id = 1052;
 	voice = 6;
 	flags = 0;
 	npctype = NPCTYPE_MAIN;

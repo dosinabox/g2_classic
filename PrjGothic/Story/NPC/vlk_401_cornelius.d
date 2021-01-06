@@ -34,7 +34,7 @@ func void rtn_flee_401()
 
 func void rtn_prison_401()
 {
-	ta_stand_guarding(8,0,23,0,"NW_CITY_HABOUR_KASERN_PRISON_BORKA");
-	ta_stand_guarding(23,0,8,0,"NW_CITY_HABOUR_KASERN_PRISON_BORKA");
+	ta_stand_guarding(8,0,23,0,"NW_CITY_HABOUR_KASERN_BORKA");
+	ta_stand_guarding(23,0,8,0,"NW_CITY_HABOUR_KASERN_BORKA");
 };
 

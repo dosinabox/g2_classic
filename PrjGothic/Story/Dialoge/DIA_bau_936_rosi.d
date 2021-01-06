@@ -152,7 +152,7 @@ instance DIA_ROSI_DUINBARRIERE(C_INFO)
 
 func int dia_rosi_duinbarriere_condition()
 {
-	if(Npc_KnowsInfo(other,dia_rosi_barriere))
+	if(Npc_KnowsInfo(other,dia_rosi_barriere) && (MIS_BRINGROSIBACKTOSEKOB != LOG_SUCCESS))
 	{
 		return TRUE;
 	};
@@ -162,7 +162,6 @@ func void dia_rosi_duinbarriere_info()
 {
 	AI_Output(other,self,"DIA_Rosi_DuInBarriere_15_00");	//Ты когда-нибудь была за Барьером?
 	AI_Output(self,other,"DIA_Rosi_DuInBarriere_17_01");	//Нет. Мы только слышали о нем. Бенгар, фермер с высокогорных пастбищ, наверняка сможет рассказать тебе о нем больше.
-	AI_Output(self,other,"DIA_Rosi_DuInBarriere_17_02");	//Его ферма находится очень близко от прохода, ведущего в Долину Рудников.
 };
 
 
@@ -178,7 +177,7 @@ instance DIA_ROSI_BENGAR(C_INFO)
 
 func int dia_rosi_bengar_condition()
 {
-	if(Npc_KnowsInfo(other,dia_rosi_duinbarriere) && (Npc_IsDead(balthasar) == FALSE))
+	if(Npc_KnowsInfo(other,dia_rosi_duinbarriere) && (MIS_BRINGROSIBACKTOSEKOB != LOG_SUCCESS))
 	{
 		return TRUE;
 	};
@@ -187,8 +186,12 @@ func int dia_rosi_bengar_condition()
 func void dia_rosi_bengar_info()
 {
 	AI_Output(other,self,"DIA_Rosi_BENGAR_15_00");	//Как мне попасть на ферму Бенгара?
-	AI_Output(self,other,"DIA_Rosi_BENGAR_17_01");	//Спроси Бальтазара. Это наш пастух. Иногда он водит своих овец на пастбища Бенгара.
-	AI_Output(self,other,"DIA_Rosi_BENGAR_17_02");	//Он расскажет тебе, как добраться туда.
+	AI_Output(self,other,"DIA_Rosi_DuInBarriere_17_02");	//Его ферма находится очень близко от прохода, ведущего в Долину Рудников.
+	if((BalthasarMovedToBengar == FALSE) && !Npc_IsDead(balthasar))
+	{
+		AI_Output(self,other,"DIA_Rosi_BENGAR_17_01");	//Спроси Бальтазара. Это наш пастух. Иногда он водит своих овец на пастбища Бенгара.
+		AI_Output(self,other,"DIA_Rosi_BENGAR_17_02");	//Он расскажет тебе, как добраться туда.
+	};
 };
 
 

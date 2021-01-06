@@ -112,7 +112,7 @@ instance DIA_BALTHASAR_WOBENGAR(C_INFO)
 
 func int dia_balthasar_wobengar_condition()
 {
-	if(Npc_KnowsInfo(other,dia_balthasar_aergermitnachbarn) && ((hero.guild == GIL_NONE) || (hero.guild == GIL_SLD) || (hero.guild == GIL_DJG)))
+	if(Npc_KnowsInfo(other,dia_balthasar_aergermitnachbarn) && ((hero.guild == GIL_NONE) || (hero.guild == GIL_SLD) || (hero.guild == GIL_DJG)) && (BalthasarMovedToBengar == FALSE))
 	{
 		return TRUE;
 	};
@@ -180,6 +180,7 @@ func void dia_balthasar_bengarueberredet_info()
 	AI_Output(self,other,"DIA_Balthasar_BENGARUEBERREDET_05_01");	//Спасибо. Я отправлюсь туда прямо сейчас.
 	AI_Output(self,other,"DIA_Balthasar_BENGARUEBERREDET_05_02");	//Вот, возьми эти овечьи шкуры в знак моей благодарности.
 	b_giveinvitems(self,other,itat_sheepfur,10);
+	BalthasarMovedToBengar = TRUE;
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"BengarsWeide");
 	b_giveplayerxp(XP_BALTHASAR_BENGARSWEIDE);
@@ -240,7 +241,22 @@ func void dia_balthasar_permkap1_info()
 			AI_Output(self,hero,"DIA_Balthasar_PERMKAP1_05_03");	//Я думаю, лучше пойти к Секобу и признаться.
 		};
 		AI_StopProcessInfos(self);
-		Npc_ExchangeRoutine(self,"Start");
+		if(BalthasarMovedToBengar == TRUE)
+		{
+			if(KAPITEL < 3)
+			{
+				Npc_ExchangeRoutine(self,"Start");
+			}
+			else if(Npc_IsDead(dmt_dementorambientsekob1) && Npc_IsDead(dmt_dementorambientsekob2) && Npc_IsDead(dmt_dementorambientsekob3) && Npc_IsDead(dmt_dementorambientsekob4))
+			{
+				Npc_ExchangeRoutine(self,"Start");
+			}
+			else
+			{
+				Npc_ExchangeRoutine(self,"FleeDMT");
+			};
+			BalthasarMovedToBengar = FALSE;
+		};
 	};
 };
 

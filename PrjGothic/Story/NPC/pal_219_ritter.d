@@ -3,7 +3,7 @@ instance PAL_219_RITTER(NPC_DEFAULT)
 {
 	name[0] = NAME_RITTER;
 	guild = GIL_OUT;
-	id = 218;
+	id = 219;
 	voice = 4;
 	flags = 0;
 	npctype = NPCTYPE_OCAMBIENT;

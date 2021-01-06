@@ -206,14 +206,14 @@ instance DIA_CORNELIUS_PAYCORNELIUS(C_INFO)
 	nr = 4;
 	condition = dia_cornelius_paycornelius_condition;
 	information = dia_cornelius_paycornelius_info;
-	permanent = TRUE;
+	permanent = FALSE;
 	description = "Вот золото.";
 };
 
 
 func int dia_cornelius_paycornelius_condition()
 {
-	if((CORNELIUS_PAYFORPROOF == TRUE) && (Npc_HasItems(other,itmi_gold) >= 2000))
+	if((CORNELIUS_PAYFORPROOF == TRUE) && (Npc_HasItems(other,itmi_gold) >= 2000) && (CORNELIUS_TELLTRUTH == FALSE))
 	{
 		return TRUE;
 	};

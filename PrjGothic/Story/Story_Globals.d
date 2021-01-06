@@ -651,3 +651,4 @@ var int MadKillerCount;
 var int TotalThefts;
 var int TotalTheftXP;
 var int TotalTheftGold;
+var int BalthasarMovedToBengar;
