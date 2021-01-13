@@ -118,7 +118,7 @@ func void dia_mika_wasgefaehrlich_info()
 {
 	AI_Output(other,self,"DIA_Mika_WASGEFAEHRLICH_15_00");	//ј что такого опасного здесь?
 	AI_Output(self,other,"DIA_Mika_WASGEFAEHRLICH_12_01");	//ћного чего.
-	if(other.protection[PROT_EDGE] < itar_leather_l.protection[PROT_EDGE])
+	if(other.protection[PROT_EDGE] < 25)
 	{
 		AI_Output(self,other,"DIA_Mika_WASGEFAEHRLICH_12_02");	//Ќу, например, бандиты. ќни только и ждут, когда к ним в лапы попадет кто-нибудь вроде теб€.
 		AI_Output(self,other,"DIA_Mika_WASGEFAEHRLICH_12_03");	//ј если теб€ не поймают бандиты, то дикие животные из леса или наемники, которые шл€ютс€ вокруг, позабот€тс€ о тебе.

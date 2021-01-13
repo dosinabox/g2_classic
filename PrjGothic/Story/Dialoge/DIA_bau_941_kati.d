@@ -24,6 +24,8 @@ func void dia_kati_exit_info()
 };
 
 
+var int Kati_AskedForHelp;
+
 instance DIA_KATI_SLDNOCHDA(C_INFO)
 {
 	npc = bau_941_kati;
@@ -45,11 +47,10 @@ func int dia_kati_sldnochda_condition()
 
 func void dia_kati_sldnochda_info()
 {
-	var int hilfe;
-	if(hilfe == FALSE)
+	if(Kati_AskedForHelp == FALSE)
 	{
 		AI_Output(self,other,"DIA_Kati_SLDNOCHDA_16_00");	//Эти головорезы угрожают моему мужу! Мы простые граждане Хориниса, преданные королю, а эти наемники хотят ограбить нас!
-		hilfe = TRUE;
+		Kati_AskedForHelp = TRUE;
 	};
 	AI_Output(self,other,"DIA_Kati_SLDNOCHDA_16_01");	//Ну не стой же здесь. Сделай что-нибудь! Помоги нам!
 	AKILS_SLDSTILLTHERE = TRUE;
@@ -120,9 +121,15 @@ func void dia_kati_essen_info()
 	AI_Output(other,self,"DIA_Kati_ESSEN_15_00");	//Акил говорит, что ты можешь накормить меня.
 	AI_Output(self,other,"DIA_Kati_ESSEN_16_01");	//С тех пор как рухнул Барьер, для нас настали тяжелые времена. Жить здесь стало небезопасно.
 	AI_Output(self,other,"DIA_Kati_ESSEN_16_02");	//Вот, держи ломоть хлеба, немного молока и бутылку воды. Извини, но это все, чем мы можем поделиться.
-	b_giveinvitems(self,other,itfo_bread,1);
-	b_giveinvitems(self,other,itfo_water,1);
-	b_giveinvitems(self,other,itfomutton,1);
+	Npc_RemoveInvItem(self,itfo_bread);
+	CreateInvItem(other,itfo_bread);
+	Npc_RemoveInvItem(self,itfo_milk);
+	CreateInvItem(other,itfo_milk);
+	Npc_RemoveInvItem(self,itfo_water);
+	CreateInvItem(other,itfo_water);
+	AI_PrintScreen("Хлеб получено",-1,40,FONT_SCREENSMALL,2);
+	AI_PrintScreen("Молоко получено",-1,43,FONT_SCREENSMALL,2);
+	AI_PrintScreen("Вода получено",-1,46,FONT_SCREENSMALL,2);
 };
 
 

@@ -193,19 +193,22 @@ var int lerne_zweihand;
 
 instance ITWR_EINHANDBUCH(C_ITEM)
 {
-	name = "Искусство сражения";
+	name = "Южное искусство обороны";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 5000;
-	visual = "ItWr_Book_02_04.3ds";
+	visual = "ItWr_Book_1H.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
-	description = "Южное искусство обороны";
+	description = name;
 	text[2] = "Книга, посвященная искусству";
 	text[3] = "сражения одноручным оружием.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	on_state[0] = useeinhandbuch;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 
@@ -236,26 +239,28 @@ func void useeinhandbuch()
 	Doc_SetFont(ndocid,1,FONT_BOOK);
 	Doc_PrintLine(ndocid,1,"");
 	Doc_PrintLines(ndocid,1,"Вероятно, самый известный прием, используемый южанами - это блок одноручным оружием и шаг назад. Шаг назад позволяет бойцу ослабить атакующий удар и в то же время занять превосходную стойку, из которой можно провести контратаку.");
-	Doc_PrintLine(ndocid,1,"");
 	Doc_Show(ndocid);
 };
 
 
 instance ITWR_ZWEIHANDBUCH(C_ITEM)
 {
-	name = "Тактика боя";
+	name = "Двойные блоки";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 5000;
-	visual = "ItWr_Book_02_03.3ds";
+	visual = "ItWr_Book_2H.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
-	description = "Двойные блоки";
+	description = name;
 	text[2] = "Книга, посвященная искусству";
 	text[3] = "сражения двуручным оружием.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	on_state[0] = usezweihandbuch;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 };
 
 

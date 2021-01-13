@@ -254,10 +254,11 @@ instance ITWR_DIARY_BLACKNOVICE_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 100;
-	visual = "ItWr_Book_02_04.3ds";
+	visual = "ItWr_Book_03_04.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
+	text[0] = "Дневник послушника черного мага.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
 	on_state[0] = use_diary_blacknovice;

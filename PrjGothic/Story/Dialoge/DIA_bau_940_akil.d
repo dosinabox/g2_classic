@@ -21,7 +21,7 @@ func int dia_akil_exit_condition()
 func void dia_akil_exit_info()
 {
 	AI_Output(other,self,"DIA_Akil_EXIT_15_00");	//я должен идти.
-	if(AKIL_SAUER == TRUE)
+	if(!Npc_KnowsInfo(other,dia_akil_nachkampf))
 	{
 		AI_Output(self,other,"DIA_Akil_EXIT_13_01");	//Ќе буду задерживать теб€.
 	}

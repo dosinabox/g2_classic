@@ -70,7 +70,7 @@ instance ITWR_HALLSOFIRDORATH_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Book_02_05.3ds";
+	visual = "ItWr_Book_03_03.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAPSEALED";
 	description = name;
@@ -109,7 +109,7 @@ instance ITWR_HALLSOFIRDORATH_OPEN_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Book_02_05.3ds";
+	visual = "ItWr_Book_03_03.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
@@ -161,6 +161,9 @@ instance ITWR_XARDASSEAMAPBOOK_MIS(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
+	inv_rotz = 180;
+	inv_rotx = 90;
+	inv_roty = 180;
 	on_state[0] = use_xardasseamapbook_mis;
 };
 

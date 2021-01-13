@@ -629,6 +629,7 @@ var int currentlevel;
 var int NOVArmor_Equipped;
 var int MILArmor_Equipped;
 var int SLDArmor_Equipped;
+var int BAUArmor_Equipped;
 var int Addon_zuerst;
 var int FullNPCRemoval;
 var int Stats_Killed_Draconian;

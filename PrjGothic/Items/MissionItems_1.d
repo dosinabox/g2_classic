@@ -1106,7 +1106,7 @@ instance ITWR_SCHULDENBUCH(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 100;
-	visual = "ItWr_Book_02_05.3ds";
+	visual = "ItWr_Book_02_03.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = "Долговая книга Лемара";

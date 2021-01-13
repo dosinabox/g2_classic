@@ -136,7 +136,7 @@ func void dia_tandor_equipment_info()
 func void dia_tandor_equipment_nah()
 {
 	AI_Output(other,self,"DIA_Tandor_Equipment_Nah_15_00");	//Для ближнего боя.
-	AI_Output(self,other,"DIA_Tandor_Equipment_Nah_08_01");	//Одноручное иди двуручное?
+	AI_Output(self,other,"DIA_Tandor_Equipment_Nah_08_01");	//Одноручное или двуручное?
 	Info_ClearChoices(dia_tandor_equipment);
 	Info_AddChoice(dia_tandor_equipment,"Одноручное.",dia_tandor_equipment_ein);
 	Info_AddChoice(dia_tandor_equipment,"Двуручное.",dia_tandor_equipment_zwei);
@@ -154,7 +154,7 @@ func void dia_tandor_equipment_fern()
 func void dia_tandor_equipment_ein()
 {
 	AI_Output(other,self,"DIA_Tandor_Equipment_Ein_15_00");	//Одноручное.
-	AI_Output(self,other,"DIA_Tandor_Equipment_Ein_08_01");	//Тогда возьми этот дробитель камней. Это хорошее оружие.
+	AI_Output(self,other,"DIA_Tandor_Equipment_Ein_08_01");	//Тогда возьми этот Дробитель камней. Это хорошее оружие.
 	b_giveinvitems(self,other,itmw_steinbrecher,1);
 	Info_ClearChoices(dia_tandor_equipment);
 };

@@ -27,7 +27,10 @@ func void b_clearjunktradeinv(var C_NPC slf)
 		Npc_RemoveInvItems(slf,itat_shadowfur,Npc_HasItems(slf,itat_shadowfur));
 		Npc_RemoveInvItems(slf,itat_sharkskin,Npc_HasItems(slf,itat_sharkskin));
 		Npc_RemoveInvItems(slf,itat_trollfur,Npc_HasItems(slf,itat_trollfur));
-		Npc_RemoveInvItems(slf,itat_waranfiretongue,Npc_HasItems(slf,itat_waranfiretongue));
+		if(Hlp_GetInstanceID(slf) != Hlp_GetInstanceID(gorax))
+		{
+			Npc_RemoveInvItems(slf,itat_waranfiretongue,Npc_HasItems(slf,itat_waranfiretongue));
+		};
 		Npc_RemoveInvItems(slf,itfo_apple,Npc_HasItems(slf,itfo_apple));
 		Npc_RemoveInvItems(slf,itfo_cheese,Npc_HasItems(slf,itfo_cheese));
 		Npc_RemoveInvItems(slf,itfo_bacon,Npc_HasItems(slf,itfo_bacon));

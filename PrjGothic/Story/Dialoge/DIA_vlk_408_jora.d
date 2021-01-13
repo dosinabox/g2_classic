@@ -413,7 +413,7 @@ func void dia_jora_belohnung_info()
 		AI_Output(self,other,"DIA_Jora_Add_08_12");	//Но я уже дал тебе ценный совет.
 		AI_Output(self,other,"DIA_Jora_Add_08_13");	//Этого должно хватить в качестве вознаграждения.
 	};
-	AI_Output(self,other,"DIA_Jora_Add_08_14");	//А сели тебе нужно золото, то выслеживай воров и получай награду за их голову у лорда Андрэ.
+	AI_Output(self,other,"DIA_Jora_Add_08_14");	//А если тебе нужно золото, то выслеживай воров и получай награду за их голову у лорда Андрэ.
 	if(Npc_GetDistToWP(self,"NW_CITY_MERCHANT_PATH_38") <= 500)
 	{
 		AI_Output(self,other,"DIA_Jora_Belohnung_08_03");	//А теперь извини, меня ждут клиенты...

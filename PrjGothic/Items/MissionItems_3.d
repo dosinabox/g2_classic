@@ -132,7 +132,7 @@ instance ITWR_XARDASBOOKFORPYROKAR_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Book_02_05.3ds";
+	visual = "ItWr_Book_03_03.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;
@@ -171,7 +171,7 @@ instance ITWR_CORNELIUSTAGEBUCH_MIS(C_ITEM)
 	visual = "ItWr_Book_01.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
-	description = "Дневник";
+	description = name;
 	text[0] = "Дневник Корнелиуса.";
 	on_state[0] = usecorneliustagebuch;
 };
@@ -180,8 +180,6 @@ instance ITWR_CORNELIUSTAGEBUCH_MIS(C_ITEM)
 func void usecorneliustagebuch()
 {
 	var int ndocid;
-	CORNELIUS_ISLIAR = TRUE;
-	b_logentry(TOPIC_RESCUEBENNET,"Этот дневник - доказательство, необходимое для подтверждения невиновности Беннета.");
 	ndocid = Doc_Create();
 	Doc_SetPages(ndocid,2);
 	Doc_SetPage(ndocid,0,"Book_Brown_L.tga",0);
@@ -199,7 +197,11 @@ func void usecorneliustagebuch()
 	Doc_PrintLine(ndocid,1,"");
 	Doc_PrintLines(ndocid,1,"Это произошло -- один из наемников был арестован. Сдержать мое слово будет просто.");
 	Doc_Show(ndocid);
-	PrintScreen("",-1,-1,FONT_SCREEN,0);
+	if(CORNELIUS_ISLIAR == FALSE)
+	{
+		b_logentry(TOPIC_RESCUEBENNET,"Этот дневник - доказательство, необходимое для подтверждения невиновности Беннета.");
+		CORNELIUS_ISLIAR = TRUE;
+	};
 };
 
 
@@ -209,7 +211,7 @@ instance ITWR_DEMENTOROBSESSIONBOOK_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Book_02_05.3ds";
+	visual = "ItWr_Book_03_05.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;

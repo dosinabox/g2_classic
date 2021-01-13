@@ -513,6 +513,8 @@ instance ITAR_BAU_L(C_ITEM)
 	visual_change = "Armor_Bau_L.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_BAU;
+	on_unequip = UnEquip_ITAR_BAU;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -542,6 +544,8 @@ instance ITAR_BAU_M(C_ITEM)
 	visual_change = "Armor_Bau_M.asc";
 	visual_skin = 0;
 	material = MAT_LEATHER;
+	on_equip = Equip_ITAR_BAU;
+	on_unequip = UnEquip_ITAR_BAU;
 	description = name;
 	text[1] = NAME_PROT_EDGE;
 	count[1] = protection[PROT_EDGE];
@@ -553,6 +557,24 @@ instance ITAR_BAU_M(C_ITEM)
 	count[4] = protection[PROT_MAGIC];
 	text[5] = NAME_VALUE;
 	count[5] = value;
+};
+
+func void Equip_ITAR_BAU()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_N,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		BAUArmor_Equipped = TRUE;
+	};
+};
+
+func void UnEquip_ITAR_BAU()
+{
+	if(Npc_IsPlayer(self))
+	{
+		Mdl_SetVisualBody(self,"hum_body_Naked0",BODYTEX_PLAYER_G2,0,"Hum_Head_Pony",Face_N_Player,0,NO_ARMOR);
+		BAUArmor_Equipped = FALSE;
+	};
 };
 
 instance ITAR_BAUBABE_L(C_ITEM)
