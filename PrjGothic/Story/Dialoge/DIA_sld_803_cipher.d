@@ -422,11 +422,11 @@ func void dia_ciphersld_pickpocket_info()
 func void dia_ciphersld_pickpocket_doit()
 {
 	b_beklauen();
-	Info_ClearChoices(dia_cipher_pickpocket);
+	Info_ClearChoices(dia_ciphersld_pickpocket);
 };
 
 func void dia_ciphersld_pickpocket_back()
 {
-	Info_ClearChoices(dia_cipher_pickpocket);
+	Info_ClearChoices(dia_ciphersld_pickpocket);
 };
 

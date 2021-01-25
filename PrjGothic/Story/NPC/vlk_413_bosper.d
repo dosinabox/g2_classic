@@ -11,7 +11,7 @@ instance VLK_413_BOSPER(NPC_DEFAULT)
 	fight_tactic = FAI_HUMAN_STRONG;
 	EquipItem(self,itmw_1h_vlk_dagger);
 	EquipItem(self,itrw_sld_bow);
-	b_setnpcvisual(self,MALE,"Hum_Head_FatBald.",FACE_L_TOUGH_SANTINO,BODYTEX_L,itar_leather_l);
+	b_setnpcvisual(self,MALE,"Hum_Head_FatBald",FACE_L_TOUGH_SANTINO,BODYTEX_L,itar_leather_l);
 	Mdl_SetModelFatness(self,0.8);
 	Mdl_ApplyOverlayMds(self,"Humans_Relaxed.mds");
 	b_givenpctalents(self);

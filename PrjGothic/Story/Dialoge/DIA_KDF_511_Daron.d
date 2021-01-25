@@ -374,7 +374,7 @@ func void dia_daron_arm_info()
 instance DIA_DARON_SPENDE(C_INFO)
 {
 	npc = kdf_511_daron;
-	nr = 990;
+	nr = 800;
 	condition = dia_daron_spende_condition;
 	information = dia_daron_spende_info;
 	permanent = TRUE;

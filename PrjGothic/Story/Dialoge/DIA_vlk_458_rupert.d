@@ -258,7 +258,7 @@ func void dia_rupert_youroffer_info()
 instance DIA_RUPERT_TRADE(C_INFO)
 {
 	npc = vlk_458_rupert;
-	nr = 900;
+	nr = 800;
 	condition = dia_rupert_trade_condition;
 	information = dia_rupert_trade_info;
 	permanent = TRUE;
