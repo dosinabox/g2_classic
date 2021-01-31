@@ -20,6 +20,7 @@ prototype MST_DEFAULT_DRAGON_SWAMP(C_NPC)
 	protection[PROT_FLY] = IMMUNE;
 	protection[PROT_MAGIC] = 60;
 	damagetype = DAM_FLY;
+	fight_tactic = FAI_DRAGON;
 	senses = SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
 	senses_range = PERC_DIST_DRAGON_ACTIVE_MAX;
 	aivar[AIV_MM_FOLLOWTIME] = FOLLOWTIME_MEDIUM;
@@ -41,9 +42,7 @@ instance DRAGON_SWAMP(MST_DEFAULT_DRAGON_SWAMP)
 {
 	name[0] = "Пандродор";
 	flags = NPC_FLAG_IMMORTAL;
-	fight_tactic = FAI_DRAGON;
 	b_setvisuals_dragon_swamp();
 	Npc_SetToFistMode(self);
-	bodystateinterruptableoverride = TRUE;
 };
 

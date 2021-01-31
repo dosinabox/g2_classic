@@ -26,7 +26,7 @@ instance DJG_703_CIPHER(NPC_DEFAULT)
 func void rtn_start_703()
 {
 	ta_sit_bench(8,0,23,0,"OW_DJG_SWAMPCAMP_02");
-	ta_sit_bench(23,0,8,0,"OW_DJG_SWAMPCAMP_03");
+	ta_sit_bench(23,0,8,0,"OW_DJG_SWAMPCAMP_02");
 };
 
 func void rtn_swampwait1_703()

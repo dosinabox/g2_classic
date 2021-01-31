@@ -3,15 +3,27 @@ func void b_restartfreeze()
 {
 	if((Npc_GetActiveSpell(other) == SPL_ICECUBE) || (Npc_GetActiveSpell(other) == SPL_ICEWAVE))
 	{
+		Snd_Play("MFX_ICECUBE_TARGET_START");
 		Npc_SetStateTime(self,0);
 	};
 };
 
 func void b_stopmagicfreeze()
 {
+	if(Npc_IsPlayer(self))
+	{
+		Snd_Play("MFX_ICECUBE_TARGET_END");
+	}
+	else if(Npc_GetDistToNpc(self,hero) <= 800)
+	{
+		Snd_Play("MFX_ICECUBE_TARGET_END");
+	};
 	Npc_PercEnable(self,PERC_ASSESSMAGIC,b_assessmagic);
 	Npc_ClearAIQueue(self);
-	AI_Standup(self);
+	if(self.guild != GIL_DRAGON)
+	{
+		AI_Standup(self);
+	};
 	if(self.guild < GIL_SEPERATOR_HUM)
 	{
 		b_assessdamage();
@@ -24,6 +36,7 @@ func void b_stopmagicfreeze()
 
 func void zs_magicfreeze()
 {
+	Snd_Play("MFX_ICECUBE_TARGET_START");
 	Npc_PercEnable(self,PERC_ASSESSMAGIC,b_restartfreeze);
 	Npc_StopAni(self,"S_FIRE_VICTIM");
 	if(!c_bodystatecontains(self,BS_UNCONSCIOUS))

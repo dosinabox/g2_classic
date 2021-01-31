@@ -81,7 +81,7 @@ func void dia_canthar_personalcrimes_info()
 {
 	if(self.aivar[AIV_LASTFIGHTAGAINSTPLAYER] == FIGHT_LOST)
 	{
-		AI_Output(self,other,"DIA_Canthar_PersonalCRIMES_09_00");	//Это было очень глупо с твоей стороны атаковать меня.
+		AI_Output(self,other,"DIA_Canthar_PersonalCRIMES_09_00");	//Это было очень глупо с твоей стороны - атаковать меня.
 	}
 	else
 	{
@@ -101,6 +101,7 @@ func void dia_canthar_personalcrimes_info()
 func void dia_canthar_personalcrimes_pay()
 {
 	AI_Output(other,self,"DIA_Canthar_PersonalCRIMES_Pay_15_00");	//Вот твое золото - давай забудем об этом!
+	b_giveinvitems(other,self,itmi_gold,100);
 	AI_Output(self,other,"DIA_Canthar_PersonalCRIMES_Pay_09_01");	//Очень разумно с твоей стороны!
 	self.aivar[AIV_LASTFIGHTCOMMENT] = TRUE;
 	AI_StopProcessInfos(self);

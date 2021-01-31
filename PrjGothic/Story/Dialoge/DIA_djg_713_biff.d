@@ -272,6 +272,18 @@ func void dia_biff_arbeiten_lebenlassen()
 };
 
 
+var int biff_labert_geldeintreiben;
+
+func void b_givebiffsanteil()
+{
+	AI_Output(self,other,"DIA_Biff_GELDEINTREIBEN_geben_07_01");	//Хорошо. Тогда в путь.
+	AI_StopProcessInfos(self);
+	b_giveinvitems(other,self,itmi_gold,BIFFSANTEIL);
+	b_biff_setrefusetalk();
+	BIFF_LABERT_GELDEINTREIBEN = FALSE;
+	DJG_BIFF_SCGOLD = Npc_HasItems(hero,itmi_gold);
+};
+
 instance DIA_BIFF_GELDEINTREIBEN(C_INFO)
 {
 	npc = djg_713_biff;
@@ -282,8 +294,6 @@ instance DIA_BIFF_GELDEINTREIBEN(C_INFO)
 	permanent = TRUE;
 };
 
-
-var int biff_labert_geldeintreiben;
 
 func int dia_biff_geldeintreiben_condition()
 {
@@ -300,19 +310,20 @@ func void dia_biff_geldeintreiben_info()
 	b_biffsanteil_berechnung();
 	b_biffsanteil_printscreen();
 	Info_ClearChoices(dia_biff_geldeintreiben);
-	Info_AddChoice(dia_biff_geldeintreiben,"Я не могу платить тебе.",dia_biff_geldeintreiben_zuteuer);
+	Info_AddChoice(dia_biff_geldeintreiben,"Я не могу позволить себе такие расходы.",dia_biff_geldeintreiben_zuteuer);
 	Info_AddChoice(dia_biff_geldeintreiben,"Вот твоя доля.",dia_biff_geldeintreiben_geben);
 };
 
 func void dia_biff_geldeintreiben_geben()
 {
 	AI_Output(other,self,"DIA_Biff_GELDEINTREIBEN_geben_15_00");	//Вот твоя доля.
-	AI_Output(self,other,"DIA_Biff_GELDEINTREIBEN_geben_07_01");	//Хорошо. Тогда в путь.
-	AI_StopProcessInfos(self);
-	b_giveinvitems(other,self,itmi_gold,BIFFSANTEIL);
-	b_biff_setrefusetalk();
-	BIFF_LABERT_GELDEINTREIBEN = FALSE;
-	DJG_BIFF_SCGOLD = Npc_HasItems(hero,itmi_gold);
+	b_givebiffsanteil();
+};
+
+func void dia_biff_geldeintreiben_geben2()
+{
+	AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_15_02");	//Хорошо, похоже, у меня нет выбора. Давай разделим пополам.
+	b_givebiffsanteil();
 };
 
 func void dia_biff_geldeintreiben_zuteuer()
@@ -321,7 +332,7 @@ func void dia_biff_geldeintreiben_zuteuer()
 	AI_Output(self,other,"DIA_Biff_GELDEINTREIBEN_zuTeuer_07_01");	//Хватит ныть. Мы договорились на половину.
 	Info_ClearChoices(dia_biff_geldeintreiben);
 	Info_AddChoice(dia_biff_geldeintreiben,"Боюсь, дальше наши пути расходятся.",dia_biff_geldeintreiben_zuteuer_trennen);
-	Info_AddChoice(dia_biff_geldeintreiben,"Вот твоя доля.",dia_biff_geldeintreiben_geben);
+	Info_AddChoice(dia_biff_geldeintreiben,"Хорошо, похоже, у меня нет выбора. Давай разделим пополам.",dia_biff_geldeintreiben_geben2);
 };
 
 func void dia_biff_geldeintreiben_zuteuer_trennen()

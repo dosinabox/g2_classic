@@ -22,8 +22,7 @@ func void dia_dragon_swamp_exit_info()
 	Npc_RemoveInvItems(other,itmi_innoseye_mis,1);
 	CreateInvItems(other,itmi_innoseye_discharged_mis,1);
 	AI_Output(self,other,"DIA_Dragon_Swamp_Exit_20_00");	//Сила Глаза иссякла. Твоя жизнь закончится здесь, человек.
-	SWAMPDRAGON = Hlp_GetNpc(dragon_swamp);
-	swampdragon.flags = 0;
+	self.flags = 0;
 	AI_StopProcessInfos(self);
 	DRAGONTALK_EXIT_FREE = FALSE;
 	if(DJG_SWAMPPARTY_GOGOGO == TRUE)

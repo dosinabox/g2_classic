@@ -1,25 +1,25 @@
 
 func void b_assessmagic()
 {
-	if(Npc_GetActiveSpellCat(other) == SPELL_BAD)
+	if(Npc_GetLastHitSpellCat(self) == SPELL_BAD)
 	{
 		Npc_SendPassivePerc(self,PERC_ASSESSFIGHTSOUND,self,other);
 	};
-	if((Npc_GetActiveSpell(other) == SPL_ICECUBE) || (Npc_GetActiveSpell(other) == SPL_ICEWAVE))
+	if((Npc_GetLastHitSpellID(self) == SPL_ICECUBE) || (Npc_GetLastHitSpellID(self) == SPL_ICEWAVE))
 	{
 		Npc_ClearAIQueue(self);
 		b_clearperceptions(self);
 		AI_StartState(self,zs_magicfreeze,0,"");
 		return;
 	};
-	if(Npc_GetActiveSpell(other) == SPL_CHARGEZAP)
+	if(Npc_GetLastHitSpellID(self) == SPL_CHARGEZAP)
 	{
 		Npc_ClearAIQueue(self);
 		b_clearperceptions(self);
 		AI_StartState(self,zs_shortzapped,0,"");
 		return;
 	};
-	if(Npc_GetActiveSpell(other) == SPL_FEAR)
+	if(Npc_GetLastHitSpellID(self) == SPL_FEAR)
 	{
 		Npc_ClearAIQueue(self);
 		b_clearperceptions(self);
@@ -35,7 +35,7 @@ func void b_assessmagic()
 			return;
 		};
 	};
-	if(Npc_GetActiveSpell(other) == SPL_FIRERAIN)
+	if((Npc_GetLastHitSpellID(self) == SPL_FIRERAIN) && (self.guild != GIL_DRAGON))
 	{
 		Npc_ClearAIQueue(self);
 		AI_StartState(self,zs_magicburnshort,0,"");

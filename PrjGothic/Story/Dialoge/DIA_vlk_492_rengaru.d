@@ -138,7 +138,7 @@ func void dia_rengaru_gotyou_info()
 	AI_Output(other,self,"DIA_Rengaru_GOTYOU_15_02");	//Ты украл кошелек у Джоры средь бела дня, и он даже видел, как ты сделал это.
 	AI_Output(other,self,"DIA_Rengaru_GOTYOU_15_03");	//Поэтому я пришел сказать тебе, что ты грязный вор и что...
 	Info_ClearChoices(dia_rengaru_gotyou);
-	Info_AddChoice(dia_rengaru_gotyou,"...Я заслуживаю долю от награбленного.",dia_rengaru_gotyou_anteil);
+	Info_AddChoice(dia_rengaru_gotyou,"...я заслуживаю долю от награбленного.",dia_rengaru_gotyou_anteil);
 	Info_AddChoice(dia_rengaru_gotyou,"...тебе лучше вернуть золото Джоры. И немедленно.",dia_rengaru_gotyou_youthief);
 	Info_AddChoice(dia_rengaru_gotyou,"...и теперь ты расскажешь мне, кто ты такой.",dia_rengaru_gotyou_whoareyou);
 };
@@ -164,7 +164,7 @@ func void dia_rengaru_gotyou_youthief()
 
 func void dia_rengaru_gotyou_anteil()
 {
-	AI_Output(other,self,"DIA_Rengaru_GOTYOU_Anteil_15_00");	//...Я заслуживаю долю от награбленного.
+	AI_Output(other,self,"DIA_Rengaru_GOTYOU_Anteil_15_00");	//...я заслуживаю долю от награбленного.
 	if((self.aivar[AIV_LASTFIGHTAGAINSTPLAYER] == FIGHT_LOST) && (Npc_HasItems(self,itmi_gold) < 1))
 	{
 		AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_07_01");	//Ты уже забрал все, что у меня было, после того, как вырубил меня! Пусти!
@@ -172,7 +172,7 @@ func void dia_rengaru_gotyou_anteil()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_15_02");	//Хорошо, похоже, у меня нет выбора. Давай, разделим пополам.
+		AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_GehtKlar_07_01");	//Вот твоя половина! А теперь отпусти меня!
 		Info_ClearChoices(dia_rengaru_gotyou);
 		Info_AddChoice(dia_rengaru_gotyou,"Нет, ты отдашь мне все!",dia_rengaru_gotyou_anteil_alles);
 		Info_AddChoice(dia_rengaru_gotyou,"Хорошо, давай мне половину тогда.",dia_rengaru_gotyou_anteil_gehtklar);
@@ -186,13 +186,12 @@ func void dia_rengaru_gotyou_anteil_alles()
 	{
 		AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_alles_07_02");	//Ты просто грабишь меня. Ладно, возьми это золото. А теперь оставь меня в покое.
 		b_giveinvitems(self,other,itmi_gold,Npc_HasItems(self,itmi_gold));
-		Info_ClearChoices(dia_rengaru_gotyou);
 	}
 	else
 	{
 		AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_alles_07_03");	//Я бы отдал тебе золото, но у меня больше ничего нет.
-		Info_ClearChoices(dia_rengaru_gotyou);
 	};
+	Info_ClearChoices(dia_rengaru_gotyou);
 };
 
 func void dia_rengaru_gotyou_anteil_gehtklar()
@@ -200,21 +199,20 @@ func void dia_rengaru_gotyou_anteil_gehtklar()
 	AI_Output(other,self,"DIA_Rengaru_GOTYOU_Anteil_GehtKlar_15_00");	//Хорошо, давай мне половину тогда.
 	if(b_giveinvitems(self,other,itmi_gold,Npc_HasItems(self,itmi_gold) / 2))
 	{
-		AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_GehtKlar_07_01");	//Вот твоя половина! А теперь отпусти меня!
-		Info_ClearChoices(dia_rengaru_gotyou);
+		AI_Output(self,other,"DIA_Rengaru_GOTYOU_YouThief_07_01");	//Вот золото, парень! Но теперь отпусти меня. Я больше никогда не буду заниматься этим.
 	}
 	else
 	{
 		AI_Output(self,other,"DIA_Rengaru_GOTYOU_Anteil_GehtKlar_07_02");	//Я был бы не прочь отдать тебе половину, но у меня больше ничего нет.
-		Info_ClearChoices(dia_rengaru_gotyou);
 	};
+	Info_ClearChoices(dia_rengaru_gotyou);
 };
 
 func void dia_rengaru_gotyou_whoareyou()
 {
 	AI_Output(other,self,"DIA_Rengaru_GOTYOU_WhoAreYou_15_00");	//...и теперь ты расскажешь мне, кто ты такой.
 	AI_Output(self,other,"DIA_Rengaru_GOTYOU_WhoAreYou_07_01");	//Я просто бедный человек, пытающийся свести концы с концами.
-	AI_Output(self,other,"DIA_Rengaru_GOTYOU_WhoAreYou_07_02");	//Что мне еще делать? Я не могу найти работу в городе...
+	AI_Output(self,other,"DIA_Rengaru_GOTYOU_WhoAreYou_07_02");	//А что еще мне делать? Я не могу найти работу в городе...
 	AI_Output(other,self,"DIA_Rengaru_GOTYOU_WhoAreYou_15_03");	//...хорошо, я понимаю. Хватит хныкать.
 };
 

@@ -21,7 +21,10 @@ func void zs_mm_attack()
 		AI_StartState(self,zs_mm_flee,0,"");
 		return;
 	};
-	AI_Standup(self);
+	if(self.guild != GIL_DRAGON)
+	{
+		AI_Standup(self);
+	};
 	AI_SetWalkMode(self,NPC_RUN);
 	Npc_SendPassivePerc(self,PERC_ASSESSWARN,other,self);
 	self.aivar[AIV_PURSUITEND] = FALSE;
@@ -36,7 +39,10 @@ func int zs_mm_attack_loop()
 	if(Npc_GetDistToWP(self,"OC_RAMP_07") <= 500)
 	{
 		Npc_ClearAIQueue(self);
-		AI_Standup(self);
+		if(self.guild != GIL_DRAGON)
+		{
+			AI_Standup(self);
+		};
 		AI_PlayAni(self,"T_WARN");
 		self.aivar[AIV_PURSUITEND] = TRUE;
 		return LOOP_END;
@@ -44,14 +50,20 @@ func int zs_mm_attack_loop()
 	if(Npc_GetDistToNpc(self,other) > FIGHT_DIST_CANCEL)
 	{
 		Npc_ClearAIQueue(self);
-		AI_Standup(self);
+		if(self.guild != GIL_DRAGON)
+		{
+			AI_Standup(self);
+		};
 		self.aivar[AIV_PURSUITEND] = TRUE;
 		return LOOP_END;
 	};
 	if((Npc_GetStateTime(self) > self.aivar[AIV_MM_FOLLOWTIME]) && (self.aivar[AIV_PURSUITEND] == FALSE))
 	{
 		Npc_ClearAIQueue(self);
-		AI_Standup(self);
+		if(self.guild != GIL_DRAGON)
+		{
+			AI_Standup(self);
+		};
 		self.aivar[AIV_PURSUITEND] = TRUE;
 		self.aivar[AIV_DIST] = Npc_GetDistToNpc(self,other);
 		self.aivar[AIV_STATETIME] = Npc_GetStateTime(self);
@@ -83,7 +95,10 @@ func int zs_mm_attack_loop()
 	if((c_bodystatecontains(other,BS_SWIM) || c_bodystatecontains(other,BS_DIVE)) && (self.aivar[AIV_MM_FOLLOWINWATER] == FALSE))
 	{
 		Npc_ClearAIQueue(self);
-		AI_Standup(self);
+		if(self.guild != GIL_DRAGON)
+		{
+			AI_Standup(self);
+		};
 		return LOOP_END;
 	};
 	if(self.aivar[AIV_WAITBEFOREATTACK] == 1)
@@ -143,7 +158,10 @@ func int zs_mm_attack_loop()
 		if((self.aivar[AIV_MM_PRIORITY] == PRIO_EAT) && c_wanttoeat(self,other))
 		{
 			Npc_ClearAIQueue(self);
-			AI_Standup(self);
+			if(self.guild != GIL_DRAGON)
+			{
+				AI_Standup(self);
+			};
 			return LOOP_END;
 		};
 		Npc_PerceiveAll(self);
@@ -156,7 +174,10 @@ func int zs_mm_attack_loop()
 		else
 		{
 			Npc_ClearAIQueue(self);
-			AI_Standup(self);
+			if(self.guild != GIL_DRAGON)
+			{
+				AI_Standup(self);
+			};
 		};
 	};
 	return LOOP_END;

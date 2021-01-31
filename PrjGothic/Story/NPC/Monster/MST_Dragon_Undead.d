@@ -40,8 +40,9 @@ func void b_setvisuals_dragon_undead()
 
 instance DRAGON_UNDEAD(MST_DEFAULT_DRAGON_UNDEAD)
 {
-	b_setvisuals_dragon_undead();
+	effect = "spellfx_undead_dragon";
 	flags = NPC_FLAG_IMMORTAL;
+	b_setvisuals_dragon_undead();
 	Npc_SetToFistMode(self);
 };
 
