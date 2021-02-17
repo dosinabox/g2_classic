@@ -8,6 +8,7 @@ func void startup_newworld_part_dragon_island_01()
 	Wld_InsertItem(itmi_darkpearl,"FP_ITEM_DI_ENTER_03");
 	Wld_InsertItem(itmi_sulfur,"FP_ITEM_DI_ENTER_07");
 	Wld_InsertItem(itwr_zugbruecke_mis,"FP_ITEM_DI_ENTER_09");
+	Wld_InsertItem(itrw_bow_l_01,"FP_ITEM_SHIP_16");
 	Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_DI_ORK_01");
 	Wld_InsertNpc(orcwarrior_rest,"FP_ROAM_DI_ORK_02");
 	Wld_InsertNpc(warg,"FP_ROAM_DI_ORK_03");

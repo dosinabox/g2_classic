@@ -154,7 +154,7 @@ func int showintro()
 func int showcredits()
 {
 	PlayVideo("g2_classic_credits.bik");
-	PlayVideo("credits2.bik");
+	PlayVideo("g2_classic_credits2.bik");
 	return 1;
 };
 

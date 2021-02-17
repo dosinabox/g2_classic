@@ -9,13 +9,13 @@
 ##            Основное           ##
 ###################################
 
-!define MOD_VERSION "1.1"
-!define MOD_DATE "9.3"
+!define MOD_VERSION "1.2"
+!define MOD_DATE "2.17"
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
 !define MOD_AUTHOR "D36, Kor Angar"
 !define MOD_LINK "http://worldofplayers.ru/threads/41796"
-!define MOD_SIZE "134000"
+!define MOD_SIZE "216000"
 !define MOD_HEADER "logo.bmp"
 !define MOD_PIC "pic.bmp"
 
@@ -118,6 +118,7 @@ Section "Основные файлы" SecMain
 
 	SetOutPath "$INSTDIR\_work\Data\Video"
 	File "${MOD_NAME_SYS}_credits.bik"
+	File "${MOD_NAME_SYS}_credits2.bik"
 
 	SetOutPath $INSTDIR
 	File "${MOD_NAME_SYS}_readme.txt"
@@ -148,6 +149,7 @@ Section "Un.Удалить модификацию" SecUninstall_Main
 	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}.mod"
 	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_hotfix.mod"
 	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits.bik"
+	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits2.bik"
 	Delete "$INSTDIR\${UNINSTALLER_NAME}.exe"
 	DeleteRegKey HKLM "${REGISTRY_PATH}"
 SectionEnd

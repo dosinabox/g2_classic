@@ -52,10 +52,6 @@ func void Use_StatsBook()
 		Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(OrkRingCounter)," колец Хагену"));
 	};
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,ConcatStrings("Кражи (",ConcatStrings(IntToString(TotalThefts),"):")));
-	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(TotalTheftXP)," опыта получено"));
-	Doc_PrintLine(nDocID,0,ConcatStrings(IntToString(TotalTheftGold)," золотых украдено"));
-	Doc_PrintLine(nDocID,0,"");
 	if(Player_IsApprentice == APP_Constantino)
 	{
 		Doc_PrintLine(nDocID,0,"Ремесло (Константино):");
@@ -82,21 +78,35 @@ func void Use_StatsBook()
 	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_Dex)," ловкости получено"));
 	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_MaxHp)," макс. здоровья получено"));
 	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(Stats_Blessings_MaxMana)," макс. маны получено"));
+	Doc_PrintLine(nDocID,1,"");
+	Doc_PrintLine(nDocID,1,"Кражи:");
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(TotalThefts)," успешных краж"));
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(TotalTheftXP)," опыта получено"));
+	Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(TotalTheftGold)," золотых украдено"));
+	Doc_PrintLine(nDocID,1,"");
 	if(UnionActivated == TRUE)
 	{
-		Doc_PrintLine(nDocID,1,"");
-		Doc_PrintLine(nDocID,1,"Union активирован");
-	};
-	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLine(nDocID,1,"Информация о сборке:");
-	Doc_PrintLine(nDocID,1,ConcatStrings("Версия ",ConcatStrings(FIX_VERSION_START,ConcatStrings(" от ",FIX_VERSION_DATE))));
-	if(Addon_zuerst == TRUE)
-	{
-		Doc_PrintLine(nDocID,1,"Игра начата с аддоном");
+		Doc_PrintLine(nDocID,1,"Информация о сборке:");
 	}
 	else
 	{
-		Doc_PrintLine(nDocID,1,ConcatStrings("Версия в сохранении: ",FIX_VERSION_SAVE));
+		Doc_PrintLine(nDocID,1,"Сборка (без Union):");
+	};
+	Doc_PrintLine(nDocID,1,ConcatStrings(ConcatStrings(IntToString(FIX_VERSION_START)," версия от "),FIX_VERSION_DATE));
+	if(FIX_VERSION_SAVE == FALSE)
+	{
+		if(Addon_zuerst == TRUE)
+		{
+			Doc_PrintLine(nDocID,1,"Игра начата с аддоном");
+		}
+		else
+		{
+			Doc_PrintLine(nDocID,1,"Игра начата в оригинале");
+		};
+	}
+	else
+	{
+		Doc_PrintLine(nDocID,1,ConcatStrings(IntToString(FIX_VERSION_SAVE)," версия в сохранении"));
 	};
 	Doc_Show(nDocID);
 };
