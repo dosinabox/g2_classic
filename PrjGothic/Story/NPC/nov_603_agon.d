@@ -42,7 +42,7 @@ func void rtn_golemdead_603()
 
 func void rtn_stillalive_603()
 {
-	ta_stand_guarding(8,0,23,10,"TAVERN");
-	ta_stand_guarding(23,10,8,0,"TAVERN");
+	ta_stand_guarding(8,0,23,10,"TAVERNE");
+	ta_stand_guarding(23,10,8,0,"TAVERNE");
 };
 

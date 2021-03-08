@@ -689,7 +689,7 @@ const int YPOS_XPGAINED = 55;
 
 const string PRINT_PICKLOCK_SUCCESS = "Похоже, я на верном пути.";
 const string PRINT_PICKLOCK_UNLOCK = "Замок открыт.";
-const string PRINT_PICKLOCK_FAILURE = "Черт ... Попробуем еще раз.";
+const string PRINT_PICKLOCK_FAILURE = "Черт... Попробуем еще раз.";
 const string PRINT_PICKLOCK_BROKEN = "Отмычка сломалась.";
 const string PRINT_HITPOINTS_MISSING = "Недостаточно здоровья: ";
 const string PRINT_HITPOINTS_MAX_MISSING = "Недостаточно макс. здоровья: ";

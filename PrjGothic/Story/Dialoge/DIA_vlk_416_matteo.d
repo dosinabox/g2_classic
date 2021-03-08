@@ -432,7 +432,7 @@ func int dia_matteo_wogritta_condition()
 func void dia_matteo_wogritta_info()
 {
 	AI_Output(other,self,"DIA_Matteo_WoGritta_15_00");	//√де мне найти эту √ритту?
-	AI_Output(self,other,"DIA_Matteo_WoGritta_09_01");	// ак € уже говорил - она плем€нница плотника - его дом находитс€ ниже про улице, справа от кузницы.
+	AI_Output(self,other,"DIA_Matteo_WoGritta_09_01");	// ак € уже говорил - она плем€нница плотника - его дом находитс€ ниже по улице, справа от кузницы.
 };
 
 

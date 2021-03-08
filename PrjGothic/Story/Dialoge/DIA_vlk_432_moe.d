@@ -79,7 +79,7 @@ func void dia_moe_hallo_info()
 {
 	AI_Output(self,other,"DIA_Moe_Hallo_01_00");	//Эй, я не знаю тебя. Чего тебе здесь нужно? Ты идешь в кабак?
 	Info_ClearChoices(dia_moe_hallo);
-	Info_AddChoice(dia_moe_hallo,"Нет, я не иду в кабак ... (КОНЕЦ)",dia_moe_hallo_gehen);
+	Info_AddChoice(dia_moe_hallo,"Нет, я не иду в кабак...",dia_moe_hallo_gehen);
 	Info_AddChoice(dia_moe_hallo,"Ох, так это портовый трактир ...",dia_moe_hallo_witz);
 	Info_AddChoice(dia_moe_hallo,"Ты имеешь что-то против?",dia_moe_hallo_reizen);
 };

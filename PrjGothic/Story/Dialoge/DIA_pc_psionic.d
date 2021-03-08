@@ -300,7 +300,7 @@ func void dia_lester_backintown_info()
 	CreateInvItems(self,itru_teleportxardas,1);
 	b_giveinvitems(self,other,itru_teleportxardas,1);
 	AI_StopProcessInfos(self);
-	Npc_ExchangeRoutine(self,"START");
+	Npc_ExchangeRoutine(self,"XARDAS");
 };
 
 

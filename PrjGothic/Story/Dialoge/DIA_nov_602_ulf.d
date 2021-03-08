@@ -43,15 +43,15 @@ func int dia_ulf_hallo_condition()
 func void dia_ulf_hallo_info()
 {
 	AI_Output(other,self,"DIA_Ulf_Hallo_15_00");	//„то ты делаешь здесь?
-	if(hero.guild == GIL_KDF)
+	if(hero.guild == GIL_PAL)
 	{
 		AI_Output(self,other,"DIA_Ulf_Hallo_03_01");	//≈сли тебе интересно это знать, € выполн€ю задание монастыр€.
 	}
 	else
 	{
 		AI_Output(self,other,"DIA_Ulf_Hallo_03_02");	//я послушник в монастыре. я выполн€ю задани€ магов, а также паладинов.
-		AI_Output(self,other,"DIA_Ulf_Hallo_03_03");	//я доставил трем трактирщикам города вино из монастыр€.
 	};
+	AI_Output(self,other,"DIA_Ulf_Hallo_03_03");	//я доставил трем трактирщикам города вино из монастыр€.
 };
 
 
@@ -237,7 +237,7 @@ instance DIA_ULF_SUCHE(C_INFO)
 
 func int dia_ulf_suche_condition()
 {
-	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && (Npc_GetDistToWP(self,"NW_TROLLAREA_PATH_42") <= 1000))
+	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && (Npc_GetDistToWP(self,"NW_TROLLAREA_PATH_42") <= 1000) && !Npc_KnowsInfo(other,dia_ulf_abrechnung))
 	{
 		return TRUE;
 	};
@@ -250,7 +250,7 @@ func void dia_ulf_suche_info()
 	AI_Output(self,other,"DIA_Ulf_Suche_03_02");	//“очно. я как раз хотел посидеть, попить холодного пива, когда из-за угла вышел ƒарон и сказал мне, что € был избран.
 	AI_Output(self,other,"DIA_Ulf_Suche_03_03");	// то бы мог подумать? ¬ол€ »нноса непостижима. ј что привело теб€ сюда?
 	AI_Output(other,self,"DIA_Ulf_Suche_15_04");	//я потребовал прохождени€ »спытани€ ќгнем.
-	AI_Output(self,other,"DIA_Ulf_Suche_03_05");	//"Ёто невозможно?! ѕохоже мужества у теб€ на дес€терых хватит. Ёто значит, что ты тоже будешь искать ""то, что верующий находит в конце пути""?"
+	AI_Output(self,other,"DIA_Ulf_Suche_03_05");	//Ёто невозможно! ѕохоже, мужества у теб€ хватит на дес€терых. Ёто значит, что ты тоже будешь искать 'то, что верующий находит в конце пути'?
 	AI_Output(other,self,"DIA_Ulf_Suche_15_06");	//ѕохоже на это.
 };
 
@@ -268,7 +268,7 @@ instance DIA_ULF_RAUSGEFUNDEN(C_INFO)
 
 func int dia_ulf_rausgefunden_condition()
 {
-	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && (Npc_GetDistToWP(self,"NW_TROLLAREA_PATH_42") <= 1000))
+	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && (Npc_GetDistToWP(self,"NW_TROLLAREA_PATH_42") <= 1000) && !Npc_KnowsInfo(other,dia_ulf_abrechnung))
 	{
 		return TRUE;
 	};
@@ -298,7 +298,7 @@ instance DIA_ULF_FOLGEN(C_INFO)
 
 func int dia_ulf_folgen_condition()
 {
-	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && Npc_KnowsInfo(other,dia_ulf_rausgefunden))
+	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && Npc_KnowsInfo(other,dia_ulf_rausgefunden) && !Npc_KnowsInfo(other,dia_ulf_abrechnung))
 	{
 		return TRUE;
 	};
@@ -325,7 +325,7 @@ instance DIA_ULF_STOP(C_INFO)
 
 func int dia_ulf_stop_condition()
 {
-	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && Npc_KnowsInfo(other,dia_ulf_folgen))
+	if((MIS_SCHNITZELJAGD == LOG_RUNNING) && (other.guild == GIL_NOV) && Npc_KnowsInfo(other,dia_ulf_folgen) && !Npc_KnowsInfo(other,dia_ulf_abrechnung))
 	{
 		return TRUE;
 	};
@@ -343,7 +343,7 @@ func void dia_ulf_stop_info()
 instance DIA_ULF_ABRECHNUNG(C_INFO)
 {
 	npc = nov_602_ulf;
-	nr = 9;
+	nr = 1;
 	condition = dia_ulf_abrechnung_condition;
 	information = dia_ulf_abrechnung_info;
 	permanent = FALSE;

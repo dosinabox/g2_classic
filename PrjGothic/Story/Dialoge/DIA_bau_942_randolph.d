@@ -357,7 +357,7 @@ instance DIA_RANDOLPH_PERM(C_INFO)
 	condition = dia_randolph_perm_condition;
 	information = dia_randolph_perm_info;
 	permanent = TRUE;
-	description = "Ты из ума выжил?";
+	description = "Ты в порядке?";
 };
 
 

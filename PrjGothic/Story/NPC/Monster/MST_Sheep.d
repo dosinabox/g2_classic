@@ -47,6 +47,7 @@ instance SHEEP(MST_DEFAULT_SHEEP)
 
 instance HAMMEL(MST_DEFAULT_SHEEP)
 {
+	name[0] = "Баран";
 	b_setvisuals_hammel();
 	Npc_SetToFistMode(self);
 	start_aistate = zs_mm_allscheduler;
@@ -75,6 +76,7 @@ instance FOLLOW_SHEEP_AKIL(MST_DEFAULT_SHEEP)
 
 instance BALTHASAR_SHEEP1(MST_DEFAULT_SHEEP)
 {
+	name[0] = "Баран";
 	b_setvisuals_hammel();
 	Npc_SetToFistMode(self);
 	start_aistate = zs_mm_allscheduler;

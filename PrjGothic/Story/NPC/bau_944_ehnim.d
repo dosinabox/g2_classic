@@ -2,7 +2,7 @@
 instance BAU_944_EHNIM(NPC_DEFAULT)
 {
 	name[0] = "Ёним";
-	guild = GIL_OUT;
+	guild = GIL_NONE;
 	id = 944;
 	voice = 12;
 	flags = 0;

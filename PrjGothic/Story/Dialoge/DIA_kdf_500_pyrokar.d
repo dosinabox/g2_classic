@@ -1317,6 +1317,8 @@ func void dia_pyrokar_kap3_ready_info()
 };
 
 
+var int almanachcounter;
+
 instance DIA_PYROKAR_BUCHDERBESSENEN(C_INFO)
 {
 	npc = kdf_500_pyrokar;
@@ -1345,6 +1347,7 @@ func void dia_pyrokar_buchderbessenen_info()
 	b_giveplayerxp(XP_AMBIENT);
 	if(hero.guild == GIL_KDF)
 	{
+		ALMANACHCOUNTER = ALMANACHCOUNTER + 1;
 		AI_Output(self,other,"DIA_Pyrokar_BUCHDERBESSENEN_11_04");	//я полагаю, что он не единственный. »ди и найди еще эти книги прокл€ти€.
 		AI_Output(self,other,"DIA_Pyrokar_BUCHDERBESSENEN_11_05");	//я подозреваю, что это инструмент »щущих.
 		AI_Output(self,other,"DIA_Pyrokar_BUCHDERBESSENEN_11_06");	//ќни используют его, чтобы контролировать потер€нные души своих жертв.
@@ -1452,6 +1455,8 @@ func void dia_pyrokar_scobsessed_nein()
 };
 
 
+var int dia_pyrokar_almanachbringen_onetime;
+
 instance DIA_PYROKAR_ALMANACHBRINGEN(C_INFO)
 {
 	npc = kdf_500_pyrokar;
@@ -1470,10 +1475,6 @@ func int dia_pyrokar_almanachbringen_condition()
 		return TRUE;
 	};
 };
-
-
-var int almanachcounter;
-var int dia_pyrokar_almanachbringen_onetime;
 
 func void dia_pyrokar_almanachbringen_info()
 {

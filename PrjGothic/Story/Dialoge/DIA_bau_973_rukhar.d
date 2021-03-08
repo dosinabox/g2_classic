@@ -163,11 +163,11 @@ func void dia_rukhar_randolphwill_info()
 	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_12_05");	//Ты можешь выставить его еще раз не раньше чем через 2 дня. Кто знает? Может, тебе повезет, и он успеет протрезветь.
 	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_12_06");	//Какова твоя ставка?
 	Info_ClearChoices(dia_rukhar_randolphwill);
-	Info_AddChoice(dia_rukhar_randolphwill,"Ноль",dia_rukhar_randolphwill_nix);
-	Info_AddChoice(dia_rukhar_randolphwill,"100",dia_rukhar_randolphwill_100);
-	Info_AddChoice(dia_rukhar_randolphwill,"50",dia_rukhar_randolphwill_50);
-	Info_AddChoice(dia_rukhar_randolphwill,"20",dia_rukhar_randolphwill_20);
-	Info_AddChoice(dia_rukhar_randolphwill,"10 золотых",dia_rukhar_randolphwill_10);
+	Info_AddChoice(dia_rukhar_randolphwill,"Ноль.",dia_rukhar_randolphwill_nix);
+	Info_AddChoice(dia_rukhar_randolphwill,"100.",dia_rukhar_randolphwill_100);
+	Info_AddChoice(dia_rukhar_randolphwill,"50.",dia_rukhar_randolphwill_50);
+	Info_AddChoice(dia_rukhar_randolphwill,"20.",dia_rukhar_randolphwill_20);
+	Info_AddChoice(dia_rukhar_randolphwill,"10 золотых.",dia_rukhar_randolphwill_10);
 };
 
 func void dia_rukhar_randolphwill_annehmen()
@@ -180,23 +180,23 @@ func void dia_rukhar_randolphwill_annehmen()
 func void dia_rukhar_randolphwill_mehr()
 {
 	Info_ClearChoices(dia_rukhar_randolphwill);
-	Info_AddChoice(dia_rukhar_randolphwill,"Ноль",dia_rukhar_randolphwill_nix);
-	Info_AddChoice(dia_rukhar_randolphwill,"100",dia_rukhar_randolphwill_100);
-	Info_AddChoice(dia_rukhar_randolphwill,"50",dia_rukhar_randolphwill_50);
-	Info_AddChoice(dia_rukhar_randolphwill,"20",dia_rukhar_randolphwill_20);
-	Info_AddChoice(dia_rukhar_randolphwill,"10 золотых",dia_rukhar_randolphwill_10);
+	Info_AddChoice(dia_rukhar_randolphwill,"Ноль.",dia_rukhar_randolphwill_nix);
+	Info_AddChoice(dia_rukhar_randolphwill,"100.",dia_rukhar_randolphwill_100);
+	Info_AddChoice(dia_rukhar_randolphwill,"50.",dia_rukhar_randolphwill_50);
+	Info_AddChoice(dia_rukhar_randolphwill,"20.",dia_rukhar_randolphwill_20);
+	Info_AddChoice(dia_rukhar_randolphwill,"10 золотых.",dia_rukhar_randolphwill_10);
 };
 
 func void dia_rukhar_randolphwill_nix()
 {
-	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_nix_15_00");	//Ноль
+	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_nix_15_00");	//Ноль.
 	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_nix_12_01");	//Тогда нам лучше забыть о состязании.
 	AI_StopProcessInfos(self);
 };
 
 func void dia_rukhar_randolphwill_10()
 {
-	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_10_15_00");	//10 золотых
+	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_10_15_00");	//10 золотых.
 	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_10_12_01");	//Да ладно, ты, должно быть, шутишь. Еще несколько золотых не разорят тебя.
 	RUKHAR_EINSATZ = 10;
 	RUKHAR_GEWINN = 20;
@@ -207,7 +207,7 @@ func void dia_rukhar_randolphwill_10()
 
 func void dia_rukhar_randolphwill_20()
 {
-	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_20_15_00");	//20
+	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_20_15_00");	//20.
 	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_20_12_01");	//Если ты хочешь сделать ставку, то делай уж это по-человечески.
 	RUKHAR_EINSATZ = 20;
 	RUKHAR_GEWINN = 40;
@@ -218,7 +218,7 @@ func void dia_rukhar_randolphwill_20()
 
 func void dia_rukhar_randolphwill_50()
 {
-	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_50_15_00");	//50
+	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_50_15_00");	//50.
 	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_50_12_01");	//Не робей. Смелее.
 	RUKHAR_EINSATZ = 50;
 	RUKHAR_GEWINN = 100;
@@ -229,7 +229,7 @@ func void dia_rukhar_randolphwill_50()
 
 func void dia_rukhar_randolphwill_100()
 {
-	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_100_15_00");	//100
+	AI_Output(other,self,"DIA_Rukhar_RANDOLPHWILL_100_15_00");	//100.
 	AI_Output(self,other,"DIA_Rukhar_RANDOLPHWILL_100_12_01");	//Вот это мне уже нравится.
 	RUKHAR_EINSATZ = 100;
 	RUKHAR_GEWINN = 200;

@@ -44,6 +44,7 @@ instance GOBBO_GREEN(MST_DEFAULT_GOBBO_GREEN)
 
 instance YGOBBO_GREEN(MST_DEFAULT_GOBBO_GREEN)
 {
+	name[0] = "Молодой гоблин";
 	level = 3;
 	attribute[ATR_STRENGTH] = 5;
 	attribute[ATR_DEXTERITY] = 5;

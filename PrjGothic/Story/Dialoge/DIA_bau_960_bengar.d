@@ -464,7 +464,7 @@ instance DIA_BENGAR_ALLEIN(C_INFO)
 	nr = 30;
 	condition = dia_bengar_allein_condition;
 	information = dia_bengar_allein_info;
-	description = "Как ситуация?";
+	description = "Как дела?";
 };
 
 

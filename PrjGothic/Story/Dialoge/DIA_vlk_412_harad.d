@@ -141,12 +141,12 @@ func void dia_harad_orcrunning_info()
 	AI_Output(self,other,"DIA_Harad_OrcRunning_12_01");	//(отрывисто) Что?
 	Info_ClearChoices(dia_harad_orcrunning);
 	Info_AddChoice(dia_harad_orcrunning,"Можешь считать своего орка мертвым!",dia_harad_orcrunning_done);
-	Info_AddChoice(dia_harad_orcrunning,"Орк это очень серьезный противник ... ...",dia_harad_orcrunning_toohard);
+	Info_AddChoice(dia_harad_orcrunning,"Орк это очень серьезный противник...",dia_harad_orcrunning_toohard);
 };
 
 func void dia_harad_orcrunning_toohard()
 {
-	AI_Output(other,self,"DIA_Harad_OrcRunning_TooHard_15_00");	//Но орк это очень серьезный противник ...
+	AI_Output(other,self,"DIA_Harad_OrcRunning_TooHard_15_00");	//Но орк это очень серьезный противник...
 	AI_Output(self,other,"DIA_Harad_OrcRunning_TooHard_12_01");	//Хм - судя по тому, как ты выглядишь, возможно ты прав. У тебя слишком мало мяса на костях. Но это можно поправить.
 	AI_Output(self,other,"DIA_Harad_OrcRunning_TooHard_12_02");	//Том не менее, ты должен доказать мне, что у тебя хватит мужества сражаться, если это будет необходимо.
 	AI_Output(other,self,"DIA_Harad_OrcRunning_TooHard_15_03");	//А нет ли для меня противника немного поменьше?

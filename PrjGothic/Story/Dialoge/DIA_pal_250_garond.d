@@ -550,10 +550,10 @@ func void dia_garond_marcos_info()
 	AI_Output(self,other,"DIA_Garond_Marcos_10_05");	//И ему нужны еще люди?.. Что ж, ладно, я пошлю к нему двух человек.
 	marcos_guard1.flags = 0;
 	marcos_guard2.flags = 0;
+	AI_Teleport(marcos_guard1,"OW_STAND_GUARDS");
+	AI_Teleport(marcos_guard1,"OW_STAND_GUARDS");
 	b_startotherroutine(marcos_guard1,"MARCOS");
 	b_startotherroutine(marcos_guard2,"MARCOS");
-	AI_Teleport(marcos_guard1,"OW_STAND_GUARDS");
-	AI_Teleport(marcos_guard1,"OW_STAND_GUARDS");
 	ORE_COUNTER = ORE_COUNTER + 1;
 	MIS_MARCOS_JUNGS = LOG_SUCCESS;
 	b_giveplayerxp(XP_MARCOS_ORE);

@@ -53,8 +53,7 @@ func void dia_babo_hello_info()
 	AI_Output(other,self,"DIA_Babo_Hello_15_05");	//Ну, мне случалось пользоваться оружием...
 	AI_Output(self,other,"DIA_Babo_Hello_03_06");	//Если хочешь, я могу обучить тебя кое-чему. Но у меня есть просьба...
 	CreateInvItems(other,itmw_1h_nov_mace,1);
-	b_giveinvitems(self,other,itrw_arrow,1);
-	Npc_RemoveInvItems(other,itrw_arrow,1);
+	AI_PrintScreen("Боевой посох получено",-1,YPOS_ITEMTAKEN,FONT_SCREENSMALL,2);
 };
 
 

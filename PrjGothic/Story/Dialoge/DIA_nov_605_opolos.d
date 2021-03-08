@@ -207,7 +207,7 @@ func void dia_opolos_rezept_info()
 		AI_Output(other,self,"DIA_Opolos_rezept_15_00");	//Я принес рецепт, как ты и хотел.
 		AI_Output(self,other,"DIA_Opolos_rezept_12_01");	//Хорошо, дай я прочту его.
 		b_usefakescroll();
-		AI_Output(self,other,"DIA_Opolos_rezept_12_02");	//Ага... хм ... да ... понятно ... так, так ...
+		AI_Output(self,other,"DIA_Opolos_rezept_12_02");	//Ага... хм... да... понятно... так, так...
 		b_usefakescroll();
 		AI_Output(self,other,"DIA_Opolos_rezept_12_03");	//Хорошо. Огромное спасибо. Если хочешь, ты можешь потренироваться со мной.
 		DIA_OPOLOS_REZEPT_PERMANENT = TRUE;

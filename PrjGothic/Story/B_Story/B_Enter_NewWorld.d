@@ -171,7 +171,8 @@ func void b_enter_newworld_kapitel_3()
 		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_12");
 		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_13");
 		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_14");
-		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_15");
+//		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_15"); точка 15 не существует, замена на неиспользуемую 01
+		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_01");
 		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_16");
 		Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_17");
 		Wld_InsertNpc(dmt_dementorambientspeaker,"FP_STAND_DEMENTOR_18");
