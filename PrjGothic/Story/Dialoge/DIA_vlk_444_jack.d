@@ -409,7 +409,7 @@ instance DIA_JACK_BEMYCAPTAIN2(C_INFO)
 	nr = 52;
 	condition = dia_jack_bemycaptain2_condition;
 	information = dia_jack_bemycaptain2_info;
-	description = "Насчет Брайана ...";
+	description = "Насчет Брайана...";
 };
 
 

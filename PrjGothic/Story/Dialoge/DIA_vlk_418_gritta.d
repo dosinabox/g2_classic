@@ -116,7 +116,7 @@ func void dia_gritta_wantsmoney_info()
 	AI_Output(self,other,"DIA_Gritta_WantsMoney_16_03");	//Послушай, если бы мой муж был жив, он бы не посмел заявлять такое. Ох, мой бедный муж...
 	Info_ClearChoices(dia_gritta_wantsmoney);
 	Info_AddChoice(dia_gritta_wantsmoney,"Хватит. Где золото?",dia_gritta_wantsmoney_wheremoney);
-	Info_AddChoice(dia_gritta_wantsmoney,"Продолжить ...",dia_gritta_wantsmoney_continue01);
+	Info_AddChoice(dia_gritta_wantsmoney,"(слушать дальше)",dia_gritta_wantsmoney_continue01);
 };
 
 func void dia_gritta_wantsmoney_continue01()
@@ -126,7 +126,7 @@ func void dia_gritta_wantsmoney_continue01()
 	AI_Output(self,other,"DIA_Gritta_WantsMoney_Continue01_16_02");	//...на званые обеды... Тогда все было совсем по-другому. Тогда никто бы не осмелился унижать бедную вдову такими...
 	Info_ClearChoices(dia_gritta_wantsmoney);
 	Info_AddChoice(dia_gritta_wantsmoney,"Хватит. Где золото?",dia_gritta_wantsmoney_wheremoney);
-	Info_AddChoice(dia_gritta_wantsmoney,"Продолжить ...",dia_gritta_wantsmoney_continue02);
+	Info_AddChoice(dia_gritta_wantsmoney,"(слушать дальше)",dia_gritta_wantsmoney_continue02);
 };
 
 func void dia_gritta_wantsmoney_continue02()
@@ -136,7 +136,7 @@ func void dia_gritta_wantsmoney_continue02()
 	AI_Output(self,other,"DIA_Gritta_WantsMoney_Continue02_16_02");	//...из своих долгих плаваний он всегда привозил мне подарки - изысканные ткани с материка, дорогие специи из южных стран...
 	Info_ClearChoices(dia_gritta_wantsmoney);
 	Info_AddChoice(dia_gritta_wantsmoney,"Хватит. Где золото?",dia_gritta_wantsmoney_wheremoney);
-	Info_AddChoice(dia_gritta_wantsmoney,"Продолжить ...",dia_gritta_wantsmoney_continue03);
+	Info_AddChoice(dia_gritta_wantsmoney,"(слушать дальше)",dia_gritta_wantsmoney_continue03);
 };
 
 func void dia_gritta_wantsmoney_continue03()
@@ -147,7 +147,7 @@ func void dia_gritta_wantsmoney_continue03()
 	AI_Output(self,other,"DIA_Gritta_WantsMoney_Continue04_16_03");	//...хочет отнять у меня последние сбережения. Пожалуйста, сжалься над бедной женщиной. Если бы мой муж был жив, Маттео не посмел бы сделать это. Ох, мой бедный муж...
 	Info_ClearChoices(dia_gritta_wantsmoney);
 	Info_AddChoice(dia_gritta_wantsmoney,"Хватит. Где золото?",dia_gritta_wantsmoney_wheremoney);
-	Info_AddChoice(dia_gritta_wantsmoney,"Продолжить ...",dia_gritta_wantsmoney_continue01);
+	Info_AddChoice(dia_gritta_wantsmoney,"(слушать дальше)",dia_gritta_wantsmoney_continue01);
 };
 
 func void dia_gritta_wantsmoney_wheremoney()
@@ -156,7 +156,7 @@ func void dia_gritta_wantsmoney_wheremoney()
 	AI_Output(self,other,"DIA_Gritta_WantsMoney_WhereMoney_16_01");	//(вызывающе) Но у меня нет золота, я бедная вдова!
 	Info_ClearChoices(dia_gritta_wantsmoney);
 	Info_AddChoice(dia_gritta_wantsmoney,"Выкладывай деньги, или мне придется проучить тебя!",dia_gritta_wantsmoney_beatup);
-	Info_AddChoice(dia_gritta_wantsmoney,"Похоже, мне придется продать твои вещи ...",dia_gritta_wantsmoney_enoughstuff);
+	Info_AddChoice(dia_gritta_wantsmoney,"Тогда мы просто продадим некоторые из твоих тряпок.",dia_gritta_wantsmoney_enoughstuff);
 	Info_AddChoice(dia_gritta_wantsmoney,"Я собираюсь заплатить эту сумму за тебя.",dia_gritta_wantsmoney_iwillpay);
 };
 

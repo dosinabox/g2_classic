@@ -76,7 +76,7 @@ func void dia_alvares_attack_info()
 	Info_ClearChoices(dia_alvares_attack);
 	Info_AddChoice(dia_alvares_attack,"Кто вы такие, парни - пара клоунов?",dia_alvares_attack_kerle);
 	Info_AddChoice(dia_alvares_attack,"Я хочу присоединиться к вам, наемникам.",dia_alvares_attack_soeldner);
-	Info_AddChoice(dia_alvares_attack,"Вы, парни, сейчас исчезнете отсюда ...",dia_alvares_attack_witz);
+	Info_AddChoice(dia_alvares_attack,"Вы, парни, сейчас исчезнете отсюда. Все понятно?",dia_alvares_attack_witz);
 	Info_AddChoice(dia_alvares_attack,"Мне не нужны проблемы.",dia_alvares_attack_aerger);
 	if(MIS_BALTRAM_SCOUTAKIL == LOG_RUNNING)
 	{

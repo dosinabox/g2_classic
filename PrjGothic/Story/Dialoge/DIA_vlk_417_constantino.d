@@ -656,7 +656,7 @@ func void dia_constantino_mushroomsrunning_info()
 	};
 	if((Npc_HasItems(other,itpl_mushroom_01) > 0) || (Npc_HasItems(other,itpl_mushroom_02) > 0))
 	{
-		Info_AddChoice(dia_constantino_mushroomsrunning,"Я принес несколько ...",dia_constantino_mushroomsrunning_sell);
+		Info_AddChoice(dia_constantino_mushroomsrunning,"Я принес несколько...",dia_constantino_mushroomsrunning_sell);
 	};
 };
 

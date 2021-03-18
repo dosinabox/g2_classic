@@ -779,7 +779,7 @@ func void dia_babo_kap3_haveyourdocs_info()
 	AI_Output(other,self,"DIA_Babo_Kap3_HaveYourDocs_15_02");	//ƒа, да, просто успокойс€.
 	AI_Output(self,other,"DIA_Babo_Kap3_HaveYourDocs_03_03");	//(нервно) Ёто действительно мои? “ы уверен? ѕокажи мне.
 	Info_ClearChoices(dia_babo_kap3_haveyourdocs);
-	Info_AddChoice(dia_babo_kap3_haveyourdocs,"я подержу их пока у себ€ .",dia_babo_kap3_haveyourdocs_keepthem);
+	Info_AddChoice(dia_babo_kap3_haveyourdocs,"я подержу их пока у себ€.",dia_babo_kap3_haveyourdocs_keepthem);
 	if(BABOSDOCSOPEN == TRUE)
 	{
 		Info_AddChoice(dia_babo_kap3_haveyourdocs,"“еперь, учитыва€ все обсто€тельства, цена выросла.",dia_babo_kap3_haveyourdocs_iwantmore);

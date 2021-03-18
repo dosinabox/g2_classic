@@ -162,7 +162,7 @@ instance DIA_DIEGOOW_RITTER(C_INFO)
 	condition = dia_diegoow_ritter_condition;
 	information = dia_diegoow_ritter_info;
 	permanent = FALSE;
-	description = "А что насчет этих двух мертвых рыцарей ...";
+	description = "А что насчет этих двух мертвых рыцарей перед твоим укрытием?";
 };
 
 
@@ -217,7 +217,7 @@ instance DIA_DIEGOOW_GORN(C_INFO)
 	condition = dia_diegoow_gorn_condition;
 	information = dia_diegoow_gorn_info;
 	permanent = FALSE;
-	description = "Я хочу купить свободу Горну ...";
+	description = "Я хочу купить свободу Горну, но Гаронд просит за это 1000 золотых";
 };
 
 

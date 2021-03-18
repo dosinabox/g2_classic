@@ -306,7 +306,7 @@ instance DIA_LEE_PALADINE(C_INFO)
 	condition = dia_lee_paladine_condition;
 	information = dia_lee_paladine_info;
 	permanent = FALSE;
-	description = "Мне крайне необходимо поговорить с паладинами в городе ...";
+	description = "Мне крайне необходимо поговорить с паладинами в городе...";
 };
 
 
@@ -845,7 +845,7 @@ instance DIA_LEE_REPORT(C_INFO)
 	condition = dia_lee_report_condition;
 	information = dia_lee_report_info;
 	permanent = TRUE;
-	description = "Я пришел из Долины Рудников ...";
+	description = "Я пришел из Долины Рудников...";
 };
 
 

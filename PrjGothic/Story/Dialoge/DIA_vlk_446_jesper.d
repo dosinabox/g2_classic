@@ -81,11 +81,11 @@ func void dia_jesper_hallo_info()
 	Info_AddChoice(dia_jesper_hallo,"Я просто прогуливаюсь здесь.",dia_jesper_hallo_nurso);
 	if(ATTILA_KEY == TRUE)
 	{
-		Info_AddChoice(dia_jesper_hallo,"Аттила дал мне ключ ...",dia_jesper_hallo_willkommen);
+		Info_AddChoice(dia_jesper_hallo,"Аттила дал мне ключ...",dia_jesper_hallo_willkommen);
 	}
 	else
 	{
-		Info_AddChoice(dia_jesper_hallo,"Я прикончил Аттилу ...",dia_jesper_hallo_umgelegt);
+		Info_AddChoice(dia_jesper_hallo,"Я прикончил Аттилу...",dia_jesper_hallo_umgelegt);
 	};
 	DG_GEFUNDEN = TRUE;
 };
@@ -121,7 +121,7 @@ func void dia_jesper_hallo_umgelegt()
 	AI_Output(self,other,"DIA_Jesper_Hallo_Umgelegt_09_01");	//(с недоверием) ТЫ убил Аттилу?! (презрительно) А, ладно, он все равно был никчемным псом.
 	AI_Output(self,other,"DIA_Jesper_Hallo_Umgelegt_09_02");	//Но я хочу предупредить тебя. Если ты нападешь на МЕНЯ, я тебя убью.
 	Info_ClearChoices(dia_jesper_hallo);
-	Info_AddChoice(dia_jesper_hallo,"Что ты делаешь здесь ...",dia_jesper_hallo_was);
+	Info_AddChoice(dia_jesper_hallo,"Что ты делаешь в этой темной вонючей дыре?",dia_jesper_hallo_was);
 	Info_AddChoice(dia_jesper_hallo,"Отведи меня к вашему главарю.",dia_jesper_hallo_anfuehrer);
 };
 

@@ -283,7 +283,7 @@ instance DIA_GAAN_PAYTEACHER(C_INFO)
 	condition = dia_gaan_payteacher_condition;
 	information = dia_gaan_payteacher_info;
 	permanent = TRUE;
-	description = "Вот. 100 золотых монет за твой опыт по разделыванию животных. ";
+	description = "Вот. 100 золотых монет за твой опыт по разделыванию животных.";
 };
 
 

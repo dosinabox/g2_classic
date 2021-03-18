@@ -893,7 +893,7 @@ instance DIA_GAROND_DRAGONPLETTBERICHT(C_INFO)
 	condition = dia_garond_dragonplettbericht_condition;
 	information = dia_garond_dragonplettbericht_info;
 	permanent = TRUE;
-	description = "Насчет драконов ...";
+	description = "Насчет драконов...";
 };
 
 

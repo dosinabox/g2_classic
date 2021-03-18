@@ -367,7 +367,7 @@ instance DIA_OPOLOS_BIBLOTHEK(C_INFO)
 	condition = dia_opolos_biblothek_condition;
 	information = dia_opolos_biblothek_info;
 	permanent = TRUE;
-	description = "Насчет библиотеки ...";
+	description = "Насчет библиотеки...";
 };
 
 

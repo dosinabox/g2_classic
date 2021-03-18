@@ -308,7 +308,7 @@ instance DIA_MILTENOW_VERSTECK(C_INFO)
 	information = dia_miltenow_versteck_info;
 	permanent = FALSE;
 	important = FALSE;
-	description = "Я получил ответ от Горна ...";
+	description = "Я получил ответ от Горна...";
 };
 
 

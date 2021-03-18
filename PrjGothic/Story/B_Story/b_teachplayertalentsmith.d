@@ -11,7 +11,7 @@ func int b_teachplayertalentsmith(var C_NPC slf,var C_NPC oth,var int waffe)
 	};
 	oth.lp = oth.lp - kosten;
 	Log_CreateTopic(TOPIC_TALENTSMITH,LOG_NOTE);
-	b_logentry(TOPIC_TALENTSMITH,"Чтобы выковать оружие, прежде всего мне нужна сырая сталь. Я должен докрасна нагреть ее в огне кузнечного горна, а затем придать форму на наковальне. Особое оружие зачастую требует особых материалов, придающих оружию особые свойства. ");
+	b_logentry(TOPIC_TALENTSMITH,"Чтобы выковать оружие, прежде всего мне нужна сырая сталь. Я должен докрасна нагреть ее в огне кузнечного горна, а затем придать форму на наковальне. Особое оружие зачастую требует особых материалов, придающих оружию особые свойства.");
 	if(waffe == WEAPON_COMMON)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_COMMON] = TRUE;

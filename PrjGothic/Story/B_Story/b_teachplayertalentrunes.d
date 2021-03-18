@@ -141,7 +141,7 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	{
 		PLAYER_TALENT_RUNES[SPL_DESTROYUNDEAD] = TRUE;
 		CreateInvItems(scrolltrader,itsc_harmundead,1);
-		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Уничтожение нежити':1 святая вода .");
+		b_logentry(TOPIC_TALENTRUNES,"Ингредиенты для руны 'Уничтожение нежити': 1 святая вода.");
 	};
 	if(spell == SPL_PYROKINESIS)
 	{

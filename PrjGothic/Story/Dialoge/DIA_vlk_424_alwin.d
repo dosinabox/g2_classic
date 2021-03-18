@@ -115,7 +115,7 @@ instance DIA_ALWIN_FELLANRUNNING(C_INFO)
 	condition = dia_alwin_fellanrunning_condition;
 	information = dia_alwin_fellanrunning_info;
 	permanent = FALSE;
-	description = "Я могу поговорить с Фелланом ...";
+	description = "Я могу поговорить с Фелланом...";
 };
 
 
@@ -129,7 +129,7 @@ func int dia_alwin_fellanrunning_condition()
 
 func void dia_alwin_fellanrunning_info()
 {
-	AI_Output(other,self,"DIA_Alwin_FellanRunning_15_00");	//Я могу поговорить с Фелланом ...
+	AI_Output(other,self,"DIA_Alwin_FellanRunning_15_00");	//Я могу поговорить с Фелланом...
 	AI_Output(self,other,"DIA_Alwin_FellanRunning_12_01");	//Ты хочешь помочь мне? А зачем тебе это?
 	AI_Output(other,self,"DIA_Alwin_FellanRunning_15_02");	//Ты скажи мне.
 	AI_Output(self,other,"DIA_Alwin_FellanRunning_12_03");	//Ох, вот ты как! Хорошо - если ты заставишь его перестать молотить, я заплачу тебе 25 золотых монет.
@@ -139,23 +139,23 @@ func void dia_alwin_fellanrunning_info()
 	Log_SetTopicStatus(TOPIC_ALWIN,LOG_RUNNING);
 	b_logentry(TOPIC_ALWIN,"Алвин хочет, чтобы я заставил Феллана перестать колотить молотком. Впрочем, убивать его за это не стоит.");
 	Info_ClearChoices(dia_alwin_fellanrunning);
-	Info_AddChoice(dia_alwin_fellanrunning,"Я посмотрю, что можно сделать ...",dia_alwin_fellanrunning_ok);
+	Info_AddChoice(dia_alwin_fellanrunning,"Я посмотрю, что можно сделать...",dia_alwin_fellanrunning_ok);
 	if((hero.guild != GIL_MIL) && (hero.guild != GIL_PAL) && (hero.guild != GIL_KDF))
 	{
-		Info_AddChoice(dia_alwin_fellanrunning,"Если я начну бить его, у меня будут проблемы с ополчением ...",dia_alwin_fellanrunning_problems);
+		Info_AddChoice(dia_alwin_fellanrunning,"Если я начну бить его, у меня будут проблемы с ополчением...",dia_alwin_fellanrunning_problems);
 	};
 };
 
 func void dia_alwin_fellanrunning_ok()
 {
-	AI_Output(other,self,"DIA_Alwin_FellanRunning_Ok_15_00");	//Я посмотрю, что можно сделать ...
+	AI_Output(other,self,"DIA_Alwin_FellanRunning_Ok_15_00");	//Я посмотрю, что можно сделать...
 	AI_Output(self,other,"DIA_Alwin_FellanRunning_Ok_12_01");	//Подумай об этом. И помни, я заплачу тебе 25 золотых.
 	Info_ClearChoices(dia_alwin_fellanrunning);
 };
 
 func void dia_alwin_fellanrunning_problems()
 {
-	AI_Output(other,self,"DIA_Alwin_FellanRunning_Problems_15_00");	//Если я начну бить его, у меня будут проблемы с ополчением ...
+	AI_Output(other,self,"DIA_Alwin_FellanRunning_Problems_15_00");	//Если я начну бить его, у меня будут проблемы с ополчением...
 	AI_Output(self,other,"DIA_Alwin_Add_12_00");	//Здесь, в порту, никто не обращает внимания на драки ...
 	AI_Output(self,other,"DIA_Alwin_Add_12_01");	//Но если ты украдешь что-нибудь, или убьешь овцу, у тебя будут большие проблемы.
 };

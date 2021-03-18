@@ -58,7 +58,7 @@ func void bookstand_milten_02_s1()
 		Doc_PrintLine(ndocid,1,"");
 		Doc_PrintLine(ndocid,1,"");
 		Doc_PrintLine(ndocid,1,"");
-		Doc_PrintLines(ndocid,1,"Старатели ушли вчера. Они взяли с собой Диего - не удивлюсь, если он сбежит .");
+		Doc_PrintLines(ndocid,1,"Старатели ушли вчера. Они взяли с собой Диего - не удивлюсь, если он сбежит.");
 		Doc_PrintLines(ndocid,1,"Не думаю, что ему понравится махать киркой.");
 		Doc_PrintLines(ndocid,1,"Ну, а я использую свободное время для более углубленного изучения алхимии.");
 		Doc_PrintLine(ndocid,1,"");

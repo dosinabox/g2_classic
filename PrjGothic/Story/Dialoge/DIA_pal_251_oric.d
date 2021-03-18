@@ -255,7 +255,7 @@ func void dia_oric_canhelp_info()
 	AI_Output(self,other,"DIA_Oric_CanHelp_11_02");	//Впрочем, есть кое-что. Кое-что очень важное, что ты мог бы сделать для нас за пределами этих стен.
 	AI_Output(self,other,"DIA_Oric_CanHelp_11_03");	//Мы планируем отрубить змею голову.
 	Info_ClearChoices(dia_oric_canhelp);
-	Info_AddChoice(dia_oric_canhelp,"Я думаю, тебе лучше поискать кого-нибудь еще. ",dia_oric_canhelp_notyourman);
+	Info_AddChoice(dia_oric_canhelp,"Я думаю, тебе лучше поискать кого-нибудь еще.",dia_oric_canhelp_notyourman);
 	Info_AddChoice(dia_oric_canhelp,"Что ты хочешь этим сказать?",dia_oric_canhelp_whatyoumean);
 };
 

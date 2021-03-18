@@ -141,7 +141,7 @@ instance DIA_GEROLD_DEAL(C_INFO)
 	condition = dia_gerold_deal_condition;
 	information = dia_gerold_deal_info;
 	permanent = FALSE;
-	description = "У меня есть записка для одного из заключенных ...";
+	description = "У меня есть записка для одного из заключенных...";
 };
 
 
@@ -174,7 +174,7 @@ instance DIA_GEROLD_STUFF(C_INFO)
 	condition = dia_gerold_stuff_condition;
 	information = dia_gerold_stuff_info;
 	permanent = TRUE;
-	description = "Я принес тебе кое-что ...";
+	description = "Я принес тебе кое-что. Вот еда, как ты и просил.";
 };
 
 

@@ -444,7 +444,7 @@ instance DIA_RANDOLPH_SAGITTAHEAL(C_INFO)
 	nr = 56;
 	condition = dia_randolph_sagittaheal_condition;
 	information = dia_randolph_sagittaheal_info;
-	description = "Держи. Это облегчит твое похмелье. ";
+	description = "Держи. Это облегчит твое похмелье.";
 };
 
 

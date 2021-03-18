@@ -538,7 +538,7 @@ instance PC_ITMI_TABAK(C_INFO)
 	condition = pc_itmi_tabak_condition;
 	information = pc_itmi_tabak_info;
 	permanent = TRUE;
-	description = "Смешать табак ...";
+	description = "Смешать табак...";
 };
 
 
@@ -557,15 +557,15 @@ func void pc_itmi_tabak_info()
 	Info_AddChoice(pc_itmi_tabak,DIALOG_BACK,pc_itmi_tabak_back);
 	if(Npc_HasItems(hero,itfo_honey) >= 1)
 	{
-		Info_AddChoice(pc_itmi_tabak,"... с медом",pc_itmi_tabak_honey);
+		Info_AddChoice(pc_itmi_tabak,"...с медом",pc_itmi_tabak_honey);
 	};
 	if(Npc_HasItems(hero,itpl_swampherb) >= 1)
 	{
-		Info_AddChoice(pc_itmi_tabak,"... с болотной травой",pc_itmi_tabak_swampherb);
+		Info_AddChoice(pc_itmi_tabak,"...с болотной травой",pc_itmi_tabak_swampherb);
 	};
 	if(Npc_HasItems(hero,itpl_mushroom_01) >= 1)
 	{
-		Info_AddChoice(pc_itmi_tabak,"... с черным грибом",pc_itmi_tabak_mushroom_01);
+		Info_AddChoice(pc_itmi_tabak,"...с черным грибом",pc_itmi_tabak_mushroom_01);
 	};
 };
 

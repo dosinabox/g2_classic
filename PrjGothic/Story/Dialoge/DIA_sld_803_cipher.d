@@ -219,7 +219,7 @@ func void dia_cipher_joints_info()
 	else
 	{
 		Info_ClearChoices(dia_cipher_joints);
-		Info_AddChoice(dia_cipher_joints,"Я посмотрю, что можно сделать ...",dia_cipher_joints_running);
+		Info_AddChoice(dia_cipher_joints,"Я посмотрю, что можно сделать...",dia_cipher_joints_running);
 		if(Npc_HasItems(other,itmi_joint) > 0)
 		{
 			Info_AddChoice(dia_cipher_joints,"Вот несколько косяков для тебя...",dia_cipher_joints_success);

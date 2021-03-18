@@ -133,7 +133,7 @@ instance DIA_JORGEN_MILTEN(C_INFO)
 	condition = dia_jorgen_milten_condition;
 	information = dia_jorgen_milten_info;
 	permanent = FALSE;
-	description = "Если ты идешь в монастырь, тебе нужно поговорить с Милтеном ...";
+	description = "Если ты идешь в монастырь, тебе нужно поговорить с Милтеном.";
 };
 
 

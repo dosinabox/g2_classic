@@ -162,7 +162,7 @@ func void dia_fajeth_hallo_sldja()
 	FAJETH_PAY = TRUE;
 	Info_ClearChoices(dia_fajeth_hallo);
 	Info_AddChoice(dia_fajeth_hallo,"Что я могу сделать для тебя?",dia_fajeth_hallo_tun);
-	Info_AddChoice(dia_fajeth_hallo,"Нет, у меня нет времени ...",dia_fajeth_hallo_sldnein);
+	Info_AddChoice(dia_fajeth_hallo,"Нет, у меня нет времени...",dia_fajeth_hallo_sldnein);
 };
 
 func void dia_fajeth_hallo_sldnein()

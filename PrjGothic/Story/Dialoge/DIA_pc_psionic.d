@@ -166,7 +166,7 @@ instance DIA_LESTER_SEND_XARDAS(C_INFO)
 	condition = dia_lester_send_xardas_condition;
 	information = dia_lester_send_xardas_info;
 	permanent = FALSE;
-	description = "Ты должен рассказать Ксардасу об этой тени ...";
+	description = "Ты должен рассказать Ксардасу об этой тени. Это может быть важно.";
 };
 
 

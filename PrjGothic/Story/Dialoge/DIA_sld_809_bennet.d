@@ -1359,7 +1359,7 @@ func void dia_bennet_knowwhereenemy_info()
 	{
 		Info_ClearChoices(dia_bennet_knowwhereenemy);
 		Info_AddChoice(dia_bennet_knowwhereenemy,"Я дам тебе знать, когда ты мне понадобишься.",dia_bennet_knowwhereenemy_no);
-		Info_AddChoice(dia_bennet_knowwhereenemy,"Будь моим кузнецом. Увидимся в гавани. ",dia_bennet_knowwhereenemy_yes);
+		Info_AddChoice(dia_bennet_knowwhereenemy,"Будь моим кузнецом. Увидимся в гавани.",dia_bennet_knowwhereenemy_yes);
 	};
 };
 

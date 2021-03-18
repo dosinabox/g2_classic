@@ -99,7 +99,7 @@ instance DIA_MARCOS_GAROND(C_INFO)
 	condition = dia_marcos_garond_condition;
 	information = dia_marcos_garond_info;
 	permanent = FALSE;
-	description = "Я пришел от Гаронда ...";
+	description = "Я пришел от Гаронда...";
 };
 
 

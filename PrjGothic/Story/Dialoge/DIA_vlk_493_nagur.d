@@ -143,7 +143,7 @@ func void dia_nagur_job_info()
 		AI_Output(self,other,"DIA_Nagur_Job_08_03");	//Это значит, что ты будешь делать, что я скажу, и будешь получать треть от навара.
 		AI_Output(self,other,"DIA_Nagur_Job_08_04");	//Если тебя это не устраивает, то у меня нет работы для тебя.
 		Info_ClearChoices(dia_nagur_job);
-		Info_AddChoice(dia_nagur_job,"Мы партнеры. Поэтому пятьдесят на пятьдесят. ",dia_nagur_job_halbe);
+		Info_AddChoice(dia_nagur_job,"Мы партнеры. Поэтому пятьдесят на пятьдесят.",dia_nagur_job_halbe);
 		Info_AddChoice(dia_nagur_job,"Хорошо, ты здесь главный.",dia_nagur_job_klar);
 	};
 };

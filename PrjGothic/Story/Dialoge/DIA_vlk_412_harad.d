@@ -123,7 +123,7 @@ instance DIA_HARAD_ORCRUNNING(C_INFO)
 	condition = dia_harad_orcrunning_condition;
 	information = dia_harad_orcrunning_info;
 	permanent = FALSE;
-	description = "Давай еще поговорим об этих орках ...";
+	description = "Давай еще поговорим об этих орках...";
 };
 
 
@@ -137,7 +137,7 @@ func int dia_harad_orcrunning_condition()
 
 func void dia_harad_orcrunning_info()
 {
-	AI_Output(other,self,"DIA_Harad_OrcRunning_15_00");	//Давай еще поговорим об этих орках ...
+	AI_Output(other,self,"DIA_Harad_OrcRunning_15_00");	//Давай еще поговорим об этих орках...
 	AI_Output(self,other,"DIA_Harad_OrcRunning_12_01");	//(отрывисто) Что?
 	Info_ClearChoices(dia_harad_orcrunning);
 	Info_AddChoice(dia_harad_orcrunning,"Можешь считать своего орка мертвым!",dia_harad_orcrunning_done);

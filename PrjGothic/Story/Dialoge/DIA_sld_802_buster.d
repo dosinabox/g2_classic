@@ -644,7 +644,7 @@ instance DIA_BUSTER_BRINGTROPHYSHADOWBEAST(C_INFO)
 	condition = dia_buster_bringtrophyshadowbeast_condition;
 	information = dia_buster_bringtrophyshadowbeast_info;
 	permanent = TRUE;
-	description = "Насчет рогов мракорисов ...";
+	description = "Насчет рогов мракорисов...";
 };
 
 

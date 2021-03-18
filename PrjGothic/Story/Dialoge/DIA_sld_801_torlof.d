@@ -1041,7 +1041,7 @@ instance DIA_TORLOF_BEMYCAPTAIN2(C_INFO)
 	nr = 52;
 	condition = dia_torlof_bemycaptain2_condition;
 	information = dia_torlof_bemycaptain2_info;
-	description = "Ворота замка в Долине Рудников открыты ...";
+	description = "Ворота замка в Долине Рудников открыты...";
 };
 
 
