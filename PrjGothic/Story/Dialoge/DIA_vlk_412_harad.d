@@ -34,7 +34,7 @@ instance DIA_HARAD_HALLO(C_INFO)
 
 func int dia_harad_hallo_condition()
 {
-	if(Npc_IsInState(self,zs_talk) && (self.aivar[AIV_TALKEDTOPLAYER] == TRUE))
+	if(Npc_IsInState(self,zs_talk))
 	{
 		return TRUE;
 	};

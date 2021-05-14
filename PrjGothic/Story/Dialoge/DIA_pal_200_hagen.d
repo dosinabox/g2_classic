@@ -962,8 +962,11 @@ func void dia_lord_hagen_rescuebennet_whysure()
 	AI_Output(self,other,"DIA_Lord_Hagen_RescueBennet_Witness_04_01");	//Корнелиус, секретарь губернатора, видел, как произошло убийство.
 	AI_Output(self,other,"DIA_Lord_Hagen_RescueBennet_Witness_04_02");	//Его описание подходит к Беннету, в этом нет никаких сомнений. По моему мнению, это достаточное доказательство.
 	AI_Output(self,other,"DIA_Lord_Hagen_RescueBennet_Witness_04_03");	//Этот наемник будет повешен за измену.
-	b_logentry(TOPIC_RESCUEBENNET,"Корнелиус, секретарь губернатора, является свидетелем. Он утверждает, что был свидетелем убийства.");
-	RECUEBENNET_KNOWSCORNELIUS = TRUE;
+	if(RECUEBENNET_KNOWSCORNELIUS == FALSE)
+	{
+		b_logentry(TOPIC_RESCUEBENNET,"Корнелиус, секретарь губернатора, является свидетелем. Он утверждает, что был свидетелем убийства.");
+		RECUEBENNET_KNOWSCORNELIUS = TRUE;
+	};
 };
 
 func void dia_lord_hagen_rescuebennet_innoscent()

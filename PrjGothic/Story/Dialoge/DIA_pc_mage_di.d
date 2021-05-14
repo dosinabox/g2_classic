@@ -579,11 +579,21 @@ func void dia_milten_di_undeaddragondead_info()
 			AI_Output(other,self,"DIA_Milten_DI_UndeadDragonDead_15_09");	//Ммм. Может быть.
 		};
 		AI_Output(self,other,"DIA_Milten_DI_UndeadDragonDead_03_10");	//Да ладно, дружище, я думаю, что главное, что тебе сейчас нужно, - немного поспать.
-		DIA_MILTEN_DI_UNDEADDRAGONDEAD_ONETIME = TRUE;
 	};
 	AI_Output(self,other,"DIA_Milten_DI_UndeadDragonDead_03_11");	//Тебе нужно пойти к капитану и сказать ему, чтобы он поднимал якорь.
 	AI_StopProcessInfos(self);
-	Npc_ExchangeRoutine(self,"Start");
+	if(DIA_MILTEN_DI_UNDEADDRAGONDEAD_ONETIME == FALSE)
+	{
+		if(LESTER_ISONBOARD != LOG_SUCCESS)
+		{
+			Npc_ExchangeRoutine(self,"SittingShipDI");
+		}
+		else
+		{
+			Npc_ExchangeRoutine(self,"Start");
+		};
+	};
+	DIA_MILTEN_DI_UNDEADDRAGONDEAD_ONETIME = TRUE;
 };
 
 

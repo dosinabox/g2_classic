@@ -10,7 +10,6 @@ instance VLK_401_CORNELIUS(NPC_DEFAULT)
 	b_setattributestochapter(self,1);
 	fight_tactic = FAI_HUMAN_COWARD;
 	b_createambientinv(self);
-	CreateInvItems(self,itwr_corneliustagebuch_mis,1);
 	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_P_WEAK_ULF_WOHLERS,BODYTEX_P,itar_governor);
 	Mdl_SetModelFatness(self,0.9);
 	Mdl_ApplyOverlayMds(self,"Humans_Arrogance.mds");

@@ -136,11 +136,21 @@ func void dia_pc_lester_di_undeaddragondead_info()
 			AI_Output(self,other,"DIA_PC_Lester_DI_UndeadDragonDead_13_07");	//Да. Вера способна двигать горы. Так было всегда. К сожалению, они служили не тому богу.
 			AI_Output(self,other,"DIA_PC_Lester_DI_UndeadDragonDead_13_08");	//Мне понадобится некоторое время, чтобы осознать все это.
 		};
-		DIA_PC_LESTER_DI_UNDEADDRAGONDEAD_ONETIME = TRUE;
 	};
 	AI_Output(self,other,"DIA_PC_Lester_DI_UndeadDragonDead_13_09");	//По счастью, больше ничего такого не повторится. Во всем мире нет столько болотной травы, сколько я готов сейчас выкурить.
 	AI_StopProcessInfos(self);
-	Npc_ExchangeRoutine(self,"Start");
+	if(DIA_PC_LESTER_DI_UNDEADDRAGONDEAD_ONETIME == FALSE)
+	{
+		if(MILTENNW_ISONBOARD != LOG_SUCCESS)
+		{
+			Npc_ExchangeRoutine(self,"Start");
+		}
+		else
+		{
+			Npc_ExchangeRoutine(self,"SittingShipDI");
+		};
+	};
+	DIA_PC_LESTER_DI_UNDEADDRAGONDEAD_ONETIME = TRUE;
 };
 
 

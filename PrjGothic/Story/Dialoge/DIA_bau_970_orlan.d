@@ -273,9 +273,9 @@ func void dia_orlan_hotelzimmer_info()
 
 func void dia_orlan_hotelzimmer_ja()
 {
+	AI_Output(other,self,"DIA_Orlan_HotelZimmer_ja_15_00");	//Хорошо. Вот золото.
 	if(b_giveinvitems(other,self,itmi_gold,50))
 	{
-		AI_Output(other,self,"DIA_Orlan_HotelZimmer_ja_15_00");	//Хорошо. Вот золото.
 		AI_Output(self,other,"DIA_Orlan_HotelZimmer_ja_05_01");	//А вот ключ. Комнаты находятся вверх по лестнице. Но не загадь ее и не забывай платить ренту вовремя, понятно?
 		CreateInvItems(self,itke_orlan_hotelzimmer,1);
 		b_giveinvitems(self,other,itke_orlan_hotelzimmer,1);
@@ -284,7 +284,7 @@ func void dia_orlan_hotelzimmer_ja()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Orlan_HotelZimmer_ja_05_02");	//У тебя нет 50-ти. Сначала деньги, потом удовольствие.
+		AI_Output(self,other,"DIA_Orlan_HotelZimmer_ja_05_02");	//У тебя нет пятидесяти. Сначала деньги, потом удовольствие.
 	};
 	Info_ClearChoices(dia_orlan_hotelzimmer);
 };

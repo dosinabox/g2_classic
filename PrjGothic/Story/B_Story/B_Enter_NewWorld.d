@@ -82,6 +82,7 @@ func void b_enter_newworld_kapitel_3()
 			salandril.aivar[AIV_TOUGHGUY] = TRUE;
 		};
 		cornelius.flags = 0;
+		CreateInvItems(cornelius,itwr_corneliustagebuch_mis,1);
 		if(!Npc_IsDead(hodges))
 		{
 			b_startotherroutine(hodges,"BENNETWEG");
