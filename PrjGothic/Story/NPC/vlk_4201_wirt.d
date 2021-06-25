@@ -9,6 +9,7 @@ instance VLK_4201_WIRT(NPC_DEFAULT)
 	npctype = NPCTYPE_MAIN;
 	b_setattributestochapter(self,4);
 	fight_tactic = FAI_HUMAN_STRONG;
+	EquipItem(self,itmw_shortsword2);
 	b_createambientinv(self);
 	b_setnpcvisual(self,MALE,"Hum_Head_FatBald",FACE_N_OLDBALD_JEREMIAH,BODYTEX_N,itar_barkeeper);
 	Mdl_SetModelFatness(self,2);
