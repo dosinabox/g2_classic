@@ -591,8 +591,8 @@ instance ITKE_INNOS_MIS(C_ITEM)
 	visual = "ItKe_Key_02.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[2] = "Это ключ от портала в";
-	text[3] = "монастыре Инноса.";
+	text[2] = "Это ключ от входа в";
+	text[3] = "монастырь Инноса.";
 };
 
 instance ITKE_KLOSTERSCHATZ(C_ITEM)

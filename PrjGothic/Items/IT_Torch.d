@@ -5,7 +5,7 @@ instance ITLSTORCH(C_ITEM)
 {
 	name = "Факел";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN | ITEM_TORCH | ITEM_MULTI;
+	flags = ITEM_TORCH | ITEM_MULTI;
 	value = VALUE_FACKEL;
 	visual = "ItLs_Torch_01.3ds";
 	material = MAT_WOOD;
@@ -16,20 +16,21 @@ instance ITLSTORCH(C_ITEM)
 
 instance ITLSTORCHBURNING(C_ITEM)
 {
-	name = "Горящий факел";
+	name = "Факел";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN | ITEM_TORCH;
+	flags = ITEM_TORCH;
 	value = 0;
 	visual = "ITLSTORCHBURNING.ZEN";
 	material = MAT_WOOD;
 	description = name;
+	text[0] = "Горящий факел.";
 };
 
 instance ITLSTORCHBURNED(C_ITEM)
 {
 	name = "Сгоревший факел";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN | ITEM_TORCH | ITEM_MULTI;
+	flags = ITEM_MULTI;
 	value = 0;
 	visual = "ItLs_Torchburned_01.3ds";
 	material = MAT_WOOD;
@@ -40,12 +41,12 @@ instance ITLSTORCHFIRESPIT(C_ITEM)
 {
 	name = "Факел";
 	mainflag = ITEM_KAT_NONE;
-	flags = ITEM_BURN | ITEM_TORCH | ITEM_MULTI;
+	flags = ITEM_TORCH | ITEM_MULTI;
 	value = 0;
 	visual = "ITLSTORCHBURNING.ZEN";
 	material = MAT_WOOD;
 	scemename = "FIRESPIT";
 	description = name;
-	text[3] = "Факел In Extremo";
+	text[0] = "Факел In Extremo.";
 };
 

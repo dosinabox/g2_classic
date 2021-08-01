@@ -371,7 +371,7 @@ instance ITMW_2H_AXE_L_01(C_ITEM)
 {
 	name = "Кирка";
 	mainflag = ITEM_KAT_NF;
-	flags = ITEM_2HD_AXE;
+	flags = ITEM_2HD_AXE | ITEM_NSPLIT;
 	material = MAT_METAL;
 	value = VALUE_SPITZHACKE;
 	damagetotal = DAMAGE_SPITZHACKE;

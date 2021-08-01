@@ -31,6 +31,7 @@ const int NPC_SNEAK_WEAPON = 130;
 const int WEAR_TORSO = 1;
 const int WEAR_HEAD = 2;
 const int WEAR_EFFECT = 16;
+
 const int INV_WEAPON = 1;
 const int INV_ARMOR = 2;
 const int INV_RUNE = 3;
@@ -60,21 +61,30 @@ const int ITEM_KAT_POTIONS = 128;
 const int ITEM_KAT_LIGHT = 256;
 const int ITEM_KAT_RUNE = 512;
 const int ITEM_KAT_MAGIC = 1 << 31;
-const int ITEM_KAT_KEYS = 1;
-const int ITEM_BURN = 1 << 10;
-const int ITEM_DROPPED = 1 << 11;
+const int ITEM_KAT_KEYS = 64;
+
+const int ITEM_DROPPED = 1 << 10;
+const int ITEM_RING = 1 << 11;
 const int ITEM_MISSION = 1 << 12;
-const int ITEM_MULTI = 1 << 21;
-const int ITEM_TORCH = 1 << 28;
-const int ITEM_THROW = 1 << 29;
+const int ITEM_DAG = 1 << 13;
 const int ITEM_SWD = 1 << 14;
 const int ITEM_AXE = 1 << 15;
 const int ITEM_2HD_SWD = 1 << 16;
 const int ITEM_2HD_AXE = 1 << 17;
+const int ITEM_SHIELD = 1 << 18;
 const int ITEM_BOW = 1 << 19;
 const int ITEM_CROSSBOW = 1 << 20;
+const int ITEM_MULTI = 1 << 21;
 const int ITEM_AMULET = 1 << 22;
-const int ITEM_RING = 1 << 11;
+const int ITEM_NFOCUS = 1 << 23;
+const int ITEM_BELT = 1 << 24;
+const int ITEM_CREATEAMMO = 1 << 25;
+const int ITEM_NSPLIT = 1 << 26;
+const int ITEM_DRINK = 1 << 27;
+const int ITEM_TORCH = 1 << 28;
+const int ITEM_THROW = 1 << 29;
+const int ITEM_ACTIVE = 1 << 30;
+
 const int DAM_INVALID = 0;
 const int DAM_BARRIER = 1;
 const int DAM_BLUNT = 2;
@@ -93,6 +103,7 @@ const int DAM_INDEX_MAGIC = 5;
 const int DAM_INDEX_POINT = 6;
 const int DAM_INDEX_FALL = 7;
 const int DAM_INDEX_MAX = 8;
+
 const int NPC_ATTACK_FINISH_DISTANCE = 180;
 const int NPC_BURN_TICKS_PER_DAMAGE_POINT = 1000;
 const int NPC_BURN_DAMAGE_POINTS_PER_INTERVALL = 50;
@@ -753,6 +764,6 @@ const int INVCAM_Z_RING_STANDARD = 45;
 
 const int UnionActivated = 0;
 
-const string FIX_VERSION_DATE = "14/05/2021";
+const string FIX_VERSION_DATE = "27/07/2021";
 const int FIX_VERSION_START = 13;
 var int FIX_VERSION_SAVE;
