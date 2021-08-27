@@ -94,7 +94,7 @@ instance DIA_ORIC_SCOUTMINE(C_INFO)
 
 func int dia_oric_scoutmine_condition()
 {
-	if((MIS_SCOUTMINE == LOG_RUNNING) && (KAPITEL < 3) && Npc_KnowsInfo(other,dia_oric_hallo) && (FAJETH_ORE == FALSE) && (MARCOS_ORE == FALSE) && (SILVESTRO_ORE == FALSE))
+	if((MIS_SCOUTMINE == LOG_RUNNING) && (KAPITEL < 3) && Npc_KnowsInfo(other,dia_oric_hallo) && ((FAJETH_ORE == FALSE) || (MARCOS_ORE == FALSE) || (SILVESTRO_ORE == FALSE)))
 	{
 		return TRUE;
 	};
@@ -103,7 +103,7 @@ func int dia_oric_scoutmine_condition()
 func void dia_oric_scoutmine_info()
 {
 	AI_Output(other,self,"DIA_Oric_ScoutMine_15_00");	//Я отправляюсь к шахтам.
-	AI_Output(self,other,"DIA_Oric_ScoutMine_11_01");	//Будь острожен. Это нелегкая задача. Прежде всего, найди паладинов. Они возглавляют эти три группы.
+	AI_Output(self,other,"DIA_Oric_ScoutMine_11_01");	//Будь осторожен. Это нелегкая задача. Прежде всего, найди паладинов. Они возглавляют эти три группы.
 	AI_Output(self,other,"DIA_Oric_ScoutMine_11_02");	//Если тебе нужно больше информации, поговори с Парсивалем.
 };
 
@@ -224,7 +224,7 @@ func void dia_oric_iamback_info()
 	}
 	else if(hero.guild == GIL_KDF)
 	{
-		AI_Output(self,other,"DIA_Oric_IAmBack_11_03");	//Я виду, ты слал магом. Мое почтение.
+		AI_Output(self,other,"DIA_Oric_IAmBack_11_03");	//Я виду, ты стал магом. Мое почтение.
 	};
 	AI_Output(self,other,"DIA_Oric_IAmBack_11_04");	//Возможно, твое появление - добрый знак.
 };
@@ -256,7 +256,7 @@ func void dia_oric_canhelp_info()
 	AI_Output(self,other,"DIA_Oric_CanHelp_11_03");	//Мы планируем отрубить змею голову.
 	Info_ClearChoices(dia_oric_canhelp);
 	Info_AddChoice(dia_oric_canhelp,"Я думаю, тебе лучше поискать кого-нибудь еще.",dia_oric_canhelp_notyourman);
-	Info_AddChoice(dia_oric_canhelp,"Что ты хочешь этим сказать?",dia_oric_canhelp_whatyoumean);
+	Info_AddChoice(dia_oric_canhelp,"Что ты хочешь сказать этим?",dia_oric_canhelp_whatyoumean);
 };
 
 func void dia_oric_canhelp_notyourman()
@@ -272,7 +272,10 @@ func void dia_oric_canhelp_whatyoumean()
 	AI_Output(self,other,"DIA_Oric_CanHelp_WhatYouMean_11_02");	//Он один из самых влиятельных шаманов орков.
 	AI_Output(other,self,"DIA_Oric_CanHelp_WhatYouMean_15_03");	//А какова в этом моя роль?
 	AI_Output(self,other,"DIA_Oric_CanHelp_WhatYouMean_11_04");	//Убей его.
-	AI_Output(other,self,"DIA_Oric_CanHelp_WhatYouMean_15_05");	//Ты шутишь!?
+	if(!Npc_IsDead(hosh_pak))
+	{
+		AI_Output(other,self,"DIA_Oric_CanHelp_WhatYouMean_15_05");	//Ты шутишь!?
+	};
 	if(hero.guild == GIL_PAL)
 	{
 		AI_Output(self,other,"DIA_Oric_CanHelp_WhatYouMean_11_06");	//Ты единственный, кого мы можем выделить для этого дела. Все остальные рыцари нужны здесь.
@@ -304,7 +307,7 @@ instance DIA_ORIC_NEEDSTUFF(C_INFO)
 
 func int dia_oric_needstuff_condition()
 {
-	if((ORIKTOLDMISSIONCHAPTER4 == TRUE) && (MIS_KILLHOSHPAK == FALSE))
+	if(ORIKTOLDMISSIONCHAPTER4 == TRUE)
 	{
 		return TRUE;
 	};
@@ -371,7 +374,7 @@ instance DIA_ORIC_NOMURDER(C_INFO)
 
 func int dia_oric_nomurder_condition()
 {
-	if((ORIKTOLDMISSIONCHAPTER4 == TRUE) && (MIS_KILLHOSHPAK == FALSE))
+	if((ORIKTOLDMISSIONCHAPTER4 == TRUE) && (MIS_KILLHOSHPAK == FALSE) && !Npc_IsDead(hosh_pak))
 	{
 		return TRUE;
 	};
@@ -400,7 +403,7 @@ instance DIA_ORIC_WILLHELP(C_INFO)
 
 func int dia_oric_willhelp_condition()
 {
-	if((ORIKTOLDMISSIONCHAPTER4 == TRUE) && (MIS_KILLHOSHPAK == FALSE))
+	if((ORIKTOLDMISSIONCHAPTER4 == TRUE) && (MIS_KILLHOSHPAK == FALSE) && !Npc_IsDead(hosh_pak))
 	{
 		return TRUE;
 	};
@@ -432,9 +435,16 @@ instance DIA_ORIC_HOSHDEAD(C_INFO)
 
 func int dia_oric_hoshdead_condition()
 {
-	if(Npc_IsDead(hosh_pak) && (MIS_KILLHOSHPAK == LOG_RUNNING))
+	if(Npc_IsDead(hosh_pak))
 	{
-		return TRUE;
+		if(MIS_KILLHOSHPAK == LOG_RUNNING)
+		{
+			return TRUE;
+		};
+		if(ORIKTOLDMISSIONCHAPTER4 == TRUE)
+		{
+			return TRUE;
+		};
 	};
 };
 
@@ -474,7 +484,7 @@ func void dia_oric_anynews_info()
 	{
 		AI_Output(self,other,"DIA_Oric_AnyNews_11_01");	//Ты имеешь в виду, кроме того, что орки вторглись в замок?
 	}
-	else if(MIS_ALLDRAGONSDEAD == TRUE)
+	else if(Npc_KnowsInfo(other,dia_garond_alldragondead))
 	{
 		AI_Output(self,other,"DIA_Oric_AnyNews_11_02");	//Да. Ты наш герой. Уничтожить всех драконов разом - это воистину героический подвиг. Я потрясен!
 	}
@@ -531,7 +541,7 @@ func void dia_oric_dragonplettbericht_info()
 	{
 		if((Npc_IsDead(swampdragon) == FALSE) && (ORIC_SWAMPDRAGONINFO_ONETIME == FALSE))
 		{
-			AI_Output(self,other,"DIA_Oric_DragonPlettBericht_11_03");	//Несколько дней назад к западу от нашего замка появилось большое болото. Это довольно подозрительно, тебе так не кажется?
+			AI_Output(self,other,"DIA_Oric_DragonPlettBericht_11_03");	//Несколько дней назад к западу от нашего замка появилось большое болото. Это довольно подозрительно, так тебе не кажется?
 			b_logentry(TOPIC_DRACHENJAGD,"Орик дал мне повод к размышлению: За последние несколько дней к западу от замка образовалось большое болото. Он считает это очень подозрительным.");
 			ORIC_SWAMPDRAGONINFO_ONETIME = TRUE;
 		}
@@ -621,7 +631,7 @@ instance DIA_ORIC_PICKPOCKET(C_INFO)
 	condition = dia_oric_pickpocket_condition;
 	information = dia_oric_pickpocket_info;
 	permanent = TRUE;
-	description = "(украсть этот свиток будет чертовски сложно)";
+	description = "(украсть его свиток будет чертовски трудно)";
 };
 
 

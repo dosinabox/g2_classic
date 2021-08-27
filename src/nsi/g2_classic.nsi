@@ -14,7 +14,7 @@
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
 !define MOD_AUTHOR "D36, Kor Angar"
-!define MOD_LINK "http://worldofplayers.ru/threads/41796"
+!define MOD_LINK "https://worldofplayers.ru/threads/41796"
 !define MOD_SIZE "216000"
 !define MOD_HEADER "logo.bmp"
 !define MOD_PIC "pic.bmp"

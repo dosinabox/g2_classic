@@ -45,8 +45,6 @@ instance ITPL_WEED(C_ITEM)
 	material = MAT_LEATHER;
 	scemename = "FOOD";
 	description = name;
-	text[5] = NAME_VALUE;
-	count[5] = value;
 };
 
 instance ITPL_BEET(C_ITEM)
@@ -300,9 +298,10 @@ instance ITPL_SPEED_HERB_01(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_speed_herb_01;
 	scemename = "FOOD";
+	description = name;
+	text[1] = "Временно повышает скорость.";
 	text[3] = NAME_SEC_DURATION;
 	count[3] = SPEED_BOOST / 1000;
-	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };

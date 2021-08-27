@@ -832,10 +832,6 @@ instance ITMI_KARRASBLESSEDSTONE_MIS(C_ITEM)
 	visual_skin = 0;
 	material = MAT_STONE;
 	description = name;
-	text[2] = "";
-	text[3] = "";
-	text[5] = NAME_VALUE;
-	count[5] = value;
 	inv_zbias = 190;
 };
 
