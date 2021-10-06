@@ -206,7 +206,7 @@ func int dia_peck_weapon2_condition()
 
 func void dia_peck_weapon2_info()
 {
-	AI_Output(self,other,"DIA_Peck_Add_15_01");	//У тебя нет оружия получше для меня?
+	AI_Output(other,self,"DIA_Peck_Add_15_01");	//У тебя нет оружия получше для меня?
 	if(MIS_ANDRE_PECK == LOG_SUCCESS)
 	{
 		AI_Output(self,other,"DIA_Peck_Add_12_06");	//Я не забыл, что ты донес на меня лорду Андрэ.

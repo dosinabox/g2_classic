@@ -82,7 +82,7 @@ instance DIA_BRUTUS_PRISONER(C_INFO)
 
 func int dia_brutus_prisoner_condition()
 {
-	if((KAPITEL < 3) && (NPCOBSESSEDBYDMT_BRUTUS == FALSE))
+	if(NPCOBSESSEDBYDMT_BRUTUS == FALSE)
 	{
 		return TRUE;
 	};
@@ -96,7 +96,7 @@ func void dia_brutus_prisoner_info()
 	AI_Output(self,other,"DIA_Brutus_PRISONER_06_03");	//Но моя настоящая работа - заставлять их говорить. И поверь мне, я знаю способы разговорить кого угодно.
 	AI_Output(other,self,"DIA_Brutus_PRISONER_15_04");	//Звучит ужасно мило...
 	AI_Output(self,other,"DIA_Brutus_PRISONER_06_05");	//Но этим блохастым болванам, что сейчас сидят за решеткой, все равно особенно нечего сказать.
-	if(MIS_RESCUEGORN != LOG_SUCCESS)
+	if((MIS_RESCUEGORN != LOG_SUCCESS) && (KAPITEL < 3))
 	{
 		AI_Output(self,other,"DIA_Brutus_PRISONER_06_06");	//А к этому Горну меня не подпускают.
 		KNOWSABOUTGORN = TRUE;
@@ -144,7 +144,7 @@ instance DIA_BRUTUS_KASSE(C_INFO)
 
 func int dia_brutus_kasse_condition()
 {
-	if(Npc_KnowsInfo(hero,dia_brutus_prisoner) && (KAPITEL < 3) && (NPCOBSESSEDBYDMT_BRUTUS == FALSE))
+	if(Npc_KnowsInfo(hero,dia_brutus_prisoner) && (NPCOBSESSEDBYDMT_BRUTUS == FALSE))
 	{
 		return TRUE;
 	};
@@ -193,7 +193,7 @@ func void dia_brutus_den_info()
 	AI_Output(self,other,"DIA_Brutus_Den_06_01");	//Как можно дальше отсюда, как я понимаю. Я думаю, он мог попытаться пробраться через Проход.
 	AI_Output(other,self,"DIA_Brutus_Den_15_02");	//Спасибо. Исчерпывающая информация.
 	AI_Output(self,other,"DIA_Brutus_Den_06_03");	//А что я еще могу сказать? Я понятия не имею, куда он направился.
-	b_logentry(TOPICBRUTUSKASSE,"Ден попробовал перейти мне дорогу.");
+	b_logentry(TOPICBRUTUSKASSE,"Ден мог попытаться пробраться через Проход.");
 };
 
 
@@ -324,7 +324,7 @@ instance DIA_BRUTUS_DUSCHONWIEDER(C_INFO)
 
 func int dia_brutus_duschonwieder_condition()
 {
-	if((KAPITEL == 3) && (NPCOBSESSEDBYDMT_BRUTUS == FALSE))
+	if(Npc_KnowsInfo(hero,dia_brutus_prisoner) && (KAPITEL == 3) && (NPCOBSESSEDBYDMT_BRUTUS == FALSE))
 	{
 		return TRUE;
 	};
@@ -375,7 +375,7 @@ instance DIA_BRUTUS_WARUMNICHTARBBEIT(C_INFO)
 
 func int dia_brutus_warumnichtarbbeit_condition()
 {
-	if((KAPITEL >= 4) && (NPCOBSESSEDBYDMT_BRUTUS == FALSE) && (MIS_OCGATEOPEN == FALSE))
+	if(Npc_KnowsInfo(hero,dia_brutus_prisoner) && (KAPITEL >= 4) && (NPCOBSESSEDBYDMT_BRUTUS == FALSE) && (MIS_OCGATEOPEN == FALSE))
 	{
 		return TRUE;
 	};
@@ -418,12 +418,12 @@ func void dia_brutus_meatbugsweg_info()
 	AI_Output(self,other,"DIA_Brutus_MEATBUGSWEG_06_01");	//Ты действительно уверен, что ни одного из этих монстров не осталось?
 	AI_Output(other,self,"DIA_Brutus_MEATBUGSWEG_15_02");	//Абсолютно.
 	AI_Output(self,other,"DIA_Brutus_MEATBUGSWEG_06_03");	//Хорошо. Вот, возьми это золото в знак моей благодарности.
+	CreateInvItems(self,itmi_gold,150);
+	b_giveinvitems(self,other,itmi_gold,150);
 	AI_Output(other,self,"DIA_Brutus_MEATBUGSWEG_15_04");	//Ах, не заставляй меня плакать.
 	TOPIC_END_BRUTUSMEATBUGS = TRUE;
 	b_giveplayerxp(XP_BRUTUSMEATBUGS);
 	b_npcclearobsessionbydmt(self);
-	CreateInvItems(self,itmi_gold,150);
-	b_giveinvitems(self,other,itmi_gold,150);
 	Npc_ExchangeRoutine(self,"Start");
 };
 
@@ -449,13 +449,13 @@ func int dia_brutus_perm4_condition()
 
 func void dia_brutus_perm4_info()
 {
+	AI_Output(other,self,"DIA_Brutus_PERM4_15_00");	//Все в порядке?
 	if((MIS_OCGATEOPEN == TRUE) || ((hero.guild == GIL_KDF) && (KAPITEL >= 5)))
 	{
 		b_npcobsessedbydmt(self);
 	}
 	else
 	{
-		AI_Output(other,self,"DIA_Brutus_PERM4_15_00");	//Все в порядке?
 		AI_Output(self,other,"DIA_Brutus_PERM4_06_01");	//(нерешительно) Ты уверен, что со всеми мясными жуками покончено?
 		AI_Output(other,self,"DIA_Brutus_PERM4_15_02");	//Ах... смотри, вон один сзади тебя.
 		AI_Output(self,other,"DIA_Brutus_PERM4_06_03");	//(ревет) Чтооо?

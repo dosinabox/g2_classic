@@ -642,7 +642,7 @@ func void dia_lobart_andrehelplobart_info()
 	AI_Output(other,self,"DIA_Lobart_ANDREHELPLOBART_15_00");	//Меня направил к тебе Андрэ. Я могу чем-нибудь помочь тебе?
 	AI_Output(self,other,"DIA_Lobart_ANDREHELPLOBART_05_01");	//Да, конечно. Меня уже тошнит от этих проклятых полевых хищников.
 	AI_Output(self,other,"DIA_Lobart_ANDREHELPLOBART_05_02");	//Прикончи их всех. Меня не волнует, как!
-	Log_AddEntry(TOPIC_BECOMEMIL,"Поля Лобарта наводнены полевыми хищниками. Он хочет, чтобы я прогнал их.");
+	b_logentry(TOPIC_FELDRAEUBER,"Поля Лобарта наводнены полевыми хищниками. Он хочет, чтобы я прогнал их.");
 	MIS_LOBARTKILLBUGS = LOG_RUNNING;
 	AI_StopProcessInfos(self);
 };
@@ -681,7 +681,7 @@ func void dia_lobart_bugdead_info()
 		b_giveinvitems(self,other,itmi_gold,20);
 		MIS_LOBARTKILLBUGS = LOG_SUCCESS;
 		MIS_ANDREHELPLOBART = LOG_SUCCESS;
-		Log_AddEntry(TOPIC_BECOMEMIL,"Поля Лобарта очищены от полевых хищников. Я уничтожил их всех.");
+		Log_AddEntry(TOPIC_FELDRAEUBER,"Поля Лобарта очищены от полевых хищников. Я уничтожил их всех.");
 		DIA_LOBART_BUGDEAD_NOPERM = TRUE;
 	}
 	else

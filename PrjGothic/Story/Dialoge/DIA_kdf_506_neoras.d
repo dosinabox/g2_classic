@@ -392,9 +392,9 @@ func void dia_neoras_brewforme_info()
 {
 	Info_ClearChoices(dia_neoras_brewforme);
 	Info_AddChoice(dia_neoras_brewforme,DIALOG_BACK,dia_neoras_brewforme_back);
-	Info_AddChoice(dia_neoras_brewforme,"зелье ускорения.",dia_neoras_brewforme_speed);
-	Info_AddChoice(dia_neoras_brewforme,"экстракт маны.",dia_neoras_brewforme_mana);
-	Info_AddChoice(dia_neoras_brewforme,"лечебный экстракт.",dia_neoras_brewforme_health);
+	Info_AddChoice(dia_neoras_brewforme,"... зелье скорости.",dia_neoras_brewforme_speed);
+	Info_AddChoice(dia_neoras_brewforme,"... экстракт маны.",dia_neoras_brewforme_mana);
+	Info_AddChoice(dia_neoras_brewforme,"... лечебный экстракт.",dia_neoras_brewforme_health);
 };
 
 func void dia_neoras_brewforme_back()
@@ -402,12 +402,21 @@ func void dia_neoras_brewforme_back()
 	Info_ClearChoices(dia_neoras_brewforme);
 };
 
+func void b_neoras_buildbrewdialog()
+{
+	Info_ClearChoices(dia_neoras_brewforme);
+	Info_AddChoice(dia_neoras_brewforme,DIALOG_BACK,dia_neoras_brewforme_back);
+	Info_AddChoice(dia_neoras_brewforme,"Свари мне зелье скорости.",dia_neoras_brewforme_speed);
+	Info_AddChoice(dia_neoras_brewforme,"Свари мне экстракт маны.",dia_neoras_brewforme_mana);
+	Info_AddChoice(dia_neoras_brewforme,"Свари мне лечебный экстракт.",dia_neoras_brewforme_health);
+};
+
 func void dia_neoras_brewforme_speed()
 {
 	AI_Output(other,self,"DIA_Neoras_BrewForMe_Speed_15_00");	//Свари мне зелье скорости.
-	AI_Output(self,other,"DIA_Neoras_BrewForMe_Speed_01_01");	//Хорошо, у тебя есть необходимые ингредиенты и золото?
 	if((Npc_HasItems(other,itpl_speed_herb_01) >= 1) && (Npc_HasItems(other,itpl_temp_herb) >= 1) && (Npc_HasItems(other,itmi_gold) >= 10))
 	{
+		AI_Output(self,other,"DIA_Neoras_BrewForMe_Speed_01_01");	//Хорошо, у тебя есть необходимые ингредиенты и золото?
 		AI_Output(other,self,"DIA_Neoras_BrewForMe_Speed_15_02");	//Да, вот, держи.
 		b_giveinvitems(other,self,itpl_speed_herb_01,1);
 		b_giveinvitems(other,self,itpl_temp_herb,1);
@@ -419,19 +428,15 @@ func void dia_neoras_brewforme_speed()
 	{
 		AI_Output(self,other,"DIA_Neoras_BrewForMe_Speed_01_04");	//У тебя нет необходимых ингредиентов. Возвращайся, когда соберешь их.
 	};
-	Info_ClearChoices(dia_neoras_brewforme);
-	Info_AddChoice(dia_neoras_brewforme,DIALOG_BACK,dia_neoras_brewforme_back);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне зелье великой скорости.",dia_neoras_brewforme_speed);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне эликсир маны.",dia_neoras_brewforme_mana);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне лечебный эликсир.",dia_neoras_brewforme_health);
+	b_neoras_buildbrewdialog();
 };
 
 func void dia_neoras_brewforme_mana()
 {
-	AI_Output(other,self,"DIA_Neoras_BrewForMe_Mana_15_00");	//Свари мне эликсир маны.
-	AI_Output(self,other,"DIA_Neoras_BrewForMe_Mana_01_01");	//Хорошо, у тебя есть необходимые ингредиенты и золото?
+	AI_Output(other,self,"DIA_Neoras_BrewForMe_Mana_15_00");	//Свари мне экстракт маны.
 	if((Npc_HasItems(other,itpl_mana_herb_02) >= 2) && (Npc_HasItems(other,itpl_temp_herb) >= 1) && (Npc_HasItems(other,itmi_gold) >= 10))
 	{
+		AI_Output(self,other,"DIA_Neoras_BrewForMe_Mana_01_01");	//Хорошо, у тебя есть необходимые ингредиенты и золото?
 		AI_Output(other,self,"DIA_Neoras_BrewForMe_Mana_15_02");	//Да, вот, держи.
 		b_giveinvitems(other,self,itpl_mana_herb_02,2);
 		b_giveinvitems(other,self,itpl_temp_herb,1);
@@ -443,19 +448,15 @@ func void dia_neoras_brewforme_mana()
 	{
 		AI_Output(self,other,"DIA_Neoras_BrewForMe_Mana_01_04");	//У тебя нет необходимых ингредиентов. Возвращайся, когда соберешь их.
 	};
-	Info_ClearChoices(dia_neoras_brewforme);
-	Info_AddChoice(dia_neoras_brewforme,DIALOG_BACK,dia_neoras_brewforme_back);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне зелье скорости.",dia_neoras_brewforme_speed);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне эликсир маны.",dia_neoras_brewforme_mana);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне лечебный эликсир.",dia_neoras_brewforme_health);
+	b_neoras_buildbrewdialog();
 };
 
 func void dia_neoras_brewforme_health()
 {
-	AI_Output(other,self,"DIA_Neoras_BrewForMe_Health_15_00");	//Свари мне лечебный эликсир.
-	AI_Output(self,other,"DIA_Neoras_BrewForMe_Health_01_01");	//Хорошо, у тебя есть необходимые ингредиенты и золото?
+	AI_Output(other,self,"DIA_Neoras_BrewForMe_Health_15_00");	//Свари мне лечебный экстракт.
 	if((Npc_HasItems(other,itpl_health_herb_02) >= 2) && (Npc_HasItems(other,itpl_temp_herb) >= 1) && (Npc_HasItems(other,itmi_gold) >= 10))
 	{
+		AI_Output(self,other,"DIA_Neoras_BrewForMe_Health_01_01");	//Хорошо, у тебя есть необходимые ингредиенты и золото?
 		AI_Output(other,self,"DIA_Neoras_BrewForMe_Health_15_02");	//Да, вот, держи.
 		b_giveinvitems(other,self,itpl_health_herb_02,2);
 		b_giveinvitems(other,self,itpl_temp_herb,1);
@@ -467,11 +468,7 @@ func void dia_neoras_brewforme_health()
 	{
 		AI_Output(self,other,"DIA_Neoras_BrewForMe_Health_01_04");	//У тебя нет необходимых ингредиентов. Возвращайся, когда соберешь их.
 	};
-	Info_ClearChoices(dia_neoras_brewforme);
-	Info_AddChoice(dia_neoras_brewforme,DIALOG_BACK,dia_neoras_brewforme_back);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне зелье скорости.",dia_neoras_brewforme_speed);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне эликсир маны.",dia_neoras_brewforme_mana);
-	Info_AddChoice(dia_neoras_brewforme,"Свари мне лечебный эликсир.",dia_neoras_brewforme_health);
+	b_neoras_buildbrewdialog();
 };
 
 

@@ -310,7 +310,7 @@ instance DIA_XARDAS_EQUIPMENT(C_INFO)
 
 func int dia_xardas_equipment_condition()
 {
-	if(Npc_KnowsInfo(other,dia_xardas_weapon) && Npc_KnowsInfo(other,dia_xardas_firstexit) && (KAPITEL < 3))
+	if(Npc_KnowsInfo(other,dia_xardas_firstexit) && (KAPITEL < 3))
 	{
 		return TRUE;
 	};
@@ -778,6 +778,10 @@ func void dia_xardas_pyrowillnicht_info()
 	AI_Output(self,other,"DIA_Xardas_PYROWILLNICHT_14_02");	//Ах, неужели! Пирокар. Как интересно.
 	AI_Output(self,other,"DIA_Xardas_PYROWILLNICHT_14_03");	//Этот старый чудак становится совершенно невыносимым. Но я думаю, у меня есть кое-что, что поможет тебе.
 	AI_Output(self,other,"DIA_Xardas_PYROWILLNICHT_14_04");	//Когда я покидал орден Магов Огня, я взял с собой из монастыря несколько вещей.
+	/*if(Npc_GetDistToWP(self,"NW_XARDAS_START") <= 2000)
+	{
+		AI_Output(self,other,"DIA_Xardas_PYROWILLNICHT_14_05");	//Now that I've built my tower so close to town, I have to be prepared. Someone could come here and look for them at anytime.
+	};*/
 	AI_Output(self,other,"DIA_Xardas_PYROWILLNICHT_14_06");	//Я не хотел, чтобы паладины или Маги Огня перевернули все в моей башне вверх дном, и нашли эти вещи.
 	AI_Output(self,other,"DIA_Xardas_PYROWILLNICHT_14_07");	//Поэтому я спрятал их в надежном месте, где магам никогда не придет в голову искать их.
 	AI_Output(other,self,"DIA_Xardas_PYROWILLNICHT_15_08");	//И где же?
