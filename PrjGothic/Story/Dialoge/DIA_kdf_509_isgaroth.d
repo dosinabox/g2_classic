@@ -142,17 +142,17 @@ instance DIA_ISGAROTH_JOB(C_INFO)
 
 func int dia_isgaroth_job_condition()
 {
-	if(hero.guild != GIL_KDF)
-	{
-		return TRUE;
-	};
+	return TRUE;
 };
 
 func void dia_isgaroth_job_info()
 {
 	AI_Output(other,self,"DIA_Isgaroth_Job_15_00");	//Что ты делаешь здесь?
-	AI_Output(self,other,"DIA_Isgaroth_Job_01_01");	//Я Маг Огня. Жрец нашего бога Инноса.
-	AI_Output(self,other,"DIA_Isgaroth_Job_01_02");	//Этот алтарь посвящен ЕМУ, высшему богу, создателю огня и верховному судье.
+	if((other.guild != GIL_KDF) && (other.guild != GIL_NOV))
+	{
+		AI_Output(self,other,"DIA_Isgaroth_Job_01_01");	//Я Маг Огня. Жрец нашего бога Инноса.
+		AI_Output(self,other,"DIA_Isgaroth_Job_01_02");	//Этот алтарь посвящен ЕМУ, высшему богу, создателю огня и верховному судье.
+	};
 	AI_Output(self,other,"DIA_Isgaroth_Job_01_03");	//Ко мне приходят люди, чтобы помолиться Инносу и получить благословение.
 	AI_Output(self,other,"DIA_Isgaroth_Job_01_04");	//А за небольшое пожертвование ты можешь получить от меня много полезного.
 	Log_CreateTopic(TOPIC_KLOSTERTRADER,LOG_NOTE);

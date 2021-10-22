@@ -9,8 +9,8 @@
 ##            Основное           ##
 ###################################
 
-!define MOD_VERSION "1.2"
-!define MOD_DATE "2.17"
+!define MOD_VERSION "1.3"
+!define MOD_DATE "10.22"
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
 !define MOD_AUTHOR "D36, Kor Angar"
