@@ -130,7 +130,7 @@ instance DIA_HILDA_BRINGBEET(C_INFO)
 	nr = 1;
 	condition = dia_hilda_bringbeet_condition;
 	information = dia_hilda_bringbeet_info;
-	permanent = FALSE;
+	permanent = TRUE;
 	description = "Я принес тебе репу...";
 };
 

@@ -310,7 +310,7 @@ instance DIA_XARDAS_EQUIPMENT(C_INFO)
 
 func int dia_xardas_equipment_condition()
 {
-	if(Npc_KnowsInfo(other,dia_xardas_firstexit) && (KAPITEL < 3))
+	if(Npc_KnowsInfo(other,dia_xardas_weapon) && Npc_KnowsInfo(other,dia_xardas_firstexit) && (KAPITEL < 3))
 	{
 		return TRUE;
 	};
