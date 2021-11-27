@@ -2,7 +2,7 @@
 instance ITKE_XARDAS(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -10,6 +10,10 @@ instance ITKE_XARDAS(C_ITEM)
 	description = name;
 	text[2] = "Ключ от сундука,";
 	text[3] = "принадлежащего Ксардасу.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_CANTHARS_KOMPROBRIEF_MIS(C_ITEM)
@@ -161,7 +165,7 @@ instance ITRI_PROT_EDGE_01_VALENTINO(C_ITEM)
 instance ITKE_DEXTER(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_03.3ds";
@@ -169,6 +173,10 @@ instance ITKE_DEXTER(C_ITEM)
 	description = name;
 	text[2] = "Ключ от сундука,";
 	text[3] = "принадлежащего Декстеру.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_KRAEUTERLISTE(C_ITEM)
@@ -329,7 +337,7 @@ instance ITMI_HERBPAKET(C_ITEM)
 instance ITKE_STORAGE(C_ITEM)
 {
 	name = "Ключ от склада";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -337,6 +345,10 @@ instance ITKE_STORAGE(C_ITEM)
 	description = name;
 	text[2] = "Ключ от портового";
 	text[3] = "склада.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 
@@ -548,7 +560,7 @@ func void usevatrasmessageopen()
 instance ITKE_HOTEL(C_ITEM)
 {
 	name = "Ключ от комнаты";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
@@ -556,36 +568,48 @@ instance ITKE_HOTEL(C_ITEM)
 	description = name;
 	text[2] = "Ключ от комнаты";
 	text[3] = "отеля.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_THIEFGUILDKEY_MIS(C_ITEM)
 {
 	name = "Ржавый ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItKe_Key_01.3ds";
+	visual = "ItKe_Key_05.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Этот ключ изъеден соленой морской водой.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_THIEFGUILDKEY_HOTEL_MIS(C_ITEM)
 {
 	name = "Ржавый ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Это ключ от погреба отеля.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_INNOS_MIS(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
@@ -593,12 +617,16 @@ instance ITKE_INNOS_MIS(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от входа в";
 	text[3] = "монастырь Инноса.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_KLOSTERSCHATZ(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_02.3ds";
@@ -606,12 +634,16 @@ instance ITKE_KLOSTERSCHATZ(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от монастырской";
 	text[3] = "сокровищницы.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_KLOSTERSTORE(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -619,12 +651,16 @@ instance ITKE_KLOSTERSTORE(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от монастырской";
 	text[3] = "кладовой.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_KDFPLAYER(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_02.3ds";
@@ -632,12 +668,16 @@ instance ITKE_KDFPLAYER(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от монастырской";
 	text[3] = "кельи.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_KLOSTERBIBLIOTHEK(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -645,6 +685,10 @@ instance ITKE_KLOSTERBIBLIOTHEK(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от монастырской";
 	text[3] = "библиотеки.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITFO_SCHAFSWURST(C_ITEM)
@@ -719,15 +763,19 @@ instance HOLY_HAMMER_MIS(C_ITEM)
 instance ITKE_MAGICCHEST(C_ITEM)
 {
 	name = "Старый ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 0;
-	visual = "ItKe_Key_02.3ds";
+	visual = "ItKe_Key_05.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Старый железный ключ.";
 	text[3] = "Возможно, это ключ";
 	text[4] = "от висячего замка.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_PASSAGE_MIS(C_ITEM)
@@ -858,7 +906,7 @@ func void useposter()
 instance ITKE_BANDIT(C_ITEM)
 {
 	name = "Ключ от сундука";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -866,6 +914,10 @@ instance ITKE_BANDIT(C_ITEM)
 	description = name;
 	text[2] = "Этот ключ принадлежал";
 	text[3] = "бандиту.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITMI_BALTRAMPAKET(C_ITEM)
@@ -945,37 +997,49 @@ instance ITMI_EDDASSTATUE(C_ITEM)
 instance ITKE_EVT_CRYPT_01(C_ITEM)
 {
 	name = "Старый латунный ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_01.3ds";
+	visual = "ItKe_Key_05.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[2] = "Это ключ скелета в комнате 1";
+	text[2] = "Это ключ скелета из первой комнаты.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_EVT_CRYPT_02(C_ITEM)
 {
 	name = "Старый латунный ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_01.3ds";
+	visual = "ItKe_Key_05.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[2] = "Это ключ скелета в комнате 2";
+	text[2] = "Это ключ скелета из второй комнаты.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_EVT_CRYPT_03(C_ITEM)
 {
 	name = "Старый латунный ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_01.3ds";
+	visual = "ItKe_Key_05.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[2] = "Это ключ скелета в комнате 3";
+	text[2] = "Это ключ скелета из третьей комнаты.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 
@@ -1013,7 +1077,7 @@ instance ITAR_PAL_SKEL(C_ITEM)
 instance ITKE_VALENTINO(C_ITEM)
 {
 	name = "Ключ от сундука";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -1021,38 +1085,50 @@ instance ITKE_VALENTINO(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от сундука,";
 	text[3] = "принадлежащего Валентино.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_BUERGER(C_ITEM)
 {
 	name = "Ключ от сундука";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_01.3ds";
+	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Он лежал на камине.";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 190;
 };
 
 instance ITKE_RICHTER(C_ITEM)
 {
 	name = "Ключ от сундука";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_01.3ds";
+	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Это ключ от сундука,";
 	text[3] = "принадлежащего судье.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 190;
 };
 
 instance ITKE_SALANDRIL(C_ITEM)
 {
 	name = "Ключ от сундука";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -1060,44 +1136,60 @@ instance ITKE_SALANDRIL(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от сундука,";
 	text[3] = "принадлежащего алхимику Саландрилу.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_PALADINTRUHE(C_ITEM)
 {
 	name = "Ключ от сундука";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_01.3ds";
+	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Маленький латунный ключик";
-	text[3] = "от дома паладинов.";
+	text[3] = "из дома паладинов.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 190;
 };
 
 instance ITKE_THIEFTREASURE(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_03.3ds";
+	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Маленький ключик.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 190;
 };
 
 instance ITKE_FINGERS(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
-	visual = "ItKe_Key_03.3ds";
+	visual = "ItKe_Key_05.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = "Ржавый ключ от двери";
 	text[3] = "в канализации.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_SCHULDENBUCH(C_ITEM)
@@ -1168,7 +1260,7 @@ instance ITPL_SAGITTA_HERB_MIS(C_ITEM)
 instance ITKE_ORLAN_HOTELZIMMER(C_ITEM)
 {
 	name = "Ключ от комнаты";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -1176,6 +1268,10 @@ instance ITKE_ORLAN_HOTELZIMMER(C_ITEM)
 	description = name;
 	text[2] = "в таверне 'Мертвая Гарпия'.";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITRW_DRAGOMIRSARMBRUST_MIS(C_ITEM)

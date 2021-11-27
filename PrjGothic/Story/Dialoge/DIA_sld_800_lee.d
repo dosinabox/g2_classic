@@ -557,7 +557,7 @@ func void dia_lee_joinnow_info()
 			CreateInvItems(other,itar_sld_l,1);
 			AI_EquipArmor(other,itar_sld_l);
 			Snd_Play("LEVELUP");
-			KDF_AUFNAHME = LOG_OBSOLETE;
+			NOV_AUFNAHME = LOG_OBSOLETE;
 			SLD_AUFNAHME = LOG_SUCCESS;
 			MIL_AUFNAHME = LOG_OBSOLETE;
 			b_giveplayerxp(XP_BECOMEMERCENARY);

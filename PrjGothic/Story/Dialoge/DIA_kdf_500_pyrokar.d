@@ -414,9 +414,6 @@ func void dia_pyrokar_oath_info()
 	Npc_SetTrueGuild(other,GIL_KDF);
 	FIRE_CONTEST = TRUE;
 	Snd_Play("LEVELUP");
-	KDF_AUFNAHME = LOG_SUCCESS;
-	SLD_AUFNAHME = LOG_OBSOLETE;
-	MIL_AUFNAHME = LOG_OBSOLETE;
 	b_giveplayerxp(XP_BECOMEMAGE);
 	AI_Output(self,other,"DIA_Pyrokar_OATH_11_08");	//Теперь, когда ты был принят в наши ряды, ты можешь поговорить с лордом Хагеном, главнокомандующим паладинов.
 	AI_Output(self,other,"DIA_Pyrokar_OATH_11_09");	//Нам также очень интересно знать, как он оценивает ситуацию. Так что ты теперь можешь отправляться в Хоринис.

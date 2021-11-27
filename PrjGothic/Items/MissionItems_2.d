@@ -88,7 +88,7 @@ func void useletterforgorn()
 instance ITKE_PRISONKEY_MIS(C_ITEM)
 {
 	name = "Ключ от темницы";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
@@ -96,12 +96,16 @@ instance ITKE_PRISONKEY_MIS(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от темницы";
 	text[3] = "в замке.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_OC_STORE(C_ITEM)
 {
 	name = "Ключ от кладовой";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
@@ -109,12 +113,16 @@ instance ITKE_OC_STORE(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от кладовой";
 	text[3] = "в замке.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_ERZBARONFLUR(C_ITEM)
 {
 	name = "Ключ от двери";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
@@ -122,12 +130,16 @@ instance ITKE_ERZBARONFLUR(C_ITEM)
 	description = name;
 	text[2] = "От первой двери.";
 	text[3] = "На нем выгравировано имя Гомез";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_ERZBARONRAUM(C_ITEM)
 {
 	name = "Ключ от двери";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
@@ -135,6 +147,10 @@ instance ITKE_ERZBARONRAUM(C_ITEM)
 	description = name;
 	text[2] = "От второй двери.";
 	text[3] = "На нем выгравировано имя Гомез";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITMI_GORNSTREASURE_MIS(C_ITEM)
@@ -261,19 +277,23 @@ instance ITMI_GOLDPLATE_MIS(C_ITEM)
 instance ITKE_PASS_MIS(C_ITEM)
 {
 	name = "Ключ от Прохода";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItKe_Key_02.3ds";
+	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = "Маленький ключик";
 	text[1] = "Открывает ворота Прохода.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 190;
 };
 
 instance ITKE_BROMOR(C_ITEM)
 {
 	name = "Ключ Бромора";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
@@ -281,12 +301,16 @@ instance ITKE_BROMOR(C_ITEM)
 	description = name;
 	text[1] = "Ключ от комнаты";
 	text[2] = "владельца борделя.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_RUNE_MIS(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
@@ -295,6 +319,10 @@ instance ITKE_RUNE_MIS(C_ITEM)
 	text[1] = "Сундук, к которому подходит";
 	text[2] = "этот ключ, находится под мостом.";
 	text[3] = "В нем лежит рунный камень.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_BLOODY_MIS(C_ITEM)

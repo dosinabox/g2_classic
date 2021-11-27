@@ -166,7 +166,7 @@ Function .onInit
 	!insertmacro MUI_LANGDLL_DISPLAY
 	ReadRegStr $INSTDIR HKCU "Software\${MOD_NAME_SYS}" "InstallLocation"
 	StrCmp $INSTDIR "" "" InstallPathIsFound
-	StrCpy $INSTDIR "$PROGRAMFILES\Akella\Gothic II"
+	StrCpy $INSTDIR "$PROGRAMFILES\Akella Games\Gothic II"
 	InstallPathIsFound:
 FunctionEnd
 

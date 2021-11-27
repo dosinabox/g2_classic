@@ -1017,7 +1017,7 @@ func void dia_andre_join_yes()
 	b_giveinvitems(self,other,itar_mil_l,1);
 	AI_Output(self,other,"DIA_Andre_JOIN_Yes_08_03");	//Носи их с гордостью и достоинством.
 	SLD_AUFNAHME = LOG_OBSOLETE;
-	KDF_AUFNAHME = LOG_OBSOLETE;
+	NOV_AUFNAHME = LOG_OBSOLETE;
 	MIL_AUFNAHME = LOG_SUCCESS;
 	b_giveplayerxp(XP_BECOMEMILIZ);
 	Info_ClearChoices(dia_andre_join);
@@ -1131,7 +1131,7 @@ func void dia_andre_found_peck_somewhere()
 
 func void dia_andre_found_peck_redlight()
 {
-	AI_Output(other,self,"DIA_Andre_FOUND_PECK_REDLIGHT_15_00");	//"Он был в ""Красном Фонаре""."
+	AI_Output(other,self,"DIA_Andre_FOUND_PECK_REDLIGHT_15_00");	//Он был в "Красном Фонаре".
 	AI_Output(self,other,"DIA_Andre_FOUND_PECK_REDLIGHT_08_01");	//То есть он развлекался с девочками вместо того, чтобы выполнять свои обязанности.
 	AI_Output(self,other,"DIA_Andre_FOUND_PECK_REDLIGHT_08_02");	//Я думаю, мне нужно серьезно поговорить с ним.
 	b_giveplayerxp(XP_FOUNDPECK * 2);

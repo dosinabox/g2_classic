@@ -1360,17 +1360,17 @@ func void init_sub_newworld_part_monastery_01()
 {
 	Wld_AssignRoomToGuild("kloster01",GIL_PUBLIC);
 	Wld_AssignRoomToGuild("kloster02",GIL_PUBLIC);
-	Wld_AssignRoomToGuild("kloster03",GIL_PUBLIC);
-	Wld_AssignRoomToGuild("kloster11",GIL_PUBLIC);
-	Wld_AssignRoomToGuild("kloster13",GIL_PUBLIC);
-	Wld_AssignRoomToGuild("kloster04",GIL_NOV);
+	Wld_AssignRoomToGuild("kloster03",GIL_NOV);
+	Wld_AssignRoomToGuild("kloster04",GIL_PUBLIC);
 	Wld_AssignRoomToGuild("kloster05",GIL_NOV);
-	Wld_AssignRoomToGuild("kloster10",GIL_NOV);
-	Wld_AssignRoomToGuild("kloster12",GIL_NOV);
 	Wld_AssignRoomToGuild("kloster06",GIL_KDF);
 	Wld_AssignRoomToGuild("kloster07",GIL_KDF);
 	Wld_AssignRoomToGuild("kloster08",GIL_KDF);
 	Wld_AssignRoomToGuild("kloster09",GIL_KDF);
+	Wld_AssignRoomToGuild("kloster10",GIL_NOV);
+	Wld_AssignRoomToGuild("kloster11",GIL_PUBLIC);
+	Wld_AssignRoomToGuild("kloster12",GIL_NOV);
+	Wld_AssignRoomToGuild("kloster13",GIL_PUBLIC);
 };
 
 func void init_newworld_part_monastery_01()

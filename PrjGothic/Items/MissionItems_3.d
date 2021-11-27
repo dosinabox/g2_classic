@@ -88,15 +88,16 @@ func void equip_itmi_innoseye_broken_mis()
 
 instance ITWR_PERMISSIONTOWEARINNOSEYE_MIS(C_ITEM)
 {
-	name = "Письмо о подтверждении полномочий";
+	name = "Письмо для Пирокара";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Scroll_01.3DS";
+	visual = "ItWr_Scroll_02.3DS";
 	material = MAT_LEATHER;
 	on_state[0] = use_permissiontowearinnoseye;
 	scemename = "MAP";
-	description = "Письмо о подтверждении полномочий для Пирокара";
+	description = name;
+	text[0] = "О подтверждении полномочий.";
 	inv_rotz = 180;
 	inv_rotx = 90;
 	inv_roty = 180;
@@ -151,7 +152,7 @@ func void use_xardasbookforpyrokar()
 instance ITKE_CHEST_SEKOB_XARDASBOOK_MIS(C_ITEM)
 {
 	name = "Ключ Ксардаса";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_02;
 	visual = "ItKe_Key_02.3ds";
@@ -160,6 +161,10 @@ instance ITKE_CHEST_SEKOB_XARDASBOOK_MIS(C_ITEM)
 	text[0] = "от сундука на ферма Секоба.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_CORNELIUSTAGEBUCH_MIS(C_ITEM)
@@ -522,7 +527,7 @@ func void use_babosdocs()
 instance ITKE_IGARAZCHEST_MIS(C_ITEM)
 {
 	name = "Ключ от сундука";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -530,6 +535,10 @@ instance ITKE_IGARAZCHEST_MIS(C_ITEM)
 	description = name;
 	text[2] = "Это ключ от сундука,";
 	text[3] = "принадлежащего Игарацу.";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_ASTRONOMY_MIS(C_ITEM)

@@ -109,7 +109,7 @@ func void use_krypta_garon()
 instance ITKE_ORKKNASTDI_MIS(C_ITEM)
 {
 	name = "Ключ полковника орков";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -117,24 +117,32 @@ instance ITKE_ORKKNASTDI_MIS(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_EVT_UNDEAD_01(C_ITEM)
 {
 	name = "Ключ Архола";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_03;
 	visual = "ItKe_Key_03.3ds";
 	material = MAT_METAL;
 	description = name;
 	text[2] = name;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_EVT_UNDEAD_02(C_ITEM)
 {
 	name = "Ключ ключника";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_03;
 	visual = "ItKe_Key_02.3ds";
@@ -142,12 +150,16 @@ instance ITKE_EVT_UNDEAD_02(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_LASTDOORTOUNDEADDRGDI_MIS(C_ITEM)
 {
 	name = "Ключ от комнаты черного мага";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_03;
 	visual = "ItKe_Key_03.3ds";
@@ -155,6 +167,10 @@ instance ITKE_LASTDOORTOUNDEADDRGDI_MIS(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_LASTDOORTOUNDEADDRGDI_MIS(C_ITEM)
@@ -198,7 +214,7 @@ func void use_itwr_lastdoortoundeaddrgdi_mis()
 instance ITKE_CHESTMASTERDEMENTOR_MIS(C_ITEM)
 {
 	name = "Ключ от сундука черного мага";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_03;
 	visual = "ItKe_Key_01.3ds";
@@ -206,6 +222,10 @@ instance ITKE_CHESTMASTERDEMENTOR_MIS(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITWR_REZEPT_MEGADRINK_MIS(C_ITEM)

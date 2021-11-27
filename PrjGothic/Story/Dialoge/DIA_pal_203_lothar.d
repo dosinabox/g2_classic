@@ -568,8 +568,14 @@ func int dia_lothar_helloagain_condition()
 
 func void dia_lothar_helloagain_info()
 {
-	AI_Output(self,other,"DIA_Lothar_HelloAgain_01_00");	//Ах! Опять ты!
-	AI_Output(self,other,"DIA_Lothar_HelloAgain_01_01");	//Так тебе все же удалось получить доступ в верхний квартал!
+	if(self.aivar[AIV_TALKEDTOPLAYER] == TRUE)
+	{
+		AI_Output(self,other,"DIA_Lothar_HelloAgain_01_00");	//Ах! Опять ты!
+	};
+	if(Npc_KnowsInfo(other,dia_lothar_toov))
+	{
+		AI_Output(self,other,"DIA_Lothar_HelloAgain_01_01");	//Так тебе все же удалось получить доступ в верхний квартал!
+	};
 	if(other.guild == GIL_KDF)
 	{
 		AI_Output(self,other,"DIA_Lothar_Add_01_36");	//Где ты взял эту мантию?

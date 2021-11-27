@@ -491,7 +491,7 @@ func void dia_bengar_allein_info()
 	};
 	AI_Output(self,other,"DIA_Bengar_ALLEIN_10_04");	//Новые орды монстров каждый день приходят через Проход. Скоро они всех нас сожрут.
 	AI_Output(self,other,"DIA_Bengar_ALLEIN_10_05");	//Если бы только меня защищали хотя бы несколько наемников...
-	AI_Output(self,other,"DIA_Bengar_ALLEIN_10_06");	//"Один из них даже был готов работать на меня. Но он передумал, впрочем. Мне кажется, его звали ""Вольф""."
+	AI_Output(self,other,"DIA_Bengar_ALLEIN_10_06");	//Один из них даже был готов работать на меня. Но он передумал, впрочем. Мне кажется, его звали Вольф.
 	MIS_BENGARSHELPINGSLD = LOG_RUNNING;
 	Log_CreateTopic(TOPIC_BENGARALLEIN,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BENGARALLEIN,LOG_RUNNING);

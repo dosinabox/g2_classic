@@ -20,7 +20,7 @@ instance ITKE_LOCKPICK(C_ITEM)
 instance ITKE_KEY_01(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = 0;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -28,12 +28,16 @@ instance ITKE_KEY_01(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_KEY_02(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = 0;
 	value = VALUE_KEY_02;
 	visual = "ItKe_Key_02.3ds";
@@ -41,12 +45,16 @@ instance ITKE_KEY_02(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_KEY_03(C_ITEM)
 {
 	name = "Ключ";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = 0;
 	value = VALUE_KEY_03;
 	visual = "ItKe_Key_03.3ds";
@@ -54,12 +62,16 @@ instance ITKE_KEY_03(C_ITEM)
 	description = name;
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_CITY_TOWER_01(C_ITEM)
 {
 	name = "Ключ от башни";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -67,12 +79,16 @@ instance ITKE_CITY_TOWER_01(C_ITEM)
 	description = name;
 	text[2] = "";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_CITY_TOWER_02(C_ITEM)
 {
 	name = "Ключ от башни";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -80,12 +96,16 @@ instance ITKE_CITY_TOWER_02(C_ITEM)
 	description = name;
 	text[2] = "";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_CITY_TOWER_03(C_ITEM)
 {
 	name = "Ключ от башни";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -93,12 +113,16 @@ instance ITKE_CITY_TOWER_03(C_ITEM)
 	description = name;
 	text[2] = "";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_CITY_TOWER_04(C_ITEM)
 {
 	name = "Ключ от башни";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -106,12 +130,16 @@ instance ITKE_CITY_TOWER_04(C_ITEM)
 	description = name;
 	text[2] = "";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_CITY_TOWER_05(C_ITEM)
 {
 	name = "Ключ от башни";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -119,12 +147,16 @@ instance ITKE_CITY_TOWER_05(C_ITEM)
 	description = name;
 	text[2] = "";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 
 instance ITKE_CITY_TOWER_06(C_ITEM)
 {
 	name = "Ключ от башни";
-	mainflag = ITEM_KAT_NONE;
+	mainflag = ITEM_KAT_KEYS;
 	flags = ITEM_MISSION;
 	value = VALUE_KEY_01;
 	visual = "ItKe_Key_01.3ds";
@@ -132,5 +164,9 @@ instance ITKE_CITY_TOWER_06(C_ITEM)
 	description = name;
 	text[2] = "";
 	text[3] = "";
+	inv_rotz = -45;
+	inv_rotx = -25;
+	inv_roty = 0;
+	inv_zbias = 145;
 };
 

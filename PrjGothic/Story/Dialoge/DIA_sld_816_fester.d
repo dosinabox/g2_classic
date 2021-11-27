@@ -51,7 +51,7 @@ instance DIA_FESTER_AUFTRAG(C_INFO)
 	condition = dia_fester_auftrag_condition;
 	information = dia_fester_auftrag_info;
 	permanent = FALSE;
-	description = "Почему?";
+	description = "Зачем?";
 };
 
 

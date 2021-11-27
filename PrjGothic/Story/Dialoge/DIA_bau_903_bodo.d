@@ -178,7 +178,7 @@ instance DIA_BODO_WEEDPERM(C_INFO)
 	condition = dia_bodo_weedperm_condition;
 	information = dia_bodo_weedperm_info;
 	permanent = TRUE;
-	description = "Я не верб ни одному твоему слову. Отдай мне эту траву!";
+	description = "Я не верю ни одному твоему слову. Отдай мне эту траву!";
 };
 
 
@@ -192,7 +192,7 @@ func int dia_bodo_weedperm_condition()
 
 func void dia_bodo_weedperm_info()
 {
-	AI_Output(other,self,"DIA_Bodo_WeedPERM_15_00");	//Я не верб ни одному твоему слову. Отдай мне эту траву!
+	AI_Output(other,self,"DIA_Bodo_WeedPERM_15_00");	//Я не верю ни одному твоему слову. Отдай мне эту траву!
 	AI_Output(self,other,"DIA_Bodo_WeedPERM_12_01");	//У меня ее нет. Честно.
 };
 

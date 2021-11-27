@@ -618,7 +618,8 @@ func void dia_kardif_sendattila_info()
 		AI_Output(self,other,"DIA_Kardif_Hallo_14_04");	//Каждая информация, которую я сообщу тебе, будет стоить 10 золотых монет.
 		KARDIF_DEAL = 10;
 	};
-	Wld_InsertNpc(vlk_494_attila,"NW_CITY_ENTRANCE_01");
+	Wld_InsertNpc(vlk_494_attila,"NW_CITY_HABOUR_POOR_AREA_BACK_ALLEY_02");
+	b_initnpcglobals();
 };
 
 
@@ -637,7 +638,7 @@ var int dia_kardif_kerl_permanent;
 
 func int dia_kardif_kerl_condition()
 {
-	if(Npc_KnowsInfo(other,dia_kardif_sendattila) && (attila.aivar[AIV_TALKEDTOPLAYER] == FALSE) && (KARDIF_ONEQUESTION == TRUE) && (DIA_KARDIF_KERL_PERMANENT == FALSE))
+	if(Npc_KnowsInfo(other,dia_kardif_sendattila) && (attila.aivar[AIV_TALKEDTOPLAYER] == FALSE) && !Npc_IsDead(attila) && (KARDIF_ONEQUESTION == TRUE) && (DIA_KARDIF_KERL_PERMANENT == FALSE))
 	{
 		return TRUE;
 	};
@@ -675,7 +676,7 @@ instance DIA_KARDIF_DEFEATEDATTILA(C_INFO)
 
 func int dia_kardif_defeatedattila_condition()
 {
-	if(Npc_KnowsInfo(other,dia_attila_hallo))
+	if(Npc_KnowsInfo(other,dia_attila_hallo) && (KARDIF_ONEQUESTION == FALSE) && (!Npc_HasItems(attila,ItKe_ThiefGuildKey_MIS) || (Npc_GetDistToWP(attila,"NW_CITY_KARDIF") > 2000) || Npc_IsDead(attila)))
 	{
 		return TRUE;
 	};
@@ -687,8 +688,8 @@ func void dia_kardif_defeatedattila_info()
 	AI_Output(self,other,"DIA_Kardif_DEFEATEDATTILA_14_01");	//Эй, откуда мне было знать? Я просто передал информацию.
 	AI_Output(self,other,"DIA_Kardif_DEFEATEDATTILA_14_02");	//Если кто-то решил насолить тебе, я думаю, у него были веские причины.
 	b_giveplayerxp(XP_KARDIF_BLAME4ATTILA);
-	b_killnpc(attila);
-	Npc_RemoveInvItem(attila,itmi_oldcoin);
+//	b_killnpc(attila);
+//	Npc_RemoveInvItem(attila,itmi_oldcoin);
 };
 
 

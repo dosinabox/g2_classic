@@ -265,7 +265,9 @@ func void dia_pedro_aufnahme_yes()
 	other.guild = GIL_NOV;
 	Npc_SetTrueGuild(other,GIL_NOV);
 	DIA_PEDRO_AUFNAHME_NOPERM = TRUE;
-	NOV_AUFNAHME = TRUE;
+	NOV_AUFNAHME = LOG_SUCCESS;
+	SLD_AUFNAHME = LOG_OBSOLETE;
+	MIL_AUFNAHME = LOG_OBSOLETE;
 	b_giveplayerxp(XP_AUFNAHMENOVIZE);
 	Wld_AssignRoomToGuild("Kloster02",GIL_KDF);
 	AI_StopProcessInfos(self);

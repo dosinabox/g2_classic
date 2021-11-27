@@ -142,7 +142,7 @@ instance DIA_FELLAN_STOP(C_INFO)
 
 func int dia_fellan_stop_condition()
 {
-	if(MIS_ATTACKFELLAN == LOG_RUNNING)
+	if((MIS_ATTACKFELLAN == LOG_RUNNING) && (FELLANGESCHLAGEN == FALSE))
 	{
 		return TRUE;
 	};

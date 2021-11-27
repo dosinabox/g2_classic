@@ -258,7 +258,7 @@ func void dia_gorax_aufgabe2_info()
 {
 	AI_Output(other,self,"DIA_Gorax_Aufgabe2_15_00");	//У тебя есть еще какое-нибудь поручение для меня?
 	AI_Output(self,other,"DIA_Gorax_Aufgabe2_14_01");	//Да. Как ты знаешь, мы делаем здесь превосходное вино, и часть его продаем.
-	AI_Output(self,other,"DIA_Gorax_Aufgabe2_14_02");	//"Орлан, хозяин трактира ""Мертвая Гарпия"" заказал солидную партию. Мы договорились на сумму в 240 золотых монет."
+	AI_Output(self,other,"DIA_Gorax_Aufgabe2_14_02");	//Орлан, хозяин трактира "Мертвая Гарпия" заказал солидную партию. Мы договорились на сумму в 240 золотых монет.
 	AI_Output(self,other,"DIA_Gorax_Aufgabe2_14_03");	//Отнеси ему эти бутылки - но смотри, чтобы он не обсчитал тебя.
 	b_giveinvitems(self,other,itfo_wine,12);
 	MIS_GORAXWEIN = LOG_RUNNING;

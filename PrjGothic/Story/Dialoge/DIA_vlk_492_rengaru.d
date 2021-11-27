@@ -230,7 +230,7 @@ instance DIA_RENGARU_INKNAST(C_INFO)
 
 func int dia_rengaru_inknast_condition()
 {
-	if(Npc_KnowsInfo(other,dia_rengaru_gotyou))
+	if(Npc_KnowsInfo(other,dia_rengaru_gotyou) && !Npc_KnowsInfo(other,dia_rengaru_spare))
 	{
 		return TRUE;
 	};
@@ -268,6 +268,31 @@ func void dia_rengaru_inknast_keinknast()
 	AI_Output(other,self,"DIA_Rengaru_INKNAST_keinKnast_15_00");	//Почему я должен отпустить тебя?
 	AI_Output(self,other,"DIA_Rengaru_INKNAST_keinKnast_07_01");	//В городе никогда не помешают связи с нужными людьми - и хорошие отношения с ними.
 	AI_Output(self,other,"DIA_Rengaru_INKNAST_keinKnast_07_02");	//Я мог бы замолвить словечко за тебя. Я не могу и не хочу говорить больше. Решать тебе.
+};
+
+
+instance DIA_RENGARU_SPARE(C_INFO)
+{
+	npc = vlk_492_rengaru;
+	nr = 5;
+	condition = dia_rengaru_spare_condition;
+	information = dia_rengaru_spare_info;
+	permanent = FALSE;
+	description = "Проваливай! И чтобы больше я тебя здесь не видел!";
+};
+
+
+func int dia_rengaru_spare_condition()
+{
+	if(Npc_KnowsInfo(other,dia_rengaru_gotyou) && !Npc_KnowsInfo(other,dia_rengaru_inknast))
+	{
+		return TRUE;
+	};
+};
+
+func void dia_rengaru_spare_info()
+{
+	dia_rengaru_inknast_hauab();
 };
 
 

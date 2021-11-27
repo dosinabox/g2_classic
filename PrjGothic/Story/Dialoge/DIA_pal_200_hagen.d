@@ -854,16 +854,19 @@ func void dia_lord_hagen_backintown_info()
 	AI_Output(other,self,"DIA_Lord_Hagen_BACKINTOWN_15_04");	//И, должен добавить, без помощи извне им всем скоро придет конец. Вот такие дела.
 	AI_Output(self,other,"DIA_Lord_Hagen_BACKINTOWN_04_05");	//Я должен найти способ спасти эту экспедицию. Ты многое сделал для нас. Иннос благодарит тебя...
 	AI_Output(other,self,"DIA_Lord_Hagen_BACKINTOWN_15_06");	//Мне не интересна его благодарность. Мне нужен его глаз.
-	AI_Output(self,other,"DIA_Lord_Hagen_BACKINTOWN_04_07");	//Да, конечно. Я держу свое слово. Возьми это письмо. Оно откроет перед тобой монастырские врата.
+	if((other.guild != GIL_PAL) && (other.guild != GIL_KDF))
+	{
+		AI_Output(self,other,"DIA_Lord_Hagen_BACKINTOWN_04_07");	//Да, конечно. Я держу свое слово. Возьми это письмо. Оно откроет перед тобой монастырские врата.
+	};
 	AI_Output(self,other,"DIA_Lord_Hagen_BACKINTOWN_04_08");	//Поговори с Пирокаром, высшим Магом Огня, и покажи ему это письмо с полномочиями. Он предоставит тебе доступ к Глазу Инноса.
+	CreateInvItems(self,itwr_permissiontowearinnoseye_mis,1);
+	b_giveinvitems(self,other,itwr_permissiontowearinnoseye_mis,1);
 	AI_Output(self,other,"DIA_Lord_Hagen_Add_04_00");	//И еще одно, прежде чем ты уйдешь...
 	AI_Output(self,other,"DIA_Lord_Hagen_Add_04_01");	//Возьми эту руну в знак моей благодарности. Она вернет тебя в город, когда ты этого захочешь.
 	b_giveinvitems(self,other,itru_teleportseaport,1);
-	CreateInvItems(self,itwr_permissiontowearinnoseye_mis,1);
-	b_giveinvitems(self,other,itwr_permissiontowearinnoseye_mis,1);
 	MIS_INNOSEYESTOLEN = TRUE;
 	MIS_OLDWORLD = LOG_SUCCESS;
-	b_logentry(TOPIC_INNOSEYE,"Лорд Хаген дал мне записку. Она заставит мастера Пирокара в монастыре отдать мне Глаз Инноса.");
+	b_logentry(TOPIC_INNOSEYE,"Лорд Хаген дал мне письмо. Оно заставит мастера Пирокара в монастыре отдать мне Глаз Инноса.");
 	Wld_InsertNpc(vlk_4250_jorgen,"NW_MONASTERY_BRIDGE_01");
 	Wld_InsertNpc(bdt_1050_landstreicher,"NW_TROLLAREA_NOVCHASE_01");
 	Wld_InsertNpc(bdt_1051_wegelagerer,"NW_TROLLAREA_RITUALFOREST_09");

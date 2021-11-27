@@ -60,7 +60,7 @@ func void dia_buster_hello_whoareyou()
 	Info_ClearChoices(dia_buster_hello);
 	Info_AddChoice(dia_buster_hello,"Это не твое дело.",dia_buster_hello_notyourbusiness);
 	Info_AddChoice(dia_buster_hello,"Я знаю Ли!",dia_buster_hello_iknowlee);
-	Info_AddChoice(dia_buster_hello,"Я хочу увидеть лендлорда.",dia_buster_hello_goingtofarm);
+	Info_AddChoice(dia_buster_hello,"Как скажешь. Я хочу увидеть лендлорда.",dia_buster_hello_goingtofarm);
 };
 
 func void dia_buster_hello_iknowlee()
@@ -70,7 +70,7 @@ func void dia_buster_hello_iknowlee()
 	AI_Output(self,other,"DIA_Buster_Hello_IKnowLee_13_02");	//Итак, куда ты направляешься?
 	Info_ClearChoices(dia_buster_hello);
 	Info_AddChoice(dia_buster_hello,"Это не твое дело.",dia_buster_hello_notyourbusiness);
-	Info_AddChoice(dia_buster_hello,"Я хочу увидеть лендлорда.",dia_buster_hello_goingtofarm);
+	Info_AddChoice(dia_buster_hello,"Как скажешь. Я хочу увидеть лендлорда.",dia_buster_hello_goingtofarm);
 };
 
 func void dia_buster_hello_notyourbusiness()
@@ -87,7 +87,7 @@ func void dia_buster_hello_goingtofarm()
 	AI_Output(self,other,"DIA_Buster_Hello_GoingToFarm_13_01");	//Да?.. Хм - ты не кажешься мне таким уж опасным.
 	Info_ClearChoices(dia_buster_hello);
 	Info_AddChoice(dia_buster_hello,"Хочешь проверить?",dia_buster_hello_wannatestit);
-	Info_AddChoice(dia_buster_hello,"Я тоже убил парочку другую тварей.",dia_buster_hello_slewbeasts);
+	Info_AddChoice(dia_buster_hello,"Я тоже убил парочку-другую тварей.",dia_buster_hello_slewbeasts);
 	Info_AddChoice(dia_buster_hello,"Тебе правильно кажется.",dia_buster_hello_imnodanger);
 };
 
@@ -104,7 +104,7 @@ func void dia_buster_hello_imnodanger()
 
 func void dia_buster_hello_slewbeasts()
 {
-	AI_Output(other,self,"DIA_Buster_Hello_SlewBeasts_15_00");	//Я тоже убил парочку другую тварей.
+	AI_Output(other,self,"DIA_Buster_Hello_SlewBeasts_15_00");	//Я тоже убил парочку-другую тварей.
 	AI_Output(self,other,"DIA_Buster_Hello_SlewBeasts_13_01");	//Ха! (смеется) Ты, наверное, прихлопнул несколько долгоносиков на поле и выгнал парочку крыс из их нор.
 	AI_Output(self,other,"DIA_Buster_Hello_SlewBeasts_13_02");	//А мы здесь имеем дело с орками! Да, и с этими коварными городскими стражниками. (иронический смех)
 	Info_ClearChoices(dia_buster_hello);
@@ -432,7 +432,7 @@ func void dia_buster_leeleader_info()
 {
 	AI_Output(other,self,"DIA_Buster_LeeLeader_15_00");	//Наемников возглавляет Ли, да?
 	AI_Output(self,other,"DIA_Buster_LeeLeader_13_01");	//Правильно - эй, теперь я вспомнил, где видел тебя! Ты тоже был в колонии.
-	AI_Output(other,self,"DIA_Buster_LeeLeader_15_02");	//(вздыхает) Как и я.
+	AI_Output(other,self,"DIA_Buster_LeeLeader_15_02");	//(вздыхает) Так было.
 	AI_Output(self,other,"DIA_Buster_LeeLeader_13_03");	//Я не видел тебя, когда все рвануло. И незадолго перед этим тоже.
 	AI_Output(other,self,"DIA_Buster_LeeLeader_15_04");	//У меня были другие проблемы.
 	AI_Output(self,other,"DIA_Buster_LeeLeader_13_05");	//Тогда ты многое пропустил - с тех пор многое изменилось.

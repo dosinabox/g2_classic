@@ -532,6 +532,7 @@ instance ITAT_GOBLINBONE(C_ITEM)
 	text[3] = "";
 	text[5] = NAME_VALUE;
 	count[5] = value;
+	inv_zbias = 230;
 };
 
 instance ITAT_SKELETONBONE(C_ITEM)
