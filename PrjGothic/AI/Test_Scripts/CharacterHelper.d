@@ -2169,22 +2169,22 @@ func void ch_training_trophys_firetongue()
 
 func void ch_training_trophys_bfsting()
 {
-	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_BFWING);
+	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_BFSTING);
 };
 
 func void ch_training_trophys_bfwing()
 {
-	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_BFSTING);
+	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_BFWING);
 };
 
 func void ch_training_trophys_crawlerplate()
 {
-	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_MANDIBLES);
+	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_CRAWLERPLATE);
 };
 
 func void ch_training_trophys_mandibles()
 {
-	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_CRAWLERPLATE);
+	b_teachplayertalenttakeanimaltrophy(self,other,TROPHY_MANDIBLES);
 };
 
 func void ch_training_trophys_drgsnapperhorn()

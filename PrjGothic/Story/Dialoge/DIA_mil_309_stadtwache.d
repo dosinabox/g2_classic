@@ -28,7 +28,7 @@ instance DIA_MIL_309_STADTWACHE_HALLO(C_INFO)
 	condition = dia_mil_309_stadtwache_hallo_condition;
 	information = dia_mil_309_stadtwache_hallo_info;
 	permanent = TRUE;
-	description = "Что новенького?";
+	description = "В чем дело?";
 };
 
 

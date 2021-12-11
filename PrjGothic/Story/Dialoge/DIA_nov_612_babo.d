@@ -492,7 +492,7 @@ instance DIA_BABO_HOWISIT(C_INFO)
 	condition = dia_babo_howisit_condition;
 	information = dia_babo_howisit_info;
 	permanent = TRUE;
-	description = "Как ты?";
+	description = "Как дела?";
 };
 
 

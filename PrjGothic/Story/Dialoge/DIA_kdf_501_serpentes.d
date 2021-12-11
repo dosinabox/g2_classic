@@ -161,7 +161,7 @@ instance DIA_SERPENTES_NOIDEA(C_INFO)
 	condition = dia_serpentes_noidea_condition;
 	information = dia_serpentes_noidea_info;
 	permanent = FALSE;
-	description = "Что за создание это должно быть?";
+	description = "С живой скалой? Что за создание это должно быть?";
 };
 
 
@@ -175,7 +175,7 @@ func int dia_serpentes_noidea_condition()
 
 func void dia_serpentes_noidea_info()
 {
-	AI_Output(other,self,"DIA_Serpentes_NOIDEA_15_00");	//Живой скалой?.. Что за создание это должно быть?
+	AI_Output(other,self,"DIA_Serpentes_NOIDEA_15_00");	//С живой скалой? Что за создание это должно быть?
 	AI_Output(self,other,"DIA_Serpentes_NOIDEA_10_01");	//Я сказал тебе все. (с издевкой) Или это испытание кажется тебе слишком сложным?
 	AI_Output(self,other,"DIA_Serpentes_NOIDEA_10_02");	//Теперь ты узнаешь, что означает пройти Испытание Огнем - я больше не буду отвечать на твои вопросы.
 	AI_StopProcessInfos(self);

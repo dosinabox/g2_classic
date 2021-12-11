@@ -450,7 +450,7 @@ func void dia_raoul_trollfell_info()
 	AI_Output(self,other,"DIA_Raoul_TROLLFELL_01_04");	//Хорошо. Я дам тебе 500 золотых монет и три сильных лечебных зелья. Что скажешь?
 	Info_ClearChoices(dia_raoul_trollfell);
 	Info_AddChoice(dia_raoul_trollfell,"Этого недостаточно.",dia_raoul_trollfell_nein);
-	Info_AddChoice(dia_raoul_trollfell,"Готово.",dia_raoul_trollfell_ja);
+	Info_AddChoice(dia_raoul_trollfell,"Продано.",dia_raoul_trollfell_ja);
 	MIS_RAOUL_KILLTROLLBLACK = LOG_SUCCESS;
 	b_giveplayerxp(XP_RAOUL_KILLTROLLBLACK);
 };
