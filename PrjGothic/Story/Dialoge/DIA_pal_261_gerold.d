@@ -490,26 +490,22 @@ func void dia_gerold_food_nichts()
 
 func void dia_gerold_food_kaese_nichtmehr()
 {
-	var int xp_geroldgivefoodlow;
-	var int teiler;
 	AI_Output(other,self,"DIA_Gerold_FOOD_kaese_nichtmehr_15_00");	//Это все, что у меня есть.
 	AI_Output(self,other,"DIA_Gerold_FOOD_kaese_nichtmehr_12_01");	//И я, по-твоему, поверю в это? Ладно, это все же лучше, чем ничего. Вот, возьми немного золота за этоit.
 	CreateInvItems(self,itmi_gold,50);
 	b_giveinvitems(self,other,itmi_gold,50);
 	AI_Output(self,other,"DIA_Gerold_FOOD_kaese_nichtmehr_12_02");	//Хорошо. А теперь мне нужно возвращаться на мой пост.
 	AI_StopProcessInfos(self);
+	Npc_ExchangeRoutine(self,"Start");
+	MIS_GEROLDGIVEFOOD = LOG_OBSOLETE;
 	if(GEROLD_FOODCOUNTER < 4)
 	{
-		teiler = 3;
+		b_giveplayerxp(120);
 	}
 	else
 	{
-		teiler = 2;
+		b_giveplayerxp(XP_GEROLDGIVEFOOD / 2);
 	};
-	xp_geroldgivefoodlow = XP_GEROLDGIVEFOOD / teiler;
-	Npc_ExchangeRoutine(self,"Start");
-	MIS_GEROLDGIVEFOOD = LOG_OBSOLETE;
-	b_giveplayerxp(xp_geroldgivefoodlow);
 };
 
 func void dia_gerold_food_kaese()

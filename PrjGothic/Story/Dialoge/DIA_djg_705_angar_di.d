@@ -203,7 +203,7 @@ instance DIA_ANGAR_DI_FOLLOWSTOP(C_INFO)
 
 func int dia_angar_di_followstop_condition()
 {
-	if((ANGAR_DI_PARTY == LOG_RUNNING) && (((Npc_GetDistToWP(self,"DI_DRACONIANAREA_FIREDRAGON") < 3000) && (Npc_IsDead(firedragonisland) == FALSE)) || (Npc_GetDistToWP(self,"SKELETTE") < 3000)))
+	if((ANGAR_DI_PARTY == LOG_RUNNING) && (((Npc_GetDistToWP(self,"DI_DRACONIANAREA_16") < 3000) && (Npc_IsDead(firedragonisland) == FALSE)) || (Npc_GetDistToWP(self,"SKELETTE") < 3000)))
 	{
 		return TRUE;
 	};
@@ -211,7 +211,7 @@ func int dia_angar_di_followstop_condition()
 
 func void dia_angar_di_followstop_info()
 {
-	AI_Output(self,other,"DIA_Angar_DI_FOLLOWSTOP_04_00");	//Аааа! Это головная боль сведет меня с ума!
+	AI_Output(self,other,"DIA_Angar_DI_FOLLOWSTOP_04_00");	//Аааа! Эта головная боль сведет меня с ума!
 };
 
 

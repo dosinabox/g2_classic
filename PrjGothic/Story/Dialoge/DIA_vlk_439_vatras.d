@@ -657,9 +657,9 @@ func void dia_vatras_message_success_info()
 	MIS_VATRAS_MESSAGE = LOG_SUCCESS;
 	b_giveplayerxp(XP_VATRAS_MESSAGE);
 	Info_ClearChoices(dia_vatras_message_success);
-	Info_AddChoice(dia_vatras_message_success,"1 царский щавель",dia_vatras_message_success_plant);
-	Info_AddChoice(dia_vatras_message_success," ольцо ловкости",dia_vatras_message_success_ring);
-	Info_AddChoice(dia_vatras_message_success,"1 кусок руды",dia_vatras_message_success_ore);
+	Info_AddChoice(dia_vatras_message_success,"(выбрать царский щавель)",dia_vatras_message_success_plant);
+	Info_AddChoice(dia_vatras_message_success,"(выбрать кольцо мастерства)",dia_vatras_message_success_ring);
+	Info_AddChoice(dia_vatras_message_success,"(выбрать кусок руды)",dia_vatras_message_success_ore);
 };
 
 func void dia_vatras_message_success_plant()

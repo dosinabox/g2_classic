@@ -774,9 +774,9 @@ func void dia_cassia_belohnung_info()
 	AI_Output(other,self,"DIA_Cassia_Belohnung_15_00");	//Я пришел за своей наградой.
 	AI_Output(self,other,"DIA_Cassia_Belohnung_16_01");	//Что ты выбираешь?
 	Info_ClearChoices(dia_cassia_belohnung);
-	Info_AddChoice(dia_cassia_belohnung,"400 золотых.",dia_cassia_belohnung_gold);
-	Info_AddChoice(dia_cassia_belohnung,"4 лечебных эликсира",dia_cassia_belohnung_trank);
-	Info_AddChoice(dia_cassia_belohnung,"Кольцо железной кожи",dia_cassia_belohnung_ring);
+	Info_AddChoice(dia_cassia_belohnung,"(выбрать 400 золотых)",dia_cassia_belohnung_gold);
+	Info_AddChoice(dia_cassia_belohnung,"(выбрать 4 лечебных эликсира)",dia_cassia_belohnung_trank);
+	Info_AddChoice(dia_cassia_belohnung,"(выбрать кольцо железной кожи)",dia_cassia_belohnung_ring);
 };
 
 func void dia_cassia_belohnung_gold()

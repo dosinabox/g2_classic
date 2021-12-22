@@ -519,6 +519,7 @@ instance ITWR_BABOSDOCS_MIS(C_ITEM)
 func void use_babosdocs()
 {
 	BABOSDOCSOPEN = TRUE;
+	AI_PrintScreen("Получено письмо и рисунок",-1,YPOS_ITEMTAKEN,FONT_SCREENSMALL,2);
 	CreateInvItems(self,itwr_babosletter_mis,1);
 	CreateInvItems(self,itwr_babospinup_mis,1);
 };

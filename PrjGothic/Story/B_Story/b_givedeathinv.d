@@ -188,6 +188,25 @@ func void b_givedeathinv(var C_NPC slf)
 	};
 	if(PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DRAGONSCALE] == TRUE)
 	{
+		if(DragonScaleLearnedOutsideOW == TRUE)
+		{
+			if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(swampdragon))
+			{
+				CreateInvItems(slf,itat_dragonscale,12);
+			}
+			else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(rockdragon))
+			{
+				CreateInvItems(slf,itat_dragonscale,12);
+			}
+			else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(firedragon))
+			{
+				CreateInvItems(slf,itat_dragonscale,12);
+			}
+			else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(icedragon))
+			{
+				CreateInvItems(slf,itat_dragonscale,12);
+			};
+		};
 		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(firedragonisland))
 		{
 			CreateInvItems(slf,itat_dragonscale,12);
@@ -199,6 +218,25 @@ func void b_givedeathinv(var C_NPC slf)
 	};
 	if(PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DRAGONBLOOD] == TRUE)
 	{
+		if(DragonBloodLearnedOutsideOW == TRUE)
+		{
+			if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(swampdragon))
+			{
+				CreateInvItems(slf,itat_dragonblood,2);
+			}
+			else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(rockdragon))
+			{
+				CreateInvItems(slf,itat_dragonblood,2);
+			}
+			else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(firedragon))
+			{
+				CreateInvItems(slf,itat_dragonblood,2);
+			}
+			else if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(icedragon))
+			{
+				CreateInvItems(slf,itat_dragonblood,2);
+			};
+		};
 		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(firedragonisland))
 		{
 			CreateInvItems(slf,itat_dragonblood,2);

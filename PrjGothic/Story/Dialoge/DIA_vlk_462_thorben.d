@@ -476,8 +476,12 @@ func void dia_thorben_trade_info()
 		CreateInvItems(self,itke_lockpick,5);
 		DIETRICHGEBEN = DIETRICHGEBEN + 1;
 	};
-	Log_CreateTopic(TOPIC_CITYTRADER,LOG_NOTE);
-	b_logentry(TOPIC_CITYTRADER,"Плотник Торбен продает отмычки.");
+	if(Thorben_TradeLog == FALSE)
+	{
+		Log_CreateTopic(TOPIC_CITYTRADER,LOG_NOTE);
+		b_logentry(TOPIC_CITYTRADER,"Плотник Торбен продает отмычки.");
+		Thorben_TradeLog = TRUE;
+	};
 };
 
 

@@ -24,6 +24,6 @@ func void rtn_start_215()
 {
 	ta_practice_sword(7,8,19,1,"NW_CITY_TRAIN_01");
 	ta_smalltalk(19,1,23,7,"NW_CITY_UPTOWN_HUT_03_01");
-	ta_sleep(23,7,7,8,"NW_CITY_LEOMAR_BED_03");
+	ta_sit_throne(23,7,7,8,"NW_CITY_UPTOWN_HUT_03_SIT");
 };
 

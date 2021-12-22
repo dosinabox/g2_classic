@@ -1504,7 +1504,7 @@ instance DIA_LEE_DRACHENEI(C_INFO)
 
 func int dia_lee_drachenei_condition()
 {
-	if(Npc_HasItems(other,itat_dragonegg_mis))
+	if(Npc_HasItems(other,itat_dragonegg_mis) && (KAPITEL >= 4))
 	{
 		return TRUE;
 	};

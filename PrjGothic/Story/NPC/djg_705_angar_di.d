@@ -37,8 +37,8 @@ func void rtn_followdi_70500()
 
 func void rtn_firedragonisland_70500()
 {
-	ta_stand_armscrossed(8,0,23,0,"DI_DRACONIANAREA_FIREDRAGON");
-	ta_stand_armscrossed(23,0,8,0,"DI_DRACONIANAREA_FIREDRAGON");
+	ta_stand_armscrossed(8,0,23,0,"DI_DRACONIANAREA_16");
+	ta_stand_armscrossed(23,0,8,0,"DI_DRACONIANAREA_16");
 };
 
 func void rtn_orkoberst_di_70500()

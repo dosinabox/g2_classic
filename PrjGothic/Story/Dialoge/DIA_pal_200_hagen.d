@@ -504,7 +504,7 @@ func void dia_lord_hagen_minental_info()
 	}
 	else
 	{
-		if(garond.aivar[AIV_TALKEDTOPLAYER] == TRUE)
+		if(Npc_KnowsInfo(other,dia_garond_needproof))
 		{
 			AI_Output(self,other,"DIA_Lord_Hagen_Minental_04_02");	//Ты был там. Ты должен знать.
 		}

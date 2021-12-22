@@ -653,3 +653,6 @@ var int TotalThefts;
 var int TotalTheftXP;
 var int TotalTheftGold;
 var int BalthasarMovedToBengar;
+var int Thorben_TradeLog;
+var int DragonScaleLearnedOutsideOW;
+var int DragonBloodLearnedOutsideOW;

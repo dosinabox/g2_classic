@@ -89,7 +89,7 @@ var int dia_keroloth_teach_permanent;
 instance DIA_KEROLOTH_TEACHER(C_INFO)
 {
 	npc = pal_258_keroloth;
-	nr = 6;
+	nr = 100;
 	condition = dia_keroloth_teacher_condition;
 	information = dia_keroloth_teacher_info;
 	permanent = TRUE;
@@ -163,7 +163,7 @@ func void dia_keroloth_teacher_1h_5()
 instance DIA_KEROLOTH_TEACH(C_INFO)
 {
 	npc = pal_258_keroloth;
-	nr = 100;
+	nr = 101;
 	condition = dia_keroloth_teach_condition;
 	information = dia_keroloth_teach_info;
 	permanent = TRUE;
