@@ -78,27 +78,27 @@ func int dia_wirt_hallo_condition()
 func void dia_wirt_hallo_info()
 {
 	var int randy;
-	randy = Hlp_Random(2);
+	randy = Hlp_Random(3);
 	AI_Output(self,other,"DIA_Wirt_Hallo_14_00");	//Эй, не стесняйся, подходи. Отведай холодного пива.
 	if(self.aivar[AIV_TALKEDTOPLAYER] == FALSE)
 	{
 		AI_Output(self,other,"DIA_Wirt_Hallo_14_01");	//Лорд Андрэ расщедрился на несколько бочек бесплатного пива.
-		AI_StopProcessInfos(self);
 	}
 	else if(randy == 0)
 	{
 		AI_Output(self,other,"DIA_Wirt_Hallo_14_02");	//Нет ничего лучше, чем кружка холодного пива после работы.
-		AI_StopProcessInfos(self);
 	}
 	else if(randy == 1)
 	{
 		AI_Output(self,other,"DIA_Wirt_Hallo_14_03");	//Паладины со всем разберутся сами. А ты можешь потягивать здесь пиво и наслаждаться жизнью.
 		b_giveinvitems(self,other,itfo_beer,1);
-		AI_StopProcessInfos(self);
 	}
 	else if(randy == 2)
 	{
 		AI_Output(self,other,"DIA_Wirt_Hallo_14_04");	//Можно говорить о Хоринисе что угодно, но наше 'Темное паладинское' бесспорно самое лучшее пиво во всей Миртане.
+	};
+	if(!Npc_GetTalentSkill(other,NPC_TALENT_PICKPOCKET) || (other.attribute[ATR_DEXTERITY] < 50) || (self.aivar[AIV_PLAYERHASPICKEDMYPOCKET] == TRUE))
+	{
 		AI_StopProcessInfos(self);
 	};
 };

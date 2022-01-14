@@ -114,7 +114,7 @@ func void dia_bilgot_hilfe_info()
 {
 	AI_Output(other,self,"DIA_Bilgot_Hilfe_15_00");	//Что ты знаешь о снепперах?
 	AI_Output(self,other,"DIA_Bilgot_Hilfe_05_01");	//Зачем тебе знать это? И не говори мне, что просто из любопытства!
-	AI_Output(other,self,"DIA_Bilgot_Hilfe_15_02");	//Я собираюсь поохотиться на этих снепперов,
+	AI_Output(other,self,"DIA_Bilgot_Hilfe_15_02");	//Я собираюсь поохотиться на этих снепперов.
 	AI_Output(self,other,"DIA_Bilgot_Hilfe_05_03");	//Это безумие. Я наблюдал за ними - что за кровожадные твари!
 	AI_Output(other,self,"DIA_Bilgot_Hilfe_15_04");	//Тогда расскажи мне, что ты о них знаешь.
 	AI_Output(self,other,"DIA_Bilgot_Hilfe_05_05");	//Хм... я мог бы помочь тебе, но только при одном условии!
@@ -159,7 +159,7 @@ func void dia_bilgot_knowsleadsnapper_info()
 	AI_Output(other,self,"DIA_Bilgot_KNOWSLEADSNAPPER_15_08");	//Отлично. Мне кажется, я понял. Спасибо!
 	AI_Output(self,other,"DIA_Bilgot_KNOWSLEADSNAPPER_05_09");	//Помни, ты дал мне слово!
 	Wld_InsertNpc(newmine_leadsnapper,"OW_ORC_LOOKOUT_2_01");
-	b_logentry(TOPIC_FAJETHKILLSNAPPER,"Билгот рассказал мне о вожаке стаи Снепперов. Он должен быть на ступеньках старой сторожевой башни.");
+	b_logentry(TOPIC_FAJETHKILLSNAPPER,"Билгот рассказал мне о вожаке стаи снепперов. Он должен быть на ступеньках старой сторожевой башни.");
 	Log_CreateTopic(TOPIC_BILGOTESCORT,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BILGOTESCORT,LOG_RUNNING);
 	b_logentry(TOPIC_BILGOTESCORT,"Билгот хочет, чтобы я вывел его из долины.");
