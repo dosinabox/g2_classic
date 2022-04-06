@@ -4,7 +4,7 @@ instance VLK_407_HAKON(NPC_DEFAULT)
 	name[0] = "Хакон";
 	guild = GIL_VLK;
 	id = 407;
-	voice = 13;
+	voice = 12;
 	flags = 0;
 	npctype = NPCTYPE_MAIN;
 	b_setattributestochapter(self,4);

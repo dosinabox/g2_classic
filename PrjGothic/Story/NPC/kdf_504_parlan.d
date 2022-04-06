@@ -4,7 +4,7 @@ instance KDF_504_PARLAN(NPC_DEFAULT)
 	name[0] = "Парлан";
 	guild = GIL_KDF;
 	id = 504;
-	voice = 7;
+	voice = 5;
 	flags = NPC_FLAG_IMMORTAL;
 	npctype = NPCTYPE_MAIN;
 	aivar[AIV_TOUGHGUY] = TRUE;

@@ -4,7 +4,7 @@ instance VLK_493_NAGUR(NPC_DEFAULT)
 	name[0] = "Нагур";
 	guild = GIL_VLK;
 	id = 493;
-	voice = 10;
+	voice = 8;
 	flags = 0;
 	npctype = NPCTYPE_MAIN;
 	aivar[AIV_TOUGHGUY] = TRUE;

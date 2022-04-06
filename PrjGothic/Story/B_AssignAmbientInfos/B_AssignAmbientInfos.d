@@ -125,7 +125,7 @@ func void b_assignambientinfos(var C_NPC slf)
 			{
 				b_assignambientinfos_nov_3(slf);
 			};
-			if(slf.voice == 11)
+			if(slf.voice == 8)
 			{
 				b_assignambientinfos_nov_8(slf);
 			};

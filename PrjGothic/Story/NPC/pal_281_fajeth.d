@@ -4,7 +4,7 @@ instance PAL_281_FAJETH(NPC_DEFAULT)
 	name[0] = "Фаджет";
 	guild = GIL_OUT;
 	id = 281;
-	voice = 13;
+	voice = 12;
 	flags = NPC_FLAG_IMMORTAL;
 	npctype = NPCTYPE_MAIN;
 	b_setattributestochapter(self,4);

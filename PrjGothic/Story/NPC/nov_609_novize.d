@@ -4,7 +4,7 @@ instance NOV_609_NOVIZE(NPC_DEFAULT)
 	name[0] = NAME_NOVIZE;
 	guild = GIL_NOV;
 	id = 609;
-	voice = 11;
+	voice = 8;
 	flags = 0;
 	npctype = NPCTYPE_AMBIENT;
 	b_setattributestochapter(self,2);

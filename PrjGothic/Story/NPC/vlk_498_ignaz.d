@@ -4,7 +4,7 @@ instance VLK_498_IGNAZ(NPC_DEFAULT)
 	name[0] = "Игнац";
 	guild = GIL_VLK;
 	id = 498;
-	voice = 10;
+	voice = 14;
 	flags = 0;
 	npctype = NPCTYPE_MAIN;
 	aivar[AIV_TOUGHGUY] = TRUE;
