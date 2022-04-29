@@ -1,5 +1,6 @@
 
 var int prayday;
+var int praydayone;
 var int specialbless;
 
 var string concatdonation;
@@ -14,6 +15,23 @@ var int shrineisobsessed_nw_trollarea_path_04;
 var int shrineisobsessed_sagitta;
 var int shrineisobsessed_nw_bigmill_malaksversteck_02;
 var int shrineisobsessed_nw_farm3_bigwood_02;
+
+func int C_PrayedToday()
+{
+	if(Wld_GetDay() == 0)
+	{
+		if(PRAYDAYONE == TRUE)
+		{
+			return TRUE;
+		};
+	}
+	else if(PRAYDAY == Wld_GetDay())
+	{
+		return TRUE;
+	};
+	return FALSE;
+};
+
 
 func void c_isshrineobsessed(var C_NPC slf)
 {
@@ -268,7 +286,7 @@ func void pc_prayshrine_pray_nopay()
 {
 	var int zufall;
 	zufall = Hlp_Random(4);
-	if(PRAYDAY == Wld_GetDay())
+	if(C_PrayedToday())
 	{
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
 	}
@@ -299,6 +317,10 @@ func void pc_prayshrine_pray_nopay()
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
 	};
 	PRAYDAY = Wld_GetDay();
+	if(PRAYDAY == 0)
+	{
+		PRAYDAYONE = TRUE;
+	};
 	Info_ClearChoices(pc_prayshrine_pray);
 };
 
@@ -306,7 +328,7 @@ func void pc_prayshrine_pray_smallpay()
 {
 	Npc_RemoveInvItems(hero,itmi_gold,10);
 	Stats_Blessings_GoldGiven += 10;
-	if(PRAYDAY == Wld_GetDay())
+	if(C_PrayedToday())
 	{
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
 	}
@@ -325,6 +347,10 @@ func void pc_prayshrine_pray_smallpay()
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
 	};
 	PRAYDAY = Wld_GetDay();
+	if(PRAYDAY == 0)
+	{
+		PRAYDAYONE = TRUE;
+	};
 	Info_ClearChoices(pc_prayshrine_pray);
 };
 
@@ -334,7 +360,7 @@ func void pc_prayshrine_pray_mediumpay()
 	zufall = Hlp_Random(4);
 	Npc_RemoveInvItems(hero,itmi_gold,50);
 	Stats_Blessings_GoldGiven += 50;
-	if(PRAYDAY == Wld_GetDay())
+	if(C_PrayedToday())
 	{
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
 	}
@@ -366,6 +392,10 @@ func void pc_prayshrine_pray_mediumpay()
 		b_blessattribute(hero,ATR_HITPOINTS,5);
 	};
 	PRAYDAY = Wld_GetDay();
+	if(PRAYDAY == 0)
+	{
+		PRAYDAYONE = TRUE;
+	};
 	Info_ClearChoices(pc_prayshrine_pray);
 };
 
@@ -375,7 +405,7 @@ func void pc_prayshrine_pray_bigpay()
 	zufall = Hlp_Random(4);
 	Npc_RemoveInvItems(hero,itmi_gold,100);
 	Stats_Blessings_GoldGiven += 100;
-	if(PRAYDAY == Wld_GetDay())
+	if(C_PrayedToday())
 	{
 		PrintScreen(PRINT_BLESSNONE,-1,-1,FONT_SCREEN,2);
 	}
@@ -425,6 +455,10 @@ func void pc_prayshrine_pray_bigpay()
 		b_blessattribute(hero,ATR_HITPOINTS,5);
 	};
 	PRAYDAY = Wld_GetDay();
+	if(PRAYDAY == 0)
+	{
+		PRAYDAYONE = TRUE;
+	};
 	Info_ClearChoices(pc_prayshrine_pray);
 };
 

@@ -546,7 +546,7 @@ instance DIA_MILTEN_DI_UNDEADDRAGONDEAD(C_INFO)
 	condition = dia_milten_di_undeaddragondead_condition;
 	information = dia_milten_di_undeaddragondead_info;
 	permanent = TRUE;
-	description = "Хорошо. Дело сделано!";
+	description = "Хорошо. Дело сделано! Храм теперь лишен своей силы.";
 };
 
 

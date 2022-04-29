@@ -425,7 +425,7 @@ instance DIA_SYLVIO_PICKPOCKET(C_INFO)
 	condition = dia_sylvio_pickpocket_condition;
 	information = dia_sylvio_pickpocket_info;
 	permanent = TRUE;
-	description = PICKPOCKET_100;
+	description = PICKPOCKET_80;
 };
 
 

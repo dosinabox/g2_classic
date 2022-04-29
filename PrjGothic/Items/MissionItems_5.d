@@ -161,7 +161,7 @@ instance ITWR_XARDASSEAMAPBOOK_MIS(C_ITEM)
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
-	visual = "ItWr_Book_02_01.3ds";
+	visual = "ItWr_XardasSeamapBook_Mis.3ds";
 	material = MAT_LEATHER;
 	scemename = "MAP";
 	description = name;

@@ -216,11 +216,11 @@ instance SVM_1(C_SVM)
 	weather = "SVM_1_Weather";	//Какая паршивая погода!
 	igetyoustill = "SVM_1_IGetYouStill";	//Я все-таки достал тебя!
 	dieenemy = "SVM_1_DieEnemy";	//Сейчас ты получишь!
-	diemonster = "SVM_1_DieMonster";	//Еще одной грязной твари настал конец!
+	diemonster = "SVM_1_DieMonster";	//Еще одна грязная тварь!
 	dirtythief = "SVM_1_DirtyThief";	//Грязный воришка! Ну, подожди!
 	handsoff = "SVM_1_HandsOff";	//Убери свои грязные руки!
 	sheepkiller = "SVM_1_SheepKiller";	//Этот кусок дерьма убивает наших овец!
-	sheepkillermonster = "SVM_1_SheepKillerMonster";	//Этот мерзкий монстр ворует наших овец!
+	sheepkillermonster = "SVM_1_SheepKillerMonster";	//Этот мерзкий монстр убивает наших овец!
 	youmurderer = "SVM_1_YouMurderer";	//Убийца!
 	diestupidbeast = "SVM_1_DieStupidBeast";	//Зверям здесь не место!
 	youdarehitme = "SVM_1_YouDareHitMe";	//Ну, подожди, сукин сын!

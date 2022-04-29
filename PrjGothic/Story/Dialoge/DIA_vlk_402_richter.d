@@ -56,6 +56,7 @@ func void dia_richter_hello_dontthinkso()
 	AI_Output(other,self,"DIA_Richter_Hello_DontThinkSo_15_00");	//Я такого не помню.
 	AI_Output(self,other,"DIA_Richter_Hello_DontThinkSo_10_01");	//Забавно. Готов поклясться, что где-то видел тебя раньше.
 	AI_Output(self,other,"DIA_Richter_Hello_DontThinkSo_10_02");	//Ладно, все вы, отбросы общества, похожи друг на друга.
+	AI_StopProcessInfos(self);
 };
 
 func void dia_richter_hello_maybe()

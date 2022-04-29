@@ -85,7 +85,7 @@ var int topic_end_kerolothsgeldbeutel;
 const string TOPIC_BUCHHALLENVONIRDORATH = "Повелитель драконов";
 const string TOPIC_ROSISFLUCHT = "Бегство Рози";
 const string TOPIC_BRINGROSIBACKTOSEKOB = "Пропавшая жена Секоба";
-const string TOPIC_HEALRANDOLPH = "Утрата";
+const string TOPIC_HEALRANDOLPH = "Похмелье";
 const string TOPIC_GEROLDGIVEFOOD = "Голод";
 const string TOPIC_HALLENVONIRDORATH = "Чертоги Ирдората";
 const string TOPIC_BACKTOSHIP = "Назад на корабль";
