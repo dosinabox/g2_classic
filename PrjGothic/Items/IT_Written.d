@@ -228,15 +228,13 @@ func void useeinhandbuch()
 	Doc_SetPage(ndocid,1,"Book_Red_R.tga",0);
 	Doc_SetMargins(ndocid,0,275,20,30,20,1);
 	Doc_SetFont(ndocid,0,FONT_BOOKHEADLINE);
-	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLines(ndocid,0,"Южное искусство обороны");
 	Doc_SetFont(ndocid,0,FONT_BOOK);
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLines(ndocid,0,"Южане меньше полагаются на грубую физическую силу, нежели северяне, и отдают предпочтение ловкости. В горячем климате своей родины они предпочитают носить легкие доспехи, позволяющие двигаться более свободно. Таким образом, южане разработали стиль боя, фундаментально отличающийся от того, к которому привыкли мы.");
 	Doc_SetMargins(ndocid,-1,30,20,275,20,1);
-	Doc_SetFont(ndocid,1,FONT_BOOKHEADLINE);
-	Doc_PrintLine(ndocid,1,"");
 	Doc_SetFont(ndocid,1,FONT_BOOK);
+	Doc_PrintLine(ndocid,1,"");
 	Doc_PrintLine(ndocid,1,"");
 	Doc_PrintLines(ndocid,1,"Вероятно, самый известный прием, используемый южанами - это блок одноручным оружием и шаг назад. Шаг назад позволяет бойцу ослабить атакующий удар и в то же время занять превосходную стойку, из которой можно провести контратаку.");
 	Doc_Show(ndocid);

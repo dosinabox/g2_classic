@@ -12,8 +12,8 @@ func void use_bookstandanimals1_s1()
 	{
 		ndocid = Doc_Create();
 		Doc_SetPages(ndocid,2);
-		Doc_SetPage(ndocid,0,"Book_Brown_L.tga",0);
-		Doc_SetPage(ndocid,1,"Book_Brown_R.tga",0);
+		Doc_SetPage(ndocid,0,"Book_Wood_L.tga",0);
+		Doc_SetPage(ndocid,1,"Book_Wood_R.tga",0);
 		Doc_SetFont(ndocid,-1,FONT_BOOK);
 		Doc_SetMargins(ndocid,0,275,20,30,20,1);
 		Doc_PrintLine(ndocid,0,"Охота и трофеи");
@@ -53,8 +53,8 @@ func void use_bookstandanimals2_s1()
 	{
 		ndocid = Doc_Create();
 		Doc_SetPages(ndocid,2);
-		Doc_SetPage(ndocid,0,"Book_Brown_L.tga",0);
-		Doc_SetPage(ndocid,1,"Book_Brown_R.tga",0);
+		Doc_SetPage(ndocid,0,"Book_Wood_L.tga",0);
+		Doc_SetPage(ndocid,1,"Book_Wood_R.tga",0);
 		Doc_SetFont(ndocid,-1,FONT_BOOK);
 		Doc_SetMargins(ndocid,0,275,20,30,20,1);
 		Doc_PrintLine(ndocid,0,"Охота и трофеи");
@@ -93,8 +93,8 @@ func void use_bookstandanimals3_s1()
 	{
 		ndocid = Doc_Create();
 		Doc_SetPages(ndocid,2);
-		Doc_SetPage(ndocid,0,"Book_Brown_L.tga",0);
-		Doc_SetPage(ndocid,1,"Book_Brown_R.tga",0);
+		Doc_SetPage(ndocid,0,"Book_Wood_L.tga",0);
+		Doc_SetPage(ndocid,1,"Book_Wood_R.tga",0);
 		Doc_SetFont(ndocid,-1,FONT_BOOK);
 		Doc_SetMargins(ndocid,0,275,20,30,20,1);
 		Doc_PrintLine(ndocid,0,"Охота и трофеи");

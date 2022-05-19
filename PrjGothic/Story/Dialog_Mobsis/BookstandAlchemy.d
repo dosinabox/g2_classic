@@ -111,14 +111,10 @@ func void use_bookstandalchemy3_s1()
 		Doc_SetFont(ndocid,-1,FONT_BOOK);
 		Doc_SetMargins(ndocid,0,275,20,30,20,1);
 		Doc_PrintLine(ndocid,0,"");
-		Doc_PrintLines(ndocid,0,"Зелья, дающие перманентные изменения");
-		Doc_PrintLine(ndocid,0,"и ингредиенты");
+		Doc_PrintLines(ndocid,0,"Зелья перманентного действия и ингредиенты");
 		Doc_PrintLine(ndocid,0,"");
 		Doc_PrintLine(ndocid,0,"Эликсир ловкости");
 		Doc_PrintLine(ndocid,0,"1 гоблинская ягода");
-		Doc_PrintLine(ndocid,0,"");
-		Doc_PrintLine(ndocid,0,"Зелье скорости");
-		Doc_PrintLines(ndocid,0,"1 снеппер-трава - для этого зелья необходим не царский щавель, а луговой горец.");
 		Doc_PrintLine(ndocid,0,"");
 		Doc_PrintLine(ndocid,0,"Эликсир силы");
 		Doc_PrintLine(ndocid,0,"1 драконий корень");
@@ -128,12 +124,16 @@ func void use_bookstandalchemy3_s1()
 		Doc_PrintLine(ndocid,0,"");
 		Doc_PrintLines(ndocid,0,"Эликсир духа");
 		Doc_PrintLine(ndocid,0,"1 огненный корень");
+		Doc_PrintLine(ndocid,0,"");
+		Doc_PrintLines(ndocid,1,"Применение этих рецептов - высшее алхимическое искусство. Они требуют большого опыта.");
 		Doc_SetMargins(ndocid,-1,30,20,275,20,1);
 		Doc_PrintLine(ndocid,1,"");
-		Doc_PrintLines(ndocid,1,"Применение этих рецептов - высшее алхимическое искусство. Они требуют большого опыта. В общем, можно сказать, что только у того, кто знает, как обращаться с лечебным или огненным корнем может быть достаточно опыта, чтобы попробовать сварить эти зелья. Все они требуют царского щавеля.");
+		Doc_PrintLines(ndocid,1,"В общем, можно сказать, что только у того, кто знает, как обращаться с лечебным или огненным корнем может быть достаточно опыта, чтобы попробовать сварить эти зелья. Все они требуют царского щавеля.");
+		Doc_PrintLine(ndocid,0,"");
+		Doc_PrintLine(ndocid,0,"Зелье скорости");
+		Doc_PrintLines(ndocid,0,"1 снеппер-трава - для этого зелья необходим не царский щавель, а луговой горец.");
 		Doc_PrintLine(ndocid,1,"");
-		Doc_PrintLines(ndocid,1,"Зелье скорости варить значительно легче, частично потому, что для него не требуется царского щавеля. Базовые познания в алхимии позволят вам воспроизвести этот рецепт.");
-		Doc_PrintLine(ndocid,1,"");
+		Doc_PrintLines(ndocid,1,"Варить это зелье значительно легче, частично потому, что для него не нужен царский щавель. Базовые познания в алхимии позволят вам воспроизвести этот рецепт.");
 		Doc_Show(ndocid);
 		if(ALCHEMY_3_PERMANENT == FALSE)
 		{

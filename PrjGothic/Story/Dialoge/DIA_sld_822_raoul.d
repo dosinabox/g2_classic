@@ -366,7 +366,7 @@ func void b_raoul_blame()
 	AI_Output(self,other,"DIA_Raoul_TROLL_rechnung_B_Raoul_Blame_01_07");	//Тогда чего ты ждешь?
 	Log_CreateTopic(TOPIC_KILLTROLLBLACK,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KILLTROLLBLACK,LOG_RUNNING);
-	b_logentry(TOPIC_KILLTROLLBLACK,"Рауль чтобы я принес ему шкуру черного тролля.");
+	b_logentry(TOPIC_KILLTROLLBLACK,"Рауль хочет, чтобы я принес ему шкуру черного тролля.");
 	MIS_RAOUL_KILLTROLLBLACK = LOG_RUNNING;
 	Info_ClearChoices(dia_raoul_troll);
 };
@@ -445,24 +445,24 @@ func void dia_raoul_trollfell_info()
 	AI_Output(other,self,"DIA_Raoul_TROLLFELL_15_00");	//Я принес шкуру черного тролля.
 	AI_Output(self,other,"DIA_Raoul_TROLLFELL_01_01");	//Невероятно. Покажи.
 	b_giveinvitems(other,self,itat_trollblackfur,1);
+	MIS_RAOUL_KILLTROLLBLACK = LOG_SUCCESS;
+	b_giveplayerxp(XP_RAOUL_KILLTROLLBLACK);
 	AI_Output(self,other,"DIA_Raoul_TROLLFELL_01_02");	//Невероятно. Что ты хочешь за нее?
 	AI_Output(other,self,"DIA_Raoul_TROLLFELL_15_03");	//Отдай мне все, что у тебя есть.
 	AI_Output(self,other,"DIA_Raoul_TROLLFELL_01_04");	//Хорошо. Я дам тебе 500 золотых монет и три сильных лечебных зелья. Что скажешь?
 	Info_ClearChoices(dia_raoul_trollfell);
 	Info_AddChoice(dia_raoul_trollfell,"Этого недостаточно.",dia_raoul_trollfell_nein);
 	Info_AddChoice(dia_raoul_trollfell,"Продано.",dia_raoul_trollfell_ja);
-	MIS_RAOUL_KILLTROLLBLACK = LOG_SUCCESS;
-	b_giveplayerxp(XP_RAOUL_KILLTROLLBLACK);
 };
 
 func void dia_raoul_trollfell_ja()
 {
 	AI_Output(other,self,"DIA_Raoul_TROLLFELL_ja_15_00");	//Продано.
 	AI_Output(self,other,"DIA_Raoul_TROLLFELL_ja_01_01");	//Отличная сделка.
-	CreateInvItems(self,itpo_health_03,3);
-	b_giveinvitems(self,other,itpo_health_03,3);
-	CreateInvItems(self,itmi_gold,500);
-	b_giveinvitems(self,other,itmi_gold,500);
+	CreateInvItems(other,ItPo_Health_03,3);
+	CreateInvItems(other,ItMi_Gold,500);
+	AI_PrintScreen("3 предметов получено (Лечебный эликсир)",-1,40,FONT_ScreenSmall,4);
+	AI_PrintScreen("500 золотых получено",-1,43,FONT_ScreenSmall,4);
 	Info_ClearChoices(dia_raoul_trollfell);
 };
 

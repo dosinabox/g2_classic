@@ -177,8 +177,8 @@ func void use_xardasseamapbook_mis()
 	var int ndocid;
 	ndocid = Doc_Create();
 	Doc_SetPages(ndocid,2);
-	Doc_SetPage(ndocid,0,"BOOK_BROWN_L.tga",0);
-	Doc_SetPage(ndocid,1,"BOOK_BROWN_R.tga",0);
+	Doc_SetPage(ndocid,0,"Book_Wood_L.tga",0);
+	Doc_SetPage(ndocid,1,"Book_Wood_R.tga",0);
 	Doc_SetMargins(ndocid,0,275,20,30,20,1);
 	Doc_SetFont(ndocid,0,FONT_BOOKHEADLINE);
 	Doc_SetFont(ndocid,0,FONT_BOOK);

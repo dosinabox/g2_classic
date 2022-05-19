@@ -505,10 +505,11 @@ func void usevatrasmessage()
 	Doc_SetPage(ndocid,0,"letters.TGA",0);
 	Doc_SetFont(ndocid,-1,FONT_BOOK);
 	Doc_SetMargins(ndocid,-1,50,50,50,50,1);
+	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"Дорогой Исгарот,");
 	Doc_PrintLines(ndocid,0,"Я ощущаю все нарастающее присутствие другой силы.");
 	Doc_PrintLines(ndocid,0,"Это сила, доселе неведомая нам. Может ли быть так, что вассалы Белиара уже близко?");
-	Doc_PrintLines(ndocid,0,"Я могу ошибаться, но я верю, что отцу Пирокару стоило бы разобраться с этим вопросом.");
+	Doc_PrintLines(ndocid,0,"Я могу ошибаться, но я полагаю, что отцу Пирокару стоило бы разобраться с этим вопросом.");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLines(ndocid,0,"Да не останутся наши молитвы без ответа.");
 	Doc_PrintLine(ndocid,0,"");
@@ -545,6 +546,7 @@ func void usevatrasmessageopen()
 	Doc_SetPage(ndocid,0,"letters.TGA",0);
 	Doc_SetFont(ndocid,-1,FONT_BOOK);
 	Doc_SetMargins(ndocid,-1,50,50,50,50,1);
+	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"Дорогой Исгарот,");
 	Doc_PrintLines(ndocid,0,"Я ощущаю все нарастающее присутствие другой силы.");
 	Doc_PrintLines(ndocid,0,"Это сила, доселе неведомая нам. Может ли быть так, что вассалы Белиара уже близко?");

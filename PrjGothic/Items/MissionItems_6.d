@@ -285,13 +285,15 @@ instance ITWR_DIARY_BLACKNOVICE_MIS(C_ITEM)
 };
 
 
+var int Use_Diary_BlackNovice_Once;
+
 func void use_diary_blacknovice()
 {
 	var int ndocid;
 	ndocid = Doc_Create();
 	Doc_SetPages(ndocid,2);
-	Doc_SetPage(ndocid,0,"BOOK_RED_L.tga",0);
-	Doc_SetPage(ndocid,1,"BOOK_RED_R.tga",0);
+	Doc_SetPage(ndocid,0,"Book_Wood_L.tga",0);
+	Doc_SetPage(ndocid,1,"Book_Wood_R.tga",0);
 	Doc_SetMargins(ndocid,0,275,20,30,20,1);
 	Doc_SetFont(ndocid,0,FONT_BOOKHEADLINE);
 	Doc_SetFont(ndocid,0,FONT_BOOK);
@@ -306,7 +308,11 @@ func void use_diary_blacknovice()
 	Doc_PrintLine(ndocid,1,"");
 	Doc_PrintLines(ndocid,1,"¬чера € попытал счасть€. Ќо потерпел неудачу в двух камерах с рычагами еще до того, как смог нажать три переключател€ в западном крыле в правильном пор€дке. Ётот пес закрыл камеры! «автра € попытаюсь стащить у него ключ ...");
 	Doc_Show(ndocid);
-	b_logentry(TOPIC_HALLENVONIRDORATH,"¬ дневнике черного мага-послушника упоминаютс€ камеры с рычагами, ключник, комбинации переключателей и много чего еще. я должен запомнить это, никогда не знаешь заранее, что пригодитс€, а что нет.");
+	if(Use_Diary_BlackNovice_Once == FALSE)
+	{
+		b_logentry(TOPIC_HALLENVONIRDORATH,"¬ дневнике черного мага-послушника упоминаютс€ камеры с рычагами, ключник, комбинации переключателей и много чего еще. я должен запомнить это, никогда не знаешь заранее, что пригодитс€, а что нет.");
+		Use_Diary_BlackNovice_Once = TRUE;
+	};
 };
 
 

@@ -385,9 +385,12 @@ func void dia_cipher_krautpaket_info()
 	AI_Output(other,self,"DIA_Cipher_KrautPaket_15_02");	//Ёто долга€ истори€...
 	AI_Output(self,other,"DIA_Cipher_KrautPaket_07_03");	//Ћадно, это не важно, но теперь € знаю, что ты наш человек.
 	AI_Output(self,other,"DIA_Cipher_KrautPaket_07_04");	//Ёй, возьми это в награду.
-	b_giveinvitems(self,other,itmi_gold,200);
-	b_giveinvitems(self,other,itmi_joint,10);
-	b_giveplayerxp(XP_CIPHER_KRAUTPAKET);
+	Npc_RemoveInvItems(self,ItMi_Joint,10);
+	CreateInvItems(other,ItMi_Joint,10);
+	CreateInvItems(other,ItMi_Gold,200);
+	AI_PrintScreen("10 кос€ков получено",-1,43,FONT_ScreenSmall,3);
+	AI_PrintScreen("200 золотых получено",-1,40,FONT_ScreenSmall,3);
+//	b_giveplayerxp(XP_CIPHER_KRAUTPAKET);
 	AI_Output(self,other,"DIA_Cipher_KrautPaket_07_05");	//—ейчас € скручу пару кос€чков...
 	CreateInvItems(self,itmi_joint,40);
 	Npc_RemoveInvItems(self,itmi_herbpaket,1);
