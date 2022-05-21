@@ -229,7 +229,7 @@ func void use_kraeuterliste()
 
 instance ITWR_MANAREZEPT(C_ITEM)
 {
-	name = "Рецепт";
+	name = "Рецепт магических зелий";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 20;
@@ -237,7 +237,7 @@ instance ITWR_MANAREZEPT(C_ITEM)
 	material = MAT_LEATHER;
 	on_state[0] = use_manarezept;
 	scemename = "MAP";
-	description = "Рецепт магической эссенции";
+	description = name;
 	inv_rotz = 180;
 	inv_rotx = 90;
 	inv_roty = 180;
@@ -256,11 +256,11 @@ func void use_manarezept()
 	Doc_PrintLine(ndocid,0,"Магические зелья");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLines(ndocid,0,"Чтобы сварить магическое зелье, опытному алхимику необходимы:");
-	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"Огненная крапива");
 	Doc_PrintLine(ndocid,0,"Огненная трава");
 	Doc_PrintLine(ndocid,0,"Огненный корень");
-	Doc_PrintLines(ndocid,0,"Также ему понадобится");
+	Doc_PrintLine(nDocID,0,"");
+	Doc_PrintLines(ndocid,0,"Также ему понадобится:");
 	Doc_PrintLine(ndocid,0,"Луговой горец");
 	Doc_PrintLine(ndocid,0,"");
 	Doc_PrintLine(ndocid,0,"Мастер Неорас");

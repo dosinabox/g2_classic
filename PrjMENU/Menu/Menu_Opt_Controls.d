@@ -55,6 +55,12 @@ instance MENU_OPT_CONTROLS(C_MENU_DEF)
 };
 
 
+instance MENU_OPT_CONTROLS_EXTKEYS(C_MENU_DEF)
+{
+	//zSpy
+	items[1] = "MENUITEM_CHG_KEYS_BACK";
+};
+
 const int CTRL_SP1_1 = 1000;
 const int CTRL_SP1_2 = 3500;
 const int CTRL_DIMX = 4600;
