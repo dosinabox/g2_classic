@@ -495,7 +495,7 @@ func void use_babospinup()
 	var int ndocid;
 	ndocid = Doc_Create();
 	Doc_SetPages(ndocid,1);
-	Doc_SetPage(ndocid,0,"Map_Pinup.TGA",0);
+	Doc_SetPage(ndocid,0,"Map_Pinup.TGA",TRUE);
 	Doc_Show(ndocid);
 };
 
