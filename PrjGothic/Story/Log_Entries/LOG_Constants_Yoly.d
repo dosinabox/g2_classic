@@ -65,8 +65,8 @@ const string TOPIC_ORCELITE = "Орды элитных орков";
 var int topic_end_orcelite;
 
 const string TOPIC_DAR_BRINGORCELITERING = "Позерство";
-const string TOPIC_FOUNDVINOSKELLEREI = "Лунный свет";
-const string TOPIC_BRUTUSMEATBUGS = "Грязные свиньи";
+const string TOPIC_FOUNDVINOSKELLEREI = "Секретная винокурня";
+const string TOPIC_BRUTUSMEATBUGS = "Мерзкие твари";
 
 var int topic_end_brutusmeatbugs;
 

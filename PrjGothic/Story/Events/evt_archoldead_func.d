@@ -14,7 +14,7 @@ func void evt_archoldead_func()
 	};
 	if(evt_archoldead_func_onetime == FALSE)
 	{
-		b_logentry(TOPIC_HALLENVONIRDORATH,"Я нашел здесь что-то вроде храма. Его населяют толпы нежити. Это все напоминает мне проклятый храм Спящих. Но на этот раз, я не подведу. Только не на этот раз!");
+		b_logentry(TOPIC_HALLENVONIRDORATH,"Я нашел здесь что-то вроде храма. Его населяют толпы нежити. Это все напоминает мне проклятый храм Спящего. Но на этот раз, я не подведу. Только не на этот раз!");
 		evt_archoldead_func_onetime = TRUE;
 	};
 };

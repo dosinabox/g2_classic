@@ -725,7 +725,7 @@ func void dia_karras_researchdmtend_info()
 		CreateInvItems(other,itwr_dementorobsessionbook_mis,1);
 		AI_PrintScreen("Альманах получено",-1,YPOS_ITEMTAKEN,FONT_SCREENSMALL,2);
 		SC_KNOWSMADPSI = TRUE;
-		b_logentry(TOPIC_DEMENTOREN,"Исследования Карраса завершились успехом. Похоже, есть связь между Ищущими и Братством Спящих.");
+		b_logentry(TOPIC_DEMENTOREN,"Исследования Карраса завершились успехом. Похоже, есть связь между Ищущими и Братством Спящего.");
 		b_giveplayerxp(XP_SC_KNOWSMADPSI);
 	}
 	else

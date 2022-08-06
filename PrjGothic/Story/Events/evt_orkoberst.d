@@ -38,7 +38,7 @@ func void evt_orkoberst()
 			Wld_InsertNpc(undeadorcwarrior,"FP_ROAM_DI_MARIOSSKELETONS_04");
 		};
 		ORKSTURMDI = TRUE;
-		b_logentry(TOPIC_HALLENVONIRDORATH,"Полковник орков крепкий орешек. Где-то в его тронном зале должен быть какой-то секрет.");
+		b_logentry(TOPIC_HALLENVONIRDORATH,"Полковник орков - крепкий орешек. Где-то в его тронном зале должен быть какой-то секрет.");
 		evt_orkoberst_onetime = TRUE;
 	};
 	PrintScreen("",-1,-1,FONT_SCREEN,0);

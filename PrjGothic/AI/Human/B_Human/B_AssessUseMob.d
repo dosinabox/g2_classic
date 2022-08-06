@@ -15,10 +15,7 @@ func void b_assessusemob()
 	};
 	if(Wld_GetGuildAttitude(self.guild,other.guild) == ATT_FRIENDLY)
 	{
-		if(Npc_IsDetectedMobOwnedByNpc(other,self))
-		{
-		}
-		else
+		if(!Npc_IsDetectedMobOwnedByNpc(other,self))
 		{
 			return;
 		};
@@ -38,8 +35,38 @@ func void b_assessusemob()
 		};
 	};
 	detmob = Npc_GetDetectedMob(other);
-	if((Hlp_StrCmp(detmob,"CHESTBIG") == FALSE) && (Hlp_StrCmp(detmob,"CHESTSMALL") == FALSE))
+	if(!Hlp_StrCmp(detmob,"CHESTBIG") && !Hlp_StrCmp(detmob,"CHESTSMALL"))
 	{
+		if(Hlp_StrCmp(detmob,"TOUCHPLATE"))
+		{
+			var C_NPC buergerin_4002;
+			buergerin_4002 = Hlp_GetNpc(VLK_4002_Buergerin);
+			if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(salandril))
+			{
+				b_attack(self,other,AR_USEMOB,0);
+			}
+			else if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(richter))
+			{
+				b_attack(self,other,AR_USEMOB,0);
+			}
+			else if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(buergerin_4002))
+			{
+				b_attack(self,other,AR_USEMOB,0);
+			};
+		}
+		else if(Hlp_StrCmp(detmob,"LEVER"))
+		{
+			var C_NPC buergerin_4001;
+			buergerin_4001 = Hlp_GetNpc(vlk_4001_buergerin);
+			if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(valentino))
+			{
+				b_attack(self,other,AR_USEMOB,0);
+			}
+			else if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(buergerin_4001))
+			{
+				b_attack(self,other,AR_USEMOB,0);
+			};
+		};
 		return;
 	};
 	if(!c_wanttoattackthief(self,other))
