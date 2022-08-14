@@ -290,9 +290,12 @@ instance DIA_JERGAN_LEADER(C_INFO)
 
 func int dia_jergan_leader_condition()
 {
-	if((Npc_GetDistToWP(self,"OW_NEWMINE_04") < 1000) && Npc_IsDead(newmine_leadsnapper) && Npc_KnowsInfo(other,dia_bilgot_knowsleadsnapper))
+	if((Npc_GetDistToWP(self,"OW_NEWMINE_04") < 1000) && Npc_KnowsInfo(other,dia_bilgot_knowsleadsnapper))
 	{
-		return TRUE;
+		if(Npc_IsDead(newmine_leadsnapper))
+		{
+			return TRUE;
+		};
 	};
 };
 

@@ -383,7 +383,7 @@ func void dia_sylviodjg_whatnext_attack()
 	Npc_SetRefuseTalk(self,60);
 	Npc_ExchangeRoutine(self,"Start");
 	b_startotherroutine(djg_bullco,"Start");
-	b_logentry(TOPIC_DRAGONHUNTER,"Эта грязная свинья Сильвио собирался присвоить себе мою победу над ледяными драконами. Мы немного повздорили.");
+	b_logentry(TOPIC_DRAGONHUNTER,"Эта грязная свинья Сильвио собирался присвоить себе мою победу над ледяным драконом. Мы немного повздорили.");
 	b_attack(self,other,AR_NONE,1);
 	b_attack(djg_bullco,other,AR_NONE,1);
 };

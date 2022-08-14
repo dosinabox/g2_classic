@@ -32,6 +32,6 @@ func void rtn_prestart_935()
 func void rtn_start_935()
 {
 	ta_pick_fp(8,0,22,0,"NW_FARM4_FIELD_01");
-	ta_pick_fp(22,0,8,0,"NW_FARM4_FIELD_01");
+	ta_sit_campfire(22,0,8,0,"NW_FARM4_REST_02");
 };
 

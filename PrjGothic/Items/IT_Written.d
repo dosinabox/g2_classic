@@ -217,7 +217,7 @@ func void useeinhandbuch()
 	var int ndocid;
 	if(LERNE_EINHAND == FALSE)
 	{
-		self.hitchance[NPC_TALENT_1H] = self.hitchance[NPC_TALENT_1H] + 5;
+		b_addfightskill(self,NPC_TALENT_1H,5);
 		Print(PRINT_LEARN1H);
 		LERNE_EINHAND = TRUE;
 		Snd_Play("LEVELUP");
@@ -267,7 +267,7 @@ func void usezweihandbuch()
 	var int ndocid;
 	if(LERNE_ZWEIHAND == FALSE)
 	{
-		self.hitchance[NPC_TALENT_2H] = self.hitchance[NPC_TALENT_2H] + 5;
+		b_addfightskill(self,NPC_TALENT_2H,5);
 		Print(PRINT_LEARN2H);
 		LERNE_ZWEIHAND = TRUE;
 		Snd_Play("LEVELUP");

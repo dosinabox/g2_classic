@@ -133,7 +133,7 @@ func int c_cannpccollidewithspell(var int spelltype)
 	};
 	if((spelltype == SPL_PALREPELEVIL) || (spelltype == SPL_PALDESTROYEVIL) || (spelltype == SPL_PALHOLYBOLT))
 	{
-		if(c_npcisevil(self) && (self.guild != GIL_BDT))
+		if(c_npcisevil(self))
 		{
 			if(self.guild == GIL_DRAGON)
 			{

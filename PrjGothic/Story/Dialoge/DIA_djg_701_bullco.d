@@ -41,7 +41,7 @@ func int dia_bullcodjg_hallo_condition()
 
 func void dia_bullcodjg_hallo_info()
 {
-	AI_Output(other,self,"DIA_BullcoDJG_HALLO_15_00");	//В чем дело???
+	AI_Output(other,self,"DIA_BullcoDJG_HALLO_15_00");	//В чем дело?
 	AI_Output(self,other,"DIA_BullcoDJG_HALLO_06_01");	//Здесь так холодно! Не понимаю, почему Сильвио настоял, чтобы мы шли именно сюда.
 	AI_Output(self,other,"DIA_BullcoDJG_HALLO_06_02");	//Здесь есть множество других мест, где можно было бы поискать!
 	AI_StopProcessInfos(self);
@@ -55,7 +55,7 @@ instance DIA_BULLCODJG_WARTEMAL(C_INFO)
 	condition = dia_bullcodjg_wartemal_condition;
 	information = dia_bullcodjg_wartemal_info;
 	permanent = TRUE;
-	description = "Все в порядке?";
+	description = "А все остальное в порядке?";
 };
 
 
@@ -114,7 +114,7 @@ instance DIA_BULLCO_WASNUN(C_INFO)
 	nr = 8;
 	condition = dia_bullco_wasnun_condition;
 	information = dia_bullco_wasnun_info;
-	description = "Что ты планируешь делать дальше?";
+	description = "Что ты будешь делать теперь, когда Сильвио мертв?";
 };
 
 
@@ -146,7 +146,7 @@ func void dia_bullco_wasnun_woandere_zuihnen()
 	AI_Output(other,self,"DIA_Bullco_WASNUN_woandere_zuihnen_15_00");	//Отведи меня к другим охотникам на драконов.
 	AI_Output(self,other,"DIA_Bullco_WASNUN_woandere_zuihnen_06_01");	//Эй, я не твой лакей.
 	Info_ClearChoices(dia_bullco_wasnun);
-	Info_AddChoice(dia_bullco_wasnun,"Как знаешь.",dia_bullco_wasnun_woandere_zuihnen_alleine);
+	Info_AddChoice(dia_bullco_wasnun,"Как знаешь. Я сам их найду.",dia_bullco_wasnun_woandere_zuihnen_alleine);
 	Info_AddChoice(dia_bullco_wasnun,"Радуйся, если я оставлю тебя в живых.",dia_bullco_wasnun_woandere_zuihnen_lebenlassen);
 	Info_AddChoice(dia_bullco_wasnun,"Я заплачу тебе 50 золотых за это.",dia_bullco_wasnun_woandere_zuihnen_geld);
 };

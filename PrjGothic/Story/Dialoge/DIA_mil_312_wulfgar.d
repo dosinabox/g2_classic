@@ -362,7 +362,7 @@ func void dia_wulfgar_bonus_info()
 	AI_Output(self,other,"DIA_Wulfgar_Bonus_04_00");	//Ранняя пташка? Я обычно один в это время дня. Но раз уж ты здесь, то можно потренироваться.
 	AI_Output(self,other,"DIA_Wulfgar_Bonus_04_01");	//Будь внимательным. Ты можешь обмануть некоторых противников, если уклонишься от удара, а затем атакуешь в правильный момент.
 	AI_Output(self,other,"DIA_Wulfgar_Bonus_04_02");	//Помни об этом в своем следующем бою!
-	other.hitchance[NPC_TALENT_1H] = other.hitchance[NPC_TALENT_1H] + 2;
+	b_addfightskill(other,NPC_TALENT_1H,2);
 	PrintScreen(PRINT_LEARN1H,-1,-1,FONT_SCREENSMALL,2);
 };
 

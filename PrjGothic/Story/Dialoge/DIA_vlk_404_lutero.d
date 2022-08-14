@@ -61,7 +61,7 @@ instance DIA_LUTERO_GETLOST(C_INFO)
 	nr = 5;
 	condition = dia_lutero_getlost_condition;
 	information = dia_lutero_getlost_info;
-	permanent = FALSE;
+	permanent = TRUE;
 	important = TRUE;
 };
 

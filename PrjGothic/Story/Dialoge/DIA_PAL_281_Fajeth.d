@@ -188,9 +188,12 @@ instance DIA_FAJETH_LEADER(C_INFO)
 
 func int dia_fajeth_leader_condition()
 {
-	if(Npc_KnowsInfo(other,dia_bilgot_knowsleadsnapper) && Npc_IsDead(newmine_leadsnapper) && (MIS_FAJETH_KILL_SNAPPER == LOG_RUNNING))
+	if(Npc_KnowsInfo(other,dia_bilgot_knowsleadsnapper) && (MIS_FAJETH_KILL_SNAPPER == LOG_RUNNING))
 	{
-		return TRUE;
+		if(Npc_IsDead(newmine_leadsnapper))
+		{
+			return TRUE;
+		};
 	};
 };
 
@@ -222,9 +225,12 @@ instance DIA_FAJETH_SNAPPER_KILLED(C_INFO)
 
 func int dia_fajeth_snapper_killed_condition()
 {
-	if((MIS_FAJETH_KILL_SNAPPER == LOG_RUNNING) && (c_snapperdeath() == TRUE))
+	if(MIS_FAJETH_KILL_SNAPPER == LOG_RUNNING)
 	{
-		return TRUE;
+		if(c_snapperdeath())
+		{
+			return TRUE;
+		};
 	};
 };
 
