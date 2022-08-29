@@ -395,7 +395,7 @@ instance PC_ITPO_DEX(C_INFO)
 	condition = pc_itpo_dex_condition;
 	information = pc_itpo_dex_info;
 	permanent = TRUE;
-	description = "Эликсир ловкости (1 гоблинская ягода и 1 царский щавель.)";
+	description = "Эликсир ловкости (1 гоблинская ягода и 1 царский щавель)";
 };
 
 
@@ -434,7 +434,7 @@ instance PC_ITPO_STRG(C_INFO)
 	condition = pc_itpo_strg_condition;
 	information = pc_itpo_strg_info;
 	permanent = TRUE;
-	description = "Эликсир силы (1 драконий корень и 1 царский щавель.)";
+	description = "Эликсир силы (1 драконий корень и 1 царский щавель)";
 };
 
 

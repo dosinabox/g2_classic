@@ -177,6 +177,7 @@ const int AIV_DEFEATEDBYPLAYER = 66;
 const int AIV_KILLEDBYPLAYER = 67;
 const int AIV_STATETIME = 68;
 const int AIV_DIST = 69;
+const int AIV_SpellLevel = 88;
 var int absolutionlevel_oldcamp;
 var int absolutionlevel_city;
 var int absolutionlevel_monastery;

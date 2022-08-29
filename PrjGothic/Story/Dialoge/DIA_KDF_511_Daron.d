@@ -399,9 +399,9 @@ func void dia_daron_spende_info()
 	if(DARON_SPENDE < 1000)
 	{
 		Info_AddChoice(dia_daron_spende,"Но у меня недостаточно золота... (НАЗАД)",dia_daron_spende_back);
-		Info_AddChoice(dia_daron_spende,"(50  золота)",dia_daron_spende_50);
-		Info_AddChoice(dia_daron_spende,"(100 золота)",dia_daron_spende_100);
-		Info_AddChoice(dia_daron_spende,"(200 золота)",dia_daron_spende_200);
+		Info_AddChoice(dia_daron_spende,"(50  золотых)",dia_daron_spende_50);
+		Info_AddChoice(dia_daron_spende,"(100 золотых)",dia_daron_spende_100);
+		Info_AddChoice(dia_daron_spende,"(200 золотых)",dia_daron_spende_200);
 	}
 	else
 	{

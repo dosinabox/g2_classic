@@ -13,7 +13,8 @@ instance SPELL_CHARGEZAP(C_SPELL_PROTO)
 
 func int spell_logic_chargezap(var int manainvested)
 {
-	if(manainvested == 0)
+	return charge_spell_logic_common(manainvested,SPL_COST_CHARGEZAP);
+	/*if(manainvested == 0)
 	{
 		return SPL_FORCEINVEST + ((SPL_COST_CHARGEZAP * 3) / 10);
 	};
@@ -25,6 +26,11 @@ func int spell_logic_chargezap(var int manainvested)
 	{
 		return SPL_DONTINVEST;
 	};
-	return SPL_RECEIVEINVEST;
+	return SPL_RECEIVEINVEST;*/
+};
+
+func void spell_cast_chargezap(var int spelllevel)
+{
+	self.aivar[AIV_SelectSpell] += 1;
 };
 

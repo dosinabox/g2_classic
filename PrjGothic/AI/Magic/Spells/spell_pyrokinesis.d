@@ -13,7 +13,8 @@ instance SPELL_PYROKINESIS(C_SPELL_PROTO)
 
 func int spell_logic_pyrokinesis(var int manainvested)
 {
-	if(manainvested >= SPL_COST_FIRESTORM)
+	return charge_spell_logic_common(manainvested,SPL_COST_FIRESTORM);
+	/*if(manainvested >= SPL_COST_FIRESTORM)
 	{
 		return SPL_DONTINVEST;
 	};
@@ -25,11 +26,11 @@ func int spell_logic_pyrokinesis(var int manainvested)
 	{
 		return SPL_SENDCAST;
 	};
-	return SPL_RECEIVEINVEST;
+	return SPL_RECEIVEINVEST;*/
 };
 
 func void spell_cast_pyrokinesis(var int spelllevel)
 {
-	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - (spelllevel * SPL_COST_FIRESTORM);
+	self.aivar[AIV_SelectSpell] += 1;
 };
 

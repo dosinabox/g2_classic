@@ -13,7 +13,8 @@ instance SPELL_CHARGEFIREBALL(C_SPELL_PROTO)
 
 func int spell_logic_chargefireball(var int manainvested)
 {
-	if(manainvested == 0)
+	return charge_spell_logic_common(manainvested,SPL_COST_CHARGEFIREBALL);
+	/*if(manainvested == 0)
 	{
 		return SPL_FORCEINVEST + ((SPL_COST_CHARGEFIREBALL * 2) / 10);
 	};
@@ -25,6 +26,11 @@ func int spell_logic_chargefireball(var int manainvested)
 	{
 		return SPL_DONTINVEST;
 	};
-	return SPL_RECEIVEINVEST;
+	return SPL_RECEIVEINVEST;*/
+};
+
+func void spell_cast_chargefireball(var int spelllevel)
+{
+	self.aivar[AIV_SelectSpell] += 1;
 };
 

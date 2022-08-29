@@ -182,6 +182,7 @@ Story\B_AssignAmbientInfos\B_AssignAmbientInfos.d
 AI\Magic\C_Spell_Proto.d
 AI\Magic\B_AssessMagic.d
 AI\Magic\C_CanNpcCollideWithSpell.d
+AI\Magic\Charge_Spell_Logic_Common.d
 AI\Magic\Spells\spell_armyofdarkness.d
 AI\Magic\Spells\spell_breathofdeath.d
 AI\Magic\Spells\spell_chargefireball.d
