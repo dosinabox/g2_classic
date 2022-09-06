@@ -449,23 +449,23 @@ func void dia_gerold_morefood()
 		};
 		if(Npc_HasItems(other,itfo_fishsoup) || Npc_HasItems(other,itfo_stew))
 		{
-			Info_AddChoice(dia_gerold_food,"(Дать суп)",dia_gerold_food_suppe);
+			Info_AddChoice(dia_gerold_food,"(дать суп)",dia_gerold_food_suppe);
 		};
 		if(Npc_HasItems(other,itfomutton))
 		{
-			Info_AddChoice(dia_gerold_food,"(Дать мясо)",dia_gerold_food_fleisch);
+			Info_AddChoice(dia_gerold_food,"(дать мясо)",dia_gerold_food_fleisch);
 		};
 		if(Npc_HasItems(other,itfo_bacon))
 		{
-			Info_AddChoice(dia_gerold_food,"(Дать окорок)",dia_gerold_food_schinken);
+			Info_AddChoice(dia_gerold_food,"(дать окорок)",dia_gerold_food_schinken);
 		};
 		if(Npc_HasItems(other,itfo_cheese))
 		{
-			Info_AddChoice(dia_gerold_food,"Дать сыр)",dia_gerold_food_kaese);
+			Info_AddChoice(dia_gerold_food,"(дать сыр)",dia_gerold_food_kaese);
 		};
 		if(Npc_HasItems(other,itfo_sausage))
 		{
-			Info_AddChoice(dia_gerold_food,"Дать колбасу)",dia_gerold_food_wurst);
+			Info_AddChoice(dia_gerold_food,"(дать колбасу)",dia_gerold_food_wurst);
 		};
 		GEROLD_FOODCOUNTER = GEROLD_FOODCOUNTER + 1;
 	};
@@ -477,6 +477,12 @@ func void dia_gerold_food_info()
 	dia_gerold_morefood();
 };
 
+func void b_feedgerold(var int food)
+{
+	b_giveinvitems(other,self,food,1);
+	b_useitem(self,food);
+};
+
 func void dia_gerold_food_nichts()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_nichts_15_00");	//Сейчас у меня ничего нет.
@@ -485,7 +491,7 @@ func void dia_gerold_food_nichts()
 	b_attack(self,other,AR_NONE,1);
 	Npc_ExchangeRoutine(self,"Start");
 	MIS_GEROLDGIVEFOOD = LOG_FAILED;
-	b_giveplayerxp(XP_AMBIENT);
+	b_giveplayerxp(50);
 };
 
 func void dia_gerold_food_kaese_nichtmehr()
@@ -511,40 +517,41 @@ func void dia_gerold_food_kaese_nichtmehr()
 func void dia_gerold_food_kaese()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_kaese_15_00");	//Как насчет сочного куска сыра?
-	b_giveinvitems(other,self,itfo_cheese,1);
+	b_feedgerold(itfo_cheese);
 	dia_gerold_morefood();
 };
 
 func void dia_gerold_food_wurst()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_Wurst_15_00");	//Кусок колбасы?
-	b_giveinvitems(other,self,itfo_sausage,1);
+	b_feedgerold(itfo_sausage);
 	dia_gerold_morefood();
 };
 
 func void dia_gerold_food_schinken()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_schinken_15_00");	//Я могу дать тебе этот окорок.
-	b_giveinvitems(other,self,itfo_bacon,1);
+	b_feedgerold(itfo_bacon);
 	dia_gerold_morefood();
 };
 
 func void dia_gerold_food_fleisch()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_fleisch_15_00");	//Кусок мяса?
-	b_giveinvitems(other,self,itfomutton,1);
+	b_feedgerold(itfomutton);
 	dia_gerold_morefood();
 };
 
 func void dia_gerold_food_suppe()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_Suppe_15_00");	//Хороший суп еще никому не повредил, тебе так не кажется?
-	if(b_giveinvitems(other,self,itfo_fishsoup,1))
+	if(Npc_HasItems(other,itfo_fishsoup))
 	{
+		b_feedgerold(itfo_fishsoup);
 	}
 	else
 	{
-		b_giveinvitems(other,self,itfo_stew,1);
+		b_feedgerold(itfo_stew);
 	};
 	dia_gerold_morefood();
 };

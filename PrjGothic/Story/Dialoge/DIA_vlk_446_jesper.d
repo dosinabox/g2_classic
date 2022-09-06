@@ -265,16 +265,14 @@ func void dia_jesper_killer_info()
 	else if(Npc_IsDead(cassia))
 	{
 		AI_Output(self,other,"DIA_Jesper_Killer_09_02");	//Убийца! Ты убил Кассию! Но от меня тебе не уйти!
-		AI_StopProcessInfos(self);
-		b_attack(self,other,AR_NONE,1);
 	}
 	else if(Npc_IsDead(ramirez))
 	{
 		AI_Output(self,other,"DIA_Jesper_Killer_09_03");	//Я давно работаю с Рамирезом и добыл для него больше золота, чем ты можешь себе представить.
 		AI_Output(self,other,"DIA_Jesper_Killer_09_04");	//А ты взял и убил его, грязный пес! Но сейчас пришло время расплаты!
-		AI_StopProcessInfos(self);
-		b_attack(self,other,AR_NONE,1);
 	};
+	AI_StopProcessInfos(self);
+	b_attack(self,other,AR_KILL,1);
 };
 
 

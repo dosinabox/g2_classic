@@ -105,7 +105,7 @@ instance DIA_MARCOS_GAROND(C_INFO)
 
 func int dia_marcos_garond_condition()
 {
-	if((KAPITEL == 2) && (MIS_OLDWORLD == LOG_RUNNING))
+	if((KAPITEL == 2) && (MIS_SCOUTMINE == LOG_RUNNING))
 	{
 		return TRUE;
 	};

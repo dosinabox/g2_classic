@@ -271,7 +271,8 @@ func void dia_miltennw_kap3_novizenchase_info()
 	AI_Output(self,other,"DIA_MiltenNW_KAP3_NovizenChase_03_01");	//Ты думаешь, я стоял бы здесь если бы я знал, где скрывается этот предатель?
 	AI_Output(self,other,"DIA_MiltenNW_KAP3_NovizenChase_03_02");	//Он должен заплатить за то, что сделал. Я надеюсь, нам удастся вернуть Глаз.
 	AI_Output(self,other,"DIA_MiltenNW_KAP3_NovizenChase_03_03");	//Ты должен помочь нам. Найди его и принеси назад Глаз Инноса.
-	AI_Output(self,other,"DIA_MiltenNW_KAP3_NovizenChase_03_04");	//Я посмотрю, что можно сделать.
+//	реплику произносит Милтен вместо ГГ, вырезано в аддоне
+//	AI_Output(self,other,"DIA_MiltenNW_KAP3_NovizenChase_03_04");	//Я посмотрю, что можно сделать.
 };
 
 
@@ -340,7 +341,7 @@ instance DIA_MILTENNW_KAP4_PERM(C_INFO)
 
 func int dia_miltennw_kap4_perm_condition()
 {
-	if(KAPITEL == 4)
+	if(KAPITEL >= 4)
 	{
 		return TRUE;
 	};
@@ -349,26 +350,29 @@ func int dia_miltennw_kap4_perm_condition()
 func void dia_miltennw_kap4_perm_info()
 {
 	AI_Output(other,self,"DIA_MiltenNW_KAP4_PERM_15_00");	//Есть новости?
-	AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_01");	//Это я должен тебя спрашивать. Мы все здесь очень обеспокоены.
-	AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_02");	//Высший Совет пытается предугадать следующий ход врага.
-	AI_Output(other,self,"DIA_MiltenNW_KAP4_PERM_15_03");	//Что-нибудь еще?
-	if(hero.guild == GIL_PAL)
+	if(KAPITEL == 4)
 	{
-		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_04");	//Последнее время все больше сообщений о нападении орков, даже за пределами Долины Рудников.
-		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_05");	//Мне это все не нравится - я не думаю, что у нас осталось много времени.
-	}
-	else if(hero.guild == GIL_DJG)
-	{
-		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_06");	//Фермер сообщил о появлении чешуйчатых существ у его фермы.
-		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_07");	//Я не знаю, что все это значит, но я думаю, что враг что-то задумал.
-	}
-	else if(MIS_FINDTHEOBESESSED == LOG_RUNNING)
-	{
-		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_08");	//Мы получаем все больше сообщений об одержимых людях. Враг стал силен, значительно сильнее, чем я ожидал.
+		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_01");	//Это я должен тебя спрашивать. Мы все здесь очень обеспокоены.
+		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_02");	//Высший Совет пытается предугадать следующий ход врага.
+		AI_Output(other,self,"DIA_MiltenNW_KAP4_PERM_15_03");	//Что-нибудь еще?
+		if(hero.guild == GIL_PAL)
+		{
+			AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_04");	//Последнее время все больше сообщений о нападении орков, даже за пределами Долины Рудников.
+			AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_05");	//Мне это все не нравится - я не думаю, что у нас осталось много времени.
+		}
+		else if(hero.guild == GIL_DJG)
+		{
+			AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_06");	//Фермер сообщил о появлении чешуйчатых существ у его фермы.
+			AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_07");	//Я не знаю, что все это значит, но я думаю, что враг что-то задумал.
+		}
+		else
+		{
+			AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_08");	//Мы получаем все больше сообщений об одержимых людях. Враг стал силен, значительно сильнее, чем я ожидал.
+		};
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_09");	//Нет, ситуация все еще очень серьезная. Все, что нам остается, - это верить в Инноса.
+		AI_Output(self,other,"DIA_MiltenNW_KAP4_PERM_03_09");	//Нет, ситуация все еще очень серьезная. Все, что нам остается - это верить в Инноса.
 	};
 };
 

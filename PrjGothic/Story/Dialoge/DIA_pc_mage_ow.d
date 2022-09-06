@@ -64,7 +64,7 @@ func void dia_miltenow_hello_yes()
 
 func void dia_miltenow_hello_no()
 {
-	AI_Output(other,self,"DIA_MiltenOW_Hello_NO_15_00");	//Я должен знать их?
+	AI_Output(other,self,"DIA_MiltenOW_Hello_NO_15_00");	//Я должен знать тебя?
 	AI_Output(self,other,"DIA_MiltenOW_Hello_NO_03_01");	//Ты через многое прошел, да?
 	b_milten_gorndiegolester();
 	Info_ClearChoices(dia_miltenow_hello);
@@ -384,6 +384,37 @@ func void dia_miltenow_lehren_info()
 };
 
 
+instance DIA_MILTENOW_TEACHCIRCLE1(C_INFO)
+{
+	npc = pc_mage_ow;
+	nr = 91;
+	condition = dia_miltenow_teachcircle1_condition;
+	information = dia_miltenow_teachcircle1_info;
+	permanent = TRUE;
+	description = "Научи меня первому Кругу магии.";
+};
+
+
+func int dia_miltenow_teachcircle1_condition()
+{
+	if((other.guild == GIL_KDF) && Npc_KnowsInfo(other,dia_miltenow_lehren) && (Npc_GetTalentSkill(other,NPC_TALENT_MAGE) == 0))
+	{
+		return TRUE;
+	};
+};
+
+func void dia_miltenow_teachcircle1_info()
+{
+	AI_Output(other,self,"DIA_Parlan_TECH_CIRCLE1_15_00");	//Научи меня первому Кругу магии.
+	if(b_teachmagiccircle(self,other,1))
+	{
+		AI_Output(self,other,"DIA_Milten_DI_TeachMagic_RUNES_03_00");	//Ох, нет! Я не большой специалист в этом, но мы как-нибудь справимся.
+		AI_Output(self,other,"DIA_Milten_DI_TeachMagic_MANA_1_03_00");	//Да ведет тебя рука Инноса.
+		AI_Output(self,other,"DIA_Milten_DI_TeachMagic_MANA_5_03_00");	//Да осветит Иннос твой путь.
+	};
+};
+
+
 instance DIA_MILTENOW_TEACHCIRCLE2(C_INFO)
 {
 	npc = pc_mage_ow;
@@ -397,7 +428,7 @@ instance DIA_MILTENOW_TEACHCIRCLE2(C_INFO)
 
 func int dia_miltenow_teachcircle2_condition()
 {
-	if((other.guild == GIL_KDF) && Npc_KnowsInfo(other,dia_miltenow_lehren) && (Npc_GetTalentSkill(other,NPC_TALENT_MAGE) < 2))
+	if((other.guild == GIL_KDF) && Npc_KnowsInfo(other,dia_miltenow_lehren) && (Npc_GetTalentSkill(other,NPC_TALENT_MAGE) == 1))
 	{
 		return TRUE;
 	};
@@ -439,26 +470,40 @@ func int dia_miltenow_teach_condition()
 func void dia_miltenow_teach_info()
 {
 	AI_Output(other,self,"DIA_MiltenOW_Teach_15_00");	//Я хочу изучить новые заклинания.
-	if(Npc_GetTalentSkill(other,NPC_TALENT_MAGE) >= 2)
+	if(Npc_GetTalentSkill(other,NPC_TALENT_MAGE) == 0)
 	{
-		Info_ClearChoices(dia_miltenow_teach);
-		Info_AddChoice(dia_miltenow_teach,DIALOG_BACK,dia_miltenow_teach_back);
-		if(PLAYER_TALENT_RUNES[SPL_WINDFIST] == FALSE)
-		{
-			Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_WINDFIST,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_windfist);
-		};
-		if(PLAYER_TALENT_RUNES[SPL_INSTANTFIREBALL] == FALSE)
-		{
-			Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_INSTANTFIREBALL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_feuerball);
-		};
-		if(PLAYER_TALENT_RUNES[SPL_ICEBOLT] == FALSE)
-		{
-			Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_ICEBOLT,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_eispfeil);
-		};
+		AI_Output(self,other,"DIA_MiltenOW_Teach_03_01");	//Ты все еще не достиг второго круга магии. Я ничему не могу научить тебя.
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_MiltenOW_Teach_03_01");	//Ты все еще не достиг второго круга магии. Я ничему не могу научить тебя.
+		Info_ClearChoices(dia_miltenow_teach);
+		Info_AddChoice(dia_miltenow_teach,DIALOG_BACK,dia_miltenow_teach_back);
+		if(Npc_GetTalentSkill(other,NPC_TALENT_MAGE) >= 1)
+		{
+			if(PLAYER_TALENT_RUNES[SPL_LIGHT] == FALSE)
+			{
+				Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_LIGHT,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_light);
+			};
+			if(PLAYER_TALENT_RUNES[SPL_LIGHTHEAL] == FALSE)
+			{
+				Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_LIGHTHEAL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_heal);
+			};
+		};
+		if(Npc_GetTalentSkill(other,NPC_TALENT_MAGE) >= 2)
+		{
+			if(PLAYER_TALENT_RUNES[SPL_WINDFIST] == FALSE)
+			{
+				Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_WINDFIST,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_windfist);
+			};
+			if(PLAYER_TALENT_RUNES[SPL_INSTANTFIREBALL] == FALSE)
+			{
+				Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_INSTANTFIREBALL,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_feuerball);
+			};
+			if(PLAYER_TALENT_RUNES[SPL_ICEBOLT] == FALSE)
+			{
+				Info_AddChoice(dia_miltenow_teach,b_buildlearnstring(NAME_SPL_ICEBOLT,b_getlearncosttalent(other,NPC_TALENT_RUNES)),dia_miltenow_teach_eispfeil);
+			};
+		};
 	};
 };
 
@@ -482,6 +527,15 @@ func void dia_miltenow_teach_eispfeil()
 	b_teachplayertalentrunes(self,other,SPL_ICEBOLT);
 };
 
+func void dia_miltenow_teach_heal()
+{
+	b_teachplayertalentrunes(self,other,SPL_LIGHTHEAL);
+};
+
+func void dia_miltenow_teach_light()
+{
+	b_teachplayertalentrunes(self,other,SPL_LIGHT);
+};
 
 instance DIA_MILTENOW_MANA(C_INFO)
 {

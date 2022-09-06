@@ -231,6 +231,7 @@ var C_NPC ONAR;
 var C_NPC BODO;
 var C_NPC PEPE;
 var C_NPC GARWIG;
+var C_NPC LEHMAR;
 
 func void b_initnpcglobals()
 {
@@ -470,5 +471,6 @@ func void b_initnpcglobals()
 	ONAR = Hlp_GetNpc(bau_900_onar);
 	BODO = Hlp_GetNpc(bau_903_bodo);
 	PEPE = Hlp_GetNpc(bau_912_pepe);
+	LEHMAR = Hlp_GetNpc(vlk_484_lehmar);
 };
 

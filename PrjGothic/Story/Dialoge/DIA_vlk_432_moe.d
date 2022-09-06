@@ -69,7 +69,7 @@ instance DIA_MOE_HALLO(C_INFO)
 
 func int dia_moe_hallo_condition()
 {
-	if((Npc_GetDistToNpc(self,other) <= ZIVILANQUATSCHDIST) && (hero.guild != GIL_PAL) && (hero.guild != GIL_KDF) && (hero.guild != GIL_MIL) && (hero.guild != GIL_NOV) && (Npc_RefuseTalk(self) == FALSE))
+	if((Npc_GetDistToNpc(self,other) <= ZIVILANQUATSCHDIST) && (hero.guild != GIL_PAL) && (hero.guild != GIL_KDF) && (hero.guild != GIL_MIL) && (hero.guild != GIL_NOV) && (Npc_RefuseTalk(self) == FALSE) && !Npc_IsDead(lehmar))
 	{
 		return TRUE;
 	};
@@ -317,6 +317,10 @@ instance DIA_MOE_LEHMARGELDEINTREIBEN(C_INFO)
 
 func int dia_moe_lehmargeldeintreiben_condition()
 {
+	if(Npc_IsDead(lehmar))
+	{
+		return TRUE;
+	};
 	if((LEHMAR_GELDGELIEHEN_DAY <= (Wld_GetDay() - 2)) && (LEHMAR_GELDGELIEHEN != 0))
 	{
 		return TRUE;
@@ -325,8 +329,17 @@ func int dia_moe_lehmargeldeintreiben_condition()
 
 func void dia_moe_lehmargeldeintreiben_info()
 {
-	AI_Output(self,other,"DIA_Moe_LEHMARGELDEINTREIBEN_01_00");	//Эй, ты! Лемар передает тебе привет.
-	AI_StopProcessInfos(self);
-	b_attack(self,other,AR_NONE,1);
+	if(!Npc_IsDead(lehmar))
+	{
+		AI_Output(self,other,"DIA_Moe_LEHMARGELDEINTREIBEN_01_00");	//Эй, ты! Лемар передает тебе привет.
+		AI_StopProcessInfos(self);
+		b_attack(self,other,AR_NONE,1);
+	}
+	else
+	{
+		b_say(self,other,"$YOUMURDERER");
+		AI_StopProcessInfos(self);
+		b_attack(self,other,AR_KILL,0);
+	};
 };
 

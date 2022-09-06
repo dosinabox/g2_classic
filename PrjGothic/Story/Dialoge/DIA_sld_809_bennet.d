@@ -136,7 +136,10 @@ instance DIA_BENNET_BAUORSLD(C_INFO)
 
 func int dia_bennet_bauorsld_condition()
 {
-	return TRUE;
+	if((KAPITEL != 3) || (MIS_RESCUEBENNET == LOG_SUCCESS))
+	{
+		return TRUE;
+	};
 };
 
 func void dia_bennet_bauorsld_info()

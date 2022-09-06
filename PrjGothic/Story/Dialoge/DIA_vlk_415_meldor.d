@@ -34,7 +34,7 @@ instance DIA_MELDOR_HALLO(C_INFO)
 
 func int dia_meldor_hallo_condition()
 {
-	if(Npc_IsInState(self,zs_talk) && (self.aivar[AIV_TALKEDTOPLAYER] == FALSE))
+	if(Npc_IsInState(self,zs_talk) && (self.aivar[AIV_TALKEDTOPLAYER] == FALSE) && !Npc_IsDead(lehmar))
 	{
 		return TRUE;
 	};
@@ -275,6 +275,10 @@ instance DIA_MELDOR_VONLEHMAR(C_INFO)
 
 func int dia_meldor_vonlehmar_condition()
 {
+	if(Npc_IsDead(lehmar))
+	{
+		return TRUE;
+	};
 	if((LEHMAR_GELDGELIEHEN_DAY <= (Wld_GetDay() - 2)) && (LEHMAR_GELDGELIEHEN != 0))
 	{
 		return TRUE;
@@ -284,9 +288,17 @@ func int dia_meldor_vonlehmar_condition()
 func void dia_meldor_vonlehmar_info()
 {
 	AI_Output(self,other,"DIA_Meldor_VonLehmar_07_00");	//Эй, подожди...
-	AI_Output(self,other,"DIA_Meldor_VonLehmar_07_01");	//У меня есть для тебя сообщение от Лемара...
-	AI_StopProcessInfos(self);
-	b_attack(self,other,AR_NONE,1);
+	if(!Npc_IsDead(lehmar))
+	{
+		AI_Output(self,other,"DIA_Meldor_VonLehmar_07_01");	//У меня есть для тебя сообщение от Лемара...
+		AI_StopProcessInfos(self);
+		b_attack(self,other,AR_NONE,1);
+	}
+	else
+	{
+		AI_StopProcessInfos(self);
+		b_attack(self,other,AR_KILL,0);
+	};
 };
 
 

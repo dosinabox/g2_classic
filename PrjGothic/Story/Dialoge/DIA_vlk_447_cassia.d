@@ -234,14 +234,26 @@ func int dia_cassia_lernen_condition()
 func void dia_cassia_lernen_info()
 {
 	AI_Output(other,self,"DIA_Cassia_Lernen_15_00");	//Чему я могу научиться у вас?
-	AI_Output(self,other,"DIA_Cassia_Lernen_16_01");	//Джеспер может научить тебя передвигаться бесшумно.
-	AI_Output(self,other,"DIA_Cassia_Lernen_16_02");	//Рамирез - чрезвычайно одаренный медвежатник. Ни один замок не устоит перед его отмычками.
+	if(!Npc_IsDead(jesper))
+	{
+		AI_Output(self,other,"DIA_Cassia_Lernen_16_01");	//Джеспер может научить тебя передвигаться бесшумно.
+	};
+	if(!Npc_IsDead(ramirez))
+	{
+		AI_Output(self,other,"DIA_Cassia_Lernen_16_02");	//Рамирез - чрезвычайно одаренный медвежатник. Ни один замок не устоит перед его отмычками.
+	};
 	AI_Output(self,other,"DIA_Cassia_Lernen_16_03");	//А я могу научить тебя карманному воровству.
 	AI_Output(self,other,"DIA_Cassia_Lernen_16_04");	//Также я могу помочь тебе стать более ловким. Именно ловкость - ключ к воровским способностям.
 	Log_CreateTopic(TOPIC_CITYTEACHER,LOG_NOTE);
 	b_logentry(TOPIC_CITYTEACHER,"Кассия может обучить меня карманному воровству и помочь мне стать более ловким.");
-	b_logentry(TOPIC_CITYTEACHER,"Рамирез может обучить меня пользоваться отмычками.");
-	b_logentry(TOPIC_CITYTEACHER,"Джеспер может обучить меня красться.");
+	if(!Npc_IsDead(jesper))
+	{
+		Log_AddEntry(TOPIC_CITYTEACHER,"Джеспер может обучить меня красться.");
+	};
+	if(!Npc_IsDead(ramirez))
+	{
+		Log_AddEntry(TOPIC_CITYTEACHER,"Рамирез может обучить меня пользоваться отмычками.");
+	};
 };
 
 

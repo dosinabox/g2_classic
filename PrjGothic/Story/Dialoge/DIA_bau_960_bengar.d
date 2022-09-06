@@ -388,7 +388,7 @@ instance DIA_BENGAR_BALTHASARDARFAUFWEIDE(C_INFO)
 
 func int dia_bengar_balthasardarfaufweide_condition()
 {
-	if(Npc_KnowsInfo(other,dia_bengar_balthasar) && (MIS_TORLOF_BENGARMILIZKLATSCHEN == LOG_SUCCESS) && (BENGAR_MILSUCCESS == TRUE))
+	if(Npc_KnowsInfo(other,dia_bengar_balthasar) && (BENGAR_MILSUCCESS == TRUE))
 	{
 		return TRUE;
 	};

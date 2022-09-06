@@ -82,6 +82,10 @@ func void b_enter_oldworld_kapitel_3()
 		{
 			Wld_InsertItem(itmi_nugget,"FP_ITEM_XARDASALTERTURM_02");
 		};
+		if(TSCHUESSBILGOT == TRUE)
+		{
+			b_removenpc(vlk_4120_bilgot);
+		};
 		ENTEROW_KAPITEL3 = TRUE;
 	};
 };
@@ -111,6 +115,10 @@ func void b_enter_oldworld_kapitel_4()
 		b_removenpc(strf_1116_kervo);
 		b_removenpc(vlk_4106_dobar);
 		b_removenpc(vlk_4107_parlaf);
+		if(TSCHUESSBILGOT == TRUE)
+		{
+			b_removenpc(vlk_4120_bilgot);
+		};
 		if(Npc_IsDead(sengrath) == FALSE)
 		{
 			b_startotherroutine(sengrath,"ORCBARRIER");
