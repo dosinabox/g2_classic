@@ -149,7 +149,7 @@ func void dia_rod_teach_2h_1()
 
 func void dia_rod_teach_2h_5()
 {
-	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,5,90);
+	b_teachfighttalentpercent(self,other,NPC_TALENT_2H,5,30);
 	Info_ClearChoices(dia_rod_teach);
 	Info_AddChoice(dia_rod_teach,DIALOG_BACK,dia_rod_teach_back);
 	Info_AddChoice(dia_rod_teach,b_buildlearnstring(PRINT_LEARN2H1,b_getlearncosttalent(other,NPC_TALENT_2H)),dia_rod_teach_2h_1);

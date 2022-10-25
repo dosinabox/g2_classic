@@ -7,8 +7,7 @@ func void b_extro_avi()
 	};
 	PlayVideo("Extro_Xardas.BIK");
 	PlayVideo("Credits_Extro.BIK");
-	PlayVideo("g2_classic_credits.BIK");
-	PlayVideo("g2_classic_credits2.BIK");
+	PlayVideo("Credits2.BIK");
 	if(DIEGANDGORNAREONBOARD == TRUE)
 	{
 		PlayVideo("Extro_AllesWirdGut.BIK");

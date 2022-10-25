@@ -428,7 +428,7 @@ instance DIA_AKIL_SCHAFDIEB(C_INFO)
 	nr = 2;
 	condition = dia_akil_schafdieb_condition;
 	information = dia_akil_schafdieb_info;
-	description = "Это не новость.";
+	description = "Есть еще новости?";
 };
 
 

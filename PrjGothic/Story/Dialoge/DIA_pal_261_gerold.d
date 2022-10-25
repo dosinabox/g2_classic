@@ -191,8 +191,16 @@ func int dia_gerold_stuff_condition()
 func void dia_gerold_stuff_info()
 {
 	AI_Output(other,self,"DIA_Gerold_Stuff_15_00");	//Я принес тебе кое-что. Вот еда, как ты и просил.
-	if(b_giveinvitems(other,self,itfo_honey,1) && b_giveinvitems(other,self,itfo_bread,1) && b_giveinvitems(other,self,itfo_wine,1) && b_giveinvitems(other,self,itfo_sausage,1))
+	if(Npc_HasItems(other,ItFo_Honey) && Npc_HasItems(other,ItFo_Bread) && Npc_HasItems(other,ItFo_Wine) && Npc_HasItems(other,ItFo_Sausage))
 	{
+		Npc_RemoveInvItem(other,ItFo_Honey);
+		AI_PrintScreen("Мед отдан",-1,34,FONT_ScreenSmall,2);
+		Npc_RemoveInvItem(other,ItFo_Bread);
+		AI_PrintScreen("Хлеб отдан",-1,37,FONT_ScreenSmall,2);
+		Npc_RemoveInvItem(other,ItFo_Wine);
+		AI_PrintScreen("Вино отдано",-1,40,FONT_ScreenSmall,2);
+		Npc_RemoveInvItem(other,ItFo_Sausage);
+		AI_PrintScreen("Колбаса отдана",-1,43,FONT_ScreenSmall,2);
 		AI_Output(self,other,"DIA_Gerold_Stuff_12_01");	//Хорошо, дай посмотрю. Записка у тебя с собой?
 		AI_Output(other,self,"DIA_Gerold_Stuff_15_02");	//Да, вот. Не забудь, она для Горна.
 		AI_Output(self,other,"DIA_Gerold_Stuff_12_03");	//Заходи завтра, он к этому времени уже получит ее.
