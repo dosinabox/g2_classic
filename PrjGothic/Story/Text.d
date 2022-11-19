@@ -508,6 +508,7 @@ const string PRINT_LP = " очков обучения)";
 const string PRINT_2LP = " очка обучения)";
 const string PRINT_1LP = " очко обучения)";
 const string PRINT_NOTENOUGHLEARNPOINTS = "Недостаточно очков обучения!";
+const string PRINT_NOTENOUGHLP = "Недостаточно очков обучения!";
 const string PRINT_NOLEARNOVERPERSONALMAX = "Максимум этого учителя - ";
 const string PRINT_LEARNSTR = "Сила + ";
 const string PRINT_LEARNDEX = "Ловкость + ";

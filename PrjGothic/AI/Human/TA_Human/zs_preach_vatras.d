@@ -3,6 +3,7 @@ func void zs_preach_vatras()
 {
 	perception_set_normal();
 	Npc_PercDisable(self,PERC_ASSESSQUIETSOUND);
+	Npc_PercDisable(self,PERC_ASSESSTHEFT);
 	b_resetall(self);
 	AI_SetWalkMode(self,NPC_WALK);
 	AI_GotoWP(self,self.wp);

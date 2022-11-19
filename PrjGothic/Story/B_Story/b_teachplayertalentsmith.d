@@ -5,7 +5,7 @@ func int b_teachplayertalentsmith(var C_NPC slf,var C_NPC oth,var int waffe)
 	kosten = b_getlearncosttalent(oth,NPC_TALENT_SMITH);
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
+		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREENSMALL,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

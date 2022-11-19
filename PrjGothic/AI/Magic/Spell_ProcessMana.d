@@ -31,43 +31,43 @@ func int spell_processmana(var int manainvested)
 	};
 	if(Npc_GetActiveSpell(self) == SPL_PALTELEPORTSECRET)
 	{
-		return spell_logic_palteleportsecret(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTSEAPORT)
 	{
-		return spell_logic_teleportseaport(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTMONASTERY)
 	{
-		return spell_logic_teleportmonastery(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTFARM)
 	{
-		return spell_logic_teleportfarm(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTXARDAS)
 	{
-		return spell_logic_teleportxardas(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTPASSNW)
 	{
-		return spell_logic_teleportpassnw(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTPASSOW)
 	{
-		return spell_logic_teleportpassow(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTOC)
 	{
-		return spell_logic_teleportoc(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTOWDEMONTOWER)
 	{
-		return spell_logic_teleportowdemontower(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_TELEPORTTAVERNE)
 	{
-		return spell_logic_teleporttaverne(manainvested);
+		return Teleport_Spell_Logic_Common(manainvested);
 	};
 	if(Npc_GetActiveSpell(self) == SPL_LIGHT)
 	{

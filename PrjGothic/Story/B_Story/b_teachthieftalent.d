@@ -10,7 +10,7 @@ func int b_teachthieftalent(var C_NPC slf,var C_NPC oth,var int talent)
 	};
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
+		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREENSMALL,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

@@ -33,6 +33,10 @@ func int spell_logic_pallightheal(var int manainvested)
 {
 	if(self.attribute[ATR_MANA] >= SPL_COST_PALLIGHTHEAL)
 	{
+		if(manainvested < SPL_CHARGE_FRAMES)
+		{
+			return SPL_NEXTLEVEL;
+		};
 		return SPL_SENDCAST;
 	};
 	return SPL_SENDSTOP;
@@ -42,6 +46,10 @@ func int spell_logic_palmediumheal(var int manainvested)
 {
 	if(self.attribute[ATR_MANA] >= SPL_COST_PALMEDIUMHEAL)
 	{
+		if(manainvested < SPL_CHARGE_FRAMES)
+		{
+			return SPL_NEXTLEVEL;
+		};
 		return SPL_SENDCAST;
 	};
 	return SPL_SENDSTOP;
@@ -51,6 +59,10 @@ func int spell_logic_palfullheal(var int manainvested)
 {
 	if(self.attribute[ATR_MANA] >= SPL_COST_PALFULLHEAL)
 	{
+		if(manainvested < SPL_CHARGE_FRAMES)
+		{
+			return SPL_NEXTLEVEL;
+		};
 		return SPL_SENDCAST;
 	};
 	return SPL_SENDSTOP;
@@ -60,6 +72,10 @@ func int spell_logic_lightheal(var int manainvested)
 {
 	if(self.attribute[ATR_MANA] >= SPL_COST_LIGHTHEAL)
 	{
+		if(manainvested < SPL_CHARGE_FRAMES)
+		{
+			return SPL_NEXTLEVEL;
+		};
 		return SPL_SENDCAST;
 	};
 	return SPL_SENDSTOP;
@@ -69,6 +85,10 @@ func int spell_logic_mediumheal(var int manainvested)
 {
 	if(self.attribute[ATR_MANA] >= SPL_COST_MEDIUMHEAL)
 	{
+		if(manainvested < SPL_CHARGE_FRAMES)
+		{
+			return SPL_NEXTLEVEL;
+		};
 		return SPL_SENDCAST;
 	};
 	return SPL_SENDSTOP;
@@ -78,6 +98,10 @@ func int spell_logic_fullheal(var int manainvested)
 {
 	if(self.attribute[ATR_MANA] >= SPL_COST_FULLHEAL)
 	{
+		if(manainvested < SPL_CHARGE_FRAMES)
+		{
+			return SPL_NEXTLEVEL;
+		};
 		return SPL_SENDCAST;
 	};
 	return SPL_SENDSTOP;

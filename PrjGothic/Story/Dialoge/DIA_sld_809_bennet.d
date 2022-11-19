@@ -1294,6 +1294,7 @@ func void dia_bennet_eierbringen_info()
 	{
 		AI_Output(self,other,"DIA_Bennet_EierBringen_06_06");	//Я не думаю, что ты найдешь еще яйца. К тому же, мне и этих достаточно. Я даже не знаю, что я буду делать со всеми ними.
 		TOPIC_END_DRACHENEIER = TRUE;
+		b_checklog();
 	};
 	AI_Output(self,other,"DIA_Bennet_EierBringen_06_07");	//Ох, хорошо. Вот твои деньги.
 	dragonegggeld = dragoneggcount * BENNETSDRAGONEGGOFFER;

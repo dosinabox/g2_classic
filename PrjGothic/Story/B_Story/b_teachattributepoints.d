@@ -38,7 +38,7 @@ func int b_teachattributepoints(var C_NPC slf,var C_NPC oth,var int attrib,var i
 	};
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREEN,2);
+		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREEN,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

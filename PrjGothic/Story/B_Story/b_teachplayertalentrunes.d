@@ -6,7 +6,7 @@ func int b_teachplayertalentrunes(var C_NPC slf,var C_NPC oth,var int spell)
 	kosten = b_getlearncosttalent(oth,NPC_TALENT_RUNES);
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
+		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREENSMALL,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};
@@ -212,7 +212,7 @@ func int b_teachplayerpalrunes(var C_NPC slf,var C_NPC oth,var int spell,var int
 {
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREENSMALL,2);
+		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREENSMALL,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

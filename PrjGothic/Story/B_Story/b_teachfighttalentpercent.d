@@ -42,7 +42,7 @@ func int b_teachfighttalentpercent(var C_NPC slf,var C_NPC oth,var int talent,va
 	};
 	if(oth.lp < kosten)
 	{
-		PrintScreen(PRINT_NOTENOUGHLEARNPOINTS,-1,-1,FONT_SCREEN,2);
+		PrintScreen(PRINT_NOTENOUGHLP,-1,-1,FONT_SCREEN,2);
 		b_say(slf,oth,"$NOLEARNNOPOINTS");
 		return FALSE;
 	};

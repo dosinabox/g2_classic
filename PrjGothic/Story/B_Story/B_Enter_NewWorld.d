@@ -280,10 +280,7 @@ func void b_enter_newworld_kapitel_4()
 {
 	if(ENTERNW_KAPITEL4 == FALSE)
 	{
-		if(Npc_GetDistToWP(salandril,"ALTAR") < 10000)
-		{
-			b_startotherroutine(salandril,"Start");
-		};
+		b_startotherroutine(salandril,"Start");
 		b_startotherroutine(jorgen,"Kloster");
 		b_killnpc(bdt_1050_landstreicher);
 		if(!Npc_IsDead(Sekob))
@@ -531,10 +528,7 @@ func void b_enter_newworld_kapitel_5()
 	{
 		b_removenpc(none_100_xardas);
 		b_startotherroutine(lester,"XardasWeg");
-		if(Npc_GetDistToWP(salandril,"ALTAR") < 10000)
-		{
-			b_startotherroutine(salandril,"Start");
-		};
+		b_startotherroutine(salandril,"Start");
 		if(Npc_IsDead(sekob) == FALSE)
 		{
 			b_startotherroutine(rosi,"FleeFromSekob");
