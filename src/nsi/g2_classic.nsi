@@ -10,7 +10,7 @@
 ###################################
 
 !define MOD_VERSION "1.5"
-!define MOD_DATE "10.25"
+!define MOD_DATE "11.24"
 !define MOD_NAME_SYS "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
 !define MOD_AUTHOR "D36, Kor Angar"
@@ -50,10 +50,10 @@ SetCompressor lzma
 
 Caption "${MOD_NAME_RU} (v${MOD_VERSION}) - установка"
 !define MUI_TEXT_WELCOME_INFO_TITLE " "
-!define MUI_TEXT_WELCOME_INFO_TEXT "Данная модификация позволит вам запускать оригинальную Готику 2 без аддона 'Ночь Ворона'. Установка рекомендуется на русскую версию Золотого Издания от Акеллы с установленным Player Kit или на Steam-версию с установленным Gothic 2 Steam Fix. Сохранения из игры с аддоном не поддерживаются: начало новой игры обязательно!"
+!define MUI_TEXT_WELCOME_INFO_TEXT "Данная модификация позволит вам запускать оригинальную Готику 2 без аддона 'Ночь Ворона'. Установка рекомендуется на русскую версию Золотого Издания от Акеллы с установленным Player Kit или на версию из Steam. Сохранения из игры с аддоном не поддерживаются: начало новой игры обязательно!"
 
 !define MUI_TEXT_DIRECTORY_SUBTITLE " "
-DirText "Программа установит модификацию в указанную папку.$\n$\nЧтобы установить модификацию в другую папку, нажмите кнопку 'Обзор ...' и укажите ее. Если кнопка 'Установить' остается неактивной, то сначала установите Player Kit (официальный набор для запуска модов) или Gothic 2 Steam Fix."
+DirText "Программа установит модификацию в указанную папку.$\n$\nЧтобы установить модификацию в другую папку, нажмите кнопку 'Обзор ...' и укажите ее. Если кнопка 'Установить' остается неактивной, то сначала установите Player Kit (официальный набор для запуска модов)."
 
 !define MUI_COMPONENTSPAGE_NODESC
 SpaceTexts none
@@ -109,6 +109,7 @@ Section "Основные файлы" SecMain
 
 	SetOutPath "$INSTDIR\Data\ModVDF"
 	File "${MOD_NAME_SYS}.mod"
+	File "${MOD_NAME_SYS}_ru.mod"
 
 	SetOutPath "$INSTDIR\system"
 	File "${MOD_NAME_SYS}.ico"
@@ -145,6 +146,7 @@ Section "Un.Удалить модификацию" SecUninstall_Main
 	Delete "$INSTDIR\system\${MOD_NAME_SYS}.ini"
 	Delete "$INSTDIR\system\${MOD_NAME_SYS}.rtf"
 	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}.mod"
+	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_ru.mod"
 	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_hotfix.mod"
 	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits.bik"
 	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits2.bik"

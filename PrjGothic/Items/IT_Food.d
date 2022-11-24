@@ -284,7 +284,7 @@ instance ITFO_CORAGONSBEER(C_ITEM)
 	value = VALUE_BEER;
 	visual = "ItFo_CoragonsBeer.3DS";
 	material = MAT_WOOD;
-	scemename = "POTION";
+	scemename = "BEER";
 	on_state[0] = use_coragonsbeer;
 	description = name;
 	text[1] = NAME_BONUS_HPMAX;
@@ -412,7 +412,7 @@ instance ITFO_BEER(C_ITEM)
 	value = VALUE_BEER;
 	visual = "ItFo_Beer.3DS";
 	material = MAT_WOOD;
-	scemename = "POTION";
+	scemename = "BEER";
 	on_state[0] = use_beer;
 	description = name;
 	text[1] = NAME_BONUS_HP;
