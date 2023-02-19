@@ -418,7 +418,7 @@ func void dia_hyglas_bringbook_info()
 	AI_Output(self,other,"DIA_Hyglas_BringBook_14_04");	//Если быть более точным, созвездие Быка сейчас находится в прямой взаимосвязи с созвездием Воина. Я полагаю, ты знаешь, что это означает.
 	AI_Output(other,self,"DIA_Hyglas_BringBook_15_05");	//Хмм. Ну, если быть честным...
 	AI_Output(self,other,"DIA_Hyglas_BringBook_14_06");	//Да, хорошо, я понимаю. Ну, я не могу объяснить тебе сейчас все детали, но это, определенно, предвещает великие перемены. А я не люблю перемены.
-	AI_Output(self,other,"DIA_Hyglas_BringBook_14_07");	//Поэтому, я хочу, чтобы ты принес мне из города книгу. Она называется "Божественная сила звезд". Тебе, возможно, придется поискать ее, но я уверен, что ты справишься с этим.
+	AI_Output(self,other,"DIA_Hyglas_BringBook_14_07");	//Поэтому, я хочу, чтобы ты принес мне из города книгу. Она называется 'Божественная сила звезд'. Тебе, возможно, придется поискать ее, но я уверен, что ты справишься с этим.
 	Info_ClearChoices(dia_hyglas_bringbook);
 	Info_AddChoice(dia_hyglas_bringbook,"Достань эту книгу сам.",dia_hyglas_bringbook_getityourself);
 	Info_AddChoice(dia_hyglas_bringbook,"А что мне с этого будет?",dia_hyglas_bringbook_getforit);

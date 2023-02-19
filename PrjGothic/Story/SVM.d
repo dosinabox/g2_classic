@@ -613,7 +613,7 @@ instance SVM_4(C_SVM)
 	goodmonsterkill = "SVM_4_GoodMonsterKill";	//Да! Вот как нужно разбираться с этими тварями!
 	goodkill = "SVM_4_GoodKill";	//Да, покажи этой свинье, где раки зимуют!
 	notnow = "SVM_4_NOTNOW";	//Оставь меня в покое!
-	runcoward = "SVM_4_RunCoward";	//Ты еще не знаешь, на что я способен!
+	runcoward = "SVM_4_RunCoward";	//Мы еще встретимся!
 	getoutofhere = "SVM_4_GetOutOfHere";	//Прочь!
 	whyareyouinhere = "SVM_4_WhyAreYouInHere";	//Что тебе нужно здесь?!
 	yesgooutofhere = "SVM_4_YesGoOutOfHere";	//Прекрати!
@@ -1153,7 +1153,7 @@ instance SVM_7(C_SVM)
 	goodmonsterkill = "SVM_7_GoodMonsterKill";	//Да! Вот как нужно разбираться с этими тварями!
 	goodkill = "SVM_7_GoodKill";	//Да, покажи этой свинье, где раки зимуют!
 	notnow = "SVM_7_NOTNOW";	//Оставь меня в покое!
-	runcoward = "SVM_7_RunCoward";	//Ты еще не знаешь, на что я способен!
+	runcoward = "SVM_7_RunCoward";	//Мы еще встретимся!
 	getoutofhere = "SVM_7_GetOutOfHere";	//Прочь!
 	whyareyouinhere = "SVM_7_WhyAreYouInHere";	//Что тебе нужно здесь?!
 	yesgooutofhere = "SVM_7_YesGoOutOfHere";	//Прекрати!
@@ -1693,7 +1693,7 @@ instance SVM_10(C_SVM)
 	goodmonsterkill = "SVM_10_GoodMonsterKill";	//Да! Вот как нужно разбираться с этими тварями!
 	goodkill = "SVM_10_GoodKill";	//Эта свинья получила по заслугам!
 	notnow = "SVM_10_NOTNOW";	//Оставь меня в покое!
-	runcoward = "SVM_10_RunCoward";	//Ты еще не знаешь, на что я способен!
+	runcoward = "SVM_10_RunCoward";	//Мы еще встретимся!
 	getoutofhere = "SVM_10_GetOutOfHere";	//Прочь!
 	whyareyouinhere = "SVM_10_WhyAreYouInHere";	//Что тебе нужно здесь?!
 	yesgooutofhere = "SVM_10_YesGoOutOfHere";	//Да, проваливай!

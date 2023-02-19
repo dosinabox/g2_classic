@@ -884,6 +884,16 @@ func void dia_babo_kap3_haveyourdocs_iwantmore_notenough()
 func void dia_babo_kap3_haveyourdocs_iwantmore_thatsenough()
 {
 	AI_Output(other,self,"DIA_Babo_Kap3_HaveYourDocs_IWantMore_ThatsEnough_15_00");	//Договорились.
+	if(Npc_HasItems(other,itwr_babosdocs_mis) >= 1)
+	{
+		b_giveinvitems(other,self,itwr_babosdocs_mis,1);
+	}
+	else
+	{
+		b_giveinvitems(other,self,itwr_babospinup_mis,1);
+		b_giveinvitems(other,self,itwr_babosletter_mis,1);
+	};
+	b_usefakescroll();
 	AI_Output(self,other,"DIA_Babo_Kap3_HaveYourDocs_IWantMore_ThatsEnough_03_01");	//Вот деньги, и свиток.
 	CreateInvItems(self,itsc_mediumheal,1);
 	CreateInvItems(self,itmi_gold,121);

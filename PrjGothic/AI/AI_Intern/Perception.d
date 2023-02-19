@@ -32,7 +32,7 @@ func void perception_set_normal()
 {
 	self.senses = SENSE_HEAR | SENSE_SEE;
 	self.senses_range = PERC_DIST_ACTIVE_MAX;
-	if(Npc_KnowsInfo(self,1) || c_npcisgateguard(self))
+	if(Npc_CheckInfo(self,1) || c_npcisgateguard(self))
 	{
 		Npc_SetPercTime(self,0.3);
 	}

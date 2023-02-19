@@ -16,15 +16,15 @@ func void B_TeleportBySpell(var int level,var string waypoint)
 
 func int Teleport_Spell_Logic_Common(var int manainvested)
 {
-	if(self.attribute[ATR_MANA] >= SPL_COST_TELEPORT)
+	if(self.attribute[ATR_MANA] < SPL_COST_TELEPORT)
 	{
-		if(manainvested == 0)
-		{
-			return SPL_NEXTLEVEL;
-		};
-		return SPL_SENDCAST;
+		return SPL_SENDSTOP;
 	};
-	return SPL_SENDSTOP;
+	if(manainvested == 0)
+	{
+		return SPL_NEXTLEVEL;
+	};
+	return SPL_SENDCAST;
 };
 
 instance SPELL_TELEPORT(C_SPELL_PROTO)
@@ -41,44 +41,45 @@ instance SPELL_TELEPORT(C_SPELL_PROTO)
 
 func void spell_cast_teleport()
 {
-	self.attribute[ATR_MANA] -= SPL_COST_TELEPORT;
-	if(Npc_GetActiveSpell(self) == SPL_PALTELEPORTSECRET)
+	var int activeSpell;
+	activeSpell = Npc_GetActiveSpell(self);
+	if(activeSpell == SPL_PALTELEPORTSECRET)
 	{
 		B_TeleportBySpell(NEWWORLD_ZEN,"NW_PAL_SECRETCHAMBER");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTSEAPORT)
+	}
+	else if(activeSpell == SPL_TELEPORTSEAPORT)
 	{
 		B_TeleportBySpell(NEWWORLD_ZEN,"HAFEN");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTMONASTERY)
+	}
+	else if(activeSpell == SPL_TELEPORTMONASTERY)
 	{
 		B_TeleportBySpell(NEWWORLD_ZEN,"KLOSTER");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTFARM)
+	}
+	else if(activeSpell == SPL_TELEPORTFARM)
 	{
 		B_TeleportBySpell(NEWWORLD_ZEN,"BIGFARM");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTXARDAS)
+	}
+	else if(activeSpell == SPL_TELEPORTXARDAS)
 	{
 		B_TeleportBySpell(NEWWORLD_ZEN,"XARDAS");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTPASSNW)
+	}
+	else if(activeSpell == SPL_TELEPORTPASSNW)
 	{
 		B_TeleportBySpell(NEWWORLD_ZEN,"LEVELCHANGE");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTPASSOW)
+	}
+	else if(activeSpell == SPL_TELEPORTPASSOW)
 	{
 		B_TeleportBySpell(OLDWORLD_ZEN,"SPAWN_MOLERAT02_SPAWN01");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTOC)
+	}
+	else if(activeSpell == SPL_TELEPORTOC)
 	{
 		B_TeleportBySpell(OLDWORLD_ZEN,"OC_MAGE_CENTER");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTOWDEMONTOWER)
+	}
+	else if(activeSpell == SPL_TELEPORTOWDEMONTOWER)
 	{
 		B_TeleportBySpell(OLDWORLD_ZEN,"DT_E3_03");
-	};
-	if(Npc_GetActiveSpell(self) == SPL_TELEPORTTAVERNE)
+	}
+	else if(activeSpell == SPL_TELEPORTTAVERNE)
 	{
 		B_TeleportBySpell(NEWWORLD_ZEN,"NW_TAVERNE_04");
 	};

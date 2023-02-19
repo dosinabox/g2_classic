@@ -116,7 +116,7 @@ func void dia_rangar_ork_info()
 {
 	AI_Output(other,self,"DIA_Rangar_Ork_15_00");	//А как ситуация с орками?
 	AI_Output(self,other,"DIA_Rangar_Ork_07_01");	//Нет причин для беспокойства - городская стража и паладины держат ситуацию под контролем.
-	AI_Output(self,other,"DIA_Rangar_Ork_07_02");	//Иди спокойно домой и оставь нашу работу нам. Мы отвечаем за город и его граждан. -ИК-
+	AI_Output(self,other,"DIA_Rangar_Ork_07_02");	//Иди спокойно домой и оставь нашу работу нам. Мы отвечаем за город и его граждан. Ик!
 };
 
 
@@ -147,8 +147,8 @@ func void dia_rangar_bier_info()
 		if(KNOWS_PALADINS == FALSE)
 		{
 			AI_Output(self,other,"DIA_Rangar_Bier_07_01");	//Ах, нет ничего лучше, чем холодный эль.
-			CreateInvItems(self,itfo_booze,1);
-			b_useitem(self,itfo_booze);
+			CreateInvItems(self,itfo_beer,1);
+			b_useitem(self,itfo_beer);
 			AI_Output(other,self,"DIA_Rangar_Bier_15_02");	//Ты что-то хотел сказать насчет орков...
 			AI_Output(self,other,"DIA_Rangar_Bier_07_03");	//Ах, да, точно. Орки не представляют угрозы для города.
 			AI_Output(self,other,"DIA_Rangar_Bier_07_04");	//Они застряли в Долине Рудников. А Проход охраняется паладинами.
@@ -159,8 +159,8 @@ func void dia_rangar_bier_info()
 		else if((KNOWS_PALADINS == 1) && (KNOWS_ORK == TRUE))
 		{
 			AI_Output(self,other,"DIA_Rangar_Bier_07_06");	//Я бы не отказался еще от одной пинты.
-			CreateInvItems(self,itfo_booze,1);
-			b_useitem(self,itfo_booze);
+			CreateInvItems(self,itfo_beer,1);
+			b_useitem(self,itfo_beer);
 			AI_Output(other,self,"DIA_Rangar_Bier_15_07");	//Говорят, орков видели у самого города.
 			AI_Output(self,other,"DIA_Rangar_Bier_07_08");	//Да, точно, опасный орк около города. Этот орк - настоящий монстр. Он скоро нападет на город.
 			AI_Output(self,other,"DIA_Rangar_Bier_07_09");	//Послушай, мы порвем этого орка как тузик тряпку, если он подойдет близко к городу. Понял?
@@ -171,8 +171,8 @@ func void dia_rangar_bier_info()
 		else
 		{
 			AI_Output(self,other,"DIA_Rangar_Bier_07_11");	//Горький эль - однозначно лучший.
-			CreateInvItems(self,itfo_booze,1);
-			b_useitem(self,itfo_booze);
+			CreateInvItems(self,itfo_beer,1);
+			b_useitem(self,itfo_beer);
 			AI_Output(self,other,"DIA_Rangar_Bier_07_12");	//Знаешь, нечасто встретишь парня, готового угостить тебя пивом. Ты наш человек.
 			Info_ClearChoices(dia_rangar_bier);
 		};

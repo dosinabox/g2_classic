@@ -115,7 +115,7 @@ instance ITAT_BUGMANDIBLES(C_ITEM)
 
 instance ITAT_CLAW(C_ITEM)
 {
-	name = "Челюсти";
+	name = "Когти";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = VALUE_CLAW;

@@ -1117,7 +1117,7 @@ func void dia_andre_found_peck_info()
 	AI_Output(self,other,"DIA_Andre_FOUND_PECK_08_01");	//Да, он уже вернулся на свой пост и приступил к выполнению своих обязанностей. Где ты нашел его?
 	Info_ClearChoices(dia_andre_found_peck);
 	Info_AddChoice(dia_andre_found_peck,"Я случайно наткнулся на него в городе.",dia_andre_found_peck_somewhere);
-	Info_AddChoice(dia_andre_found_peck,"В 'Красном Фонаре'...",dia_andre_found_peck_redlight);
+	Info_AddChoice(dia_andre_found_peck,"Он был в 'Красном Фонаре'.",dia_andre_found_peck_redlight);
 };
 
 func void dia_andre_found_peck_somewhere()
@@ -1131,7 +1131,7 @@ func void dia_andre_found_peck_somewhere()
 
 func void dia_andre_found_peck_redlight()
 {
-	AI_Output(other,self,"DIA_Andre_FOUND_PECK_REDLIGHT_15_00");	//Он был в "Красном Фонаре".
+	AI_Output(other,self,"DIA_Andre_FOUND_PECK_REDLIGHT_15_00");	//Он был в 'Красном Фонаре'.
 	AI_Output(self,other,"DIA_Andre_FOUND_PECK_REDLIGHT_08_01");	//То есть он развлекался с девочками вместо того, чтобы выполнять свои обязанности.
 	AI_Output(self,other,"DIA_Andre_FOUND_PECK_REDLIGHT_08_02");	//Я думаю, мне нужно серьезно поговорить с ним.
 	b_giveplayerxp(XP_FOUNDPECK * 2);
