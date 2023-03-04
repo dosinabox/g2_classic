@@ -132,7 +132,7 @@ func void dia_biff_di_undeaddrgdead_info()
 	AI_Output(self,other,"DIA_Biff_DI_UNDEADDRGDEAD_07_00");	//Что, все кончено?
 	AI_Output(other,self,"DIA_Biff_DI_UNDEADDRGDEAD_15_01");	//Вроде бы да.
 	AI_Output(self,other,"DIA_Biff_DI_UNDEADDRGDEAD_07_02");	//И теперь, могу я...
-	AI_Output(other,self,"DIA_Biff_DI_UNDEADDRGDEAD_15_03");	//Ты можешь перевернуть весь остров, ели хочешь.
+	AI_Output(other,self,"DIA_Biff_DI_UNDEADDRGDEAD_15_03");	//Ты можешь перевернуть весь остров, если хочешь.
 	AI_Output(self,other,"DIA_Biff_DI_UNDEADDRGDEAD_07_04");	//Отлично.
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"PlunderTempel");
@@ -145,13 +145,14 @@ instance DIA_BIFF_DI_PLUNDER(C_INFO)
 	nr = 5;
 	condition = dia_biff_di_plunder_condition;
 	information = dia_biff_di_plunder_info;
+	permanent = TRUE;
 	important = TRUE;
 };
 
 
 func int dia_biff_di_plunder_condition()
 {
-	if(Npc_IsInState(self,zs_talk) && Npc_KnowsInfo(other,dia_biff_di_plunder) && Npc_IsDead(undeaddragon))
+	if(Npc_IsInState(self,zs_talk) && Npc_KnowsInfo(other,dia_biff_di_undeaddrgdead))
 	{
 		return TRUE;
 	};

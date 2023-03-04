@@ -54,7 +54,7 @@ var int topic_end_sylviokillicegolem;
 
 const string TOPIC_ANGARSAMULETT = "јмулет јнгара";
 const string TOPIC_JANBECOMESSMITH = "ян и кузница";
-const string TOPIC_FERROSSWORD = "ћеч ‘ероса";
+const string TOPIC_FERROSSWORD = "ћеч ‘ерроса";
 const string TOPIC_DRACHENEIERNEORAS = "«елье Ќеораса из драконих €иц";
 const string TOPIC_DRACHENEIER = "ƒраконьи €йца";
 

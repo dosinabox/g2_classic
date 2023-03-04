@@ -138,7 +138,7 @@ func void dia_djg_715_ferros_oldcamp_info()
 	MIS_FERROSSWORD = LOG_RUNNING;
 	Log_CreateTopic(TOPIC_FERROSSWORD,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_FERROSSWORD,LOG_RUNNING);
-	b_logentry(TOPIC_FERROSSWORD,"Ферос потерял свой меч из-за орков. Это было глупостью.");
+	b_logentry(TOPIC_FERROSSWORD,"Феррос потерял свой меч из-за орков. Это было глупостью.");
 };
 
 func void dia_djg_715_ferros_oldcamp_no()
@@ -160,7 +160,7 @@ func void dia_djg_715_ferros_oldcamp_yes()
 	AI_Output(other,self,"DIA_DJG_715_Ferros_OldCamp_Yes_15_00");	//Я найду твой меч.
 	AI_Output(self,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_01");	//Это было бы великолепно. Тебе стоит поискать у большого утеса на юге.
 	AI_Output(self,other,"DIA_DJG_715_Ferros_OldCamp_Yes_01_02");	//Я, вероятно, потерял его там, около палаток орков.
-	b_logentry(TOPIC_FERROSSWORD,"Похоже, Ферос потерял свой меч на высоком утесе на юге, там, где находятся палатки орков.");
+	b_logentry(TOPIC_FERROSSWORD,"Похоже, Феррос потерял свой меч на высоком утесе на юге, там, где находятся палатки орков.");
 	Info_ClearChoices(dia_djg_715_ferros_oldcamp);
 };
 
@@ -235,8 +235,8 @@ func void b_ferros_ferrosanysword_yes2()
 {
 	AI_Output(self,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_00");	//Спасибо. Я твой должник.
 	AI_Output(self,other,"DIA_DJG_715_Ferros_FerrosAnySword_Blade_Yes2_01_01");	//Взамен я покажу тебе парочку трюков, которые позволят тебе лучше использовать силу и ловкость в бою.
-	Log_CreateTopic(TOPIC_TEACHER,LOG_NOTE);
-	b_logentry(TOPIC_TEACHER,"Ферос может повысить мои силу и ловкость.");
+	Log_CreateTopic(TOPIC_TEACHER_OC,LOG_NOTE);
+	b_logentry(TOPIC_TEACHER_OC,"Феррос может повысить мои силу и ловкость.");
 };
 
 func void b_ferros_ferrosanysword_no()

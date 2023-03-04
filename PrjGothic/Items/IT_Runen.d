@@ -458,7 +458,7 @@ instance ITRU_SUMGOBSKEL(C_ITEM)
 	text[0] = NAME_MAG_CIRCLE;
 	count[0] = mag_circle;
 	text[1] = NAME_MANAKOSTEN;
-	count[1] = SPL_COST_SUMMONSKELETON;
+	count[1] = SPL_COST_SUMMONGOBLINSKELETON;
 	text[2] = "Блуждающие кости мертвых гоблинов.";
 	text[5] = NAME_VALUE;
 	count[5] = value;
@@ -520,7 +520,7 @@ instance ITRU_SUMWOLF(C_ITEM)
 	text[0] = NAME_MAG_CIRCLE;
 	count[0] = mag_circle;
 	text[1] = NAME_MANAKOSTEN;
-	count[1] = SPL_COST_SUMMONSKELETON;
+	count[1] = SPL_COST_SUMMONWOLF;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };
@@ -736,7 +736,7 @@ instance ITRU_SUMGOL(C_ITEM)
 	text[0] = NAME_MAG_CIRCLE;
 	count[0] = mag_circle;
 	text[1] = NAME_MANAKOSTEN;
-	count[1] = SPL_COST_SUMMONSKELETON;
+	count[1] = SPL_COST_SUMMONGOLEM;
 	text[5] = NAME_VALUE;
 	count[5] = value;
 };

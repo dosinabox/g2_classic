@@ -519,7 +519,7 @@ func void dia_vatras_di_undeaddragondead_info()
 	if(DIA_VATRAS_DI_UNDEADDRAGONDEAD_ONETIME == FALSE)
 	{
 		AI_Output(self,other,"DIA_Vatras_DI_UndeadDragonDead_05_01");	//Я знаю, я чувствую это.
-		AI_Output(self,other,"DIA_Vatras_DI_UndeadDragonDead_05_02");	//Ты нанес удар Белиару, от которого он не скоро оправится.
+		AI_Output(self,other,"DIA_Vatras_DI_UndeadDragonDead_05_02");	//Ты нанес удар Белиару, от которого он скоро не оправится.
 		if(hero.guild == GIL_DJG)
 		{
 			AI_Output(other,self,"DIA_Vatras_DI_UndeadDragonDead_15_03");	//Могу я теперь успокоиться, или у вас, у магов, есть еще один скелет в шкафу, которого нужно изгнать из этого мира?

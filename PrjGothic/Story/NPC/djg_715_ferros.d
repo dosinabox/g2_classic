@@ -1,7 +1,7 @@
 
 instance DJG_715_FERROS(NPC_DEFAULT)
 {
-	name[0] = "װונמס";
+	name[0] = "װוננמס";
 	guild = GIL_DJG;
 	id = 715;
 	voice = 1;

@@ -76,3 +76,9 @@ func void rtn_runstopass_713()
 	ta_runtowp(23,0,8,0,"START");
 };
 
+func void rtn_tot_713()
+{
+	ta_stand_guarding(8,0,23,0,"TOT");
+	ta_stand_guarding(23,0,8,0,"TOT");
+};
+

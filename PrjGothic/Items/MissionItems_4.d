@@ -24,7 +24,7 @@ instance ITAM_MANA_ANGAR_MIS(C_ITEM)
 
 instance ITMW_1H_FERROSSWORD_MIS(C_ITEM)
 {
-	name = "Ìוק Ôונמסא";
+	name = "Ìוק Ôוננמסא";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD | ITEM_MISSION;
 	material = MAT_METAL;

@@ -44,7 +44,7 @@ func void dia_landstreicher_hallo_info()
 	Info_ClearChoices(dia_landstreicher_hallo);
 	Info_AddChoice(dia_landstreicher_hallo,"Мне нужно идти.",dia_landstreicher_hallo_weg);
 	Info_AddChoice(dia_landstreicher_hallo,"А куда первый побежал?",dia_landstreicher_hallo_wo);
-	Info_AddChoice(dia_landstreicher_hallo,"Что это за парень?",dia_landstreicher_hallo_wer);
+	Info_AddChoice(dia_landstreicher_hallo,"А кто это был?",dia_landstreicher_hallo_wer);
 };
 
 func void dia_landstreicher_hallo_wo()
@@ -61,7 +61,7 @@ func void dia_landstreicher_hallo_wer()
 	if(hero.guild == GIL_KDF)
 	{
 		AI_Output(self,other,"DIA_Landstreicher_HALLO_wer_09_03");	//Только посмотри на их дурацкое одеяние. Я бы не хотел быть пойманным на улице ночью в такой одежке. (смеется)
-		Info_AddChoice(dia_landstreicher_hallo,"Дай мне это доказательство, и я позабочусь, чтобы за вами больше никто не охотился.",dia_landstreicher_hallo_wer_vorsicht);
+		Info_AddChoice(dia_landstreicher_hallo,"Попридержи язык. Я сам был послушником в монастыре.",dia_landstreicher_hallo_wer_vorsicht);
 	};
 };
 

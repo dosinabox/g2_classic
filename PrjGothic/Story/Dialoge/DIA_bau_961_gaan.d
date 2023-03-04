@@ -477,10 +477,13 @@ func void dia_gaan_jagd_info()
 		AI_Output(self,other,"DIA_Gaan_JAGD_03_01");	//Последнее животное, которое мне удалось убить, была большая крыса. Дела идут совсем плохо.
 		AI_Output(self,other,"DIA_Gaan_JAGD_03_02");	//Вот уже несколько дней какой-то фыркающий зверь бродит здесь.
 		AI_Output(self,other,"DIA_Gaan_JAGD_03_03");	//Он не только убивает все, что движется, он мешает моей работе.
-		Log_CreateTopic(TOPIC_GAANSCHNAUBI,LOG_MISSION);
-		Log_SetTopicStatus(TOPIC_GAANSCHNAUBI,LOG_RUNNING);
-		b_logentry(TOPIC_GAANSCHNAUBI,"Этот фыркающий зверь доставляет неприятности охотнику Гаан. Если я не уничтожу этого зверя, он не сможет охотиться.");
-		MIS_GAAN_SNAPPER = LOG_RUNNING;
+		if(MIS_GAAN_SNAPPER == FALSE)
+		{
+			Log_CreateTopic(TOPIC_GAANSCHNAUBI,LOG_MISSION);
+			Log_SetTopicStatus(TOPIC_GAANSCHNAUBI,LOG_RUNNING);
+			b_logentry(TOPIC_GAANSCHNAUBI,"Этот фыркающий зверь доставляет неприятности охотнику Гаан. Если я не уничтожу этого зверя, он не сможет охотиться.");
+			MIS_GAAN_SNAPPER = LOG_RUNNING;
+		};
 	}
 	else if(KAPITEL >= 3)
 	{

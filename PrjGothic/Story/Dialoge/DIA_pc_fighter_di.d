@@ -152,7 +152,7 @@ func void dia_gorn_di_undeaddragondead_info()
 		};
 		DIA_GORN_DI_UNDEADDRAGONDEAD_ONETIME = TRUE;
 	};
-	if(Npc_KnowsInfo(other,dia_biff_di_plunder))
+	if(Npc_KnowsInfo(other,dia_biff_di_undeaddrgdead))
 	{
 		AI_Output(self,other,"DIA_Gorn_DI_UndeadDragonDead_12_08");	//Кто-то должен сказать об этом Биффу, иначе он сгниет на этом острове.
 		if(Npc_IsDead(biff_di) == FALSE)
