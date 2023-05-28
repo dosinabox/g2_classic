@@ -440,6 +440,39 @@ func void b_givedeathinv(var C_NPC slf)
 		CreateInvItems(slf,itmi_gold,22);
 		CreateInvItems(slf,itpo_health_01,1);
 	};
+	if((slf.aivar[AIV_MM_REAL_ID] == ID_ORCCOMMANDER) && (ORC_RANDOMIZER == 0))
+	{
+		CreateInvItems(slf,itat_wolffur,1);
+		CreateInvItems(slf,itpo_health_03,1);
+		CreateInvItems(slf,itfomutton,2);
+	}
+	else if((slf.aivar[AIV_MM_REAL_ID] == ID_ORCCOMMANDER) && (ORC_RANDOMIZER == 1))
+	{
+		CreateInvItems(slf,itmi_goldring,1);
+		CreateInvItems(slf,itpo_health_01,1);
+		CreateInvItems(slf,itmi_gold,26);
+	}
+	else if((slf.aivar[AIV_MM_REAL_ID] == ID_ORCCOMMANDER) && (ORC_RANDOMIZER == 2))
+	{
+		CreateInvItems(slf,itsc_lightheal,1);
+		CreateInvItems(slf,itlstorch,2);
+		CreateInvItems(slf,itat_teeth,1);
+	}
+	else if((slf.aivar[AIV_MM_REAL_ID] == ID_ORCCOMMANDER) && (ORC_RANDOMIZER <= 5))
+	{
+		CreateInvItems(slf,itmi_gold,19);
+		CreateInvItems(slf,itpo_health_02,1);
+	}
+	else if((slf.aivar[AIV_MM_REAL_ID] == ID_ORCCOMMANDER) && (ORC_RANDOMIZER == 6))
+	{
+		CreateInvItems(slf,itat_wargfur,1);
+		CreateInvItems(slf,itpl_strength_herb_01,1);
+	}
+	else if((slf.aivar[AIV_MM_REAL_ID] == ID_ORCCOMMANDER) && (ORC_RANDOMIZER <= 9))
+	{
+		CreateInvItems(slf,itmi_gold,22);
+		CreateInvItems(slf,itpo_health_01,1);
+	};
 	if((slf.aivar[AIV_MM_REAL_ID] == ID_DEMON) && (ORC_RANDOMIZER == 0))
 	{
 		CreateInvItems(slf,itpo_mana_03,2);

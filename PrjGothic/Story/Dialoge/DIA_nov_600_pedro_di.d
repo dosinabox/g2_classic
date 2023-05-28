@@ -39,6 +39,8 @@ func int dia_pedro_di_you_condition()
 func void dia_pedro_di_you_info()
 {
 	AI_Output(other,self,"DIA_Pedro_DI_YOU_15_00");	//Предатель! Наконец-то я нашел тебя.
+	SCFOUNDPEDRO = TRUE;
+	b_checklog();
 	if((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 	{
 		AI_Output(other,self,"DIA_Pedro_DI_YOU_15_01");	//Ты можешь не надеяться, что я пощажу тебя, потому что я паладин.

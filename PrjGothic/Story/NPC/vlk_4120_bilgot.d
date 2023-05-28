@@ -30,14 +30,14 @@ func void rtn_start_4120()
 
 func void rtn_followtoocbridge_4120()
 {
-	ta_follow_player(8,0,23,0,"START");
-	ta_follow_player(23,0,8,0,"START");
+	ta_follow_player(8,0,23,0,"NEWMINE");
+	ta_follow_player(23,0,8,0,"NEWMINE");
 };
 
 func void rtn_fleeoutofow_4120()
 {
-	ta_sit_campfire(8,0,23,0,"START");
-	ta_sit_campfire(23,0,8,0,"START");
+	ta_sit_campfire(8,0,23,0,"OW_PATH_1_17");
+	ta_sit_campfire(23,0,8,0,"OW_PATH_1_17");
 };
 
 func void rtn_tot_4120()
