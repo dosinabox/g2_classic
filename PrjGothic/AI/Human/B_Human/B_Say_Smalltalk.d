@@ -2,6 +2,7 @@
 func void b_say_smalltalk()
 {
 	var int random;
+	var int choice;
 	random = Hlp_Random(120);
 	if(random < 5)
 	{
@@ -89,15 +90,96 @@ func void b_say_smalltalk()
 	}
 	else if(random < 110)
 	{
-		b_say(self,self,"$SMALLTALK22");
+		if((self.guild == GIL_NOV) || (self.guild == GIL_PAL) || (self.guild == GIL_KDF))
+		{
+			choice = Hlp_Random(2);
+			if(choice == 0)
+			{
+				b_say(self,self,"$SMALLTALK28");
+			}
+			else
+			{
+				b_say(self,self,"$SMALLTALK22");
+			};
+		}
+		else if((self.guild == GIL_BDT) || (self.guild == GIL_SLD) || (self.guild == GIL_DJG))
+		{
+			choice = Hlp_Random(2);
+			if(choice == 0)
+			{
+				b_say(self,self,"$SMALLTALK25");
+			}
+			else
+			{
+				b_say(self,self,"$SMALLTALK22");
+			};
+		}
+		else
+		{
+			b_say(self,self,"$SMALLTALK22");
+		};
 	}
 	else if(random < 115)
 	{
-		b_say(self,self,"$SMALLTALK23");
+		if((self.guild == GIL_NOV) || (self.guild == GIL_PAL) || (self.guild == GIL_KDF))
+		{
+			choice = Hlp_Random(2);
+			if(choice == 0)
+			{
+				b_say(self,self,"$SMALLTALK29");
+			}
+			else
+			{
+				b_say(self,self,"$SMALLTALK23");
+			};
+		}
+		else if((self.guild == GIL_BDT) || (self.guild == GIL_SLD) || (self.guild == GIL_DJG))
+		{
+			choice = Hlp_Random(2);
+			if(choice == 0)
+			{
+				b_say(self,self,"$SMALLTALK26");
+			}
+			else
+			{
+				b_say(self,self,"$SMALLTALK23");
+			};
+		}
+		else
+		{
+			b_say(self,self,"$SMALLTALK23");
+		};
 	}
-	else if(random <= 120)
+	else
 	{
-		b_say(self,self,"$SMALLTALK24");
+		if((self.guild == GIL_NOV) || (self.guild == GIL_PAL) || (self.guild == GIL_KDF))
+		{
+			choice = Hlp_Random(2);
+			if(choice == 0)
+			{
+				b_say(self,self,"$SMALLTALK30");
+			}
+			else
+			{
+				b_say(self,self,"$SMALLTALK24");
+			};
+		}
+		else if((self.guild == GIL_BDT) || (self.guild == GIL_SLD) || (self.guild == GIL_DJG))
+		{
+			choice = Hlp_Random(2);
+			if(choice == 0)
+			{
+				b_say(self,self,"$SMALLTALK27");
+			}
+			else
+			{
+				b_say(self,self,"$SMALLTALK24");
+			};
+		}
+		else
+		{
+			b_say(self,self,"$SMALLTALK24");
+		};
 	};
 };
 

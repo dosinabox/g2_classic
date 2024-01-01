@@ -373,7 +373,7 @@ func void dia_lehmar_buchweg_info()
 {
 	AI_Output(self,other,"DIA_Lehmar_Add_09_00");	//(с сожалением) Какой-то гнусный вор украл мой гроссбух...
 	AI_Output(self,other,"DIA_Lehmar_Add_09_01");	//Ты случайно не имеешь к этому отношения, нет?
-	AI_Output(self,other,"DIA_Addon_Lehmar_Add_15_02");	//(ухмыляется) Я? Нет.
+	AI_Output(other,self,"DIA_Addon_Lehmar_Add_15_02");	//(усмехается) Я? Нет.
 	AI_Output(self,other,"DIA_Lehmar_Add_09_03");	//Да-да, хорошо. Уходи отсюда...
 	AI_StopProcessInfos(self);
 };

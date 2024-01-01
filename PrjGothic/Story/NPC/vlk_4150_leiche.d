@@ -14,6 +14,7 @@ instance VLK_4150_LEICHE(NPC_DEFAULT)
 	attribute[ATR_HITPOINTS_MAX] = 1;
 	attribute[ATR_HITPOINTS] = 1;
 	fight_tactic = FAI_HUMAN_COWARD;
+	b_createambientinv(self);
 	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_B_NORMAL01,BODYTEX_B,itar_mil_l);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");

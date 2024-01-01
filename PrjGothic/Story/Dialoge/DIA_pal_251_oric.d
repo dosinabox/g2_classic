@@ -224,7 +224,7 @@ func void dia_oric_iamback_info()
 	}
 	else if(hero.guild == GIL_KDF)
 	{
-		AI_Output(self,other,"DIA_Oric_IAmBack_11_03");	//Я виду, ты стал магом. Мое почтение.
+		AI_Output(self,other,"DIA_Oric_IAmBack_11_03");	//Я вижу, ты стал магом. Мое почтение.
 	};
 	AI_Output(self,other,"DIA_Oric_IAmBack_11_04");	//Возможно, твое появление - добрый знак.
 };
