@@ -19,9 +19,12 @@ Story\Story_Globals.d
 Story\Npc_Globals.d
 Story\SVM.d
 Story\Text.d
+Story\B_Story\B_BuildDateString.d
+Story\B_Story\B_BuildFullVersionString.d
 Story\B_Story\C_NpcIsInQuarter.d
 Story\B_Story\b_addfightskill.d
 Story\NPC_Scripts\B_SetFightSkills.d
+Story\B_Story\C_CanRemoveKey.d
 Story\B_Story\b_raiseattribute.d
 Story\B_Story\b_logentry.d
 Story\B_Story\b_getdayplus.d

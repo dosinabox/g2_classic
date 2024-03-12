@@ -17,7 +17,6 @@ func int dia_rod_exit_condition()
 
 func void dia_rod_exit_info()
 {
-	AI_EquipBestMeleeWeapon(self);
 	AI_StopProcessInfos(self);
 };
 
@@ -80,7 +79,7 @@ func void dia_rod_wannalearn_info()
 	{
 		AI_Output(self,other,"DIA_Rod_WannaLearn_06_01");	//Я неплохой боец, но это не означает, что я хороший учитель.
 		AI_Output(self,other,"DIA_Rod_WannaLearn_06_02");	//И все же я думаю, я могу показать тебе основы боя двуручным оружием.
-		if(Npc_HasItems(self,itmw_2h_rod) == 0)
+		if(!Npc_HasItems(self,itmw_2h_rod))
 		{
 			AI_Output(self,other,"DIA_Rod_WannaLearn_06_03");	//Да, если ты отдашь мне назад мой меч.
 		}
@@ -179,7 +178,7 @@ func int dia_rod_wannajoin_condition()
 func void dia_rod_wannajoin_info()
 {
 	AI_Output(other,self,"DIA_Rod_WannaJoin_15_00");	//Я хочу присоединиться к наемникам!
-	if(Npc_HasItems(self,itmw_2h_rod) == 0)
+	if(!Npc_HasItems(self,itmw_2h_rod))
 	{
 		AI_Output(self,other,"DIA_Rod_WannaJoin_06_01");	//А как насчет того, чтобы сначала вернуть мне мой меч, а?
 	}
@@ -319,7 +318,7 @@ instance DIA_ROD_WETTE(C_INFO)
 
 func int dia_rod_wette_condition()
 {
-	if((self.aivar[AIV_DEFEATEDBYPLAYER] == FALSE) && (ROD_WETTEGEWONNEN == FALSE) && Npc_KnowsInfo(other,dia_rod_binstarkgenug) && (Npc_HasItems(self,itmw_2h_rod) > 0) && (ROD_WETTEANGENOMMEN == FALSE))
+	if((self.aivar[AIV_DEFEATEDBYPLAYER] == FALSE) && (ROD_WETTEGEWONNEN == FALSE) && Npc_KnowsInfo(other,dia_rod_binstarkgenug) && Npc_HasItems(self,itmw_2h_rod) && (ROD_WETTEANGENOMMEN == FALSE))
 	{
 		return TRUE;
 	};
@@ -355,14 +354,20 @@ func void dia_rod_wette_yes()
 		b_giveinvitems(self,other,itmw_2h_rod,1);
 		if(other.attribute[ATR_STRENGTH] >= 30)
 		{
-			AI_UnequipWeapons(other);
-			AI_EquipBestMeleeWeapon(other);
-			AI_ReadyMeleeWeapon(other);
+			if(Npc_HasReadiedMeleeWeapon(other) || Npc_HasReadiedRangedWeapon(other))
+			{
+				AI_RemoveWeapon(other);
+			};
+			AI_WaitTillEnd(other,self);
+			CreateInvItem(other,ItMw_2h_Rod_Fake);
+			AI_UseItem(other,ItMw_2h_Rod_Fake);
+			AI_Wait(other,0.5);
 			AI_Output(other,self,"DIA_Rod_Wette_Yes_15_04");	//Так достаточно?!
 			AI_Output(self,other,"DIA_Rod_Wette_Yes_06_05");	//(сбитый с толку) Похоже, ты побил меня.
 			AI_Output(self,other,"DIA_Rod_Wette_Yes_06_06");	//Я никак не ожидал от тебя такого. Ты не похож на человека, обладающего такой силой.
 			AI_Output(self,other,"DIA_Rod_Wette_Yes_06_07");	//Ну, похоже, я только что потерял 30 золотых монет. Держи.
 			b_giveinvitems(self,other,itmi_gold,60);
+			B_LogEntry(TOPIC_RODWETTE,"Я смог удержать меч Рода.");
 			ROD_WETTEGEWONNEN = TRUE;
 			b_giveplayerxp(XP_ROD);
 		}
@@ -370,11 +375,12 @@ func void dia_rod_wette_yes()
 		{
 			AI_Output(other,self,"DIA_Rod_Wette_Yes_15_08");	//Я не могу поднять это оружие.
 			AI_Output(self,other,"DIA_Rod_Wette_Yes_06_09");	//(смеется) Что я и говорил!
+			B_LogEntry(TOPIC_RODWETTE,"Я не смог удержать меч Рода.");
 		};
 		AI_Output(self,other,"DIA_Rod_Wette_Yes_06_10");	//А теперь, отдай мне мое оружие назад.
 		Info_ClearChoices(dia_rod_wette);
 		Info_AddChoice(dia_rod_wette,"Думаю, что нет...",dia_rod_wette_keepit);
-		Info_AddChoice(dia_rod_wette,"Вот держи.",dia_rod_wette_giveback);
+		Info_AddChoice(dia_rod_wette,"Вот, держи.",dia_rod_wette_giveback);
 	}
 	else
 	{
@@ -386,19 +392,9 @@ func void dia_rod_wette_yes()
 
 func void dia_rod_wette_giveback()
 {
-	AI_RemoveWeapon(other);
 	AI_Output(other,self,"DIA_Rod_Wette_GiveBack_15_00");	//Вот, держи.
-	Info_ClearChoices(dia_rod_wette);
-	Info_AddChoice(dia_rod_wette,"(Отдать оружие)",dia_rod_wette_giveback2);
-};
-
-func void dia_rod_wette_giveback2()
-{
 	b_giveinvitems(other,self,itmw_2h_rod,1);
-	if(ROD_WETTEGEWONNEN == FALSE)
-	{
-		AI_Output(self,other,"DIA_Rod_Wette_GiveBack_06_01");	//Да ты просто подлец после этого!
-	};
+	AI_EquipBestMeleeWeapon(self);
 	Info_ClearChoices(dia_rod_wette);
 };
 
@@ -407,6 +403,7 @@ func void dia_rod_wette_keepit()
 	AI_Output(other,self,"DIA_Rod_Wette_KeepIt_15_00");	//Думаю, что нет...
 	AI_Output(self,other,"DIA_Rod_Wette_KeepIt_06_01");	//(угрожающе) Что это значит?
 	AI_Output(other,self,"DIA_Rod_Wette_KeepIt_15_02");	//Лучше я подержу его у себя немного.
+	AI_Output(self,other,"DIA_Rod_Wette_GiveBack_06_01");	//Да ты просто подлец после этого!
 	AI_Output(self,other,"DIA_Rod_Wette_KeepIt_06_03");	//Ну, подожди, ублюдок!
 	Info_ClearChoices(dia_rod_wette);
 	AI_StopProcessInfos(self);
@@ -429,7 +426,7 @@ instance DIA_ROD_GIVEITBACK(C_INFO)
 
 func int dia_rod_giveitback_condition()
 {
-	if(Npc_HasItems(other,itmw_2h_rod) > 0)
+	if(Npc_HasItems(other,itmw_2h_rod))
 	{
 		return TRUE;
 	};
@@ -437,9 +434,24 @@ func int dia_rod_giveitback_condition()
 
 func void dia_rod_giveitback_info()
 {
+	var C_Item ReadyWeap;
+	if(Npc_HasReadiedMeleeWeapon(other))
+	{
+		ReadyWeap = Npc_GetReadiedWeapon(other);
+		if(Hlp_IsItem(ReadyWeap,itmw_2h_rod))
+		{
+			AI_DropItem(other,itmw_2h_rod);
+			AI_RemoveWeapon(other);
+		};
+	};
 	b_giveinvitems(other,self,itmw_2h_rod,1);
 	AI_Output(other,self,"DIA_Rod_GiveItBack_15_00");	//Вот, держи свой меч!
 	AI_Output(self,other,"DIA_Rod_GiveItBack_06_01");	//Вовремя!
+	if(Hlp_IsItem(ReadyWeap,itmw_2h_rod))
+	{
+		AI_TakeItem(self,ReadyWeap);
+	};
+	AI_EquipBestMeleeWeapon(self);
 	if(ROD_SCHWERTXPGIVEN == FALSE)
 	{
 		b_giveplayerxp(XP_AMBIENT);

@@ -168,7 +168,7 @@ instance DIA_DIEGOOW_RITTER(C_INFO)
 
 func int dia_diegoow_ritter_condition()
 {
-	if((KAPITEL == 2) && ((Npc_HasItems(pal_leiche4,itmi_oldcoin) == 0) || (Npc_HasItems(pal_leiche5,itmi_oldcoin) == 0)))
+	if(KAPITEL == 2)
 	{
 		return TRUE;
 	};

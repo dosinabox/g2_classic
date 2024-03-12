@@ -370,7 +370,7 @@ func void dia_orlan_mietefaellig_ja()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Orlan_MieteFaellig_ja_05_05");	//Ты что, пытаешься надуть меня? У даже тебя нет денег, чтобы заплатить за еду. Я проучу тебя, ах ты...
+		AI_Output(self,other,"DIA_Orlan_MieteFaellig_ja_05_05");	//Ты что, пытаешься надуть меня? У тебя даже нет денег, чтобы заплатить за еду. Я проучу тебя, ах ты...
 		AI_StopProcessInfos(self);
 		b_attack(self,other,AR_NONE,1);
 	};

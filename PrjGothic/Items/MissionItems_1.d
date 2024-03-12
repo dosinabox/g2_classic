@@ -86,6 +86,18 @@ instance ITMW_2H_ROD(C_ITEM)
 	count[5] = value;
 };
 
+instance ITMW_2H_ROD_FAKE(C_ITEM)
+{
+	name = "Двуручный меч Рода";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	material = MAT_METAL;
+	value = 0;
+	visual = "ItMw_035_2h_sld_sword_02.3DS";
+	scemeName = "INSPECTWEAPON";
+	description = name;
+};
+
 instance ITMI_CORAGONSSILBER(C_ITEM)
 {
 	name = "Серебро Корагона";

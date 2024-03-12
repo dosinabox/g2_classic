@@ -2,7 +2,6 @@
 func void startup_global()
 {
 	Game_InitEngintl();
-	FIX_VERSION_SAVE = FIX_VERSION_START;
 };
 
 func void init_global()
@@ -2210,6 +2209,10 @@ func void startup_newworld()
 	startup_newworld_part_trollarea_01();
 	startup_newworld_part_forest_01();
 	startup_newworld_part_pass_to_ow_01();
+	FIX_VERSION_SAVE = FIX_VERSION;
+	FIX_DATE_YEAR_SAVE = FIX_DATE_YEAR;
+	FIX_DATE_MONTH_SAVE = FIX_DATE_MONTH;
+	FIX_DATE_DAY_SAVE = FIX_DATE_DAY;
 	KAPITEL = 1;
 	PlayVideo("INTRO.BIK");
 };

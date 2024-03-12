@@ -378,17 +378,21 @@ func void dia_vatras_di_talente_circle_4()
 
 func void dia_vatras_di_talente_circle_5()
 {
-	AI_Output(self,other,"DIA_Vatras_DI_Talente_Circle_5_05_00");	//Теперь ты маг пятого Круга. Используй заклинания, изученные тобой, во благо.
+	if(b_teachmagiccircle(self,other,5))
+	{
+		AI_Output(self,other,"DIA_Vatras_DI_Talente_Circle_5_05_00");	//Теперь ты маг пятого Круга. Используй заклинания, изученные тобой, во благо.
+	};
 	Info_ClearChoices(dia_vatras_di_talente);
-	b_teachmagiccircle(self,other,5);
 };
 
 func void dia_vatras_di_talente_circle_6()
 {
-	AI_Output(self,other,"DIA_Vatras_DI_Talente_Circle_6_05_00");	//Ты достиг самых высоких вершин в магии.
-	AI_Output(self,other,"DIA_Vatras_DI_Talente_Circle_6_05_01");	//Пусть руку твою направляет разум, а твои человеческие слабости будут под глубоким контролем. Они не смогут затмить твой взор.
+	if(b_teachmagiccircle(self,other,6))
+	{
+		AI_Output(self,other,"DIA_Vatras_DI_Talente_Circle_6_05_00");	//Ты достиг самых высоких вершин в магии.
+		AI_Output(self,other,"DIA_Vatras_DI_Talente_Circle_6_05_01");	//Пусть руку твою направляет разум, а твои человеческие слабости будут под глубоким контролем. Они не смогут затмить твой взор.
+	};
 	Info_ClearChoices(dia_vatras_di_talente);
-	b_teachmagiccircle(self,other,6);
 };
 
 func void dia_vatras_di_talente_potion_health_01()

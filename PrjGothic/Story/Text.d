@@ -668,6 +668,7 @@ const string PRINT_NEWLOGENTRY = "Новая запись в дневнике";
 const string PRINT_TELEPORTTOOFARAWAY = "Слишком далеко";
 const string PRINT_BIFFSANTEIL = "Доля Биффа: ";
 const string PRINT_BIFFGOLD = " золотых";
+const string PRINT_Used = "Использовано: ";
 var string text_innoseye_setting;
 const string TEXT_INNOSEYE_SETTING_BROKEN = "Оправа этого амулета повреждена.";
 const string TEXT_INNOSEYE_SETTING_REPAIRED = "Оправа этого амулета в целости и сохранности.";

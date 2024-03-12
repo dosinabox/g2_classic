@@ -30,7 +30,7 @@ instance ITMW_1H_MACE_L_01(C_ITEM)
 	material = MAT_WOOD;
 	value = VALUE_SCHUERHAKEN;
 	damagetotal = DAMAGE_SCHUERHAKEN;
-	damagetype = DAM_EDGE;
+	damagetype = DAM_BLUNT;
 	range = RANGE_SCHUERHAKEN;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = CONDITION_SCHUERHAKEN;

@@ -107,7 +107,7 @@ func void b_enter_oldworld_kapitel_4()
 			}
 			else
 			{
-				b_killnpc(engrom);
+				b_killnpc(vlk_4131_engrom);
 			};
 			ENGROMISGONE = TRUE;
 		};
@@ -128,7 +128,7 @@ func void b_enter_oldworld_kapitel_4()
 			};
 			CreateInvItems(sengrath,itrw_sengrathsarmbrust_mis,1);
 			SENGRATH_MISSING = TRUE;
-			b_killnpc(sengrath);
+			b_killnpc(pal_267_sengrath);
 		};
 		Wld_InsertNpc(djg_730_toterdrachenjaeger,"OC1");
 		b_killnpc(djg_730_toterdrachenjaeger);

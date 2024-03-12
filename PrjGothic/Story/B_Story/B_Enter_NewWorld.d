@@ -87,26 +87,18 @@ func void b_enter_newworld_kapitel_3()
 		{
 			b_startotherroutine(hodges,"BENNETWEG");
 		};
-		if(Npc_IsDead(diegonw))
-		{
-			Wld_InsertNpc(pc_thief_nw,"NW_CITY_ENTRANCE_01");
-			b_startotherroutine(diegonw,"START");
-		};
-		if(Npc_IsDead(gornnw_vor_djg))
-		{
-			Wld_InsertNpc(pc_fighter_nw_vor_djg,"BIGFARM");
-			b_startotherroutine(gornnw_vor_djg,"START");
-		};
 		if(!Npc_IsDead(lares))
 		{
 			b_startotherroutine(lares,"START");
 		};
+		Wld_InsertNpc(pc_thief_nw,"NW_CITY_ENTRANCE_01");
+		Wld_InsertNpc(pc_fighter_nw_vor_djg,"BIGFARM");
 		Wld_InsertNpc(dmt_dementorambientspeaker,"NW_PASS_GATE_02");
 		b_killnpc(pal_297_ritter);
 		b_killnpc(pal_298_ritter);
 		if(hero.guild == GIL_KDF)
 		{
-			b_killnpc(ulf);
+			b_killnpc(nov_602_ulf);
 		};
 		Wld_InsertNpc(giant_bug,"FP_ROAM_MEDIUMFOREST_KAP2_01");
 		Wld_InsertNpc(giant_bug,"FP_ROAM_MEDIUMFOREST_KAP2_02");
@@ -204,7 +196,7 @@ func void b_enter_newworld_kapitel_3()
 		};
 		if((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{
-			b_startotherroutine(hilda,"Krank");
+			b_startotherroutine(hilda,"KRANK");
 		};
 		if((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
