@@ -27,7 +27,7 @@ instance ITMW_1H_MACE_L_01(C_ITEM)
 	name = "Кочерга";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
-	material = MAT_WOOD;
+	material = MAT_METAL;
 	value = VALUE_SCHUERHAKEN;
 	damagetotal = DAMAGE_SCHUERHAKEN;
 	damagetype = DAM_BLUNT;

@@ -47,6 +47,14 @@ func void dia_rod_hello_info()
 		{
 			AI_Output(self,other,"DIA_Rod_Hello_06_02");	//„то, дл€ теб€ не нашлось места в монастыре?
 		};
+	}
+	else if(Wld_IsRaining())
+	{
+		B_Say(self,other,"$WEATHER");
+	}
+	else
+	{
+		B_Say(self,other,"$ABS_GOOD");
 	};
 };
 
