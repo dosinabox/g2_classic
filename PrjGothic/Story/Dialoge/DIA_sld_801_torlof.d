@@ -296,10 +296,7 @@ func void dia_torlof_ruf_info()
 	else if((rod.aivar[AIV_DEFEATEDBYPLAYER] == TRUE) || (ROD_WETTEGEWONNEN == TRUE))
 	{
 		AI_Output(self,other,"DIA_Torlof_RUF_01_11");	//Похоже, тебе удалось убедить Рода, что ты достаточно силен.
-		if(rod.aivar[AIV_DEFEATEDBYPLAYER] == FALSE)
-		{
-			POINTS_SLD = POINTS_SLD + 1;
-		};
+		POINTS_SLD = POINTS_SLD + 1;
 	}
 	else if(rod.aivar[AIV_TALKEDTOPLAYER] == TRUE)
 	{

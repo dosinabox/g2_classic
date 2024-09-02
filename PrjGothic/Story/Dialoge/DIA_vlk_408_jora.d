@@ -498,7 +498,7 @@ func void dia_jora_buyalriksschwert_info()
 	else
 	{
 		AI_Output(self,other,"DIA_Jora_BUYAlriksSchwert_08_05");	//У тебя недостаточно золота. Но не волнуйся - я попридержу пока этот меч. Заходи позже, если хочешь...
-//		AI_Output(self,other,"DIA_Jora_BUYAlriksSchwert_08_03");	//You can always do that - for 50 gold pieces it's yours.	
+//		AI_Output(self,other,"DIA_Jora_BUYAlriksSchwert_08_03");	//You can always do that - for 50 gold pieces it's yours.
 	};
 };
 

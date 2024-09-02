@@ -3,7 +3,7 @@ var int evt_undeaddragondead_endsituation_onetime;
 
 func void evt_undeaddragondead_endsituation()
 {
-	if((evt_undeaddragondead_endsituation_onetime == FALSE) && Npc_IsDead(dragon_undead))
+	if((evt_undeaddragondead_endsituation_onetime == FALSE) && Npc_IsDead(undeaddragon))
 	{
 		ANGAR_DI_PARTY = LOG_SUCCESS;
 		b_startotherroutine(angar_di,"FireDragonIsland");

@@ -228,7 +228,7 @@ func void dia_pedro_di_perm_info()
 			b_giveplayerxp(XP_AMBIENT);
 			PEDRODI_FLEE = LOG_SUCCESS;
 		}
-		else if(Npc_IsDead(dragon_undead))
+		else if(Npc_IsDead(undeaddragon))
 		{
 			AI_Output(self,other,"DIA_Pedro_DI_PERM_09_04");	//Я полностью измотан.
 			AI_Output(other,self,"DIA_Pedro_DI_PERM_15_05");	//Поспи немного. Скоро мы опять выйдем в море.

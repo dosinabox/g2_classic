@@ -111,11 +111,11 @@ func int dia_andre_cantharfalle_condition()
 
 func void dia_andre_cantharfalle_info()
 {
-	if(ANDRE_STECKBRIEF == FALSE)
+	if((PABLO_ANDREMELDEN == TRUE) && !Npc_IsDead(pablo) && (ANDRE_STECKBRIEF == FALSE))
 	{
 		b_andre_steckbrief();
 	};
-	if((ANDRE_CANTHARFALLE == FALSE) && (MIS_CANTHARS_KOMPROBRIEF_DAY <= (Wld_GetDay() - 2)))
+	if((MIS_CANTHARS_KOMPROBRIEF == LOG_RUNNING) && (MIS_CANTHARS_KOMPROBRIEF_DAY <= (Wld_GetDay() - 2)) && (ANDRE_CANTHARFALLE == FALSE))
 	{
 		b_andre_cantharfalle();
 	};

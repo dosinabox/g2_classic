@@ -360,7 +360,7 @@ func void dia_jarvis_howmanyleft_info()
 	};
 	if((fester.aivar[AIV_DEFEATEDBYPLAYER] == TRUE) || (fester.aivar[AIV_KILLEDBYPLAYER] == TRUE))
 	{
-		if(MIS_FESTER_KILLBUGS == LOG_OBSOLETE)
+		if(MIS_FESTER_KILLBUGS == LOG_SUCCESS)
 		{
 			AI_Output(other,self,"DIA_Jarvis_HowManyLeft_15_06");	//Фестер пытался провести меня - это была его ошибка.
 		}

@@ -266,7 +266,7 @@ func void dia_angar_djg_anwerben_info()
 	AI_Output(self,other,"DIA_Angar_DJG_ANWERBEN_04_01");	//Почему бы и нет. Помощь никогда не помешает.
 	if(DJG_ANGAR_SENTTOSTONES == FALSE)
 	{
-		Info_AddChoice(dia_angar_djg_anwerben,"Я должен идти.",dia_angar_djg_anwerben_gehen);
+		Info_AddChoice(dia_angar_djg_anwerben,"Мне нужно идти.",dia_angar_djg_anwerben_gehen);
 		Info_AddChoice(dia_angar_djg_anwerben,"Где ты собираешься искать?",dia_angar_djg_anwerben_wo);
 		Info_AddChoice(dia_angar_djg_anwerben,"Когда ты отправляешься в путь?",dia_angar_djg_anwerben_wann);
 	};

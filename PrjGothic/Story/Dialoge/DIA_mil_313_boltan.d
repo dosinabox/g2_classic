@@ -6,7 +6,7 @@ instance DIA_BOLTAN_EXIT(C_INFO)
 	condition = dia_boltan_exit_condition;
 	information = dia_boltan_exit_info;
 	permanent = TRUE;
-	description = "ћне нужно идти.";
+	description = DIALOG_ENDE;
 };
 
 
