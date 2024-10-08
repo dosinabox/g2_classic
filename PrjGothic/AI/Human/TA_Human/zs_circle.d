@@ -19,7 +19,6 @@ func int zs_circle_loop()
 		if(Npc_GetStateTime(self) > randy)
 		{
 			Wld_PlayEffect("FX_EarthQuake",self,self,0,0,0,FALSE);
-			Wld_PlayEffect("SFX_Circle",self,self,0,0,0,FALSE);
 			Npc_SetStateTime(self,0);
 			Wld_PlayEffect("spellFX_INCOVATION_RED",self,self,0,0,0,FALSE);
 			AI_PlayAni(self,"T_PRACTICEMAGIC5");
@@ -32,7 +31,6 @@ func int zs_circle_loop()
 		{
 			Npc_SetStateTime(self,0);
 			Wld_PlayEffect("FX_EarthQuake",self,self,0,0,0,FALSE);
-			Wld_PlayEffect("SFX_Circle",self,self,0,0,0,FALSE);
 			AI_PlayAni(self,"T_PRACTICEMAGIC5");
 			if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(xardas))
 			{

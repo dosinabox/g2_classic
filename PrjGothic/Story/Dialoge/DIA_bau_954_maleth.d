@@ -366,7 +366,7 @@ func void dia_maleth_probleme_schafe_probleme()
 	Info_AddChoice(dia_maleth_probleme,"Эй, полегче на поворотах, приятель.",dia_maleth_probleme_schafe_probleme_drohen);
 	if((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 	{
-		Info_AddChoice(dia_maleth_probleme,"В чем твоя проблема?",dia_maleth_probleme_schafe_probleme_geldher_auftrag);
+		Info_AddChoice(dia_maleth_probleme,"Что у тебя за проблемы?",dia_maleth_probleme_schafe_probleme_geldher_auftrag);
 	};
 };
 

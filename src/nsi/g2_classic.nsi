@@ -3,7 +3,6 @@
 ###################################
 
 !include "MUI.nsh"
-!include "FileFunc.nsh"
 
 ###################################
 ##            Основное           ##
@@ -11,20 +10,20 @@
 
 !define MOD_VERSION "1.6"
 !define MOD_DATE "8.1"
-!define MOD_NAME_SYS "g2_classic"
+!define MOD_NAME "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
+!define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"
 !define MOD_AUTHOR "D36, Kor Angar"
 !define MOD_LINK "https://worldofplayers.ru/threads/41796"
 !define MOD_SIZE "170000"
 !define MOD_HEADER "logo.bmp"
 !define MOD_PIC "pic.bmp"
 
-!define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"
-!define INSTALLER_NAME "${MOD_NAME_SYS}_v${MOD_VERSION}_install"
-!define UNINSTALLER_NAME "${MOD_NAME_SYS}_uninstall"
-!define REGISTRY_PATH "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME_SYS}"
+!define INSTALLER_NAME "${MOD_NAME}_v${MOD_VERSION}_install"
+!define UNINSTALLER_NAME "${MOD_NAME}_uninstall"
+!define REGISTRY_PATH "Software\Microsoft\Windows\CurrentVersion\Uninstall\${MOD_NAME}"
 
-Name "${MOD_NAME_SYS}_v${MOD_VERSION}"
+Name "${MOD_NAME}_v${MOD_VERSION}"
 OutFile "${INSTALLER_NAME}.exe"
 
 VIProductVersion "${MOD_DETAILED_VERSION}"
@@ -40,8 +39,8 @@ SetCompressor lzma
 ##      Настройки интерфейса     ##
 ###################################
 
-!define MUI_ICON "${MOD_NAME_SYS}.ico"
-!define MUI_UNICON "${MOD_NAME_SYS}.ico"
+!define MUI_ICON "${MOD_NAME}.ico"
+!define MUI_UNICON "${MOD_NAME}.ico"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_BITMAP "${MOD_HEADER}"
 !define MUI_HEADERIMAGE_UNBITMAP "${MOD_HEADER}"
@@ -105,33 +104,33 @@ BrandingText " "
 
 Section "Основные файлы" SecMain
 	SectionIn RO
-	CreateDirectory "$INSTDIR\saves_${MOD_NAME_SYS}\current"
+	CreateDirectory "$INSTDIR\saves_${MOD_NAME}\current"
 
 	SetOutPath "$INSTDIR\Data\ModVDF"
-	File "${MOD_NAME_SYS}.mod"
-	File "${MOD_NAME_SYS}_ru.mod"
+	File "${MOD_NAME}.mod"
+	File "${MOD_NAME}_ru.mod"
 
 	SetOutPath "$INSTDIR\system"
-	File "${MOD_NAME_SYS}.ico"
-	File "${MOD_NAME_SYS}.ini"
-	File "${MOD_NAME_SYS}.rtf"
+	File "${MOD_NAME}.ico"
+	File "${MOD_NAME}.ini"
+	File "${MOD_NAME}.rtf"
 
 	SetOutPath "$INSTDIR\_work\Data\Video"
-	File "${MOD_NAME_SYS}_credits.bik"
+	File "${MOD_NAME}_credits.bik"
 
 	SetOutPath $INSTDIR
-	File "${MOD_NAME_SYS}_readme.txt"
+	File "${MOD_NAME}_readme.txt"
 
 	WriteUninstaller "$INSTDIR\${UNINSTALLER_NAME}.exe"
 
-	WriteRegStr HKCU "Software\${MOD_NAME_SYS}" "InstallLocation" $INSTDIR
+	WriteRegStr HKCU "Software\${MOD_NAME}" "InstallLocation" "$INSTDIR"
 	WriteRegStr HKLM "${REGISTRY_PATH}" "DisplayName" "${MOD_NAME_RU} (v${MOD_VERSION})"
 	WriteRegStr HKLM "${REGISTRY_PATH}" "DisplayVersion" "${MOD_DETAILED_VERSION}"
-	WriteRegStr HKLM "${REGISTRY_PATH}" "InstallLocation" $INSTDIR
-	WriteRegStr HKLM "${REGISTRY_PATH}" "UninstallString" "$INSTDIR\${UNINSTALLER_NAME}.exe"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "InstallLocation" "$INSTDIR"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "UninstallString" "$\"$INSTDIR\${UNINSTALLER_NAME}.exe$\""
 	WriteRegStr HKLM "${REGISTRY_PATH}" "HelpLink" "${MOD_LINK}"
 	WriteRegStr HKLM "${REGISTRY_PATH}" "Publisher" "${MOD_AUTHOR}"
-	WriteRegStr HKLM "${REGISTRY_PATH}" "DisplayIcon" "$INSTDIR\system\${MOD_NAME_SYS}.ico"
+	WriteRegStr HKLM "${REGISTRY_PATH}" "DisplayIcon" "$INSTDIR\system\${MOD_NAME}.ico"
 	WriteRegDWORD HKLM "${REGISTRY_PATH}" "EstimatedSize" "${MOD_SIZE}"
 SectionEnd
 
@@ -141,21 +140,20 @@ SectionEnd
 
 Section "Un.Удалить модификацию" SecUninstall_Main
 	SectionIn RO
-	Delete "$INSTDIR\${MOD_NAME_SYS}_readme.txt"
-	Delete "$INSTDIR\system\${MOD_NAME_SYS}.ico"
-	Delete "$INSTDIR\system\${MOD_NAME_SYS}.ini"
-	Delete "$INSTDIR\system\${MOD_NAME_SYS}.rtf"
-	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}.mod"
-	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_ru.mod"
-	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME_SYS}_hotfix.mod"
-	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits.bik"
-	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME_SYS}_credits2.bik"
+	Delete "$INSTDIR\${MOD_NAME}_readme.txt"
+	Delete "$INSTDIR\system\${MOD_NAME}.ico"
+	Delete "$INSTDIR\system\${MOD_NAME}.ini"
+	Delete "$INSTDIR\system\${MOD_NAME}.rtf"
+	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME}.mod"
+	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME}_ru.mod"
+	Delete "$INSTDIR\Data\ModVDF\${MOD_NAME}_ru_hotfix.mod"
+	Delete "$INSTDIR\_work\Data\Video\${MOD_NAME}_credits.bik"
 	Delete "$INSTDIR\${UNINSTALLER_NAME}.exe"
 	DeleteRegKey HKLM "${REGISTRY_PATH}"
 SectionEnd
 
 Section /o "Un.Удалить сохранения" SecUninstall_Saves
-	RMDir /r "$INSTDIR\saves_${MOD_NAME_SYS}"
+	RMDir /r "$INSTDIR\saves_${MOD_NAME}"
 SectionEnd
 
 ###################################
@@ -165,7 +163,7 @@ SectionEnd
 Function .onInit
 	SetSilent normal
 	!insertmacro MUI_LANGDLL_DISPLAY
-	ReadRegStr $INSTDIR HKCU "Software\${MOD_NAME_SYS}" "InstallLocation"
+	ReadRegStr $INSTDIR HKCU "Software\${MOD_NAME}" "InstallLocation"
 	StrCmp $INSTDIR "" "" InstallPathIsFound
 	StrCpy $INSTDIR "$PROGRAMFILES\Akella Games\Gothic II"
 	InstallPathIsFound:

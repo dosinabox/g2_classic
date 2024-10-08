@@ -542,7 +542,7 @@ func void dia_andre_asktojoin_info()
 	if(Npc_KnowsInfo(other,dia_andre_message))
 	{
 		AI_Output(self,other,"DIA_Andre_AskToJoin_08_01");	//Хорошо. Нам нужны люди. И меня не интересует, почему ты решил присоединиться к нам.
-		AI_Output(self,other,"DIA_Andre_AskToJoin_08_02");	//Если ты поступишь на службы к паладинам, я помогу тебе добиться аудиенции у лорда Хагена.
+		AI_Output(self,other,"DIA_Andre_AskToJoin_08_02");	//Если ты поступишь на службу к паладинам, я помогу тебе добиться аудиенции у лорда Хагена.
 	}
 	else
 	{
@@ -621,7 +621,7 @@ instance DIA_ANDRE_GUILDOFTHIEVES(C_INFO)
 	condition = dia_andre_guildofthieves_condition;
 	information = dia_andre_guildofthieves_info;
 	permanent = FALSE;
-	description = "В чем твоя проблема?";
+	description = "Что у тебя за проблема?";
 };
 
 

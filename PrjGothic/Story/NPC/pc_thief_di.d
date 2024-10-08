@@ -31,8 +31,8 @@ func void rtn_start_31()
 
 func void rtn_undeaddragondead_31()
 {
-	ta_stand_wp(8,0,23,0,"WP_UNDEAD_RIGHT_DOWN_01");
-	ta_stand_wp(23,0,8,0,"WP_UNDEAD_RIGHT_DOWN_01");
+	ta_stand_guarding(8,0,23,0,"WP_UNDEAD_MIDDLE_01");
+	ta_stand_guarding(23,0,8,0,"WP_UNDEAD_MIDDLE_01");
 };
 
 func void rtn_sittingshipdi_31()
