@@ -1027,7 +1027,7 @@ func void dia_lord_hagen_cornelius_info()
 	{
 		AI_Output(other,self,"DIA_Lord_Hagen_Cornelius_15_10");	//Он сбежал.
 		AI_Output(self,other,"DIA_Lord_Hagen_Cornelius_04_11");	//Рано или поздно, он объявится. И тогда мы арестуем его.
-		b_startotherroutine(cornelius,"FLED");
+		b_startotherroutine(cornelius,"FLEE");
 	}
 	else
 	{

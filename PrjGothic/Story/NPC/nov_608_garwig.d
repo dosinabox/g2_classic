@@ -29,6 +29,6 @@ instance NOV_608_GARWIG(NPC_DEFAULT)
 func void rtn_start_608()
 {
 	ta_guard_hammer(8,0,23,0,"NW_MONASTERY_SANCTUM_02");
-	ta_guard_hammer(23,0,8,0,"NW_MONASTERY_SNACTUM_02");
+	ta_guard_hammer(23,0,8,0,"NW_MONASTERY_SANCTUM_02");
 };
 
