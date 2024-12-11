@@ -86,3 +86,23 @@ func void player_trade_not_enough_gold()
 	Print(PRINT_TRADE_NOT_ENOUGH_GOLD);
 };
 
+func void player_ranged_no_ammo()
+{
+	var C_Item rangedWeapon;
+	if(Npc_IsPlayer(self))
+	{
+		if(Npc_HasEquippedRangedWeapon(self))
+		{
+			rangedWeapon = Npc_GetEquippedRangedWeapon(self);
+			if(rangedWeapon.flags & ITEM_CROSSBOW)
+			{
+				Print(PRINT_Ranged_No_Ammo_Crossbow);
+			}
+			else if(rangedWeapon.flags & ITEM_BOW)
+			{
+				Print(PRINT_Ranged_No_Ammo_Bow);
+			};
+		};
+	};
+};
+

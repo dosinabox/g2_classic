@@ -273,10 +273,13 @@ func void dia_ehnim_moleratfett_was()
 	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_12_02");	//Ќу ладно, все равно уже € проболталс€. ¬ лесу, неподалеку от фермы, ¬ино устроил секретную винокурню.
 	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_12_03");	//Ќесколько дней назад, он попросил мен€ дать ему что-нибудь, чтобы смазать механизм решетки, установленной там.
 	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_12_04");	//ѕоследнее врем€ шли дожди, и она заржавела. Ћебедку заклинило, и он не может подн€ть решетку.
-	Log_CreateTopic(TOPIC_FOUNDVINOSKELLEREI,LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_FOUNDVINOSKELLEREI,LOG_RUNNING);
-	b_logentry(TOPIC_FOUNDVINOSKELLEREI,"Ёним рассказал мне, что ¬ино содержит секретный винокуренный завод в лесу около фермы јкила. Ќо механизм, открывающий дверь, заклинило, и починить его можно только смазав шестеренки жиром крысокрота.");
-	Info_AddChoice(dia_ehnim_moleratfett,"»? “ы достал смазку?",dia_ehnim_moleratfett_was_fett);
+	if(FOUNDVINOSKELLEREI == FALSE)
+	{
+		Log_CreateTopic(TOPIC_FOUNDVINOSKELLEREI,LOG_MISSION);
+		Log_SetTopicStatus(TOPIC_FOUNDVINOSKELLEREI,LOG_RUNNING);
+		b_logentry(TOPIC_FOUNDVINOSKELLEREI,"Ёним рассказал мне, что ¬ино содержит секретный винокуренный завод в лесу около фермы јкила. Ќо механизм, открывающий дверь, заклинило, и починить его можно только смазав шестеренки жиром крысокрота.");
+		Info_AddChoice(dia_ehnim_moleratfett,"»? “ы достал смазку?",dia_ehnim_moleratfett_was_fett);
+	};
 };
 
 func void dia_ehnim_moleratfett_was_fett()
