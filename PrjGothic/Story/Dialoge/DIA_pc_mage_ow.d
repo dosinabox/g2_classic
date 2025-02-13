@@ -68,7 +68,7 @@ func void dia_miltenow_hello_no()
 	AI_Output(self,other,"DIA_MiltenOW_Hello_NO_03_01");	//Ты через многое прошел, да?
 	b_milten_gorndiegolester();
 	Info_ClearChoices(dia_miltenow_hello);
-	Info_AddChoice(dia_miltenow_hello,"Как здесь обстоят дела?",dia_miltenow_hello_friends);
+	Info_AddChoice(dia_miltenow_hello,"Конечно же, я помню парней.",dia_miltenow_hello_friends);
 	Info_AddChoice(dia_miltenow_hello,"Эти имена ни о чем мне не говорят.",dia_miltenow_hello_forget);
 };
 

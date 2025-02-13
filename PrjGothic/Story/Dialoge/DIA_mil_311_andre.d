@@ -1483,7 +1483,7 @@ instance DIA_ANDRE_CORNELIUS_LIAR(C_INFO)
 
 func int dia_andre_cornelius_liar_condition()
 {
-	if((CORNELIUS_THREATENBYMILSC == TRUE) && (CORNELIUSFLEE != TRUE))
+	if((CORNELIUS_THREATENBYMILSC == TRUE) && (CORNELIUSFLEE != TRUE) && (MIS_RESCUEBENNET == LOG_RUNNING))
 	{
 		return TRUE;
 	};

@@ -23,6 +23,6 @@ instance BAU_981_GROM(NPC_DEFAULT)
 func void rtn_start_981()
 {
 	ta_saw(8,0,23,0,"NW_CASTLEMINE_TROLL_04_C");
-	ta_sleep(23,0,8,0,"NW_CASTLEMINE_TROLL_04");
+	ta_sleep(23,0,8,0,"NW_CASTLEMINE_TROLL_04_B");
 };
 

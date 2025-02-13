@@ -47,7 +47,7 @@ func void dia_orlan_wein_info()
 	AI_Output(self,other,"DIA_Orlan_Wein_05_02");	//Я уже договорился о цене с мастером Гораксом. Я дам тебе 100 золотых монет прямо сейчас.
 	Info_ClearChoices(dia_orlan_wein);
 	Info_AddChoice(dia_orlan_wein,"Хорошо, давай мне это золото.",dia_orlan_wein_ja);
-	Info_AddChoice(dia_orlan_wein,"Ты пытаешься надуть меня?",dia_orlan_wein_nein);
+	Info_AddChoice(dia_orlan_wein,"Ты пытаешься надуть меня? Оно стоит 240 монет.",dia_orlan_wein_nein);
 };
 
 func void dia_orlan_wein_ja()
@@ -81,9 +81,7 @@ func void dia_orlan_wein_nie()
 
 func void dia_orlan_wein_okay()
 {
-	var string text;
-	text = ConcatStrings("4",PRINT_ITEMSERHALTEN);
-	PrintScreen(text,-1,-1,FONT_SCREENSMALL,2);
+	AI_PrintScreen("4 свитка получено",-1,YPOS_ItemTaken,FONT_ScreenSmall,2);
 	b_giveinvitems(self,other,itmi_gold,100);
 	AI_Output(other,self,"DIA_Orlan_Wein_Okay_15_00");	//Хм, звучит заманчиво. Давай сюда эти свитки.
 	AI_Output(self,other,"DIA_Orlan_Wein_Okay_05_01");	//Вот твои свитки и золото.

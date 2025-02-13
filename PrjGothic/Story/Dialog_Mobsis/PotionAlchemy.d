@@ -171,7 +171,7 @@ instance PC_ITPO_MANA_03(C_INFO)
 	condition = pc_itpo_mana_03_condition;
 	information = pc_itpo_mana_03_info;
 	permanent = TRUE;
-	description = "Элексир маны (2 огненных корня и 1 луговой горец)";
+	description = "Эликсир маны (2 огненных корня и 1 луговой горец)";
 };
 
 

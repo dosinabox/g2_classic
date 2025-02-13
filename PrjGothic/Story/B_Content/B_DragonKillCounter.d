@@ -39,6 +39,10 @@ func void b_dragonkillcounter(var C_NPC current_dragon)
 	};
 	if(MIS_KILLEDDRAGONS == 4)
 	{
+		if((DJG_BIFFPARTY == TRUE) && !Npc_IsDead(biff))
+		{
+			DJG_BIFFSURVIVEDLASTDRAGON = TRUE;
+		};
 		MIS_ALLDRAGONSDEAD = TRUE;
 	};
 	if(current_dragon.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD)
