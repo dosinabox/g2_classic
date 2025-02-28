@@ -34,7 +34,10 @@ instance DIA_GORNOW_HELLO(C_INFO)
 
 func int dia_gornow_hello_condition()
 {
-	return TRUE;
+	if(Npc_IsInState(self,zs_talk))
+	{
+		return TRUE;
+	};
 };
 
 func void dia_gornow_hello_info()
