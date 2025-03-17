@@ -261,6 +261,8 @@ func void dia_cipherdjg_swampdragondead_info()
 };
 
 
+var int DIA_CipherDJG_WHATNEXT_Once;
+
 instance DIA_CIPHERDJG_WHATNEXT(C_INFO)
 {
 	npc = djg_703_cipher;
@@ -284,7 +286,11 @@ func void dia_cipherdjg_whatnext_info()
 	AI_Output(other,self,"DIA_CipherDJG_WHATNEXT_15_00");	//Болотный дракон мертв! Что ты будешь делать дальше?
 	AI_Output(self,other,"DIA_CipherDJG_WHATNEXT_07_01");	//Понятия не имею. Я еще об этом не думал. А ты теперь можешь вернуться в Хоринис как герой.
 	AI_Output(self,other,"DIA_CipherDJG_WHATNEXT_07_02");	//Ручаюсь, на этом можно сделать состояние. Подумай над этим.
-	b_logentry(TOPIC_DRAGONHUNTER,"Сифер думает, что теперь, когда болотный дракон мертв, он может заработать кучу денег как великий 'герой'. Что ж, посмотрим.");
+	if(DIA_CipherDJG_WHATNEXT_Once == FALSE)
+	{
+		b_logentry(TOPIC_DRAGONHUNTER,"Сифер думает, что теперь, когда болотный дракон мертв, он может заработать кучу денег как великий 'герой'. Что ж, посмотрим.");
+		DIA_CipherDJG_WHATNEXT_Once = TRUE;
+	};
 	AI_StopProcessInfos(self);
 };
 

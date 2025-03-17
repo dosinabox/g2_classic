@@ -69,18 +69,27 @@ func void evt_crypt_final()
 	};
 };
 
-func void evt_crypt_room_01_triggerentrance()
+func void evt_crypt_01_entrance()
 {
-	crypt_skeleton_room_01.aivar[AIV_ENEMYOVERRIDE] = FALSE;
+	if(!Npc_IsDead(crypt_skeleton_room_01))
+	{
+		crypt_skeleton_room_01.aivar[AIV_ENEMYOVERRIDE] = FALSE;
+	};
 };
 
-func void evt_crypt_room_02_triggerentrance()
+func void evt_crypt_02_entrance()
 {
-	crypt_skeleton_room_02.aivar[AIV_ENEMYOVERRIDE] = FALSE;
+	if(!Npc_IsDead(crypt_skeleton_room_02))
+	{
+		crypt_skeleton_room_02.aivar[AIV_ENEMYOVERRIDE] = FALSE;
+	};
 };
 
-func void evt_crypt_room_03_triggerentrance()
+func void evt_crypt_03_entrance()
 {
-	crypt_skeleton_room_03.aivar[AIV_ENEMYOVERRIDE] = FALSE;
+	if(!Npc_IsDead(crypt_skeleton_room_03))
+	{
+		crypt_skeleton_room_03.aivar[AIV_ENEMYOVERRIDE] = FALSE;
+	};
 };
 
