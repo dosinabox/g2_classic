@@ -24,7 +24,7 @@ func void pc_sleep(var int t)
 		hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 		hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
 	};
-	printglobals(PD_ITEM_MOBSI);
+//	printglobals(PD_ITEM_MOBSI);
 	Npc_SendPassivePerc(hero,PERC_ASSESSENTERROOM,NULL,hero);
 };
 

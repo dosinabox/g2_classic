@@ -643,8 +643,8 @@ func void b_enter_newworld_kapitel_5()
 	};
 	if((MIS_OCGATEOPEN == TRUE) && (PAL_SCHIFFSWACHE_EXCHANGE_ONETIME == FALSE))
 	{
-		b_startotherroutine(pal_212_schiffswache,"ShipFree");
-		b_startotherroutine(pal_213_schiffswache,"ShipFree");
+		b_startotherroutine(schiffswache_212,"ShipFree");
+		b_startotherroutine(schiffswache_213,"ShipFree");
 		PAL_SCHIFFSWACHE_EXCHANGE_ONETIME = TRUE;
 		MIS_SHIPISFREE = TRUE;
 	};
