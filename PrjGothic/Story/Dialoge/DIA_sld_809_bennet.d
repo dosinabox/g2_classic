@@ -209,7 +209,7 @@ func void dia_bennet_wannasmith_info()
 	AI_Output(self,other,"DIA_Bennet_WannaSmith_06_01");	//Конечно.
 	AI_Output(self,other,"DIA_Bennet_WannaSmith_06_02");	//Впрочем, это обойдется тебе в некоторую сумму. Скажем, 30 золотых.
 	Info_ClearChoices(dia_bennet_wannasmith);
-	Info_AddChoice(dia_bennet_wannasmith,"Может быть, позже.",dia_bennet_wannasmith_later);
+	Info_AddChoice(dia_bennet_wannasmith,"Ну, может быть, позже.",dia_bennet_wannasmith_later);
 	Info_AddChoice(dia_bennet_wannasmith,"Отлично. Вот твои 30 золотых.",dia_bennet_wannasmith_pay);
 };
 
@@ -232,7 +232,7 @@ func void dia_bennet_wannasmith_pay()
 
 func void dia_bennet_wannasmith_later()
 {
-	AI_Output(other,self,"DIA_Bennet_WannaSmith_Later_15_00");	//Может быть, позже.
+	AI_Output(other,self,"DIA_Bennet_WannaSmith_Later_15_00");	//Ну, может быть, позже.
 	Info_ClearChoices(dia_bennet_wannasmith);
 };
 

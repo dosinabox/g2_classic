@@ -27,7 +27,7 @@ Name "${MOD_NAME}_v${MOD_VERSION}"
 OutFile "${INSTALLER_NAME}.exe"
 
 VIProductVersion "${MOD_DETAILED_VERSION}"
-VIAddVersionKey "FileVersion" "${INSTALLER_VERSION}"
+VIAddVersionKey "FileVersion" "${MOD_VERSION}"
 VIAddVersionKey "LegalCopyright" "© ${MOD_AUTHOR}"
 VIAddVersionKey "FileDescription" "${MOD_NAME_RU}"
 VIAddVersionKey "ProductVersion" "${MOD_VERSION}"

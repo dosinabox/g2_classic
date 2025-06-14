@@ -36,16 +36,19 @@ func void zs_mm_attack()
 func int zs_mm_attack_loop()
 {
 	Npc_GetTarget(self);
-	if(Npc_GetDistToWP(self,"OC_RAMP_07") <= 500)
+	if(CurrentLevel == OLDWORLD_ZEN)
 	{
-		Npc_ClearAIQueue(self);
-		if(self.guild != GIL_DRAGON)
+		if(Npc_GetDistToWP(self,"OC_RAMP_07") <= 500)
 		{
-			AI_Standup(self);
+			Npc_ClearAIQueue(self);
+			if(self.guild != GIL_DRAGON)
+			{
+				AI_Standup(self);
+			};
+			AI_PlayAni(self,"T_WARN");
+			self.aivar[AIV_PURSUITEND] = TRUE;
+			return LOOP_END;
 		};
-		AI_PlayAni(self,"T_WARN");
-		self.aivar[AIV_PURSUITEND] = TRUE;
-		return LOOP_END;
 	};
 	if(Npc_GetDistToNpc(self,other) > FIGHT_DIST_CANCEL)
 	{
