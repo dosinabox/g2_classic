@@ -78,6 +78,7 @@ func void b_givetradeinv(var C_NPC slf)
 	trd_gaertner = Hlp_GetNpc(vlk_411_gaertner);
 	trd_lutero = Hlp_GetNpc(vlk_404_lutero);
 	b_clearruneinv(slf);
+	B_ClearFakeItems(slf);
 	if(slf.aivar[AIV_CHAPTERINV] <= KAPITEL)
 	{
 		if(Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(trd_engor))

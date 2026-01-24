@@ -4,7 +4,7 @@ func void b_stopmagicsleep()
 	Npc_PercDisable(self,PERC_ASSESSDAMAGE);
 	if(!Npc_IsPlayer(self))
 	{
-		b_say_overlay(self,other,"$WHATWASTHAT");
+		b_say_overlay(self,hero,"$WHATWASTHAT");
 	}
 	else
 	{
@@ -15,7 +15,7 @@ func void b_stopmagicsleep()
 
 func void b_assessmagicsleeptalk()
 {
-	b_say(self,other,"$YOUDISTURBEDMYSLUMBER");
+	b_say(self,hero,"$YOUDISTURBEDMYSLUMBER");
 	AI_StartState(self,zs_observeplayer,1,"");
 };
 
@@ -58,8 +58,15 @@ func void zs_magicsleep_end()
 func void b_stopmagicflee()
 {
 	Npc_PercDisable(self,PERC_ASSESSDAMAGE);
-	Npc_SetTarget(self,other);
-	AI_StartState(self,zs_flee,0,"");
+	Npc_SetTarget(self,hero);
+	if(self.guild < GIL_SEPERATOR_HUM)
+	{
+		AI_StartState(self,zs_flee,0,"");
+	}
+	else
+	{
+		AI_StartState(self,zs_mm_flee,0,"");
+	};
 };
 
 func void zs_magicflee()

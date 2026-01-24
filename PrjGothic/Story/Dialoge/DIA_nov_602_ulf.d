@@ -392,9 +392,11 @@ func void dia_ulf_abrechnung_rauch()
 {
 	AI_Output(other,self,"DIA_Ulf_Abrechnung_Rauch_15_00");	//У тебя нет ничего покурить?
 	AI_Output(self,other,"DIA_Ulf_Abrechnung_Rauch_03_01");	//Тебе повезло. Как раз у меня кое-что есть.
-	b_giveinvitems(self,other,itmi_joint,1);
-	b_useitem(other,itmi_joint);
 	AI_Output(self,other,"DIA_Ulf_Abrechnung_Rauch_03_02");	//Давай, закурим.
+	b_giveinvitems(self,other,itmi_joint,1);
+	CreateInvItems(self,itmi_joint,1);
+	b_useitem(self,itmi_joint);
+	b_useitem(other,itmi_joint);
 	AI_StopProcessInfos(self);
 	b_attack(self,other,AR_KILL,0);
 };

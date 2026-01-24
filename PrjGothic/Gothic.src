@@ -23,6 +23,7 @@ Story\B_Story\B_BuildDateString.d
 Story\B_Story\B_BuildFullVersionString.d
 Story\B_Story\C_NpcIsInQuarter.d
 Story\B_Story\b_addfightskill.d
+Story\NPC_Scripts\B_RemoveEveryInvItem.d
 Story\NPC_Scripts\B_SetFightSkills.d
 Story\B_Story\C_CanRemoveKey.d
 Story\B_Story\b_raiseattribute.d
@@ -66,6 +67,7 @@ Items\MissionItems_3.d
 Items\MissionItems_4.d
 Items\MissionItems_5.d
 Items\MissionItems_6.d
+Story\B_Story\B_ClearFakeItems.d
 AI\Monster\B_Monster\B_MM_DeSynchronize.d
 AI\Human\C_Human\C_NpcIsGateGuard.d
 AI\AI_Intern\Perception.d

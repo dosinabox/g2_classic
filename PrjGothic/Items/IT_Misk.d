@@ -333,6 +333,19 @@ func void use_joint()
 };
 
 
+instance ITMI_JOINT_FAKE(C_ITEM)
+{
+	name = "Косяк из болотной травы";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 0;
+	visual = "ItMi_Joint.3ds";
+	material = MAT_LEATHER;
+	scemename = "JOINT";
+	description = name;
+	inv_zbias = 200;
+};
+
 instance ITMI_PACKET(C_ITEM)
 {
 	name = "Пакет";
