@@ -475,32 +475,31 @@ func int dia_rosi_angekommen_condition()
 
 func void dia_rosi_angekommen_info()
 {
-	var int xpforboth;
 	AI_Output(self,other,"DIA_Rosi_ANGEKOMMEN_17_00");	//Дальше я сама найду дорогу.
 	AI_Output(self,other,"DIA_Rosi_ANGEKOMMEN_17_01");	//Спасибо. Я даже не знаю, что бы я делала без тебя.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
-	till.aivar[AIV_PARTYMEMBER] = FALSE;
 	MIS_BRINGROSIBACKTOSEKOB = LOG_OBSOLETE;
 	MIS_ROSISFLUCHT = LOG_SUCCESS;
 	AI_Output(self,other,"DIA_Rosi_ANGEKOMMEN_17_02");	//Пожалуйста, прими этот скромный дар. Ты заслужил его.
-	CreateInvItems(rosi,itmi_gold,650);
-	b_giveinvitems(self,other,itmi_gold,450);
+	AI_WaitTillEnd(other,self);
+	CreateInvItems(self,itmi_gold,650);
+	b_giveinvitems(self,other,itmi_gold,650);
 	if(Npc_IsDead(till))
 	{
 		b_giveplayerxp(XP_SAVEDROSI);
 	}
 	else
 	{
-		xpforboth = XP_SAVEDROSI + XP_AMBIENT;
-		b_giveplayerxp(xpforboth);
+		till.aivar[AIV_PARTYMEMBER] = FALSE;
+		b_giveplayerxp(XP_SAVEDROSI + XP_AMBIENT);
 	};
 	AI_StopProcessInfos(self);
-	if(Npc_GetDistToWP(self,"CITY2") < 8000)
+	if((Npc_GetDistToWP(self,"CITY1") < 8000) || (Npc_GetDistToWP(self,"CITY2") < 8000))
 	{
 		Npc_ExchangeRoutine(self,"CITY");
 		b_startotherroutine(till,"CITY");
 	}
-	else if(Npc_GetDistToWP(self,"BIGFARM") < 8000)
+	else if(Npc_GetDistToWP(self,"NW_BIGFARM_KITCHEN_02") < 8000)
 	{
 		Npc_ExchangeRoutine(self,"BIGFARM");
 		b_startotherroutine(till,"BIGFARM");

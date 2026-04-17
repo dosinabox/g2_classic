@@ -28,8 +28,8 @@ func void rtn_start_458()
 	ta_stand_wp(6,0,9,30,"NW_CITY_MERCHANT_TRADE_01");
 	ta_stand_sweeping(9,30,10,0,"NW_CITY_MAINSTREET_02");
 	ta_stand_wp(10,0,12,55,"NW_CITY_MERCHANT_TRADE_01");
-	ta_pee(12,55,13,30,"NW_CITY_MERCHANT_TRADE_03");
-	ta_stand_wp(14,0,15,30,"NW_CITY_MERCHANT_TRADE_01");
+	ta_pee(12,55,13,5,"NW_CITY_MERCHANT_TRADE_03");
+	ta_stand_wp(13,5,15,30,"NW_CITY_MERCHANT_TRADE_01");
 	ta_stand_sweeping(15,30,16,0,"NW_CITY_MAINSTREET_02");
 	ta_stand_wp(16,0,16,25,"NW_CITY_MERCHANT_TRADE_01");
 	ta_pee(16,25,16,30,"NW_CITY_MERCHANT_TRADE_03");

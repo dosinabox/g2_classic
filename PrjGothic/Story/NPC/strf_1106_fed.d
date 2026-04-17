@@ -11,7 +11,7 @@ instance STRF_1106_FED(NPC_DEFAULT)
 	fight_tactic = FAI_HUMAN_COWARD;
 	EquipItem(self,itmw_2h_axe_l_01);
 	b_createambientinv(self);
-	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_P_GILBERT,BODYTEX_N,itar_prisoner);
+	b_setnpcvisual(self,MALE,"Hum_Head_Bald",FACE_P_GILBERT,BODYTEX_P,itar_prisoner);
 	Mdl_SetModelFatness(self,0);
 	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
 	b_givenpctalents(self);

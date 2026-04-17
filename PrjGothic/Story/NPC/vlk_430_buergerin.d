@@ -23,7 +23,7 @@ instance VLK_430_BUERGERIN(NPC_DEFAULT)
 func void rtn_start_430()
 {
 	ta_smalltalk(5,7,12,7,"NW_CITY_HABOUR_POOR_AREA_PATH_07");
-	ta_cook_stove(12,7,16,0,"NW_CITY_HABOUR_POOR_AREA_HUT_04_BED_01");
+	ta_cook_stove(12,7,16,7,"NW_CITY_HABOUR_POOR_AREA_HUT_04_BED_01");
 	ta_smalltalk(16,7,19,7,"NW_CITY_HABOUR_POOR_AREA_PATH_07");
 	ta_sweep_fp(19,7,22,7,"NW_CITY_HABOUR_POOR_AREA_HUT_04_IN_B");
 	ta_smalltalk(22,7,0,7,"NW_CITY_HABOUR_POOR_AREA_PATH_07");

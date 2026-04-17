@@ -36,7 +36,7 @@ func void rtn_lighthouse_444()
 func void rtn_waitforshipcaptain_444()
 {
 	ta_sit_bench(8,0,20,0,"NW_WAITFOR_SHIP_CAPTAIN");
-	ta_sit_bench(0,0,8,0,"NW_WAITFOR_SHIP_CAPTAIN");
+	ta_sit_bench(20,0,8,0,"NW_WAITFOR_SHIP_CAPTAIN");
 };
 
 func void rtn_allonboard_444()

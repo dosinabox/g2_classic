@@ -653,8 +653,16 @@ func void dia_sekob_rosibackatsekob_info()
 	b_giveinvitems(self,other,itmi_gold,650);
 	b_giveplayerxp(XP_AMBIENT);
 	b_npcclearobsessionbydmt(self);
-	b_startotherroutine(rosi,"Start");
-	b_startotherroutine(till,"Start");
+	if(!Npc_IsDead(rosi))
+	{
+		rosi.aivar[AIV_PARTYMEMBER] = FALSE;
+		b_startotherroutine(rosi,"Start");
+	};
+	if(!Npc_IsDead(till))
+	{
+		till.aivar[AIV_PARTYMEMBER] = FALSE;
+		b_startotherroutine(till,"Start");
+	};
 };
 
 

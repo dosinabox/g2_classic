@@ -223,8 +223,6 @@ func void dia_cipherdjg_goforswampdragon_info()
 		AI_Output(self,other,"DIA_CipherDJG_GoForSwampDragon_07_02");	//Иди вперед и посмотри, можем ли мы атаковать.
 		AI_StopProcessInfos(self);
 	};
-	self.flags = 0;
-	djg_rod.flags = 0;
 };
 
 

@@ -25,9 +25,9 @@ instance VLK_489_BUERGER(NPC_DEFAULT)
 func void rtn_start_489()
 {
 	ta_smoke_joint(11,20,19,15,"NW_CITY_WATCH_FIGHT_02");
-	ta_stand_drinking(19,15,2,30,"NW_CITY_HABOUR_03");
-	ta_pee(21,0,21,5,"NW_CITY_HABOUR_PUFF_02_01");
-	ta_stand_drinking(21,5,2,30,"NW_CITY_HABOUR_03");
+	ta_stand_drinking(19,15,21,0,"NW_CITY_HABOUR_03");
+	ta_pee(21,0,21,15,"NW_CITY_HABOUR_PUFF_02_01");
+	ta_stand_drinking(21,15,2,30,"NW_CITY_HABOUR_03");
 	ta_stand_drinking(2,30,5,20,"NW_CITY_HABOUR_PUFF_IN_07");
 	ta_smoke_joint(5,20,11,20,"NW_CITY_PATH_HABOUR_01");
 };

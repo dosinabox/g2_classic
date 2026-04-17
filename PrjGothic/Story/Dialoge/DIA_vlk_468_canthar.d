@@ -421,7 +421,7 @@ func void dia_canthar_saraherledigt_info()
 	{
 		if(MIS_CANTHARS_KOMPROBRIEF_DAY <= (Wld_GetDay() + 2))
 		{
-			AI_Output(self,other,"DIA_Canthar_SARAHERLEDIGT_09_00");	//У тебя нет работы для меня?
+			//AI_Output(self,other,"DIA_Canthar_SARAHERLEDIGT_09_00");	//У тебя нет работы для меня?
 			AI_Output(self,other,"DIA_Canthar_SARAHERLEDIGT_09_01");	//Сначала подложи письмо Саре, а затем сходи к Андрэ и обвини ее.
 			AI_Output(self,other,"DIA_Canthar_SARAHERLEDIGT_09_02");	//Сделай же это. И не пытайся обмануть меня, ты пожалеешь об этом.
 		}

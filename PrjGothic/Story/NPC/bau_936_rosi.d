@@ -13,7 +13,7 @@ instance BAU_936_ROSI(NPC_DEFAULT)
 	b_createambientinv(self);
 	b_setnpcvisual(self,FEMALE,"Hum_Head_Babe8",FACEBABE_N_HURE,BODYTEXBABE_N,itar_baubabe_m);
 	Mdl_SetModelFatness(self,0);
-	Mdl_ApplyOverlayMds(self,"Humans_Babe.mds");
+	Mdl_ApplyOverlayMds(self,"Humans_Tired.mds");
 	b_givenpctalents(self);
 	b_setfightskills(self,15);
 	daily_routine = rtn_start_936;
