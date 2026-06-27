@@ -488,7 +488,7 @@ func void b_enter_newworld_kapitel_4()
 			Wld_InsertNpc(dmt_dementorambientspeaker,"FP_STAND_DEMENTOR_KDF_09");
 			Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_KDF_10");
 			Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_KDF_11");
-			Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_KDF_13");
+//			Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_KDF_13");
 			Wld_InsertNpc(dmt_dementorambientspeaker,"FP_STAND_DEMENTOR_KDF_14");
 			Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_KDF_22");
 			Wld_InsertNpc(dmt_dementorambient,"FP_STAND_DEMENTOR_KDF_23");
