@@ -538,8 +538,8 @@ func void dia_onar_buyliesel_info()
 	{
 		AI_Output(self,other,"DIA_Onar_BuyLiesel_14_01");	//Ты можешь сам выбрать себе овцу на пастбище.
 		AI_Output(self,other,"DIA_Onar_BuyLiesel_14_02");	//Одна из них обязательно пойдет за тобой. Большинство моих овец отзываются на имя Бетси.
-		Wld_InsertNpc(follow_sheep,"NW_BIGFARM_SHEEP2_02");
 		AI_StopProcessInfos(self);
+		Wld_InsertNpc(follow_sheep,"NW_BIGFARM_SHEEP2_02");
 	}
 	else
 	{

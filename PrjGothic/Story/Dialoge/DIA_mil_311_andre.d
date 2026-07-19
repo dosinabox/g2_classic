@@ -1368,6 +1368,10 @@ func void dia_andre_hilfbauerlobart_info()
 	Log_SetTopicStatus(TOPIC_FELDRAEUBER,LOG_RUNNING);
 	b_logentry(TOPIC_FELDRAEUBER,"Андре отправил меня на ферму Лобарта. Я опять должен помочь Лобарту восстановить порядок на ферме.");
 	MIS_ANDREHELPLOBART = LOG_RUNNING;
+	b_startotherroutine(vino,"BUGSTHERE");
+	b_startotherroutine(lobartsbauer1,"BUGSTHERE");
+	b_startotherroutine(lobartsbauer2,"BUGSTHERE");
+	AI_StopProcessInfos(self);
 	Wld_InsertNpc(lobarts_giant_bug1,"NW_FARM1_FIELD_06");
 	Wld_InsertNpc(lobarts_giant_bug2,"NW_FARM1_FIELD_06");
 	Wld_InsertNpc(lobarts_giant_bug3,"NW_FARM1_FIELD_05");
@@ -1375,10 +1379,6 @@ func void dia_andre_hilfbauerlobart_info()
 	Wld_InsertNpc(lobarts_giant_bug5,"NW_FARM1_FIELD_04");
 	Wld_InsertNpc(lobarts_giant_bug6,"NW_FARM1_FIELD_04");
 	Wld_InsertNpc(lobarts_giant_bug7,"NW_FARM1_FIELD_03");
-	b_startotherroutine(vino,"BUGSTHERE");
-	b_startotherroutine(lobartsbauer1,"BUGSTHERE");
-	b_startotherroutine(lobartsbauer2,"BUGSTHERE");
-	AI_StopProcessInfos(self);
 };
 
 

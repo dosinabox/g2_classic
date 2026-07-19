@@ -12,6 +12,7 @@ func void zs_sweep_fp()
 	{
 		CreateInvItem(self,itmi_brush);
 	};
+	self.aivar[AIV_TAPOSITION] = NOTINPOS;
 };
 
 func int zs_sweep_fp_loop()

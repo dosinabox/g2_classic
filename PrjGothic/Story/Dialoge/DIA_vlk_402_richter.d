@@ -183,6 +183,11 @@ func void dia_richter_killmorgahard_info()
 	AI_Output(self,other,"DIA_Richter_KillMorgahard_10_04");	//Эти сукины дети отправились в горы. Скорее всего, по направлению к новой башне Ксардаса.
 	AI_Output(self,other,"DIA_Richter_KillMorgahard_10_05");	//Их главаря зовут Моргахард. Я хочу, чтобы ты убил его.
 	AI_Output(self,other,"DIA_Richter_KillMorgahard_10_06");	//Поторопись, пока они не исчезли куда-нибудь еще.
+	b_giveplayerxp(XP_BRINGHOLYHAMMER);
+	MIS_RICHTER_BRINGHOLYHAMMER = LOG_SUCCESS;
+	b_logentry(TOPIC_RICHTERLAKAI,"Несколько заключенных сбежали от судьи. Я должен найти их и прикончить, а также прикончить их главаря - МОРГАХАРДА. Они, предположительно, скрываются в горах, где-то по направлению к новой башне Ксардаса.");
+	MIS_RICHTER_KILLMORGAHARD = LOG_RUNNING;
+	AI_StopProcessInfos(self);
 	Wld_InsertNpc(bdt_1030_morgahard,"REICH");
 	Wld_InsertNpc(bdt_1031_fluechtling,"REICH");
 	Wld_InsertNpc(bdt_1032_fluechtling,"REICH");
@@ -190,11 +195,6 @@ func void dia_richter_killmorgahard_info()
 	Wld_InsertNpc(bdt_1034_fluechtling,"REICH");
 	Wld_InsertNpc(bdt_1035_fluechtling,"REICH");
 	b_initnpcglobals();
-	b_giveplayerxp(XP_BRINGHOLYHAMMER);
-	MIS_RICHTER_BRINGHOLYHAMMER = LOG_SUCCESS;
-	b_logentry(TOPIC_RICHTERLAKAI,"Несколько заключенных сбежали от судьи. Я должен найти их и прикончить, а также прикончить их главаря - МОРГАХАРДА. Они, предположительно, скрываются в горах, где-то по направлению к новой башне Ксардаса.");
-	MIS_RICHTER_KILLMORGAHARD = LOG_RUNNING;
-	AI_StopProcessInfos(self);
 };
 
 

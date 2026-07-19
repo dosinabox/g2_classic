@@ -65,7 +65,7 @@ func int b_teachplayertalenttakeanimaltrophy(var C_NPC slf,var C_NPC oth,var int
 	if(trophy == TROPHY_DRGSNAPPERHORN)
 	{
 		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DRGSNAPPERHORN] = TRUE;
-		b_logentry(TOPIC_TALENTANIMALTROPHY,"...вырезать рога у мертвых драконих снепперов.");
+		b_logentry(TOPIC_TALENTANIMALTROPHY,"...вырезать рога у мертвых драконьих снепперов.");
 	};
 	if(trophy == TROPHY_DRAGONSCALE)
 	{

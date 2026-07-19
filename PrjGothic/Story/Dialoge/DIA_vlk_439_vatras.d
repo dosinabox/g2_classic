@@ -190,7 +190,7 @@ func void dia_vatras_influence_second_lie()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Vatras_INFLUENCE_SECOND_LIE_05_02");	//Ага. И поэтому ты поделал весь этот долгий путь. Кто ты такой вообще?
+		AI_Output(self,other,"DIA_Vatras_INFLUENCE_SECOND_LIE_05_02");	//Ага. И поэтому ты проделал весь этот долгий путь. Кто ты такой вообще?
 	};
 	Info_ClearChoices(dia_vatras_influence);
 	Info_AddChoice(dia_vatras_influence,"Я искатель приключений с юга...",dia_vatras_influence_third_lie);
