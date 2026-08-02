@@ -356,8 +356,8 @@ func void dia_pepe_buyliesel_info()
 			};
 		};
 		PEPE_SCHAFGEKAUFT = PEPE_SCHAFGEKAUFT + 1;
-		Wld_InsertNpc(follow_sheep,"NW_BIGFARM_SHEEP2_02");
 		AI_StopProcessInfos(self);
+		Wld_InsertNpc(follow_sheep,"NW_BIGFARM_SHEEP2_02");
 	}
 	else
 	{

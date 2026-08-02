@@ -9,13 +9,13 @@
 ###################################
 
 !define MOD_VERSION "1.7"
-!define MOD_DATE "12.18"
+!define MOD_DATE "8.2"
 !define MOD_NAME "g2_classic"
 !define MOD_NAME_RU "Готика 2: Классическая"
 !define MOD_DETAILED_VERSION "${MOD_VERSION}.${MOD_DATE}"
 !define MOD_AUTHOR "D36, Kor Angar"
 !define MOD_LINK "https://worldofplayers.ru/threads/41796"
-!define MOD_SIZE "170000"
+!define MOD_SIZE "168000"
 !define MOD_HEADER "logo.bmp"
 !define MOD_PIC "pic.bmp"
 
