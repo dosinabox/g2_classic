@@ -855,10 +855,10 @@ func void init_oldworld()
 
 func void startup_oldworld()
 {
+	Wld_SetTime(23,59);
 	startup_oldcamp();
 	startup_demontower();
 	startup_surface();
-	Wld_SetTime(0,0);
 };
 
 func void startup_newworld_part_city_01()

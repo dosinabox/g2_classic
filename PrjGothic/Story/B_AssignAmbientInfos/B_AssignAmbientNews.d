@@ -11,9 +11,22 @@ instance DIA_AMBIENT_NEWS(C_INFO)
 
 func int dia_ambient_news_condition()
 {
-	if(Npc_IsInState(self,zs_talk) && (b_getplayercrime(self) != CRIME_NONE))
+	if(Npc_IsInState(self,zs_talk))
 	{
-		return TRUE;
+		if(b_getplayercrime(self) != CRIME_NONE)
+		{
+			if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(torlof_di))
+			{
+				if(UNDEADDRAGONISDEAD == FALSE)
+				{
+					return TRUE;
+				};
+			}
+			else
+			{
+				return TRUE;
+			};
+		};
 	};
 };
 

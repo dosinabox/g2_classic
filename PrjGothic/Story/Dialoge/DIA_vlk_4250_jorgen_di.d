@@ -80,7 +80,7 @@ func void dia_jorgen_di_undeaddragondead_info()
 	AI_Output(other,self,"DIA_Jorgen_DI_UndeadDragonDead_15_00");	//Врагу настал конец.
 	AI_Output(self,other,"DIA_Jorgen_DI_UndeadDragonDead_07_01");	//Это хорошие новости. Надеюсь, нам больше ничего не нужно на этом острове?
 	Info_ClearChoices(dia_jorgen_di_undeaddragondead);
-	Info_AddChoice(dia_jorgen_di_undeaddragondead,"Подожди минутку.",dia_jorgen_di_undeaddragondead_moment);
+	Info_AddChoice(dia_jorgen_di_undeaddragondead,"Подожди минутку. Я забыл сделать кое-что.",dia_jorgen_di_undeaddragondead_moment);
 	Info_AddChoice(dia_jorgen_di_undeaddragondead,"Все, мы можем отправляться в путь.",dia_jorgen_di_undeaddragondead_over);
 };
 

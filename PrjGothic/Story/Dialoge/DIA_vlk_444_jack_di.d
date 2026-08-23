@@ -94,7 +94,7 @@ func void dia_jack_di_undeaddragondead_info()
 	AI_Output(self,other,"DIA_Jack_DI_UndeadDragonDead_14_01");	//Я надеялся, что все кончится хорошо. Но, должен признать, последние несколько часов я не был так уверен.
 	AI_Output(self,other,"DIA_Jack_DI_UndeadDragonDead_14_02");	//Мы можем наконец поднять паруса?
 	Info_ClearChoices(dia_jack_di_undeaddragondead);
-	Info_AddChoice(dia_jack_di_undeaddragondead,"Подожди немного.",dia_jack_di_undeaddragondead_moment);
+	Info_AddChoice(dia_jack_di_undeaddragondead,"Подожди немного. Я еще кое-что должен сделать.",dia_jack_di_undeaddragondead_moment);
 	Info_AddChoice(dia_jack_di_undeaddragondead,"Да. Закончим с этим.",dia_jack_di_undeaddragondead_over);
 };
 

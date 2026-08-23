@@ -1,7 +1,7 @@
 
 instance VLK_453_BUERGER(NPC_DEFAULT)
 {
-	name[0] = "Работник";
+	name[0] = NAME_ARBEITER;
 	guild = GIL_VLK;
 	id = 453;
 	voice = 6;

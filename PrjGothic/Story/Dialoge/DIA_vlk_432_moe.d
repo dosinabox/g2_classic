@@ -225,7 +225,7 @@ func void dia_moe_harbor_info()
 	Info_AddChoice(dia_moe_harbor,DIALOG_BACK,dia_moe_harbor_back);
 	Info_AddChoice(dia_moe_harbor,"Как тут с кораблями?",dia_moe_harbor_ship);
 	Info_AddChoice(dia_moe_harbor,"Почему я не вижу здесь никого из ополчения?",dia_moe_harbor_militia);
-	Info_AddChoice(dia_moe_harbor,"Какие слухи бродят в последнее время?",dia_moe_harbor_rumors);
+	Info_AddChoice(dia_moe_harbor,"Какие слухи бродят последнее время?",dia_moe_harbor_rumors);
 };
 
 func void dia_moe_harbor_back()
@@ -248,7 +248,7 @@ func void dia_moe_harbor_militia()
 
 func void dia_moe_harbor_rumors()
 {
-	AI_Output(other,self,"DIA_Moe_Harbor_Rumors_15_00");	//Какие слухи бродят в последнее время?
+	AI_Output(other,self,"DIA_Moe_Harbor_Rumors_15_00");	//Какие слухи бродят последнее время?
 	if(KAPITEL == 1)
 	{
 		AI_Output(self,other,"DIA_Moe_Harbor_Rumors_01_01");	//Мы здесь не любим людей, которые задают слишком много вопросов. Особенно, если они чужаки.

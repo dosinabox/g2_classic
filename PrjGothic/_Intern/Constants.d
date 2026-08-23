@@ -771,11 +771,11 @@ const int UnionActivated = 0;
 
 const int FIX_DATE_YEAR = 2026;
 const int FIX_DATE_MONTH = 8;
-const int FIX_DATE_DAY = 2;
+const int FIX_DATE_DAY = 23;
 
 var int FIX_DATE_YEAR_SAVE;
 var int FIX_DATE_MONTH_SAVE;
 var int FIX_DATE_DAY_SAVE;
 
-const int FIX_VERSION = 17;
+const int FIX_VERSION = 18;
 var int FIX_VERSION_SAVE;

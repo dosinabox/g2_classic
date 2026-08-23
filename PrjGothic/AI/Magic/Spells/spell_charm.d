@@ -17,7 +17,11 @@ func int spell_logic_charm(var int manainvested)
 	{
 		if((other.aivar[AIV_NPCSAWPLAYERCOMMIT] != CRIME_NONE) && (MIS_IGNAZ_CHARM == LOG_RUNNING))
 		{
-			CHARM_TEST = TRUE;
+			if(CHARM_TEST == FALSE)
+			{
+				b_logentry(TOPIC_IGNAZ,"Кажется, заклинание сработало! И, похоже, обошлось без свидетелей.");
+				CHARM_TEST = TRUE;
+			};
 		};
 		b_deletepetzcrime(other);
 		other.aivar[AIV_NPCSAWPLAYERCOMMIT] = CRIME_NONE;

@@ -534,7 +534,7 @@ func void dia_diegonw_knowwhereenemy_info()
 	{
 		Info_ClearChoices(dia_diegonw_knowwhereenemy);
 		Info_AddChoice(dia_diegonw_knowwhereenemy,"Возможно, я дам тебе знать, когда придет время.",dia_diegonw_knowwhereenemy_no);
-		Info_AddChoice(DIA_DiegoNW_KnowWhereEnemy,"Почему бы тебе не отправиться в путь со мной? Встретимся в гавани.",DIA_DiegoNW_KnowWhereEnemy_Yes);
+		Info_AddChoice(DIA_DiegoNW_KnowWhereEnemy,"Почему бы тебе не отправиться в путь со мной? Встретимся у гавани.",DIA_DiegoNW_KnowWhereEnemy_Yes);
 	};
 };
 
@@ -542,7 +542,7 @@ func void dia_diegonw_knowwhereenemy_yes()
 {
 	var C_Item DiegoArmor;
 	DiegoArmor = Npc_GetEquippedArmor(self);
-	AI_Output(other,self,"DIA_DiegoNW_KnowWhereEnemy_Yes_15_00");	//Почему бы тебе не отправиться в путь со мной? Встретимся в гавани.
+	AI_Output(other,self,"DIA_DiegoNW_KnowWhereEnemy_Yes_15_00");	//Почему бы тебе не отправиться в путь со мной? Встретимся у гавани.
 	AI_Output(self,other,"DIA_DiegoNW_KnowWhereEnemy_Yes_11_01");	//Ммм. Ты прав, в Хоринисе все равно нечего делать. Я поплыву с тобой.
 	self.flags = NPC_FLAG_IMMORTAL;
 	DIEGO_ISONBOARD = LOG_SUCCESS;
