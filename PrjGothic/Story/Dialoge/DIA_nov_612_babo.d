@@ -733,7 +733,7 @@ func void dia_babo_kap3_unhappy_canhelpyou()
 	AI_Output(self,other,"DIA_Babo_Kap3_Unhappy_CanHelpYou_03_05");	//Ну, у меня не так много денег, но я мог бы дать тебе свиток с заклинанием. У меня есть лечебное заклинание.
 	Info_ClearChoices(dia_babo_kap3_unhappy);
 	Info_AddChoice(dia_babo_kap3_unhappy,"Я лучше не буду связываться с этим.",dia_babo_kap3_unhappy_no);
-	Info_AddChoice(dia_babo_kap3_unhappy,"Я попробую.",dia_babo_kap3_unhappy_yes);
+	Info_AddChoice(dia_babo_kap3_unhappy,"Я посмотрю, что можно сделать.",dia_babo_kap3_unhappy_yes);
 };
 
 func void dia_babo_kap3_unhappy_no()
@@ -789,7 +789,7 @@ func void dia_babo_kap3_haveyourdocs_info()
 
 func void dia_babo_kap3_haveyourdocs_keepthem()
 {
-	AI_Output(other,self,"DIA_Babo_Kap3_HaveYourDocs_KeepThem_15_00");	//Я подержу их пока у себя .
+	AI_Output(other,self,"DIA_Babo_Kap3_HaveYourDocs_KeepThem_15_00");	//Я подержу их пока у себя.
 	AI_Output(self,other,"DIA_Babo_Kap3_HaveYourDocs_KeepThem_03_01");	//(ошеломленно) Что?! Что это все значит? Что ты задумал?
 	Info_ClearChoices(dia_babo_kap3_haveyourdocs);
 	Info_AddChoice(dia_babo_kap3_haveyourdocs,"Просто шучу.",dia_babo_kap3_haveyourdocs_keepthem_justjoke);

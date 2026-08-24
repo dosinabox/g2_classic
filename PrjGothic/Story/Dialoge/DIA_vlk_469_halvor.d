@@ -173,7 +173,7 @@ func void dia_halvor_message_offer()
 	AI_Output(self,other,"DIA_Halvor_MESSAGE_OFFER_06_01");	//Хорошо. Послушай меня. Я могу продать тебе не только рыбу.
 	AI_Output(self,other,"DIA_Halvor_MESSAGE_OFFER_06_03");	//Если ты отдашь мне этот клочок бумаги, э-э... и забудешь об этом, ты и я можем стать отличными торговыми партнерами.
 	Info_ClearChoices(dia_halvor_message);
-	Info_AddChoice(dia_halvor_message,"Хорошо, договорились.",dia_halvor_message_okay);
+	Info_AddChoice(dia_halvor_message,"Хорошо, договорились. Я думаю, мы сохраним все это в тайне.",dia_halvor_message_okay);
 	Info_AddChoice(dia_halvor_message,"Похоже, тебе светит тюрьма.",dia_halvor_message_prison);
 	Info_AddChoice(dia_halvor_message,"Да ну?! И что это за товары?",dia_halvor_message_deal);
 };

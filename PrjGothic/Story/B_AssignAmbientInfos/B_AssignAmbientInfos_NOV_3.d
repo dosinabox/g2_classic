@@ -76,7 +76,7 @@ func void dia_nov_3_fegen_info()
 			AI_Output(self,other,"DIA_NOV_3_Fegen_03_09");	//Я прошу всего 50 золотых монет, мне нужно заплатить их Парлану.
 			b_logentry(TOPIC_PARLANFEGEN,"Послушник у церкви поможет мне, если я дам ему 50 золотых монет.");
 			Info_ClearChoices(dia_nov_3_fegen);
-			Info_AddChoice(dia_nov_3_fegen,"Может быть, позже...",dia_nov_3_fegen_nein);
+			Info_AddChoice(dia_nov_3_fegen,"Возможно позже, сейчас я не могу позволить себе такие расходы.",dia_nov_3_fegen_nein);
 			if(Npc_HasItems(other,itmi_gold) >= 50)
 			{
 				Info_AddChoice(dia_nov_3_fegen,"Хорошо, я заплачу.",dia_nov_3_fegen_ja);

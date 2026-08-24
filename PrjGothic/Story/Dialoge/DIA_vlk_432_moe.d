@@ -80,7 +80,7 @@ func void dia_moe_hallo_info()
 	AI_Output(self,other,"DIA_Moe_Hallo_01_00");	//Эй, я не знаю тебя. Чего тебе здесь нужно? Ты идешь в кабак?
 	Info_ClearChoices(dia_moe_hallo);
 	Info_AddChoice(dia_moe_hallo,"Нет, я не иду в кабак...",dia_moe_hallo_gehen);
-	Info_AddChoice(dia_moe_hallo,"Ох, так это портовый трактир ...",dia_moe_hallo_witz);
+	Info_AddChoice(dia_moe_hallo,"Ох, так это портовый трактир. А я-то принял его за дворец губернатора.",dia_moe_hallo_witz);
 	Info_AddChoice(dia_moe_hallo,"Ты имеешь что-то против?",dia_moe_hallo_reizen);
 };
 
@@ -105,10 +105,10 @@ func void dia_moe_hallo_kneipe()
 
 func void dia_moe_hallo_witz()
 {
-	AI_Output(other,self,"DIA_Moe_Hallo_Witz_15_00");	//Ох, так это портовый трактир. А я то принял его за дворец губернатора.
+	AI_Output(other,self,"DIA_Moe_Hallo_Witz_15_00");	//Ох, так это портовый трактир. А я-то принял его за дворец губернатора.
 	AI_Output(self,other,"DIA_Moe_Hallo_Witz_01_01");	//Эй - держи свои шуточки при себе, кретин, или я заставлю тебя грызть булыжники из мостовой.
 	Info_ClearChoices(dia_moe_hallo);
-	Info_AddChoice(dia_moe_hallo,"Понимаю, чтобы пройти дальше мне придется сломать тебе пару ребер ...",dia_moe_hallo_pruegel);
+	Info_AddChoice(dia_moe_hallo,"Понимаю, чтобы пройти дальше, мне придется сломать тебе пару ребер.",dia_moe_hallo_pruegel);
 	Info_AddChoice(dia_moe_hallo,"Ты пытаешься создать мне проблемы?",dia_moe_hallo_aerger);
 	Info_AddChoice(dia_moe_hallo,"Успокойся, я просто хотел выпить пива.",dia_moe_hallo_ruhig);
 	Info_AddChoice(dia_moe_hallo,"Но я не хочу идти в кабак!",dia_moe_hallo_kneipe);
@@ -119,7 +119,7 @@ func void dia_moe_hallo_reizen()
 	AI_Output(other,self,"DIA_Moe_Hallo_Reizen_15_00");	//Ты имеешь что-то против?
 	AI_Output(self,other,"DIA_Moe_Hallo_Reizen_01_01");	//Тебе нечего здесь делать, малыш.
 	Info_ClearChoices(dia_moe_hallo);
-	Info_AddChoice(dia_moe_hallo,"Понимаю, чтобы пройти дальше мне придется сломать тебе пару ребер ...",dia_moe_hallo_pruegel);
+	Info_AddChoice(dia_moe_hallo,"Понимаю, чтобы пройти дальше, мне придется сломать тебе пару ребер.",dia_moe_hallo_pruegel);
 	Info_AddChoice(dia_moe_hallo,"Ты пытаешься создать мне проблемы?",dia_moe_hallo_aerger);
 	Info_AddChoice(dia_moe_hallo,"Успокойся, я просто хотел выпить пива.",dia_moe_hallo_ruhig);
 };

@@ -6,6 +6,8 @@ instance SPELL_CHARM(C_SPELL_PROTO)
 {
 	time_per_mana = 0;
 	spelltype = SPELL_NEUTRAL;
+	targetcollectalgo = TARGET_COLLECT_FOCUS;
+	targetcollectrange = 1000;
 	damage_per_level = SPL_DAMAGE_CHARM;
 	damagetype = DAM_MAGIC;
 };

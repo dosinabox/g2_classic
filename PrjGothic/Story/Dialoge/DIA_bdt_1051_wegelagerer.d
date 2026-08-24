@@ -81,7 +81,7 @@ func void dia_wegelagerer_novice_info()
 	AI_Output(other,self,"DIA_1051_Wegelagerer_Novice_15_00");	//Я ищу послушника.
 	AI_Output(self,other,"DIA_1051_Wegelagerer_Novice_07_01");	//Очень интересно. Мы тоже кое-кого ищем.
 	Info_ClearChoices(dia_1051_wegelagerer_question);
-	Info_AddChoice(dia_1051_wegelagerer_novice,"Кого вы ищете?",dia_1051_wegelagerer_question_novice_who);
+	Info_AddChoice(dia_1051_wegelagerer_novice,"И кого же?",dia_1051_wegelagerer_question_novice_who);
 };
 
 
@@ -114,7 +114,7 @@ func void dia_wegelagerer_question_info()
 	{
 		Info_AddChoice(dia_1051_wegelagerer_question,"Я ищу послушника.",dia_1051_wegelagerer_question_novice);
 	};
-	Info_AddChoice(dia_1051_wegelagerer_question,"Это не твое дело.",dia_1051_wegelagerer_question_myconcern);
+	Info_AddChoice(dia_1051_wegelagerer_question,"Это не ваше дело.",dia_1051_wegelagerer_question_myconcern);
 	Info_AddChoice(dia_1051_wegelagerer_question,"Я просто любуюсь природой.",dia_1051_wegelagerer_question_lookaround);
 };
 
@@ -123,7 +123,7 @@ func void dia_1051_wegelagerer_question_novice()
 	AI_Output(other,self,"DIA_1051_Wegelagerer_Question_Novice_15_00");	//Я ищу послушника.
 	AI_Output(self,other,"DIA_1051_Wegelagerer_Question_Novice_07_01");	//Очень интересно. Мы тоже кое-кого ищем.
 	Info_ClearChoices(dia_1051_wegelagerer_question);
-	Info_AddChoice(dia_1051_wegelagerer_question,"Кого вы ищете?",dia_1051_wegelagerer_question_novice_who);
+	Info_AddChoice(dia_1051_wegelagerer_question,"И кого же?",dia_1051_wegelagerer_question_novice_who);
 };
 
 func void dia_1051_wegelagerer_question_novice_who()

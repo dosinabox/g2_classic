@@ -7,6 +7,7 @@ instance SPELL_SLEEP(C_SPELL_PROTO)
 	time_per_mana = 0;
 	spelltype = SPELL_NEUTRAL;
 	targetcollectalgo = TARGET_COLLECT_FOCUS;
+	targetcollectrange = 1000;
 };
 
 

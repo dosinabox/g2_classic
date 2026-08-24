@@ -967,7 +967,7 @@ func void dia_pyrokar_giveinnoseye_info()
 	AI_Output(self,other,"DIA_Pyrokar_GIVEINNOSEYE_11_03");	//Глаз Инноса был нагло украден из этих священных стен.
 	if(hero.guild == GIL_KDF)
 	{
-		Info_AddChoice(dia_pyrokar_giveinnoseye,"Кто мог совершить столь дерзкий поступок, мастер?",dia_pyrokar_giveinnoseye_wer);
+		Info_AddChoice(dia_pyrokar_giveinnoseye,"Кто мог совершить столь дерзкий поступок, Мастер?",dia_pyrokar_giveinnoseye_wer);
 	}
 	else
 	{
@@ -979,7 +979,7 @@ func void dia_pyrokar_giveinnoseye_wer()
 {
 	if(hero.guild == GIL_KDF)
 	{
-		AI_Output(other,self,"DIA_Pyrokar_GIVEINNOSEYE_wer_15_00");	//Кто мог совершить столь дерзкий поступок, мастер?
+		AI_Output(other,self,"DIA_Pyrokar_GIVEINNOSEYE_wer_15_00");	//Кто мог совершить столь дерзкий поступок, Мастер?
 	}
 	else
 	{
@@ -2000,7 +2000,7 @@ func void dia_pyrokar_potionofdeath_potion()
 	Info_ClearChoices(dia_pyrokar_potionofdeath);
 	Info_AddChoice(dia_pyrokar_potionofdeath,DIALOG_BACK,dia_pyrokar_potionofdeath_back);
 	Info_AddChoice(dia_pyrokar_potionofdeath,"Так что такое эти Слезы Инноса?",dia_pyrokar_potionofdeath_teardrops);
-	Info_AddChoice(dia_pyrokar_potionofdeath,"Что ты имеешь в виду под 'оружием'?",dia_pyrokar_potionofdeath_weapon);
+	Info_AddChoice(dia_pyrokar_potionofdeath,"Что ты имеешь в виду под оружием?",dia_pyrokar_potionofdeath_weapon);
 };
 
 func void dia_pyrokar_potionofdeath_back()

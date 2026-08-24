@@ -446,7 +446,7 @@ func void dia_marduk_trainpals_info()
 	AI_Output(self,other,"DIA_Marduk_TrainPals_05_05");	//Здесь мы учим только нашей магии. Ты должен изучать магию паладинов в городе.
 	Info_ClearChoices(dia_marduk_trainpals);
 	Info_AddChoice(dia_marduk_trainpals,"Может быть, позже.",dia_marduk_trainpals_later);
-	Info_AddChoice(dia_marduk_trainpals,"Что ты хочешь этим сказать?",dia_marduk_trainpals_meaning);
+	Info_AddChoice(dia_marduk_trainpals,"Что ты хочешь сказать этим?",dia_marduk_trainpals_meaning);
 	Info_AddChoice(dia_marduk_trainpals,"Что такое Освящение Меча?",dia_marduk_trainpals_blessing);
 };
 
@@ -569,7 +569,7 @@ func void dia_marduk_kap3_perm_info()
 	Info_AddChoice(dia_marduk_kap3_perm,"Что будет теперь?",dia_marduk_kap3_perm_andnow);
 	if(MIS_RESCUEBENNET == LOG_SUCCESS)
 	{
-		Info_AddChoice(dia_marduk_kap3_perm,"Беннет не виновен.",dia_marduk_kap3_perm_bennetisnotguilty);
+		Info_AddChoice(dia_marduk_kap3_perm,"Беннет не виновен. Свидетель солгал.",dia_marduk_kap3_perm_bennetisnotguilty);
 	}
 	else
 	{

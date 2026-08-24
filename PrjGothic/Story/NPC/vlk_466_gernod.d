@@ -27,6 +27,6 @@ func void rtn_start_466()
 	ta_stand_drinking(15,0,18,0,"NW_CITY_HABOUR_POOR_AREA_HUT_03_B");
 	ta_sit_bench(18,0,21,0,"NW_CITY_HABOUR_POOR_AREA_HUT_03_B");
 	ta_stand_drinking(21,0,1,10,"NW_CITY_HABOUR_POOR_AREA_HUT_03_B");
-	ta_sleep(1,10,6,5,"NW_CITY_HABOUR_POOR_AREA_HUT_05_BED_01");
+	ta_sleep(1,10,6,5,"NW_CITY_HABOUR_POOR_AREA_HUT_05_BED_02");
 };
 
