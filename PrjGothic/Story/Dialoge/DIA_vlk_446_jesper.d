@@ -81,11 +81,11 @@ func void dia_jesper_hallo_info()
 	Info_AddChoice(dia_jesper_hallo,"Я просто прогуливаюсь здесь.",dia_jesper_hallo_nurso);
 	if(ATTILA_KEY == TRUE)
 	{
-		Info_AddChoice(dia_jesper_hallo,"Аттила дал мне ключ...",dia_jesper_hallo_willkommen);
+		Info_AddChoice(dia_jesper_hallo,"Аттила дал мне ключ. Вот почему я здесь. Так что вам нужно от меня?",dia_jesper_hallo_willkommen);
 	}
 	else
 	{
-		Info_AddChoice(dia_jesper_hallo,"Я прикончил Аттилу...",dia_jesper_hallo_umgelegt);
+		Info_AddChoice(dia_jesper_hallo,"Я прикончил Аттилу. При нем был ключ от канализации.",dia_jesper_hallo_umgelegt);
 	};
 	DG_GEFUNDEN = TRUE;
 };

@@ -187,7 +187,7 @@ func void dia_jora_holdeingold_ghdg()
 	AI_Output(self,other,"DIA_Jora_Add_08_03");	//Тут я мог бы помочь тебе.
 	b_jora_goldforclue();
 	Info_ClearChoices(dia_jora_holdeingold);
-	Info_AddChoice(dia_jora_holdeingold,"Я попробую.",dia_jora_holdeingold_doit);
+	Info_AddChoice(dia_jora_holdeingold,"Я посмотрю, что можно сделать.",dia_jora_holdeingold_doit);
 	Info_AddChoice(dia_jora_holdeingold,"Сколько золота было в этом кошельке?",dia_jora_holdeingold_howmuch);
 	Info_AddChoice(dia_jora_holdeingold,"Почему ты не позвал стражу?",dia_jora_holdeingold_wache);
 };
@@ -197,7 +197,7 @@ func void dia_jora_holdeingold_willbelohnung()
 	AI_Output(other,self,"DIA_Jora_HolDeinGold_WillBelohnung_15_00");	//Я хочу получить часть золота в качестве вознаграждения!
 	AI_Output(self,other,"DIA_Jora_HolDeinGold_WillBelohnung_08_01");	//Сначала верни мне мой кошелек. А там уж поговорим о твоем вознаграждении!
 	Info_ClearChoices(dia_jora_holdeingold);
-	Info_AddChoice(dia_jora_holdeingold,"Я попробую.",dia_jora_holdeingold_doit);
+	Info_AddChoice(dia_jora_holdeingold,"Я посмотрю, что можно сделать.",dia_jora_holdeingold_doit);
 	Info_AddChoice(dia_jora_holdeingold,"Сколько золота было в этом кошельке?",dia_jora_holdeingold_howmuch);
 	Info_AddChoice(dia_jora_holdeingold,"Почему ты не позвал стражу?",dia_jora_holdeingold_wache);
 };
@@ -265,7 +265,7 @@ func void dia_jora_wegendieb_info()
 	}
 	else if(RENGARU_INKNAST == TRUE)
 	{
-		Info_AddChoice(dia_jora_wegendieb,"Да, я поймал его.",dia_jora_wegendieb_imknast);
+		Info_AddChoice(dia_jora_wegendieb,"Да, я поймал его. Пусть немного посидит за решеткой, подумает...",dia_jora_wegendieb_imknast);
 	}
 	else if(Npc_KnowsInfo(other,dia_rengaru_hallodieb))
 	{

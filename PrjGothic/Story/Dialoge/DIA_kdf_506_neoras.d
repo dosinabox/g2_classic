@@ -521,9 +521,9 @@ func void dia_neoras_dracheneier_info()
 	AI_Output(other,self,"DIA_Neoras_DRACHENEIER_15_00");	//Ты так усердно работаешь, что даже вспотел.
 	AI_Output(self,other,"DIA_Neoras_DRACHENEIER_01_01");	//Да, я полностью истощен. Уже несколько дней я пытаюсь приготовить это чертово зелье. И ничего не получается.
 	Info_ClearChoices(dia_neoras_dracheneier);
-	Info_AddChoice(dia_neoras_dracheneier,"Это не мои проблемы.",dia_neoras_dracheneier_no);
+	Info_AddChoice(dia_neoras_dracheneier,"Меня эта проблема не касается.",dia_neoras_dracheneier_no);
 	Info_AddChoice(dia_neoras_dracheneier,"А что это должно быть за зелье?",dia_neoras_dracheneier_trank);
-	Info_AddChoice(dia_neoras_dracheneier,"В чем проблема?",dia_neoras_dracheneier_ei);
+	Info_AddChoice(dia_neoras_dracheneier,"А в чем проблема?",dia_neoras_dracheneier_ei);
 };
 
 func void dia_neoras_dracheneier_ei()
@@ -533,12 +533,12 @@ func void dia_neoras_dracheneier_ei()
 	AI_Output(self,other,"DIA_Neoras_DRACHENEIER_ei_01_02");	//Поэтому я пытался заменить этот ингредиент. Однако пока все тщетно.
 	AI_Output(self,other,"DIA_Neoras_DRACHENEIER_ei_01_03");	//Если однажды, в какой-нибудь пещере, ты наткнешься на одну из таких штук, пожалуйста, не забудь обо мне.
 	Info_AddChoice(dia_neoras_dracheneier,"А что ты используешь вместо драконьего яйца?",dia_neoras_dracheneier_ei_statt);
-	Info_AddChoice(dia_neoras_dracheneier,"Я попробую.",dia_neoras_dracheneier_ei_jep);
+	Info_AddChoice(dia_neoras_dracheneier,"Я попробую что-нибудь сделать.",dia_neoras_dracheneier_ei_jep);
 };
 
 func void dia_neoras_dracheneier_ei_jep()
 {
-	AI_Output(other,self,"DIA_Neoras_DRACHENEIER_ei_jep_15_00");	//Я попробую что-рибудь сделать.
+	AI_Output(other,self,"DIA_Neoras_DRACHENEIER_ei_jep_15_00");	//Я попробую что-нибудь сделать.
 	AI_Output(self,other,"DIA_Neoras_DRACHENEIER_ei_jep_01_01");	//Эй. Я просто пошутил. Я не верю, что тебе действительно удастся найти яйцо дракона.
 	AI_Output(other,self,"DIA_Neoras_DRACHENEIER_ei_jep_15_02");	//Давай лучше подождем.
 	Info_ClearChoices(dia_neoras_dracheneier);

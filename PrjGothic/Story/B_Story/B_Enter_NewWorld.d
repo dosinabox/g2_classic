@@ -498,7 +498,7 @@ func void b_enter_newworld_kapitel_4()
 			Wld_InsertNpc(dmt_dementorambientwalker8,"CITY1");
 			Wld_InsertNpc(dmt_dementorambientwalker7,"CITY1");
 			CreateInvItems(randolph,itwr_dementorobsessionbook_mis,1);
-			b_startotherroutine(randolph,"Obsessed");
+			b_startotherroutine(randolph,"PreStart");
 		};
 		ENTERNW_KAPITEL4 = TRUE;
 	};

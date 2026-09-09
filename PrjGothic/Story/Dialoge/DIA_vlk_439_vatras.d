@@ -126,7 +126,7 @@ func void dia_vatras_influence_info()
 	AI_Output(other,self,"DIA_Vatras_INFLUENCE_15_06");	//У меня важное сообщение для главы паладинов.
 	AI_Output(self,other,"DIA_Vatras_INFLUENCE_05_07");	//Что за сообщение?
 	Info_ClearChoices(dia_vatras_influence);
-	Info_AddChoice(dia_vatras_influence,"Пришли драконы ...",dia_vatras_influence_first_truth);
+	Info_AddChoice(dia_vatras_influence,"Пока мы разговариваем, собирается огромная армия, ведомая драконами.",dia_vatras_influence_first_truth);
 	Info_AddChoice(dia_vatras_influence,"Скоро произойдут ужасные вещи!",dia_vatras_influence_first_lie);
 };
 
@@ -143,7 +143,7 @@ func void dia_vatras_influence_first_truth()
 	};
 	Info_ClearChoices(dia_vatras_influence);
 	Info_AddChoice(dia_vatras_influence,"Ох, я где-то слышал об этом...",dia_vatras_influence_second_lie);
-	Info_AddChoice(dia_vatras_influence,"Мне сказал об этом маг Ксардас ...",dia_vatras_influence_second_truth);
+	Info_AddChoice(dia_vatras_influence,"Мне сказал об этом маг Ксардас. Он послал меня предупредить паладинов.",dia_vatras_influence_second_truth);
 	VATRAS_FIRST = TRUE;
 };
 
@@ -160,7 +160,7 @@ func void dia_vatras_influence_first_lie()
 	};
 	Info_ClearChoices(dia_vatras_influence);
 	Info_AddChoice(dia_vatras_influence,"Ох, я где-то слышал об этом...",dia_vatras_influence_second_lie);
-	Info_AddChoice(dia_vatras_influence,"Мне сказал об этом маг Ксардас ...",dia_vatras_influence_second_truth);
+	Info_AddChoice(dia_vatras_influence,"Мне сказал об этом маг Ксардас. Он послал меня предупредить паладинов.",dia_vatras_influence_second_truth);
 	VATRAS_FIRST = 2;
 };
 
@@ -176,8 +176,8 @@ func void dia_vatras_influence_second_truth()
 		AI_Output(self,other,"DIA_Vatras_INFLUENCE_SECOND_TRUTH_05_02");	//Некромант... Так он жив... (задумчиво) И он послал тебя? А кто же ты тогда такой?
 	};
 	Info_ClearChoices(dia_vatras_influence);
-	Info_AddChoice(dia_vatras_influence,"Я искатель приключений с юга ...",dia_vatras_influence_third_lie);
-	Info_AddChoice(dia_vatras_influence,"Я бывший заключенный ...",dia_vatras_influence_third_truth);
+	Info_AddChoice(dia_vatras_influence,"Я искатель приключений с юга...",dia_vatras_influence_third_lie);
+	Info_AddChoice(dia_vatras_influence,"Я бывший заключенный колонии Хориниса.",dia_vatras_influence_third_truth);
 	VATRAS_SECOND = TRUE;
 };
 
@@ -194,7 +194,7 @@ func void dia_vatras_influence_second_lie()
 	};
 	Info_ClearChoices(dia_vatras_influence);
 	Info_AddChoice(dia_vatras_influence,"Я искатель приключений с юга...",dia_vatras_influence_third_lie);
-	Info_AddChoice(dia_vatras_influence,"Я бывший заключенный ...",dia_vatras_influence_third_truth);
+	Info_AddChoice(dia_vatras_influence,"Я бывший заключенный колонии Хориниса.",dia_vatras_influence_third_truth);
 	VATRAS_SECOND = 2;
 };
 
@@ -762,7 +762,7 @@ func void dia_vatras_innoseyekaputt_auge()
 	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_05_02");	//Оправа разбита на две части. Искусный кузнец должен быть способен починить ее.
 	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_05_03");	//Но проблема не в этом. Меня больше волнует драгоценный камень.
 	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_05_04");	//Он тускл и безжизнен. Враг, похоже, хорошо знал, как ослабить его.
-	Info_AddChoice(dia_vatras_innoseyekaputt,"Где мне найти кузнеца, способного починить оправу?",dia_vatras_innoseyekaputt_auge_schmied);
+	Info_AddChoice(dia_vatras_innoseyekaputt,"Где мне найти кузнеца, способного починить оправу Глаза?",dia_vatras_innoseyekaputt_auge_schmied);
 	Info_AddChoice(dia_vatras_innoseyekaputt,"Как можно восстановить силу камня?",dia_vatras_innoseyekaputt_auge_stein);
 };
 
@@ -834,28 +834,41 @@ func void dia_vatras_innoseyekaputt_auge_stein_wer_xardas_weiter()
 	Info_ClearChoices(dia_vatras_innoseyekaputt);
 	Npc_ExchangeRoutine(self,"RITUALINNOSEYEREPAIR");
 	b_vatras_geheweg(KURZ);
-	dmt_1201.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1202.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1203.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1204.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1205.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1206.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1207.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1208.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1209.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1210.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	dmt_1211.aivar[AIV_ENEMYOVERRIDE] = TRUE;
-	b_startotherroutine(dmt_1201,"AfterRitual");
-	b_startotherroutine(dmt_1202,"AfterRitual");
-	b_startotherroutine(dmt_1203,"AfterRitual");
-	b_startotherroutine(dmt_1204,"AfterRitual");
-	b_startotherroutine(dmt_1205,"AfterRitual");
-	b_startotherroutine(dmt_1206,"AfterRitual");
-	b_startotherroutine(dmt_1207,"AfterRitual");
-	b_startotherroutine(dmt_1208,"AfterRitual");
-	b_startotherroutine(dmt_1209,"AfterRitual");
-	b_startotherroutine(dmt_1210,"AfterRitual");
-	b_startotherroutine(dmt_1211,"AfterRitual");
+	if(!Npc_IsDead(dmt_1202))
+	{
+		dmt_1202.aivar[AIV_ENEMYOVERRIDE] = TRUE;
+		Npc_ExchangeRoutine(dmt_1202,"AFTERRITUAL");
+	};
+	if(!Npc_IsDead(dmt_1204))
+	{
+		dmt_1204.aivar[AIV_ENEMYOVERRIDE] = TRUE;
+		Npc_ExchangeRoutine(dmt_1204,"AFTERRITUAL");
+	};
+	if(!Npc_IsDead(dmt_1206))
+	{
+		dmt_1206.aivar[AIV_ENEMYOVERRIDE] = TRUE;
+		Npc_ExchangeRoutine(dmt_1206,"AFTERRITUAL");
+	};
+	if(!Npc_IsDead(dmt_1207))
+	{
+		dmt_1207.aivar[AIV_ENEMYOVERRIDE] = TRUE;
+		Npc_ExchangeRoutine(dmt_1207,"AFTERRITUAL");
+	};
+	if(!Npc_IsDead(dmt_1209))
+	{
+		dmt_1209.aivar[AIV_ENEMYOVERRIDE] = TRUE;
+		Npc_ExchangeRoutine(dmt_1209,"AFTERRITUAL");
+	};
+	if(!Npc_IsDead(dmt_1210))
+	{
+		dmt_1210.aivar[AIV_ENEMYOVERRIDE] = TRUE;
+		Npc_ExchangeRoutine(dmt_1210,"AFTERRITUAL");
+	};
+	if(!Npc_IsDead(dmt_1211))
+	{
+		dmt_1211.aivar[AIV_ENEMYOVERRIDE] = TRUE;
+		Npc_ExchangeRoutine(dmt_1211,"AFTERRITUAL");
+	};
 };
 
 
@@ -1127,7 +1140,7 @@ func void dia_vatras_knowwhereenemy_info()
 	{
 		Info_ClearChoices(dia_vatras_knowwhereenemy);
 		Info_AddChoice(dia_vatras_knowwhereenemy,"Мне нужно еще подумать об этом.",dia_vatras_knowwhereenemy_no);
-		Info_AddChoice(dia_vatras_knowwhereenemy,"Я сочту за честь, что ты будешь на моей стороне.",dia_vatras_knowwhereenemy_yes);
+		Info_AddChoice(dia_vatras_knowwhereenemy,"Я сочту за честь, что ты будешь на моей стороне. Встретимся в гавани.",dia_vatras_knowwhereenemy_yes);
 	};
 };
 

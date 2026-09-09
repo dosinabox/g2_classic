@@ -421,7 +421,7 @@ func void dia_hyglas_bringbook_info()
 	AI_Output(self,other,"DIA_Hyglas_BringBook_14_07");	//Поэтому, я хочу, чтобы ты принес мне из города книгу. Она называется 'Божественная сила звезд'. Тебе, возможно, придется поискать ее, но я уверен, что ты справишься с этим.
 	Info_ClearChoices(dia_hyglas_bringbook);
 	Info_AddChoice(dia_hyglas_bringbook,"Достань эту книгу сам.",dia_hyglas_bringbook_getityourself);
-	Info_AddChoice(dia_hyglas_bringbook,"А что мне с этого будет?",dia_hyglas_bringbook_getforit);
+	Info_AddChoice(dia_hyglas_bringbook,"И что я за это получу?",dia_hyglas_bringbook_getforit);
 	Info_AddChoice(dia_hyglas_bringbook,"Я попробую найти ее.",dia_hyglas_bringbook_yes);
 };
 
