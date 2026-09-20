@@ -448,7 +448,7 @@ func void b_torlof_holpachtvonsekob()
 	AI_Output(self,other,"B_Torlof_HolPachtvonSekob_01_01");	//ќнар хочет, чтобы тот выложил 50 золотых монет. ≈сть вопросы?
 	AI_Output(other,self,"B_Torlof_HolPachtvonSekob_15_02");	//√де ферма —екоба?
 	AI_Output(self,other,"B_Torlof_HolPachtvonSekob_01_03");	//Ќа севере этой долины. ≈сли смотреть отсюда, она будет справа от большого перекрестка.
-	AI_Output(self,other,"B_Torlof_HolPachtvonSekob_01_04");	//≈сли у теб€ будут проблемы, фермеры на пол€х помогут тебе нейти дорогу.
+	AI_Output(self,other,"B_Torlof_HolPachtvonSekob_01_04");	//≈сли у теб€ будут проблемы, фермеры на пол€х помогут тебе найти дорогу.
 	MIS_TORLOF_HOLPACHTVONSEKOB = LOG_RUNNING;
 	sekob.flags = 0;
 	CreateInvItems(sekob,itmi_gold,50);

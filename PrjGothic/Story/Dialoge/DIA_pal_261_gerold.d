@@ -427,7 +427,7 @@ func void dia_gerold_morefood()
 	Info_ClearChoices(dia_gerold_food);
 	if(GEROLD_FOODCOUNTER > 8)
 	{
-		AI_Output(self,other,"DIA_Gerold_MoreFood_12_00");	//Этого достаточно. Этого достаточно! Теперь я меня некоторое время не будет мучить голод.
+		AI_Output(self,other,"DIA_Gerold_MoreFood_12_00");	//Этого достаточно. Этого достаточно! Теперь меня некоторое время не будет мучить голод.
 		AI_Output(self,other,"DIA_Gerold_MoreFood_12_01");	//Вот мое золото. Я все равно ничего не могу на него купить здесь, а тебе оно, может быть, пригодится.
 		AI_Output(self,other,"DIA_Gerold_MoreFood_12_02");	//А теперь я лучше пойду, пока никто не увидел нас.
 		AI_StopProcessInfos(self);
@@ -505,7 +505,7 @@ func void dia_gerold_food_nichts()
 func void dia_gerold_food_kaese_nichtmehr()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_kaese_nichtmehr_15_00");	//Это все, что у меня есть.
-	AI_Output(self,other,"DIA_Gerold_FOOD_kaese_nichtmehr_12_01");	//И я, по-твоему, поверю в это? Ладно, это все же лучше, чем ничего. Вот, возьми немного золота за этоit.
+	AI_Output(self,other,"DIA_Gerold_FOOD_kaese_nichtmehr_12_01");	//И я, по-твоему, поверю в это? Ладно, это все же лучше, чем ничего. Вот, возьми немного золота за это.
 	CreateInvItems(self,itmi_gold,50);
 	b_giveinvitems(self,other,itmi_gold,50);
 	AI_Output(self,other,"DIA_Gerold_FOOD_kaese_nichtmehr_12_02");	//Хорошо. А теперь мне нужно возвращаться на мой пост.

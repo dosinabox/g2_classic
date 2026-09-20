@@ -237,7 +237,7 @@ func int dia_fajeth_snapper_killed_condition()
 func void dia_fajeth_snapper_killed_info()
 {
 	AI_Output(hero,self,"DIA_Fajeth_SNAPPER_KILLED_15_00");	//Со снепперами покончено.
-	AI_Output(self,hero,"DIA_Fajeth_SNAPPER_KILLED_12_01");	//Отлична работа. А с остальными зверями мы сами разберемся.
+	AI_Output(self,hero,"DIA_Fajeth_SNAPPER_KILLED_12_01");	//Отличная работа. А с остальными зверями мы сами разберемся.
 	if(FAJETH_PAY == TRUE)
 	{
 		AI_Output(self,hero,"DIA_Fajeth_SNAPPER_KILLED_12_02");	//Ты заработал свое золото - вот 100 монет, как и договаривались.

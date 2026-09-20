@@ -544,7 +544,7 @@ func void dia_neoras_dracheneier_ei_jep()
 	Info_ClearChoices(dia_neoras_dracheneier);
 	Log_CreateTopic(TOPIC_DRACHENEIERNEORAS,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_DRACHENEIERNEORAS,LOG_RUNNING);
-	b_logentry(TOPIC_DRACHENEIERNEORAS,"Неорасу для экспериментов нужно драконье яйцо. Он думает, что, возможно я смогу найти его в какой-нибудь пещере.");
+	b_logentry(TOPIC_DRACHENEIERNEORAS,"Неорасу для экспериментов нужно драконье яйцо. Он думает, что, возможно, я смогу найти его в какой-нибудь пещере.");
 	MIS_NEORAS_DRAGONEGG = LOG_RUNNING;
 };
 

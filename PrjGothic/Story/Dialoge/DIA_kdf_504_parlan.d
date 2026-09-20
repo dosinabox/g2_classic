@@ -330,7 +330,7 @@ func void dia_parlan_auge_info()
 	AI_Output(other,self,"DIA_Parlan_Auge_15_00");	//Я ищу Глаз Инноса.
 	AI_Output(self,other,"DIA_Parlan_Auge_05_01");	//Я не знаю, кто сказал тебе о нем, но к этому божественному артефакту никто не смеет прикасаться.
 	AI_Output(other,self,"DIA_Parlan_Auge_15_02");	//Где хранится Глаз Инноса?
-	AI_Output(self,other,"DIA_Parlan_Auge_05_03");	//Осень немногие знают эту тайну. Попробуй найти его - и тебе это не удастся.
+	AI_Output(self,other,"DIA_Parlan_Auge_05_03");	//Очень немногие знают эту тайну. Попробуй найти его - и тебе это не удастся.
 };
 
 

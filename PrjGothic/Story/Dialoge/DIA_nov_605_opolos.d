@@ -175,7 +175,7 @@ func void dia_opolos_beibringen_info()
 	AI_Output(self,other,"DIA_Opolos_beibringen_12_05");	//Если ты принесешь его мне, чтобы я мог изучить его, то я потренирую тебя.
 	Log_CreateTopic(TOPIC_OPOLOSREZEPT,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_OPOLOSREZEPT,LOG_RUNNING);
-	b_logentry(TOPIC_OPOLOSREZEPT,"Ополос хочет взглянуть на рецепт приготовления зелий маны. Возможно мне удастся позаимствовать его, работая на Неораса.");
+	b_logentry(TOPIC_OPOLOSREZEPT,"Ополос хочет взглянуть на рецепт приготовления зелий маны. Возможно, мне удастся позаимствовать его, работая на Неораса.");
 };
 
 
@@ -318,7 +318,7 @@ func void dia_opolos_agon_info()
 	AI_Output(self,other,"DIA_Opolos_Agon_12_02");	//Бабо пришел в монастырь незадолго до тебя. И сначала он помогал Агону в саду.
 	AI_Output(self,other,"DIA_Opolos_Agon_12_03");	//Похоже, они что-то там не поделили, и с тех пор Бабо подметает двор.
 	AI_Output(other,self,"DIA_Opolos_Agon_15_04");	//Ты знаешь, что произошло?
-	AI_Output(self,other,"DIA_Opolos_Agon_12_05");	//Точно не знаю. Тебе лучше самому спросить их. Но слова Агона имеет больший вес, чем слово любого другого послушника, потому что он племянник губернатора.
+	AI_Output(self,other,"DIA_Opolos_Agon_12_05");	//Точно не знаю. Тебе лучше самому спросить их. Но слово Агона имеет больший вес, чем слово любого другого послушника, потому что он племянник губернатора.
 };
 
 
@@ -329,7 +329,7 @@ instance DIA_OPOLOS_LIESEL(C_INFO)
 	condition = dia_opolos_liesel_condition;
 	information = dia_opolos_liesel_info;
 	permanent = TRUE;
-	description = "Смотри, Я привел Бетси.";
+	description = "Смотри, я привел Бетси.";
 };
 
 
@@ -343,7 +343,7 @@ func int dia_opolos_liesel_condition()
 
 func void dia_opolos_liesel_info()
 {
-	AI_Output(other,self,"DIA_Opolos_LIESEL_15_00");	//Смотри, Я привел Бетси. Могу я оставить ее с тобой?
+	AI_Output(other,self,"DIA_Opolos_LIESEL_15_00");	//Смотри, я привел Бетси. Могу я оставить ее с тобой?
 	Npc_PerceiveAll(self);
 	if(Wld_DetectNpc(self,follow_sheep,NOFUNC,-1) && (Npc_GetDistToNpc(self,other) < 800))
 	{

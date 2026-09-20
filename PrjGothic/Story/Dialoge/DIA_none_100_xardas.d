@@ -292,7 +292,7 @@ func void dia_xardas_whereex_info()
 	AI_Output(self,other,"DIA_Xardas_Add_14_01");	//Как я уже сказал, неподалеку от города Хоринис.
 	AI_Output(self,other,"DIA_Xardas_Add_14_02");	//Я отстроил мою башню здесь.
 	AI_Output(other,self,"DIA_Xardas_Add_15_03");	//Но ведь прошло всего несколько дней, с тех пор как мы были в Долине Рудников...
-	AI_Output(self,other,"DIA_Xardas_Add_14_04");	//Слуги, которых я вызвал для строительства мой башни, проделали потрясающую работу...
+	AI_Output(self,other,"DIA_Xardas_Add_14_04");	//Слуги, которых я вызвал для строительства моей башни, проделали потрясающую работу...
 	AI_Output(other,self,"DIA_Xardas_Add_15_05");	//Да, похоже на это.
 };
 
@@ -545,7 +545,7 @@ func void dia_xardas_dmtsindda_dmt()
 	{
 		Log_CreateTopic(TOPIC_DEMENTOREN,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_DEMENTOREN,LOG_RUNNING);
-		b_logentry(TOPIC_DEMENTOREN,"Ксардас знает кто такие эти люди в черных рясах. Похоже именно Ищущие заправляют всем в о вражеских рядах, и они очень опасны.");
+		b_logentry(TOPIC_DEMENTOREN,"Ксардас знает, кто такие эти люди в черных рясах. Похоже, именно Ищущие заправляют всем во вражеских рядах, и они очень опасны.");
 	};
 };
 

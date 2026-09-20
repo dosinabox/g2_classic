@@ -72,7 +72,7 @@ func int dia_pyrokar_hagen_condition()
 func void dia_pyrokar_hagen_info()
 {
 	AI_Output(other,self,"DIA_Pyrokar_Hagen_15_00");	//Я должен поговорить с паладинами. Это срочно.
-	AI_Output(self,other,"DIA_Pyrokar_Hagen_11_01");	//Ты кажешь нам, о чем ты собираешься говорить с ними?
+	AI_Output(self,other,"DIA_Pyrokar_Hagen_11_01");	//Ты скажешь нам, о чем ты собираешься говорить с ними?
 	AI_Output(other,self,"DIA_Pyrokar_Hagen_15_02");	//У меня для них важное сообщение.
 	AI_Output(self,other,"DIA_Pyrokar_Hagen_11_03");	//Что это за сообщение?
 	AI_Output(other,self,"DIA_Pyrokar_Hagen_15_04");	//Армия зла собирается в Долине Рудников. Ее возглавляют драконы! Мы должны остановить их, пока это еще возможно.

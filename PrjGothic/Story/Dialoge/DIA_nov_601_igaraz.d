@@ -215,7 +215,7 @@ func int dia_igaraz_imtheman_condition()
 
 func void dia_igaraz_imtheman_info()
 {
-	AI_Output(self,other,"DIA_Igaraz_IMTHEMAN_13_00");	//(гордо) Это свершилось. Иннос выбрал меня я приму участие в испытании магией.
+	AI_Output(self,other,"DIA_Igaraz_IMTHEMAN_13_00");	//(гордо) Это свершилось. Иннос выбрал меня, и я приму участие в Испытании Магией.
 };
 
 
@@ -309,7 +309,7 @@ func void dia_igaraz_add_info()
 	AI_Output(self,other,"DIA_Igaraz_Add_13_07");	//Продолжай идти по тропинке в горы. Она должна быть где-то там.
 	AI_Output(self,other,"DIA_Igaraz_Add_13_08");	//Если ты дойдешь до моста - значит, ты зашел слишком далеко.
 	AI_Output(self,other,"DIA_Igaraz_Add_13_09");	//(смеется) ЕСЛИ тебе вообще удастся уйти далеко...
-	AI_Output(self,other,"DIA_Igaraz_Add_13_10");	//Это все что я могу сказать тебе... (с сарказмом) Это ведь все же должно быть твое ИСПЫТАНИЕ!
+	AI_Output(self,other,"DIA_Igaraz_Add_13_10");	//Это все, что я могу сказать тебе... (с сарказмом) Это ведь все же должно быть твое ИСПЫТАНИЕ!
 };
 
 

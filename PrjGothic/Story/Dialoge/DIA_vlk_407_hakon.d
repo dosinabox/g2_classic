@@ -273,7 +273,7 @@ func int dia_hakon_wieviel_condition()
 func void dia_hakon_wieviel_info()
 {
 	AI_Output(other,self,"DIA_Hakon_Banditen_Ehre_15_00");	//Я разберусь с этим...
-	AI_Output(self,other,"DIA_Hakon_Banditen_Kohle_12_01");	//Что, ТЫ хочешь расправиться с бандитами? В одиночку? Ты, наверное хороший боец?
+	AI_Output(self,other,"DIA_Hakon_Banditen_Kohle_12_01");	//Что, ТЫ хочешь расправиться с бандитами? В одиночку? Ты, наверное, хороший боец?
 	AI_Output(other,self,"DIA_Hakon_Banditen_Kohle_15_00");	//Сколько ты готов дать за это?
 	if(Npc_KnowsInfo(other,dia_hakon_haradbandits))
 	{

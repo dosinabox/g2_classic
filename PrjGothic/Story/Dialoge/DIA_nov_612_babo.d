@@ -368,7 +368,7 @@ func int dia_babo_plantlore_condition()
 
 func void dia_babo_plantlore_info()
 {
-	AI_Output(other,self,"DIA_Babo_PlantLore_15_00");	//ѕохоже ты хорошо разбираешьс€ в растени€х?
+	AI_Output(other,self,"DIA_Babo_PlantLore_15_00");	//ѕохоже, ты хорошо разбираешьс€ в растени€х?
 	AI_Output(self,other,"DIA_Babo_PlantLore_03_01");	//” нас в семье была дел€нка, где мы выращивали различные травы, и € научилс€ кое-чему у дедушки.
 	AI_Output(self,other,"DIA_Babo_PlantLore_03_02");	//я бы так хотел оп€ть работать в саду.
 	MIS_HELPBABO = LOG_RUNNING;

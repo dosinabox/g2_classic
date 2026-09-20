@@ -506,7 +506,7 @@ func int dia_milten_di_dementorobsessionbook_condition()
 func void dia_milten_di_dementorobsessionbook_info()
 {
 	AI_Output(other,self,"DIA_Milten_DI_DementorObsessionBook_15_00");	//Эта книга, Альманах Одержимых, говорит тебе о чем-то?
-	AI_Output(self,other,"DIA_Milten_DI_DementorObsessionBook_03_01");	//Пирокар эксперт по таким книгам.
+	AI_Output(self,other,"DIA_Milten_DI_DementorObsessionBook_03_01");	//Пирокар - эксперт по таким книгам.
 	AI_Output(self,other,"DIA_Milten_DI_DementorObsessionBook_03_02");	//Извини. Я знаю слишком мало, чтобы сказать что-либо умное об этом.
 	b_giveplayerxp(XP_AMBIENT);
 };
@@ -568,7 +568,7 @@ func void dia_milten_di_undeaddragondead_info()
 	{
 		AI_Output(self,other,"DIA_Milten_DI_UndeadDragonDead_03_01");	//Как тебе всегда удается выходись сухим из воды?
 		AI_Output(other,self,"DIA_Milten_DI_UndeadDragonDead_15_02");	//Черт меня побери, если я знаю.
-		AI_Output(self,other,"DIA_Milten_DI_UndeadDragonDead_03_03");	//(смеется) Мы, когда-нибудь сможем пожить спокойно? Мы, определенно, заслужили это.
+		AI_Output(self,other,"DIA_Milten_DI_UndeadDragonDead_03_03");	//(смеется) Мы когда-нибудь сможем пожить спокойно? Мы определенно заслужили это.
 		if(hero.guild == GIL_KDF)
 		{
 			AI_Output(other,self,"DIA_Milten_DI_UndeadDragonDead_15_04");	//Что ты собираешься делать сейчас?

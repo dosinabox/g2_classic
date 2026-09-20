@@ -66,7 +66,7 @@ func void dia_buster_hello_whoareyou()
 func void dia_buster_hello_iknowlee()
 {
 	AI_Output(other,self,"DIA_Buster_Hello_IKnowLee_15_00");	//Я знаю Ли!
-	AI_Output(self,other,"DIA_Buster_Hello_IKnowLee_13_01");	//Все знают Ли! Это ни чего не значит, приятель. Сейчас, ты разговариваешь со МНОЙ!
+	AI_Output(self,other,"DIA_Buster_Hello_IKnowLee_13_01");	//Все знают Ли! Это ничего не значит, приятель. Сейчас, ты разговариваешь со МНОЙ!
 	AI_Output(self,other,"DIA_Buster_Hello_IKnowLee_13_02");	//Итак, куда ты направляешься?
 	Info_ClearChoices(dia_buster_hello);
 	Info_AddChoice(dia_buster_hello,"Это не твое дело.",dia_buster_hello_notyourbusiness);

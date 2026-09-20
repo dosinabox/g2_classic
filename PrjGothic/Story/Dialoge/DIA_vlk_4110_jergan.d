@@ -199,7 +199,7 @@ instance DIA_JERGAN_CLAW(C_INFO)
 	condition = dia_jergan_claw_condition;
 	information = dia_jergan_claw_info;
 	permanent = FALSE;
-	description = "Ты можешь напучить меня этому?";
+	description = "Ты можешь научить меня этому?";
 };
 
 
@@ -213,7 +213,7 @@ func int dia_jergan_claw_condition()
 
 func void dia_jergan_claw_info()
 {
-	AI_Output(other,self,"DIA_Jergan_Claw_15_00");	//Ты можешь напучить меня этому?
+	AI_Output(other,self,"DIA_Jergan_Claw_15_00");	//Ты можешь научить меня этому?
 	AI_Output(self,other,"DIA_Jergan_Claw_13_01");	//Я могу показать тебе, как отделять когти этих тварей.
 };
 

@@ -89,7 +89,7 @@ func int dia_lester_di_marioarsch_condition()
 func void dia_lester_di_marioarsch_info()
 {
 	AI_Output(other,self,"DIA_Lester_DI_MarioArsch_15_00");	//Ты был прав. Марио предал нас.
-	AI_Output(self,other,"DIA_Lester_DI_MarioArsch_13_01");	//Да. Возможно я не очень-то проницательный, но в этом случае мне было ясно с самого начала.
+	AI_Output(self,other,"DIA_Lester_DI_MarioArsch_13_01");	//Да. Возможно, я не очень-то проницательный, но в этом случае мне было ясно с самого начала.
 	AI_Output(self,other,"DIA_Lester_DI_MarioArsch_13_02");	//Постарайся тщательнее выбирать себе компаньонов в будущем.
 	b_giveplayerxp(XP_AMBIENT);
 };

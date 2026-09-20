@@ -253,7 +253,7 @@ func void dia_pc_thief_di_training_talente_picklock()
 {
 	if(b_teachthieftalent(self,other,NPC_TALENT_PICKLOCK))
 	{
-		AI_Output(self,other,"DIA_PC_Thief_DI_Training_PICKLOCK_11_00");	//Лучше поздно, чем никогда. Странно что ты не изучил эту способность раньше.
+		AI_Output(self,other,"DIA_PC_Thief_DI_Training_PICKLOCK_11_00");	//Лучше поздно, чем никогда. Странно, что ты не изучил эту способность раньше.
 	};
 	Info_ClearChoices(dia_pc_thief_di_training_talente);
 	Info_AddChoice(dia_pc_thief_di_training_talente,DIALOG_BACK,dia_pc_thief_di_training_talente_back);

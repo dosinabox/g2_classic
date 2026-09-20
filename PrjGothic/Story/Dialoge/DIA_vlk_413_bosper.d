@@ -590,7 +590,7 @@ func int dia_bosper_bogenrunning_condition()
 func void dia_bosper_bogenrunning_info()
 {
 	AI_Output(other,self,"DIA_Bosper_BogenRunning_15_00");	//Я слышал, что у тебя что-то украли.
-	AI_Output(self,other,"DIA_Bosper_BogenRunning_11_01");	//Кто сказал тебе это? Вероятно Барток, да? Ему что, больше нечего было сказать тебе? Ох, ладно.
+	AI_Output(self,other,"DIA_Bosper_BogenRunning_11_01");	//Кто сказал тебе это? Вероятно, Барток, да? Ему что, больше нечего было сказать тебе? Ох, ладно.
 	AI_Output(self,other,"DIA_Bosper_BogenRunning_11_02");	//Но если я доберусь до этого ублюдка, никакие молитвы ему не помогут!
 	AI_Output(self,other,"DIA_Bosper_BogenRunning_11_03");	//Я отлучился из своей лавки всего на минуту. А когда вернулся, я увидел только, как он выходил - с моим луком на плече.
 	AI_Output(self,other,"DIA_Bosper_BogenRunning_11_04");	//Я тут же позвал стражу, но этот подонок побежал к гавани. И они потеряли его там!

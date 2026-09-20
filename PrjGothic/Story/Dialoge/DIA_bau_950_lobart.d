@@ -223,7 +223,7 @@ func void dia_lobart_buyclothes_info()
 {
 	WERT_LOBARTSRUESTUNG = 80;
 	AI_Output(other,self,"DIA_Lobart_BuyClothes_15_00");	//Сколько стоит эта рабочая одежда?
-	AI_Output(self,other,"DIA_Lobart_BuyClothes_05_01");	//Так. Посморим...
+	AI_Output(self,other,"DIA_Lobart_BuyClothes_05_01");	//Так. Посмотрим...
 	if(LOBART_AGAINSTKING == TRUE)
 	{
 		WERT_LOBARTSRUESTUNG = WERT_LOBARTSRUESTUNG - 10;
@@ -315,7 +315,7 @@ func int dia_lobart_aufstandinfo_condition()
 func void dia_lobart_aufstandinfo_info()
 {
 	AI_Output(other,self,"DIA_Lobart_AufstandInfo_15_00");	//Как идут здесь дела?
-	AI_Output(self,other,"DIA_Lobart_AufstandInfo_05_01");	//Ты не знаешь как здесь дела? Мальчик, ты вообще откуда свалился? Мы на пороге гражданской войны!
+	AI_Output(self,other,"DIA_Lobart_AufstandInfo_05_01");	//Ты не знаешь, как здесь дела? Мальчик, ты вообще откуда свалился? Мы на пороге гражданской войны!
 	if(hero.guild == GIL_NONE)
 	{
 		AI_Output(self,other,"DIA_Lobart_AufstandInfo_05_02");	//До последнего времени фермеры считали долю, отдаваемую городу, вполне справедливой.

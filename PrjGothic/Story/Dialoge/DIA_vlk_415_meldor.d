@@ -67,7 +67,7 @@ func int dia_meldor_interessantes_condition()
 func void dia_meldor_interessantes_info()
 {
 	AI_Output(other,self,"DIA_Meldor_Interessantes_15_00");	//Что здесь интересного?
-	AI_Output(self,other,"DIA_Meldor_Interessantes_07_01");	//Здесь есть бордель и кабак. Хозяина кабака зовут Кардиф. Если тебе нужна информация, я советую проговорить именно с ним.
+	AI_Output(self,other,"DIA_Meldor_Interessantes_07_01");	//Здесь есть бордель и кабак. Хозяина кабака зовут Кардиф. Если тебе нужна информация, я советую поговорить именно с ним.
 	AI_Output(self,other,"DIA_Meldor_Interessantes_07_02");	//Тебе, кстати, не нужны деньги?
 	Log_CreateTopic(TOPIC_CITYTRADER,LOG_NOTE);
 	b_logentry(TOPIC_CITYTRADER,"Кардиф, владелец кабака в гавани, приторговывает информацией.");

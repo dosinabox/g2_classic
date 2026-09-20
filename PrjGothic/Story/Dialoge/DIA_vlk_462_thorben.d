@@ -357,7 +357,7 @@ func void dia_thorben_pleaseteach_info()
 	else if(MIS_MATTEO_GOLD == LOG_SUCCESS)
 	{
 		AI_Output(self,other,"DIA_Thorben_PleaseTeach_06_07");	//Ты заплатил долг Гритты Маттео. Похоже, ты хороший человек. Я обучу тебя тому, что ты хочешь знать.
-		AI_Output(self,other,"DIA_Thorben_PleaseTeach_06_08");	//Однако я не могу сделать это бесплатно. У целая куча долгов, и мне нужны деньги.
+		AI_Output(self,other,"DIA_Thorben_PleaseTeach_06_08");	//Однако я не могу сделать это бесплатно. У меня целая куча долгов, и мне нужны деньги.
 		AI_Output(other,self,"DIA_Thorben_PleaseTeach_15_09");	//Сколько ты возьмешь?
 		AI_Output(self,other,"DIA_Thorben_PleaseTeach_06_10");	//200 золотых монет.
 		Info_ClearChoices(dia_thorben_pleaseteach);

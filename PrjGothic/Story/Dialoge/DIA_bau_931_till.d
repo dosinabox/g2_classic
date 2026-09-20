@@ -221,7 +221,7 @@ instance DIA_TILL_BRONKOZURARBEIT(C_INFO)
 	condition = dia_till_bronkozurarbeit_condition;
 	information = dia_till_bronkozurarbeit_info;
 	permanent = TRUE;
-	description = "Возможно, я смогу помочь тебе.";
+	description = "Может быть, я смогу помочь.";
 };
 
 
@@ -237,7 +237,7 @@ func int dia_till_bronkozurarbeit_condition()
 
 func void dia_till_bronkozurarbeit_info()
 {
-	AI_Output(other,self,"DIA_Till_BRONKOZURARBEIT_15_00");	//Может быть, я смогу поммочь.
+	AI_Output(other,self,"DIA_Till_BRONKOZURARBEIT_15_00");	//Может быть, я смогу помочь.
 	AI_Output(self,other,"DIA_Till_BRONKOZURARBEIT_03_01");	//Что ты хочешь сказать этим? Хорошо, послушай, если ты сможешь заставить Бронко работать, я заплачу тебе, скажем, 10 золотых монет. Что скажешь?
 	TILL_ANGEBOT = 10;
 	Info_ClearChoices(dia_till_bronkozurarbeit);
@@ -341,7 +341,7 @@ func void dia_till_bronkowiederanarbeit_info()
 {
 	AI_Output(other,self,"DIA_Till_BRONKOWIEDERANARBEIT_15_00");	//Бронко вернулся к работе.
 	AI_Output(self,other,"DIA_Till_BRONKOWIEDERANARBEIT_03_01");	//Правда? Это превосходно.
-	AI_Output(other,self,"DIA_Till_BRONKOWIEDERANARBEIT_15_02");	//Да. И тепрь я хочу получить мои деньги.
+	AI_Output(other,self,"DIA_Till_BRONKOWIEDERANARBEIT_15_02");	//Да. И теперь я хочу получить мои деньги.
 	IntToFloat(TILL_ANGEBOT);
 	if(TILL_ANGEBOT <= 50)
 	{

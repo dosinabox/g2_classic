@@ -216,7 +216,7 @@ func void dia_bartok_teachsneak_info()
 	{
 		AI_Output(self,other,"DIA_Bartok_TeachSneak_04_01");	//Хорошо - сначала ты должен научиться правильно распределять свой вес.
 		AI_Output(self,other,"DIA_Bartok_TeachSneak_04_02");	//Для этого согни ноги в коленях и старайся всегда опускать ногу на пятку.
-		AI_Output(self,other,"DIA_Bartok_TeachSneak_04_03");	//Все нагрузка должна приходиться на опорную ногу, пока другая нога не будет твердо стоять на земле.
+		AI_Output(self,other,"DIA_Bartok_TeachSneak_04_03");	//Вся нагрузка должна приходиться на опорную ногу, пока другая нога не будет твердо стоять на земле.
 		AI_Output(self,other,"DIA_Bartok_TeachSneak_04_04");	//К большинству зверей невозможно подкрасться, если только они не спят. Они просто учуют тебя.
 		AI_Output(self,other,"DIA_Bartok_TeachSneak_04_05");	//Так что будь внимателен при охоте.
 	};

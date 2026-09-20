@@ -272,7 +272,7 @@ func void dia_pepe_perm_info()
 	};
 	if(KAPITEL == 2)
 	{
-		AI_Output(self,other,"DIA_Pepe_PERM_03_02");	//Хорошо. Но могут придти другие волки. И, возможно, в большем количестве!
+		AI_Output(self,other,"DIA_Pepe_PERM_03_02");	//Хорошо. Но могут прийти другие волки. И, возможно, в большем количестве!
 	};
 	if(KAPITEL == 3)
 	{

@@ -147,7 +147,7 @@ func int dia_balthasar_talktobengar_condition()
 func void dia_balthasar_talktobengar_info()
 {
 	AI_Output(other,self,"DIA_Balthasar_TALKTOBENGAR_15_00");	//Возможно, мне стоит поговорить с Бенгаром.
-	AI_Output(self,other,"DIA_Balthasar_TALKTOBENGAR_05_01");	//Ты сделаешь это для меня? Но что бы ты не говорил ему, имей в виду, я не хочу никаких проблем, хорошо?
+	AI_Output(self,other,"DIA_Balthasar_TALKTOBENGAR_05_01");	//Ты сделаешь это для меня? Но что бы ты ни говорил ему, имей в виду, я не хочу никаких проблем, хорошо?
 	AI_Output(other,self,"DIA_Balthasar_TALKTOBENGAR_15_02");	//Посмотрим.
 	Log_CreateTopic(TOPIC_BALTHASARSSCHAFE,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BALTHASARSSCHAFE,LOG_RUNNING);

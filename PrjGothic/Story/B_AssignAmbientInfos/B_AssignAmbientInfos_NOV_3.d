@@ -76,7 +76,7 @@ func void dia_nov_3_fegen_info()
 			AI_Output(self,other,"DIA_NOV_3_Fegen_03_09");	//Я прошу всего 50 золотых монет, мне нужно заплатить их Парлану.
 			b_logentry(TOPIC_PARLANFEGEN,"Послушник у церкви поможет мне, если я дам ему 50 золотых монет.");
 			Info_ClearChoices(dia_nov_3_fegen);
-			Info_AddChoice(dia_nov_3_fegen,"Возможно позже, сейчас я не могу позволить себе такие расходы.",dia_nov_3_fegen_nein);
+			Info_AddChoice(dia_nov_3_fegen,"Возможно, позже, сейчас я не могу позволить себе такие расходы.",dia_nov_3_fegen_nein);
 			if(Npc_HasItems(other,itmi_gold) >= 50)
 			{
 				Info_AddChoice(dia_nov_3_fegen,"Хорошо, я заплачу.",dia_nov_3_fegen_ja);
@@ -95,7 +95,7 @@ func void dia_nov_3_fegen_info()
 
 func void dia_nov_3_fegen_nein()
 {
-	AI_Output(other,self,"DIA_NOV_3_Fegen_Nein_15_00");	//Возможно позже, сейчас я не могу позволить себе такие расходы.
+	AI_Output(other,self,"DIA_NOV_3_Fegen_Nein_15_00");	//Возможно, позже, сейчас я не могу позволить себе такие расходы.
 	Info_ClearChoices(dia_nov_3_fegen);
 };
 
@@ -216,7 +216,7 @@ func int dia_nov_3_location_condition()
 func void dia_nov_3_location_info()
 {
 	AI_Output(other,self,"DIA_NOV_3_LOCATION_15_00");	//Что ты можешь сказать мне об этом монастыре?
-	AI_Output(self,other,"DIA_NOV_3_LOCATION_03_01");	//Мы свои трудом добываем хлеб насущный. Мы выращиваем овец и делаем вино.
+	AI_Output(self,other,"DIA_NOV_3_LOCATION_03_01");	//Мы своим трудом добываем хлеб насущный. Мы выращиваем овец и делаем вино.
 	AI_Output(self,other,"DIA_NOV_3_LOCATION_03_02");	//Здесь есть библиотека, но вход в нее разрешен только магам и избранным послушникам.
 	AI_Output(self,other,"DIA_NOV_3_LOCATION_03_03");	//Мы же, остальные послушники, следим за тем, чтобы маги Круга Огня ни в чем не нуждались.
 };

@@ -178,7 +178,7 @@ func void dia_ehnim_streit5_info()
 {
 	AI_Output(other,self,"DIA_Ehnim_STREIT5_15_00");	//Я думаю, вам двоим нужно просто остыть.
 	AI_Output(self,other,"DIA_Ehnim_STREIT5_12_01");	//Этот ублюдок не отказался от своих слов, я прав?
-	AI_Output(self,other,"DIA_Ehnim_STREIT5_12_02");	//Я ему пасть порву. Сажи ему это.
+	AI_Output(self,other,"DIA_Ehnim_STREIT5_12_02");	//Я ему пасть порву. Скажи ему это.
 	Info_ClearChoices(dia_ehnim_streit5);
 	Info_AddChoice(dia_ehnim_streit5,"Делай, что хочешь. А я ухожу.",dia_ehnim_streit5_gehen);
 	Info_AddChoice(dia_ehnim_streit5,"Почему ты не скажешь это ему сам?",dia_ehnim_streit5_attack);
@@ -187,7 +187,7 @@ func void dia_ehnim_streit5_info()
 func void dia_ehnim_streit5_attack()
 {
 	AI_Output(other,self,"DIA_Ehnim_STREIT5_Attack_15_00");	//Почему ты не скажешь это ему сам?
-	AI_Output(self,other,"DIA_Ehnim_STREIT5_Attack_12_01");	//Сейчас пойду и сделаю это .
+	AI_Output(self,other,"DIA_Ehnim_STREIT5_Attack_12_01");	//Сейчас пойду и сделаю это.
 	AI_StopProcessInfos(self);
 	DIA_EHNIM_STREIT5_NOPERM = TRUE;
 	b_attack(self,egill,AR_NONE,1);
@@ -320,7 +320,7 @@ func void dia_ehnim_moleratfett_was_fett_habenwill_ja()
 		}
 		else
 		{
-			AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_Fett_habenwill_ja_12_03");	//Черт, и куда же она подевалась? Что за досада. Извини. Похоже, у меня ее не осталось. Вот, возьми свои деньги назад .
+			AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_Fett_habenwill_ja_12_03");	//Черт, и куда же она подевалась? Что за досада. Извини. Похоже, у меня ее не осталось. Вот, возьми свои деньги назад.
 			b_giveinvitems(self,other,itmi_gold,EHNIM_MOLERATFETTOFFER);
 			if(Npc_IsDead(egill) == FALSE)
 			{
@@ -340,7 +340,7 @@ func void dia_ehnim_moleratfett_was_fett_habenwill_ja()
 func void dia_ehnim_moleratfett_was_fett_habenwill_zuviel()
 {
 	AI_Output(other,self,"DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel_15_00");	//Это слишком много.
-	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel_12_01");	//Хорошо, хорошо. 70 золотых. Но это мое последняя цена.
+	AI_Output(self,other,"DIA_Ehnim_MoleRatFett_was_Fett_habenwill_zuviel_12_01");	//Хорошо, хорошо. 70 золотых. Но это моя последняя цена.
 	EHNIM_MOLERATFETTOFFER = 70;
 	Info_ClearChoices(dia_ehnim_moleratfett);
 	Info_AddChoice(dia_ehnim_moleratfett,"Это все равно слишком много.",dia_ehnim_moleratfett_was_fett_habenwill_zuviel_immernoch);

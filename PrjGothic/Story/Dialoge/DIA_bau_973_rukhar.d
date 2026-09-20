@@ -369,7 +369,7 @@ func int dia_rukhar_perm_condition()
 func void dia_rukhar_perm_info()
 {
 	AI_Output(other,self,"DIA_Rukhar_Perm_15_00");	//Ничего интересного не произошло?
-	AI_Output(self,other,"DIA_Rukhar_Perm_12_01");	//Ничего такого, о чем бы я зал. Никто ничего мне не рассказывает.
+	AI_Output(self,other,"DIA_Rukhar_Perm_12_01");	//Ничего такого, о чем бы я знал. Никто ничего мне не рассказывает.
 };
 
 

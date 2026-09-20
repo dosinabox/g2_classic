@@ -63,7 +63,7 @@ func void dia_dragon_undead_hello_info()
 	{
 		AI_Output(self,other,"DIA_Dragon_Undead_Hello_20_07");	//Разве одержимые из твоего племени были недостаточной причиной для тебя, чтобы искать силу, управляющую ими?
 	};
-	AI_Output(self,other,"DIA_Dragon_Undead_Hello_20_08");	//Как бы ты не изворачивался, ты не можешь поспорить со всем этим.
+	AI_Output(self,other,"DIA_Dragon_Undead_Hello_20_08");	//Как бы ты ни изворачивался, ты не можешь поспорить со всем этим.
 	Info_AddChoice(dia_dragon_undead_hello,"Хватит болтать.",dia_dragon_undead_hello_attack);
 	Info_AddChoice(dia_dragon_undead_hello,"По чьему повелению ты ведешь своих прихвостней на войну против человечества?",dia_dragon_undead_hello_auftraggeber);
 	Info_AddChoice(dia_dragon_undead_hello,"Зачем ты здесь?",dia_dragon_undead_hello_warum);
@@ -90,7 +90,7 @@ func void dia_dragon_undead_hello_wer()
 	{
 		AI_Output(self,other,"DIA_Dragon_Undead_Hello_wer_20_07");	//Так же, как твоя судьба - проповедовать веру в Инноса, Маг Огня.
 	};
-	AI_Output(self,other,"DIA_Dragon_Undead_Hello_wer_20_08");	//Разве ты не ощущаешь связь, которая соединяет нас? Да. Ты знаешь кто я.
+	AI_Output(self,other,"DIA_Dragon_Undead_Hello_wer_20_08");	//Разве ты не ощущаешь связь, которая соединяет нас? Да. Ты знаешь, кто я.
 	AI_Output(other,self,"DIA_Dragon_Undead_Hello_wer_15_09");	//(смущенно) Нет. Этого не может быть. Ксардас всегда говорил...
 	AI_Output(self,other,"DIA_Dragon_Undead_Hello_wer_20_10");	//Ксардас слаб, и не представляет угрозы для меня. Ты один достоин противостоять мне.
 	AI_Output(self,other,"DIA_Dragon_Undead_Hello_wer_20_11");	//Так предопределено. Пришло время принять свою судьбу.

@@ -771,7 +771,7 @@ func void dia_vatras_innoseyekaputt_auge_stein()
 	AI_Output(other,self,"DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_15_00");	// ак можно восстановить силу камн€?
 	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_05_01");	//я вижу только один способ. —оюз трех прав€щих божеств должен дать желаемый эффект.
 	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_05_02");	//’орошо подготовленный ритуал обращени€ в месте уничтожени€ камн€ вернет ему его огонь.
-	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_05_03");	//ќднако проблема состоит в том, что ты должен привести в это место земных представителей каждого их этих троих богов.
+	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_05_03");	//ќднако проблема состоит в том, что ты должен привести в это место земных представителей каждого из этих троих богов.
 	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_05_04");	// роме того, дл€ этого ритуала необходимо много болотной травы. я думаю, необходимо не менее 3-х растений.
 	Info_AddChoice(dia_vatras_innoseyekaputt," то может быть этими трем€ земными представител€ми богов?",dia_vatras_innoseyekaputt_auge_stein_wer);
 	Info_AddChoice(dia_vatras_innoseyekaputt,"√де мне найти болотную траву?",dia_vatras_innoseyekaputt_auge_stein_kraut);
@@ -821,7 +821,7 @@ func void dia_vatras_innoseyekaputt_warumdu()
 func void dia_vatras_innoseyekaputt_schnellenachrichten()
 {
 	AI_Output(other,self,"DIA_Vatras_INNOSEYEKAPUTT_schnelleNachrichten_15_00");	//¬ этом городе новости распростран€ютс€ быстро.
-	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_schnelleNachrichten_05_01");	//Ёто конечно хорошо, но враг тоже не будет спать.
+	AI_Output(self,other,"DIA_Vatras_INNOSEYEKAPUTT_schnelleNachrichten_05_01");	//Ёто, конечно, хорошо, но враг тоже не будет спать.
 };
 
 func void dia_vatras_innoseyekaputt_auge_stein_wer_xardas_weiter()

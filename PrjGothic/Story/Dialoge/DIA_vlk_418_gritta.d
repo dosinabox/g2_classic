@@ -112,7 +112,7 @@ func void dia_gritta_wantsmoney_info()
 {
 	AI_Output(other,self,"DIA_Gritta_WantsMoney_15_00");	//Меня прислал Маттео. Он говорит, что ты задолжала ему.
 	AI_Output(self,other,"DIA_Gritta_WantsMoney_16_01");	//Он хочет получить деньги? За что? То, что он мне прислал, ни на что не годится. Ткань отвратительная, а швы расползаются прямо на глазах.
-	AI_Output(self,other,"DIA_Gritta_WantsMoney_16_02");	//А ты выдел, какого они цвета? Это не тот цвет, что я заказывала. Это надувательство!
+	AI_Output(self,other,"DIA_Gritta_WantsMoney_16_02");	//А ты видел, какого они цвета? Это не тот цвет, что я заказывала. Это надувательство!
 	AI_Output(self,other,"DIA_Gritta_WantsMoney_16_03");	//Послушай, если бы мой муж был жив, он бы не посмел заявлять такое. Ох, мой бедный муж...
 	Info_ClearChoices(dia_gritta_wantsmoney);
 	Info_AddChoice(dia_gritta_wantsmoney,"Хватит. Где золото?",dia_gritta_wantsmoney_wheremoney);

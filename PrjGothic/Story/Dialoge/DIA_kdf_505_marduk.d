@@ -441,7 +441,7 @@ func void dia_marduk_trainpals_info()
 	AI_Output(other,self,"DIA_Marduk_TrainPals_15_00");	//Чему ты можешь обучить меня?
 	AI_Output(self,other,"DIA_Marduk_TrainPals_05_01");	//Естественно, я не могу обучить тебя боевым искусствам.
 	AI_Output(self,other,"DIA_Marduk_TrainPals_05_02");	//Но я могу, впрочем, донести сущность Инноса и его дары до тебя.
-	AI_Output(self,other,"DIA_Marduk_TrainPals_05_03");	//Кроме того, я мои обязанности входит подготовить тебя к Освящению Меча.
+	AI_Output(self,other,"DIA_Marduk_TrainPals_05_03");	//Кроме того, в мои обязанности входит подготовить тебя к Освящению Меча.
 	AI_Output(other,self,"DIA_Marduk_TrainPals_15_04");	//А магии?
 	AI_Output(self,other,"DIA_Marduk_TrainPals_05_05");	//Здесь мы учим только нашей магии. Ты должен изучать магию паладинов в городе.
 	Info_ClearChoices(dia_marduk_trainpals);
@@ -591,7 +591,7 @@ func void dia_marduk_kap3_perm_andnow()
 	AI_Output(other,self,"DIA_Marduk_Kap3_PERM_AndNow_15_00");	//Что будет теперь?
 	if(MIS_NOVIZENCHASE == LOG_RUNNING)
 	{
-		AI_Output(self,other,"DIA_Marduk_Kap3_PERM_AndNow_05_01");	//Мы будем преследовать вора, куда бы он не побежал. Мы найдем его, и он понесет заслуженное наказание.
+		AI_Output(self,other,"DIA_Marduk_Kap3_PERM_AndNow_05_01");	//Мы будем преследовать вора, куда бы он ни побежал. Мы найдем его, и он понесет заслуженное наказание.
 		AI_Output(other,self,"DIA_Marduk_Kap3_PERM_AndNow_15_02");	//Для этого сначала нужно знать, кто этот вор.
 		AI_Output(self,other,"DIA_Marduk_Kap3_PERM_AndNow_05_03");	//Мы скоро выясним это. И не важно, сколько времени на это понадобится, но мы найдем его.
 		AI_Output(self,other,"DIA_Marduk_Kap3_PERM_AndNow_05_04");	//Клянусь Инносом.

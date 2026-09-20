@@ -27,6 +27,6 @@ func void rtn_start_475()
 	ta_stand_armscrossed(10,55,18,50,"NW_CITY_WATCH_FIGHT_02");
 	ta_smalltalk(18,50,3,5,"NW_CITY_HABOUR_04");
 	ta_stand_drinking(3,5,5,5,"NW_CITY_HABOUR_PUFF_IN_01");
-	ta_smalltalk(5,5,10,5,"NW_CITY_HABOUR_POOR_AREA_01");
+	ta_smalltalk(5,5,10,55,"NW_CITY_HABOUR_POOR_AREA_01");
 };
 

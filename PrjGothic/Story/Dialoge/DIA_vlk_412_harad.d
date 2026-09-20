@@ -147,7 +147,7 @@ func void dia_harad_orcrunning_info()
 func void dia_harad_orcrunning_toohard()
 {
 	AI_Output(other,self,"DIA_Harad_OrcRunning_TooHard_15_00");	//Ќо орк это очень серьезный противник...
-	AI_Output(self,other,"DIA_Harad_OrcRunning_TooHard_12_01");	//’м - суд€ по тому, как ты выгл€дишь, возможно ты прав. ” теб€ слишком мало м€са на кост€х. Ќо это можно поправить.
+	AI_Output(self,other,"DIA_Harad_OrcRunning_TooHard_12_01");	//’м - суд€ по тому, как ты выгл€дишь, возможно, ты прав. ” теб€ слишком мало м€са на кост€х. Ќо это можно поправить.
 	AI_Output(self,other,"DIA_Harad_OrcRunning_TooHard_12_02");	//“ом не менее, ты должен доказать мне, что у теб€ хватит мужества сражатьс€, если это будет необходимо.
 	AI_Output(other,self,"DIA_Harad_OrcRunning_TooHard_15_03");	//ј нет ли дл€ мен€ противника немного поменьше?
 	AI_Output(self,other,"DIA_Harad_OrcRunning_TooHard_12_04");	//’м - (задумчиво) ’акон, торговец оружием на рыночной площади, сказал мне, что на него напали бандиты несколько дней назад.
@@ -714,7 +714,7 @@ func void dia_harad_teachcommon_info()
 	{
 		AI_Output(self,other,"DIA_Harad_TeachCommon_12_01");	//Ёто довольно просто, парень. Ѕерешь кусок сырой стали, и держишь его над огнем, пока он не раскалитс€.
 		AI_Output(self,other,"DIA_Harad_TeachCommon_12_02");	//ѕотом придаешь клинку форму на наковальне.
-		AI_Output(self,other,"DIA_Harad_TeachCommon_12_03");	//“вой первый меч конечно не станет произведением искусства, но всему остальному ты научишьс€ чуть позже.
+		AI_Output(self,other,"DIA_Harad_TeachCommon_12_03");	//“вой первый меч, конечно, не станет произведением искусства, но всему остальному ты научишьс€ чуть позже.
 	};
 };
 
