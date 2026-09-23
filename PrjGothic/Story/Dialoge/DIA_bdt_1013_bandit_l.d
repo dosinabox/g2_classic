@@ -211,8 +211,8 @@ func void dia_1013_bandit_ambush_info()
 	if(Npc_IsDead(ambusher_1014) && Npc_IsDead(ambusher_1015))
 	{
 		AI_Output(self,other,"DIA_1013_BANDIT_AMBUSH_01_00");	//“ебе не стоило идти за мной...
-		b_attack(self,other,AR_SUDDENENEMYINFERNO,1);
 		AI_StopProcessInfos(self);
+		b_attack(self,other,AR_SUDDENENEMYINFERNO,1);
 	}
 	else
 	{
@@ -361,8 +361,8 @@ func void dia_1013_bandit_frommaleth_info()
 		AI_Output(self,other,"DIA_1013_BANDIT_FromMaleth_01_06");	//»ди туда и расправьс€ с другими, если ты так жаждешь крови - а € сваливаю отсюда!
 	};
 	b_giveplayerxp(XP_BANDITWEG);
-	Npc_ExchangeRoutine(self,"AWAY");
 	AI_StopProcessInfos(self);
+	Npc_ExchangeRoutine(self,"AWAY");
 };
 
 

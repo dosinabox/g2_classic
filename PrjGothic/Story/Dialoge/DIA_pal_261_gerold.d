@@ -495,11 +495,11 @@ func void dia_gerold_food_nichts()
 {
 	AI_Output(other,self,"DIA_Gerold_FOOD_nichts_15_00");	//Сейчас у меня ничего нет.
 	AI_Output(self,other,"DIA_Gerold_FOOD_nichts_12_01");	//Сначала наобещаешь с три короба, а затем хочешь обмануть меня?
-	AI_StopProcessInfos(self);
-	b_attack(self,other,AR_NONE,1);
-	Npc_ExchangeRoutine(self,"Start");
 	MIS_GEROLDGIVEFOOD = LOG_FAILED;
 	b_giveplayerxp(50);
+	AI_StopProcessInfos(self);
+	Npc_ExchangeRoutine(self,"Start");
+	b_attack(self,other,AR_NONE,1);
 };
 
 func void dia_gerold_food_kaese_nichtmehr()
@@ -509,8 +509,6 @@ func void dia_gerold_food_kaese_nichtmehr()
 	CreateInvItems(self,itmi_gold,50);
 	b_giveinvitems(self,other,itmi_gold,50);
 	AI_Output(self,other,"DIA_Gerold_FOOD_kaese_nichtmehr_12_02");	//Хорошо. А теперь мне нужно возвращаться на мой пост.
-	AI_StopProcessInfos(self);
-	Npc_ExchangeRoutine(self,"Start");
 	MIS_GEROLDGIVEFOOD = LOG_OBSOLETE;
 	if(GEROLD_FOODCOUNTER < 4)
 	{
@@ -520,6 +518,8 @@ func void dia_gerold_food_kaese_nichtmehr()
 	{
 		b_giveplayerxp(XP_GEROLDGIVEFOOD / 2);
 	};
+	AI_StopProcessInfos(self);
+	Npc_ExchangeRoutine(self,"Start");
 };
 
 func void dia_gerold_food_kaese()

@@ -249,9 +249,9 @@ func void dia_rengaru_inknast_hauab()
 {
 	AI_Output(other,self,"DIA_Rengaru_INKNAST_HauAb_15_00");	//Проваливай! И чтобы больше я тебя здесь не видел!
 	AI_Output(self,other,"DIA_Rengaru_INKNAST_HauAb_07_01");	//Ты не пожалеешь об этом! Спасибо, парень!
-	Npc_ExchangeRoutine(self,"Start");
-	AI_StopProcessInfos(self);
 	DIEBESGILDE_OKAY = DIEBESGILDE_OKAY + 1;
+	AI_StopProcessInfos(self);
+	Npc_ExchangeRoutine(self,"Start");
 };
 
 func void dia_rengaru_inknast_knast()
