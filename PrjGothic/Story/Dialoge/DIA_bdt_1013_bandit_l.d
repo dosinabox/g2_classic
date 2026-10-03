@@ -100,8 +100,8 @@ func void dia_bdt_1013_bandit_where_yes()
 {
 	AI_Output(other,self,"DIA_BDT_1013_BANDIT_WHERE_YES_15_00");	//Хорошо! Ты идешь первым!
 	AI_Output(self,other,"DIA_BDT_1013_BANDIT_WHERE_YES_01_01");	//Просто следуй за мной, пещера находится вон там.
-	Npc_ExchangeRoutine(self,"AMBUSH");
 	AI_StopProcessInfos(self);
+	Npc_ExchangeRoutine(self,"AMBUSH");
 };
 
 func void dia_bdt_1013_bandit_where_who()
