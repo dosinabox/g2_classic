@@ -40,7 +40,7 @@ func void dia_dragontalk_main_1_verbannen()
 		AI_Output(self,other,"DIA_DragonTalk_MAIN_1_verbannen_20_07");	//“ы уже проиграл, жалкий человечишка.
 		Log_CreateTopic(TOPIC_DRACHENEIER,LOG_MISSION);
 		Log_SetTopicStatus(TOPIC_DRACHENEIER,LOG_RUNNING);
-		b_logentry(TOPIC_DRACHENEIER,"ќдин из драконов пробормотал что-то об 'отпрыске' и продолжении его родового древа. Ѕоюсь, они могли распихать свой выводок по всем миру.");
+		b_logentry(TOPIC_DRACHENEIER,"ќдин из драконов пробормотал что-то об 'отпрыске' и продолжении его родового древа. Ѕоюсь, они могли распихать свой выводок по всему миру.");
 	}
 	else
 	{

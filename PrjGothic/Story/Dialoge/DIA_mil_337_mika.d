@@ -149,7 +149,7 @@ func int dia_mika_waskostethilfe_condition()
 func void dia_mika_waskostethilfe_info()
 {
 	AI_Output(other,self,"DIA_Mika_WASKOSTETHILFE_15_00");	//Ќу, предположим, € обращусь к тебе за помощью. —колько это будет мне стоить?
-	AI_Output(self,other,"DIA_Mika_WASKOSTETHILFE_12_01");	//я все го лишь скромный слуга корол€ и мне не к лицу обдирать беззащитных граждан нашего королевства.
+	AI_Output(self,other,"DIA_Mika_WASKOSTETHILFE_12_01");	//я всего лишь скромный слуга корол€ и мне не к лицу обдирать беззащитных граждан нашего королевства.
 	AI_Output(self,other,"DIA_Mika_WASKOSTETHILFE_12_02");	//Ќо, знаешь, если уж ты так ставишь вопрос, то € бы не отказалс€ от небольшой финансовой помощи. Ёто укрепит наши будущие деловые отношени€.
 	AI_Output(self,other,"DIA_Mika_WASKOSTETHILFE_12_03");	//10 золотых будет достаточно дл€ начала. „то скажешь?
 	Info_ClearChoices(dia_mika_waskostethilfe);

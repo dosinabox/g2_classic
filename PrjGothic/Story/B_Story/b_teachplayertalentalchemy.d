@@ -30,12 +30,12 @@ func int b_teachplayertalentalchemy(var C_NPC slf,var C_NPC oth,var int potion)
 	if(potion == POTION_MANA_01)
 	{
 		PLAYER_TALENT_ALCHEMY[POTION_MANA_01] = TRUE;
-		b_logentry(TOPIC_TALENTALCHEMY,"Ингредиенты для 'ЭССЕНЦИИ МАНЫ': 2 огненных крапивы и 1 луговой горец.");
+		b_logentry(TOPIC_TALENTALCHEMY,"Ингредиенты для 'ЭССЕНЦИИ МАНЫ': 2 огненные крапивы и 1 луговой горец.");
 	};
 	if(potion == POTION_MANA_02)
 	{
 		PLAYER_TALENT_ALCHEMY[POTION_MANA_02] = TRUE;
-		b_logentry(TOPIC_TALENTALCHEMY,"Ингредиенты для 'ЭКСТРАКТА МАНЫ': 2 огненных травы и 1 луговой горец.");
+		b_logentry(TOPIC_TALENTALCHEMY,"Ингредиенты для 'ЭКСТРАКТА МАНЫ': 2 огненные травы и 1 луговой горец.");
 	};
 	if(potion == POTION_MANA_03)
 	{

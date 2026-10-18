@@ -487,7 +487,7 @@ func void dia_serpentes_minenanteile_was_jasld()
 	Info_ClearChoices(dia_serpentes_minenanteile);
 	Log_CreateTopic(TOPIC_MINENANTEILE,LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_MINENANTEILE,LOG_RUNNING);
-	b_logentry(TOPIC_MINENANTEILE,"Я должен доставить Саландрила, алхимика из верхней части Хориниса, в монастырь для суда. Мне не особенно интересует, что он там натворил, пока мне хорошо платят за это.");
+	b_logentry(TOPIC_MINENANTEILE,"Я должен доставить Саландрила, алхимика из верхней части Хориниса, в монастырь для суда. Меня не особенно интересует, что он там натворил, пока мне хорошо платят за это.");
 };
 
 

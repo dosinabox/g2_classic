@@ -15,47 +15,47 @@ func int b_teachplayertalentsmith(var C_NPC slf,var C_NPC oth,var int waffe)
 	if(waffe == WEAPON_COMMON)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_COMMON] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'кустарного меча' мне не нужно никаких ингредиентов.");
+		b_logentry(TOPIC_TALENTSMITH,"Для простого кованого меча мне не нужны никакие дополнительные ресурсы.");
 	};
 	if(waffe == WEAPON_1H_SPECIAL_01)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_1H_SPECIAL_01] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'длинного рудного меча' мне нужен 1 кусок руды.");
+		b_logentry(TOPIC_TALENTSMITH,"Для длинного рудного меча мне нужен 1 кусок руды.");
 	};
 	if(waffe == WEAPON_2H_SPECIAL_01)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_2H_SPECIAL_01] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'двуручного рудного меча' мне нужно 2 куска руды.");
+		b_logentry(TOPIC_TALENTSMITH,"Для двуручного рудного меча мне нужны 2 куска руды.");
 	};
 	if(waffe == WEAPON_1H_SPECIAL_02)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_1H_SPECIAL_02] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'полуторного рудного меча' мне нужно 2 куска руды.");
+		b_logentry(TOPIC_TALENTSMITH,"Для полуторного рудного меча мне нужны 2 куска руды.");
 	};
 	if(waffe == WEAPON_2H_SPECIAL_02)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_2H_SPECIAL_02] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'тяжелого двуручного рудного меча' мне нужно 3 куска руды.");
+		b_logentry(TOPIC_TALENTSMITH,"Для тяжелого двуручного рудного меча мне нужны 3 куска руды.");
 	};
 	if(waffe == WEAPON_1H_SPECIAL_03)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_1H_SPECIAL_03] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'боевого рудного меча' мне нужно 3 куска руды.");
+		b_logentry(TOPIC_TALENTSMITH,"Для боевого рудного меча мне нужны 3 куска руды.");
 	};
 	if(waffe == WEAPON_2H_SPECIAL_03)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_2H_SPECIAL_03] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'тяжелого боевого рудного меча' мне нужно 4 куска руды.");
+		b_logentry(TOPIC_TALENTSMITH,"Для тяжелого боевого рудного меча мне нужны 4 куска руды.");
 	};
 	if(waffe == WEAPON_1H_SPECIAL_04)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_1H_SPECIAL_04] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'рудного убийцы драконов' мне нужно 4 куска руды и 5 флаконов крови дракона.");
+		b_logentry(TOPIC_TALENTSMITH,"Для рудного 'Убийцы драконов' мне нужны 4 куска руды и 5 флаконов крови дракона.");
 	};
 	if(waffe == WEAPON_2H_SPECIAL_04)
 	{
 		PLAYER_TALENT_SMITH[WEAPON_2H_SPECIAL_04] = TRUE;
-		b_logentry(TOPIC_TALENTSMITH,"Для 'большого рудного убийцы драконов' мне нужно 5 куска руды и 5 флаконов крови дракона.");
+		b_logentry(TOPIC_TALENTSMITH,"Для большого рудного 'Убийцы драконов' мне нужны 5 кусков руды и 5 флаконов крови дракона.");
 	};
 	PrintScreen(PRINT_LEARNSMITH,-1,-1,FONT_SCREEN,2);
 	Npc_SetTalentSkill(oth,NPC_TALENT_SMITH,1);

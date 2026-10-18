@@ -97,7 +97,7 @@ instance PC_ITPO_MANA_01(C_INFO)
 	condition = pc_itpo_mana_01_condition;
 	information = pc_itpo_mana_01_info;
 	permanent = TRUE;
-	description = "Эссенция маны (2 огненных крапивы и 1 луговой горец)";
+	description = "Эссенция маны (2 огненные крапивы и 1 луговой горец)";
 };
 
 
@@ -134,7 +134,7 @@ instance PC_ITPO_MANA_02(C_INFO)
 	condition = pc_itpo_mana_02_condition;
 	information = pc_itpo_mana_02_info;
 	permanent = TRUE;
-	description = "Экстракт маны (2 огненных травы и 1 луговой горец) ";
+	description = "Экстракт маны (2 огненные травы и 1 луговой горец) ";
 };
 
 
